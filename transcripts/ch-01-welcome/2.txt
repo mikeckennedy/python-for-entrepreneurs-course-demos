@@ -1,0 +1,50 @@
+0:01 It's time to meet your instructors. 
+0:03 This course is co-written and co-recorded by Michael Kennedy, 
+0:06 that's me, from Talk Python 
+0:08 and Matthew Makai, from Full Stack Python. 
+0:11 We'll each be presenting various sections of this course, 
+0:13 and looking inside our individual businesses, 
+0:15 and that's why we wanted to take this moment, 
+0:17 show you our picture, let you get used to our voice 
+0:19 so you'll know who's presenting when. 
+0:21 Let me tell you a little bit about myself. 
+0:23 I'm Michael, hey nice to meet you, 
+0:26 I'm really excited that you are taking my class. 
+0:29 I created Talk Python To me, the number one Python podcast 
+0:32 which, within almost year and a half has had over 2 million downloads. 
+0:37 That, in and of itself is a really interesting business story to cover
+0:41 and a large portion of my income 
+0:43 actually comes from running the podcast day to day. 
+0:46 When it makes sense, we'll look inside the software or the techniques 
+0:49 I've used to start that podcast and make it successful. 
+0:53 Of course, you are taking this course through Talk Python training, 
+0:56 and I started that as well and in the opening section I gave you 
+0:59 a bit of an introduction there, 
+1:02 but this part of my company was created in just a couple of weeks, 
+1:05 and then the first course was created about a month after that, 
+1:07 and many of the ideas and techniques in this part of my company 
+1:11 the e commerce, the mailing list, those sorts of things 
+1:13 are definitely going to be covered in depth 
+1:15 and you'll be looking inside of that software, 
+1:17 seeing the source code I wrote to run my actual business, 
+1:19 not just a bunch of demoware. 
+1:22 Welcome to the course, I'm super excited to be sharing with you,
+1:24 it's a course I wanted to create for a long time, 
+1:27 and I am honored to be creating with Matt Makai, from Full Stack Python. 
+1:30 Thanks Michael. 
+1:32 Hey folks, my name is Matt Makai, and I am the creator of Full Stack Python. 
+1:35 And I am also a developer evangelist with Twilio. 
+1:37 I started Full Stack Python back in 2012, 
+1:40 because I had a bunch of junior developers on my team
+1:43 and I wanted to explain to them how to build and deploy web applications. 
+1:45 It just expanded out from there. 
+1:48 In 2014, I joined Twilio as a developer evangelist. 
+1:50 I started out in Washington DC 
+1:52 and now I am out here in San Francisco in the Bay area. 
+1:55 Twilio makes it easy for developers to add communications, 
+1:57 such as phone calling messaging and video, 
+2:00 into their web and mobile applications. 
+2:03 The best part about this job is I get to help developers
+2:06 build and deploy their applications, 
+2:08 just as I am going to explain some of the technical concepts 
+2:11 throughout this course that will help you build and deploy your own business. 

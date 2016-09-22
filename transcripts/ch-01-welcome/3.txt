@@ -1,0 +1,84 @@
+0:02 We can group these general topics we are going to cover into five big areas. 
+0:06 First one is building your online product. 
+0:10 This is web development and web design. 
+0:13 So we are going to talk about how to actually build your web app 
+0:15 and how to make it look good. 
+0:17 We are also going to talk about managing your development process, 
+0:20 with your editors, source control, that kind of stuff. 
+0:24 Then we are going to take your online product 
+0:27 and show you how to turn it into a functioning business. 
+0:29 How do we integrate credit cards, how do we integrate email, 
+0:33 all the various things that you need to actually have a working online business. 
+0:37 Then we are going to talk about putting that business online, 
+0:40 how do we deploy it, how do we setup our servers, and virtual machines, 
+0:43 how do we monitor for errors in performance and production. 
+0:46 And finally we are going to talk about growth. 
+0:50 Remember the opening section, that dusty set of motocross riders? 
+0:52 we are going to talk about how you can break free of that pack and get ahead. 
+0:56 So if we look at the technologies that we are going to use to build our web app, 
+0:59 it's going to start with our web framework, Pyramid. 
+1:02 There are many web frameworks we can choose in Python, 
+1:04 the three most popular probably are Django, Flask and Pyramid, 
+1:08 and Pyramid is a really nice balance between too much hand holding 
+1:12 and too small, it's the goldielocks framework, in my opinion. 
+1:16 We are also going to talk about Python some of the core language concepts 
+1:19 that you need for your web app to work 
+1:22 and we are going to use SQLAlchemy to talk to our database 
+1:25 and create a data driven web application. 
+1:28 So, this is the code side; on the other hand, we also need it to look decent. 
+1:32 Now, we don't assume that you are a designer, 
+1:34 but we are going to show you enough CSS and HTML 
+1:37 that you can build something that is functional and not terrible let's say, 
+1:41 and if you're great at design you could probably do way better than that, 
+1:44 but we'll get you started so that you are at least comfortable with HTML and CSS 
+1:47 and some of the front end frameworks, 
+1:49 we are going to use bootstrap but there are a couple of options there. 
+1:52 So, these are the technologies involved in building your web application. 
+1:54 And while you are building it, 
+1:57  we are going to talk about what you need for the development process. 
+2:00 We are going to be using PyCharm as our IDE, 
+2:03 our enhanced editor that will let us do all kinds of things, 
+2:06 we can create a Pyramid web app with it, 
+2:09 we can of course edit the Python code access and manage our database, 
+2:12 work with Javascript and CSS and HTML, 
+2:15 it's a great all around editor for what we are trying to do. 
+2:18 We are going to use git and github to manage our code, 
+2:21 make sure that it's safe and sound, 
+2:23 we can always get back to a previous working version and most importantly,
+2:26 it will let us aggressively experiment 
+2:29 and try new ideas without fear of breaking it irreparably. 
+2:33 Once we have our application built, 
+2:36 we are going to have to make it a real business, 
+2:38 so we'll have to deal with users, users accounts, 
+2:41 all the various things around resetting their passwords and sending them receipts, 
+2:44 that kind of stuff, so we'll have to have inbound and outbound email, 
+2:48 and most importantly, to us, probably is accepting money from them, 
+2:53 so we are going to integrate Stripe and credit card processing into our application.
+2:57 Once our app is ready to go live, we need to put it on web server somewhere. 
+3:01 So we are going to deploy it onto Ubuntu, using Digital Ocean, 
+3:05 so we want to create some virtual machines on Digital Ocean
+3:08  that are Ubuntu servers and we'll push them out. 
+3:10 Of course, for accepting credit cards 
+3:12 and working with user accounts and passwords, 
+3:15 we are going to want to use SSL so we'll see how to integrate SSL into our web server,
+3:19 we'll use Engine X as the front line web server 
+3:22 and then we are going to use micro wsgi, 
+3:25 to run our application behind the scenes. 
+3:27 Once we get it all up and running, we want to make sure that it's working right, 
+3:31 so we are going to integrate Rollbar error monitoring
+3:34 into the system that will send us messages on Slack or email or whatever we want
+3:37 if something happens to go wrong, 
+3:40 and we may know if there is a problem before even our users do. 
+3:43 Finally, we are going to talk about growth, because, 
+3:45 having the technical pieces in place, as we said, is not enough. 
+3:49 These days, running a business is as much about marketing and positioning 
+3:54 as it is about the technology, technology is of course required and table stakes, 
+3:58 but to really break free you have to work on getting the word out, 
+4:02 standing out on Google, reaching the users where they are. 
+4:05 So, we are going to talk about SEO in Google, 
+4:08 we'll talk about mailing lists, acquiring interested users, 
+4:11 converting them to paying users, 
+4:14 and a whole bunch of other things that fall into this banner called growth hacking, 
+4:17 a bunch of techniques that are non obvious 
+4:20 and maybe users never see but actually attract attention, 
+4:22 attract users, and grow your business. 

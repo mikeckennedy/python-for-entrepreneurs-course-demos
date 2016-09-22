@@ -1,0 +1,28 @@
+0:01 So you are ready to build your own business, 
+0:03 we are going to build one together, and what are we going to build- well, 
+0:06 we are going to build a rock and roll band's e-commerce site. 
+0:09 And this is our favorite fictional tech based 
+0:12 rock and roll band called The Blue Yellow Rockets. 
+0:14 And, you can see right on the screen we've got a nice design, 
+0:17 with the CSS front end framework, this is bootstrap, it's responsive, 
+0:20 we also have mailing lists for users 
+0:23 who are interested in hearing more about our events that are not yet published, 
+0:27 under the albums, if you went in there you would see that you could do 
+0:31 e-commerce sign in and register lets us create accounts, 
+0:33 most of the things that you can do in our app, 
+0:36 you can see right on this front page here, 
+0:38 so we are going to build this app slowly; 
+0:40 first we are going to start out just building a basic website that is static. 
+0:45 And then, we are going to add a little dynamicness to it, 
+0:47 using SQLAlchemy and databases, 
+0:50 then we are going to add credit cards and mailing lists 
+0:52 and all the stuff you need to do to build a business rather than just an app, 
+0:56 and then we are going to deploy that 
+0:58 and use a little SEO to try to get it to show up in Google. 
+1:00 So that's what we are going to build, and of course,
+1:03 you want to have the source code so how do you get it- well, github of course, 
+1:06 here at this url, you will be able to go and download 
+1:09 everything you see us create throughout this class, 
+1:12 so I recommend you go right now to 
+1:14 github.com/mikeckennedy/python-for-entrepreneurs-course-demos. 
+1:19 Maybe that's a little bit long, but go there and either star this or fork it or both.

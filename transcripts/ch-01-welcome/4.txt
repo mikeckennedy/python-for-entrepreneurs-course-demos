@@ -1,0 +1,43 @@
+ 0:02 Here is a quick section to let you know that it's ok to skip around. 
+0:06 We didn't build this course for you to take it in a straight line, 
+0:08 part one, part two, part three and so on, 
+0:12 we built it to maximize the efficiency of you building and launching your online business. 
+0:17 If that means there is sections you already know, 
+0:20 and you want to skip over them, that's fine. 
+0:23 If there is something that's extra important and you want to start there, 
+0:26 you want to skip right to that, 
+0:28 like for example integrating credit cards into your system
+0:30 or error monitoring or deployment, it's fine, 
+0:33 our goal is to maximize your productivity to minimize the time 
+0:36 that it takes for you to get started. 
+0:38 So, maybe one path through the course starts like this: 
+0:41 you watch this introduction, including this video here, 
+0:44 you already know Python so maybe skip that, 
+0:46 you don't know Pyramid so make sure to do the Pyramid parts 
+0:49 but you have web design and CSS and bootstrap, 
+0:51 you know those things, skip that, but maybe come back, 
+0:54 learn some SQLAlchemy, jump over the credit card section, and so on. 
+0:58 That's how the course was built, 
+1:00 we want these pieces to be somewhat independent, 
+1:03 even though the application builds up over time, 
+1:05 and we want to encourage you to get the most out of it 
+1:07 and not sit through an hour of something that you already totally know, 
+1:10 like for example CSS, if you know CSS. 
+1:13 We are also going to be giving you additional resources 
+1:15 so if you go through a section and you are like 
+1:18 oh I really wish we went deeper into something- both, 
+1:20 the Talk Python To me podcast and Matt's Full Stack Python 
+1:23 have incredible amounts of additional resources, 
+1:27 for example, when we talk about Pyramid or SQLAlchemy, 
+1:30 we spend about an hour with each of the founders interviewing them 
+1:34 about their project where it came from, 
+1:36 where it's going, so we'll make it to those areas,
+1:38 maybe I'll point you at those interviews for example. 
+1:41 And Matt has a whole book on deployment 
+1:43 and a ton on web servers and the devops side of things, 
+1:47 so he's got a ton of how to articles and links that he'll be sharing throughout this course. 
+1:51 So, on one hand, skip around, jump over things you don't need, 
+1:54 and if we don't go deep enough,
+1:57 we'll try to give you extra resources that you can find,
+2:00 mostly from our resources that we build ourselves, 
+2:02 but also additional third party ones if that makes sense.  

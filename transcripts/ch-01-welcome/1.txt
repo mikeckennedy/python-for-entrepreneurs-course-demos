@@ -1,0 +1,90 @@
+ 0:01 Hello and welcome to Python for Entrepreneurs. 
+0:03 We are so excited and honored that you are taking our course. 
+0:06 We can't wait to help you build your online business. 
+0:09 Now, before we get to all the mechanics of what we are going to cover, 
+0:11 what you need for the course, how to connect to this database or that, 
+0:15 let's just talk briefly about why right now is the best time to start an online business. 
+0:20 It's easy to get nostalgic and look back and say 
+0:23 well, twenty years ago things were so much easier, 
+0:25 I just started like look at the companies that exist now. 
+0:28 But I am going to show you that yesterday was not as golden as we think it is. 
+0:32 It's also easy to say well, I've just got to wait, 
+0:36 now is not really the right time to get started, 
+0:38 and if I just put it off for another two years all these thing will fall into place 
+0:43 and I'll be ready to roll- I don't think so. I think the right time to start is now. 
+0:46 You build a base, even if you just started as a side business and let it grow, 
+0:50 let it mature and build it up over time and you are going to have something amazing. 
+0:54 What did it take to build a business before the internet, an actual physical business, 
+0:58 with things made of atoms, rather than bits? 
+1:01 Well, you would probably run full page ads in expensive magazines like this,
+1:06 here is an ad from 1968 when Chevy was advertising their brand new cars. 
+1:10 Whether you were starting a car business or something on main street,
+1:14 it is hard to get started on these types of business. 
+1:17 The startup costs were probably millions, the time to get started 
+1:21 is maybe a year if you are fast, it's really hard to get started, 
+1:25 the barrier to entry is quite high; and the even so, 
+1:27 the profit margin this companies make is quite low. 
+1:30 So General Motors just had a record breaking year for profit margins,
+1:34 and it put them way up in the stratosphere at 6%, that is not very high 
+1:38 but there are many businesses like gas stations 
+1:43 and stuff that make like .3, .2% profit margin. 
+1:46 It's extremely hard to work with that little bit of extra revenue, 
+1:50 so maybe these physical businesses were not the way to go, 
+1:53 maybe it was the .com boom days, back in the late 1990s, early 2000s 
+1:58 that we should have started our business. 
+2:00 I think venture capital was more accessible 
+2:04 at least you didn't have to prove so much to get it, 
+2:06 if you'd create a web site with a crazy idea maybe the people gave you money, 
+2:09 but to actually get started for most folks was really hard. 
+2:11 I recall in 1998 going to a workshop type thing, 
+2:15 put together by a couple of software and hardware companies working together
+2:19 and their goal was to show us how easy it was to build an e-commerce site in 1998, 
+2:23 and they said look, all you are going to need is this load balanser, this ssl accelerator, 
+2:27 these kinds of connections in your data center, 
+2:29 this special hard drive, and they said, in the end, 
+2:32 it's just going to take you only a 100 000 dollars to get started. 
+2:35 I think we could have thrown away some of their software 
+2:39 and get started from maybe 50 000, but still, that is a pretty high barrier to entry. 
+2:42 This isn't something you just spend up on the side because you have a great idea,
+2:46 it also takes a while to get all those things in place, 
+2:49 set up the load balancer, set up the server, set up the software on them,
+2:53 but not just that- connecting the things like credit card systems used to be way harder. 
+2:57 While starting a business in a .com day was easier than before, 
+3:02 it's not maybe as easy as we might remember. 
+3:04 what does it take to start an online digital business today? 
+3:07 Let's look inside my business. 
+3:10 The one that you've probably bought this class from. 
+3:12 So I started Talk Python training in the early part of 2016, 
+3:17 and I went back and I did some math to figure 
+3:19 how much I spent in time and money to get things started. 
+3:22 It cost me 346 dollars in materials, in hosting, 
+3:26 and domains and ssl certificates, to get started, that's it. 
+3:31 I built the entire website with the ecommerce capabilities, 
+3:35 the email account management, video delivery, everything in 2 to 3 weeks, that's it. 
+3:41 After that, I launched the first product on Kickstarter 
+3:44 and within 2 months was making solid money. 
+3:47 That is a very, very different picture than even the .com days. 
+3:51 And yet factoring this out over time my profit margins are running at 93%. 
+3:55 I am telling you, right now is a golden time to get started, 
+4:00 and throughout this course, I am going to give you a look inside of my business, 
+4:03 Talk Python training and the podcast, 
+4:06 and Matt Makai is going to give you a look inside the Full Stack Python.
+4:09 So you are going to have two real world examples 
+4:13 of how we have started a business that to some degree or other 
+4:16 is standing out and succeeding. 
+4:18 Now it's not all rainbows and unicorns, 
+4:21 there are more challenges in other areas today. 
+4:23 Almost because it's easier to get started you'll see the competition is tough, 
+4:27 so let's just go back ten years if you could pass the technical barriers, 
+4:31 put money up front to get started, and get things up and running, 
+4:35 chances are you would be running in a pretty thin pack, 
+4:38 competition existed but it wasn't so tough, it wasn't so hard to get the word out. 
+4:43 However, zoom forward ten years to today, 
+4:46 and it looks more like this- even if you are building a business that is unique, 
+4:52 it's still really hard to get the word out, 
+4:54 so the technical chops to build the business is not enough. 
+4:57 That's why in this course we are also going to talk about SEO, 
+5:01 growth hacking, the things you need to stand out and break free of this dusty pack. 
+5:04 All right, competition now withstanding, I hope you are excited to get started
+5:08 because it is a golden time to start a business,
+5:11 and we are both super excited to share our story and our techniques with you. 
