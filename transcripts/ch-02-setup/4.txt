@@ -1,0 +1,68 @@
+ 0:02 If you are using Linux, it's time to get your machines setup to take this course. 
+0:07 Let's see what's involved. 
+0:10 Here we are in Ubuntu, and you can see I have the PyCharm page pulled up, 
+0:13 so there is a couple of things we need to take this course, 
+0:16 we need Python 3, and we need PyCharm.
+0:19 As we get it farther into the course, 
+0:22 you'll see that there is some packages we need we are also going to need git,
+0:25 but let's save installing that until later, this is what you need to get started. 
+0:28 So, the first thing is to ask well, do you have Python 3? 
+0:31 Let's find out. If you just type python--version, you'll see that that's Python 2. 
+0:36 That's cool, in Ubuntu, you can type Python 3 to run specifically Python 3 
+0:42 regardless of how your path is set up, 
+0:44 and let's see what do we get here. 3.5.2, that is the latest. 
+0:47 So, it looks like we already have Python set up, that's great, 
+0:51 and if you have 3.5.1 or 3.4 something, 
+0:55 that's fine, as long as it's basically a new version of 3.5 we'll be in good shape. 
+1:00 The other thing that we need to get is PyCharm 
+1:03 so over here at jetbrains.com/pycharm I've got the page pulled up 
+1:06 and you can see it says download now, 
+1:09 and if we go to download it, there's actually two editions, 
+1:12 the professional edition and the community edition. 
+1:15 Well, which one should you pick, what's the difference? 
+1:17 If you go back to that first page, you can scroll down a little bit 
+1:19 and see there is a little comparison table here, 
+1:23 all the Python features about code inspections and auto complete, 
+1:27 things like that are exactly the same between the two editions, 
+1:29 for this class though, we are going to need a few extra things 
+1:32 that are not covered in the community edition, 
+1:35 because we are doing web development and we are working with data bases, 
+1:38 you will definitely want to use those features
+1:40 in addition to the Python web frameworks like Pyramid. 
+1:43 So, I strongly recommend you get the professional version, 
+1:47 there is a 30 day free trial, if you want to buy it it's not too expensive, 
+1:50 as an individual you can either pay $89 
+1:53 or if you want you can just pay $8.90 a month for a couple of months, 
+1:57 as you go through this course, I think it's totally worth it. 
+2:00 If for some reason you really don't want to use PyCharm, 
+2:03 you can get away with that, you can use Sublime text, 
+2:05 this is also a highly capable editor, as you'll see, 
+2:08 there are quite a few features that PyCharm brings that Sublime text does not. 
+2:14 Especially when you are newer, it will help you even more, 
+2:17 bur regardless of your experience level, I think PyCharm is a much better choice, 
+2:20 nonetheless, you may want to use Sublime text 
+2:24 or Atom is also a great Python capable editor from github. 
+2:28 So those are your choices for the editors. 
+2:31 Now, we've got Python, we downloaded it,
+2:33 I actually already downloaded it because it's kind of large, so let's go and install this. 
+2:37 Over here, we are going to uncompress it, and we'll just extract it here, 
+2:41 so we want to take this folder and put it somewhere more useful, 
+2:45 I like to have this little bin folder over here so we are going to move this over, 
+2:49 I mean the name in here is not the best so let's rename it, 
+2:51 like the version number rather, so rename this, 
+2:55 so we want to run this file, so if I double click it, 
+2:58 obviously it's just going to open up the editor, 
+3:01 so let's go back to our terminal here, and we can try to run it like so,
+3:06 and it's going to go and launch, perfect. 
+3:08 Now, you may have to install the JDK because PyCharm is based on intellij 
+3:13 which that platform is a Java based application, 
+3:16 so if you try this and you get a Java error just install the JDK 
+3:19 by googling for whichever version it says that it needs and install that,
+3:24 then you should be able to run this.
+3:26 The other thing is, this is nice that it's over here but when I close it, it goes away. 
+3:30 So we can come over here and say lock that to the launcher, 
+3:33 that way when we close it, we don't have to have this thing open, 
+3:37 we can just re-launch it from here. 
+3:39 Great, so this Linux box this Ubuntu box is ready to take this course, 
+3:42 we have Python 3 installed, by default, and we have PyCharm set up 
+3:47 and ready to roll, so let's get to it. 

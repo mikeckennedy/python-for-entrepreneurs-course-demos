@@ -1,0 +1,30 @@
+ 0:02 The first thing that you are going to need to take this course is Python. 
+0:07 We are going to be using Python 3 in this course. 
+0:10 You may or may not know there is bit of a divide
+0:13 between an older version of Python called Python 2 
+0:16 sometimes referred to as legacy Python, 
+0:19 and a newer version of Python 3. 
+0:21 But, the tide is basically turning and Python 3 is really 
+0:24 the best choice to start new projects today. 
+0:27 We are not going to go into too much detail about the differences, 
+0:30 we are just going to focus on Python 3 in this course. 
+0:33 You can download Python 3 from here if you don't have it 
+0:36 or if you are on Linux you can use things like aptitude to get it, 
+0:40 we are going to actually go into detail how to setup all of these tools on your machines, 
+0:44 but just know Python 3 is one thing that's going to be required. 
+0:48 The other is a great editor, and by far in my opinion 
+0:52 the best all around editor for building web applications in Python is PyCharm. 
+0:57 So we are going to talk about how you download and install PyCharm, 
+1:01 there is multiple versions, editions I guess you would call them, 
+1:05 and we'll talk about which one you are going to need and why to choose that and so on. 
+1:10 There are other choices if you don't want to use PyCharm, you don't absolutely have to, 
+1:13 you can work without it of course, 
+1:16 and we'll talk a little bit about that in the upcoming setup videos, 
+1:19 but let me just leave you at the one thing- why would you use PyCharm- 
+1:23 you are going to see throughout this class why this is absolutely the case, 
+1:26 but we are not there yet, 
+1:28 it's going to take a while to build up all the various moving parts, 
+1:30 they are like okay this thing really is awesome, 
+1:33 so while ago, back in 2015 I wrote a blog post called 
+1:36 Nine Reasons You Should Be Using PyCharm 
+1:39 and you are welcome to check that out if you want to see just some of the benefits. 

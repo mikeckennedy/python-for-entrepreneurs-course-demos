@@ -1,0 +1,53 @@
+ 0:02 Hello my fellow OSX fans.
+0:05 Let's talk about getting your machine setup so you are ready to take this course. 
+0:10 The first thing you are going to need to do is set up Python 3. 
+0:13 We can check to see whether Python 3 is installed, 
+0:16 first let's see what happens when we say Python--version. 
+0:20 Okay, so we have Python 2.7 installed, that comes with the OS X, that's cool. 
+0:23 But if we ask for Python 3, which on OSX we can do by typing Python 3 like this, 
+0:30 you'll see no, there is no Python 3. 
+0:33 So, just download it and choose that, choose the 3.5.2 
+0:37 choose whatever the current version is when you get here. 
+0:39 Now, I already downloaded it so let's go and install it. 
+0:42 It just comes as a package, install package, so just next your way through it. 
+0:52 Excellent, it looks like it was installed just fine. 
+0:56 Now, let's try that again. 
+0:58 Excellent, we have Python 3.5.2 installed. 
+1:02 So Python is all set up, the other thing we are going to need is an editor. 
+1:05 And we already talked about using PyCharm as the editor for this course. 
+1:09 So, over here at jetbrains.com/pycharm we'll see, here is the PyCharm page, 
+1:13 and we can go and just download that, 
+1:15 there's actually a choice when you go to download,
+1:18 do you want the professional or do you want the community edition. 
+1:20 Now, what's the difference? 
+1:22 Well, on the other page, if you scroll down farther, 
+1:25 you'll see that for the basic Python stuff, everything is the same, right, 
+1:28 the community and the pro edition. 
+1:30 Where they really differ, unfortunately for this class, is actually where it matters. 
+1:35 So, in addition to having the regular Python support,
+1:39 it's all about web development, the web frameworks, database support, 
+1:43 things like that are only available in the pro edition, 
+1:47 but luckily there is a 30 day free trial. 
+1:49 And it's not too expensive, you can pay $8.90 a month 
+1:52 or you can pay $89 a year and it gets cheaper as it goes on and on. 
+1:56 So like I said, I've already downloaded PyCharm, 
+1:59 let's go ahead and mount it, it's a disc image, 
+2:02 and installing is pretty much draggy droppy no problem, just wait for it to copy over. 
+2:06 And now it's all ready to go. 
+2:09 When it launches, it will ask you the first time what theme you want and so on, 
+2:14 I would choose, I like the dark theme 
+2:16 so I choose the Dracula theme for both the IDE theme and the layout or font colors. 
+2:22 You can pick whichever you want. 
+2:25 And there you go, PyCharm is ready to create a new project, 
+2:28 of course, we are saving that for a little bit later, but just to look ahead, 
+2:31 it's going to start right there.
+2:34 If for some reason you really don't want to use PyCharm, 
+2:38 Sublime text is a great option, it has support for Python, Javascript, CSS, 
+2:43 not as good as PyCharm but still, not bad. 
+2:46 Another good recommendation is Atom, 
+2:49 if you want the more light weight text editor so you can download that, 
+2:53 and it's also free, this is from github. 
+2:56 But like I said, we are going to be using PyCharm for most of the course, 
+2:59 and it really is more full featured, more helpful, 
+3:03 more efficient than most of these. 
+3:05 All right, this Mac is ready to rock and roll and get going on this course. 

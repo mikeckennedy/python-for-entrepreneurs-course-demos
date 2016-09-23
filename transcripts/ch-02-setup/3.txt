@@ -1,0 +1,70 @@
+ 0:03 If you are using Windows, let's get it ready to build your business with Python. 
+0:08 So the first question you might want to ask is 
+0:11 do I have Python on my Windows machine? 
+0:14 And there is a very high probability the answer is no. 
+0:16 But let's just verify. 
+0:19 So we can start by just typing Python and see what happens. 
+0:22 Nothing, there is no Python. 
+0:25 By default Windows does not include any form of Python, 
+0:28 which is unfortunate, but that's the case. 
+0:30 The first thing we have to do is download Python. 
+0:33 And over here at python.org we can choose the version 3 so Python 3 
+0:37 whatever the latest one of that is, 
+0:40 so I've actually already downloaded it, that's over here, 
+0:43 so we can go ahead and install that, it's super easy, just run the installer, 
+0:46 I would certainly advise you to add Python 3 to the path 
+0:50 and you probably want to customize this, 
+0:55 we don't really need it for all the users, but that's good, 
+0:57 what else do we want, why don't we go and precompile the library 
+0:59 that might make it a little faster, associate the Python files if we want 
+1:03 and you'll notice that it's going to go into your user profile here 
+1:07 under the hidden/appdata/local folder, 
+1:10 so I prefer to have it a little more discoverable for me, 
+1:13 so I am going to say this is going to be Python and it's going to come here. 
+1:17 So I can just come to my user profile and find it. 
+1:20 All right, let's go. 
+1:28 Great, Python was installed, now let's see if we have it up here.
+1:32 We still don't have it and that might seem a little bizzare, 
+1:35 we added it to the path, we've installed it, 
+1:37 but these prompts read the path from the system 
+1:40 when they launch and they don't auto refresh. 
+1:42 So let's try again. 
+1:45 This time I'll just ask for the version Python 3.5.2. Perfect. 
+1:49 So, Python is ready to roll on this machine. 
+1:52 The next thing we need to do is set up our editor.
+1:55 We are going to use PyCharm. 
+1:57 We talked a little bit about why we are choosing it in the beginning, 
+2:00 but let's just go over here you can see if you hit download, 
+2:03 and this is at jetbrains.com/pycharm, there is actually two options here, 
+2:08 we can use the community version or the professional version, 
+2:12 if you go back to the original page, you'll see there is a choose your edition section 
+2:16 and it will show you what the differences are. 
+2:19 And so, the main Python features version control, auto complete, 
+2:23 things like that are identical between the editors, 
+2:26 but, for this course you are going to need some of the pro features-
+2:29 web development, Python web frameworks like Pyramid, as well as the data base support.
+2:33 So you want to make sure you get the pro edition, 
+2:36 it comes with the 30 day free trial and if you want to buy it, as an individual, 
+2:41 you can either get it for $89 a year or $8.90 for a month. 
+2:46 So, you could get just a month worth to try out this class, 
+2:49 if you are going to take more than 30 days to get it finished, 
+2:52 I really recommend that you use PyCharm, the pro version, 
+2:55 you'll see throughout the class why it's so much more powerful 
+2:58 than many of the other options. 
+3:00 That said, if you don't want to use PyCharm, you don't have to, 
+3:03 you could use something like Sublime text, this is a great editor, 
+3:06 so you can get that at sublimetext.com 
+3:09 or Atom, at atom.io from github, also, a good more light weight editor. 
+3:13 So, I already downloaded PyCharm because it's little big,
+3:16 and let's just run that, there is really not to much to do here 
+3:20 just got to decide how you want to either put it on your desktop 
+3:24 or associate with py files, things like that, and let it go. 
+3:30 And, let's go and run it. 
+3:34 When you first launch it, it will pop up this window 
+3:37 and ask you what hot keys you want and what theme, 
+3:40 if you are on Windows you probably want the Visual Studio hot keys 
+3:43 and if you want it dark, a dark editor like mine, that's how I like my code, 
+3:46 then choose the Dracula theme, 
+3:50 otherwise you could probably just pick the default. 
+3:53 All right, now we have Python and we have PyCharm, 
+3:57 this Windows 10 machine is ready to build a Python based business. 
