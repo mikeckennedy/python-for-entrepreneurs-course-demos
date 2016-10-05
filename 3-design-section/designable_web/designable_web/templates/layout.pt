@@ -14,8 +14,9 @@
     <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
-    <link href="/static/css/theme.css" rel="stylesheet">
-    <link href="/static/css/site.css" rel="stylesheet">
+    <link href="/static/css/theme.css?cacheId=${build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${build_cache_id('/static/css/site.css')}" rel="stylesheet">
+    <link href="/static/css/layout.css?cacheId=${build_cache_id('/static/css/layout.css')}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,22 +26,14 @@
 </head>
 
 <body>
-<h1><a href="/">Design foundations demo app</a></h1>
-<div class="content">
+<ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/selectors">CSS selectors</a></li>
+    <li><a href="/box-model">CSS box model</a></li>
+    <li><a href="/layout">Layout</a></li>
+    <li><a href="/float">Floating items</a></li>
+</ol>
 
-    <div>
-        Here is a simple page where we can plan with some CSS ideas. We'll be covering:
-    </div>
-    <br>
-    <ol>
-        <li><a href="/">Style sheets and caching</a></li>
-        <li><a href="/selectors">CSS selectors</a></li>
-        <li><a href="/box-model">CSS box model</a></li>
-        <li><a href="/layout">Layout</a></li>
-        <li><a href="/float">Floating items</a></li>
-    </ol>
-
-</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

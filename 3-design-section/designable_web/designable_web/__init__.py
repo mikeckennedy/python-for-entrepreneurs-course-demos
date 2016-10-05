@@ -10,6 +10,7 @@ def main(global_config, **settings):
     config.add_route('index', '/')
     config.add_route('box', '/box-model')
     config.add_route('selectors', '/selectors')
-    config.add_route('grid', '/grid-layout')
+    config.add_route('layout', '/layout')
+    config.add_route('float', '/float')
     config.scan()
     return config.make_wsgi_app()

@@ -14,8 +14,9 @@
     <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
-    <link href="/static/css/theme.css" rel="stylesheet">
-    <link href="/static/css/site.css" rel="stylesheet">
+    <link href="/static/css/theme.css?cacheId=${build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${build_cache_id('/static/css/site.css')}" rel="stylesheet">
+    <link href="/static/css/float.css?cacheId=${build_cache_id('/static/css/float.css')}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,22 +26,20 @@
 </head>
 
 <body>
-<h1><a href="/">Design foundations demo app</a></h1>
-<div class="content">
-
-    <div>
-        Here is a simple page where we can plan with some CSS ideas. We'll be covering:
+<div>
+    <div id="top-div">
+        <div>This is a message</div>
+        <img src="/static/img/dunecat.jpg" alt="">
     </div>
-    <br>
-    <ol>
-        <li><a href="/">Style sheets and caching</a></li>
-        <li><a href="/selectors">CSS selectors</a></li>
-        <li><a href="/box-model">CSS box model</a></li>
-        <li><a href="/layout">Layout</a></li>
-        <li><a href="/float">Floating items</a></li>
-    </ol>
 
+    <p>+1 kitsch tumeric kale chips. Prism bitters man braid, hell of godard wolf af fashion axe kombucha thundercats
+        beard cred stumptown. Sriracha hella wayfarers pug fam stumptown kickstarter. Put a bird on it etsy try-hard
+        gentrify kogi. Selvage stumptown vinyl everyday carry, iPhone trust fund microdosing banjo kitsch intelligentsia
+        humblebrag keffiyeh sriracha kickstarter. Prism tattooed 8-bit offal fam glossier humblebrag, pug sustainable
+        scenester everyday carry. Deep v gochujang echo park mixtape.</p>
+    <a href="/">&#171; home</a>
 </div>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

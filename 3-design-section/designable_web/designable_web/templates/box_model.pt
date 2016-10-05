@@ -14,8 +14,8 @@
     <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
-    <link href="/static/css/theme.css" rel="stylesheet">
-    <link href="/static/css/site.css" rel="stylesheet">
+    <link href="/static/css/theme.css?cacheId=${build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${build_cache_id('/static/css/site.css')}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,26 +25,37 @@
 </head>
 
 <body>
-<h1><a href="/">Design foundations demo app</a></h1>
+<h1 style="text-align:center;"><a href="/">Design Foundations: CSS Box Model</a></h1>
 <div class="content">
 
-    <div>
-        Here is a simple page where we can plan with some CSS ideas. We'll be covering:
+    <div style="text-align: center;">
+        <input class="form-control" type="text" id="margin" style="width: 120px; display: inline-block;"
+               placeholder="margin (px)">
+        <input class="form-control" type="text" id="padding" style="width: 120px; display: inline-block;"
+               placeholder="padding (px)">
+            <input class="form-control" type="text" id="border" style="width: 120px; display: inline-block;"
+               placeholder="border (px)">
+        <button class="btn btn-success">Set values</button>
     </div>
+    <hr>
     <br>
-    <ol>
-        <li><a href="/">Style sheets and caching</a></li>
-        <li><a href="/selectors">CSS selectors</a></li>
-        <li><a href="/box-model">CSS box model</a></li>
-        <li><a href="/layout">Layout</a></li>
-        <li><a href="/float">Floating items</a></li>
-    </ol>
+    <div class="test_content">
 
+        <div class="outside">
+            <div class="inside">
+                <div class="contained">Content!</div>
+            </div>
+        </div>
+
+        <br>
+        <div class="msg" style="text-align: center"></div>
+    </div>
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/static/bower_components/jquery-dist/jquery.min.js"></script>
 <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+<script src="/static/js/box.js?cacheId=${build_cache_id('/static/js/box.js')}"></script>
 </body>
 </html>

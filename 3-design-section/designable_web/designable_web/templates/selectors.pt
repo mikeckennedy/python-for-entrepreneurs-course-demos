@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="${request.locale_name}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Pylons Project">
+    <link rel="shortcut icon" href="${request.static_url('designable_web:static/img/pyramid-16x16.png')}">
+
+    <title>Intro to web design foundations demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="/static/css/theme.css?cacheId=${build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${build_cache_id('/static/css/site.css')}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="/static/bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<h1 style="text-align:center;"><a href="/">Design Foundations: Selectors</a></h1>
+<div class="content">
+
+    <div style="text-align: center;">
+        <input class="form-control" type="text" id="search_entry" style="width: 350px; display: inline-block;" placeholder="Enter CSS selector">
+        <button id="search_button" class="btn btn-success">Find elements</button>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">What elements can I use?</button>
+        <br>
+    </div>
+    <hr>
+    <br>
+    <div class="test_content">
+        <style>
+            .course-img img {
+                width: 64px;
+            }
+
+            .course-img {
+                display: inline-block;
+            }
+        </style>
+        <div class="col-lg-10 col-lg-offset-1 col-sm-12">
+            <div style="text-align: center;">
+                <h3 style="margin-top: 0px">Take Python to the next level with my online courses</h3>
+
+                <div class="course-img">
+                    <a href="https://talkpython.fm/course" id="jumpstart" class="light-access-link">
+                        <img src="https://talkpython.fm/static/img/courses/python-jumpstart.jpg?cacheId=d4cd665291fd60bd84105ad3348c3c8e"
+                             class="img sm"><br>
+                        Jumpstart
+                    </a>
+                </div>
+
+                <div class="course-img">
+                    <a href="https://talkpython.fm/pythonic" id="pythonic" class="light-access-link">
+                        <img src="https://talkpython.fm/static/img/courses/pythonic-code-course.png?cacheId=69a7763e882c3bb81ab9860e4cb16a1c"
+                             class="img sm"><br>
+                        Pythonic code
+                    </a>
+                </div>
+
+                <div class="course-img">
+                    <a href="https://talkpython.fm/launch" id="launch" class="light-access-link">
+                        <img src="https://talkpython.fm/static/img/courses/python-for-entrepreneurs.png?cacheId=8ccc81c4f9856b1a9bc0aa3e90ccab2e"
+                             class="img sm"><br>
+                        Entrepreneurs
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+
+            <a class="btn btn-danger" style="color: white; float: right; margin-top: 2em;"
+               href="https://itunes.apple.com/us/podcast/talk-python-to-me-python-conversations/id979020229"
+               target="_blank"><i class="fa fa-apple"></i> Subscribe @ iTunes</a>
+
+            <h1>Recorded episodes</h1>
+
+
+            <table class="table table-hover episodes">
+                <thead>
+                <tr>
+                    <th style="width: 120px; white-space: nowrap;">Show number</th>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Guests</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr id="latest_episode" class="this_month">
+                    <td style="text-align: center   ">#78</td>
+                    <td class="text-muted date-text">2016-09-28</td>
+                    <td><a href="/episodes/show/78/how-i-built-an-entire-game-and-toolchain-100-in-python">How I built
+                        an entire game and toolchain 100% in Python</a></td>
+                    <td style="white-space: nowrap;">Joseph Cherlin</td>
+
+                </tr>
+                <tr class="this_month">
+                    <td style="text-align: center   ">#77</td>
+                    <td class="text-muted date-text">2016-09-23</td>
+                    <td><a href="/episodes/show/77/20-python-libraries-you-aren-t-using-but-should">20 Python Libraries
+                        You Aren't Using (But Should)</a></td>
+                    <td style="white-space: nowrap;">Caleb Hattingh</td>
+
+                </tr>
+                <tr class="this_month">
+                    <td style="text-align: center   ">#76</td>
+                    <td class="text-muted date-text">2016-09-15</td>
+                    <td><a href="/episodes/show/76/renewable-python">Renewable Python</a></td>
+                    <td style="white-space: nowrap;">Anna Schneider</td>
+
+                </tr>
+                <tr class="this_month">
+                    <td style="text-align: center   ">#75</td>
+                    <td class="text-muted date-text">2016-09-09</td>
+                    <td><a href="/episodes/show/75/pythonic-games-at-checkio">Pythonic games at CheckIO</a></td>
+                    <td style="white-space: nowrap;">Alexander Lyabah</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#74</td>
+                    <td class="text-muted date-text">2016-09-02</td>
+                    <td><a href="/episodes/show/74/past-present-and-future-of-ironpython">Past, Present, and Future of
+                        IronPython</a></td>
+                    <td style="white-space: nowrap;">Alex Earl</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#73</td>
+                    <td class="text-muted date-text">2016-08-26</td>
+                    <td><a href="/episodes/show/73/machine-learning-at-the-new-microsoft">Machine learning at the new
+                        Microsoft</a></td>
+                    <td style="white-space: nowrap;">David Crook</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#72</td>
+                    <td class="text-muted date-text">2016-08-19</td>
+                    <td><a href="/episodes/show/72/fashion-driven-open-source-software-at-zalando">Fashion-driven open
+                        source software at Zalando</a></td>
+                    <td style="white-space: nowrap;">Panelists</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#71</td>
+                    <td class="text-muted date-text">2016-08-11</td>
+                    <td><a href="/episodes/show/71/soft-skills-the-software-developer-s-life-manual">Soft Skills: The
+                        software developer's life manual </a></td>
+                    <td style="white-space: nowrap;">John Sonmez</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#70</td>
+                    <td class="text-muted date-text">2016-08-05</td>
+                    <td><a href="/episodes/show/70/pythonic-cover-songs-at-loudr">Pythonic cover songs at Loudr</a></td>
+                    <td style="white-space: nowrap;">Josh Whelchel</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#69</td>
+                    <td class="text-muted date-text">2016-07-26</td>
+                    <td><a href="/episodes/show/69/write-an-excellent-programming-blog">Write an Excellent Programming
+                        Blog</a></td>
+                    <td style="white-space: nowrap;">A. Jesse Davis</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#68</td>
+                    <td class="text-muted date-text">2016-07-20</td>
+                    <td><a href="/episodes/show/68/crossing-the-streams-with-podcast.-init">Crossing the streams with
+                        Podcast.__init__</a></td>
+                    <td style="white-space: nowrap;">Panelists</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#67</td>
+                    <td class="text-muted date-text">2016-07-13</td>
+                    <td><a href="/episodes/show/67/property-based-testing-with-hypothesis">Property-based Testing with
+                        Hypothesis</a></td>
+                    <td style="white-space: nowrap;">David MacIver</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#66</td>
+                    <td class="text-muted date-text">2016-07-07</td>
+                    <td><a href="/episodes/show/66/faster-python-programs-measure-don-t-guess">Faster Python Programs:
+                        Measure, Don't Guess</a></td>
+                    <td style="white-space: nowrap;">Mike Müller</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#65</td>
+                    <td class="text-muted date-text">2016-06-29</td>
+                    <td><a href="/episodes/show/65/jump-on-the-real-time-web-with-rethinkdb">Jump on the real-time web
+                        with RethinkDB</a></td>
+                    <td style="white-space: nowrap;">Slava Akhmechet</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#64</td>
+                    <td class="text-muted date-text">2016-06-24</td>
+                    <td><a href="/episodes/show/64/inside-the-python-package-index">Inside the Python Package Index</a>
+                    </td>
+                    <td style="white-space: nowrap;">Donald Stufft</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#63</td>
+                    <td class="text-muted date-text">2016-06-16</td>
+                    <td><a href="/episodes/show/63/validating-python-tests-with-mutation-testing">Validating Python
+                        tests with mutation testing</a></td>
+                    <td style="white-space: nowrap;">Austin Bingham</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#62</td>
+                    <td class="text-muted date-text">2016-06-07</td>
+                    <td><a href="/episodes/show/62/san-diego-technology-immersion-group-learns-python">San Diego
+                        Technology Immersion Group Learns Python</a></td>
+                    <td style="white-space: nowrap;">Panelists</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#61</td>
+                    <td class="text-muted date-text">2016-05-30</td>
+                    <td><a href="/episodes/show/61/free-software-free-people">Free software, free people</a></td>
+                    <td style="white-space: nowrap;">Pete Fein</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#60</td>
+                    <td class="text-muted date-text">2016-05-24</td>
+                    <td><a href="/episodes/show/60/scaling-python-to-1000-s-of-cores-with-ufora">Scaling Python to
+                        1000's of cores with Ufora</a></td>
+                    <td style="white-space: nowrap;">Braxton McKee</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#59</td>
+                    <td class="text-muted date-text">2016-05-18</td>
+                    <td><a href="/episodes/show/59/sagemath-open-source-is-ready-to-compete-in-the-classroom">SageMath -
+                        Open source is ready to compete in the classroom</a></td>
+                    <td style="white-space: nowrap;">William Stein</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#58</td>
+                    <td class="text-muted date-text">2016-05-10</td>
+                    <td>
+                        <a href="/episodes/show/58/create-better-python-programs-with-concurrency-libraries-and-patterns">Create
+                            better Python programs with concurrency, libraries, and patterns</a></td>
+                    <td style="white-space: nowrap;">Mark Summerfield</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#57</td>
+                    <td class="text-muted date-text">2016-05-05</td>
+                    <td><a href="/episodes/show/57/python-performance-from-the-inside-out-at-intel">Python performance
+                        from the inside-out at Intel</a></td>
+                    <td style="white-space: nowrap;">David Stewart</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#56</td>
+                    <td class="text-muted date-text">2016-04-27</td>
+                    <td><a href="/episodes/show/56/data-science-from-scratch">Data Science from Scratch</a></td>
+                    <td style="white-space: nowrap;">Joel Grus</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#55</td>
+                    <td class="text-muted date-text">2016-04-21</td>
+                    <td>
+                        <a href="/episodes/show/55/how-our-engineering-environments-are-killing-diversity-and-how-we-can-fix-it">How
+                            our engineering environments are killing diversity (and how we can fix it)</a></td>
+                    <td style="white-space: nowrap;">Kate Heddleston</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#54</td>
+                    <td class="text-muted date-text">2016-04-14</td>
+                    <td><a href="/episodes/show/54/enterprise-software-with-python">Enterprise Software with Python</a>
+                    </td>
+                    <td style="white-space: nowrap;">Mahmoud Hashemi</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#53</td>
+                    <td class="text-muted date-text">2016-04-06</td>
+                    <td><a href="/episodes/show/53/python-in-visual-studio">Python in Visual Studio</a></td>
+                    <td style="white-space: nowrap;">Steve Dower</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#52</td>
+                    <td class="text-muted date-text">2016-03-27</td>
+                    <td><a href="/episodes/show/52/eve-online-mmo-game-powered-by-python">EVE Online: MMO game powered
+                        by Python</a></td>
+                    <td style="white-space: nowrap;">Kristinn Sigurbergsson</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#51</td>
+                    <td class="text-muted date-text">2016-03-21</td>
+                    <td><a href="/episodes/show/51/sigopt-optimizing-everything-with-python">SigOpt: Optimizing
+                        Everything with Python</a></td>
+                    <td style="white-space: nowrap;">Patrick Hayes</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#50</td>
+                    <td class="text-muted date-text">2016-03-15</td>
+                    <td><a href="/episodes/show/50/web-scraping-at-scale-with-scrapy-and-scrapinghub">Web scraping at
+                        scale with Scrapy and ScrapingHub</a></td>
+                    <td style="white-space: nowrap;">Pablo Hoffman</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#49</td>
+                    <td class="text-muted date-text">2016-03-08</td>
+                    <td><a href="/episodes/show/49/microsoft-s-jit-based-python-project-pyjion">Microsoft's JIT-based
+                        Python Project: Pyjion</a></td>
+                    <td style="white-space: nowrap;">Brett Cannon</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#48</td>
+                    <td class="text-muted date-text">2016-03-01</td>
+                    <td><a href="/episodes/show/48/building-flask-based-web-apps">Building Flask-based Web Apps</a></td>
+                    <td style="white-space: nowrap;">Miguel Grinberg</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#47</td>
+                    <td class="text-muted date-text">2016-02-23</td>
+                    <td><a href="/episodes/show/47/python-in-typeface-and-font-development">Python in Typeface and Font
+                        Development</a></td>
+                    <td style="white-space: nowrap;">Just van Rossum</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#46</td>
+                    <td class="text-muted date-text">2016-02-16</td>
+                    <td><a href="/episodes/show/46/python-in-movies-and-entertainment">Python in Movies and
+                        Entertainment</a></td>
+                    <td style="white-space: nowrap;">Robert Blau</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#45</td>
+                    <td class="text-muted date-text">2016-02-09</td>
+                    <td><a href="/episodes/show/45/the-python-testing-column-now-a-thing">The Python Testing Column, Now
+                        a Thing</a></td>
+                    <td style="white-space: nowrap;">Brian Okken</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#44</td>
+                    <td class="text-muted date-text">2016-02-02</td>
+                    <td><a href="/episodes/show/44/project-jupyter-and-ipython">Project Jupyter and IPython</a></td>
+                    <td style="white-space: nowrap;">Min and Matthias</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#43</td>
+                    <td class="text-muted date-text">2016-01-26</td>
+                    <td><a href="/episodes/show/43/monitoring-high-performance-python-apps-at-opbeat">Monitoring high
+                        performance Python apps at Opbeat</a></td>
+                    <td style="white-space: nowrap;">Ron Cohen</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#42</td>
+                    <td class="text-muted date-text">2016-01-19</td>
+                    <td><a href="/episodes/show/42/python-in-startups-and-investing">Python in Startups and
+                        Investing</a></td>
+                    <td style="white-space: nowrap;">Leah Culver</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#41</td>
+                    <td class="text-muted date-text">2016-01-12</td>
+                    <td><a href="/episodes/show/41/getting-your-first-dev-job-as-a-python-developer-part-2">Getting your
+                        first dev job as a Python developer (part 2)</a></td>
+                    <td style="white-space: nowrap;">Panelists</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#40</td>
+                    <td class="text-muted date-text">2015-12-29</td>
+                    <td><a href="/episodes/show/40/top-10-data-science-stories-from-2015">Top 10 Data Science Stories
+                        from 2015</a></td>
+                    <td style="white-space: nowrap;">Jonathon Morgan</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#39</td>
+                    <td class="text-muted date-text">2015-12-22</td>
+                    <td><a href="/episodes/show/39/getting-your-first-dev-job-as-a-python-developer-part-1">Getting your
+                        first dev job as a Python developer (part 1)</a></td>
+                    <td style="white-space: nowrap;">Panelists</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#38</td>
+                    <td class="text-muted date-text">2015-12-15</td>
+                    <td><a href="/episodes/show/38/continuous-integration-and-delivery-at-codeship">Continuous
+                        Integration and Delivery at Codeship</a></td>
+                    <td style="white-space: nowrap;">Florian Motlik</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#37</td>
+                    <td class="text-muted date-text">2015-12-08</td>
+                    <td><a href="/episodes/show/37/python-cybersecurity-and-penetration-testing">Python Cybersecurity
+                        and Penetration Testing</a></td>
+                    <td style="white-space: nowrap;">Justin Seitz</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#36</td>
+                    <td class="text-muted date-text">2015-12-01</td>
+                    <td><a href="/episodes/show/36/python-ides-with-the-pycharm-team">Python IDEs with the PyCharm
+                        team</a></td>
+                    <td style="white-space: nowrap;">Dmitry Trofimov</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#35</td>
+                    <td class="text-muted date-text">2015-11-24</td>
+                    <td><a href="/episodes/show/35/turbogears-and-the-future-of-python-web-frameworks">Turbogears and
+                        the future of Python web frameworks</a></td>
+                    <td style="white-space: nowrap;">Alessandro Molina</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#34</td>
+                    <td class="text-muted date-text">2015-11-17</td>
+                    <td><a href="/episodes/show/34/continuum-scientific-python-and-the-business-of-open-source">Continuum:
+                        Scientific Python and The Business of Open Source</a></td>
+                    <td style="white-space: nowrap;">Travis Oliphant</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#33</td>
+                    <td class="text-muted date-text">2015-11-10</td>
+                    <td><a href="/episodes/show/33/openstack-cloud-computing-built-on-python">OpenStack: Cloud computing
+                        built on Python</a></td>
+                    <td style="white-space: nowrap;">Flavio Percoco</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#32</td>
+                    <td class="text-muted date-text">2015-11-03</td>
+                    <td><a href="/episodes/show/32/pypy.js-pypy-python-in-your-browser">PyPy.js - PyPy Python in Your
+                        Browser</a></td>
+                    <td style="white-space: nowrap;">Ryan Kelly</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#31</td>
+                    <td class="text-muted date-text">2015-10-27</td>
+                    <td><a href="/episodes/show/31/machine-learning-with-python-and-scikit-learn">Machine Learning with
+                        Python and scikit-learn</a></td>
+                    <td style="white-space: nowrap;">Alexandre Gramfort</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#30</td>
+                    <td class="text-muted date-text">2015-10-20</td>
+                    <td><a href="/episodes/show/30/python-community-and-python-at-dropbox">Python Community and Python
+                        at Dropbox</a></td>
+                    <td style="white-space: nowrap;">Jessica McKellar</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#29</td>
+                    <td class="text-muted date-text">2015-10-13</td>
+                    <td><a href="/episodes/show/29/python-at-the-large-hadron-collider-and-cern">Python at the Large
+                        Hadron Collider and CERN</a></td>
+                    <td style="white-space: nowrap;">Kyle Cranmer</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#28</td>
+                    <td class="text-muted date-text">2015-10-06</td>
+                    <td><a href="/episodes/show/28/making-python-fast-profiling-python-code">Making Python Fast:
+                        Profiling Python Code</a></td>
+                    <td style="white-space: nowrap;">Davis Silverman</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#27</td>
+                    <td class="text-muted date-text">2015-09-29</td>
+                    <td><a href="/episodes/show/27/four-years-of-python-for-high-schoolers">Four Years of Python for
+                        High Schoolers</a></td>
+                    <td style="white-space: nowrap;">Laura Blankenship</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#26</td>
+                    <td class="text-muted date-text">2015-09-22</td>
+                    <td><a href="/episodes/show/26/deploying-python-web-applications-updated">Deploying Python Web
+                        Applications (Updated)</a></td>
+                    <td style="white-space: nowrap;">Matthew Makai</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#25</td>
+                    <td class="text-muted date-text">2015-09-15</td>
+                    <td><a href="/episodes/show/25/effective-python">Effective Python</a></td>
+                    <td style="white-space: nowrap;">Brett Slatkin</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#24</td>
+                    <td class="text-muted date-text">2015-09-08</td>
+                    <td><a href="/episodes/show/24/fluent-python">Fluent Python</a></td>
+                    <td style="white-space: nowrap;">Luciano Ramalho</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#23</td>
+                    <td class="text-muted date-text">2015-09-01</td>
+                    <td><a href="/episodes/show/23/3d-printing-with-python-at-authentise">3D Printing with Python at
+                        Authentise</a></td>
+                    <td style="white-space: nowrap;">Eli Ribble</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#22</td>
+                    <td class="text-muted date-text">2015-08-25</td>
+                    <td><a href="/episodes/show/22/cpython-internals-and-learning-python-with-pythontutor.com">CPython
+                        Internals and Learning Python with pythontutor.com</a></td>
+                    <td style="white-space: nowrap;">Philip Guo</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#21</td>
+                    <td class="text-muted date-text">2015-08-18</td>
+                    <td><a href="/episodes/show/21/pypy-the-jit-compiled-python-implementation">PyPy - The JIT Compiled
+                        Python Implementation</a></td>
+                    <td style="white-space: nowrap;">Maciej Fijalkowski</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#20</td>
+                    <td class="text-muted date-text">2015-08-11</td>
+                    <td><a href="/episodes/show/20/interactive-python-and-teaching-python-beyond-text-books">Interactive
+                        Python and Teaching Python: Beyond Text Books</a></td>
+                    <td style="white-space: nowrap;">Brad Miller</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#19</td>
+                    <td class="text-muted date-text">2015-08-04</td>
+                    <td><a href="/episodes/show/19/automate-the-boring-stuff-with-python">Automate the Boring Stuff with
+                        Python</a></td>
+                    <td style="white-space: nowrap;">Al Sweigart</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#18</td>
+                    <td class="text-muted date-text">2015-07-28</td>
+                    <td><a href="/episodes/show/18/python-anti-patterns-and-other-mistakes">Python Anti-patterns and
+                        other mistakes</a></td>
+                    <td style="white-space: nowrap;">Andreas Dewes</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#17</td>
+                    <td class="text-muted date-text">2015-07-21</td>
+                    <td><a href="/episodes/show/17/python-on-bare-metal-with-micropython">Python on bare metal with
+                        MicroPython</a></td>
+                    <td style="white-space: nowrap;">Damien George</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#16</td>
+                    <td class="text-muted date-text">2015-07-14</td>
+                    <td><a href="/episodes/show/16/python-at-netflix">Python at Netflix</a></td>
+                    <td style="white-space: nowrap;">Roy Rapoport</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#15</td>
+                    <td class="text-muted date-text">2015-07-07</td>
+                    <td><a href="/episodes/show/15/python-at-spotify-psf-and-pyladies">Python at Spotify, PSF, and
+                        PyLadies</a></td>
+                    <td style="white-space: nowrap;">Lynn Root</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#14</td>
+                    <td class="text-muted date-text">2015-06-30</td>
+                    <td><a href="/episodes/show/14/moving-from-php-to-python-3-with-patreon">Moving from PHP to Python 3
+                        with Patreon</a></td>
+                    <td style="white-space: nowrap;">Albert Sheu</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#13</td>
+                    <td class="text-muted date-text">2015-06-23</td>
+                    <td><a href="/episodes/show/13/flask-web-framework-and-much-much-more">Flask web framework and much,
+                        much more</a></td>
+                    <td style="white-space: nowrap;">Armin Ronacher</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#12</td>
+                    <td class="text-muted date-text">2015-06-16</td>
+                    <td><a href="/episodes/show/12/deep-dive-into-modules-and-packages">Deep Dive into Modules and
+                        Packages</a></td>
+                    <td style="white-space: nowrap;">David Beazley</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#11</td>
+                    <td class="text-muted date-text">2015-06-09</td>
+                    <td><a href="/episodes/show/11/pyimagesearch-and-computer-vision">PyImageSearch and Computer
+                        Vision</a></td>
+                    <td style="white-space: nowrap;">Adrian Rosebrock</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#10</td>
+                    <td class="text-muted date-text">2015-06-02</td>
+                    <td>
+                        <a href="/episodes/show/10/bringing-python-to-the-masses-with-hosting-and-devops-at-pythonanywhere">Bringing
+                            Python to the Masses with Hosting and DevOps at PythonAnywhere</a></td>
+                    <td style="white-space: nowrap;">Harry Percival</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#9</td>
+                    <td class="text-muted date-text">2015-05-26</td>
+                    <td><a href="/episodes/show/9/docker-for-the-python-developer">Docker for the Python Developer</a>
+                    </td>
+                    <td style="white-space: nowrap;">Patrick Chanezon</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#8</td>
+                    <td class="text-muted date-text">2015-05-19</td>
+                    <td><a href="/episodes/show/8/teaching-python-at-grok-learning-and-classrooms">Teaching Python at
+                        Grok Learning and Classrooms</a></td>
+                    <td style="white-space: nowrap;">Dr. James Curran</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#7</td>
+                    <td class="text-muted date-text">2015-05-12</td>
+                    <td><a href="/episodes/show/7/robot-operating-system-ros-and-rospy">Robot Operating System (ROS) and
+                        ROSPy</a></td>
+                    <td style="white-space: nowrap;">Dirk Thomas</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#6</td>
+                    <td class="text-muted date-text">2015-05-05</td>
+                    <td><a href="/episodes/show/6/requests-pycon-and-python-s-future">Requests, PyCon, and Python's
+                        future</a></td>
+                    <td style="white-space: nowrap;">Kenneth Reitz</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#5</td>
+                    <td class="text-muted date-text">2015-04-28</td>
+                    <td><a href="/episodes/show/5/sqlalchemy-and-data-access-in-python">SQLAlchemy and data access in
+                        Python</a></td>
+                    <td style="white-space: nowrap;">Mike Bayer</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#4</td>
+                    <td class="text-muted date-text">2015-04-23</td>
+                    <td><a href="/episodes/show/4/enterprise-python-and-large-scale-projects">Enterprise Python and
+                        Large-Scale Projects</a></td>
+                    <td style="white-space: nowrap;">Mahmoud Hashemi</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#3</td>
+                    <td class="text-muted date-text">2015-04-16</td>
+                    <td><a href="/episodes/show/3/pyramid-web-framework">Pyramid Web Framework</a></td>
+                    <td style="white-space: nowrap;">Chris McDonough</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#2</td>
+                    <td class="text-muted date-text">2015-04-07</td>
+                    <td><a href="/episodes/show/2/python-and-mongodb">Python and MongoDB</a></td>
+                    <td style="white-space: nowrap;">A. Jesse Davis</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#1</td>
+                    <td class="text-muted date-text">2015-03-31</td>
+                    <td><a href="/episodes/show/1/eve-restful-apis-for-humans">EVE - RESTful APIs for humans</a></td>
+                    <td style="white-space: nowrap;">Nicola Iarocci</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: center   ">#0</td>
+                    <td class="text-muted date-text">2015-03-21</td>
+                    <td><a href="/episodes/show/0/introducing-the-show">Introducing the show!</a></td>
+                    <td style="white-space: nowrap;">Michael Kennedy</td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Here is some content we can select</h4>
+      </div>
+      <div class="modal-body">
+        <ul style="width: auto; text-align: left; display: inline-block">
+            <li>id: latest_episode</li>
+            <li>class: this_month</li>
+            <li>class: course-img</li>
+            <li>id: jumpstart</li>
+            <li>id: pythonic</li>
+            <li>id: launch</li>
+            <li>Element: tr</li>
+            <li>Element: td</li>
+            <li>Element: th</li>
+            <li>Element: body</li>
+            <li>Element: div</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/bower_components/jquery-dist/jquery.min.js"></script>
+<script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+<script src="/static/js/selectors.js?cacheId=${build_cache_id('/static/js/selectors.js')}"></script>
+</body>
+</html>
