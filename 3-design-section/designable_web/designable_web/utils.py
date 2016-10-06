@@ -8,7 +8,8 @@ def build_cache_id(relative_file_url: str):
     if not relative_file_url:
         return "ERROR_NO_FILE"
 
-    fullname = os.path.abspath(os.path.join(__full_path, relative_file_url.lstrip('/')))
+    fullname = os.path.abspath(os.path.join(
+        __full_path, relative_file_url.lstrip('/')))
 
     if not os.path.exists(fullname):
         return "ERROR_MISSING_FILE"

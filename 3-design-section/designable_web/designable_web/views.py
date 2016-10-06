@@ -1,7 +1,5 @@
 from pyramid.view import view_config
-
 import designable_web.utils
-
 
 @view_config(route_name='index', renderer='templates/index.pt')
 def index(_):

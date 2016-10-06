@@ -1,11 +1,10 @@
 /*********** SHARED STYLES ****************/
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  color: black;
-  padding: 20px;
-  padding-top: 0;
-  background: white;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: black;
+    padding: 0 20px 20px;
+    background: white;
 }
 
 .content {
@@ -13,15 +12,11 @@ body {
     line-height: 1.5em;
 }
 
-
-
 /*********** SELECTORS DEMO ****************/
 .selected {
     background-color: #ffffa0;
     border: 3px solid yellow;
 }
-
-
 
 /*********** BOX DEMO ****************/
 .outside {

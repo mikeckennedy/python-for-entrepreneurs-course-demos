@@ -14,8 +14,8 @@
     <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
-    <link href="/static/css/theme.css" rel="stylesheet">
-    <link href="/static/css/site.css" rel="stylesheet">
+    <link href="/static/css/theme.css?cacheId=${build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${build_cache_id('/static/css/site.css')}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
