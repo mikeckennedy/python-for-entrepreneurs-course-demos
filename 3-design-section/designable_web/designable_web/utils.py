@@ -1,3 +1,6 @@
+# Note that a proper production friendly version of this functionality is
+# included in static_cache.py
+
 import hashlib
 import os
 
