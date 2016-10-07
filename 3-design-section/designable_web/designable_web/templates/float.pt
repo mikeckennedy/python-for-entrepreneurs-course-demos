@@ -28,8 +28,9 @@
 <body>
 <div>
     <div id="top-div">
-        <div>This is a message</div>
         <img src="/static/img/dunecat.jpg" alt="">
+        <div>This is a message</div>
+        <div style="clear: both;"></div>
     </div>
 
     <p>+1 kitsch tumeric kale chips. Prism bitters man braid, hell of godard wolf af fashion axe kombucha thundercats

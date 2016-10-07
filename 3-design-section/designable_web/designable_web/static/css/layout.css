@@ -4,3 +4,27 @@ body {
     padding: 0;
 }
 
+ol {
+    background-color: #222;
+}
+
+li {
+    display: inline-block;
+    padding: 5px;
+    padding-right: 10px;
+}
+
+li a, li a:visited {
+    color: #aaa;
+}
+
+li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+li a:active {
+    color: yellow;
+    text-decoration: none;
+}
+
