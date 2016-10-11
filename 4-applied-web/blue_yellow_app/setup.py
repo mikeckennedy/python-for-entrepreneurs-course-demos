@@ -12,11 +12,12 @@ requires = [
     'pyramid',
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
+    'pyramid_handlers',
     'waitress',
     ]
 
 tests_require = [
-    'WebTest >= 1.3.1',  # py3 compat
+    'WebTest >= 1.3.1',  # py3 compatibility
     'pytest',  # includes virtualenv
     'pytest-cov',
     ]
