@@ -20,3 +20,19 @@ body {
 .nav a:visited, .nav a:active {
     text-decoration: none;
 }
+
+/* ********** ALBUM LIST ********* */
+.album-in-list {
+
+}
+.album-in-list img {
+    height: 150px;
+    float: left;
+    margin: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.album-in-list .album-title {
+    font-size: 18px;
+}

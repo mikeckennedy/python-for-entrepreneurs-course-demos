@@ -7,6 +7,10 @@ class BaseController:
         self.request = request
         self.build_cache_id = static_cache.build_cache_id
 
+    @property
+    def is_logged_in(self):
+        return False
+
     @suppress
     def dont_expose_as_web_action_base(self):
         print("Called dont_expose_as_web_action on base, what happened?")

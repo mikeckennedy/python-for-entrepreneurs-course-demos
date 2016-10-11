@@ -8,7 +8,7 @@
     <meta name="description" content="pyramid web application">
     <meta name="author" content="Pylons Project">
     <link rel="shortcut icon"
-          href="/static/img/pyramid-16x16.png?cacheId=${view.build_cache_id('/static/img/pyramid-16x16.png')}">
+          href="/static/img/fav.png?cacheId=${view.build_cache_id('/static/img/fav.png')}">
 
     <title>Starter Scaffold for The Pyramid Web Framework</title>
 
@@ -31,6 +31,7 @@
 
 <div class="nav">
     <a href="/home/index">home</a> |
+    <a href="/albums">albums</a> |
     <a href="/home/about">about</a> |
     <a href="/home/contact">contact</a>
 </div>
