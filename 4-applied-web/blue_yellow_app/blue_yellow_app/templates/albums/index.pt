@@ -1,68 +1,19 @@
-<!DOCTYPE html>
-<html lang="${request.locale_name}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Michael Kennedy (@mkennedy)">
-    <link rel="shortcut icon"
-          href="/static/img/fav.png?cacheId=${view.build_cache_id('/static/img/fav.png')}">
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
 
-    <title>Blue Yellow Rocks Band</title>
-
-    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
-          rel="stylesheet">
-
-    <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
-    <link href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
-    <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-<div class="nav">
-    <div style="float: right;">
-        <a href="#" tal:condition="not view.is_logged_in">sign in</a>
-        <a href="#" tal:condition="not view.is_logged_in">register</a>
-
-        <a href="#" tal:condition="view.is_logged_in">account</a>
-        <a href="#" tal:condition="view.is_logged_in">logout</a>
-    </div>
-
-    <a href="/home/index">home</a> |
-    <a href="/albums">albums</a> |
-    <a href="/home/about">about</a> |
-    <a href="/home/contact">contact</a>
-</div>
-
-<div class="main_content">
-    <h1>Albums</h1>
-
-    <div class="album-in-list" tal:repeat="a albums">
-        <img src="${a.image}" alt="">
-        <div class="album-title">${a.title}
-            <a href="#" tal:condition="a.has_preview">preview</a></div>
-        <div>
-            <ul>
-                <li tal:repeat="t a.tracks">
-                    ${t.title}
-                </li>
-            </ul>
+        <h1>Albums</h1>
+        <div class="album-in-list" tal:repeat="a albums">
+            <img src="${a.image}" alt="">
+            <div class="album-title">${a.title}
+                <a href="#" tal:condition="a.has_preview">preview</a></div>
+            <div>
+                <ul>
+                    <li tal:repeat="t a.tracks">
+                            ${t.title}
+                    </li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div>
         </div>
-        <div style="clear: both;"></div>
     </div>
-
 </div>
-
-
-<script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
-<script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
-
-</body>
-</html>

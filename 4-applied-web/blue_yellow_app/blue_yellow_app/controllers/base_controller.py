@@ -1,5 +1,5 @@
 import blue_yellow_app.infrastructure.static_cache as static_cache
-from blue_yellow_app.infrastructure.supressor import suppress
+import pyramid.renderers
 
 
 class BaseController:
@@ -7,10 +7,10 @@ class BaseController:
         self.request = request
         self.build_cache_id = static_cache.build_cache_id
 
+        layout_render = pyramid.renderers.get_renderer('blue_yellow_app:templates/shared/_layout.pt')
+        impl = layout_render.implementation()
+        self.layout = impl.macros['layout']
+
     @property
     def is_logged_in(self):
         return False
-
-    @suppress
-    def dont_expose_as_web_action_base(self):
-        print("Called dont_expose_as_web_action on base, what happened?")
