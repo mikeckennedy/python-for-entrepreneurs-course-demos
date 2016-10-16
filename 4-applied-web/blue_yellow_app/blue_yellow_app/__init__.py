@@ -1,6 +1,7 @@
 from pyramid.config import Configurator
 import blue_yellow_app.controllers.home_controller as home
 import blue_yellow_app.controllers.albums_controller as albums
+import blue_yellow_app.controllers.account_controller as account
 
 
 def main(_, **settings):
@@ -19,6 +20,7 @@ def init_routing(config):
 
     add_controller_routes(config, home.HomeController, 'home')
     add_controller_routes(config, albums.AlbumsController, 'albums')
+    add_controller_routes(config, account.AccountController, 'account')
 
     config.scan()
 
