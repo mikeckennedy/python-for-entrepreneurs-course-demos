@@ -1,5 +1,6 @@
 import pyramid_handlers
 from blue_yellow_app.controllers.base_controller import BaseController
+from blue_yellow_app.viewmodels.register_viewmodel import RegisterViewModel
 
 
 class AccountController(BaseController):
@@ -17,31 +18,20 @@ class AccountController(BaseController):
                              name='register')
     def register_get(self):
         print("Calling register via GET...")
-        return {
-                'email': None,
-                'password': None,
-                'confirm_password': None,
-                'error': None
-            }
+        vm = RegisterViewModel()
+        return vm.to_dict()
 
     # POST /account/register
     @pyramid_handlers.action(renderer='templates/account/register.pt',
                              request_method='POST',
                              name='register')
     def register_post(self):
-        email = self.request.POST.get('email')
-        pw = self.request.POST.get('password')
-        pw_confirmation = self.request.POST.get('confirm_password')
+        vm = RegisterViewModel()
+        vm.from_dict(self.request.POST)
 
-        print("Calling register via POST: {}, {}, {}".format(email, pw, pw_confirmation))
-
-        if pw != pw_confirmation:
-            return {
-                'email': email,
-                'password': pw,
-                'confirm_password': pw_confirmation,
-                'error': "The password and confirmation don't match"
-            }
+        vm.validate()
+        if vm.error:
+            return vm.to_dict()
 
         # validate no account exists, passwords match
         # create account in DB
