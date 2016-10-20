@@ -1,0 +1,107 @@
+ 0:01 In order to use Bower, you have to install it.
+0:03 And the way you get it installed is with npm, so you just npm install - g for global, 
+0:09 rather than local one, bower. 
+0:12 So here you can see it says it requires node, npm and git. 
+0:18 I've already installed bower, so I don't need to do that 
+0:21 but you should follow these directions using node and npm, 
+0:24 once you get them set up we are going to work with installing our dependencies. 
+0:28 so over here, we have our web application, and you can see our code, 
+0:34 this is our top level for a website, here is the egg info from setup.py develop 
+0:40 and here is the actual logic of our application, 
+0:44 in the static folder is where we would like to put things 
+0:47 like javascript, css, images and so on, 
+0:49 so that seems like the right place for bower to manage its dependencies 
+0:53 which largely consists of those things. 
+0:56 So let's go over here, we can see that I am actually in that folder, in the static folder 
+1:01 and let's say bower list, see if anything is here, nope, there is nothing here, 
+1:06 and notice, there is no bower components folder here, 
+1:10 so you know there is actually nothing going on with bower. 
+1:12 One of the things we want to replace we saw the dependency on bootstrap 
+1:16 and we would like to replace that so why don't we install that? 
+1:19 Your first inclination would be to do this. 
+1:23 And it's fine, you can totally bower install bootstrap, 
+1:26 but you are going to get all of the assets 
+1:28 and things basically clone the entire bootstrap repo in github 
+1:33 so you have all the building blocks, 
+1:35 not just the stuff you want to ship for your after work, 
+1:38 so there is a shorter version you can use, so if you say -css, 
+1:42 it just brings kind of non intuitive, it brings a css javascript and fonts 
+1:47 but basically the distribution folder for bootstrap. 
+1:51 So I've already installed this, it doesn't need to download it, 
+1:53 you can see it's taking this straightfrom github, it's validated it and it's installed it. 
+1:58 Now if we go back here, you can see we have bower components, bootstrap css, 
+2:02 little bower project file we've got the css that we need, minified non minified, 
+2:06 we've got the fonts and we've got the javascript, again minified and non minified. 
+2:12 What's so different about this? 
+2:14 Well, one we have it offline, we could have just gone 
+2:16 and downloaded bootstrap and dropped it in here, unzipped it, 
+2:18 but then we couldn't upgrade it, we couldn't manage it, 
+2:21 so for example I can come over here and say bower update, 
+2:25 and if there was a new version of bootstrap, 
+2:29 it would have actually upgraded it for us so that's really cool. 
+2:31 I don't do that for all of our dependencies, 
+2:34 We probably want jquery, so let's go and install that, 
+2:37 move this over so you can see them coming in, 
+2:40 so we have bower we have jquery, we saw respond js we also saw html5 shiv 
+2:47 let's put those in, so now we have those as well. 
+2:52 Another one that I think is great is font awesome. 
+2:55 Font awesome is really good for little widgets and icons in your site, 
+2:59 that are not actually images but are fonts 
+3:02 so you can color them and resize them perfectly, 
+3:05 so let's put that in there as well. Beautiful. 
+3:09 Now, all of our components are setup here, 
+3:11 so font awesome for example there are our fonts. 
+3:15 And the last thing to do is go to our template and start using these 
+3:18 instead of the ones that are coming off the cdn. 
+3:22 Notice over here how this refreshed, let's go and find our bootstrap css here 
+3:27 copy the path, and let's update this. 
+3:33 Now you don't want the whole path of course, 
+3:37 you just want from static down because this is sort of the folder 
+3:40 containing our app this down is our app
+3:44 so let's just go back here and cut this off, like so,
+3:46 so now we have our bootstrap. 
+3:48 Now, there is one little detail about this possibly getting cashed and if we update it, 
+3:53 that could be a problem, it rarely is for bootstrap, it much more likely is for our site. 
+3:58 Let's do the same for html5 shive and respond js. 
+4:05 Great, so that should take care of things for the css 
+4:08 and now we just have to do the javascript. 
+4:12 I have no intention of debugging these so let's just keep using the min versions. 
+4:16 All right, let's run the site, it better still look the same. 
+4:20 Oh, how interesting, this is worth pointing out, 
+4:22 so when you create one of these projects in PyCharm, 
+4:25 notice there is two blue yellow apps running here, 
+4:28 this one has little green dot that means it's still running, 
+4:31 this is one I tried to run, it crash so it exited sadly with code 1, that makes it sad, 
+4:35 so what happened, well, these web apps of course they [...] on a port
+4:40 but you can only have one app or process bound to that port, 
+4:44 well, how do we solve that, we just go to PyCharm and say PyCharm don't do that, 
+4:48 say I would like a single instance only 
+4:51 so that way when you say I want to run or rerun this app, 
+4:54 it will shut down the old one meaning there should be no problem running it. 
+4:58 Here notice I wasn't using my virtual environment so let's set that back as well. 
+5:03 Notice how it asks do you want to rerun this, 
+5:06 just say never ever show me that again, 
+5:09 and it will automatically rerun it for us every time. 
+5:12 Wonderful, so it's up and running on local host, let's have a look, 
+5:15 see everything is still working. 
+5:18 Well that sure looks like bootstrap, let's have a quick look; 
+5:23 so here you can see our bootstrap, if I click on this great, we have Twitter bootstrap. 
+5:28 And what else were we looking for, response js but of course, 
+5:31 these are only brought in for IE8, I really hope no one is using IE8, 
+5:35 all right let's check this out, one more time, jquery, ok, good, jquery is good, 
+5:39 and the bootstrap js perfect, 
+5:42 so it looks like we've successfully moved to bower 
+5:47 managing our various dependencies, bootstrap distribution, 
+5:51 font awesome, html5 shiv and respond for old school IE support, and jquery. 
+5:57 Finally, if you ever wonder well, what is installed here,
+6:00 what versions and so on, you can easily ask bower. 
+6:04 Say list and it will tell you if there is an upgrade or anything like that, 
+6:07 for our purposes we can ignore extraneous, this thing sort of manages this 
+6:13 as if we are building a bower package ourself 
+6:15 and then these are the dependencies and then what it's saying is
+6:18 you are not using this in your current package, no no, we are not using that way, 
+6:21  we are just simply installing them into our web app. 
+6:23 If we wanted to set up a file with these dependencies
+6:26 so we could regenerate them just from our bower.json we could, 
+6:29 but I don't really see a huge benefit to that. 
+

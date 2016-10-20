@@ -1,0 +1,56 @@
+ 0:04 Over the next couple of videos, 
+0:07 we are going to talk about choosing a Python web framework 
+0:10 and which one we are going to use for this course. 
+0:13 Let's start by answering the question what can you build with Python? 
+0:17 Well, it turns out there are a bunch of amazing products and companies 
+0:21 that you all use and are familiar with, built with Python. 
+0:24 Let's look at a few of the use cases. 
+0:27 The Onion, the hilarious fake news organization, 
+0:30 their web application is built in Python
+0:33 Spotify is also using Python for their web front end
+0:36 Nasa- rockets and spaceships and all sorts of amazing stuff, they are using Python
+0:41 bitly the short link app is built with Python.
+0:44 Bitbucket, Atlassian’s competitor to github is built with Python, that's very nice
+0:50 Survey Monkey they use Python all over the place
+0:53 Quora, the best general Q&A spot on the internet, 
+0:57 they are passionate, passionate users of Python, 
+1:00 not only do they use Python for most of their app and their web front end, 
+1:04 you'll see them right frequently looking inside their engineering organization 
+1:08 talking about the challenges and how they solve them in Python and so on. 
+1:11 Disqus, one of the most popular comment add ins for your web site
+1:16 so if you have a blog or say a podcast, and you want to have comments at the end, 
+1:21 you can have this nice live pushed based comment section 
+1:24 right at the bottom of your pages and that's largely done with Python, 
+1:27 not 100% but much of it. 
+1:29 Instagram uses Python in a lot of places. 
+1:32 Reddit, Reddit is a major user of Python for their website 
+1:35 as well as SQLAlchemy for their database
+1:38 YouTube was built with Python
+1:41 Pinterest built their website with Python
+1:43 PayPal is a massive user of Python, you'll see throughout their whole company
+1:46 they are doing many interesting things with Python
+1:49 they are blogging and writing about what they are doing with Python
+1:52 one of their services that does pricings for the exchange rate 
+1:55 where they charge you some small percent for a transaction throughout the day
+1:59 that service that answers that question 
+2:01 what percent do people have to pay 
+2:03 or what should PayPal charge you, throughout the day,
+2:06 that service is written in Python and handles several billion requests per day, 
+2:11 and is running down around the millisecond response time.
+2:14 Dropbox maybe one of the biggest users of Python
+2:17 most of the backend stuff happening at the company at the server side 
+2:21 at Dropbox is happening in Python. 
+2:24 The client stuff side, the little box that does the sinking 
+2:27 and the app that runs on your machine also Python interestingly, 
+2:30 so you'll see that Dropbox is a major user of Python 
+2:33 and some of the Python core developers as well as Guido Van Rossum, 
+2:37 the creator of Python himself, work there. 
+2:40 So Dropbox is a heavy user of Python and an absolute hotbed of it. 
+2:44 And finally, Talk Python, my websites, my podcast, my training site, 
+2:48 all run on Python and we are going to be of course looking 
+2:52 inside the code that does that. 
+2:54 If you'd like to see where this information came from, 
+2:57 read a little bit more about how each company or product is using Python, 
+2:59 you can just check out this bitly url down here at the bottom, 
+3:02 and there is a nice write up featuring these companies as well as more. 
+

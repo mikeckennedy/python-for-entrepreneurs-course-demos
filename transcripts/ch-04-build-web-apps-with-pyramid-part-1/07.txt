@@ -1,0 +1,43 @@
+ 0:02 So let's quickly review how we create a Pyramid website 
+0:06 with scaffolding from the command line. 
+0:09 It all starts with creating a virtual environment. 
+0:12 Here you can see we say python 3 -m, for module, virtual env 
+0:15 and then we choose the environment name of env. 
+0:19 Maybe not the most descriptive but it worked. 
+0:23 Then we want to source or .activate this shell when we ask 
+0:26 which Python is the active one, you can see it's the one 
+0:30 coming out of the environment that we just created and activated. 
+0:33 Once we have our environment set up, 
+0:36 we want to install Pyramid which gives us the scaffolding and the server, 
+0:40 so we say pip install pyramid. 
+0:43 Once we have Pyramid, we have pcreate, 
+0:46 pcreate is the tool that will generate the website based on the scaffolding, 
+0:50 here we can ask what our options are, pcreate list 
+0:53 and it says here is three options that we have. 
+0:56 So, we have Alchemy, starter and zodb. 
+0:59 In our example we choose starter and we are going to do that here again,
+1:02 so we say pcreate -s for scaffolding, so -s starter
+1:06 and then we name our web application. 
+1:08 That's going to show up all over the place so pick a name that you are happy with. 
+1:12 Now you can see the files created by pcreate, the Pyramid scaffolding. 
+1:17 If we try to run this directly 
+1:19 we would say p serve and then give it one of the any files, 
+1:22 either development or production,
+1:24 you'll see that we are missing lots of dependencies 
+1:26 not the least of which is actually the package representing the web app itself. 
+1:30 So we've got to tell the active Python environment, 
+1:33 hey this package that is the web application when you look for the main entry points 
+1:38 and so on, it's right here, the way we do that is we say Python setup py 
+1:41 the development command line argument which means install the package 
+1:45 but point to this active location 
+1:48 rather than copying the files to some site package place. 
+1:50 Once we've registered our package, we can now run pserve 
+1:54 and give it the development. any file, you can see the server starts, 
+1:58 it loads our web app and it serves it on some port of its choosing. 
+2:01 If we open that url in the browser, you can see we have an active website, 
+2:06 everything is up and running and working just great. 
+2:09 Note that if you end up with 0.0.0.0 as your IP address 
+2:12 on Windows that doesn't work, 
+2:15 just replace it with the local host IP address so 127.0.0.1, 
+2:18 other than that, we are ready to go. 
+2:21 So now we are ready to start adding features and building our website.  

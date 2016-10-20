@@ -1,0 +1,182 @@
+ 0:01 Now when we have the basic shape of our game built, 
+0:03 let's go and actually implement it. 
+0:06 So to get started, there is two  basic things we need to keep track of. 
+0:09 What are the things we could show a user, 
+0:12 like what colors and what have we shown the user. 
+0:15 So we'll come over here and we want to define a variable on this object 
+0:19 so we'll say self. and we'll just create a variable name out of thin air,
+0:21 and that is how you define the variables, 
+0:24 make sure this happens in the __init__ method, not somewhere else, 
+0:27 so we want to say history, and we want this just to be an empty list 
+0:30 so we can do that with just empty brackets like so. 
+0:33 The other thing we want to keep track of is we want to have the choices, 
+0:36 or plays let's call them. 
+0:38 This is going to be another list and this is going to contain 
+0:41 all the distinct plays that we could have,
+0:44 so we might have red, we might have blue, we might have green, 
+0:47 let's say we are going to have four colors, ok. 
+0:49 Now, in order to make this a little nicer game, 
+0:51 let's add some color and some more verbiage, 
+0:54 but we want to have a short thing to test against, 
+0:57 so we don't make the user type red they can hit r and b and so on. 
+1:00 So instead of putting individual items in here, 
+1:02 we are going to put something called tuples, 
+1:04 and this will let us put multiple values for each particular play, 
+1:07 so we are going to put in here, we are going to say red, 
+1:10 that's going to be what we show the user but what we are going to test for
+1:13 is just r and then yellow and so on. 
+1:16 Ok, this is a good start, we are going to improve this in just a minute, 
+1:20 but let's finish some of the other implementation here and then we'll move on. 
+1:23 Next, let's turn our attention to show level; 
+1:26 I would like to be able to clear the screen, whatever is on there remove it, 
+1:29 show them just the colors that we've picked or that we have at our current level 
+1:33 maybe four colors at level four, and then take that away again, 
+1:36 so we are going to need a clear method, so we can say self.clear, like so, 
+1:41 and we can add that method here, which goes at the bottom, 
+1:45 we are going to use a pretty cheap way to clear the screen here, 
+1:48 we are going to go and import one of the system modules, 
+1:50 so to use something out of the standard library we have to import it, 
+1:53 so we are going to import os. 
+1:55 Now we could do a little bit of work to test what platform we are running on, 
+1:58 but I am just going to do it from Mac, you do it from whatever one you went in for, 
+2:01 and you could use the sys module to figure out whether you are on Windows 
+2:05 or on a Linux Unix based machine. 
+2:08 But we are going to say os.system and call a system command, 
+2:11 and a system command we are going to do is clear. 
+2:13 Right, that's what you type in the console or the terminal to clear the screen 
+2:17 and that's where we are going to have our game here. 
+2:20 Now PyCharm is giving us a little warning that this doesn't have to be a instance method, 
+2:24 it could be a static one, but just to keep things consistent, 
+2:27 I am going to say don't bother us with that. 
+2:30 So you won't see any squiggles there. 
+2:32 Right, so first thing we are going to do when we show the level
+2:34 is we want to say we want to clear the screen, 
+2:37 and then we want to go through each item in the history 
+2:39 remember up here we have this list, history, 
+2:41 so we'll say for h in history and when you in self.history, 
+2:44 in Python the primary way to process a collection is to use this for in loop, 
+2:49 so for some variable we make up in the collection 
+2:52 so if we have ten items in our history we are going to pull them out 
+2:55 and work with them one at a time here, so than we could say print, 
+2:59 now, we need to think about what are we going to put into this history here, 
+3:02 and what we are going to put in are basically selections of these, 
+3:06 so we want to print out the first element here, 
+3:08 so there is a couple of things that we can do 
+3:11 but let's just keep things simple we'll print bracket zero there. 
+3:13 The next thing we want to do is also we don't want to have this pile vertically, 
+3:16 let's have this just go horizontally, it seems like that's a little better 
+3:19 so we can say the end is just going to be two spaces, 
+3:22 or a comma or something like that. If it prints this out as fast as they can 
+3:25 and it goes away, that's not going to be so great 
+3:28 so what we want to do is we want to make it go slowly 
+3:31 so we can put this thread to sleep using the time method here, 
+3:34 and we could go to the top up here and type import time or in PyCharm 
+3:37 hit alt enter and say we would like to just import this name so, 
+3:42 see how I wrote import time at the top, and now, 
+3:45 it has a handy little sleep function and let's say it's going to sleep for two seconds. 
+3:49 Now, something that happens in this that you won't see 
+3:52 until you run it but while I am here I will go and take care of it, 
+3:55 I'll put a note that we need to flush the output, 
+3:58 just because the way it works in the terminal this doesn't always 
+4:01 flush that stream as you sleep, and so it doesn't show in a nice smooth way, 
+4:05 we'll see that we need to do that here.
+4:07 And maybe two is a little long, let's put that at one, and last thing, 
+4:11 after we are done showing them that, let's clear 
+4:14 this is going to take that screen away so we are going to show them the history, 
+4:17 clear the screen, show them all the moves they are suppose to remember 
+4:20 and then take it away. And then we are going to test them, 
+4:23 but before we test them let's add a move, right, 
+4:25 we've got to start out with the empty set of history, 
+4:27 let's add some will say self.history to add something to a list we just append to it. 
+4:31 Now, there is a really nice way to randomly select from a sequence in Python, 
+4:35 so if we have the random module imported, we can come down here and say 
+4:41 I would like to pick one of those random items, 
+4:43 so I say random.choice 
+4:47 and pick some sequence and it will just give us one random, 
+4:52 so that's really nice to write there.
+4:54 let's hold off on the test here and let's just say return true, 
+4:59 let's just say they are passing for now so we can see the other stuff working. 
+5:02 All right, so like I said, there is going to be a little bit of a problem when we run this, 
+5:06 but let's go ahead and save and run this. 
+5:08 Now, how do we run this, right click over here 
+5:11 and we can say run and pick whatever thing it is we want to run, and run, 
+5:16 now, notice, it doesn't really like this stuff being empty here when we call clear, 
+5:20 and really we have to just run this outside in the terminal. 
+5:24 So a simple way to do that is just copy what PyCharm is doing. 
+5:26 Here you can see something is happening but we are not really seeing this item, 
+5:31 so like I said, we need to flush this because that's a little bit funky, 
+5:35 so we are going to say sys import that module, go to standard and just say flush. 
+5:41 Now let's try this again, so yellow, blue, yellow, blue, green, 
+5:49 yellow, blue, green, blue- you can see it's just slowly building up as it goes. 
+5:56 All right, we are of course not testing the user, 
+5:59 but it looks like this works except there is one problem, 
+6:02 something I don't really like so much here, that green is yellow, that blue is yellow, 
+6:06 everything like that, so we can come over here and use an external library, 
+6:10 external package that I have installed, 
+6:13 and I have installed it with pip 3 install colorama, 
+6:17 so we are going to use this thing called colorama, 
+6:20 and that lets us add coloring to the console. 
+6:23 I have already installed that like I said, 
+6:26 and so the way you use it is you just add in a string colorama.for.red let's say, like so. 
+6:33 We are just going to do this for each one. 
+6:36 Let's just run that again, make sure I hit save, and run it, 
+6:40 and now you see, blue is blue, blue is blue, red, red is red, 
+6:45 and as it builds up we'll see more of these yellow is yellow and so on. 
+6:48 Great, so that feels much more like a game to me. 
+6:51 Now it's really down just to testing the player, 
+6:54 so what we are going to do is we are going to go through for each thing in our history 
+6:58 we are going to ask the user what is the first item, what is the second item, 
+7:02 and so on and we'll just see if they can get that right, 
+7:04 so let's start out with the little message to them, 
+7:07 just to say look, you are going to need to remember for items, or five items, 
+7:09 or whatever it is and let's do this white, so we'll say colorama.fore.white 
+7:13 and then what we want to tell them is we want to say there are three moves, 
+7:17 or two moves, or something, we can use this string format style, like so, 
+7:22 and we can say .format and say I want to give it the length, 
+7:26 the number of items in this object's history. 
+7:30 And then for each one of those things in the history we want to loop over it 
+7:33 and test so we'll say for h in self.history, we want to test something. 
+7:40 Now, I'll show you another good trick, here, another good technique, remember,
+7:44 each thing in the history is one of these 
+7:46 and what we really care about is the second value, not the first. 
+7:50 Down here, we were just using indexes into it, 
+7:53 bracket zero bracket one and so on, but we can do what's called tuple unpacking here, 
+7:57 so I could say we can give the text and the entry or the v for value, 
+8:02 and because this is a length two tuple, the first value is assigned to you 
+8:06 and the second is assigned there. 
+8:09 So we can just test against that v, so let's say something like this, 
+8:11 we want to get input from the user, that's super easy, we'll say input, 
+8:15 use the input method and we just give the prompt. 
+8:18 And we'll give them a little hint on the things that they can type and then we'll say 
+8:22 if guess != v return false. 
+8:26 So, the very first time that they get it wrong let's say nope, that was wrong, 
+8:29 and in the end if they make it through all of them, 
+8:31 they must have gotten them all right so we'll say return true. 
+8:34 All right, I think our game is just about ready to play, 
+8:37 let's save it and then run it over here and see what we get; green, 
+8:42 ok, so it says one move we have to remember, and that was g, 
+8:46 ok, worked, green, green, green, green, now red, so g, g, r, 
+8:55 it really seems to like red and green.
+9:00 Let's just put something wrong so we can see that it said all right, look, 
+9:04 you entered something wrong, it's supposed to be green, you said red, there it goes. 
+9:07 But, we made it to level 7, that was pretty awesome, 
+9:10 but what is even more awesome is our game is totally implemented here, 
+9:13 so we come in, we create the game, we start out with the empty history, 
+9:17 and the various plays that we can make, to show the level, 
+9:20 we just loop over the items and we print out the text, 
+9:23 and because we are not using an inline, it doesn't flush, 
+9:27 so we are going to force the flush here, do rest, 
+9:30 to add a move it's super easy we get a random one from our plays, 
+9:33 and to test the player we just go through each one of them these entries in the history 
+9:38 and we unpack the values and we check that their guess is the right value. 
+9:42 There is so many things to learn in Python 
+9:45 and it's a very rich and powerful language, 
+9:48 but at the same time, you've seen a significant portion of it, in action. 
+9:52 If any of this was too fast, or unclear, please go and review the reference section 
+9:57 where we go over every one of these ideas topic by topic, 
+10:01 there is something on loops, 
+10:04 there is something on conditionals, there is something on methods and so on. 
+10:07 If you need to find out more details about something,
+10:09 before you start the rest of the class, 
+10:12 make sure you check out the reference section. 
+10:12 Otherwise, let's move on to getting started with web development. 

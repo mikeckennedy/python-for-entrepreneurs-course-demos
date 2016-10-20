@@ -1,0 +1,42 @@
+ 0:01 When deciding on a Python web framework,
+0:04 it's important to consider the tradeoffs that you make 
+0:06 when you choose a particular framework. 
+0:08 So on one hand, we have a host or what are called micro frameworks,
+0:10 these frameworks are very lightweight 
+0:13 and they are great for building quick simple applications, 
+0:16 and then you bring many many pieces together to add on functionality. 
+0:20 Will that allow you to make exactly the app that you want 
+0:23 because you've only brought in the pieces that you need, 
+0:26 it's actually a lot of work and it's a little bit hard for beginners 
+0:29 because you don't know about all the little pieces you've got to put together. 
+0:32 On the other hand, we have what I am calling building block frameworks, 
+0:35 maybe this is not quite the right term but what I mean is 
+0:38 these are the frameworks that have large pieces that you can stack together
+0:42 maybe you want to admin backend for your database, boom
+0:45 here is a little piece you stick in there
+0:47 you want to data access layer right into the framework, 
+0:50 boom, there is your ORM, the way that you talk to your database, and so on. 
+0:53 These are great, if that's what you want to use, 
+0:56 but if you don't want to use those, 
+0:58 if you want to use a different kind of database, say a no sql database versus a relational one, 
+1:02 then all of the sudden these building blocks can be getting in your way 
+1:05 and you have to work your way around them. 
+1:08 That's kind of the way I see the spectrum of the web frameworks, 
+1:11 and in the building block area, we have Django. 
+1:13 one of the most popular web frameworks for Python 
+1:17 and it has a lot of great building blocks, but like I said, has things like a built in ORM, 
+1:21 and if you don't want to access data in the way their ORM works, 
+1:24 or you are kind of fighting against the system a little bit, to go and do something different. 
+1:27 On the other end we have frameworks like Bottle, 
+1:30 which are fast but very simple and don't come with very much functionality, 
+1:34 I would put Flask just up above Bottle in terms of what it brings to the table 
+1:39 and how many little pieces you have to put together.
+1:41 And then in the middle, what I would call the goldielocks range, 
+1:43 not to small, not too big would be Pyramid. 
+1:47 Pyramid is a framework that we are going to be using for this course, 
+1:50 it's not as much of a building block thing as Django, 
+1:53 you can pick all the various pieces 
+1:56 you want to use Mongo DB, no problem, use Mongo DB, 
+1:58 it's a little more full featured than some of the micro frameworks. 
+2:01 So, let's take a look at Pyramid now. 
+

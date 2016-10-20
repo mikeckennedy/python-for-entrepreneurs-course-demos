@@ -1,0 +1,28 @@
+0:02 Let's review creating a Pyramid web app in PyCharm. 
+0:05 And, my motto is you get more at once with PyCharm, 
+0:09 you type in only what you want 
+0:12 and it basically configures the whole system for you right away. 
+0:15 On this screen here we are going to install Pyramid, 
+0:17 we are going to create a virtual environment, 
+0:19 we are going to choose the scaffolding and the template language all at once. 
+0:23 Then we wait a moment for PyCharm to do its magic,
+0:25 basically it runs to the steps you saw on the command line version as well,
+0:29 and then, when it's time to register our package and install the dependencies, 
+0:33 you'll see a warning right across the top straight away 
+0:36 but doing this step is all that is required and will fulfill those dependencies, 
+0:39 so you go to tools, run setup.py task 
+0:42 and that gives you a bunch of options we are going to choose develop, 
+0:45 which will register this application as a package in place, 
+0:48 which means as we make changes to it and restart it, 
+0:51 it will automatically pick up those changes,
+0:53 no need to reinstall it or weird stuff like that. 
+0:56 And then you press this little green button
+0:57 PyCharm has created a run configuration 
+1:00 pointed at the development. any configuration 
+1:03 and listening on this port so you just press that button, the play button to run it, 
+1:07 or the debug, the bug button to debug it, depending on what you are trying to do.
+1:12 You'll see down here at the bottom, it will say it's serving on some port
+1:17 which is a hyperlink just click that and you are winning with PyCharm. 
+1:19 You have your web app up and running, 
+1:21 in your default browser, ready to check it out and see what you've built. 
+1:26 Of course, now the real work begins of building your web application. 

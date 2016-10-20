@@ -1,0 +1,48 @@
+ 0:02 Let's have a quick look at the relative performance of Python 
+0:06 among all the technologies that you might use to build web applications. 
+0:10 But before I show you this graph, 
+0:13 I want to emphasize that performance is not the only thing 
+0:16 when you are starting a business, 
+0:18 it's much more important that it's easy to work with 
+0:20 that it's quick to get something out the door, 
+0:22 but it's also nice to know if what you are working with is going to live a while 
+0:25 as your business grows that you won't have to replace it right away, 
+0:28 that it would be able to handle some decent growth 
+0:31 before you maybe have to so some sort of optimization or even change frameworks. 
+0:36 So let's look at Python relative to the other technologies. 
+0:39 Here is a graph of numbers taken from the TechEmpower benchmark, 
+0:43 and this is one of the more well respected benchmarks for web applications 
+0:48 and it's absolutely comprehensive, 
+0:51 there are many frameworks and variations on different servers 
+0:54 with different databases and so on.
+0:56 So here you can see we have a couple of technologies, 
+0:59 the fastest one that I put on the list it's not the fastest, 
+1:02 but it's definitely interesting, is Bottle. 
+1:05 So Bottle running on Python 2 is quite quick, 
+1:08 it's doing over 35 thousand requests per minute. 
+1:11 Than we have Flask, running on Python 2, remember, 
+1:14 these are all micro frameworks, they do less so you would expect them 
+1:17 to be able to be able to do more of it. 
+1:19 Then we have Pyramid with Python 3 right there 
+1:21 and it's coming in third, that's pretty excellent. 
+1:25 Let's look at the rest, just down from that we've got nodejs and mysql 
+1:29 and we have Flask and Bottle in Python 3, we have Django, 
+1:31 we have Ruby on Rails and we have asp.net running on mono.
+1:34 So I think you can see that our choice of Pyramid puts us well 
+1:38 to the right of this graph, it's certainly not bad, in terms of performance, 
+1:41 but notice something else, that if we look at this on Python 3 alone, remember, 
+1:47 Python 2 is getting phased out in just a couple of years, 
+1:50 and there will only be Python 3 going forward, 
+1:53 if we look at Pyramid 3 on Python 3 and we take away say Bottle and Python 2, 
+1:58 we only look at it running on Python 3 for example, well then, 
+2:01 our choice looks pretty smart on performance. 
+2:03 So as you can see, Pyramid is a very capable web framework in terms of performance 
+2:08 it's been great for all of my businesses, 
+2:11 I've been able to run my businesses and websites on Pyramid 
+2:14 on simple cheap virtual machines as you'll see 
+2:18 we'll do something similar with Digital Ocean, here in this course. 
+2:21 My podcast receives over a million http requests to the Python backend 
+2:25 which goes all the way to the database, per month, 
+2:28 and running that on a 10 dollar Digital Ocean server 
+2:32 doesn't even break a sweat. Barely registers on the CPU meter. 
+

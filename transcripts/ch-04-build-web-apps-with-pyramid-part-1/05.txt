@@ -1,0 +1,44 @@
+0:02 It's time to get started. Let's create our Pyramid web app.
+0:05 So, the steps to do that look like this- 
+0:08 we are going to start out and create a virtual environment, 
+0:10 technically this step is optional
+0:13 but virtual environments help us understand 
+0:15 what packages are in play for a particular application 
+0:17 which means where you have a better understanding 
+0:20 of what we need to push out to production when we actually deploy our application.
+0:23 I find this helpful, it's up to you, you can skip this step if you want. 
+0:26 Then we are going to install the Pyramid package and all of its dependencies 
+0:31 which will happen automatically.
+0:35 Pyramid comes with scaffolding, and what that means is 
+0:38 there is a lot of moving parts to the website you got your css, 
+0:41 your Javascript, your static folders, your views, it has unit tests, 
+0:44 it itself is a Python package, so it has some files associated with that 
+0:49 and while you can of course create all these yourself, 
+0:52 it's completely non productive 
+0:54 and so there are four different kinds of starter applications we can create 
+0:57 using this scaffolding, 
+0:59 so after we've installed Pyramid we are going to give our application a jumpstart 
+1:02 by choosing one of the scaffolding starter sites to begin with. 
+1:06 Pyramid is a little unique in that the website 
+1:09 that gets created is itself a Python package, 
+1:12 and so that means there is a simple step we have to run 
+1:15 to register that package with the Python runtime 
+1:18 or environment that we are working in, 
+1:20 so if we are creating in a virtual environment register it there 
+1:22 for doing it in a global one on our machine register it there, 
+1:26 so it knows how to find its views and its startup code and all that kind of stuff. 
+1:30 We'd run our app, we serve it up, we add our features and of course, 
+1:33 we go back around and we just iteratively develop it 
+1:36 until we have our app ready for deployment. 
+1:39 Now, how do you want to get started? 
+1:42 We could use the IDE PyCharm, click a few buttons and create our web application, 
+1:46 or we could go the command line route 
+1:48 and run a couple of commands in the terminal, and create our application. 
+1:52 We are actually going to go through both ways, PyCharm is simpler, 
+1:56 but I think you don't get to see all the moving parts 
+1:59 so maybe there might be a step or two that you don't totally understand, 
+2:02 so let's go through the command line version first, 
+2:06 see all the steps involved and then if you have PyCharm professional, 
+2:09 you can click a few buttons and create a website straight away, 
+2:12 if you have PyCharm community edition or another one, 
+2:15 you want to follow along with the CLI version.  

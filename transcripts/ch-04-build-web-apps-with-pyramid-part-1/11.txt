@@ -1,0 +1,28 @@
+ 0:02 Let's talk about the building blocks 
+0:05 that you are going to use to build your application when you are using Pyramid. 
+0:08 The first thing that we want to do is take a request from the outside world 
+0:12 and somehow map this into our application and that all begins with routes, 
+0:16 routes are url patterns that we then map into particular view methods, 
+0:20 speaking of views, these are the methods 
+0:23 that are going to process our request,
+0:24 whether they show us an html page through rendering a template 
+0:29 or make some kind of update to a database and do a redirect, 
+0:31 that's where we are going to do it, is it in these view methods. 
+0:35 And note that in mvc these are called controllers. 
+0:40 Next, we are going to talk about templates, 
+0:42 typically what we'll do with our views is we'll come up with some sort of data 
+0:45 and then we'll pass that off to a dynamic template 
+0:48 and this template is going to take that data 
+0:51 and turn it into html that actually goes back to the user. 
+0:54 The thing that flows between the views and the templates are called models, 
+0:59 and these are basically dictionaries in Python 
+1:01 and this is both data and behavior that we can pass to the view. 
+1:06 Pyramid has rich support for static assets,
+1:09 so images, cascading style sheets, Javascript 
+1:13 and more will be able to manage those separately 
+1:16 more or less offloading the request out of our web app 
+1:19 and passing it just to the web server itself.
+1:22 We also want to work with configuration files, 
+1:25 you want to put your API keys and other sorts of information like that 
+1:28 into the configuration files and these are often different between dev tests and prod. 
+
