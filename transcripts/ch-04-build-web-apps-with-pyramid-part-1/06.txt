@@ -1,0 +1,84 @@
+ 0:01 Here I am in my terminal and we are going to create a virtual environment, 
+0:04 install Pyramid and create our first starter application. 
+0:08 So the first thing we want to do is create a virtual environment 
+0:11 and we are going to do that in our Python environments folder. 
+0:13 That's where I put mine, you can put yours wherever you want. 
+0:16 So the way we do that is we say Python 3 -m for run a module, venv
+0:20 and then, you just put the directory where you want it created, 
+0:24 so we are going to say /python_environments 
+0:28 and we'll call this blue yellow 
+0:31 for the name of our application that we are going to create. 
+0:34 Just hit enter, Python will make some symbolic links 
+0:36 and copy some files over to create a dedicated, 
+0:39 isolated version of Python 3 right there. 
+0:43 All right, it's done, so let's go check it out, 
+0:46 in here you can see we have a couple of folders, 
+0:49 and let's go into the bin folder and you see activate, 
+0:53 this application will change our current configuration around 
+0:57 so that this particular version of Python 
+0:59 is what's active in the path and things like that. 
+1:02 We need to apply its output and its behavior to this shell, 
+1:05 not to one that gets created, associated with independent process, 
+1:09 so I could either say source activate, or the shortcut is . (dot) so .activate 
+1:16 notice my prompt has changed, to blue yellow 
+1:19 and if I asked the question which Python it says this one here. 
+1:23 And if we go up to code folder and look here, 
+1:26 and we ask the same question which Python, 
+1:28 still, because the environment's been reconfigured this is the one. 
+1:31 So step one complete, our virtual environment is created and activated. 
+1:35 The next thing to do is see what's installed in environment, 
+1:38 as you can imagine, not much, 
+1:40 basically just the tooling required to install more things, 
+1:44 so we want to install Pyramid and we'll use pip to do so, 
+1:49 so pip install Pyramid, let it download, wait a moment, success, 
+1:54 so you can see we installed PasteDeploy, WebOb, Pyramid, 
+1:57 repoze and a couple of other things that Pyramid depends on. 
+2:00 The other thing we have now as part of that is the scaffolding
+2:05 you can see in the bin folder we now have something called pcreate, 
+2:09 let's see what that is. 
+2:11 If we say pcreate -l that will list the available scaffolds, 
+2:15 so we have one based on SQLAlchemy, SQLlite and URL dispatch, 
+2:18 we have the starter one based on URL dispatch and Chameleon, 
+2:22 and we have the ZODB version. 
+2:25 We are going to use the starter code, so the way it works is 
+2:29 you just say pcreate, you choose the template and then you name the folder. 
+2:35 We'll say pcreate -s for scaffold starter, 
+2:39 and then we are going to call our application blue yellow app. 
+2:42 So a bunch of stuff happens and it looks like it failed, 
+2:45 because the word sorry appears, but no no,
+2:48 welcome to Pyramid, sorry for the convenience. 
+2:50 Lovely. If we look around, our blue yellow app now exists, 
+2:53 and if we look in here, you can see that we have a couple of files as well, 
+2:58 we have a couple of files that are associated with the package, 
+3:03 and we now have our web files as well, our views, our tests, 
+3:08 our static templates and so on. 
+3:11 The next thing that you would like to do is you would like to run the sample web app, 
+3:15 I am sure you are going to run into this problem 
+3:17 either your first time setting up 
+3:20 or when you go to deploy it somewhere or something like that. 
+3:23 So let me just try to run this, so we can say pserve 
+3:26 and give either the development.ini or prod.any, 
+3:31 either development or production configuration file. 
+3:33 When I run this, it's going to give me an error. 
+3:36 Waitress is not found, if I install waitress it will give another error 
+3:40 eventually it will say something like blue yellow app not found.
+3:44 In order to tell Python about our blue yellow app we just need to run the setup py file. 
+3:51 Now, we also need to give it the command, what do we want to do with setup, 
+3:55 the two common options here would be either install, 
+3:58 which would install the package, copy all the files somewhere and install it, 
+4:02 that's not what we want, the other option we can put is develop. 
+4:05 And develop will say Python look where we have our current files now, 
+4:09 where we just created them, look there for this package, 
+4:12 so as we make edits and so on, these will automatically be picked up. 
+4:15 So, Python setup.py develop that's what we want. 
+4:19 You can see that Python is installing all the dependencies 
+4:22 that are particular applications as pulled in through this scaffolding. 
+4:25 great, you can see finish processing dependencies for blue yellow app, 
+4:29 now we are ready to serve it up, 
+4:31 beautiful, we are running on local host, let's see what's there. 
+4:38 Perfect, Pyramid is up and running, 
+4:41 here is our starter scaffold and it says 
+4:44 welcome to blue yellow app running on Pyramid web framework 1.7.3.
+4:49 It's just a start, but everything is up and running 
+4:52 ready for us to start adding the features that make our app our app.
+

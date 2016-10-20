@@ -1,0 +1,68 @@
+ 0:03 In order to get started and be effective with Pyramid,
+0:06 it's important to understand the project layout. 
+0:08 And what files are created and where new ones should be put 
+0:13 or where you go and find existing ones for things you want to change.
+0:16 Let's take a quick survey what comes out of the starter project scaffold. 
+0:20 Now, as we build up a real professional application 
+0:23 this structure will get much richer 
+0:26 and we'll add on many more concepts and conventions of our own, 
+0:29 but they will be framed around this basic skeleton. 
+0:33 So let's start at the top. 
+0:35 At the top we see the static folder, and here we have css, Javascript, images, 
+0:40 basically these are the static files that are just served up directly 
+0:44 as files they are not processed as some kind of action request 
+0:48 that our Python code is going to handle we just say here is an image, 
+0:51 here is a css file and so on. 
+0:54 There is a special rule for cashing inside this folder 
+0:57 I believe  the default is one hour
+0:59 but of course you probably want to make that higher 
+1:02 and do some cash busting techniques. 
+1:04 Then we have our templates, or what I am going to call views, 
+1:07 there might be a little confusion on the nomenclature here 
+1:10 and the nomenclature that Pyramid uses is somewhat unique to it, 
+1:14 Pyramid is a mvc, a model view controller based framework, 
+1:19 like Ruby on rails, like asp.net mvc, like many of these. 
+1:23 So when I speak of the project items,
+1:26 I am going to use the more general mvc terms 
+1:29 but as much as I need to corelate that with the Pyramid words 
+1:33 or folder names or things like that I'll try to line this up for you. 
+1:37 So we have the templates folder, 
+1:39 and this is where the dynamic html pages that are rendered by Pyramid itself go, 
+1:43 so for example if I wanted to make a request, go to a database, 
+1:47 pull back ten items, let's say we are doing a book store, 
+1:50 get ten books back, pass that book data off to this template, 
+1:54 this template will generate the html page that has 
+1:57 like basically ten rows of whatever, 
+1:59 we do to put a book if it's a listing or whatever. 
+2:03 So these pt files, these are chameleon templates and they are in there, 
+2:06 in the large mvc world these are called views, the __init__ file 
+2:11 this is like your application startup code,
+2:14 there is several methods in here that run right as your app starts up,
+2:18 you register the template folder, you register the static folder, 
+2:21 you talk about the views and various other setup.
+2:24 If you do logging or other configuration it all happens here, 
+2:27 so think of this as your main entry point to your web application. 
+2:31 Then we have unit tests, your web app scaffold comes with a set of unit tests 
+2:36 the very basic but they show you how to write tests, 
+2:39 so you'll know how to test your own code going forward, 
+2:42 they serve very good as starter template ideas 
+2:45 but they don't really test anything important in the basic code of course. 
+2:48 Finally, we have things called views, in the mvc world these are controllers, 
+2:51 these are the methods that run 
+2:53 when a request and http request comes into our web app, 
+2:57 you'll find one of the methods in this views file 
+3:00 for now we are going to expand greatly on this later, 
+3:03 but for the starter project there is some functions in here, 
+3:05 and we map urls to the various functions and then those run, 
+3:08 they select a template out of the template folder and pass some data, 
+3:11 boom, we have a magic dynamic data driven web app. 
+3:15 You also see this .egg info folder and a bunch of stuff under there, 
+3:19 basically you can ignore this, this is the output from setup py
+3:22 when you called setup py develop, this is the files that put in place here, 
+3:26 instead of registering and copying this over to some side package, 
+3:30 so you need this for your app to run,
+3:33 but you can generally and should generally just ignore it. 
+3:36 You'll also see your project settings and configurations 
+3:38 we have the development. any which configures how our app runs locally 
+3:42 and then production. any for when we push to production. 
+

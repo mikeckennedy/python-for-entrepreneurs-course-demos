@@ -1,0 +1,32 @@
+ 0:01 You just saw how to call functions. 
+0:03 Now let's really quickly cover how to create functions. 
+0:05 Now, I should say right when we get started that there is a lot of flexibility, 
+0:09 more than most languages in Python functions and methods, 
+0:12 and so we are just going to scratch the surface here, 
+0:15 and not really get into all the details. 
+0:18 So the keyword to define functions is def. 
+0:20 We always start with def and then some function name 
+0:23 and regardless whether these are methods in classes or standalone functions, 
+0:26 def is the keyword and then we say the name, 
+0:29 and then we have a variety of arguments or if we have no arguments 
+0:32 we can just leave this empty. 
+0:34 But here we have two positional required arguments, 
+0:37 we could also make these optional by specifying default values, 
+0:41 we can create what are called named arguments 
+0:44 where you have to say the name of the argument to pass the value 
+0:46 instead of using the position. 
+0:48 We can also take additional extra arguments 
+0:51 that the method was not necessarily designed for, but, like I said, 
+0:53 we are not going to dive too deeply into those, 
+0:57 here is the basic way to define the method- 
+0:59 def name parenthesy arguments and then colon,
+1:02 to define the block that is the method. 
+1:04 Here we would probably do something like validate the arguments 
+1:07 like throw some kind of value error or something, 
+1:09 if name is none or email is none, something like that. 
+1:12 Then we are going to do our actual logic the function 
+1:15 create it using the database and here we are going to somehow get that information back 
+1:19 and to this db user, maybe we want to tell whoever called 
+1:22 create user the ide of the new user that was just created, 
+1:25 so we'll use a return value and we'll return the ide 
+1:28 that was the database generated ide for when we create this user. 

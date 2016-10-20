@@ -1,0 +1,44 @@
+0:02 Let's take just a moment and talk about Pyramid the web framework
+0:05 and the principles behind it before we look at the code 
+0:08 and the building blocks to create web apps with Pyramid. 
+0:11 You can learn more about Pyramid at trypyramid.com 
+0:14 and they have this little saying up here that I think captures a lot about the framework 
+0:17 "The start small, finish big, stay finished framework" 
+0:21 Idea is you don't have to know a lot to use Pyramid, 
+0:24 there is a few simple building blocks and then many more 
+0:28 that you can bring in as your app grows in complexity and needs, 
+0:31 and they have a 100% unit tests and they are very conservative 
+0:35 about pushing on new versions so it's the stay finished framework as well. 
+0:40 Pyramid focuses on simplicity 
+0:43 and they take a "pay only for what you eat" approach 
+0:46 and it has a really interesting idea behind it 
+0:49 that you should be able to get started with Pyramid 
+0:51 even if you only have a partial understanding of it,
+0:54 that means you can do the major things, how do I render some html to a view, 
+1:00 how do I process a post, things like that, without fully digging into all the details
+1:03 which I think is a really constructive way to get started.
+1:06 Remember, I called Pyramid the Goldielocks framework 
+1:09 because it's not a micro framework that has too little, 
+1:12 it's also not a large building block framework 
+1:15 that you have to take the large building blocks and put them together or not, 
+1:19 they focus on the core things that you do in a web framework, 
+1:22 mapping urls and code, templates and serving assets. 
+1:25 Pyramid has great documentation and tutorials to help you dig deeper, 
+1:30 we saw earlier that Pyramid is very fast 
+1:34 and especially when you consider the Python 3 angle, 
+1:38 in the age of cloud computing it's easy to think we can throw 
+1:42 as many machines at a problem as we need, that costs money 
+1:45 but more importantly that costs complexity, 
+1:47 so having a pretty fast framework is a real benefit. 
+1:52 Pyramid has 100% test coverage and their philosophy is if it ain't tested it's broken. 
+1:57 So you can count on new releases of Pyramid not breaking your code. 
+2:03 As you can see, Pyramid is open source, it's available on github 
+2:07 and is distributed under a permissive open source license. 
+2:10 Finally, Pyramid is one of the few frameworks 
+2:14 that takes a forward looking approach to Python 3.
+2:17 Python 3 is the default implementation 
+2:20 their documentation and tutorials are in Python 3 
+2:23 and that's the recommended way to run Pyramid.
+2:26 So as we transition from Python 2 to Python 3 as an industry, 
+2:30 Pyramid is already in the right place to make that transition 
+2:33 because they have already gone through it.  

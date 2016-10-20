@@ -1,0 +1,11 @@
+ 0:01 While we are still on the topic of learning Pyramid 
+0:03 I'd like to give you the back story. 
+0:06 In my podcast, in fact on one of the very first episodes, episode 3 
+0:09 I interviewed Chris McDonough, 
+0:12 and Chris is the creator of the Pyramid web framework. 
+0:14 So if you want to get the back story learn its history why Pyramid was created, 
+0:19 how Chris thinks it's different than the other frameworks 
+0:22 and where he thinks the web is going, 
+0:25 check out this episode, it's talkpython.fm/episodes/show/3 
+0:29 it's all you have to type into your browser.
+

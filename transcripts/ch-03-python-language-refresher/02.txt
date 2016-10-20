@@ -1,0 +1,102 @@
+ 0:01 So let's take a few moments and spend some time getting you familiar with Python, 
+0:04 maybe you've seen it a little bit but it's been a while 
+0:07 or maybe you are fairly new and just seeing it in action 
+0:10 will teach you much of what you need to follow along, 
+0:13 and of course, we have the detailed reference section in the course
+0:17 if you want to look at any specific topic or concept. 
+0:20 What we are going to build in our demo section is a memory game.
+0:23 It will show colors to the user 
+0:25 and the user will have to recall the colors in the correct order.
+0:28 It's going to be very simple but at the same time 
+0:30 it's actually going to cover a decent amount of what you need to know 
+0:33 to get started outside of the web frameworks which we'll cover separately. 
+0:37 So, here we are in PyCharm, and I've created a new empty project 
+0:40 based on Python 3, but that's all I've done. 
+0:43 To get started, we are going to need to create at least one file, 
+0:48 let's go and create a couple of files here, one of them is going to be our game 
+0:51 and this is going to be the actual objects and data structures in our game. 
+0:55 And the other one is going to be the plain of the game, so we'll call this one program. 
+1:00 Let's focus on the game first.
+1:03 Like I said, the game is going to keep a history of colors shown to the user 
+1:06 and then we'll go back and ask them what colors did you see, 
+1:09 and of course hide the colors and say what colors did you see, 
+1:12 and they have to recall them in the correct order. 
+1:14 So let's create a class called game, the way we do that 
+1:17 is we use the class keyword and say the name and the type 
+1:21 if we had any subtypes we could derive it from here, 
+1:24 but we are not going to do that, and we are going to go over here 
+1:27 and we are going to define an initializer. 
+1:30 So, a __init__ and PyCharm will write most of that for us. 
+1:32 In here, we need to keep track of a few things, 
+1:35 we want to keep track of the history and so on, 
+1:38 but let me just write pass for just a minute. 
+1:41 What I want to do is I actually want to sketch out how we are going to use this game play, 
+1:44 and I want to show you how PyCharm makes this incredibly easy to do. 
+1:47 So we are going to have things like add a move, or add a color, 
+1:52 show the current configuration or the level if we are going to call it that, 
+1:56 maybe first level, second level, and number of colors they have. 
+1:59 And then we want to test the users, so we want our game have those operations. 
+2:02 I could just go ahead and just say def and I want to create a method here, 
+2:06 so I create a method by saying def, let's call it show level, 
+2:10 and when I hit open parenthesy you'll see that PyCharm add self 
+2:13 which is required as the first parameter for Python classes, 
+2:16 and we are not going to really need anything else here. 
+2:18 So, I could do some stuff that we are going to work with here, 
+2:21 some variables we want to set, but I want to show you 
+2:23 that we can actually sketch out the flow and have PyCharm fill in the details for us. 
+2:26 We are going to come over here and we are going to have a main method, 
+2:29 this is not a Python convention, this is just a Michael convention, 
+2:33 and what I want to do is I want to work with our game in other modules, 
+2:36 so we'll say import game and then we could say game.game 
+2:41 or perhaps a better way would be from game import game like this. 
+2:46 So, that's going to be our game object down here 
+2:48 so we'll say g=game to get started, and we have to think well, 
+2:52 how is this going to be played, we probably want to go around in a loop 
+2:55 as long as the person can remember all the steps, 
+2:58 we want to do a few things each time through the loop. 
+3:01 So we'll do a while loop, we'll say while true because we just want to keep going
+3:05 around and around as long as the person has won. 
+3:09 So the first thing we want to do is say game, we are going to say add move. 
+3:13 Now notice, this method does not exist, and PyCharm is highlighting this saying, 
+3:16 there is a problem here this doesn't exist. 
+3:19 But, we can come over here and hit alt enter 
+3:22 and it will actually add that method to class for us. 
+3:24 So we can go over here and say we are going to add a move 
+3:27 and then we want to say game.show_level, that's the next step we want to do, 
+3:30 and then, we want to test the user, so we'll do a conditional here, 
+3:34 we'll say if we want to see whatever we want to do to test them, 
+3:38 we'll ask them to enter the colors maybe all in one line, or one entry per line 
+3:42 if we're at level 5 there might be 5 entries they have to put, 
+3:45 However we test them, we want to have the game do that test here, we want to check,
+3:49 if they don't get it right, we want to stop the game and say sorry, you lose; 
+3:52 if they do, then we want to just keep going through loop, 
+3:55 so we'll say if not the negative of testing, something like this,
+4:00 we'll say test user, a player, let's call them player, this is kind of more fun to call them player, 
+4:04 so we'll say test player, if that's not the case, what are we going to do, 
+4:07 well, let's tell them they lost so we can print out the message 
+4:10 and we can break out of this loop. 
+4:13 And down here, we will print something like this, game over. 
+4:16 So, let's look at this for a moment, 
+4:18 we are going to create a game which comes out of our module here, 
+4:21 and while basically forever until we decide it's time to break out, 
+4:24 we are going to add a move, we are going to show the level to the user, 
+4:27 and then we are going to take it away 
+4:29 and then we'll test the user and if they get it right, 
+4:31 we are going to add yet another move, 
+4:33 show the level which is now more complex and so on. 
+4:35 This will not actually run, if I run this program here it will just basically define this method, 
+4:39 so in Python, we have a common convention that lets you say 
+4:44 if you are running this program, 
+4:47 instead of just defining the method you can actually run it,
+4:50 and the way we do that is we can use a shortcut 
+4:53 and the convention is this __name__ that is in the module 
+4:56 whatever module's been run, 
+4:58 if it's being imported the name will be the name of the module like program or game,
+5:03 but if it's being executed as a target, it will be __main__ and we can say ok,
+5:07 this is the time where we want to call this method we just wrote. 
+5:10 I can see that PyCharm says we don't yet have this method, 
+5:13 let's go and write that as well and it's going to need to return true or false. 
+5:16 Ok, so we now have this structure for our game what we need to do 
+5:20 is actually go implement the game class over here, 
+5:23 what does it mean to show the level, 
+5:25 what does it mean to add a move, things like that. 

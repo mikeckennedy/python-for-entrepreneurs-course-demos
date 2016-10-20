@@ -1,0 +1,28 @@
+ 0:01 Here is the template and this template language is called Chameleon.
+0:04 It's really clean and nice and it uses what's called template attribute language, so tal. 
+0:10 And often whenever you see the code that has to do with this template language 
+0:14 you'll see tal: in the attributes, 
+0:17 the other way that it works with code is you say $ and put on curly braces
+0:21 and within there you can write basically arbitrary Python code
+0:25 arbitrary Python expressions at least.
+0:28 So what we want to do is we want to take some albums, 
+0:31 here we passed an dictionary or a model that has a key called albums, 
+0:35 and that album is a list so we want to loop over it, so we say tal repeat a albums. 
+0:41 I like to say something like a in albums or something like that, but it's just a albums, no in.
+0:46 So what it's going to do is this div that has the tal repeat is going to be repeated 
+0:51 for as many times as there are albums and each time through a will have a different value.
+0:55 Then we want to go and say a is one of these individual albums, 
+0:59 let's say that url for buying it is going to be a.url and the title, 
+1:03 the text we want for the link is buy whatever the title is so a.title. 
+1:08 So values that pull out the text or look at the string representation of data passed in, 
+1:13 will be passed within, there is $ expression and like I said, these can be methods, 
+1:18 these can just be values and so on, we can also do tal conditional, 
+1:22 which is really nice, this is our if statement int he template language, 
+1:26 so we only want to show preview music if there is some kind of preview available,
+1:31 remember, some of our albums have previews, some of them didn't. 
+1:35 So, here we can say tal condition and it will completely leave this segment, 
+1:39 or this node out of the url, if has preview is falsie. 
+1:44 Now if we run this and we give it a set of albums, 
+1:47 we can come out looking something like this, 
+1:49 assuming we've given it basically zero style. 
+1:52 But that gives you a sense of how this template will render, what we give it. 

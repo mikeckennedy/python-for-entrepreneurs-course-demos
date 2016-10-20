@@ -1,0 +1,47 @@
+ 0:01 Here we are in the __init__ file, for the entire website. 
+0:04 Remember your website is a package, 
+0:06 this is basically the entry point into your package, your website. 
+0:09 We have a main method here, that's going to be run by Pyramid 
+0:13 and the first thing it does is get a config 
+0:15 and we are going to use this config to define various routes. 
+0:19 We'll begin by mapping static folder, and setting some cash details on it, 
+0:23 the static folder allows you to drop any file into there 
+0:26 and it will be served up without going through the Python layer, 
+0:30 so we can put our Javascript, our css, our images and things like that in there. 
+0:35 Notice also that it's setting the max age 
+0:37 and this is in seconds so 3600 seconds is an hour; 
+0:40 in a real app you probably want to set this to days, 
+0:43 weeks, months maybe even years depending on what you are trying to do. 
+0:46 Then we get to the more dynamic content and these are called routes, 
+0:50 so what we are going to do is add some routes, we'll add four here, 
+0:54 the first one called home goes to just for slash, 
+0:58 and notice, there is a name and then there is a url pattern, 
+1:01 so the name has to be unique, among all the other routes, 
+1:04 and then the url pattern can be just a simple static url or it can be data driven. 
+1:10 The first two home and albums these are always the same, these are just static, 
+1:13 the album one however is more interesting. 
+1:16 Notice it's /albums/some name fragment, 
+1:20 so this is like some kind of name or title that we can use to look up the album by title.
+1:26 So we could have just /albums 1, /albums 2 but that's not good for SEO 
+1:31 and it's not very cool looking in the url bar either, 
+1:35 I am not sure if they have /albums/ something involving the actual name of the album. 
+1:44 So when we get to our view method, 
+1:48 name fragment is actually going to be a variable or value passed over to our view. 
+1:52 Similarly, the store lets you buy an album by name. 
+1:57 Once we have all those things in place,
+1:59 we'll say scan that will tell Pyramid to go through all of our files 
+2:02 look for these view methods that have the right decorator 
+2:06 and the names of the routes, and then wire them together. 
+2:09 Finally, what we'll do is we'll take this config and we'll say make a WSGI app, 
+2:13 so WSGI, W-S-G-I is the standard way 
+2:16 in which all the different Python frameworks speak to the underline web server. 
+2:20 So this is basically saying once we've configured everything create the app 
+2:24 and hand it off to the web server to go run. 
+2:26 Now, this is a little bit tedious in the style 
+2:29 and there is a couple of ways to reduce the tdm with reversal and various other things, 
+2:33 and we are going to talk about the thing called pyramid handlers 
+2:36 that makes this much easier to sort of create a standard style class driven urls 
+2:41 so you'll say here is a class I want to register as having views 
+2:45 and then it will be able to discover all the various views on it automatically.
+2:49 So as you add methods they can automatically be rendered 
+2:53 and you don't have to come back here for every single method. 

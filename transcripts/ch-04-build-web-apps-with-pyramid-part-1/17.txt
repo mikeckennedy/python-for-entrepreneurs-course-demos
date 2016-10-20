@@ -1,0 +1,44 @@
+0:03 Python comes with pip and pip is all about installing packages 
+0:06 and making sure we have the latest up to date version 
+0:09 of all the various Python libraries we are using. 
+0:12 But web apps are not just about Python. 
+0:14 In fact, you don't typically even see the Python as a user, 
+0:18 but what you do see are css frameworks, Javascript libraries 
+0:21 and various front end interactive pieces 
+0:24 and PyCharm and pip have no real great way to deal with those dependencies. 
+0:29 But there are a couple of systems out there that do. 
+0:32 One of them is Bower, 
+0:35 another one that comes to mind is NPM which comes with Node. 
+0:38 So you can find Bower at bower.io. 
+0:41 Here you can see their little slogan 
+0:44 "websites are made of lots of things, frameworks, libraries, assets and utilities, 
+0:47 Bower manages all of these things for you." 
+0:49 Yeah, that's exactly right. 
+0:51 So let's look at our website in PyCharm and see where these dependencies might be 
+0:55 and how we can switch to using Bower to manage them. 
+0:58 Here is the app we created in PyCharm using the scaffolding. 
+1:02 Notice here we have some static pieces, the Pyramid logo, the css theme and so on, 
+1:07 and so where are dependencies? 
+1:10 We are actually using Javascript and we are using css, 
+1:13 front end frameworks,w e are using for example Bootstrap, 
+1:17 well, the way it works, if we go over here to this template, 
+1:20 we are going to pull this out so there is one common template 
+1:23 that is shared across all the views, but let's just focus on this one template for now. 
+1:26 Notice right here, the open source max cdn we are using Twitter bootstrap 3.0.3 
+1:31 and we are importing that.
+1:34 We are also using HTML5 shiv and respond.js, 
+1:37 we are pulling these off the dedicated versions on the cdn. 
+1:41 Well, this is pretty good and there probably are some benefits to this 
+1:44 for our users and that if they have gone to another site 
+1:47 that also uses this exact version off of this exact cdn, 
+1:51 they won't have to load it, it makes development harder 
+1:54 and you have dependencies on the cdn and personally, I don't really like it, 
+1:57 so for example what if you are on an airplane 
+2:00 or you are in a coffee shop with pour wi-fi or something like that, 
+2:03 and you'd like to work on your web app, 
+2:05 you better hope you've already cashed these things. 
+2:07 So let's switch to local versions that we can control more carefully 
+2:09 and we'll do that with Bower. 
+2:12 One more set of dependencies we probably have down at the bottom, 
+2:14 here you can see that we depend on JQuery and we also depend on the Javascript 
+2:20 that comes out of Twitter Bootstrap which of course itself depends on JQuery.  

@@ -1,0 +1,23 @@
+ 0:01 Another key building block is configuration. 
+0:03 In any real web application you are going to have specific details
+0:07 that either you want to keep out of code 
+0:10 because you want to make them editable and configurable, 
+0:12 or more likely you want to have different versions 
+0:16 based on where your app is running, 
+0:19 is it being used in development, is it being run in production, things like that.
+0:22 So here is a standard configuration file, 
+0:24 this will be in development.any or production.any take your pick; 
+0:27 you can make these files up and hand then off to the web server.
+0:30 Notice here that we have two values that we've added, 
+0:34 we've added db file which is going to be a relative path
+0:37 to a sql lite database file, and API key. 
+0:41 Maybe this is our male chimp or stripe API key. 
+0:44 For whatever reason, our application is going to need this data to work. 
+0:47 So how do we get to it? 
+0:50 Well, over in the __init__ method we saw we have this main 
+0:53 and it creates a configuration we've already used this for a routing 
+0:56 but it also has other functions, for example we can say get us the settings 
+1:00 which are the settings out of this section of any file 
+1:05 and then we can do things like just say get the db file or get the API key,
+1:09 config settings as a dictionary and it's populated with all the values that you see here. 
+1:15 Then you save this pass around your application and use it wherever you need them. 

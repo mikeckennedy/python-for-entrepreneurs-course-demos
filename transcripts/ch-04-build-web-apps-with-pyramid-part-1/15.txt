@@ -1,0 +1,13 @@
+ 0:01 Let's look a little more carefully these models; 
+0:04 in practice, we'll probably use classes and sort of extract these models out of them, 
+0:08 but in their essence, a model is simply a dictionary possibly containing lists 
+0:13 and more dictionaries itself. 
+0:16 So we are going to go to a list view of albums. 
+0:19 And, the list view needs three things about the album enabled to generate the list, 
+0:24 so it's going to need to know is there an audio preview it can let you listen to, 
+0:28 what is the title, what is the url if you click it to view more details 
+0:32 or try to buy that album. 
+0:34 So notice, we are going to return a dictionary with the key called albums and within it, 
+0:39 it's going to basically the value of that albums is going to be a list of individual values
+0:44 so we'll be able to loop over those in our template. 
+

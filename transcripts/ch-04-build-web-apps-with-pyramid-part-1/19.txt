@@ -1,0 +1,28 @@
+ 0:01 Let's review using Bower for installing and managing packages in our web application. 
+0:05 It starts by installing Bower, so notice here we have npm install Bower -- upgrade, 
+0:10 make sure you do that in your home directory or add a - g 
+0:14 to make sure it installs globally not just for this project. 
+0:17 Than you could ask hey, what version of Bower do I have, I have 1.7.9 great. 
+0:20 Now you could start using Bower to install your dependencies 
+0:23 so we have Bower install bootstrap- css 
+0:26 and that will give us just the distribution version of bootstrap, 
+0:30 we can also then install a few other dependencies here we are installing jquery dist 
+0:35 which gives us just the distributed version not the building blocks for jquery 
+0:39 and we also installed Angular js because in our theoretical app 
+0:42 we want to use those three things together. 
+0:45 Once we've done this, we now have a Bower components folder 
+0:48 notice that it's in the static folder of our web app, 
+0:52 and that we are going to put the Bower components in there, 
+0:54 we have our three folders that were installed and managed by Bower, 
+0:57 it has the bower.json file so it can keep track of versions and what not, 
+1:01 as well as the various things we need so css, 
+1:03 fonts and js from our bootstrap distribution. 
+1:07 Then we can ask Bower what packages are we using, 
+1:10 and notice here there is an actual upgrade for angular js 
+1:14 so when we say Bower list it's kind of like a check for updates 
+1:17 as well as listing the dependencies. 
+1:20 Here it doesn't show any linked dependencies between these, 
+1:22 if there are dependencies like for example bootstrapped 
+1:25 the main distribution is marked to depend upon jquery 
+1:28 so those two would be linked in this graph here. 
+

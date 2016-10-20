@@ -1,0 +1,28 @@
+ 0:03 So what you are going to learn in this chapter about Python? 
+0:06 Well, mostly it's really to give you enough Python to be able to follow along. 
+0:11 For example, when we get to the credit cards section, 
+0:14 when we integrate Stripe into our web app, 
+0:17 we are going to talk about exception handling with try except blocks. 
+0:20 And, if you are not totally familiar with those, that might get a little confusing. 
+0:23 So we are going to give you a really short introduction 
+0:26 on exception handling and a bunch of other Python concepts like that. 
+0:29 That said, if you know all these ideas, if you are already a Python programmer,
+0:33 don't feel bad about skipping this chapter, go ahead and skip the whole chapter, 
+0:37 go on to the next one, and then you can come back and use this as a reference. 
+0:41 This section will be broken into many small little videos, one core concept each. 
+0:46 So, if you find we are working with some idea and you are like, 
+0:49 Oh, I actually don't know this very well, just jump back to this chapter, 
+0:53 find that core concept, watch the video and then continue on where you left off. 
+0:58 That said, we are covering a lot of concepts in Python, 
+1:02 but this is not an introductory course. 
+1:05 If you really need to learn Python from scratch, and you want to do it in a solid way, 
+1:09 I recommend that you take my Python Jumpstart By Building 10 Applications course, 
+1:13 which you can find at talkpython.fm/jumpstart. 
+1:16 So we cover about the same number of concepts in that course, as we do in this one, 
+1:20 but that one covers it in seven hours instead of however long half an hour, an hour, 
+1:24 whatever this section turns out to be. 
+1:28 So, this chapter is a bit of a choose your own adventure, 
+1:31 if you stay here, we are going to do a demo in the next section
+1:33 and we'll build a little game, 
+1:35 to get you comfortable with the Python language and the editors, 
+1:37 or skip this chapter and get right on to the next one. 

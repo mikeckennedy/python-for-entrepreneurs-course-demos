@@ -1,0 +1,15 @@
+ 0:01 Before I close out this lightning review refresher of Python, 
+0:04 I want to point out that there is an appendix at the very end
+0:07 covering many concept reviews. 
+0:09 There is about 45 more minutes down here at the end, 
+0:13 covering the language concepts point by point, 
+0:16 so if you need to understand if statements better, there is a short video on that, 
+0:19 if you need to work with loops, there is a video on that; 
+0:22 define classes, you guessed it, a video on that. 
+0:25 So we are going to move on to building web apps with Pyramid, 
+0:28 but if you feel like you need a little bit more, go and jump to the end, 
+0:31 check out the language concepts on the part that are little shaky 
+0:33 and then come back to chapter 4 and move on. 
+0:36 If you are ready to jump in to web development, you don't have to do anything, 
+0:39 you are going to be taken right there when this video finishes. 
+0:41 Let's get started. 

@@ -1,0 +1,54 @@
+ 0:01 We've seen how to create a Pyramid web app 
+0:03 using the command line interface with the CLI. 
+0:06 Now let's choose PyCharm and see how it makes things much easier. 
+0:12 We'll begin by creating a new project. 
+0:16 It automatically selects a pure Python one, but that's not what we want, 
+0:19 we want a Pyramid web application. 
+0:22 Remember, our first step is to create and use a virtual environment. 
+0:25 So let's do that here. So we'll say create a virtual environment, 
+0:30 let's call this something like blueyellowpy, for PyCharm. 
+0:34 We are going to base this on Python 3.5, it says 3.5.1. but really it's 3.5.2. 
+0:43 Note that it's automatically going to install Pyramid into the selected interpreter. 
+0:47 Now let's expand the more settings. 
+0:49 Remember pcreate list for the scaffolding- here is this three options, 
+0:53 we just click this, we'll just leave none for our template language, 
+0:56 that will use Chameleon and let's give this app a name 
+0:59 let's call it something like we had this before in code,
+1:03 let's call it something like blueyellowpy, something like that,
+1:08 just to know that this is the app that we created. 
+1:11 So what have we done? We've selected Pyramid, 
+1:14 we created a virtual environment based on Python 3.5.1 really 3.5.2. 
+1:19 it's just a path I didn't get updated when I upgraded my system, 
+1:23 and we chose the starter scaffold from Pyramid, 
+1:26 so it's going to install Pyramid, it's going to run this, everything we need to do, 
+1:30 in all those options before happens here. 
+1:37 Now notice right away, if we expand this out, 
+1:39 we have exactly the same files as we had before, 
+1:43 PyCharm is looking in the setup file and it knows that it stated these requirements here 
+1:46 these three requirements, and they are not installed. 
+1:48 We could go and click install them here but remember, 
+1:52 we also have to register our app. 
+1:54 Let's go and just click install just to see what happens. 
+1:57 Watch the little progress bar in the bottom right, 
+2:00 ok, everything is almost ready to go, but just like before, 
+2:03 if I try to run this, you'll see that this app does not exist, 
+2:08 right, this package does not exist 
+2:10 and we talked about this being a proper package and registering it in place 
+2:15 using the development to command, 
+2:17 so we could go to the terminal, and run Python 3 
+2:20 or activate this virtual environment first then run Python, setup py develop. 
+2:25 But in PyCharm, we can just come here and say run setup task and we type develop, 
+2:29 you can see all the task here we have install, we have develop, 
+2:33 and it even tells you what it's going to do. 
+2:35 So we hit that, and it registers this just as we did on the command line
+2:40 and just like that, we are ready to go. Click on this, 
+2:45 ta- da, just like before we have our Python web application up and running, 
+2:49 and we have our blue yellow PyCharm app created from the starter scaffolding. 
+2:55 So you can see PyCharm takes a lot of the steps 
+2:58 and guess work out of creating a Pyramid web app, but remember, 
+3:01 this only works in the professional edition, 
+3:05 so you need a professional edition of PyCharm
+3:07 free community edition does not come with the web application support, 
+3:10 so you don't have these options 
+3:12 got to go through the command line interface if that's what you have. 
+
