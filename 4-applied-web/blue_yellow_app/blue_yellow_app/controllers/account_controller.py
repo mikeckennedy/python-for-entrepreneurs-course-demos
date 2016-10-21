@@ -26,6 +26,7 @@ class AccountController(BaseController):
                              request_method='POST',
                              name='register')
     def register_post(self):
+        print("Calling register via POST...")
         vm = RegisterViewModel()
         vm.from_dict(self.request.POST)
 

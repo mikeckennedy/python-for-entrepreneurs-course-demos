@@ -8,9 +8,9 @@
         </div>
 
         <form class="standard-form" action="" method="POST">
-            <input name="email" type="text" value="${email}" placeholder="email address"><br>
-            <input name="password" type="password" value="${password}" placeholder="password"><br>
-            <input name="confirm_password" type="password" value="${confirm_password}" placeholder="confirm password"><br>
+            <input name="email" required type="email" value="${email}" placeholder="email address"><br>
+            <input name="password" required type="password" value="${password}" placeholder="password"><br>
+            <input name="confirm_password" required type="password" value="${confirm_password}" placeholder="confirm password"><br>
             <button type="submit">Register</button>
         </form>
 
