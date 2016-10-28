@@ -1,0 +1,27 @@
+ 0:03 Let's review the main ides behind this floating concept, 
+0:06 so here is the goal, we want this image to float right, 
+0:08 stick to the top, and stay within this little black box that we put it in, 
+0:12 and message and other stuff to float left, and then, after that,
+0:15 we want to go back to normal layout put the main content below. 
+0:19 All right, so how does this work with float? 
+0:21 Here is our css file, we can just tell it hey image, float to the right, 
+0:25 and like I said before, you are going to probably need more specific
+0:28 like image #cat if the cat had cat id or something like this, right, 
+0:35 you don't want to float all the images, 
+0:38 you want to float a specific one but we are going to go to the image 
+0:40 and we say float right, and then we are going to make sure 
+0:44 that the image precedes all the stuff that it's suppose to float or wrap around it, 
+0:47 in this case it's kind of bizarre because it wraps to the left, 
+0:50 but the stuff that goes around it or is supposed to sort of be next to it 
+0:54 in this floating idea has to go after the thing, so we put the image first, 
+0:59 we tell the float and we put all the content we want there, 
+1:02 it's in a real app there is probably more than just this is the message, 
+1:05 and then, when we are done, remember the cat was sticking out of this top div,
+1:09 and we need to tell it like hey stop wrapping around all that stuff, 
+1:12 we are done with this idea of wrapping go back to normal 
+1:15 and the way you do that is you say clear: both for the style 
+1:19 and you can put it on anything, it could be hyper link, it could be whatever, 
+1:21 but here is more or less invisible element which is a zero height div 
+1:26 and that's just as good as any. 
+1:30 So when we want to stop wrapping, we say clear: both, 
+1:32 left or right are the other options. 

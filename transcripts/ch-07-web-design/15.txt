@@ -1,0 +1,68 @@
+ 0:02 Let's return to our design web app. 
+0:04 Here we have a very basic set of html, we have a top div 
+0:08 and within we have two things, we have this is a message 
+0:10 and we have some dunecat picture whatever that looks like. 
+0:14 And then we have a paragraph, 
+0:16 the idea is that this is kind of be a navigational bit at the top, 
+0:19 and here this is going to be the content of the page. 
+0:22 Ok, so let's just see what it looks like, here we go, 
+0:26 I applied a few styles to make the fonts bigger, to shrink the dunecat, 
+0:30 here you can see I are dunecat, I controls the spice, I controls the universe, beautiful, 
+0:35 so if you have read the book dune this is a great little worm cat there.
+0:40 And notice, we have this message, we have this cat, 
+0:43 what I would like to see is I'd like to see this message here
+0:46 and this part sort of scaled a stretch and this cat the stick in the upper right. 
+0:50 So, how do we do that? 
+0:52 Let's go over here and the way that you do this, 
+0:55 the way you say I want the thing to stick to a side is 
+0:58 you say there is a couple of options, to create layout among them. 
+1:01 but here let's say we would like this thing this image, 
+1:05 now because there is only one image on the whole page 
+1:08 I can just use just the image type, but we probably want to be specific,
+1:11 I come over here and we say float, and now float you have a couple of options, 
+1:16 you have none which is standard, you have left and you have right. 
+1:20 So we'll pick right, that sounds good, 
+1:22 now this is not kind of do quite what we expected, 
+1:25 there is a couple of problems here, one is the order of these things 
+1:28 and the other is this container, the black thing 
+1:32 if we look at the black thing before I run this is this, 
+1:34 and it contains the div and it contains the image. 
+1:37 But when I run this, now all of the sudden the dunecat is shooting out the bottom 
+1:41 and the main content is wrapping around it, ok that's bizzare, 
+1:44 why is it not like at least lined up with this vertically, 
+1:48 we wanted to go to the right of that thing. 
+1:51 Well, in html, the way it works, the thing you would like to float- let me rephrase, 
+1:58 the thing you want to wrap around it goes after the thing that is floating. 
+2:02 So in order to get that to work right, we've got to say the things that floats first
+2:06 and then the various pieces that go around it, 
+2:08 so let's look at this again, there you go, that's better, 
+2:11 at least they are kind of visually lined up on the top there. 
+2:14 But, what is the deal with this wrapping around it, well, that's because it's float, 
+2:19 but why does it not stay in this box here? 
+2:21 The reason is, we need to tell the content of this, 
+2:25 we need to tell basically the browser that this stuff is all suppose to wrap around it
+2:30 but everything after that, is not, it's suppose to go back to normal layout, 
+2:34 so there is a anti float if you will, that we can set here, 
+2:38 and we can put more or less any html item here but a div is like zero height 
+2:43 if it has no content, so this is decent, 
+2:45 and the way you stop this floating is you say ok, 
+2:49 here is the end of the stuff that wraps, 
+2:52 now make a new line as you say clear : both. 
+2:55 We could technically just say clear left but let's just say clear both, 
+2:58 that'll cover both cases; 
+3:00 so if I go over here and I refresh, now it should go back 
+3:03 to exactly what you would probably have thought we got in the first place.
+3:06 Perfect, now of course, we've got some height to sort of line this up, 
+3:11 and vertically align them but that's a whole different conversation.
+3:14 So we were able to use the float, let me just move this around a little, 
+3:17 to show you the cat sticks to the side, right, 
+3:20 the cat totally sticks in the upper right, 
+3:22 and we can get this sort of navigational thing at the top 
+3:25 and the main content to go below it. 
+3:27 And we did that by setting the image to float right, 
+3:31 making sure that the thing that is floating right precedes the stuff
+3:35 that is supposed to float around it or wrap around it 
+3:39 and then when we are done, we have all the stuff that 
+3:40 is supposed to wrap around we say stop this float business
+3:43 go back to normal layout by saying clear : both.
+3:47 so we have float and we have anti float which is clear. 

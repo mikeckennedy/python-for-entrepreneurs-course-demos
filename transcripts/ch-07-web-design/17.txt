@@ -1,0 +1,126 @@
+ 0:01 We played a little bit with the dev tools in the browser
+0:04 now it's time to actually focus on them a little more deeply. 
+0:07 Now, notice in this particular example I'm using Firefox, 
+0:10 the other browser I use all the time is Chrome, and almost every browser, 
+0:15 every major browser has some form of dev tools in it 
+0:20 and they are quite similar in a lot of ways 
+0:23 but they all have some unique thing to them, 
+0:26 what you see here might not be exactly what you have in Chrome and so on, 
+0:29 but they are all really good and the idea is what is more important here is 
+0:32 you have these tools available to help you, 
+0:34 let's use some of those tools on this page. 
+0:37 So we come over here, there is several ways you can get to it,  
+0:40 you've got tools, developer tools, 
+0:42 I find this often easiest to just right click and say inspect element 
+0:44 and that will pull up the tools, 
+0:46 right now I have them in this separate page here 
+0:48 and you can see let's scroll through this page for a minute here. 
+0:51 In Firefox they have this cool thing where you can go into inspector mode 
+0:55 and  then click this and say I want to know what that is, or this or this, 
+0:59 and click that, and then you come back, 
+1:02 you can see it's selected the various things and also as you move around here,
+1:05 so you can always move around here 
+1:08 but sometimes you are like I want to know what is that, 
+1:11 and so you select it and there it is, 
+1:14 now, you can even do things like you can change the content, 
+1:17 so this says 7.2 hours, maybe you guys think that's too long, 
+1:20 so you come over here make that 5 hours and change it. 
+1:24 Or you could change this hyperlink or you can go and edit this, 
+1:27 if you want to edit a big block you can actually come down here and say edit, 
+1:30 and you actually get in here and like rewrite the html when you click out, 
+1:33 it regenerates whatever it is going to be on the dom there. 
+1:36 All right, that's cool, let's go back to this subtext thing. 
+1:39 You can see all the css styles over here, like you can see the subtext here, 
+1:43 I'll hover it here I'll show you exactly where it is, 
+1:45 see how it's centered in the page, 
+1:48 and that's because we have top courses.pitch and it has text align center.
+1:51 But we can toggle these on and off, I can change it here if I want the color to be yellow,
+1:56 I can change it here and notice, it's just this little tiny bit there. 
+2:01 Oh here we go, we are messing with this one down here, 
+2:03 let's move this a little to the side here. 
+2:06 So when I was tweaking with it, it ended up over here,
+2:08 so we can do things like change the color, turn it on and off, and so on, 
+2:12 and this lets you explore the design parts of this page like let's go up 
+2:17 and we can find the pictures, so like here is the image 
+2:20 and we can say you know what, what if I just want the width of this image 
+2:24 or what it would look like if it's a 150 pixels. 
+2:26 And you can just set it and tweak it here. So this is really cool for the design.
+2:29 We also have a console which is basically just a Javascript console 
+2:33 and so you can do anything that you would normally do, 
+2:35 like if I want to find all the images, on the page, I can give it the css selector, 
+2:39 and you can see it came back with five images, 
+2:42 we could even do a little function on it, 
+2:45 we could log out what we have in on images, 
+2:48 to run this, you can see actually those are all the images on the page, 
+2:50 whatever Javascript you want to run, you can do this here.
+2:53 This is also important for showing you errors 
+2:55 like if there is a Javascript error on the page or if there is like a 404 or 500 
+2:59 you'll often see them show up down here as well; all right, so this is cool. 
+3:02 And like here you can see the various things we have it turned on for, right, 
+3:07 we could show errors and warnings for Javascript or less, yeah. 
+3:10 Pretty remarkable that actually the print in the console still lets you go back 
+3:14 and select these in the dom, I haven't realized that before, this is pretty amazing. 
+3:19 Ok, we can go to the style editor and do some styles here 
+3:21 and kind of tweak it in a more permanent way that may poke in at the dom,
+3:25 you can do profiling, we are not going to do that, 
+3:27 you can check out what's going on at the network, 
+3:30 this is pretty interesting so let me change the size here a little, 
+3:34 like this, so we can still see it going, 
+3:36 let's say I only want to pay attention to just the document for now, 
+3:39 so just this, we have the courses/all and you can actually see the response time, 
+3:43 the server is pretty far away from me, it's on the East Coast of the US, 
+3:47 I figure that is kind of half way between the US and Europe 
+3:50 and it makes everyone more or less happy, 
+3:52 but I'm on the West Coast so like the ping time is a 100 milliseconds, 
+3:55 just to get there, so this is pretty good response time, 
+3:58 we can come down here and view like a particular page, 140 milliseconds. 
+4:02 We can also see things about the css, and we can see things about Javascript, 
+4:06 we can see things about images. 
+4:08 One thing to notice, we talked about the cashing and cache busting, 
+4:11 so notice this here bootstrap min that's a cache id, font awesome cache id, 
+4:15 all these things, here notice, out of the cache, out of the cache, 
+4:20 so there is quite a few requests going back to this page, 
+4:23 get me these images, get me these style sheets, get me these fonts, 
+4:26 but we've only made one request to the server, 
+4:29 and that's for the main content and everything else is cached, so that's really cool. 
+4:33 Few more things we can look at, we can jump between various pages 
+4:37 if you have like frames there, if we click this, 
+4:41 you can actually put this into like a responsive design mode 
+4:44 so here I can like make sure that my little drop downs are working good, 
+4:49 you can set the size to be various things 
+4:52 like you want to test what it looks like if say it's on a tablet, 
+4:54 or if I want to test what it looks like if it's in various ways, 
+4:56 and even go into like a touch mode here. 
+4:59 I want to show you another one that looks kind of flashy
+5:02 and you might be like oh that's kind of a cool gimmick,
+5:06 but it can actually be pretty helpful in helping you understand 
+5:09 how pages are laid out especially if you want to go look at someone else's design 
+5:13 and say how do they do that, it's this thing called tilt  3d 
+5:15 so let's go over here to tools web developer and I've installed it, 
+5:18 it's add on I'll show you where it is in a moment and click this, 
+5:22 and it gives us a 3 dimensional stacked view of the web page, 
+5:25 you can kind of see like it looks like that standing out on top of that 
+5:29 which is standing on top of this, it gives you a view over here on the left, 
+5:32 that's pretty cool, the real thing is that's cool as when you grab it in the middle 
+5:36 and you rotate it like this, and you turn it around like so. 
+5:40 And say I want to look over on this side, let's look over here, 
+5:45 and I want to know like what is this thing that contains both 
+5:50 the image and this logo up here, 
+5:54 so I can click on this and actually double click it and it will pull this up 
+5:57 and it will say that's the nav bar brand top nav image, here is the actual content. 
+6:02 Or you can say you know, what is this thing down here, containing this, 
+6:07 oh I see, that's a form control which is input, 
+6:10 you can see this is your email address. 
+6:12 All right, so you can get actually a pretty interesting view 
+6:15 by looking around and going ok, I want to try to understand 
+6:19 what are the building blocks of this piece 
+6:21 how do they put that together, and you could do that pretty well 
+6:24 with this tilt 3d thing, and you get it for Firefox over here at add ons/tilt. 
+6:31 One of the things to notice that's pretty cool 
+6:33 like if I come over here back to this tilt thing, notice when I pull it up, 
+6:36 it has, it was looking like this before, when I pull it up, 
+6:39 you can actually go up here and pull out other things on it as well, 
+6:42 so I can come over here and say show me just the html 
+6:44 or show me the css that applies to it, 
+6:47 or show me the attributes that are set on it, 
+6:50 so this is pretty cool for exploring things so I recommend you check it out. 

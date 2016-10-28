@@ -1,0 +1,84 @@
+ 0:03 There is a variety of ways we can style HTML pages with css. 
+0:07 But by far the most flexible and most modular and professional way to do this 
+0:12 is to use one or more style sheets. 
+0:16 So, let's look really quickly at what goes in the style sheet some of the major pieces, 
+0:19 and we'll use these ideas throughout the rest of this chapter, 
+0:22 and really, honestly through the rest of this course. 
+0:25 Here we have this file and this static folder called site.css 
+0:29 and any page we wanted to use it, obviously we have to include that style sheet 
+0:33 being present in the site obviously isn't enough, 
+0:35 you have to include it in each and every html page you wanted to style, 
+0:39 and we'll see when we get to the more advanced 
+0:43 the second part of the web development a way to unify this across our entire site 
+0:47 so we put in one and only one place and it flows across the site, 
+0:50 but however we accomplish that, we need this link a href, 
+0:55 link to our style sheet with the rel style sheet settings. 
+0:58 Now notice, we don't have to close it off here, unless we are doing xhtml, 
+1:02 all the html5 content browsers these days totally understand it like this. 
+1:06 The first thing that we can do is we can target elements that are just native to html, 
+1:11 so here we are going to target the body and we could target things like 
+1:15 paragraphs, divs, a for anchors and things like that. 
+1:18 And so you can specify by a name, there is not that many html elements 
+1:21 so there is a limited set of what you can put here of course.
+1:25 But, you can have these bare names for html elements 
+1:28 and then you can style them and this is very common,
+1:31 you might want to style tables look or h1 h2 headers look and things like that. 
+1:37 Here you can see we are setting the background color 
+1:40 to #ccc which is just a little bit of white, and we are setting the color, 
+1:44 the text color to #222 so something just a step back from full black. 
+1:50 And the format here is totally standard, 
+1:52 you have the selector and the selectors can be complex as we'll see in just a second, 
+1:56 so body but this could be very complicated, 
+1:58 then we have curly brace a bunch of css properties we are going to set 
+2:02 and then there is a close curly. Of course, semi colon each line. 
+2:05 So let's look at something a little more flexible, 
+2:08 if we want to style my css class, instead of just saying the name 
+2:12 we say .name, so in css . (dot) means class. 
+2:16 And, we can map that over to html that looks like this,
+2:19 there's class= whatever you out after the dot.
+2:22 And here we are just doing more properties, 
+2:24 we are working with the box style for a little bit 
+2:26 so we are setting the padding, we are setting the line height here is a little tip, 
+2:29 if you want a readable set of content, one thing that you can do 
+2:33 that is really easy that makes a big difference just as a reader of the site, 
+2:39 is if you set the line height a little bit higher than default which is just one, 
+2:43 because that little extra space makes it a little extra readable 
+2:47 and surprising how much just a little bit of line height=1.25 em or 1.5 em something like that,
+2:53 em is the standard height so this is like a scaling factor, 
+2:55 like 1.25 times basically, it's a way to think of that. 
+2:59 Now, we can have like I said, more complicated selectors here, 
+3:03 so we are expressing the hierarchy in this next one,
+3:05 we are saying I'd like to go to anything in the page that has the class nav, 
+3:09 .nav means class nav and then space another item means contained within that thing
+3:15  I found with the class nav somewhere deep down in the tree 
+3:19 could be immediately contained or it could be several steps down 
+3:22 contained within this nav item, is an unordered list ul 
+3:25 and that unordered list has a drop down class. 
+3:28 There might be many unordered lists in the nav, 
+3:31 the one that has the class drop down so the lack of space between these 
+3:36 so ul.dropdown expresses that the class is on the ul. 
+3:41 And then, we want to say immediately within that ul we have a thing with profile image 
+3:47 so the greater than sign means it's not just somewhere in the hierarchy,
+3:51 it's directly contained within this thing, so ul and then right within it,
+3:56 there is something with id profile. So, the hash there maps to id. 
+4:04 So we have bare elements, we have .things for classes 
+4:08 and we have #things for ids, so here you can see #name maps to id=name in html. 
+4:14 Now, this is style sheet, so this is kind of the ss, if you will of css, 
+4:21 the other part is the cascading and inheritance styles, so if we look over here, 
+4:25 we can say .content .lead and this is a specialization of the content setting. 
+4:31 On the second item we are staying everything with content has padding of 20, 
+4:36 but if it happens to be the content and a lead, 
+4:40 so maybe the first paragraph that is content is marked as lead, 
+4:44 something like that, it gets a little more padding,
+4:47 so when you combine without spaces you are doing an and operation, 
+4:50 so here we are saying the element we are looking for 
+4:54 has both the class content and the class lead. 
+4:57 Notice how this inherits from the content above, 
+5:00 so the padding is replaced by the specialization. 
+5:04 So the lead one has padding 30 not 20, it's setting the font size to 18 
+5:09 so it's making the fonts more specific,
+5:12 but the line height because the more specialized one doesn't apply 
+5:17 it falls back to just the content, so the line height of the content with lead is also 1.25 em. 
+5:23 So that is a light introduction to css, 
+5:26 this will give you a little bit of a handhold on where we are getting started 
+5:30 and we are going to look at selectors in much greater detail in an upcoming video. 

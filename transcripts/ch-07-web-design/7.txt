@@ -1,0 +1,131 @@
+ 0:00 First of all, if we switch this to run in dev mode we'll have less of a problem, 
+0:05 the caching will be less aggressive and things like that, 
+0:08 but again, the real problem is what do you do for your users, 
+0:11 so like I said, let's fix this for everybody. 
+0:13 The problem is, let's just do a view source really quick here, 
+0:16 the problem is the system sees this, when we load this, 
+0:20 the caching is turned on and so it says
+0:23 look we are going to tell the browser to hold onto this 
+0:26 and don't come and get it again, for the next however long- 
+0:29 I think the default will be just an hour, but I don't recall if I have changed that in the site.
+0:33 Nonetheless, we want this to change when we change it, 
+0:37 so the easiest way to make this change is if we had a different url, 
+0:41 so over here, we can see our css with our color we put back, 
+0:45 the easiest way to sort of trick the browser is 
+0:48 you come over here and you can put some query string on the end 
+0:52 and you say ? whatever, it doesn't affect the web server at all, 
+0:55 so we can say things like cache id = 42 
+0:58 and it will reload that because hey it's never seen site.css ? cache id = 42
+1:05 it's only seen site.css, so if we can somehow make this thing go on the end 
+1:11 and make this number change if and only if the contents of this file changes, 
+1:14 well, then we can create a way that we'll always have a new url for new files
+1:19 but then if it's tied to the contents, 
+1:22 like the same contents always generate the same number there, 
+1:25 it won't generate different numbers for the same content 
+1:27 which means they won't keep redownloading it. 
+1:30 So once it gets cached it will have the right effect for us, 
+1:33 so let's see how we do that. 
+1:36 We are not going to need to do anything to the site css file, 
+1:39 but we are going to need to understand the contents of it. 
+1:42 Now over here in the views, what we would normally do 
+1:45 is we would normally just return the model like this. 
+1:49 But down at the bottom, I've written a function called extend model 
+1:52 that lets us add things, the view, the templates, 
+1:55 so in this case the index.pt, the box model pt, 
+1:58 for Chameleon templates or page template for the extension, 
+2:01 need to accomplish its job.
+2:04 So that lets us isolate that common code down here, 
+2:08 now we are just giving the dictionary and returning it back 
+2:11 so we are not extending it yet but we are going to. 
+2:14 Next on this little tour, let's check out this utils file we've added here, 
+2:18 and now this is where it gets interesting, 
+2:20 I said what we need is we need a number 
+2:23 or some kind of short-ish signature that we can stick on the end
+2:26 there that has to do with the contents of the file well, 
+2:29 you know what's perfect for that- a very simple and fast hashing algorithm, 
+2:32 so we can just go and import a standard library hashlib 
+2:36 and get the md5 hash out of it and just apply the md5 hash to the text 
+2:42 that is the content of the file, this works for text files, 
+2:46 by basically treating them as binary so rb, 
+2:49 so what are we going to do, we are going to say I am looking for a file, 
+2:52 like the site.css full path to it, let's create an md5 
+2:56 and we are going to open this in a with block, 
+2:58 so it gets closed straight away, 
+2:59 we'll do a full read to just read all the data out of the file, 
+3:03 update our hash and then we are going to return a hexdigest. 
+3:07 So this is short hexadecimal string that we can stick into that cache id. 
+3:13 Now, this works perfect, and there are two criteria
+3:16 first, that this is a full local file name path not a web url path, right, 
+3:24 we need to pull this off our hard drive not off the web,
+3:27 second that had better exist or this is going to throw an error. 
+3:30 So up here we have a little bit of error checking 
+3:34 and juggling to make sure that's the case, 
+3:35 so we are going to be pass a url, we have to somehow convert this url 
+3:38 into a full file path, so here is the trick that makes this super easy- 
+3:43 every module in Python has a dunder file, 
+3:47 and this dunder file is the full path to whatever file it is you are working in, 
+3:52 so in this case we have util so if I say copy file path this is what comes out. 
+3:57 This is the value of dunder file. 
+4:00 What we want to do is we want to say I would like to take that 
+4:02 and just in case this is not an absolute path, it should be, 
+4:05 we'll convert it to an absolute path, 
+4:07 and then I want to strip off the file name part and just get the directory 
+4:10 where that file lives, that is our route directory, right, it's here,
+4:15 there is the directory we can use it. 
+4:18 And so when we say things like /static/css/site.css 
+4:22 well, guess what, if we append this directory to it,
+4:25 then we have the full local path, right so full path here,  
+4:31 check for the file exiting get the hash kick it out. 
+4:35 Now, if you didn't totally follow along with that, that's fine, 
+4:38 just this is code that you stick in your web app 
+4:41 and you just basically forget about it. 
+4:43 There is another step here that I am skipping as well, in production, 
+4:46 you don't want to do this recomputing over and over and over again, 
+4:50 that would be not terribly expensive, but it would be inefficient,
+4:53 especially if you have lots of images lots of javascript, lots of css. 
+4:57 So what we do is we would store this hash in a dictionary, 
+5:01 and only computed if we haven't seen it already since our process started up. 
+5:06 There is a few more nuance bits around there so in the final app 
+5:10 that you get it will have that version of this built cache id 
+5:13 but the one we have now is just going to recompute it every time. 
+5:16 Ok, great, so I have this method, how do I somehow use it over here, 
+5:22 that's where our extend, our little extend thing comes from, our extend model
+5:27 so let's go over here and we'll say import now because this is a package 
+5:31 I can't say import utils. whatever, 
+5:35 I need to say the full package name and that's designable web.utils 
+5:39 and then down here, we are going to have method. 
+5:43 So, anything that I put in this dictionary is going to be accessible to the views, 
+5:47 so let me put that function in there so it can be used, 
+5:50 let's do this we'll say model dict and just put a value in there for a second, 
+5:56 we want to say build cache id and we are not going to call that function 
+6:00 we are going to pass that function so it could be used 
+6:04 as many times as needed by the view. 
+6:06 So if we put it here like this, when we get to our view we can just call this function, 
+6:09 all right, last step, let's put it over here. 
+6:12 So let's apply to these two so this is fine and then we want to say ? cache id 
+6:17 or you can put whatever you want to, it doesn't matter, = and then
+6:20 I need to call that function and put the hash value of theme.css. 
+6:25 So we are going to say $ { to tell Chameleon 
+6:28 hey I want to execute some code, 
+6:31 the code that I want to execute is this built cache id, 
+6:33 so I want to do this and then we need to give it well that file here. 
+6:37 So let's do this, we just pass it like that, 
+6:41 it looks little ugly on this end but it saves so much trouble and it's totally worth it. 
+6:47 Now, I would do this to all the css and all the Javascript on this page, 
+6:51 but for now, let's just do it on these two.
+6:54 First of all, let's see that hey it still looks styled, this is a good sign, 
+6:58 and if we go and view source again, it's not there, 
+7:01 and if we view source here, notice now
+7:06 we have this cache id site.css cach id and so on. 
+7:09 So, if we change this file I'll leave this open and put it on the end here, 
+7:14 and I'll go and make some kind of change to it, first of all, 
+7:18 if I refresh refresh view page source, notice as I flip back and forth 
+7:25 these are not changing, right, those values don't change, 
+7:30 but if for whatever reason something here changes like this becomes #222 
+7:34 and this becomes yellow, I can come over here and I just click it, 
+7:40 remember, this wasn't working before, boom, instantly changed, 
+7:43 if I do a view page source you can see now the cache id totally changes. 
+7:48 So my browser has an old version of site.css 
+7:52 and a new one but because the html it only uses the new one. 
+7:55 This is beautiful, this means we will never have to worry about this caching problem
+7:58 either in a development mode or in a production mode

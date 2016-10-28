@@ -1,0 +1,32 @@
+0:01 Let's quickly review this concept of cache busting. 
+0:03 Recall we'd started out with the white site with black text 
+0:08 and it looked like this, more or less and then we made a change, 
+0:11 we wanted to say switch it so we had light text and a dark background, 
+0:16 without the cache busting in place well, remember that basically had no effect, 
+0:20 at least under certain circumstances not the least of which is in production. 
+0:25 So we added this cache id query string parameter to our css files, 
+0:31 so ? cache id - whatever, right, you can put anything after the query string ? there, 
+0:37 and we wrote a function called build cache id 
+0:40 and it looks at the contents of the file and it creates an md5 hash 
+0:44 which has the really nice property of- it's pretty short and it changes 
+0:48 if and only if the contents of that file change. 
+0:51 So basically, every time we change a file, we get a new url 
+0:54 that also gets aggressively cached but it doesn't matter to anybody 
+0:58 because it's always caching the new one.
+1:00 So now with this in place, we no longer have that problem, 
+1:04 when we deploy a new version or just continue to use the site 
+1:07 it automatically adapts to the new css, regardless of what the cache settings are 
+1:12 and they should be extremely aggressive in production on that static folder. 
+1:15 Here is the code that we wrote in sort of simplistic, 
+1:19 help you understand what is going on version, 
+1:21 we used the dunder name to create the full path, and then we took a relative file url, 
+1:27 this is basically a web relative path, 
+1:30 and we used out full path and a little bit f os path juggling 
+1:34 to come up with a local file name, verify that that worked 
+1:37 and then we just computed the hash with our mb5 hash there and returned hash digest. 
+1:42 Now I said in production, we really should use a dictionary 
+1:45 and recompute this only if we'd never seen the file before for that run of the process, 
+1:51 so I've included in the demo code the file called static_cashe.py 
+1:56 which is a much more production friendly version. 
+1:59 It's not identical to the one we'll have in the final product, 
+2:02 it's not identical to the one I am using on my websites, but it's really close. 

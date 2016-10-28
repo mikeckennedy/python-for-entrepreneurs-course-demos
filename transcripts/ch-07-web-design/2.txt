@@ -1,0 +1,57 @@
+ 0:01 Now I hope that you are comfortable heading down this path,
+0:04 to get better with css and web design. 
+0:06 I want to show you something that is maybe way at the far end of like 
+0:10 where most of us are going to be but is also super inspirational. 
+0:13 So I don't know if you've seen this before but this place called css zen garden; 
+0:17 basically there is this page here and it has some content on it 
+0:22 and they ran some kind of competition on this page, 
+0:25 where they said can you take this page which to me 
+0:28 looks very much circa 2005, year 2000 sort of wordpressy feeling. 
+0:34 You can see things got like road to enlightenment, some plain text, 
+0:37 so what is this about, participation and benefits and so on. 
+0:40 And they took a bunch of submissions and you can go over here 
+0:43 and click this and see all of them but I pulled up a few that I think are pretty remarkable. 
+0:48 So what you are going to see on the next five tabs is exactly the same html file 
+0:53 the only thing they have done is change the styles, that they are applying to them. 
+0:58 Change the styles, right; the styles also may include like background images 
+1:02 so really think of this like changing the images 
+1:05 and change the style but the structure of the HTML should be unchanged. 
+1:09 Check this out. So, here is the first one, remember, exact same content. 
+1:13 How about that? So this is kind of like an old style sort of printed book field 
+1:18 and as you scroll through it you can see the beauty of css design, 
+1:21 a demonstration of what can be accomplished, the road to enlightenment, 
+1:25 selecting the design, and so here is a bunch of various things, 
+1:28 now let's go back and just compare-
+1:31 a demonstration of what can be accomplished, the road to enlightenment, participation, 
+1:36 here is the various people that are showing up here, things like that.
+1:40 Cool, right. Again, just changing the css. 
+1:42 Let's try the next one. 
+1:45 Here again is the same page and if I make it a little wider, 
+1:47 it even goes to the side a little bit here 
+1:50 and you can see we have this kind of robot like 1960s robot character 
+1:54 in this background and again, the beauty of css, 
+1:56 a demonstration of what can be accomplished 
+1:59 and if you scroll down you can see the robot sort of stays there, 
+2:02 that's cool and participation, look at how awesome it is, 
+2:04 look at how different these designs are and all they are doing is putting different styles 
+2:08 and layouts on the various text blocks and images and so on. 
+2:11 Here is another. 
+2:13 Again, super different, a demonstration will give you accomplish, 
+2:15 but what you can see here is what can be accomplished is quite amazing. 
+2:19 So these are all the various pieces,
+2:22 I don't totally love this design but I love how it's so different than the others. 
+2:26 Here is another, kind of some cool css animations again, these various pieces,
+2:31 all the text, laid out entirely differently. 
+2:35 So, I really like this one, that's cool. 
+2:38 And then, we can kind of look at this last one it's a little bit like a boy scout type of thing,
+2:42 the zen garden troupe, here you can see they've got their very awesome apple 
+2:46 or is that an apple or mackintosh, something like that. 
+2:49 Old school apple there and again, 
+2:51 very very different look and feel compared to what we have before.
+2:54 All of that came from this standard basic page by just changing the css file 
+2:59 and the images the css file brings in. 
+3:02 So there you have it, if you need to get inspired about what css can do,
+3:07 you can go and head on over to csszengraden.com 
+3:11 and you can see all sorts of amazing designs. 
+3:14 Right here all of these are remember, 
+3:17 the same HTML it's just different css coming into play. 

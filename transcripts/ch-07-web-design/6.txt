@@ -1,0 +1,72 @@
+ 0:01 Let's jump over here to PyCharm and have a look at the web application 
+0:03 that we are going to be using to explore web design. 
+0:07 So, I decided to take just a basic empty shell from the Pyramid starter project 
+0:12 which does include bootstrap but really basically nothing else, 
+0:16 and strip it down to just its essence. 
+0:19 So I wanted to keep the content and styles in play at the very minimum 
+0:25 so let me go and run this, and show you what we got. 
+0:28 So over here we've got our design foundations demo app 
+0:33 and you can see we have a thing for style sheets and caching, css selectors, 
+0:38 we look at box model layout and floating items. 
+0:41 So the part we are focused on right now is this cache busting and stale caches, 
+0:46 so check this out, if I click here you can this is just going to refresh this page, 
+0:49 it's as if I came back to it, same thing is if I go up here and hit enter, 
+0:53 it's just going to reload this page, 
+0:56 so let's go make a very trivial change to the style sheets affecting this app. 
+1:00 First of all, notice we've created a style sheet static/css/site.css in our static folder,
+1:08 remember we have bootstrap and some other things installed in bower 
+1:11 so I replicated that in our little demo app 
+1:14 and I made the css folder an image and a js folder. 
+1:18 So over here, I've made a variety of css for the various demos 
+1:23 that we are going to work with, theme and site are used across everything 
+1:26 and then these are specialized little changes that we are adding on. 
+1:29 We'll get to those later, but for now, notice we are including site.css 
+1:34 and the index page, and over here we've got some colors. 
+1:37 Now, let's change a color, see it's black on white what if we want to change the color, 
+1:42 now this is pretty cool, check this out in PyCharm, 
+1:45 notice there is a black thing on the left and if I hit alt enter 
+1:47 it will say hey you can change the color, what do you want the color to be
+1:50 pick something that you've recently worked with, or whatever, right, 
+1:54 so this lets you go and say you know what, 
+1:57 I kind of like this green, maybe we'll use this green here. 
+1:59 And of course, green is not going to be lovely, what are we trying to set, 
+2:03 we are trying to set the color, so let's set the color to like a cyan, 
+2:07 not quite cyan but close enough. 
+2:10 And then let's come over here and set the color instead of this being white 
+2:14 let's set it to something black like right around there, that's good enough black. Choose.
+2:19 Ok, I am going to save, command s you can see the little presenter tip, saved every file, 
+2:27 now if I come back over here, and I am like all right, 
+2:31 I just changed let's move this aside, 
+2:34 I just changed the color from black to cyan
+2:39 and I changed the background from white to basically black. 
+2:43 And you would think if I come over here and I visit this page, 
+2:47 that I would see a black background with cyan text but wait, 
+2:53 what, what is this, like it's white and if I click around it's white, 
+2:58 if I click around, I click on here, I navigate over this page, 
+3:01 oh, now on this page look, it finally changed, but now it's gone again, 
+3:05 if I do a force refresh then look, cyan color text, well, 
+3:10 cyan-ish color text and a black background. 
+3:14 Finally that change took hold. 
+3:17 This doesn't happen very often in development, if you set things up correctly. 
+3:20 But, in production, this happens all the time, you actually want this to happen,
+3:25 you want the browsers not to download the css and the images and everything, 
+3:30 except for one dime ever, like that would be ideal if it never ever downloaded it again,
+3:35 because that means when people visit your site or more importantly 
+3:39 when they got o like the second page it's instantly got all the images,
+3:43 all the css, all the Javascript, and it doesn't ever go back to your site, pull that in. 
+3:47 So we want to aggressively cache things 
+3:51 but you can see there is this problems it introduces,
+3:54 now, I said you don't run into that problem as much, 
+3:57 when you are running in development,
+3:59 so if I go over here you see it's still white but if I force refresh it it goes, 
+4:03 sorry it was still black, but is I force refresh it it goes to white. 
+4:06 Now notice, over here that I am running the production version, 
+4:10 let me check out the run configurations I've made, 
+4:13 one of them is running production.any and the other one is running development.any,
+4:18 so normally, you are going to be running development and when you do that locally, 
+4:22 you are going to most of the time not run into this caching problem, 
+4:27 you are still going to run into it and like I said, 
+4:29 it's worse around Javascript but it's not as bad. 
+4:32 But in production, it's going to be a problem for your users, 
+4:35 and so we might as well solve it now at the beginning, 
+4:38 and we won't run into it ever in development and our users won't either. 

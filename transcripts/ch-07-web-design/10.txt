@@ -1,0 +1,37 @@
+0:02 So let's talk about css selectors as a concept;
+0:05 we've seen that you can select by type, 
+0:07 so we can start out with this site.css file here 
+0:10 and we can select my html node, so a body, div etc,
+0:15 we can select by css class that's . (dot) 
+0:19 so here we want all things that have the lead class 
+0:21 which would be including this paragraph up here, 
+0:24 or we would say I want all the divs that are main, right, 
+0:28 so there might be other things that are main 
+0:30 but we are targeting the divs that have the class main. 
+0:33 And we could also select by id, so here we are saying 
+0:36 I'd like the image that is the profile image, 
+0:39 or I'd like to go to a div and get to the profile section 
+0:42 and do whatever we are going to do with that. 
+0:44 We've seen in our little demo app how we can combine these 
+0:47 into a hierarchy so we can say things like I want to go to the table, 
+0:50 get the table row, and it has the class.this month, so the class this month, 
+0:54 and here we are setting that to be yellow. 
+0:57 We can even use this greater than sign, this angle bracket to say table angle bracket row 
+1:01 so I only want the table rows that are immediately contained within the table, 
+1:05 I think in the example that we have here we have a table body,
+1:09 so this would return no rows, the second statement here. 
+1:13 And we also played around with the idea of inheritance and specialization, 
+1:16 so we have this content thing, and notice we are setting the padding 
+1:20 and the line height and then we have a more specialized version 
+1:24 a content which is also a lead and this will take precedence over just plain content, 
+1:29 there is actually kind of a order of operators 
+1:32 like you have in programming languages or math, equations, 
+1:35 things like that around what is more specific and what is less specific 
+1:39 for example an id is more specific than a class. 
+1:42 But nonetheless, we have this content which is more specialized 
+1:45 as a content lead and we have a regular content. 
+1:49 So notice we have the padding and that padding is actually overwritten 
+1:52 in the lead to be 30, the font size we are setting because it's just unset in content 
+1:58 but the line height we are not overwriting with the specialization 
+2:01 so the thing that we end up with has basically padding of 30, 
+2:06 the fonts size of 18 pixels and the line height of 1.25 em. 

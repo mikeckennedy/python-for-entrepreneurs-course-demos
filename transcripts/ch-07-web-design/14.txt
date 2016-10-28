@@ -1,0 +1,100 @@
+0:01 Here we are in PyCharm again, with our little demo app, 
+0:03 and notice we are in the layout template here, 
+0:06 and we have an extremely simple set of content in our body, 
+0:09 it's just an ordered list, with five list items each of which is a url. 
+0:14 So let's take a look at this and see how we can play with the layout 
+0:18 to change how this stuff appears on the screen, 
+0:20 and just a way to have something practical 
+0:23 we are going to create this navigational like thing. 
+0:26 All right, so let's run this, see where we are starting from. 
+0:30 All right, so you saw this picture in the introduction, 
+0:33 and here we just have these items, 
+0:36 you can there is really not much going on and it's really just this ordered list, ok. 
+0:41 The other thing we want to observe is we want to include in this layout css 
+0:44 and of course we are using our cache id thing so we don't have to worry about that.
+0:47 Right, now if we look over here, this just says make the fonts big, 
+0:51 and put no spacing or no padding in the body. 
+0:55 So over here in our layout page, 
+0:58 so what we want to do is we want to target the LIs that are in this ordered list, 
+1:02 so let's go and work at that first. 
+1:05 The first thing we want to do realize that these are display block, 
+1:08 I think they are actually something like list display or list items, 
+1:11 or something like that but effectively, they take up a whole screen, if I come over 
+1:16 and I say let's just try to highlight them for a minute,
+1:20 so we say like background color is yellow, 
+1:23 just make it something totally obvious that will stand out, 
+1:26 you can see they more or less take up the entire width, 
+1:28 other than their little number there. 
+1:31 What we want to do is tell them don't take up the whole thing,
+1:33 just take up as much space as you need to. 
+1:35 so we can come down here and say display this is basically the css command 
+1:39 or css property that we are going to focus on for this demo is the display. 
+1:43 So, there is things like block and there is this list item which is out, 
+1:48 it's actually displayed right now but it's also behaving more like a block if you will. 
+1:52 What we want to do is say look, 
+1:55 we'd still like to apply the box model to these list items, 
+1:57 but we want them to flow kind of like words in html do, 
+2:01 and the word wrap and not taking new lines on their own 
+2:03 just sort of take however space they need.
+2:06 So we can do that by just setting them to inline block. 
+2:09 Now if I run it, you can see ok, this looks more interesting, this looks different,
+2:13 now let's go over here and let's set this to be 
+2:17 my favorite dark color-222 and run it again,
+2:21 this is all right, we'd like to set the color here 
+2:24 and this is something that you'll see that's a little bit funky in css. 
+2:27 Sometimes you try to set the color and what these are actually are hyperlinks, 
+2:31 and so I can come down here and I can say you know what, 
+2:34 I want the color of everything in there to be let's say white,
+2:38 ok, and nothing happens. 
+2:41 The reason nothing happens is we are not, 
+2:44 the anchors actually have a stronger color setting than just the list item. 
+2:49 So, we want to set for all the anchors that are contained within the list item 
+2:53 we want to set their color, so we'll set this to be color- 
+3:02 now if we run it, now it's starting to get white, and notice, if we hover over it, 
+3:06 we are still getting this little color like-
+3:10 so there is three color settings for anchors, or hyperlinks, one is the main color, 
+3:15 the next one is what happens when you hover over it
+3:18 and the third is what happens when you click it, while it's loading the next page, 
+3:22 so these are what are called sudo classes, or sudo property, 
+3:26 so the hyperlink we come over here and we hit : and this really works for anything, 
+3:30 we could say hover and set this sudo property because of the colon here, 
+3:35 and here we can set it to be let's set this to be like kind of a gray,
+3:39 so let's say aaa to make it kind of obvious, 
+3:42 darker when we hover notice, because we said this hover sudo property 
+3:48 now we have this color is white, let's also set the text decoration to none, 
+3:52 by default the text decoration is underlined, so now just like this, 
+3:58 all right, we are getting in there, we've set the display to inline block 
+4:01 to get this to float across the top, we've tweaked our colors a little bit, 
+4:04 now it turns out we are actually coloring the wrong thing, 
+4:06 I set the color like that so you could really clearly see the list items 
+4:10 but the thing that we really want to set is the ordered list, 
+4:13 I want to set its background color and if we leave these alone 
+4:17 it will just inherit from whatever is contained within, now I try this again, 
+4:21 here we go, we are starting to get somewhere, 
+4:24 ok, it's starting to look like navigation, 
+4:30 and let's maybe put a little bit of padding, 
+4:34 these little box on it, let's say 5 all the way around, 
+4:38 and see how that looks, oops we've got to say 5 what, 5 pixels, 
+4:42 little nice space here, maybe we want to have them a little more spread out 
+4:47 on the border so we can say padding right let's put this like 10. 
+4:54 Now if I refresh it you can see there is a little more separation between each of them.
+4:58 Here let me pull this up and then I'll go back 
+5:01 on like a quick tweak so we don't have anything there, 
+5:05 now if I refresh it, you can see this is how it looked before, 
+5:08 this is how it looks now, and all we had to do to make that happen, 
+5:13 let's put this back for you, is basically set the display to inline block 
+5:17 for the list items and then we did a little bit of work with the box model 
+5:21 and a little bit of coloring with the sudo properties on the links. 
+5:27 And notice, if I click this, it's sort of for a second, here it's been visited, 
+5:33 we can go change this again, and we can change all 
+5:39 this like so, we don't want to do it here, sorry, we can do it up here, 
+5:43 we can say we have this, we can come over and say visited
+5:47 and we can also hit the other state that we might have for this 
+5:50 which would be active. 
+5:56 Maybe we could even, maybe we'll do something different 
+5:58 for active so you can see it more clear,
+6:06 make this yellow, ok, so if I click this 
+6:10 you can see I probably stop for just a second, 
+6:12 you can see the yellow so that's the active. 
+6:14 All right, so from this, to that, change a few layout properties 
+6:18 and change of the colors, pretty nice. 

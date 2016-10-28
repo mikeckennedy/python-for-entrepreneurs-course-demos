@@ -1,0 +1,11 @@
+ 0:00 Finally, if when you get to the end of this chapter you feel like 
+0:03 well, that was really great but I really need more,
+0:06 I need to dig in and actually learn css better, web design better, 
+0:09 the place that really helped me was, maybe not a place 
+0:12 but a book called "CSS The Missing Manual" 
+0:15 So this book I found very approachable 
+0:17 and I sort of went through it and learned a little bit each day and got better at it.
+0:21 I think you'll get a ton out of going through this section, web design foundations, 
+0:25 and then the front end frameworks we get to later, 
+0:28 but if you want further reading you want more detail and maybe even a reference, 
+0:31 well, "CSS The Missing Manual" definitely I think that's a good one. 

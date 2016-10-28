@@ -1,0 +1,80 @@
+0:01 Now let's play with css selectors and see them in action.
+0:03 We'll come back to our designable web app that we've been playing with 
+0:07 and we'll continue to use through this whole section, 
+0:10 this whole chapter and let's fire it up.
+0:15 So, we have a special css selectors page and it's just a little html form 
+0:20 with a little bit of fancy Javascript that I created 
+0:23 and we are just going to use that Javascript to explore selectors. 
+0:27 So notice there is an entry box up here we can out any arbitrary css selector, 
+0:31 and this little dialogue here gives us some tips on the things 
+0:36 that we can involve in our search, so we have a table, 
+0:38 we have things like table tr, td, th, we have a body and lots of divs, 
+0:43 we have a few things with names, these are jumpstart pythonic at launch 
+0:47 and we have some classes that apply to things in our table like course image 
+0:52 that is actually above but this month as a class 
+0:55 and the latest episode as an id. 
+0:58 So we'll come back to this, and notice from this little divider on down, 
+1:01 this is just a static snapshot of the episode page of my Python podcast at talkpython.fm. 
+1:09 In here I added a few things we can just play with these selectors 
+1:11 so let's see how it works. 
+1:14 There is a css style called selected, 
+1:16 and it basically sets the background to yellow and I think it adds a border as well. 
+1:20 So what we can do is we are going to go type arbitrary css things up here, 
+1:24 and click find elements, it will apply that style to the items that the css style matches. 
+1:30 Let's look quickly at the source code here, so we see what we are working with. 
+1:33 So here we have our little set, this part right here, we have our set of course images, 
+1:39 you can see they have a class course images and hyper links in image and so on, 
+1:44 and then down here we have our recorded episodes and then we have a table, 
+1:48 we'll play with those, we've got a table, and a tr and here we have a ths 
+1:51 we have tr in the body, we have tds, and some of these trs have the latest episode, 
+1:57 some of them have usually one because that's an id, 
+2:01 there's this month class on some of them, 
+2:04 and then as it goes back, maybe that one is this month, but as it goes back those go away.
+2:10 So let's go over here and play with our css selectors. 
+2:14 Now, the most general css selector is just star, if we hit this, 
+2:17 we are going to select literally every element on the page. 
+2:20 Not super interesting, so let's undo that, 
+2:23 we could find all of the table rows if we just hit tr, 
+2:26 remember you can find and select any element with just the note name, 
+2:31 so here we are passing this into jquery and jquery uses css to find elements, 
+2:36 and then do whatever you are going to do with them, 
+2:38 but the idea id really what you would do is you would put this in your css style sheets 
+2:43 and then use it to target the styles of a thing. 
+2:46 So all right, so if we hit tr you can see all of the rows are selected. 
+2:53 If we wanted to look at just say we could select just the table as a whole, 
+2:57 notice how the border just goes around that, and remember, 
+3:00 if you put a space that means I want to find within the table a thing, 
+3:05 so I could come over here and say I would like to find all the t heads within the table.
+3:11 Now, that might be a little funky because where else would t heads live, 
+3:15 of course they are going to live in the table. 
+3:17 We also look for things like the text- date, and this is a class, 
+3:23 so remember class you say . (dot) oops, I had that backwards, 
+3:27 let's do date-text now you can see we found all the text here and we could style this, 
+3:34 we could make this gray as we have here, do all sorts of things. 
+3:38 Also I could find all the course images, so course img and that's going to select- oops, 
+3:44 this is a class, so we need dot, that's going to select these pieces, 
+3:48 if we wanted to just get the images contained within them, 
+3:52 you could do that and you can see we are just selecting the images. 
+3:55 Let's see what else we can get. We haven't used the id yet 
+3:58 so there is this one called latest episode, and let's go over here 
+4:03 and say I would like to find the latest episode 
+4:05 so when we do that we say -latest episode 
+4:09 that should be this one right here about the game 
+4:11 and we could also find the this month so that should select the first four 
+4:19 and you can see it does select only the first four. 
+4:22 We can go farther, we could say i like just the tr 
+4:25 so the table row that has the id latest episode and the class this month, 
+4:31 now because the way we set this up really this is the same 
+4:35 as more or less searching for this, right, but let's go and write anyway. 
+4:37 So what we are saying here is tr with no space means 
+4:40 and, and so tr with the hash and the thing means the table row 
+4:46 with the latest episode id and the this month class. 
+4:50 You will have this page in the code that you can get from github,
+4:53 and download it and run it and tweak the html, play with the css selectors, 
+4:58 do all the stuff that you want, you can even come back here 
+5:01 and select the things that we are interacting with up here like I want the input 
+5:07 and I also want to have all the buttons. 
+5:10 So if we do this, we can get these three things, right, 
+5:12 and comma separating in css selectors is an or or maybe a grouping, 
+5:19 I want to get all the inputs and I want to get all the buttons 
+5:22 and process them as the single thing. 

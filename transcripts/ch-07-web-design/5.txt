@@ -1,0 +1,48 @@
+0:02 Let's talk about stale static files. 
+0:04 Remember when we talked about Pyramid and the static folder- 
+0:08 its all purpose is to cache things, 
+0:10 and make sure that our page loads as fast as possible. 
+0:13 But when we are trying to develop the site or deploy new versions of the site, 
+0:17 this can be problematic. 
+0:19 So imagine, we've started out with this css file 
+0:22 in the very standard black text on the white background. 
+0:26 So here our body has the color black and the background of white, 
+0:30 and it looks like this- that's pretty decent, 
+0:33 you can see the white background and the black text. 
+0:35 Maybe we decide for some reason we want to change the styles, 
+0:39 or like, hey, wouldn't it be cool if we could make like a dark version
+0:42 where the font is white and the color is very dark grey or something like that 
+0:48 and we either edit this and try to load it for ourselves 
+0:52 or we push it to production and visitors who have been there before 
+0:55 and previously cached the original site.css 
+0:58 come back and when they view the page it still looks the same 
+1:01 or when we are developing it and we view the page it still looks the same 
+1:04 and this is totally frustrating, 
+1:07 I want you to wear two hats when you think about this problem- 
+1:09 on one hand, it's annoying for you as a developer constantly changing your site 
+1:14 that these styles don't change and adapt with you, 
+1:17 this is true for images this is true for Javascript and it’s also true for style sheets.
+1:22 I suspect it's probably the worst for Javascript because there is no visual confirmation 
+1:27 that something is happening or changing 
+1:30 or you have the fresh version when you are working with Javascript, 
+1:33 but you have the problem across all these static resources. 
+1:36 Now, there are ways that you can tweak your browser 
+1:38 say if you turn on the developer tools and say while I'm in developer tool mode 
+1:43 don't cache this, but think about it from the perspective of deployment as well, 
+1:48 there is no way you can go to all the users and go have you been here before, 
+1:52 you might need to force refresh your browser 
+1:55 so you can see the new site and if you don't it's going to look like crap, 
+1:58 so I am going to show you a really simple technique 
+2:01 that will solve this problem 100% of the time. 
+2:05 You'll get maximum cache value, 
+2:07 you could set the cache duration to like a year or two years or ten years,
+2:10 it wouldn't matter the second you deploy a new version, 
+2:13 if there is a change, users will download it, there is no change, 
+2:16 they'll use the cached version. 
+2:19 Similarly for you while you are developing it. 
+2:22 So, this may seem like it's a little bit of an advanced topic 
+2:24 getting the head of just basic styling box model layout and so on, 
+2:28 but I wanted to put this first so that we don't worry about these problems 
+2:33 again like I'm so over dealing with oh is that thing fresh,
+2:37 do I have the latest version- you'll see it's super easy to solve this problem 
+2:40 and if we tackle it now we won't have to worry about it for the entire rest of the class. 

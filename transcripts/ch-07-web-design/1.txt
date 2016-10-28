@@ -1,0 +1,83 @@
+ 0:02 It's time to talk about web design.
+0:05 Design is critically important these days,
+0:08 it used to be we could create ugly sites and as long as they are functional,
+0:11 people would use them. 
+0:13 Seriously, go back and look at the early days of Yahoo 
+0:15 and it's just unimaginable what that thing looks like. 
+0:18 But today, things like fancy mobile apps, sites like AirBnB and so on, 
+0:23 people expect a nicer user experience, 
+0:26 and of course, we want to deliver it for them. 
+0:29 Now, before we get too far into this entire chapter, 
+0:31 let me ask you could you design this site today, could you design AirBnB, 
+0:36 the way it is on the screen here today, without much effort? 
+0:39 If you could, you could probably skip this section, 
+0:42 we are going to be talking about foundational stuff some of the core concepts in css, 
+0:47 and some techniques we can use to make our life easier when working with css. 
+0:51 If you could literally design this site today, then feel free to skip to the next chapter.
+0:58 All right, are you still here? 
+1:00 Great, then I am assuming that you are probably thinking but I'm not a designer, 
+1:04 and if I presented this page to you, this is a pure HTML unstyled page 
+1:11 and if I presented that to you and I said make that look like AirBnB, 
+1:15 make that look beautiful like something someone comes across on the web 
+1:19 and says wow, this is an amazing app I must have this, you are probably thinking 
+1:23 oh my Gosh there is no way, I don't even know how to begin.
+1:27 I just want to put this out here, 
+1:30 we are not starting from here, we are starting from a much better place. 
+1:33 Now, before we get into all the details of where we are starting and the tools we are using,
+1:36 let's talk about some of the goals for this chapter, this next series of videos. 
+1:41 So, my primary goal is to make you not fear web design, 
+1:45 if your design is something you haven't been doing for a long time, and like I said, 
+1:50 you identified with that guy with the axe or the hammer in the previous screen there, 
+1:55 you shouldn't fear web design, I'll give you all the techniques, 
+1:58 there is a handful of techniques that will make this so much better 
+2:01 and so much easier and we'll start from there 
+2:04 and so I want to make design your advantage, 
+2:07 help you push through any barriers that you might have or challenges you might have
+2:10 so that you can build maybe not perfect AirBnB looking apps, 
+2:14 but good enough so that either it could be a prototype or you can evolve it 
+2:20 or maybe bring on a graphic designer at the very end. 
+2:23 So the goal of this chapter is to learn the css basics. 
+2:27 Now, we could go on and on and on and have an entire course on css, 
+2:31 but that's not the theme of this course;
+2:34 the theme of this course is teach you enough for each step 
+2:37 so that you can get about building your business and do something awesome, 
+2:40 so keeping on that theme, we are going to talk about just a handful of items 
+2:43 starting with css selectors.
+2:45 You must know css selectors to be effective with css. 
+2:49 Also, the css box model and related to that how the box model 
+2:54 plays with the layout and display modes. 
+2:56 We are also going to talk about floating items, you know, 
+2:59 making this thing stick to the right side of the screen, 
+3:01 while stuff floats around it and stuff like that. 
+3:03 When things don't go perfect, you'll want to use the browser developer tools, 
+3:07 so we'll talk briefly about the browser developer tools with how they relate to css. 
+3:12 Think of this whole chapter as a pre cursor to the front end frameworks, 
+3:16 so that when we get there you'll be comfortable and confident with working with them. 
+3:20 Ok, so I want to tell you you can learn enough web design. 
+3:24 Even if thing on the right here totally scares you, we are not starting from here,
+3:27 that's what it looked like in 1996, but thankfully, it's not 1996, it's 2016, at least at the
+3:35 recording of this video, so today we have things like 
+3:37 front end frameworks, bootstrap ui kit, we have font sets 
+3:41 including all the topography and settings that come with the front end frameworks 
+3:44 but also things like font awesome
+3:47 which is basically that you bring in hundreds of different types of little graphics 
+3:50 that you can use and style into your site perfectly. 
+3:53 There is theme aggregators that take the various front end themes 
+3:57 and then create a whole bunch of different styles on those 
+4:00 and then you can go pick one, download it and stick into your site; 
+4:03 and we have graphic arts on demand. 
+4:06 So, for really cheap things you can drop in on Fiverr for example 
+4:11 and spend five, ten bucks and get some decent log or picture 
+4:14 for more nuance things maybe somewhere like 99 designs; 
+4:18 we'll talk more about these options way way later in the class. 
+4:22 The final thought that I want to leave you with is you can learn enough web design
+4:26 to make decent products and decent websites. 
+4:29 If you take the tools I am going to show you in this class 
+4:32 and you put a little effort into learning the css basics 
+4:35 and a little bit of practice, you'll be totally fine. 
+4:37 I feel like, personally the sites I build these days, 
+4:40 they might not be AirBnB quality but they are definitely decent, 
+4:43 and I used to fear working on the web I totally was just a rich client sort of guy 
+4:49 and could totally get that stuff right, but web css, I had no idea. 
+4:52 So, some of the things I'll show you kind of helped me on my journey 
+4:56 and I think they'll help you as well. 

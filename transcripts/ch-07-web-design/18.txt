@@ -1,0 +1,62 @@
+0:02 Let's wrap up this section by saying what we haven't covered 
+0:05 and what we might still be covering in the feature. 
+0:08 I tried to give you the essence of web design and the essence of css, 
+0:12 and style sheets and tweaking the html and those kinds of things. 
+0:15 But there is plenty of stuff we haven't covered and I'll let you know why. 
+0:19 So, things the that stand out in my mind
+0:21 the highest most important one probably still remaining is this concept 
+0:25 first of all the front end frameworks like bootstrap ui kit and so on. 
+0:29 And within them are things like grid layout. 
+0:32 So more than just displaying line block of float right
+0:35 you can do a ton of layout and design with the css grid definitions 
+0:39 that come not as part of css but as part of these frameworks, 
+0:43 so we are going to cover that later, when we get to the front end frameworks. 
+0:46 Topography and fonts, there is a lot to getting the right fonts 
+0:51 that look good on all the screens, that look really readable 
+0:54 I talked a little bit about line height, there is also letter spacing 
+0:57 and variety of other things that play into this. 
+1:00 So, when we get to the front end frameworks we'll see 
+1:02 that they have a really good defaults for this kind of stuff, 
+1:05 and we'll talk a little more about this when we get there. 
+1:09 Tables, designing tables, laying out tables, we haven't talked about that 
+1:12 again, things like bootstrap have a lot to say about this 
+1:15 maybe we'll get to it but certainly the frameworks have a lot built in. 
+1:19 We haven't discussed that at all. 
+1:22 Themes are really important, there are places you can go 
+1:25 and grab something that is really close to what you would like to build
+1:29 drop it into your Pyramid or any website really, 
+1:32 and make a few tweaks and then you have that as a starting point. 
+1:35 Remember, I said we are not starting like it's 1996,
+1:38 now we have these front end frameworks, we have these themes 
+1:41 so you start from a good place, and then you make it yours 
+1:44 rather than starting from basically upload zero. 
+1:47 Now, all those things that I mentioned so far, 
+1:50 we are absolutely going to cover later in the web design part too, 
+1:53 LESS and SASS these are things that we are not going to cover 
+1:57 but it's worth pointing out
+2:00 css is great, but for large sites it can become pretty unwieldy, 
+2:03 I worked on some sites where we had ten thousand lines of css
+2:06 I mean it was a ridiculous amount of css, and when you get to that scale, 
+2:10 you want to do things that are sort of problematic,
+2:13 like you would like to say here is the color we are using 
+2:17 for these types of use cases in this site, 
+2:19 and here is where I define it and it just applies everywhere. 
+2:22 Kind of like a global variable or some sort of global value 
+2:26 that is brought into the other areas. 
+2:28 You'd like to be able to partition your files into mini small files, 
+2:32 but then compile them back into one really easily for performance, 
+2:36 say when you go to production. 
+2:38 LESS and SASS have these features and more, 
+2:40 so it's high level programming language for css 
+2:44 that then you transpile or compile down to actual css. 
+2:48 If you go look at the bootstrap source code, 
+2:51 it's built this way and you'll see it in a lot of places. 
+2:54 It's worth checking out but it's just this is not a design class
+2:57 I am just trying to get you guys going, 
+3:00 so something you might want to look into as you get farther down the road, 
+3:02 but we are not going to talk about in this class. 
+3:05 All right, with that, I think you are ready to go do some basic web design, 
+3:08 we are going to move on to more advanced web development topics, 
+3:12 later in the class we'll come back to this front end frameworks, 
+3:15 but I hope you feel much more comfortable and capable around web design 
+3:18 than you did an hour ago when you started this chapter. 

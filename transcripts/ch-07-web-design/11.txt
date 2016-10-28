@@ -1,0 +1,76 @@
+0:01 Now let's explore this thing called the css box model. 
+0:04 Now, the box model lets you control how various items want to be placed, n
+0:09 next to other items, or elements on the screen.
+0:13 And there is a wide variety of things that we can set and work with, 
+0:16 a combination of basically margin, padding, orders, width, minimum width, 
+0:21 and same for the height, as well as the display mode 
+0:25 which we'll get to in the next section and layout, 
+0:28 but the box model works in conjunction with this display mode or layout. 
+0:32 So, we are going to  look at the box part of it then we'll look at the layout next. 
+0:37 The html we are working with is drop dead symbol, 
+0:41 we have three things and these are divs, we'll change a few colors 
+0:45 so that we can easily identify these pieces, and we'll go from there. 
+0:48 So here is what we have, we have an outside piece, 
+0:51 we have an inside piece and the inside piece contains 
+0:54 a thing called contained, and it has content.
+0:57 So the thing we will focus on is this inside piece, ok, 
+1:01 how is it affected for by what is inside it, 
+1:05 and how does it affect its relationship with the outside as well as the contained element. 
+1:10 So let's go and run this, and pull it up. 
+1:16 So we are going to go to the css box model,
+1:19 here you can see let's go over to the css really quick, 
+1:22 we'll see the outside piece has a gray background, so that's this piece here, 
+1:27 the content piece has a black background with yellow text 
+1:31 so if we go down a little the content or the contained pieces, 
+1:33 black background with yellow text. 
+1:36 And then, the inside piece, is light blue, with solid red border. 
+1:43 Now you don't see the inside piece, do you? 
+1:47 Right now the margin is zero the padding is zero and the border is zero
+1:50 and so it basically has no other size defined for it, other than what it is containing, 
+1:57 and because of the containing thing is effectively on top in z order, 
+2:00 you'll never see the color of the background thing. 
+2:03 And then, this gray thing here that is the full outside 
+2:07 you can see that around the edges you don't see any of that 
+2:11 inside piece that holds it contained showing up. 
+2:15 So let's make a few changes here, so let's set the padding is 20 pixels 
+2:19 and we'll set the border and the margin to zero. 
+2:23 So when we change the padding that gives it extra space 
+2:27 it has to be bigger to contain whatever it contains, so let's just do this. 
+2:31 Now you actually see the blue thing which is the inside element, 
+2:33 that's the thing we are applying this box model to, 
+2:36 so it's got some size which is defined by the content that it contains, 
+2:40 we could set it explicitly either through width or min width or things like that, 
+2:44 but if you don't do that it's set more or less in this current form by the thing it contains.
+2:50 And then, it has to have 20 pixels extra on each side, 
+2:54 so this is on the inside, now, if we wanted it the other way, 
+2:58 if we wanted just to leave some room around the edges but not show through, 
+3:01 not actually show the thing but just leave some space, 
+3:04 we could switch it and we could let's make this 40 or whatever, right,
+3:07 we could say look we need some extra room on the outside, 
+3:11 and finally, we can go back here and set the border normally 
+3:14 you will set to like 1 or 2 or something small but we'll set it to 10 so it's really obvious. 
+3:17 And now we have this border that goes around it, so let's do them all together, 
+3:21 so we are going to have a padding of 30, sorry this is a margin, 
+3:24 we'll have the margin 30, with the padding of 10, and we'll have the border of just 1. 
+3:29 We set those, you can see around each edge we have 30
+3:33 and then right around it we have a border that comes next 
+3:36 which is the however big it is in this case it's 1 pixel, 
+3:39 and then we have the padding so you can actually see the thing that we are setting 
+3:43 which is the inside before you get to see its content. 
+3:47 So that's the css box model, and you can play around with these here 
+3:50 and see what you get, now we are going to talk about the developer tools, 
+3:54 little bit more but just while we are on the box model, 
+3:56 let me just pull this up and if I say inspect element it will show the developer tools for this,
+4:00 and you can see I can choose different things like the css rules that apply
+4:04 and I can toggle them and so on,
+4:07 but what I want to point out is that it has this box model here 
+4:10 and if we go and find the right piece, not the contained but this thing
+4:14 it will show you up here the actual size is 3.23 by 2.22 
+4:21 and the reason is the thing inside, the contain or the content is 300 by 200 
+4:26 and then we have padding and we have a border, and we have a margin. 
+4:30 And you could actually see as I move around that it's highlighting this in the ui. 
+4:36 So to understand the css box model, you will want to play with these three values 
+4:40 along with the display which we are going to focus on next, 
+4:43 and the developer tools as we get more in depth into them are really good
+4:47 for understanding things like this various sizes 
+4:50 and box model settings that are applied here. 
