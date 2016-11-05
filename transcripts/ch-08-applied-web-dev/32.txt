@@ -1,0 +1,60 @@
+ 00:03 Now that you've seen view models in action let's review them in a picture. 
+00:07 So we've seen that we can have these view models, classes really,
+00:11 in this case we have a registration view model that we've created 
+00:14 and what we want to do is use this type to help alleviate some of the challenges 
+00:18 of sharing and passing data back to the views 
+00:22 as well as validation and getting it from forms.
+00:25 So we are going to have two methods here, two actions, 
+00:28 one is a register which is handling the get request 
+00:31 and one which is going to handle the post or the form submission. 
+00:34 Here what we need to do in this register get is 
+00:36 we need to return the data that will be displayed in the Chameleon template, 
+00:41 so we probably have to have an email and a password and things like that. 
+00:45 Our registration view model is a class that has those properties or fields 
+00:50 and we write a to_dict method that will turn that to a dictionary basically 
+00:54 a model as far as Pyramid is concerned to be passed back. 
+00:58 So, this is really nice and simple and this might even be doing data access 
+01:02 in the constructor for the registration view model, right,
+01:05 it could be doing lots of interesting stuff to get that data that model prepared. 
+01:09 Next, we want to handle the form post, 
+01:12 now we have the register post and how do we do this, 
+01:14 again we are going ot create our view model, and now we have a from dict, 
+01:18 so given a dictionary which in this case is coming from the form post, 
+01:22 let's parse that data back into our variables, 
+01:25 in our registration view model and then we'll be able to work with all those values 
+01:29 as if they were just present in the view model. 
+01:32 We also kind of add validation, so here we can call a validate method 
+01:35 once we've restored it from the dictionary, we can check
+01:39 and even use this error field that we've added, 
+01:42 so if it happens to be there is something wrong, 
+01:45 we don't want to accept their form post, 
+01:47 in this case we don't want to let them register for the site, 
+01:50 we can just return the view model to the same template and this will round trip 
+01:53 all of their data they have entered as well, so this is really nice and simple. 
+01:58 If we do validate, then we'll work with the various fields on that view model, 
+02:03 so view model email address, view model password and so on, 
+02:06 once we actually create the account and do the login and so on,
+02:09 then we might raise an http found exception 
+02:12 to redirect the user to wherever they need to go.
+02:15 Remember, the get post redirect pattern. 
+02:19 Here it is, with view models.
+02:21 let's look into this to/ from dictionary concept a little more deeply. 
+02:25 So what we've done is we've realized 
+02:28 that basically any view model needs to be able to convert itself to a dictionary
+02:31 so it can be passed to the template, 
+02:34 so we've created a view model base so that it has 
+02:36 the simplest possible implementation of to dictionary. 
+02:38 it just returns all the fields, if for some reason your particular view model can't work this way,
+02:44 just overwrite this method and create a dictionary and return it. 
+02:46 Now we have our various page specific view models like a registration view model 
+02:51 and it derives from this view model based and it has a __init__ 
+02:54 where it creates this field so above when we say to dictionary we get 
+02:58 an email address, a password, and an error passed to the view. 
+03:01 Optionally, if it's suppose to support a processing of form post, 
+03:06 we can add it from dict as well, not all of view models need this, 
+03:10 but this particular one did. 
+03:13 And so here you can see we are passing in a dictionary 
+03:16 we don't really care where it came from, 
+03:18 and the case we just saw it from the form post but it could come from the variety of locations
+03:21 and we are going to use the get sort of the safe dictionary key access 
+03:25 or dictionary value access to get the email address and password and store those. 

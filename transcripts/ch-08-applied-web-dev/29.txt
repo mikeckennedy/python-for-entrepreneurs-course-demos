@@ -1,0 +1,59 @@
+00:00 So the next thing we need to do is deal with the case 
+00:04 where the account already exists, or the passwords don't match
+00:07 and let's just do this by assuming we are just going to test for the password to match 
+00:10 and I'll trigger it either match or not match
+00:13 so we'll do something like this we'll say 
+00:15 if password is not equal to password confirmation, now what? 
+00:18 Well, we want to stay in this form, right, we stay in this form by saying this, 
+00:24 so we stay in the form by just returning it and up here we have a render, 
+00:29 it's going to render that form again, but the data that we put in here 
+00:33 is what we want to well supply to the view, 
+00:35 and the view can do whatever it wants to do with it. 
+00:38 But likely what it wants to do is tell the user there is an error 
+00:41 and make sure that all the data that entered is still there, 
+00:43 so let's carry the data that they entered over, 
+00:46 so I had email and I'll just fill this out, so instead of redirecting away, 
+00:53 what we are going to do is we just want to send this data back 
+00:58 but really we need one more thing, we don't want to just to try to submit 
+01:00 the form and have it bounce back we want to say hey, 
+01:03 you know what, your password does not match
+01:05 so let's add one more additional field here called error. 
+01:08 There, so we are going to have the email and password, confirm password and so on, 
+01:12 let's update the form to put those in the value, 
+01:20 and finally let's go ahead and show the error, 
+01:23 we'll say up here we'll say something like a div, 
+01:26 and it's going to be error, now of course we don't actually want to show this error 
+01:30 when there is no error do we? 
+01:32 So let's give this a class or error so the error message,
+01:37 so we can make it red or stand out or something, 
+01:39 and we'll do a tal condition and only show it if the truthiness of error is true, 
+01:44 so it's a string that is not empty something like that. 
+01:47 Let's add a quick red color for that css class, 
+01:51 now this is not going to work the way you would hope, I think, let's go and run it. 
+01:55 And we'll see how successful we've been spoiler alert, not successful yet. 
+02:00 So I go over here and I want to register, 
+02:03 now I've got all this ability to carry on and show the message 
+02:06 and resume the data that they passed in, and yet, not so awesome. 
+02:09 What's the problem- hm, name error, there is no error, 
+02:13 the initial get did not supply the right dictionary 
+02:17 and you'll see that we have a nice clean way to solve this but just for this step,
+02:20 before we get to that too much we need to go over here 
+02:23 and just grab this and in our get we need to supply the same information,
+02:29 of course these are all none, they are none but they must exist
+02:34 when we try to access them out of the dictionary that is the model, 
+02:38 let's try one more time, ok, great, it didn't crush, let's put this email as jeff
+02:44 and I'll put this as the password, now I'll try to hit this, see what happens, boom, 
+02:49 how nice does that look, error the password and confirmation don't match, 
+02:53 and you can see obviously it’s the in password, 
+02:57 maybe I want them to be the password and the password, 
+03:01 let's see if I actually typed that right, hopefully, I intended this to match, let's try. 
+03:05 Boom, they did match, so we did the redirect.
+03:08 Alright, you see how that works? 
+03:12 Over here we have our error, we have the various pieces of data
+03:15 like the email and password and so on that we wanted to pass in, and in the controller, 
+03:19 we have our get post redirect pattern and get sets the initial data, 
+03:23 sometimes it's empty, it could be a drop down list, it was populated,
+03:27 who knows what it is, but it has to exist, then we are going to work through here 
+03:31 we'll handle the post, if it's successful we just go and do the things we do in redirect, 
+03:36 if it's not, we are going to return the data that they gave us 
+03:39 as well as some kind of error that they can use to understand what they did wrong. 

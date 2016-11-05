@@ -1,0 +1,52 @@
+0:02 There are few things over here that were not so smooth. 
+0:05 For one you saw me forget to do this because in my web apps 
+0:08 I don't ever have these initializers on the top level controllers, 
+0:11 but also this built cache id stuff, this is not so great, 
+0:16 so let's see how we can use a base controller to make all these shared pieces 
+0:21 you can see everyone is going to need to have the request, 
+0:23 it's going to have this initializer, 
+0:25 we are going to want to use this built cache id all over the place 
+0:28 and as this complexity in features of our app grow, 
+0:31 that requirement to share all these things is going to absolutely grow as well. 
+0:35 So what we are going to do is we are going to add a base controller. 
+0:44 Like so, and all it's going to do is have the various common pieces 
+0:48 so we are going to start up by moving this down here like so 
+0:54 and then inheriting from base controller
+1:00 PyCharm import it you can see it's added the import line up here and, 
+1:04 this built cache id thing let's move this around, 
+1:07 so we can go down here and say self.built cache id 
+1:11 so we are going to set basically field here that is this implementation, 
+1:17 like so, and we need to import this like we did above, 
+1:23 here is our static cache utility method that we are going to put here, 
+1:25 we could actually take and move the implementation down here 
+1:27 but I am not a big fan of doing that. 
+1:30 So now we can come up here and delete this, make this much simpler 
+1:37 and do it similarly for these others, now when I run this, 
+1:41 it's not going to work quite as well as you would think, 
+1:43 it's going to be missing the built cache id 
+1:46 because of the way we are expressing it in the templates. 
+1:50 See this name error build cache id, it turns out before we were passing in the model 
+1:54 and now we have associated it with the underlined view, but that's no problem, 
+1:58 we just need to make a small tweak.
+2:01 Let's go over here, we can do a replace, we'll replace this with view.this 
+2:08 so because we are storing it on the controller 
+2:12 it's now considered to be part of the view, 
+2:14 remember the way the nomenclature pyramid is, controller is a view basically. 
+2:18 So if I do this and I say replace all there I have replaced in all of them
+2:23 let's just look at this one, so now anytime we want to use our cache id 
+2:26 we'll just come here and say view.build_cache_id 
+2:29 now let's try this again, perfect, everything is back the way we wanted it, 
+2:34 but we have a much simpler normal controllers, 
+2:38 here you can see we just have the action decorator to set the template, 
+2:42 and then we just return a basic model, 
+2:45 whatever is special about this method 
+2:48 and the base controller handles the initialization, 
+2:50 it's going to handle common layout, 
+2:52 it's handling these other utility features that we need, 
+2:56 like this static cache id utility and so on, 
+2:58 So, like I said, as your app grows this base controller is going to be the place 
+3:02 where your common shared functionality lives, 
+3:05 and it's going to keep your normal methods you write much simpler 
+3:08 and make the maintenance of your app across various action methods 
+3:13 and controllers much simpler. 
+

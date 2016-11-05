@@ -1,0 +1,84 @@
+00:01 Maybe it's time to pause for a moment and take a look inside Talk Python Training, 
+00:05 see what the web app there looks like now that you know all the moving pieces, 
+00:08 you can see I am pretty sure you are familiar with this site 
+00:11 but we can come over and here is the courses, 
+00:14 and these are the courses, and this is a data driven bit here 
+00:16 we could go down to this particular course here, pull out the details, 
+00:20 you can see it's rendering all these things, 
+00:23 it's rendering for each chapter all the lectures in that chapter point out the times, 
+00:28 so if you click this it will launch the video as you know. 
+00:32 It's got account management log out and so on.
+00:36 Let's go look and see what the Talk Python training website looks like. 
+00:40 So if you look over here you should see things that are quite similar, 
+00:44 so for example we have a controllers folder, 
+00:46 and there is a good number of them in there, 
+00:50 our data access layer is sort of twofold, or use a set of services 
+00:54 that are like high level orchestration of the lower level 
+00:58 sqlalchemy based data stuff of course, 
+01:00 we haven't talked about these yet we are getting there 
+01:03 I just want to kind of give you the tour, 
+01:05 you can see our sqlalchemy course definition for example, 
+01:08 and if you look at each controller, 
+01:10 so for example we have our account controller here 
+01:12 and just like I was recommending, down here we have our various organization 
+01:18 of all these pieces and if we look at the account you can see 
+01:21 there is a bunch of options, views and actions you might do,
+01:24 like you can change your email, change your password, you know, 
+01:26 view your account login logout etc. 
+01:29 So let's look over here, we have a register method this actually shows you 
+01:33 the page with the register form and it checks hey are you already logged in, 
+01:37 well why don't you just go to your account there is no reason for you to register 
+01:41 if you are logged in, otherwise it sets that title like I talked about
+01:46 and we are going to talk about our view models and how we use those but there it goes, 
+01:49 so here this one is mapped to the get and it just shows the blank data basically, 
+01:53 and then this one, is mapped to the post 
+01:57 and so here is what happens when you register for the account,
+02:00 it comes in and it gets the data from a dictionary, see that in a little bit, 
+02:03 verify some stuff maybe you can set some warnings like  
+02:07 hey if I already have a user by that username you are trying to register, 
+02:11 maybe it will tell you that this username is already taken, 
+02:14 and return just to the form with your data filled out. 
+02:16 Similarly, email taken, too bad email is taken, but if it's not, 
+02:19 let's create you a new account, let's set you as logged in 
+02:23 with a cookie authentication layer, save some logs, send you a new email, 
+02:27 add you to the mailing list and depending on where we are trying to send you back to, 
+02:33 maybe you registered but you have registered as part of trying to join a class, 
+02:38 I'll send you to one place or if you just registered straight up the website 
+02:43 I will send you to a welcome page. 
+02:45 Alright, so that's sort of the way the templates and the controllers interact, 
+02:48 there is at the top of course a base controller here, 
+02:54 you can see there is a lot more going on in the base controller that we'll get to, 
+02:59 let's look over here at this __init__ I told you it gets more complicated, 
+03:05 we have our includes handlers, dv, email, e-commerce, 
+03:09 video players all these sorts of things, so for example for initializing log in 
+03:13 we go to the settings get the log in and so on. 
+03:16 We are going to come back to this we are going to dig into this in more detail 
+03:20 as we get to the various pieces, but I kind of wanted to give you a tour 
+03:23 to see what are we actually doing, 
+03:26 recall I said there is a way to sort of build these handlers 
+03:31 the routes for the handlers in the nicer way 
+03:34 so notice built handlers sequence given the config the home, 
+03:38 designation our courses or player, 
+03:41 right, so you have home controller or course controller and so on, 
+03:44 and here we map to the various combinations 
+03:47 like /courses, /courses/, /courses/all, or /courses/show, details, things like that. 
+03:56 Finally, we also have some unit tests over here, 
+03:59 which we haven't really talked much about but over here
+04:02 we have this top level web tests class 
+04:05 and we did something that is a little bit maybe unorthodox 
+04:09 but I think is highly effective, if you look at the website, 
+04:15 there is the site map, the xml,
+04:19 and if you actually view it in a way you can look at, 
+04:22 there is a whole bunch of urls that talk about what courses you have, 
+04:24 what courses have transcripts, how you register, how you log in and so on
+04:29 and so for our test what we actually do is we go and we get the site map, 
+04:36 and then for each url on the site map we come back 
+04:39 and we do a request against it and verify that the request is supposed to be 
+04:44 either a 200 or a redirect. 
+04:48 So if there is some problem with any of those pages, 
+04:51 there is a really good chance we are going to get 
+04:53 a 500, of 404 or something else that's not great. 
+04:56 Like I said, we'll be back here but hopefully this gives you a view of sort of 
+05:00 you can see what we've learned, and where we are going 
+05:04 as we build up more realistic and full featured web apps. 
+

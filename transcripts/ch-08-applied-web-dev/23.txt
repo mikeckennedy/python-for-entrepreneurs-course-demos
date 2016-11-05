@@ -1,0 +1,31 @@
+00:03 Everything we've done so far has been data that the users can consume, 
+00:06 but they haven't been able to contribute or edit it in even the simplest way. 
+00:11 We are going to address that now in the next couple of lectures. 
+00:13 So let's start by talking about html forms 
+00:16 specifically within the context of Chameleon templates, but also in general. 
+00:20 Here is a form and this is a very simple form, 
+00:23 what it lets users do is enter their email address and their password 
+00:26 and then log into our website. In our website we are just going to say 
+00:29 the email address is the username, keep it simple. 
+00:32 So you can see, everything is contained within a form and forms have actions 
+00:36 and they have methods so here the action is just double quote 
+00:39 which means it's going to submit back to the same page, that render this form, 
+00:44 so if the page that rendered it was /accounts/sign in,
+00:49 it's going to post back, to that exact same url, and this is usually what you want. 
+00:54 It also has a method the method is post, it could be get, 
+00:58 it could be some other thing that might limit us in a few ways, 
+01:00 typically post is important, post communicates to the server 
+01:04 that you don't want to be able to cache this,
+01:06 you are possibly altering data things like that. 
+01:09 It has a number of input forms as well as a single button, 
+01:13 and these input forms have a type so like text and password,
+01:17 and they optionally have a value, 
+01:19 here we are specifying a value of ${email_address} and ${password} 
+01:24 Initially, you can imagine those would be empty.
+01:27 But it could be that they submitted this form back to us 
+01:30 and they had typed in an email address 
+01:32 and there are some kind of reason they couldn't log in, 
+01:34 but we'd like to preserve that data that they have submitted to us for multiple round trips. 
+01:39 So we can do that by refilling, 
+01:41 repopulating the input fields with whatever data they had entered. 
+

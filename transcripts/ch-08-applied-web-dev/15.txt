@@ -1,0 +1,60 @@
+00:02 It's time to write some code that actually generates some interesting html, 
+00:06 not just the static stuff that we've been playing with. 
+00:09 So I made a few changes to the web app, off screen,
+00:12 just so we're ready and you don't have to watch me do a bunch of boiler plate stuff. 
+00:16 So I've created a new controller called albums, 
+00:19 of course put it in the controllers folder, 
+00:22 I've created a new template our views folder and I've added an index, 
+00:26 in here we'll look at that in a moment and see that we're rendering to that index, 
+00:30 through using that index page template as the renderer 
+00:34 right now we are returning nothing, 
+00:36 we are going to add something more interesting here in a moment, 
+00:41 I have also mapped this album controller to a set of urls 
+00:45 and I've added this add controller routes method here 
+00:48 kind of like I showed you in Talk Python, 
+00:51 over here I am saying for any given controller
+00:54 I would like to be able to map /that controller, /that controller, /albums, /albums/ 
+01:02 and then /albums list and /albums by, as well as with some additional data. 
+01:08 Ok, so this will work for almost every route that we are going to need 
+01:12 in our entire application, you'll see we've got a handful of other ones, 
+01:15 we have like a robots txt and we want to have say some kind of sitemap 
+01:21 maybe things like that don't fall well into this pattern, 
+01:24 but other than a few things like that we're totally good. 
+01:27 So we have this albums controller, this index method which maps to just /albums, through this, 
+01:35 and we've got this basic code here, I've updated the fav icons 
+01:38 we are not using the default one anymore, we'll see that in a moment 
+01:41 and we've added some basic html to this page, 
+01:45 here is our little nav section up here and we just have these albums, 
+01:49 so we are going to come back and talk about this nav section in a moment, 
+01:53 for now let's talk about getting some interesting data over here, 
+01:57 so the other thing I've added is this services and data section to our site, 
+02:01 now you don't have to break it down like this 
+02:04 but I find on one hand you have data access layer, class definitions, 
+02:08 orm information and all sorts of stuff that are like
+02:13 right at the orm layer mapping to the database, 
+02:15 and then you have one step above that some kind of data access logic 
+02:19 like I would always like to have my albums sorted like this 
+02:22 or any time I do a query against a user I want to join that against their purchases 
+02:28 so that does always efficient, and so to make that work more easily,
+02:33 I defined services layer that then typically works with the orm and the data definitions. 
+02:37 Now we don't have that yet, we haven't talked about databases 
+02:41 so I am just going to return just some static models here 
+02:45 so we have one function get albums, it returns a list of albums 
+02:48 and each album has a title, year, a preview image and a set of tracks. 
+02:52 Eventually, we'll put that into a couple of tables in the database 
+02:55 but for now let's just hack it together
+02:59 the effects as far the template is concerned is basically the same.
+03:02 So if we run our site, make sure everything is going, 
+03:05 we'll see here we've got a new link up here that I've added,
+03:08 if we go there it just says albums, /albums, so that's great, 
+03:11 now let's pass the data, the idea is going to be that we would like to see 
+03:15 all the albums listed, and maybe even some information about their tracks. 
+03:18 Let's say here so they'll have little picture and a link 
+03:22 and maybe some information about its track, 
+03:25 you'll notice that some of them have preview some of them don't, so that's nice as well.
+03:29 Alright, also here is the new icon, I've just made it this blue yellow Python logo 
+03:34 I don't need the Pyramid one anymore, 
+03:36 and of course this navigation is going to be replaced by a bootstrap nav bar 
+03:39 but for now we'll just keep it there just to sort of help 
+03:42 with this common look and feel concept. 
+

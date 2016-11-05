@@ -1,0 +1,59 @@
+00:01 Maybe a little css will have to work, so how do we style this? 
+00:04 Let's go look at the page source- look how nice and clean this is, first of all, 
+00:08 so this little block that we were working with that has the class, 
+00:12 the whole thing got duplicated each time 
+00:15 so we can just style album and class image in css let's go do that. 
+00:20 
+00:26 So here is our style, we can come over here and let's start by going down, 
+00:30 we'll figure out some other stuff to put in there in a minute 
+00:33 but we want to style the image 
+00:36 and let's say the height is always going to be 1.50 px regardless how wide it is, 
+00:40 maybe it would be better to match the width 
+00:43 but let's see what we get- that looks pretty nice, 
+00:46 and here we have that and maybe we want to actually have this thing 
+00:52 float left and of course we've got to reset it, remember,
+00:57 we come here, so clear both should set that across and the padding, 
+01:07 padding doesn't look so amazing to me, what do you think-
+01:10 how about we add some padding on a margin rather, here set that at 10 px. 
+01:16 Here we go, alright, and finally, square, squares may be good squares may be bad, 
+01:21 let's do one more thing, import a radius 5 px, just to little round it off bit there.
+01:27 Ok, so I kind of like this, so we're going to stick with this, 
+01:30 with the Year of the Snake maybe we also want to show the tracks here, 
+01:33 so we could go do that, and down here we'll just do something like 
+01:43 UL and we want some LIs in here so we can come down here 
+01:47 and say tal again repeat, t in a.tracks, and then the text, 
+01:54 I'll just make this t.title, they both have titles. 
+01:58 Oops, I always do this, I always say in, and in is not the syntax, 
+02:02 it's just variable and then the set. 
+02:04 So there we go, we've got this, I am starting to not like the float thing so much here
+02:09 but that's ok, let's change this form an H2 to a div with a class=album title 
+02:16 and do a little style on that. 
+02:20 And we'll just set the font size to like 18 pixels or something 
+02:23 there is a lot of padding that goes on with those pieces, 
+02:26 with the headers, ok, that's alright, and while we're at it, 
+02:31 let's do one more thing, let's put this free, this preview over by the title. 
+02:36 Here we go, and I think that looks not great, 
+02:40 but I don't want to spend too much time doing design,
+02:43 let's go over here and just put a little spacing on those things,
+02:47 and let's go and add margin right, a little bit bigger 
+02:49 so our bullet points stand out a little bit more. 
+02:52 Ok, so you can see that we've done a little bit of work with our templates, 
+02:56 we've gotten the title, we've done some looping, 
+03:00 now we've obviously done some styles, there is nothing about the template there 
+03:03 but the way it nicely carries on with the classes and so on, that definitely works well. 
+03:06 So, let's look at this preview, now if we look at our data, 
+03:11 the first one has the preview, 
+03:14 the second one has no preview, so how do we know, 
+03:18 how do we control the templating to say only show this, if that thing is true or false. 
+03:22 So this is really easy in tal so we are in Chameleon, 
+03:26 so we come over and say tal condition, and we just set the value, 
+03:29 so we are looping over albums for each album we want to know 
+03:32 whether it has the preview, do like this. 
+03:35 Notice, the preview went away on the one that does not have the preview, 
+03:39 how cool is that, alright, so things are looking pretty good over here, 
+03:42 we've got our data passed in, it's flowing down here, we're rendering it really well, 
+03:47 granted we are not going to do much styling yet, 
+03:50 I am going to wait until we get to the front end framework parts 
+03:53 before we really go all in on making this beautiful and what not. 
+03:56 So let's consider this temporarily good enough. 
+

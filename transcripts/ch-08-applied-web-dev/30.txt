@@ -1,0 +1,69 @@
+ 00:02 Now recall over here, we had to pass this structure data to our template 
+00:06 and for our template to work we really needed 
+00:09 email, password confirmation and error always provided. 
+00:12 Moreover, we had some validation that we were going to do, 
+00:15 right here like that the confirmation matches, 
+00:18 and we had this bit of code we had to write 
+00:21 to pull this stuff out of the post dictionary
+00:25 to get the data loaded from the post into our method. 
+00:29 All that stuff should really be done somewhere else 
+00:32 and unified into a single consistent style. 
+00:36 So I want to introduce you to this concept of view models, 
+00:39 now view models means many things in different situations, 
+00:43 what I am  talking about here is we have specific classes 
+00:47 that bundle the validation and the data, 
+00:50 and how to get and convert that data to and from strings in the forms and so on.
+00:54 And they are typically not a 100% of the time but very often
+00:58 there is a single view model dedicated to a single Chameleon template, single view.
+01:04 Because what's in that view is often similar but not the same as other things. 
+01:09 They can create data the form might need to show itself, 
+01:12 so for example maybe you have a form and you want to say 
+01:16 select the state and you have a drop down full of states,
+01:18 well where do those stated come from- they would come from the view model. 
+01:21 As well as the validation, but most importantly 
+01:23 they provide consistent data exchange, 
+01:26 so I am going to create a folder over here,
+01:30 called view models, and just to save us a little trouble so it won't be a major deal 
+01:36 but let's put a few things in a common base class, 
+01:41 so we can call this whatever we want, 
+01:43 so let's just call it view model base, make it really obvious, 
+01:45 and it's going to have basically one method to dictionary. 
+01:49 And what we are going to do is we need to remember, 
+01:52 over here we need to return literal dictionaries, 
+01:55 if you try to return a custom type you would see it's not going to like it so much, 
+01:58 it's has to be a dictionary. 
+02:00 Sow hat we need to do is take whatever class we are working with 
+02:02 and turn its data into a dictionary. 
+02:05 For custom types this is pretty simple, we can say self.__dict__ 
+02:08 and a lot of times we can get away with passing this, if this is insufficient,
+02:12 you can overwrite this method and then return the data in whatever for you want,
+02:16 sometimes that will be necessary. 
+02:18 Now, remember what we are trying to work on is we are trying to work on a register, 
+02:22 so let's create a register view model, like this, 
+02:26 and it's going to be a class called register view model, 
+02:30 it's my naming convention, you can use whatever you like, 
+02:33 we are going to derive form view model base, 
+02:36 and we'll let PyCharm pull that in, here we go, 
+02:40 we could import that, great, 
+02:42 what are we going to do, it's going to need to have some data, 
+02:45 remember, what do we have up here, we have let's just actually grab this here, 
+02:50 and say well, we want to store this data and we want to make sure 
+02:53 we have this so let's just put it into __init__ 
+02:57 and down here obviously this is not what we want, 
+03:00 we want to say self. let me just clean this up, ok, 
+03:08 now we have this data here, and if we call to dict 
+03:11 we are actually going to end up returning a dictionary with email as a key,
+03:16 because remember, __dict__ is basically where the fields are stored, 
+03:20 the attributes are stored, and we are going to have the value of none, 
+03:23 let's actually start using this straight away, 
+03:27 so if I come up here we can say I'd like a view model to be one of these, 
+03:32 we could import that at the top, and down here we'll just return vm.to dict, 
+03:36 remember that comes from the base view model. 
+03:39 Now, let's go and run this and see that everything still works. 
+03:43 If I go up here and click on register it should provide that information, 
+03:49 remember when it didn't it crushed, boom, there it is, 
+03:53 email password, confirmation, and so on. 
+03:56 Ok, so now we've got a little bit of this managed, 
+04:00 this little bit of what that view needs to display itself,  managed right here, 
+04:04 we could even inline this like allocate this and call to dict straight away. 
+04:08 Next up, let's go down here and work on this part. 

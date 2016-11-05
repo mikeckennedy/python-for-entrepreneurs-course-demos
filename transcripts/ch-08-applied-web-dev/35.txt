@@ -1,0 +1,17 @@
+ 00:01 Let's review html 5 validation. 
+00:06 So there is a couple of things that we can do
+00:09 to help our users understand what they should put in here. 
+00:12 First of all, we've added required so here this is just for the sign in, 
+00:15 we can say both the username and password 
+00:18 or in this case email address are required 
+00:21 and we can also put a placeholder give them a little hint 
+00:24 about what should be typed in there and what is required, 
+00:27 and further, for certain data types like email, 
+00:30 we can say the type is email and so the various browsers were validated 
+00:34 at least to basic validation
+00:37 like make sure that things have an @ sign and so on in them. 
+00:40 And then we say type =email we'll get nice little error messages like this, 
+00:43 if I put in just Michael it says you know Michael, you probably need an @sign 
+00:47 in that email address or it's not an email address. 
+00:50 So be sure to add this to your site where possible, 
+00:52 it's really easy and you get these in browser support. 

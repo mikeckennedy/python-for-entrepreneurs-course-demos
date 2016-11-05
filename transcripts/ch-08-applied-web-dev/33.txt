@@ -1,0 +1,24 @@
+ 00:02 We've seen how valuable view models can be for validation. 
+00:05 Let's look at this a little more deeply. 
+00:07 Here we have what I would call a standard view model, 
+00:10 we have a view model base, it has a to dictionary, 
+00:12 we have the registration view model, it has a __init__ it sets the fields, 
+00:15 and it has a from dict so it will take in data as well as just return 
+00:21 whatever data you set to the view.
+00:24 If we are going to convert this to one that also supports validations, 
+00:26 there is two simple steps we have to do;
+00:29 first, we need to round trip some kind of error message 
+00:33 so we are going to create a self.error,
+00:35 and in the beginning, everybody starts out pure, 
+00:37 there is no errors, there is nothing wrong here. 
+00:40 However, we do want to have the ability to add some rules, 
+00:44 potentially set some errors, so we do that by adding a compute errors function, 
+00:48 now the way it works is we create one of these view models, 
+00:51 we say from dict and then we call compute errors and if something goes wrong, 
+00:54 it's going to set the error message, then in our action, 
+00:57 we can check and see if there is an error, there is no error, 
+00:59 everything was good, the validation passed, 
+01:02 if there was well maybe we want to stop.
+01:04 we could also return some kind of boolean expression from here 
+01:06 but since we are going to need the error message 
+01:08 anyway to do anything useful in the form we might as well just use that. 

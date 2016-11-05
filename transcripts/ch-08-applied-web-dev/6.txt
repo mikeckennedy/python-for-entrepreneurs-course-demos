@@ -1,0 +1,62 @@
+0:02 So let's create our first handler, or like I said, 
+0:06 I am going to be calling them from now on controllers. 
+0:09 And notice I have hacked up the my template page 
+0:11 and let's just run the site real quick to see what things look like here. 
+0:15 Ok, I threw away all that starter stuff 
+0:17 and now we just have a really simple 3. navigation 
+0:20 and a basically something that tells us which page we're on. 
+0:25 So this is not handlers yet, this is just me tweaking the template,
+0:28 down here this run but his, view here. 
+0:32 Now because we are building professional long live large web applications, 
+0:36 we want to add a little more structure than just hey here is a single file
+0:40 that contains a ton of stuff in it, that's not great as this thing grows,
+0:44 so first thing we are going to do is we are going to create a little more structure here 
+0:47 so we are going to go over here and we are going to create a directory called controllers, 
+0:53 and then in the templates, we are going to create 
+0:56 a grouping of template files for each controller file. 
+1:00 So let's go over here, create a file, I'll call this home controller, 
+1:06 because I want to build a home controller class, 
+1:08 and for each controller, whatever the prefix name is here
+1:11 I am going to put a folder in here now I have one called home,
+1:16 later, we are going to need one for say albums, 
+1:24 so we are going to use that part of the name down here as well. 
+1:29 Ok, so you can see there is going to be an each controller a number maybe 4, 5 ,10 
+1:34 who knows it depends on how complicated it is, 
+1:37 a number of action methods each action method 
+1:40 typically has a corresponding template, 
+1:42 so let's copy that and paste it over here and call this index, 
+1:45 what we are going to do for our method is 
+1:48 we are going to have three methods here, index, about and contact, 
+1:53 so let's just go over here make those, there is contol c contorl
+2:00 great and then let's quickly fix these up 
+2:04 so we actually know which page we are on this is going to be the contact page, 
+2:07 the contents of it aren't super important, 
+2:10 maybe we can pass a single piece of information here let's just say 
+2:14 maybe we'll just do something like this where we pass in some value, who knows. 
+2:19 Just to show that each action method is actually doing something different. 
+2:24 Great, so we have our index, about and contact. 
+2:28 Let's go and add the controllers. 
+2:31 So recall, the first thing we've got to do is import pyramid handlers, 
+2:37 now, PyCharms this out saying 
+2:39 hey you are not really using this yet, no not yet, but we will. 
+2:43 The name of this class is basically immaterial, 
+2:47 we just need to use it when we do the mapping but just for me 
+2:51 I like to have it the name of the grouping, controller 
+2:55 and so that's how I am going to call this, and then we are going to add three methods, 
+2:58 we are going to have a def index, for now I'll just say pass 
+3:01 and then we'll do this for about and we'll do it for contact. 
+3:04 Do a little format, great, ok so remember, what we need to return here is a dictionary. 
+3:10 And we also need to tell the index about and contact methods 
+3:14 what template they should use to render that dictionary, 
+3:19 so we'll say Pyramid handlers.action and we'll say render = it's going to be
+3:25 templates/home/ this one is going to be index.pt.
+3:33 And about, contact. maybe some day I'll come up with 
+3:40 some alternate implementation here
+3:43 that when you call these functions if it doesn't have a render, 
+3:45 it looks for you know, something like in this pattern, but right now, 
+3:48 you have to explicitly say this. 
+3:51 So let's try go into say like /home/about see what happens. 
+3:55 Spoiler alert- it's not going to work. 
+3:58 So if I go here you can see 404 not found. 
+4:03 Remember, creating the controller is not enough, we also have to map it. 
+

@@ -1,0 +1,55 @@
+00:02 Let's review the three major steps you take to create a shared layout,
+00:08 It starts by taking a template and converting it to a macro 
+00:12 that will be the shared layout that defines the overall look and feel of the website. 
+00:16 Next, we are going to capture this macro in the controller 
+00:19 and we are going to make it available to all of the views, 
+00:21 the other dependent page templates  
+00:24 Finally, on most page templates we are going to use fill slot
+00:27 and stuff that individual unique data that makes up that particular page 
+00:31 into those slots and let the rest of it be filled by the overall macro. 
+00:35 So step one, we begin by taking just the standard Chameleon template 
+00:39 created by the starter project, and we converted it to a macro, 
+00:42 here you can see we are saying metal:define-macro and we give it a name,
+00:46 in this case I wanted to call it layout. 
+00:48 Notice we are applying that to the html tag so the entire page, 
+00:51 and then we define several slots that the dependent pages can use
+00:55 to stick in and populate the page, 
+00:58 here I've highlighted the main content where all the data goes 
+01:02 but because of these slots are optional, 
+01:05 it's fine to put additional places of which basically adds additional flexibility 
+01:09 for your dependent views, in this case we made a place at the end of the layout 
+01:14 so that we could add additional Javascript files in the right location 
+01:17 if the dependent page needed to. 
+01:20 Step two, in the dependent pages, like here home/index.pt we are going to consume it, 
+01:26 so all you put in this page basically is use macro and within the use macro, 
+01:32 we are going to fill the individual slots so we are going to say 
+01:35 we are going to fill the content and whatever the page contents are, 
+01:39 we put that right there, and we are also going to in this case be using 
+01:42 an additional Javascript file that is not included into other pages, 
+01:47 so we are going to include it, here we are going to use angular js on this one page 
+01:50 so we are going to include that script file along with maybe some others 
+01:53 that aren't shown on the screen. 
+01:55 Now remember, to wire those together we have to capture that somewhere 
+01:58 and then make it available, because we are using this idea of a controller based, 
+02:02 it's super easy to put it in this one place and it becomes available to our entire website. 
+02:06 So that takes basically three steps, 
+02:08 one we are going to get the render from the layout.pt, 
+02:11 now remember, we have to use the web application name: the path 
+02:17 that's basically the package name in Python, 
+02:20 then we are going to get the implementation, 
+02:22 and we are going to go to the implementation say I'd like to get the macro called layout,
+02:26 that's what we called it, and we are just going to store that on a local variable 
+02:28 called self.layout that makes it available to the dependent views 
+02:32 by using macro view.layout. 
+02:35 Now reasonable question is that seems like a lot of work,
+02:38 you have to juggle those things, and whatnot, 
+02:41 is there just a packages you can include that does this magic? 
+02:44 Well, yes, there actually is a package you can include called Pyramid layout. 
+02:47 But if you go back and look what we did, 
+02:50 there is literally nine lines of code that weren't just already boiler plate html 
+02:54 and if you go read through here, it's not particularly simple, 
+02:58 I mean, what they are doing is great, but I feel like it's just overkill
+03:02 and there is too much going on here, so you can pick whichever makes you happy,
+03:05 we are going to use this simple macro driven mechanism that we've adopted here 
+03:10 but if you want to use this package you can as well. 
+

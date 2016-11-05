@@ -1,0 +1,41 @@
+00:01 So we've wired up our form through the register page 
+00:04 and it calls the get version when we do an initial load 
+00:08 and it calls this post version when we submit the form. 
+00:11 So this is really nice, it lets us separate the data access 
+00:14 and various things we do to initially populate the form 
+00:17 from the thing we actually do to process the request. 
+00:21 In this case that's the request to register for the site. 
+00:24 now the next question is well, how do I get the data they gave us from over here 
+00:28 we had an email and we had a password and we had confirm password. 
+00:33 How do we get that? 
+00:36 So over here we are going to go to the request, 
+00:39 now the request was stored by the base controller onto this class, 
+00:44 so we can just say self.request and there is a way to access the post data, 
+00:48 there is a way to access the query strings, 
+00:51 there is a way to access the routes
+00:55 and all of those can communicate data to this method, 
+00:57 so for now we are just going to focus on post 
+01:00 and later we'll look at the way to unify this 
+01:02 and sort of forget this is ever a decision you make
+01:05 where did the data come from, for example. 
+01:08 So, on the request object, there is a post dictionary, 
+01:10 standard, more or less standard, 
+01:13 it's a multi dict but a standard dictionary type of access 
+01:16 so we want to get a hold of the email, and the best way to do it is to use the get, 
+01:19 because if for some reason this field or this key is missing from this post 
+01:25 it will crush the site if we don't do a get, 
+01:27 if we just do ('email') but this will just make it null 
+01:30 if it's not there, so we want to do this again for a few things, 
+01:33 ok and let's just print this out just to see that the data is getting here, 
+01:38 we are not going to do anything with it yet, but we'll print out the data. 
+01:43 This is going to be jeff@jeff.com, password is going to be the letter a, 
+01:51 this is going to be also the letter a, 
+01:55 let's register so we get oh would you like to save this, 
+01:58 not right now, check this out, we've passed our data in, 
+02:02 it's jeff and I made this mismatch here just to be silly, 
+02:05 a little lowercase a and uppercase A, 
+02:08 so this is how we get the data passed over 
+02:10 let's pull this up so you see it together, 
+02:13 anytime we post the data it just gets stored in this post dictionary
+02:16 which we can access however we want to do with dictionary access. 
+

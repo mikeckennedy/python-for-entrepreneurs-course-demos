@@ -1,0 +1,55 @@
+0:02 Let's see how we define a set of use, or action methods 
+0:05 grouped by a common class by using handlers. 
+0:08 So, we are going to have to start by importing Pyramid handlers, 
+0:12 so of course you want to make sure that we've installed it 
+0:15 and we just saw how to do that once we have it imported, 
+0:18 we can use it in any of our custom classes, 
+0:21 so we'll begin by creating some kind of class, 
+0:24 here we have to start calling these controllers 
+0:27 because in the nvc world that's absolutely what they are, 
+0:30 if you look at the documentation for Pyramid handlers 
+0:32 it actually says a Pyramid implementation of plone controllers. 
+0:36 These are controllers folks. 
+0:38 So what we do is we create just a plain class, 
+0:40 we'll see later how to enhance this with a base controller concept 
+0:42 but that's not required for what we are doing. 
+0:44 Then, we are going to add a couple of methods to this controller class, 
+0:48 and these are just standard methods, they take no parameters other than their self,
+0:53 and they return some kind of dictionary or a Pyramid response, 
+0:57 but often you are going to return a dictionary as a model. 
+0:59 Then you do just a standard processing on the index, 
+1:02 maybe we want to index in this example is going to be like the home screen. 
+1:06 So, maybe what we want to do is show like a list of albums 
+1:11 or upcoming events or who knows, something like that, right, 
+1:15 so somewhere in the middle in that common area 
+1:18 we are going to access the database, maybe call web service, 
+1:20 do some computation and return that data to a template. 
+1:23 Now, once we've mapped these urls, we could start calling index in about
+1:26 but that's not enough, we need to give it additional information most importantly, 
+1:31 we need to specify what template we are going to use, 
+1:34 what template file so that the system knows what it should display for the html. 
+1:39 So, we bind that and more information together using the action attribute, 
+1:45 so here I am using the full name space, Pyramid handlers.action 
+1:48 and you can set the render to be some kind of template 
+1:52 here I've set it to be the index Chameleon template in the home folder, 
+1:56 we are going to do a little reorganization as we get into this. 
+1:59 Similarly down here on the about method we'll set the about template as the render, 
+2:04 you can put other things in there, for example 
+2:06 we could say that we want the json serializer and just return json objects, 
+2:10 or all sorts of things, there is quite a few options that we'll look at them 
+2:14 as we go through this section. 
+2:16 Now, this defines the controller that could handle the request 
+2:19 but nothing is going to happen if we write this, we need to actually tell Pyramid 
+2:24 hey, these urls map over to these action methods. 
+2:28 The way we do that is we map the class as a handler, 
+2:32 so we can say config.addhandler, 
+2:35 again, give the route a name but this time it could be much more general, 
+2:38 so we could say /home/action/id and action and id are data elements, 
+2:44 variable pieces that could be passed across, 
+2:47 so action actually names the method so home/index will show the first method, 
+2:51 home/about will show the second. 
+2:55 Now the way it's written here, this id is required 
+2:57 but you'll see as we get into it the few variations. 
+3:00 So you could do things like home home/index 
+3:04 and home/index/7 whatever that means. 
+

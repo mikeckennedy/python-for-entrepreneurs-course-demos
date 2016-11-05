@@ -1,0 +1,40 @@
+00:04 There is one basic flow or pattern that you need 
+00:07 to understand to work effectively with forms,
+00:10 and once you get the zen of this idea, forms are piece of cake,
+00:13 so let's talk about this pattern I am calling get-post-redirect. 
+00:17 So imagine we have our app running up on digital ocean, 
+00:20 our application has a database, things like that;
+00:23 now, a user comes along and maybe they want to register for the site,
+00:27 so they are going to come along 
+00:30 and they are going to do a get request to accounts/register. 
+00:32 And that's going to bring down the html, the form that you saw in the previous video 
+00:36 that has the inputs and buttons and actions and all that sort of stuff. 
+00:40 The user is going to edit this locally, and then once they are ready, 
+00:44 they are going to post that data, that form back to the server.
+00:49 That's going to come back to an action method on one of our controllers, 
+00:53 we are going to look at that data and decide either it's valid or not valid, 
+00:57 assuming everything works, we are going to save that validated data to the database, 
+01:01 and then, we don't want to just leave them on the create your account page, 
+01:05 we want to take them somewhere, maybe we want to take them to our catalogue 
+01:08 or we want to take them to their account page 
+01:11 where they can set their picture or whatever, 
+01:13 but we are going to do a redirect, an http code 3 or 2 redirect, 
+01:18 in this case we are going to redirect them to a welcome page 
+01:21 that helps them get started with our site
+01:24 so this is how almost all forms work, get, to get the original form, you edit it, 
+01:28 post back usually the same url not required but is helpful, 
+01:32 and then if everything is good, we are going to make some changes and redirect, 
+01:35 to some new place.
+01:38 If we were adding a book to a book store we might redirect to the details of the book, 
+01:41 or maybe we'd redirect to the listing of all books in the bookstore 
+01:44 showing the new one at the top, something like that. 
+01:47 Now I just made up this pattern, it seems very common to me 
+01:50 and it really helped me be effective, understand how to work with forms. 
+01:53 It turns out, other people came up with this similar pattern as well 
+01:57 and they put it on Wikipedia, however, I think it's a little bit different 
+02:01 it feels like they are jumping in the middle of some kind of experience 
+02:04 because they call it post/redirect/get, you magically have a form, 
+02:08 and then you somehow post it, redirect to a place and that redirect causes the get, 
+02:12 so here it is on Wikipedia, known as post/redirect/get, 
+02:16 I think the ordering more like get post redirect, you can call it whatever you want. 
+

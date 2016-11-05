@@ -1,0 +1,17 @@
+00:01 Let's take a moment and talk about the options we have
+00:04 for templates and template languages. 
+00:07 So three of the most popular template languages for Python are 
+00:11 Ginger 2, Mako and Chameleon. 
+00:15 As you've seen, Chameleon is default template language in Pyramid
+00:20 but it's not the only option, if you prefer Ginger 2, 
+00:23 then wherever you see the include 
+00:26 and the requirement specification for Pyramid_Chameleon 
+00:29 just change that to Pyramid_Ginger 2 
+00:32 similarly, if you like Mako, go for that. 
+00:35 In this section we are going to focus on two things, 
+00:38 we are going to focus on how to use template to define data driven html pages, 
+00:43 and how to use Chameleon to build a shared single definition of the site design. 
+00:50 So, how do we build one view that basically defines the master view 
+00:55 for all the pages and then each individual page just adds its own special content, 
+01:00 whatever it is about that page that is unlike all the others. 
+

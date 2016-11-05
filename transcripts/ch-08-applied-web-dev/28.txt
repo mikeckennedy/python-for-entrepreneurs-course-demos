@@ -1,0 +1,63 @@
+00:01 So now we have this data being passed in, 
+00:04 we would do something let's comment that out for a second, we would do something
+00:07 like maybe over here we would create account in DB 
+00:12 we would send welcome email,
+00:15 before we did any of that of course we want to validate no account exists 
+00:20 and maybe passwords match, 
+00:23 although you know this confirmation business 
+00:25 I know a lot of sites have it and it feels great 
+00:27 but at the same time if you have a really good way to reset your password, 
+00:31 then maybe we could simplify and streamline the account creation 
+00:36 and maybe get just a few more percent people to actually sign up for our site, 
+00:40 that would be really nice so we can decide if we want this in practice, 
+00:43 but these are the types of things, 
+00:45 validate that the data is ok that they actually entered an email 
+00:48 the email is valid things like this, and then if it we'll create an account, 
+00:51 I'll send a welcome email and then what we want to do is we want to redirect. 
+00:55 We can just raise an exception, a specific exception type. 
+01:00 Now this redirect pattern, I told you get post redirect is super common, 
+01:05 so the ability to redirect to a url is also something you need all the time, 
+01:08 where the stuff that all the action methods need go, it goes in the base controller, 
+01:13 so let's write a redirect function over here. 
+01:15 So here we'll just have def redirect, and then we'll have to_url, 
+01:20 where do we want them to go?
+01:23 It could be on our site, it could be somewhere else, it just depends what url we put. 
+01:26 ok we are going to need access to this exception thing, 
+01:29 so let's go over here and say import pyramid.httpexceptions 
+01:34 and let's keep it a little bit short so let's say as exc 
+01:37 so we don't have to type out that long thing, 
+01:39 and then down here we are going to actually add one more parameter 
+01:42 let's say whether let's let the user decide whether or not this is a permanent redirect,
+01:47 sometimes you want to have a temporary redirect, 
+01:50 like our login for example, other times, you are going to permanently do a redirect 
+01:55 and this is important for CEO we won't get into it now 
+01:58 but let's go ahead and set that ability here. 
+02:00 So we are going to return or cause one of two types of exceptions, 
+02:04 we'll say if permanent we want to raise our exc.moved permanently. 
+02:11 Now notice we can set the location, we can set the details, the headers, comments, 
+02:16 all sorts of stuff but we are just going to say the location is the  to_url. 
+02:20 But if it's not permanent, we are going to raise the different type of exception, 
+02:24 http found so I know you are looking for this but I found it over there 
+02:28 so go redirect over to this to_url. 
+02:32 So PyCharm is still in this, this can be static, let's just tell it, hey don't bother me. 
+02:37 Don't make it look like there is something wrong with this, 
+02:40 so back to our account controller, we're ready to redirect, 
+02:42 assuming that we get through all this validation, 
+02:44 we don't have to return anything, we can just say self.redirect because remember, 
+02:49 this throws an exception, where are we going to go?
+02:50 Let's just go to /account. 
+02:53 And this is not going to be a permanent redirect, this is just when you log in. 
+02:58 So let's do this, we can put this back for a minute, 
+03:01 and we can print out redirecting, alright, 
+03:04 so we pretty much have the get post redirect thing in place, 
+03:07 and here is the get, the user is going to post it back, the post is going to hit this one, 
+03:12 we'll do the various work which we are not doing the validation yet, 
+03:14 we'll do that in just a moment, then we are going to redirect here. 
+03:18 Let's rerun the app and check it out, so let's go register, 
+03:21 my name is going to be jeff the password is going to be a, again a, hit enter, 
+03:27 calling this we have two passwords, redirecting our account page and where are we, 
+03:31 we are now on /account, not /account register, just /account, 
+03:34 because guess what we register for the site, how awesome is that? 
+03:37 Ok, last thing we are going to talk about after this is 
+03:41 how do we add a little basically temporary validation 
+03:44 and we'll see a pattern that makes all of this cleaner. 

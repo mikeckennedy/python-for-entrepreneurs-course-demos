@@ -1,0 +1,10 @@
+ 00:03 Now let's quickly look at how our project structure adapts 
+00:06 when we use this shared layout. 
+00:09 As you've seen, we've organized the templates 
+00:11 that go with the action methods on our controllers into various directories here. 
+00:15 Now notice, we have a new shared section 
+00:18 and I am using the underscore prefix to indicate 
+00:21 that this is not the thing you are supposed to access directly, 
+00:23 but is in fact consumed by the other views. 
+00:26 There is nothing that says you have to do it this way, but as your site grows 
+00:29 having some sort of organization like this, is really really helpful. 

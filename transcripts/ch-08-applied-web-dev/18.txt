@@ -1,0 +1,56 @@
+00:01 Now, notice up here we have this home, albums, contact, right, 
+00:04 as we click around the other thing I'd like to do is 
+00:07 add just a little bit of a concept of a logged in user. 
+00:10 We are going to get to user accounts and all that stuff later, 
+00:13 but let's start talking about the template a little bit up here. 
+00:16 Now notice, right now I have this part hidden, but if I put it back, 
+00:20 we have this section that says should you sign in or register 
+00:24 or are you already signed in, you can view account or log out. 
+00:28 And notice there is no real action here but just from a template perspective,
+00:31 we would like to show some or the other, so let's go back over here, 
+00:35 our base controller here, and let's add some kind of behavior here, 
+00:41 so we are going to have a property,
+00:44 a property is basically a function that you interact with like field 
+00:48 but in fact it's a function call, and it's also read only so we have this, 
+00:52 we'll say is logged in, and we are going to return right now, 
+00:57 let's just return true, yes, they are logged in. 
+01:01 So over here, let's go back for a moment, 
+01:04 our base controller has all of these attributes, or fields 
+01:09 and then it has these properties, our albums controller derives from that 
+01:13 so our albums controller has those properties as well, 
+01:19 so it is logged in and so on, so that means over here I can do this, 
+01:23 remember, when speaking of the controller we say view. 
+01:27 so we'll say it's tal condition, is logged in, 
+01:30 actually, we don't want this we want the opposite of that so we'll say not 
+01:34 and then put this on those, we want this in the case you are logged in, 
+01:38 in here we want to when you are not logged in. 
+01:42 So let's rerun it, because we changed the Python code
+01:45 which means we've got to restart the web app, 
+01:47 so over here you can see we have our account, 
+01:49 we have our logout and that's because in the base controller 
+01:52 we said yes, they are logged in, right now, 
+01:55 so if we come over here and look we have account, 
+01:58 and log out because those are logged in users, if this was false, 
+02:01 if they weren't logged in we refresh this, rerun the code, and refresh it, 
+02:05 you can see now we have sign in and register, 
+02:08 so that's how we work with the template attribute language 
+02:12 with Chameleon templates and so on, let's just review. 
+02:15 We go from our albums controller, we get to our action method, 
+02:18 we do our data access web service access, whatever calculations we want, 
+02:21 we return that as a dictionary, as a model, to the template. 
+02:25 Great, so the template then has access to the view 
+02:29 which is the instance of the controller class and all of its properties and fields and so on, 
+02:34 so we can say tal conditional don't show this if they are logged in, 
+02:38 do show this if they are logged in, or show this if they're not logged in rather. 
+02:42 And then we come down here and we say create little prototypical html block
+02:48 that we want to work with and then we'll say tal repeat 
+02:51 and we'll create a local variable for each time through the loop 
+02:54 so here we are going to create- now that we are floating this we don't need this anymore,
+02:57 we are going to create an image 
+03:00 and we are going to use the image url from the each album coming through 
+03:04 again, we want to set the title use the tal conditional on whether or not it has a preview 
+03:09 and then we are going to go the albums tracks and loop over those as well. 
+03:14 And you can see that our albums are on the screen in a pretty decent way 
+03:19 that represents the data that is backing them. 
+03:22 Like I said, we'll make this more beautiful later but it's a good start. 
+

@@ -1,0 +1,73 @@
+00:01 So now that we have this data, let's go and get into our controller, 
+00:04 pass it to our view and then do some interesting stuff with Pyramid. 
+00:07 So over here, we are going to
+00:10 this is typically how it looks in these action methods, 
+00:13 you map to some request, it gets you here based on the url with data pass, 
+00:17 you do some data service as in web service access here to get some data, 
+00:23 look up what users logged in, something like this, 
+00:26 and then you are going to return the model. 
+00:29 And remember, the model has to be a dictionary. 
+00:34 Not a list, a dictionary. 
+00:37 So let's go over here and our data access is going to be to use this services thing, 
+00:41 so we'll say from come over here to our album service, 
+00:45 and we'll say something like album=AlbumsService.get_albums. 
+00:51 Ok, the way we wrote it it's one of these static methods, 
+00:55 and then we are going to return a dictionary so we'll do something 
+00:59 like we'll give it the name albums, is this albums. 
+01:03 Now that might look funny this is just a key 
+01:05 it could be anything but album seems like the right choice
+01:08 I guess we could make it a little more obvious, 
+01:10 it doesn't have to be the same this could be all_albums or something like that. 
+01:14 So now this completes the data access the controller side of things 
+01:20 and its job is to just hand off the data to the view, into our index pt 
+01:25 and notice we have this albums and within the albums 
+01:29 each one has some- we have a bunch of them, 
+01:31 so list each of them has title, year and tracks and then the tracks have information. 
+01:36 So that's what we have to work with. 
+01:39 So let's just print them out into this area, 
+01:41 so now we are going to get started with Chameleon, 
+01:43 now the first thing we want to do is we want to maybe write out the standard shape 
+01:48 of what we want so let's just start out let's say we have an image 
+01:51 and the source is going to be empty for a minute, 
+01:53 the alt is going to be empty for a minute, line break here, 
+01:56 we'll put the title so we could say H2 is going to be the title 
+02:00 and then down here we'll just have a little div and this will be track count
+02:07 like so and I'll say six tracks or something like that and if there is a preview, 
+02:11 we want to have a link, we'll just leave it empty for now, we'll say preview. 
+02:16 Not all of them have preview so we only want to show this some of the time. 
+02:19 Let's see other slides, it's not going to look great but we will click on albums,
+02:25 here you can see we have the title, the track count and the preview, it could be worse. 
+02:29 Ok, so how do we tie this thing, 
+02:33 let's clean this up a little and sort of isolate this a bit? 
+02:36 How do we tie this thing, let's give it a class of album in list like that, 
+02:43 how do we tie this thing back to the albums 
+02:46 and how do we do a loop, things like that. 
+02:48 So, when we get to controlling this html dynamically, 
+02:52 you'll see that there is a bunch of stuff under tal for template attribute language, 
+02:56 so we have attributes, case, conditional, on error, replace, 
+03:00 all sorts of things and the one that we are looking for right now is repeat 
+03:04 so in here we are going to say something like a albums, 
+03:07 now that's not very self explanatory but albums is a collection that comes to us 
+03:11 from the controller, and this defines a local variable each time through 
+03:17 we'll be able to like look at a.title and things like that, 
+03:21 let's just say that we have two of those now, if we go and refresh.
+03:24 Ok, this is a good sign, one- it didn't crush, two it duplicated it,
+03:28 let's try to set the title, so any time we want to work with the some property or code 
+03:33 and we want to then convert that to a string in the dom, we'll use $, 
+03:38 let me say a. to know what's in here, so a.title it looks like that, 
+03:43 it can also be something computed, it doesn't have to be just straight up attribute access 
+03:49 so this could be the length of a.tracks, something like that 
+03:54 and it will leave the preview alone for just a minute, 
+03:57 let's try that, great, look at this, so now we have 
+03:59 Digital Age Boys and Girls, Year of the Snake, those are the two albums
+04:02 we have the number of tracks five and preview and preview. 
+04:05 we also have things like what year is it shown and so on, 
+04:09 let's go and put this image source here, now if we look back at our data, 
+04:13 we'll see that there is a url if we were going to try to link to it, 
+04:17 whether it has a preview and an image 
+04:19 so first let's put the image there so again, 
+04:23 this maybe should be renamed image url, something like that 
+04:25 but let's see what we get now, oh yes, 
+04:28 so not straight up image, we are in a loop, the loop variable is a, so a. 
+04:33 there we go, so we have these two huge images.
+

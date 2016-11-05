@@ -1,0 +1,27 @@
+0:01 Let's review some of the options we have for mapping action methods on controllers. 
+0:06 So here you can see we have a home_controller it has a Pyramid handlers,
+0:11 action decorator on an index. 
+0:15 Now, this one allows this particular action method is actually 
+0:18 processing a form post on the home page. 
+0:23 So if maybe on your homepage you put a form that has a place 
+0:28 for like an email address and a button that says hey, sigh up for my newsletter, 
+0:31 this would receive the email address and actually put them in your newsletter, 
+0:35 there is very likely a corresponding get version that shows the homepage 
+0:39 and that form and so on. 
+0:42 So over here you can see that we can set the render,
+0:44 this is probably something you are going to do almost all the time, 
+0:47 you want to pick some kind of file convention 
+0:49 I've shown you my templates/controller name
+0:52 directory /action name file convention and that works very well for me, 
+0:58 so we are going to specify this here and then notice, 
+1:00 we are actually setting the request method so this method will only be called 
+1:04 if there is an http post to that url that we've mapped it to, 
+1:08 if there is a get there is some other not shown method that is run, 
+1:11 so here we can filter by request method, 
+1:14 in Python you can't have method overloading by parameter, 
+1:19 there is only one method with the given name in any given class 
+1:22 or outside of any given class in a particular module. 
+1:25 So we can't have like index and then have some parameters 
+1:29 and then an index and a get, so here we are actually setting the name 
+1:33 to allow us to have an index_post and an index_get. 
+

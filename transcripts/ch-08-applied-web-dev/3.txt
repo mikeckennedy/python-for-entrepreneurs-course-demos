@@ -1,0 +1,44 @@
+0:03 In the next few lectures we are going to look at this concept, 
+0:06 this package called Pyramid handlers. 
+0:08 Pyramid handlers are a different, alternative way 
+0:11 to basically group and map routes to action methods, 
+0:15 or methods that process the request. 
+0:18 Then while Pyramid handlers are not required 
+0:21 for building very advanced websites with Pyramid, 
+0:24 you'll see that they do have a few key advantages,
+0:28 for example, they let us group common functionality, 
+0:31 these handlers and I am going to go and start calling them controllers, 
+0:35 after we get started with them but just while we are introducing it 
+0:38 the package designer Chris McDonough same guy who created Pyramid 
+0:42 calls them handlers so, these handlers let us use classes 
+0:48 to group common functionality both in terms of related web methods 
+0:53 so related action methods that are processing different requests 
+0:56 so for example if you have like a user account management thing we might have 
+1:01 a handler called  account and then there might be a register log in log out. 
+1:06 And those might be all grouped into the same class 
+1:08 and you can imagine there will be other functionality private methods 
+1:12 and what not that will be used across those different action methods 
+1:15 as you work with users. 
+1:18 We also see there is less routing work.
+1:21 Now, there is two ways to reduce the routing work, 
+1:23 what you've seen so far with starter scaffold is you have to be extraordinarily specific 
+1:26 and every time you want a separate method to be called, 
+1:29 a separate view method, you have to make a route, name that route 
+1:34 and apply it as a decorator to that method, 
+1:37 and that gets really tedious in real applications and it gets tedious quickly. 
+1:41 so there is two ways to go around that, 
+1:43 one you can use this concept called traversal, 
+1:46 which is one of the other alternative scaffolds,
+1:49 or we can use this concept of mapping the routes to classes 
+1:53 and then only when we are adding a new group of functionality 
+1:56 do we actually have to go and fiddle with the routing. 
+2:00 And finally, the core web infrastructure is always going to be accessible. 
+2:03 We can create a base handler class, 
+2:06 and all of our handlers or controllers can derive from that, 
+2:10 that means a bunch of functionality that has to be universally accessible, will be. 
+2:15 So, we'll see that if we have like a common check for a cookie like authentication, 
+2:21 or particular logged in user, or some other common functionality 
+2:26 we can put that into the base controller and then 
+2:29 any time we add some new group of functionality will automatically pick that up. 
+2:34 We'll also see that using handlers allows us to create shared templates and layouts 
+2:39 that let us have a common look and feel in a super easy way.  

@@ -1,0 +1,21 @@
+0:02 As you've seen, creating a base controller, 
+0:06 some kind of class that all of our controllers derive from
+0:08 allows us to centralize a lot of shared functionality. 
+0:12 First of all, we no longer need to define a dunder init 
+0:15 that grabs the request which is a requirement for all the controllers, 
+0:19 it also lets us set things like that cache busting utility 
+0:22 making that available to all the views, 
+0:24 and here you can see we are setting a page title 
+0:27 that means we can go into our templates 
+0:30 and say I'd like to set the title to view.page_title.
+0:34 And things it derive from the controller base if they want to change the title
+0:37 they can just set the title to something else before it gets rendered. 
+0:40 But this way every template and as you'll see the shared master template later 
+0:45 will be able to rely on this field being there. 
+0:48 We also can set properties to say 
+0:50 is this a get request or a post request and simplify that, 
+0:53 here you can see we even gave a set title function 
+0:57 that will let us define a common ending for the title of our web app 
+1:01 that let us specify some little prefix 
+1:04 like your account-my web app, things like that, 
+

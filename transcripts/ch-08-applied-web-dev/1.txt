@@ -1,0 +1,69 @@
+ 0:02 Are you excited? I know that I am. 
+0:05 We have reached the chapter where we dig in and really build our web application. 
+0:10 We are going to focus on all the stuff you need to build a data driven web app 
+0:14 now that you have all the foundational stuff in place. 
+0:17 We are going to start with something called handlers. Pyramid handlers. 
+0:21 Now, these are not super well known features of Pyramid 
+0:25 or extension of Pyramid really is the way to think of it, it's a separate PyPi package. 
+0:30 But, they allow us to do simpler routing and more importantly, 
+0:35 they provide what I would consider universal access to core features. 
+0:39 If for some reason we want to be able to access the user in a certain way, 
+0:45 or a particular cookie like an authentication cookie, 
+0:48 various places where we are processing the request,
+0:51 remember in a real web app you have like a hundred, 
+0:54 two hundred methods that are actually handling these requests 
+0:57 talking to the database and doing things, 
+0:59 and the right level of separation is really important handlers facilitate that, 
+1:02 in a really interesting and powerful way, and they are quite easy to use, 
+1:05 I think you'll find them of nice edition. 
+1:08 We are also going to look more carefully at the Chameleon templates, 
+1:11 so we haven't done a whole lot with these templates other than sort of poke at them 
+1:15 and say that they exist, but we are really going to look at them 
+1:19 and use them to build a website we are going to go and take real data 
+1:23 and pass it onto the templates and do interesting things with it. 
+1:26 We are also going to stop making copies of our website design
+1:30 what we've done so far is we sort of copied pieces around 
+1:33 and poked it at saying look we'll address this later, 
+1:36 we are now going to address this concept of a shared layout, 
+1:39 we are going to do this through a mechanism inside of Chameleon called Macros 
+1:44 and you'll see that we have a single layout page that defines 
+1:47 basically a hole where the customized content goes for each particular view, 
+1:51 and then we are going to put all that stuff, 
+1:53 all the css all those sort of wrapper bits of the html in one page, 
+1:57 one template and share it across the whole thing. 
+2:00 So that means if we want to add a new page it's super easy, we just fill in that hole,
+2:04 if, more importantly, if we want to change the look and feel for our site, 
+2:08 we just do that in one place and every page in our site 
+2:11 automatically adapts to that common look and feel. 
+2:15 We are not going to do read only data anymore, 
+2:17 we are now going to accept input from users, let them edit things, 
+2:20 this can be as simple as letting them log in 
+2:23 or letting them register to create an account, 
+2:25 but it could get more advanced with 
+2:28 some kind of backend admin section that we might build, 
+2:31 certainly to do things like input our albums into our web page, 
+2:35 we are going to need some kind of admin backend.
+2:39 While passing pure dictionaries around is what is required by the template 
+2:43 and it's the way Pyramid works, it doesn't mean that that's what we should be doing, 
+2:48 we are going to introduce this concept of a view model 
+2:51 which is a richer more intelligent class basically that is tied to the template
+2:57 that is being displayed and has the validation rules and some of the data access rules
+3:02 that we might need in this separate layer. 
+3:05 So, when we do this, the action methods, the ones that actually process the request, 
+3:09 their job will be much simpler and some of that validation 
+3:14 and the complexities of whatever problem we are trying to solve 
+3:17 will be moved over into this view model. 
+3:19 This will make it easier to maintain and validate our code, 
+3:22 but it will also make it easier to test our code 
+3:25 because we can work with the validation in these view models 
+3:28 not just poking at fake web request. 
+3:31 Speaking of validation, we'll see that the view models are an important player 
+3:37 in the server side validation, which we are going to need 
+3:40 and we are also going to talk about adding client side validation 
+3:43 so that most of the time we don't even have to go back to the server
+3:46 users get immediate feedback saying what they need to do to properly fill out the form.
+3:51 Alright, so that's what's on deck for the chapter, 
+3:54 I think you are really going to learn a lot 
+3:57 and you are going to be very capable of Pyramid and web development 
+4:00 after we get through these topics. 
+

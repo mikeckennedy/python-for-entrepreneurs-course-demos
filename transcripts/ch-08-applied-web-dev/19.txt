@@ -1,0 +1,39 @@
+00:02 Let's talk about layout and a common look and feel. 
+00:06 Obviously, we would like to have one place to maintain 
+00:09 the look and feel of our application, 
+00:12 we'd like to have the overall look and feel of the site easily adapted 
+00:15 and brought into every single page that we create 
+00:18 and if we had a new page we want to be able to do that super easily 
+00:22 as well as if we want to make changes like 
+00:25 here I have a little "brought to you by Hired" thing on my podcast, 
+00:28 what if I want to change that- I'd like to be able to change that in one place 
+00:31 and have everything just take that look and feel, 
+00:34 what if I want to switch it to a whiteish rather than a dark colored site; 
+00:37 I want to be able to do that in one place, similar with navigation, everything. 
+00:41 The mechanism by which we accomplish this is shared layout. 
+00:44 And I want to point out while it's most obvious that 
+00:48 this is about the look and feel of our site, there is more to it than that, 
+00:51 a modern web application is very important to have the same 
+00:55 consistent information in all of our site, things like what is the fav icon, 
+01:00 what is the description, is there an rss feed, where is it, 
+01:03 all that kind of stuff is important.
+01:06 It's very important that we consistently bring css files 
+01:10 all the css files in the right order into the page, 
+01:13 it's also important to bring the right Javascript files into the page and again, in the right order.
+01:18 Of course we want to do this in one place so we want to make a change it flows through, 
+01:21 but it's also just very important to know 
+01:24 that we are controlling that absolutely consistently across our site. 
+01:27 We want to have consistent analytics, so we might have Google analytics, 
+01:32 maybe Facebook pixels for trying to do Facebook adds 
+01:37 and we want to track conversions, 
+01:39 all those kinds of things you again want to be able to put that in a shared layout 
+01:42 and have that flow or change throughout your site all at once
+01:45 we also want to have structured ways for the individual pages 
+01:49 to bring in additional css and Javascript 
+01:53 for example maybe you've got some page 
+01:55 that is kind of a single page app thing and you want to bring in angular js, 
+01:58 you'd like to have a way for that an individual page 
+02:02 to consistently bring in the additional Javascript and css that it's going to need, 
+02:06 and weave that into your overall look and feel and Javascript ordering and so on, 
+02:11 and we can use our shared layout to control this aspect as well. 
+

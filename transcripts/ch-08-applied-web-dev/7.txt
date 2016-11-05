@@ -1,0 +1,100 @@
+ 0:01 All that stuff happens down here in the entry point in the dunder init. 
+0:04 Now, this is a pretty simple implementation right here, 
+0:09 but as it grows, we kind of want to group these various pieces
+0:13 and so let's do a little work to reorganize this to make things a little nicer, 
+0:17 so if I highlight those two things, I hit control T I can say make that into a method 
+0:21 and I'll say this will be init_includes or something like that
+0:26 so down here you can see we are now just calling this function 
+0:28 and we can do this for the init_routing, 
+0:35 ok so like I said, as this grows we kind of want to have 
+0:39 a bunch of pieces init_login, init_database etc. 
+0:41 Ok, when you see this config.add_route, this is for the traditional routing, 
+0:47 the ones that go straight on functions with the @view_config like so. 
+0:52 And we are not going to use this one although I'll leave it in just for a moment, 
+0:56 we are going to say config.add_handler,
+1:01 and in here we are going to specify a route name 
+1:04 just like you have home above, I'll call this home_ctrl, something like this, 
+1:09 and then I need to give it a url, so let's say the url is going to be /home/ 
+1:12 and then we get our flexibility by saying action,
+1:17 so if we have the action method here, like so, 
+1:20 then we can just have this one route and it maps to /home/index /home/about/
+1:25 home whatever is on that class basically. 
+1:27 And then at the end we have to set the handler to be equal to a thing, 
+1:30 so now we've got to come up here and start importing our handlers, 
+1:34 so we'll say import, now remember this is a package 
+1:37 so you have to say the full name blue yellow app.controllers.home_controller as home, 
+1:44 just to save some sanity down here let's say home.home_controller. 
+1:49 Ok so this should be enough to get started, 
+1:51 let's just run it and verify that that's the case. 
+1:55 Again, this is not running that particular- I think this is going to crush 
+1:59 the way I wrote it, I'm saying there is a missing piece of data from the model, 
+2:04 oh no actually there is one thing I forgot, I'm very sorry about this, 
+2:07 let's go back to the controller, 
+2:09 all the controllers if I have the basic controller implemented
+2:12 I wouldn't need this but for now that's why I forgot it, 
+2:16 but for now, we are going to need the dunder init method so w'll say def__init__
+2:20 and it has to take a request object, 
+2:23 so notice, over here, we are passing in the request to be used, 
+2:27 here we don't pass the request to the method 
+2:30 we actually pass the request in the initializer and then it's available for all the methods, 
+2:34 so let's use PyCharm to store that like so, now we run it, 
+2:39 now we'll see my dictionary error I was hoping for. 
+2:43 Render was passed in non dictionary value, 
+2:46 alright, so what do we need to pass along here, 
+2:48 so we need to return a dictionary and we said there was going to be a value 
+2:52 and the value is going to be HOME, I'll just put all caps home just so we can see. 
+2:57 The other thing we need to pass is we need to pass that css cache busting thing, 
+3:01 that we worked on before, I'll show you how we don't ever have to do this again 
+3:05 but just for now so it works, we are going to pass it. 
+3:09 Alright, let's try it one more time. Come over here /home beautiful, 
+3:14 here is the home controller, the value from the controller is home index. 
+3:19 Now, again, if we go about it is going to have the same problem, 
+3:22 render was passed non dictionary value, but notice home/index 
+3:26 and home/about are maps let's just go fix up these other two. 
+3:38 Now, in development mode when you make some changes 
+3:42 and you go over here and refresh, on the templates, that works , 
+3:44 but for the Python code you have to restart the app, we are going to restart, reload, 
+3:50 so here we have home, about, contact. Look how cool that is. 
+3:53 Ok, so it looks like everything is working now, if I go here, notice,
+3:58 this is not the same home view, 
+4:01 so let's go and work with the routing just a bit to fix this. 
+4:04 so over here I would like to have really just home/index 
+4:08 also stand in for / so let's comment that out, 
+4:13 I want to do another one I will just say call this root or something like that 
+4:16 we'll just say the url is going to be / home now we come over here 
+4:19 and say the action is going to be index, with an n. 
+4:23 Ok, so this tells the Pyramid handler system look if somebody comes to / 
+4:28 just render the home/ index, 
+4:31 otherwise, render using this sort of hierarchical action based routing. 
+4:37 Now the other thing we are going to have to do is 
+4:40 we are going to have to go over to our view and not try to map it to a thing called home
+4:44 which doesn't exist, so let's just entirely comment that out, 
+4:47 in fact let's just go for broke, delete it. 
+4:51 I got a warning because it's used in the tests down here but that's ok. 
+4:57 Put those on hold for a minute, ok let's try again. 
+5:01 Now, check this out, we're up here on / and we get value of controllers home, about, 
+5:06 over here / index or like this, same thing. 
+5:11 Now of course we probably want to change this link up here to just be / 
+5:15 but you can see how we can tweak the routing to make this really nice, 
+5:18 let me show you one more hang up you are going to run into on a routing, 
+5:21 so if somebody says /home/index/ well that doesn't match to the regular expression 
+5:25 so too bad, so it's easy to fix, just come down here and we'll just add another one, 
+5:30 now this name is a dictionary key so it has to be unique, so we'll say a little / 
+5:35 like this like so and that will let us map this little / 
+5:39 and then some of these also take data, right, 
+5:42 the home about the home index and so on, don't but if you have like albums, details, 
+5:48 you want to pass in like a number and so it's very common to have 
+5:51 like I had my slides some kind of of id here so we'll say something like id like this. 
+5:57 Now this part looks almost the same for every single handler or controller 
+6:03 you are going to setup. 
+6:06 So at some point what we'll do is we'll write a method 
+6:09 where we pass in that piece of data, and that bit of data 
+6:14 and we'll just let it build these groups of routing for us. 
+6:20 Finally let's do a little more cleanup, let's delete. 
+6:23 Great, our website is now using handlers for all of its work. 
+6:30 This is not required, but I find this to be a much better way to organize large applications,
+6:35 it's hard maybe to convince some of you if you just want to write functions, 
+6:38 but as you go through it, you'll see here is one more cool feature, 
+6:42 here is one more cool feature, and they will just build up until you are like ok, I get it. 
+6:48 And if not, it's fine, just use the other style. 
+

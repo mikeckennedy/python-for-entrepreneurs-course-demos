@@ -1,0 +1,48 @@
+00:01 We saw that we have our basic form 
+00:03 and it does call whenever we post it it calls back to this page 
+00:06 but the point of this page is really just to create the form, this is the get part. 
+00:10 So what we can do is let's put a little note here, calling register via get, 
+00:16 and recall that we can come here 
+00:18 and we can set the request method to be just get
+00:22 now let's look again. 
+00:24 Will it work if I click register? Yes, the get is fine but watch this, boom, 404. 
+00:29 There is nothing that will respond to /account/register post, right. 
+00:34 So what we've been able to do here save this method, this is only the get part, 
+00:39 this only registers it, now let's have the part that actually processes the data 
+00:44 that comes in from the form. 
+00:48 So we are going to come down here, we are going to have one that's called post, 
+00:51 and I am going to try to make a mistake here 
+00:54 and you will see something weird is going to go on. 
+00:57 Just look at this screen for a minute, pause the video if you wish,
+01:00 and we've got this method responding to get, this method responding to post,
+01:07 and it says different stuff here get post. 
+01:10 What do you think it's going to happen if I run this, 
+01:13 if I come over here if I click on this, I click here, 
+01:17 this is not going to turn out in an amazing way for us. 
+01:20 Boom, not found, huh, that's weird, and yet, 
+01:23 if I come over here and submit it, it actually is working, 
+01:27 you can see crating call register via post, 
+01:29 so here is something you have to be super careful of 
+01:31 and I run into it every now and then and then I'll oh, what was I thinking, 
+01:35 why was I not paying attention.
+01:39 Some languages, when you have classes allow you to have multiple methods 
+01:43 with the same name and you are overwriting them by signature or something like this, 
+01:47 this is not a concept that exists in Python, 
+01:50 we need to, if these two methods are going to coexist, 
+01:53 they have to have different names, basically what happened was 
+01:55 this method was created and then it was ejected from the class 
+01:58 and then replaced with the only the one that handles posts. 
+02:01 That was not amazing, so I wanted to make sure you saw that 
+02:04 because that's something I am sure you'll run into,
+02:07 so I'm going to call this register get and register post, and yet if I try to run this,
+02:12 it's going to say well there is nothing at /account/register, 
+02:15 yet there is something at /account/register_get, 
+02:19 so what we have to do is we have to say tie these back together 
+02:22 and say no no these both respond to the register url 
+02:26 but they have to have different names so they can coexist, 
+02:28 so we set the name of this here to be like so. 
+02:33 Now of course rerun the Python now everything should be working good
+02:38 I click on register, I get this, calling via get, click the button, call it via post. 
+02:42 Great, now that we are calling this via post, 
+02:45 the next thing to do is to figure out well what data did they send us, 
+02:49 what's your email, what's your password, things like that.  

@@ -1,0 +1,101 @@
+ 00:02 Ok so let's move this over into the view model as well.
+00:06 This part here we will point in in this data and I am going to call it like this, 
+00:10 I'm going to add a function called from dict and we need to give it a dictionary, 
+00:14 so we go like this, let me just cut that out of here
+00:18 we'll add that method, let PyCharm do it
+00:22 post is not a good idea, let's just call it data or dict or something like that, 
+00:27 and here we are going to do basically the same code
+00:29 but instead of self request we are just going to say get that from the data dict, like so
+00:33 this lets us get it from the query string from other places as you'll see later 
+00:36 we'll unify this into one piece, and this will be self.email
+00:40 and our error, we don't get that from the form, that's generated in the handler, 
+00:48 so that might come out later. 
+00:50 Now let's go over here and we'll say vm from dict and then see all this stuff, 
+00:54 let's just write this in terms of the model, 
+00:57 the data the model the view models gathered and then we'll fix this 
+01:01 so we'll say vm.password if those aren't equal we'll move this somewhere else in a moment.
+01:06 vm.confirm password, if that doesn't match 
+01:09 we want to turn all this data back but we also want to set an error 
+01:12 so we'll say vm.error it's going to be whatever the error was. 
+01:18 And then all of this goes away we just say return vm.to dict, 
+01:22 remember, it can't give it itself. 
+01:24 So look how this what we need to get from the form is gone, 
+01:29 we are going to remove this in a moment, 
+01:32 the concept of doing the testing here is well and let's try it one more time. 
+01:36 Go over here and try to register, this will be jeff hit enter, oh oops, 
+01:43 my little print statement is killing us here, 
+01:46 I forgot to move that over, and let's just delete this, alright,
+01:50 that was just telling us that was being called, right, 
+01:53 this is not actually part of the form or anything, 
+01:55 this is just me trying to print this out and from the previous one.
+01:57 Let's do it again. 
+01:59 We repost it, ta-da, error, the password and confirmation don't match 
+02:02 because I entered two values, let me just put the word the into both of them 
+02:07 and now it should run through that comparison and it should be all good. 
+02:11 Boom, your account is valid. 
+02:13 Last step, let's move this validation into the view model, 
+02:16 so I am just going to take this and we'll say vm.validate this is a thing I am making up, 
+02:22 we can call it whatever we want. 
+02:25 So down here it's going to just run whatever test we had, well how about this, 
+02:28 of course vm doesn't make sense here but self does, and let's start by saying this, 
+02:35 the beginning of this validate we are going to just in case null out the errors, 
+02:40 and then we are going to do this, if there is some kind of failure, 
+02:45 we are going to set the error, maybe this error should be a list of errors, who knows, 
+02:49 but for this sample case, we are just going to make it a single string, 
+02:52 not a set of errors that could possibly occur. 
+02:55 Ok, and then up here we are going to say validate 
+02:57 and then we are just going to say if there is an error,
+03:01 we don't really care or know what it is, we just don't want to display the page, ok, 
+03:06 so we are going to create the view model, we are stored from the post data, 
+03:11 we'll do a validation and we'll just see if it failed the validation 
+03:15 we'll go and just show the form again, we don't have to worry in this area what happens,
+03:19 but what we do care about is up here, we'll start working with vm.email and things like that
+03:24 to create the account assuming everything was setup ok.
+03:27 Alright, last bit, let's try, one more time. 
+03:32 So over here, we'll put in an email address, 
+03:34 the password is going to be I'll make them mismatch for a minute, 
+03:39 we'll try this, error, it doesn't match, 
+03:41 alright, this should be identical behavior as we had before. 
+03:44 Now they do match, boom, look at that, how nice is that, 
+03:47 we could also add additional validation here, 
+03:49 we could say things like if self if not self.password, 
+03:55 like if the password is empty you could say something like this,
+03:58 like maybe we want to bail out of here 
+04:01 as soon as we can so we could change this to return right, 
+04:04 we are not collecting a set of errors, and we'll say if not self.email ok, great, 
+04:12 now we are really validating for all the things that we probably care about,
+04:15 we could also check for valid email using regular expression or whatever, 
+04:18 but you can get the idea, right, so if I just hit register, you must specify a password, 
+04:22 the password doesn't match, I better remember what I typed, 
+04:26 make the match you must specify an email address, 
+04:30 see how it carries the data back around, beautiful, let's pick that one, 
+04:34 let's say go, and boom, we are registered. 
+04:37 So you can see we've created this thing I called the view model, 
+04:40 based on our view model base which really is just to give us this to_dict as a common feature
+04:46 and it stores various fields that the template is going to need, 
+04:52 initially it's empty it could allocate these from a database or somewhere 
+04:55 but this one, there is no data to start with, so it starts like this, 
+04:58 and we have a from dict, which will read the form post basically, 
+05:02 and then a validation, and look how much simpler this becomes. 
+05:05 So let's go over here, I'll show you cool trick on the accounts control, 
+05:10 I can go to local history, show history, I haven't checked this into github 
+05:13 but let's have a look anyway, so we can compare this against yesterday, 
+05:19 oops, that's not good enough, there we go, 
+05:22 so we can compare this against this so you can see that the get call is much simpler
+05:27 this register here is just the to dict 
+05:29 and no longer does the controller really care about the data that's being exchanged, 
+05:33 it only has to work with the data that it cares about, 
+05:36 so we've pushed that off to the view model and look how much simpler this has gotten, 
+05:40 all this stuff about getting this thing or that, 
+05:42 you know, getting the password what was it called in the form again, forget it, 
+05:47 that's the view model's problem, it goes to the from dict, 
+05:49 this I took away because I just didn't want to edit it, and this validation, 
+05:53 here we only had one but you saw we really needed
+05:55 three or four different validations at least, 
+05:58 and so those were all moved and expanded down into this validate, 
+06:02 and we just look at the error. 
+06:06 So this view model idea is a bit of a new concept that layers 
+06:09 on top of what we are doing here, but once you start working with it, 
+06:12 you really want to keep working on it because it makes the separation so much simpler 
+06:17 and these controller actions become ridiculously simple 
+06:21 so I encourage you to adopt it in your own app as well.

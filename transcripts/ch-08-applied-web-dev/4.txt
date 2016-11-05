@@ -1,0 +1,38 @@
+0:01 Let’s get started with these handlers. 
+0:03 Well, the first thing we have to do is to pip install them,  
+0:06 they are an external package that doesn't come by default with the scaffold, 
+0:09 so we are going to go install it. 
+0:12 Now there are a couple of way in which we can install it, 
+0:14 I'll show you a third way that is good for now 
+0:16 but also a little more helpful when we get to the deployment stage of things. 
+0:20 So we could pip install using the package manager in PyCharm, 
+0:25 so if you hit command , on OS10 that is setting the basically any OS10 app 
+0:30 you just go to the settings, project interpreter you can see there is no in here, 
+0:33 there is no Pyramid handlers, so we can easily add that, 
+0:39 go over here and just say Pyramid handlers and pick that, 
+0:43 and see written by Chris McDonough, 
+0:46 here is how I could just click this button boom install. 
+0:49 So that's a good start, the other thing we could do is go over to terminal 
+0:53 and activate our virtual environment that we are using, 
+0:56 so once we've activated it we could pip install Pyramid handlers, 
+1:05 I could hit enter there and that would work, 
+1:08 but neither these help tell the deployment system 
+1:11 hey in order to run this web app you are going to need Pyramid handlers, 
+1:14 so if we go over here to the setup py remember, 
+1:17 a Pyramid web apps are a Python packages, they have requirements, 
+1:22 so we could come over here and say you know what, we have a new requirement, 
+1:25 we are going to use Pyramid handlers. 
+1:28 And right away, PyCharm says oh, you have some requirement that is not satisfied, 
+1:32 I could click this or I could just go tools run setup py 
+1:37 and I guess I'll do it this way, develop, just to show you,
+1:41 it's easy to see how to click the button. 
+1:44 So if I run this, it will realize oh we need this Pyramid handlers 
+1:47 and you can see now the requirement installation dialog went away
+1:50 because we just installed that along with verifying we have everything else 
+1:53 but of course, we've been running this throughout the whole course, 
+1:56 everything else was already there. 
+1:59 Now let's go and runt his just to make sure everything is hanging together correctly, 
+2:02 and it looks like it is, pull the website up, and there we have it, 
+2:05 still looks more or less like the starter scaffold, 
+2:08 but we are going to address that pretty soon. 
+

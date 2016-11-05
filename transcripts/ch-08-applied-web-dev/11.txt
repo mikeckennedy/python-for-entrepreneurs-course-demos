@@ -1,0 +1,62 @@
+00:01 So as you can tell, I am very boolish on this idea 
+00:04 of handlers and controllers in Pyramid 
+00:06 and I think it really makes organizing and extending your code, 
+00:10 your website much much easier. 
+00:13 There is one little gotcha I want to make you are aware of, 
+00:15 and give you a real quick fix for. 
+00:17 So notice in this controller I've added a new method 
+00:20 called don't expose as web action
+00:22 these three methods are meant to be called at /home/index 
+00:26 or /home/about and so on, but maybe this is like an internal function, 
+00:29 and this is really meant to be used by these other things possibly conditionally, 
+00:34 like this create a new user and it passes some data or something like that, 
+00:37 so it turns out that if we don't take small step, 
+00:41 this method also becomes callable,
+00:45 with the way we've set things up, let me show you. 
+00:48 So if I come over here and notice it's printing called don't expose, 
+00:54 even though you are going to see a crush in the browser, 
+00:57 if I go over here and I put this method name up here, 
+01:00 don't expose as a web action, it crushes because it doesn't return
+01:03 what is required for the page, but whatever it did, was executed on the server, 
+01:07 and if it's executed on the server if this does things like 
+01:10 alter your database or changes permissions or other things like that, 
+01:14 you probably don't want it to be executable. 
+01:16 Also, this follows the inheritance hierarchy as you can imagine, 
+01:20 there is also on the base controller, I've added a don't expose web action base,
+01:24 if I go over here and I do this again _base, 
+01:28 I get the same error and you can bet if I scrolled down here you go,
+01:32 called on the base, so how do we deal with this? 
+01:35 It turns out there is a couple of options and it's really quite easy, 
+01:39 we just need to be aware of them mostly. 
+01:41 So what I have done is I have written a decorator that we can add to these methods 
+01:45 to say these are not the web methods you are looking for, 
+01:48 so we'll say import blue yellow say like this 
+01:51 from and I've written a decorator called supress
+01:55 so if I go down here and I say at supress, on this 
+02:00 and let me just go ahead and do the same thing for the other methods, 
+02:03 so we get it all done at once 
+02:05 now if we try those again, let's go over here and try the one, 
+02:11 you can see on the screen on the background home controller and we hit it, 
+02:14 we no longer get mismatch of model type or something like that, 
+02:18 we get 404 not found and you can see there was no processing on the server, 
+02:22 again we try it for the base which also has this supress decorator, 404, 
+02:26 but things like our about page work perfect, 
+02:30 ok so what's the supress thing about? 
+02:32 Supress is just a really simple decorator that I wrote, and it just has a little trick, 
+02:36 so what it does is it comes along and it says 
+02:39 ok we are going to be like any other action that Pyramid might go look for, 
+02:43 but instead of doing whatever action decorator does, 
+02:49 we are going to say look, the request method that we are looking for
+02:52 remember, you can specify the request method
+02:54 that is a match for this particular action, 
+02:57 we are going to say the request method that is a match for this one
+03:00 is not an http verb, so normally this is post get put delete etc, a few other ones.
+03:08 Not an http verb, it is not something the browser is going to send, 
+03:13 you can put a random gui there just something that is not get post 
+03:16 and that will mean there is going to be no match, regardless of how the url routing gets setup. 
+03:20 So very simple fix to make sure that there are certain methods that you don't expose,
+03:24 now on some web apps I realize this just doesn't matter, 
+03:27 people poking around it's not going to make a difference 
+03:30 but I do want to point out that this could be a problem, 
+03:32 in certain circumstances and there is a super simple fix for it. 
+

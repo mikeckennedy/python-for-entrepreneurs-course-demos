@@ -1,0 +1,85 @@
+00:03 Let's come back to our web app 
+00:05 and add the ability for people to register for our account. 
+00:07 Now, I've done a little bit of pre-work, 
+00:09 so we don't have to do everything from scratch, 
+00:11 I've created an account controller and down here 
+00:14 I've created the folder input three entirely empty page templates, 
+00:19 or views down here, and I've used our add controller routes 
+00:22 and registered that controller for all the standard routes 
+00:25 that we have for other controllers. 
+00:28 Over here you can see we have this /accounts view, 
+00:32 and we have a /accounts/sign in view. 
+00:36 Now, let's do the same for register, so we are going to come over here 
+00:40 and we are just going to say register, 
+00:43 now notice, we are going to have to come back and make a change to this,
+00:46 this is not going to be sufficient for the way we want to write our code, 
+00:50 technically we could get away with this 
+00:54 but we are going to want to add a second method in a moment,
+00:58 but let's just start here, this is going to be our let's just put a note to ourselves,
+01:01 get /account/register, ok, let's just make sure this works. 
+01:07 Here we are in our home page, notice I've added a register option up here 
+01:12 and if I click it, it just takes us to account/register, hey create an account, 
+01:16 so the first thing we have to do is create the form, 
+01:19 so we are going to go over here to our register page 
+01:22 and notice we are using our view layout, our shared layout 
+01:25 and notice how and completely simple and wonderful this is, 
+01:29 this is the full content of this page, let's start by adding a form, 
+01:33 so remember the form action is going to be empty 
+01:36 and the method is going to be post, it's how we are going to submit the form, 
+01:40 and then we want to put a couple of inputs in here, 
+01:43 so we can have an input of type text and we can set the value, 
+01:48 we are going to put something here in a minute, 
+01:51 we are going to have the input of type say this is let's go and give these names, 
+01:56 so the name, it's going to be email, and this name is going to be password, 
+02:02 and this can be confirm password, something like that. 
+02:05 Now obviously, we don't want the password type to be text, 
+02:09 we want it to be those little dots, that obscures the text that's in there 
+02:13 so we can do that by putting that to be password type, 
+02:16 and then ultimately we want to have some mechanism for submitting this back 
+02:19 so we'll add a button and you can set the type to be submitted 
+02:23 and here we'll just add the message register. 
+02:26 Now just prepare yourself, this is not going to look very good, 
+02:29 it's going to look probably straight out of 1994, 
+02:32 but we'll be able to apply some styles and techniques to it later 
+02:36 when we get to the front end frameworks to make it really nice looking. 
+02:40 So if we refresh the page, we now see this here, so what is this 
+02:46 ok so let's try to make this little nicer, 
+02:49 notice that we don't know what's in here there is a couple of ways we could do it, 
+02:53 we could have the text preceding it, 
+02:55 saying like email address: and then put the form, password: put the form, 
+02:59 and so on, or we could make it a little cleaner and try to put this all in one, 
+03:04 there are some drawbacks to this but I kind of like it, 
+03:07 we'll say email address we could put a place holder here, 
+03:10 and if we do that, when I refresh you can see it says email address 
+03:13 but of course as you type it goes away. 
+03:16 That's lovely. So let's go down here and put the place holder, 
+03:19 and this will be password and then this will be confirm password, like this, 
+03:26 alright, that's looking good, and now we just need some new lines on it here,
+03:31 so everything wraps, like I said, everything is looking straight out of 1994, here, 
+03:37 I guess it's not quite that bad, but it doesn't look great, 
+03:40 maybe we could put just a little bit of padding before we carry on, 
+03:45 so I am going to create a class called standard form 
+03:49 and any of the standard forms we are put padding onto their inputs,
+03:53 so let's go down here and say any time we have a standard form and it has an input,
+03:57 whether that is text r whatever, we are going to put a margin, 
+04:00 I said padding, but let's put margin of 10 px. 
+04:03 Let's do the same for buttons. 
+04:06 So we can, remember, this is or if we separate with the comma, 
+04:09 so if it's contained within standard form and it's input it has a margin, 
+04:13 if it's contained within a standard form and it's a button, also this, so let's see how that works. 
+04:17 Little better, it's not amazing, but it'll have to do. 
+04:21 Let's add one more thing here for just the inputs, 
+04:24 say the width is going to be 350 px. 
+04:29 There we go, like I said, not amazing but I think this will totally do for a form, 
+04:34 now if we try to register, what happens? 
+04:37 It looks like it works, we can put something in here 
+04:40 and it refreshes and whatever I put in there just went away. 
+04:43 But it is actually posting back, and being processed, 
+04:46 up here, I can show you that, like so, 
+04:49 if I come over here and do a little print, calling register, 
+04:53 remember I've got to rerun this app to see Python changes, 
+04:56 and we go over here and click it, and see it is calling it 
+05:02 but we are not doing anything to get the data, 
+05:04 we are not obviously processing anything, 
+05:06 now we want to get to our get post redirect pattern. 
+

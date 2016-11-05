@@ -1,0 +1,27 @@
+00:02 These controllers through Pyramid handlers are awesome, 
+00:05 and they really make working with your code and organizing it super easy, 
+00:10 but one of the challenges you run into in this nice and easy routing that we've set up, 
+00:14 this pattern matching we've set up is methods
+00:18 that are not necessarily intended to be public, 
+00:20 can become externally callable via some url. 
+00:25 So in this example we've got something that is meant to be mapped to your url 
+00:29 the index and you can see it checks and says if there is no data 
+00:32 we are going to reset the data and then we are going to do something else. 
+00:35 Now maybe that reset data has consequences 
+00:37 you don't want people to be able to mess with, 
+00:40 and because we've written good, small organized code we have this broken 
+00:46 into different functions, and things like that, but because it is a function, 
+00:49 on a controller class, it is executable by default 
+00:53 we probably don't want that 
+00:55 so imagine what we would get if we went to /server/home/reset_data 
+01:00 maybe it's fine but maybe it's not and if it's not what do you do about it?
+01:03 Well, you saw that we can create this suppress decorator, 
+01:06 it's also an action decorator, it just happens to change 
+01:09 the target request method in http. 
+01:12 So basically we tell Pyramid handlers look, this function should only be called 
+01:16 if the browser sends a not an http verb type request, instead of get post and so on, 
+01:23 let me just put that at suppress onto the various methods 
+01:27 we want to basically make inaccessible by using the invalid http verb.
+01:31 Now we can safely put these methods on our controller classes 
+01:34 and we won't be concerned about them possibly getting called inappropriately. 
+

@@ -1,0 +1,36 @@
+0:01 Let’s just do a quick refresher on the web app that we built 
+0:04 that we are going to use for this entire chapter and continue building on afterwards. 
+0:07 This is a website that comes from the very first Pyramid section that we did, 
+0:12 we just created a new site and this is the one that we did with the command line, 
+0:16 and you can look over here and you can see I've made the copy, 
+0:20 this is the demos github repository, come over here 
+0:23 you can see I've made a 4 applied web dev and here is our app. 
+0:28 I just copied this over but I just wanted to make sure 
+0:31 that you guys had separate versions so you could see it in different stages. 
+0:34 Now, because I copied this over here this one also had this local registration, 
+0:40 this development registration of the package that is the website, 
+0:43 so you are going to want to make sure when you come over here 
+0:46 and run this one that you overwrite that, 
+0:49 we could do that really easily we can say tools, run setup.py task develop, 
+0:55 it looks like everything is good, and if you notice, 
+0:59 I am using the blue yellow Python environment that we created also in the previous section,
+1:05 you can use the global one, you can use a different virtual environment, 
+1:09 but just be aware of which one you are using. 
+1:12 Now let's go and run the app, just see where we are starting from. 
+1:14 So this is basically the empty starter project, from Pyramid. 
+1:18 Now, remember our static caching that we had talked about before? 
+1:22 Now this project doesn't have that because when we started out, 
+1:25 we wanted to focus on Pyramid and then come back 
+1:28 to some of this css ideas and design ideas, 
+1:31 so what I am going to do is I am going to make a quick folder, 
+1:34 copy that code over and add it in here. 
+1:41 Ok, so I've done a little reorganization, added the css and image folders as well 
+1:46 as a js even though technically that is still empty, 
+1:49 and now our css files have this built cache id 
+1:52 so we don't have to worry about them being stale 
+1:54 as we talked about previously in the web design section, 
+1:57 for ourselves while we are developing but especially for our users, 
+2:00 so everything is setup and ready to roll, 
+2:02 now we are ready to start working with Pyramid handlers
+2:05 and develop our web app for the blue yellow rockets. 
+

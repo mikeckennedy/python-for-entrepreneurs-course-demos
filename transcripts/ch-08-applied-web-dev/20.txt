@@ -1,0 +1,127 @@
+00:01 I hope I convinced you that this shared layout is very important 
+00:04 for managing large real web applications. 
+00:07 But how do we go about doing it?
+00:10 And technically, in Pyramid there is a package we can add
+00:13 but it's not very flexible and I don't really like the way it works very much, 
+00:17 you'll see that we can use the concept of a Macro 
+00:19 basically to write this functionality for ourselves. 
+00:24 So what do we do? 
+00:26 Let's start by creating a new folder here, and we'll call this shared, ok. 
+00:30 Now the easiest thing to do is the majority of our content here 
+00:33 actually that we've been working in this is just the home page is actually 
+00:37 all the stuff we want shared everywhere, 
+00:40 first of all notice this, this makes me a little crazy, 
+00:44 I would like to make this concrete and not variable 
+00:46 so let's set this to be en-us for our language, 
+00:49 now let's copy this into our shared and let's call it _layout. 
+00:53 This is the convention that I like that says this is not the thing 
+00:56 that is meant to be directly requested, but is a supporting template, 
+01:01 to be used by things like index and about, 
+01:03 so let's come down here and we'll just,
+01:06 we want to keep pretty much all of this the same, 
+01:09 we are going to set the title but let's not worry about that for the moment, 
+01:11 see it says bootstrap everything it gets down to the body, 
+01:14 we want to keep the navigation the same, 
+01:17 it's really this little bit like just that tiny bit is all we really wanted to write for index, 
+01:20 so how do we go about converting this into a template? 
+01:24 Let's go back to the top. 
+01:28 So we can come up here and use the macro extension language for tal 
+01:32 so metal, and in metal we'll say define macro. 
+01:37 Oh oops, I am doing the wrong spot. 
+01:39 Let's do it down here actually on the html, sorry.
+01:41 Metal, define macro, and you make up this name, 
+01:44 you can call it whatever you want but you have to remember what it's called, 
+01:47 so _layout and then we are going to come down 
+01:49 and here we are identify places where things would want to be punched into this field,
+01:54 if we want to replace the content, so this looks like a thing we want to replace,
+01:58 so we are going to put a div in here, and we are going to add another metal definition, 
+02:02 this time we are going to define the slot and let's go and just call it also a main content, 
+02:07 so this is where the main content of the page will be inserted into our overall thing. 
+02:12 We also, like I said maybe we want to allow people to insert additional css 
+02:17 so up here, right at the end let's say right there, 
+02:21 after our theme css and site css we can have additional css
+02:27 and down at the end, we can come down here 
+02:31 and after all of our Javascript gets imported we could have additional js. 
+02:34 And these are three places that the pages like index 
+02:38 and about can optionally insert their data, 
+02:42 so this defines the layout, shared template. 
+02:47 The next thing to do is convert our index to use this template, 
+02:52 and now this is going to get much, much simpler as you will see 
+02:55 so let's just do like this for a minute, we are going to say
+02:58 we want a div on here, we are not going to put all the html 
+03:01 because that is coming in from the layout, 
+03:03 and then we'll say metal use macro,
+03:06 which one do we want to use, well, it turns out that we have to grab that macro 
+03:09 and move it or carry it over to this particular page in a certain way, 
+03:15 so the way we are going to do this is 
+03:17 we are going to store it on the view and we'll call it layout.
+03:19 This name doesn't have to be consistent with what is in the page template,
+03:22 but for your own sanity that is recommended. 
+03:24 And what goes in here not any of the stuff because that's all shared, just those two lines. 
+03:29 
+03:36 How about that for a nice view, now we need to do one more thing to say 
+03:40 which slot this goes into, remember we have three slots, 
+03:43 so we'll say metal:fill-slot, we'll say main content, 
+03:54 and just to show you how we can use the other ones, we'll add one more spot here, 
+03:57 we'll say div, we'll say fill slot and let's just say this is going to be additional css 
+04:04 and in here let's just put a comment but you'll see that it gets put in the page. 
+04:08 Of course this would be some sort of css include if we were actually trying to augment 
+04:13 just these pages css on top of the main site look and feel. 
+04:18 Now, if we run this, it's not going to work so well. 
+04:21 It says home controller has no attribute called layout.
+04:26 Great, why doesn't it have an attribute called layout? 
+04:28 Because remember I said you have to grab this macro and carry it across. 
+04:34 That's a perfect place for the base controller to always carry the layout 
+04:38 across to any page, basically any view or action driven by any controller. 
+04:43 So we'll come down here we'll say self.layout = well what, 
+04:47 let's go up here and import this, we'll import Pyramid.renderers
+04:52 and we need to do just a little bit of work here,
+04:57 we can just say we want to get the layout_render
+05:00 and the layout render is going to be this thing we've imported get_renderer, 
+05:05 and we have to give it a name, 
+05:08 and it's going to be templates/shared/_layout.pt 
+05:13 so basically load up this template and give us access to what would be rendered from it.
+05:19 And then from this layout we are going to get the implementation, like so, 
+05:26 and then from the implementation, we are going to be able to pull out the macros 
+05:32 and get the one that we wrote called layout, like so. 
+05:36 So these three lines while not lovely or at all obvious, 
+05:41 will grab that layout and make it available for all of our other pages to use, 
+05:45 let's see how we did.
+05:49 Oh yes, so see how it says missing template asset, 
+05:55 templates/shared/_layout.pt this looks correct to me 
+06:00 but because this is a package it needs to look inside the package, 
+06:04 and the name of the package is blue yellow app, 
+06:07 so we'll say look inside the package like so, and let's try again. 
+06:12 Ta-da, ok so this is pretty cool, let's just take a really quick moment 
+06:18 and apply this to a couple of other pages like home and contact. 
+06:26 So we just need something like this and we can actually even simplify it here 
+06:31 so let's go right to the top, 
+06:35 we don't need this and then this is where our content goes,
+06:38 let's find it, there it is
+06:46 and I'll do that for the other pages. 
+06:49 I've applied this change to all of the pages, 
+06:52 the three from the home controller and one from albums, 
+06:54 and because it's in the base controller this bit about grabbing the layout 
+06:57 and storing it, it means anything in our site will basically 
+07:00 as long as we follow this controller methodology will have access to it 
+07:04 and notice how simple our albums view is, 
+07:06 all we've got to do is to find the albums and this little bit of repeating and that is it, 
+07:10 everything else will be carried forward, from the layout. 
+07:14 Let's run it and just see how those sites work now. 
+07:17 Ok, they are looking good, I click around albums, the albums are still looking good, 
+07:22 let's go over here and just look at the source real quick. 
+07:25 And you can see the part that the home page added was just this, 
+07:29 if we go over to the albums you can see the little part 
+07:36 where we've added in our dynamic code but everything else is consistent,
+07:40 I could show you, let's just switch the about and contact in the navigation 
+07:44 and we'll just see that flow across the entire site 
+07:46 and then I think we can call this a success. 
+07:54 So I switched home and contact and now when I go over here 
+07:57 you can see every page immediately picked up that change, 
+08:00 now that's a minor change but the point is 
+08:02 any change we want flows across the entire site, 
+08:05 remember, now it's so much easier to add no content 
+08:09 and not worry about all that html stuff, 
+08:11 we'll just have to basically duplicate one of these things 
+08:14 and fill out the main content and we're good to go.
+
