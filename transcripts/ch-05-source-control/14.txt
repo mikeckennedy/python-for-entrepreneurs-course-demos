@@ -1,0 +1,43 @@
+00:01 Our github account is configured and we've created a repository 
+00:04 now we want to clone that repository onto our local system
+00:07 using the ssh keys that we've built throughout this chapter. 
+00:10 Switch over to github to the example project that we just created, 
+00:14 we're going to clone this repository onto our local system. 
+00:17 Now typically what we want to do is click the clone or download button, and copy this url. 
+00:23 But we don't have access just yet, we need to do one step on the command line, 
+00:27 before we can make this happen.
+00:30 Go to the command line where you have our public and private key;
+00:33 so again, entrepreneurs is the private key and entrepreneurs.pub is the public key.
+00:36 We've already uploaded the public entrepreneurs key, 
+00:40 we want to copy the private key into our .ssh directory under our home directory 
+00:44 in order to make this active. 
+00:46 So type cp entrepreneurs ~/ and put that in your home, 
+00:52 tilde is for home, and then .ssh. 
+00:55 Now if you don't have a .ssh directory, just create that directory. 
+00:58 With our private key and a .ssh directory now we can clone the git repository, 
+01:02 change into the directory where you want to clone the repository, and run the git clone command. 
+01:07 Now we've already copied the url that we want for the repository 
+01:10 so we could just paste that in. 
+01:13 And now if we press enter, we're going to get cloning my project 
+01:16 and the repository is there. 
+01:18 So now we can see all the files that we have 
+01:20 and in fact even the .gitignore file and the .gitdirectory are in there as well. 
+01:25 We've got our git project history so we can type git log all the git command
+01:29 that we are going to learn even more about in the next chapter. 
+01:32 Let's clone one more repository, so move back into maybe your home directory 
+01:35 or wherever you are keeping your projects, 
+01:38 switch back over to your github take a look at the git repository 
+01:42 Python for entrepreneurs course demos that is under Michael Kennedy's github account.
+01:47 This repository contains all the code and the example materials for this course. 
+01:52 And we want to capture all of this onto our local system. 
+01:55 So just like we did with our example repository click clone or download 
+01:58 and copy and paste this url. 
+02:01 Move back over to the command line, and then type git clone and paste in that url. 
+02:06 It may take a few minutes, this is a larger repository, 
+02:11 but now we have everything we need, on our local system. 
+02:14 We can use any of the git commands that we want, like git log to see what's changed, 
+02:18 we can even git pull for all of the files that might be new, 
+02:22 so that's how we clone git repositories off of github. 
+02:25 In the next chapter we're going to take a look at all the git commands 
+02:28 and get intimately familiar with how each of them work. 
+

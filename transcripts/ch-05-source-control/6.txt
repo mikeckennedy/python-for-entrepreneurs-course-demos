@@ -1,0 +1,64 @@
+00:01 We had a chance to dabble with some of the basic git commands on the command line. 
+00:03 Now we need to do a deep dive into the fundamentals of what a git repository is. 
+00:09 You are going to use a git repository to keep track 
+00:12 of all the changes in your source code that underpins your business; 
+00:15 let's say you are developing your application and you are happily hacking along 
+00:18 in a single source file just get things started. 
+00:21 and you've decided ok, I'm at a good spot, I want to save this, 
+00:24 so you use the git init command, you start adding changes with the git add 
+00:27 and the git commit commands and over time,
+00:30 you build up file history in your git repository for that file. 
+00:33 Now, of course a git repository wouldn't be very useful if it was only for a single file,
+00:37 it's going to keep track of all the changes in your entire project, your entire code base. 
+00:42 We could have several files or we could have as many files as we need, 
+00:46 and chances are you are going to have a single git repository for your entire project. 
+00:50 And that way, it provides you with the ability to roll back to previous versions of your files 
+00:55 just in case you break something or just to understand 
+00:58 where you might have accidentally introduced the bug 
+01:01 when you were working on something late at night. 
+01:03 To recap what we did in a previous video, 
+01:06 we used the git init command in order to create a new git repository, 
+01:09 that was an empty git repository; we then added changes with git add 
+01:13 which puts files that we're trying to track into a staging area, 
+01:16 and then we used the git commit command in order to move those files 
+01:20 that were in the staging area into the permanent git commit history. 
+01:24 Now a git repository contains the entire history of all of your files, 
+01:28 with commits as pointers to the repository changes, 
+01:32 let's take a look at what this looks like in practice, 
+01:35 I've switched over into the Full Stack Python open source git repository history, 
+01:39 I have about 1800 commits that I've made over the past four years 
+01:43 to the Full Stack Python code base. 
+01:46 We can take a look at the most recent git commits, with the git log command.
+01:50 Now this is just showing me in reverse chronological order 
+01:53 what the most recent changes are that I made to the repository. 
+01:57 If we want to drill into any of these changes we can use the git diff command, 
+02:01 we can specify two commits and take a look at what the differences are 
+02:05 between those two commits. 
+02:07 In most cases you only have to use the first seven characters of the entire commit string 
+02:10 in order to specify which individual unique commit you want to take a look at.
+02:15 Let's try to run this right now.
+02:17 The git diff command is showing me the files that I actually changed, 
+02:20 so if we take a look at the third line and the fourth line here, 
+02:24 about author.html we can then glance down and see red where lines were removed 
+02:29 and green where I added something. 
+02:31 So in this case it really was just changing some in line css styling on the top banner 
+02:35 and if we press space bar we are just going to go through more of the changes that were made, 
+02:40 but it looks like I was doing  here was I changed the base template 
+02:43 and I made some changes to the top banner on the site 
+02:46 and that cascaded through all the html files. 
+02:48 So if we fly through all the changes here, 
+02:50 we'll see that all the html files that had that banner were changed, 
+02:53 seeing these changes and then taking a look at the commit messages is super helpful 
+02:56 for figuring out how changes were made over time to the repository. 
+03:00 So that's the git log an git diff commands. 
+03:03 Typically, you'd have one repository per project when you're working with git repository 
+03:06 so I'd say as you are starting you side business, your project, 
+03:09 just start with the single git repository and track those changes over time, 
+03:12 even if you are not working with anyone else, again, this is still really valuable, 
+03:16 even if you yourself mess something up and then months later 
+03:19 you need to hunt down what happened. 
+03:21 Now the one other bit about repositories containing 
+03:23 all of the changes that you've ever made to the source code, 
+03:26 is that the repositories can easily be copied and backed up on remote servers and services;
+03:30 this is where services such as github and bitbucket come in.
+

@@ -1,0 +1,52 @@
+ 00:01 Now that we've downloaded and installed Git,
+00:04 we just need to perform a few first time setup commands,
+00:07 in order to get things up and running.
+00:09 Now you only need to run these commands once,
+00:12 so just keep that in mind, you don't need to do this every time you start out Git.
+00:15 Back in the terminal, we can now work with Git.
+00:18 Let's run our first set of commands,
+00:21 now we are going to use the Git config command, there is a whole lot of options here,
+00:24 we are really just going to run four commands. 
+00:27 The first thing we want to do is set up our username,
+00:31 this is how it is going to identify us, who we are, this is our natural name. 
+00:35 So we'll type Git config and we'll give it the global,
+00:40 we're saying we're setting this up for all of Git on our system, 
+00:43 not just for a single project.
+00:46 So git config --global user.name 
+00:49 and I am just going to give it my normal human name, Matt Makai. 
+00:55 Now if you don't get any output back that's good, 
+00:58 that means that everything went smoothly.
+01:01 With the next command, we are going to set up our user email address, 
+01:04 now this is super helpful when for example we commit code 
+01:08 and we are working on a large project, we are working on an open source project, 
+01:11 maybe with people we don't necessarily know 
+01:14 and then they need to get in contact with us. 
+01:17 Now on our own businesses that may not be a big deal, 
+01:20 but if you hire contractors you are going to want to know 
+01:23 who you should contact in case anything goes wrong. 
+01:26 So for this we are going to say git config -- global again user 
+01:29 and instead of name we are going to say user.email. 
+01:32 And in my case, this is just matthew.makai@gmail.com. 
+01:37 Now again, no output is good, that means it's saved properly. 
+01:41 And we'll check it in just a moment;
+01:44 now the third thing we want to run and this is optional, 
+01:47 but I always set this, I set my editor, 
+01:50 now by default, typically Nano is the editor that pops up but I use Vim. 
+01:55 And again, if you are using Sublime Text what you can do on your own system is 
+01:59 set the path to the executable so a little pop up with the Sublime Text editor 
+02:03 whenever you need to commit some text 
+02:07 or you need to write some text that Git will interpret.
+02:11 We'll get into that a little bit later, but for right now, 
+02:14 we can set this up by saying Git config again global core.editor, 
+02:18 and in my case again, I am going to press specify Vim. 
+02:22 Okay, so we've got our three things set, 
+02:25 we just want to double check that we've set them properly, 
+02:28 we can say git config and then just list out. 
+02:31 Now in my case, user.name is Matt Makai, 
+02:35 user.email is matthew.makai@gmail.com, and my core editor is Vim. 
+02:41 Obviously your setting is going to be depending upon what you set, 
+02:44 and again if it's a little bit confusing at this point, you don't have to worry about the editor,
+02:48 but you should go ahead and set user.name and user.email. 
+02:51 With those few settings out of the way, 
+02:53 we're ready to get started and dive into using Git. 
+

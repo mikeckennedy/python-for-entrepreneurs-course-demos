@@ -1,0 +1,47 @@
+00:01 Github makes it really easy to create a git repositories through their user interface
+00:05 and that's what we'll take a look at in this video. 
+00:08 Log into your github account, and bring up your profile page, 
+00:11 we're going to click the plus icon up at the top and say new repository, 
+00:15 give your repository a name for the project that you're working on, 
+00:18 you can just call it my project for now. 
+00:20 So give it the name that you want for yours. 
+00:23 Give it an optional description this is the code for my project 
+00:28 and then here is a really important part, 
+00:30 you can make this repository either public or private, 
+00:33 one thing to note is that if you don't have an upgraded account for $7 a month 
+00:37 you won't be able to create private repositories 
+00:39 so if I click on this right now it will ask me to upgrade my account. 
+00:43 For this video we'll just create a public repository 
+00:46 that will serve as an example for what we're creating, 
+00:49 there is a few other options down here one is do you want to initialize this repository 
+00:54 with the read me file, this read me file is a description of what the project is 
+00:59 some installation instructions, really whatever you want to put in there 
+01:02 that you think is going to be useful to the reader.
+01:05 And that reader might be you say six months or a year down the road 
+01:08 if you start working on the project and set it aside, 
+01:11 every project should have a read me with some explicit instructions 
+01:14 for how to set it up and what the project's purpose is. 
+01:16 We'll click initialize this repository with the read me, 
+01:19 and then there is two other parts here you can add .gitignore file 
+01:22 and this is going to specify the git hey, these are a bunch of files 
+01:25 that I don't want added to version controlling, don't track these files. 
+01:29 And these are set up for specific programming languages, 
+01:32 in this case we'll choose Python and we can add a license, 
+01:35 licenses are typically sued for open source projects, and I use the MIT license, 
+01:40 if you're just building your business,
+01:42 then chances are you won't have to worry about a license, 
+01:44 it's really for open source projects so that people understand 
+01:47 what the explicit responsibilities are when using the code that comes in that repository. 
+01:51 Once we've got all this set up, we can click create repository, awesome. 
+01:56 Now, we've got the files that we've specified, yes we wanted the gitignore, 
+02:00 we have a license which is the MIT 
+02:07 and we have a readme file which specifies that this is my project 
+02:12 and just the description, and then we can work on these files. 
+02:15 The next step would be to clone or download this project, 
+02:18 so we could just go over here and say download a zip file 
+02:21 and this will contain all of the files that are in this repository, 
+02:24 that can be really useful, but what we really want to do is work on this project 
+02:27 and that's where we are going to need to clone this repository. 
+02:31 This is the url that we can use to clone the repository 
+02:33 which will give us all the files and the version history 
+02:36 for that git repository locally on our system. 

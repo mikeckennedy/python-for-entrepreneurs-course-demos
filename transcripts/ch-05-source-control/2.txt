@@ -1,0 +1,25 @@
+ 00:01 In this video we'll learn about what Git is.
+00:04 Git is a specific implementation of the source control concept. 
+00:09 It is the actual tool that you'll be using in order to keep track of your file histories.
+00:14 Git was originally created in 2005 by Linus Torvalds, 
+00:19 who also created the Linux operating system, and that was back int he early 1990s.
+00:23 Linus and a team of thousands of developers needed a source control system
+00:29 that would scale to thousands of maintainers, and so they created Git. 
+00:34 A major advantage of Git is that it is both free and open source. 
+00:40 And because it's used by a project team on a major operating system 
+00:44 to underpin all the changes that they make to their files, 
+00:47 you know that it will scale to whatever size business you are able to grow. 
+00:53 Now Git may look a bit complicated at first so you'll see something like this, 
+00:57 git status and it will display a bunch of changes that have been made, 
+01:01 but over the next few videos 
+01:04 you'll become very comfortable with the basic commands, 
+01:07 so when you see something like git status, git add, git commit and git push, 
+01:11 you'll know exactly what they are doing. 
+01:14 These are the basic building blocks of working with the git version control system 
+01:18 you'll become very comfortable with them shortly. 
+01:21 In the next few videos we are going to download and install Git, 
+01:24 so if you already got Git on your system you are good to go, 
+01:27 you can skip that video. 
+01:30 We'll then perform a few first time configuration options 
+01:33 and then get started with the command line interface. Let's dive in. 
+

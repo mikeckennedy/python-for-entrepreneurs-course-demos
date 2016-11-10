@@ -1,0 +1,21 @@
+ 00:01 In this section, we are going to go over source control with Git and github. 
+00:04 But what is source control? 
+00:06 Source control is a concept, 
+00:08 and we are going to use a specific implementation of source control named Git. 
+00:12 Source control stores the project files, 
+00:15 all of your code and related documentation, 
+00:18 and every modification made to those files. 
+00:21 Source control is also commonly referred to as version control, 
+00:25 so you'll hear those terms used interchangeably. 
+00:28 A huge advantage to using source control is it allows us to track changes 
+00:32 made to each of our files and then revert to previous versions, 
+00:35 just in case we made mistakes 
+00:38 or we want to go back to a previous feature that we had.
+00:41 Now when should we use source control? 
+00:44 Use source control right from the beginning of our project. 
+00:47 It's important not only for independent projects, ones that you are working on just by yourself, 
+00:51 and also projects that you are working on with others, 
+00:54 it's truly required for working with others so that you don't step on each other's toes 
+00:57 when it comes to making changes to your code. 
+01:01 And the best part about source control is 
+01:04 that it allows you to aggressively experiment with your code. 

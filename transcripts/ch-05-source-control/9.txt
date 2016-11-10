@@ -1,0 +1,53 @@
+00:01 We've had a chance to play around with git and take a look at the basic settings on github,
+00:04 but in order to go further with our projects, 
+00:07 we are going to need to setup public and private keys also known as asymmetric keys.
+00:10 Asymmetric keys are computer science concept for encryption and authorization, 
+00:14 in the next few videos we'll create our public and private keys 
+00:17 but let's take a look at the basic concepts behind them. 
+00:20 Let's say you've got a message or a piece of data you want to share with someone 
+00:23 and you don't want anyone else even if they intercept it 
+00:26 to be able to understand what's in that message, 
+00:28 you can use a public key as long as the party that you are sending to 
+00:31 has the appropriate private key that matches with that public key 
+00:34 and you can use the public key to encrypt that message or data, 
+00:37 only the party with the private key will be able to decrypt that data. 
+00:40 A public key can be shared freely, posted on the internet, wherever, 
+00:43 it doesn't matter if it gets out in the open, in fact, it's better if it's out in the open, 
+00:47 because then people can use to send you messages as long as you have the private key.
+00:51 The private key is the counterpart, it's used not only to decrypt that data 
+00:55 that is encrypted with the public key, 
+00:58 but also to sign messages and to validate you are who you say you are 
+01:01 based on the fact that you own this private key, 
+01:04 you will never want to share your private key 
+01:06 and if you ever think that your private key has been compromised 
+01:09 you are going to want to regenerate both the public and private key. 
+01:12 Here is how encrypting and decrypting messages with asymmetric keys works, 
+01:16 let's say you've got a message in plain text, 
+01:19 you can use the public key to encrypt that message, 
+01:22 so when you take a look at it, it looks like just a bunch of garbage, 
+01:25 but inside that supposed garbage lies the message 
+01:28 that was originally plain text that was encrypted. 
+01:31 Only the owner of the private key can decrypt the message and extract the plain text.
+01:36 This is how one way encryption works, with asymmetric keys, 
+01:39 the public key does the encryption, the private key does the decryption. 
+01:42 There is a counter part to this which is if you have the private key 
+01:46 you can use that to identify yourself and use it as authorization, 
+01:49 and this is what we need to do on github in order to specify who we are. 
+01:53 We can use the private key to identify I am who I say I am 
+01:57 because I have this private key, and it says the public key is out in the open 
+02:01 anybody should be able to confirm that you have the valid identity 
+02:04 based off of a message that you've signed with your private key.
+02:07 Let's say you have a message and you use your private key to sign it, 
+02:10 then anyone can take that message signature and confirm your identity 
+02:13 based off of the public key, so that's the second bit associated with asymmetric keys.
+02:18 The private key can be used for authorization,
+02:21 in addition to the public key being used for encryption. 
+02:24 Just to recap, public keys can be used to encrypt messages and data, 
+02:28 and they can only be decrypted by that private key; 
+02:31 a private key can be used for identification, 
+02:35 I am who I say I am because I own this private key,
+02:38 I am the only one who controls it and that be confirmed and validated by the public key, 
+02:41 so that's a really high level overview of asymmetric keys 
+02:44 and how public keys are used to encrypt data, 
+02:47 and private keys are used to sign messages and authorize identity. 
+

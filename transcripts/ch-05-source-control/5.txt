@@ -1,0 +1,105 @@
+00:01 We've got all the boring first time configuration, 
+00:03 the downloading and installing, all out of the way. . 
+00:05 And now we are going to dive into just getting comfortable with the command line, 
+00:08 now there is going to be a few concepts here that are going to be unfamiliar, 
+00:11 we're just going to flex our fingers a little bit 
+00:13 and get used to typing in some of the commands that are common in Git. 
+00:17 Swap with command line and now we are going to create a new directory. 
+00:22 So type in mkdir if you are on Mac and Linux, or md if you are on Windows, 
+00:29 and we'll just call this 'project', so we just got a generic project name 
+00:33 and we want to make sure we're in a new directory so there is nothing in there. 
+00:38 Create a new file, now on Mac and Linux again, you can just type touch, 
+00:44 you can say readme.md, 
+00:47 or you can just open up the file and actually edit it directly.
+00:50 We've got an empty readme file so if we were going to take a look 
+00:53 at what's in this readme file, there's just nothing in there, 
+00:56 so this is a good time where we say I've got a blank file, I've got my first file, 
+00:59 I'm just going to create a git repository, I want to create it from step one. 
+01:04 We are going to use the git init command, I-N-I-T to initialize a new git repository. 
+01:10 Now our file readme.md is completely untouched. 
+01:15 In fact, it's not a part of this git repository, we can use the git status command 
+01:20 and it will tell us exactly which files are currently being tracked
+01:23 and which are not being tracked, 
+01:25 now since we haven't added any files to the git repository, 
+01:28 there is just nothing in there, and it tells us there is a single untracked file, 
+01:32 that's readme.md of course. 
+01:34 We want to add this file to our git repository 
+01:37 now there are two really important commands when it comes to adding files 
+01:40 and the separate concept called committing.
+01:43 We can run git add readme.md and now it won't give us any output 
+01:48 but that is actually now in a staging area, saying hey this is a new file, 
+01:53 readme.md, that I am supposed to somehow handle, 
+01:57 it's in this limbo zone where it's actually not been committed to the repository 
+02:01 so the repository is not keeping track of changes to readme.md 
+02:04 but if we type get commit readme.md, it will now be committed to the repository, 
+02:11 so the repository will track the changes of this file going forward, 
+02:15 it will see what the current status is and what's in the file right now, 
+02:18 and then it'll track every change that happens to it, in the future, 
+02:22 every time we add and then commit that file again to the repository 
+02:25 what happened is it opened up our editor, now if you configured your editor like I did, 
+02:29 I set Vim as my editor so it opened up Vim, 
+02:33 and if you say your editor it will pop open your editor and it will say 
+02:36 hey I need a message just tell me what's the reason why you are adding this file, 
+02:39 and this allows us to see why we changed files over time, 
+02:42 so in this case, it's our first commit, I'll just say adding initial file to git, 
+02:49 nothing too complicated, I'll save that and then I'll quit out.
+02:53 Now our file has been added and now committed to our git repository,
+02:59 so if we say git status, nothing to commit, 
+03:03 in fact, our readme file is now a part of our git repository's history. 
+03:07 Now that we have a single file in our git repository we can use a new command git log;
+03:13 git log tells us every commit that is happened in reverse chronological order 
+03:17 it will give us the last several commits we've made to this repository, 
+03:20 so over time we're building up commits so these are like 
+03:23 you can think about them as like check points if you play video games, 
+03:26 basically just where we've said hey I want to save my progress. 
+03:29 Now let's say we want to modify the readme file, we can say let's open this up, 
+03:34 we'll say woohoo, I'm learning git, now we can save this, 
+03:40 and now when we type git status it's going to tell us that readme has been modified, 
+03:46 git knows there are changes to that file 
+03:49 and we can use the command git diff to find out what those changes are. 
+03:55 So git diff on a specific file will tell us the difference 
+04:01 between the version that is currently in the repository
+04:04 and this version that has not been committed is the single line, woohoo, I'm learning git. 
+04:09 That's super useful for seeing what files have changed and exactly how they've changed,
+04:14 between when we committed last and when we've been modifying our files since then. 
+04:19 The same commands that we used earlier git add and git commit allow us to say 
+04:23 hey I want to set another checkpoint for my git repository. 
+04:27 So we can say git add readme, again, we can see git status it's been modified, 
+04:34 and we can say git commit and this time, I am just going to specify -m 
+04:40 so instead of going into my editor I'm using a shortcut, 
+04:44 I'm saying git commit and I'm saying just passing a message second change to file, 
+04:50 and that's not really a great commit message, 
+04:53 we'll talk a little bit more about what a descriptive commit message would be in the future, 
+04:56 but we'll just use that one for now, I'll save that, 
+04:59 and now when we take a look at git status we can see nothing to commit again, 
+05:03 working tree clean and if we take a look at the git log we've got two commits, 
+05:08 in our git repository, so that's pretty awesome,
+05:11 now we can see over time how we've been changing our files 
+05:14 and when you have thousands of files, 
+05:17 in a typical project that's really useful to be able to go back and change things
+05:20 or go back to see what you've changed over time. 
+05:23 I want to just recap a few of the commands that we used 
+05:28 git init is the command that we used to actually create a new git repository, 
+05:31 since we already have a git repository here this won't do anything, 
+05:34 it'll say hey, just reinitializing it. 
+05:36 But it won't change anything that we've done there, 
+05:39 we still have the same status, the same git log, 
+05:42 git init- so git init creates a new project, 
+05:45 git status tells us which files have been modified 
+05:48 or which files are waiting to be committed into the repository 
+05:52 that are waiting in the staging area, 
+05:56 git log gives us the commit history over time, 
+05:58 we have git add, which will add a new file to a staging area 
+06:02 and we have git commit which then commits 
+06:05 all the files in the staging area into the repository. 
+06:10 So that's a crash course on a few different commands, 
+06:13 now the great part about this is if that went way over head no problem, 
+06:17 we are going to dive into each one of these commands 
+06:20 and we'll explain a lot more about all this stuff, 
+06:23 but I just wanted you to get familiar with some of the basic commands 
+06:26 that you can use in order to work with git. 
+06:29 You may have noticed, we keep talking about this concept of a git repository, 
+06:32 git repositories contain all of the changes that you have made 
+06:35 to all of the files in your git project over time. 
+06:38 We'll talk a lot more about git repositories next. 
+

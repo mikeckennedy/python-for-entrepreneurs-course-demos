@@ -1,0 +1,92 @@
+ 00:01 It's time for a whirlwind tour of github, the service that's near and dear to my heart 
+00:04 because I use it pretty much every single day in order to store and manage my own code. 
+00:09 Go to github.com right now in your browser, 
+00:13 assuming you don't already have an account, you'll come across a page that looks like this; 
+00:16 this landing page allows you to quickly sign up for a free github account, 
+00:19 just go ahead and pick a username, email address and password and click sign up. 
+00:23 This is the logged in github dashboard that will show you the activity 
+00:27 that's happening among people that you follow 
+00:30 and it'll show you your own repositories and the work that you're doing. 
+00:33 What we have on the left side, are the people that I follow and the activities that they've done.
+00:37 So for example when Eddie Zane stars a repository 
+00:40 I get a look at that when I come into my dashboard. 
+00:44 We can also see other people that I don't follow who performed activities on my repository,
+00:48 so for example I have a Python project called underwear 
+00:52 and someone has stared that project. 
+00:55 So the gist with this dashboard is it just gives you the activities 
+00:58 that people that you follow and people that have interacted with your projects  have made on them. 
+01:02 On the right hand side, we'll see the repositories that we've contributed to 
+01:05 and the repositories that I have under my control. 
+01:08 The next page that we want to look at is the profile page. 
+01:11 So if we click the icon at the top, we could say your profile 
+01:15 and this will bring you to the profile page, 
+01:17 this will show you any of the repositories that you're working on your top repositories, 
+01:21 you can actually customize, which repositories you want to be shown here and then
+01:25 you can see the number of contributions that you've done, that are highlighted by each day. 
+01:30 You can also fill out your profile which can be used for other people 
+01:33 to just know who you are and what you are working on 
+01:36 and the gist is we get an at a glance all the things that we are working on with our projects. 
+01:39 Now for you, if you are starting a business, 
+01:41 you may only have a single project or maybe a couple of different projects
+01:44 that you are working on, you don't really need a great github profile, 
+01:47 but active developers have a ton of contributions 
+01:50 and things that they are working on via github. 
+01:53 So we've seen the dashboard page, this profile page, 
+01:56 we can also take a look at other people's profiles, 
+01:58 so let's take a look at Michael Kennedy's profile, 
+02:01 if we go to mikeckennedy it's going to bring up his profile, 
+02:05 if you follow someone on github you'll see all the activity that they do 
+02:08 or the other repositories that they star, 
+02:11 so when we go back to the dashboard we can see the people 
+02:14 that we're following all the things that they are working on or what they've stared, 
+02:17 and at first I didn't really understand why would you want to follow people on github 
+02:20 and the gist is once you follow a bunch of people you can see what their activity is 
+02:24 and it's a really great way to stay up to date with what libraries 
+02:28 that they are interested in or what projects are they working on, 
+02:31 at a glance be able to keep up with all the developers that you know. 
+02:34 We know what the dashboard page looks like, 
+02:36 we know what our own profile page and other profiles look like, 
+02:39 let's jump over into the account settings, 
+02:42 so click the icon again and when you drop down the settings, click on that, 
+02:46 under account settings you can customize your profile, 
+02:49 so if you want to add a link you your personal website or your new business 
+02:52 that you are building, you can put that in your github profile, 
+02:55 there are couple of tabs you also are going to want to know about, 
+02:58 the first would be just notifications, under notifications you can specify 
+03:01 whether you want to receive emails or just notifications via the web, 
+03:04 once you log in onto your github account, 
+03:07 this page just gives you control over the notifications that you receive. 
+03:10 Another important page is security, and this is where you can turn on 
+03:13 for example two factor authentication.
+03:16 I recommend that once you start your business, 
+03:18 especially if you have a private repository, you turn on two factor authentication
+03:21 your account is much more difficult to hack when you have two factor authentication on. 
+03:24 Two more pages that are useful, this little bell up here is the notifications tab, 
+03:29 now I don't have any notifications right now, 
+03:32 but typically when you are working on projects you'll have a bunch of notifications
+03:35 whether that's pull requests or issues that are filed against your project, 
+03:38 now if you have private projects, obviously no one else is going to be able 
+03:41 to see that but if you are working with other people on those projects 
+03:45 you'll get some notifications for what they've been working on or if they've @ mentioned you
+03:48 in some pull request that they are trying to make some improvement to the project. 
+03:51 So the notifications page is really useful, where you see at a glance 
+03:54 what's happening and what other people are trying to notify you on. 
+03:58 The last thing is to create a new repository, 
+04:01 so we can click the little plus icon and we can say new repository 
+04:04 or we can import a repository which just means if we have an existing one 
+04:07 we can import that as well, but the new repository window
+04:10 the new repository screen lets us punch in some basic information 
+04:13 about our repository and then I'll create what is essentially an empty repository 
+04:17 that we can then clone from github; but we're not ready for that quite yet, 
+04:20 what we need to do next is create some ssh keys 
+04:23 that allow us to interact with the repository, 
+04:26 so that's the gist behind github this is the create repository screen, 
+04:29 we have the dashboard page which allows us to see at a glance 
+04:32 what activity is happening on github, all the people that we're following, 
+04:35 all of our repositories, we have the profile page, 
+04:38 which allows us to see our own profile follow people if we're looking at a different profile 
+04:42 and we had the account settings, 
+04:45 which we can modify our profile or increase our security change our password, 
+04:48 those basic things. 
+04:50 So that's a whirlwind tour of what github offers us for working with git repositories. 
+

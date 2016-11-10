@@ -1,0 +1,30 @@
+00:01 Whether you're on Windows, Linux or Mac, 
+00:03 we now have both the public and private ssh key
+00:05 that will allow us to control access to our repositories on our github account. 
+00:09 Switch over into location where you've created your public and private keys. 
+00:13 We can say we have our private key and again, 
+00:17 don't share your private key with anyone 
+00:19 because it's the only mechanism we have to control access to our repositories. 
+00:22 And then we have our public key, we take a look at what's inside our public key,
+00:26 we're going to see a hash with our email address. 
+00:29 now go ahead and copy this and we're going to paste it into github in just a moment; 
+00:35 switch over to your browser where you have github open. 
+00:38 Now chances are your account's looking pretty barren right now 
+00:41 because you haven't created any repositories, 
+00:44 and you haven't really done any work with your github account. 
+00:46 We're going to change that very soon. But first, we need to add this public ssh key to our account. 
+00:50 Click on your account's icon, and go to settings. 
+00:54 Over on the left side, click ssh and gpg keys 
+00:58 and then click the button for new ssh key, 
+01:00 give it a title, such as the computer that you're on, like Mac book 
+01:04 and we could say development key just some sort of description 
+01:08 that allows us to know what we're writing this key for. 
+01:11 Then paste in the contents of that key file just double check there are no spaces 
+01:15 or anything that was added in there,
+01:18 but github likely will complain if there's any problems with it, click add ssh key. 
+01:22 Now we have that added to our account and we can use this to control privileges 
+01:26 for creating and cloning repositories on our account, 
+01:29 so that's all we needed to do to add an ssh key, 
+01:32 a public ssh key onto our github account 
+01:35 and now we're going to be able to use this as access privileges on our account. 
+

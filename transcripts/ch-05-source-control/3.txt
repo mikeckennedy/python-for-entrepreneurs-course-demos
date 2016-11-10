@@ -1,0 +1,34 @@
+00:01 Let's get ready to use Git by downloading and installing it on our system.
+00:04 Now in this video, we'll use Mac Os X 
+00:08 but the steps should be roughly the same on Windows or Linux. 
+00:12 The first thing you want to do is open a new browser tab, 
+00:17 and go to git-scm.com.
+00:22 This is the main page for Git. 
+00:25 Go ahead and scroll down, go to the downloads page
+00:28 and you'll see download links for all the major operating systems
+00:32 and then it'll auto detect which operating system you are using 
+00:36 and then give you a little download button over here on the right. 
+00:41 We'll say download for Mac, the download will get started, 
+00:44 and we'll get it on our system, this will give us the latest version of Git.
+00:49 Once this download is complete, 
+00:51 we'll just need to click on it, and on Mac it will verify open it up,
+00:56 and we can just open this up.
+01:00 Now, the one issue you may have is 
+01:03 if you have not enabled unidentified packages under security 
+01:07 you will need to go into system preferences and update the security for that. 
+01:13 Go under security settings and we can say unlock the changes, 
+01:19 enter your password, and allow apps to be downloaded from anywhere. 
+01:27 Now you can say allow from anywhere or you can just specify that one last place. 
+01:32 Close this, go back to it, continue, install, again, password, 
+01:41 it is installing software that will be used system wide 
+01:45 and that is why it actually needs your system password. 
+01:49 Close this we can close this out, now the last piece, 
+01:52 we just need to go into terminal in order to be able to use it, 
+01:56 so I can open up a new finder window, 
+01:59 go to applications, utilities, terminal, double click on terminal 
+02:05 then we type in the command Git we're all set. 
+02:08 Now we can start using it. 
+02:10 Now that we've downloaded and installed Git 
+02:13 we just need to perform a few first time configuration commands 
+02:16 and that's what we'll work on in the next video. 
+

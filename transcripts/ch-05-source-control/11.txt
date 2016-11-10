@@ -1,0 +1,40 @@
+00:01 If you're using Windows, you can download an application 
+00:04 that will generate ssh keys for you, there's nothing built into the operating system 
+00:07 that will allow you to create a key pair like ssh keygen on Linux or Mac 
+00:11 but we can use a separate program to do this for us. 
+00:15 So that's what we're going to do in this video, 
+00:18 if you are using Linux or Mac feel free to skip this one. 
+00:21 At your Windows desktop, click on your browser of choice, 
+00:24 and bring out putty.or, that's P-U-T-T-Y .org. 
+00:28 Click the link to download putty but we don't want the putty.exe file 
+00:35 what we want is pytty gen, so go ahead and download that file, 
+00:42 save it, and we can run it.
+00:45 A newer versions of Windows may tell you that you can't run the file 
+00:50 because you don't have appropriate permissions,
+00:53 but in our case we do want more info and we want to say run anyway. 
+00:56 This is the putty key generator, you can think of it like a user interface 
+00:59 that's very similar to ssh keygen on Linux or Mac. 
+01:03 Make sure that ssh2rsa is selected and then click generate. 
+01:07 And we want to randomly move our mouse around 
+01:10 and that will allow us to have some randomness that will be input into the key. 
+01:14 Just go ahead keep moving your mouse around 
+01:17 until the green bar is all the way over to the right side. 
+01:24 After we've moved our mouse around enough to generate randomness, 
+01:29 we'll get the key generated, now what you'll see here is the public key 
+01:34 for pasting into an authorized key file or for uploading to github, 
+01:39 so we can copy and paste that and put that wherever we want. 
+01:43 This is public key so anyone can have this, this file can be shared publicly. 
+01:46 Now just like with the ssh key gen command we can add a pass phrase if we choose.
+01:52 For a development key I typically say that you should use a pass phrase 
+01:55 now if you're automating a deployment, you may not want a pass phrase, 
+01:58 but in our case, for a development key we do want to add a key phrase, 
+02:02 add a secure pass phrase, it has to be the same on both, 
+02:08 and then you can select save public key and we can save this forever 
+02:12 under downloads you might want to call it just entrepreneurs.pub 
+02:19 and we can save our private key and we call this just entrepreneurs. 
+02:26 We can bring this up in our downloads folder, this is the public key, 
+02:31 we can share this widely, we'll copy and paste this into github 
+02:34 and then we have our private key. 
+02:37 So that's how we generate public and private keys on Windows 
+02:40 using the putty gen application.
+

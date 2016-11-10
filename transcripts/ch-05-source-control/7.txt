@@ -1,0 +1,63 @@
+ 00:01 We are taking a look at the source control concept and the implementation 
+00:04 known as git so far in this video course. 
+00:06 And now we are going to talk about github. 
+00:08 Github is a cloud service that allows us to store and manage our git repositories; 
+00:14 github is certainly not required for using git but it's often conflated with git 
+00:19 by new developers because they are used hand in hand in many different projects.
+00:23 Let's get some clarity on the difference 
+00:26 between git the source control system and github the cloud service. 
+00:30 Git is an implementation of the source control concept, 
+00:34 so it is a specific tool that we use from the command line. 
+00:38 And it simply allows us to store and manage our code in repositories.
+00:43 Github on the other hand is a company that provides a web application 
+00:46 for managing git repositories, it makes it much easier to use git 
+00:51 because now we have a user interface 
+00:54 with which you create and manage git repositories if we choose;
+00:58 it hosts the remote repositories so the great part about this is 
+01:01 it's providing a back up service, 
+01:04 if our laptop that we're developing our business on suddenly crushes, 
+01:07 we  know we have an exact copy up on github 
+01:10 and we can always just sync our new laptop and grab all the files that we were working on.
+01:13 Github also makes it easier to work with other people so for example, 
+01:17 later in this course we'll talk about contractors and if you hire contractors 
+01:21 it's often easier just to give them access to your code through github 
+01:24 rather than them having to sync their repositories with your repositories
+01:28 and just use laptops, you can use github as a central location for your source code. 
+01:33 Github is also going to assist us with our deployments later, 
+01:36 so as we go on to build our application, and we're ready to deploy it to a cloud server, 
+01:41 we are going to use github as a bridge between the code that we have in our git repository
+01:45 and the location that we're going to deploy it to. 
+01:49 And here is how git works. 
+01:51 Let's say all of my code and everything that I've been working on
+01:54 are in a git repository on my local laptop. 
+01:57 Then, I create a repository on github, I'll push all my code up there, 
+02:01 I'll use the git push command, so that I have a remote repository to push code to. 
+02:05 So I'll say something like git push origin master 
+02:09 we'll take a look at these exact commands 
+02:11 once we get into the git specifics in the next section. 
+02:14 But for right now, this is just an overview of what we're doing. 
+02:17 We can also pull the code down so for example if I'm working with someone else
+02:20 and they've pushed their code up to github, 
+02:23 I can then pull it down with the git pull command,
+02:25 it makes it really easy to have a central location for all of the code 
+02:28 that way if I'm working on it on my own,
+02:31 I can simply be assured that I have a place that it's all backed up, 
+02:34 or if I'm working with other people it's not only backed up 
+02:37 but we know that we have the source of truth for our code.
+02:40 An important concept with github is that there are both public and private repositories, 
+02:44 when you sign up for github which we'll do in the next video, 
+02:47 you'll get unlimited public repositories, 
+02:50 now the one thing you need to really be careful of, 
+02:53 is that your code is visible to the entire internet, anyone can see a public repository, 
+02:57 it's an all or nothing deal, either it's public and everyone can see it 
+03:01 or it's private and only you can see it 
+03:04 along with the people that you've manually added to that project. 
+03:07 Now personal accounts are $7 a month for the private repositories 
+03:11 they are also free for students, if you are a student, 
+03:14 you should be able to get access to as many private repositories as you want just for free;
+03:18 while I know $7 a month can be cost prohibitive in some cases,
+03:21 I highly recommend that you get a personal account for the $7 a month 
+03:25 when you start building your business, that way you can keep your code private. 
+03:28 While you are working through these videos you can just simply use a free github account,
+03:31 and upgrade it when you're ready to start your business. 
+
