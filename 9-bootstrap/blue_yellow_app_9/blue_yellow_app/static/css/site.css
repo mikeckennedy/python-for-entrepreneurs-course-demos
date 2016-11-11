@@ -1,0 +1,54 @@
+body {
+    color: black;
+    background-color: white;
+}
+
+.main_content {
+    line-height: 1.5em;
+    padding: 20px;
+}
+
+.nav {
+    background-color: black;
+    font-size: 18px;
+    color: white;
+}
+
+.nav a {
+    color: white;
+    margin: 10px;
+}
+
+.nav a:visited, .nav a:active {
+    text-decoration: none;
+}
+
+.account-nav {
+    float: right;
+}
+
+/* ********** ALBUM LIST ********* */
+.album-in-list {
+
+}
+
+.album-in-list img {
+    height: 150px;
+    float: left;
+    margin: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.album-in-list .album-title {
+    font-size: 18px;
+}
+.standard-form input {
+    width: 350px;
+}
+.standard-form input, .standard-form button {
+    margin: 10px;
+}
+.error-msg {
+    color: red;
+}

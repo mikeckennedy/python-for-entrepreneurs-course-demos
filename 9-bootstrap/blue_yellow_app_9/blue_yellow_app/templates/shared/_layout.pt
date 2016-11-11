@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en-us" metal:define-macro="layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Pylons Project">
+    <link rel="shortcut icon"
+          href="/static/img/fav.png?cacheId=${view.build_cache_id('/static/img/fav.png')}">
+
+    <title>Starter Scaffold for The Pyramid Web Framework</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
+          rel="stylesheet">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
+    <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
+    <![endif]-->
+
+    <div metal:define-slot="additional_css"></div>
+</head>
+
+<body>
+
+<div class="nav">
+    <div class="account-nav">
+        <a href="/account/register">Register</a>
+    </div>
+
+    <a href="/home/index">home</a> |
+    <a href="/albums">albums</a> |
+    <a href="/home/contact">contact</a> |
+    <a href="/home/about">about</a>
+</div>
+
+<div class="main_content">
+    <div metal:define-slot="main_content"></div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
+<script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
+<div metal:define-slot="additional_js"></div>
+
+</body>
+</html>
