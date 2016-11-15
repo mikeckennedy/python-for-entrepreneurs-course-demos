@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <LINK href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <LINK href="bootstrap-overrides.css" rel="stylesheet" type="text/css">
 
     <!--nav collapse / expand requires javascript-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
@@ -12,7 +13,7 @@
 </head>
 <body style="padding: 0px; margin: 0px;">
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -34,15 +35,13 @@
                 <li class="active"><a href="#">Shop</a></li>
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
+                <li><a href="#" class="hidden-sm">Link 3</a></li>
+                <li><a href="#" class="hidden-sm">Link 4</a></li>
+                <li><a href="#" class="hidden-md hidden-sm">Link 5</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Account</a></li>
                 <li><a href="#">Logout</a></li>
-
-                </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
