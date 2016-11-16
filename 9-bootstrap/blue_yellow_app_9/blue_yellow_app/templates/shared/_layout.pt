@@ -50,7 +50,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
+<script src="/static/bower_components/jquery-dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery-dist/jquery.min.js')}"></script>
 <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
 <div metal:define-slot="additional_js"></div>
 
