@@ -1,16 +1,15 @@
 body {
-    color: black;
-    background-color: white;
+    color: #fafafa;
+    background-color: #222222;
 }
 
 .main_content {
     line-height: 1.5em;
-    padding: 20px;
+    padding: 0px;
 }
 
 .nav {
     background-color: black;
-    font-size: 18px;
     color: white;
 }
 
@@ -21,6 +20,11 @@ body {
 
 .nav a:visited, .nav a:active {
     text-decoration: none;
+}
+
+.navbar-inverse {
+    background-color: #000;
+    border-color: #080808;
 }
 
 .account-nav {
@@ -43,12 +47,67 @@ body {
 .album-in-list .album-title {
     font-size: 18px;
 }
+
 .standard-form input {
     width: 350px;
 }
+
 .standard-form input, .standard-form button {
     margin: 10px;
 }
+
 .error-msg {
     color: red;
+}
+
+.main_content {
+    margin-top: 51px;
+}
+
+.yellow-foreground {
+    color: #ffdb3d;
+}
+
+.blue-foreground {
+    color: #326aa5;
+}
+
+footer {
+    background-color: black;
+    padding: 40px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+footer {
+    color: #555;
+}
+
+footer .row {
+    padding: 0px;
+    padding-bottom: 1em;
+    margin: 0px;
+}
+
+footer a, footer .section-header {
+    color: #999;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer .mission {
+    text-align: left;
+}
+
+footer .social {
+    /*text-align: left;*/
+    line-height: 1.75em;
+}
+
+footer .social > div > a {
+    width: 75px;
+    text-align: left;
+    display: inline-block;
 }
