@@ -2,6 +2,9 @@
   <dictionary name="screeencaster">
     <words>
       <w>bookus</w>
+      <w>sqlalchemy</w>
+      <w>sqlite</w>
+      <w>tablename</w>
     </words>
   </dictionary>
 </component>
