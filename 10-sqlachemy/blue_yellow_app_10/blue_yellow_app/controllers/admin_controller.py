@@ -25,15 +25,9 @@ class AccountController(BaseController):
         # if not vm.validate():
         #     return vm.to_dict()
 
-        new_album = AlbumsService.create_album(
-            vm.title,
-            vm.year,
-            vm.album_image,
-            vm.price,
-            vm.url,
-            vm.track_titles
-        )
-        print("Created album {}".format(new_album.id))
+
+        # todo: Insert album
+        # todo: log new album
 
         # redirect
         self.redirect('/albums')

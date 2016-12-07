@@ -46,5 +46,5 @@ class AlbumsService:
 
     @classmethod
     def create_album(cls, title: str, year: int, album_image: str,
-                     price: float, url, track_titles: []):
+                     price: float, url: str, track_titles: []):
         pass
