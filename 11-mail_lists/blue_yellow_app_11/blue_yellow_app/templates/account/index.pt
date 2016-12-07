@@ -1,0 +1,7 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <h1>Your account</h1>
+
+    </div>
+</div>
