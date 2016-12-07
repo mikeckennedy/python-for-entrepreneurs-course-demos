@@ -34,7 +34,7 @@ def init_routing(config):
     add_controller_routes(config, home.HomeController, 'home')
     add_controller_routes(config, albums.AlbumsController, 'albums')
     add_controller_routes(config, account.AccountController, 'account')
-    add_controller_routes(config, admin.AccountController, 'admin')
+    add_controller_routes(config, admin.AdminController, 'admin')
 
     config.scan()
 

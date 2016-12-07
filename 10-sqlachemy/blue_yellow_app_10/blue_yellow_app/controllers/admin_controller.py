@@ -4,7 +4,7 @@ from blue_yellow_app.viewmodels.newalbumviewmodel import NewAlbumViewModel
 from blue_yellow_app.services.albums_service import AlbumsService
 
 
-class AccountController(BaseController):
+class AdminController(BaseController):
     # GET /admin/new_album
     @pyramid_handlers.action(renderer='templates/admin/new_album.pt',
                              request_method='GET',
@@ -25,9 +25,11 @@ class AccountController(BaseController):
         # if not vm.validate():
         #     return vm.to_dict()
 
-
-        # todo: Insert album
-        # todo: log new album
+        # Insert album
+        new_album = AlbumsService.create_album(vm.title, vm.year, vm.album_image,
+                                               vm.price, vm.url, vm.track_titles)
+        # log new album
+        print("Created a new album with id {}".format(new_album.id))
 
         # redirect
         self.redirect('/albums')
