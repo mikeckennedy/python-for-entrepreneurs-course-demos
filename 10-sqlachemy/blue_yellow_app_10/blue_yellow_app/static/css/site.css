@@ -48,8 +48,17 @@ body {
     font-size: 18px;
 }
 
-.standard-form input {
+form.standard-form input{
+    color: black;
+}
+
+.standard-form input,
+.standard-form textarea
+{
     width: 350px;
+}
+.standard-form textarea {
+    margin-left: 10px;
 }
 
 .standard-form input, .standard-form button {

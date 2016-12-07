@@ -4,6 +4,7 @@ import blue_yellow_app
 import blue_yellow_app.controllers.home_controller as home
 import blue_yellow_app.controllers.albums_controller as albums
 import blue_yellow_app.controllers.account_controller as account
+import blue_yellow_app.controllers.admin_controller as admin
 from blue_yellow_app.data.dbsession import DbSessionFactory
 
 
@@ -33,6 +34,7 @@ def init_routing(config):
     add_controller_routes(config, home.HomeController, 'home')
     add_controller_routes(config, albums.AlbumsController, 'albums')
     add_controller_routes(config, account.AccountController, 'account')
+    add_controller_routes(config, admin.AccountController, 'admin')
 
     config.scan()
 

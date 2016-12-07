@@ -29,64 +29,70 @@
       <Position>4</Position>
       <DataType>VARCHAR(0,-1)|12</DataType>
     </column>
-    <index id="10" parent="3" name="ix_Album_name">
+    <column id="10" parent="3" name="has_preview">
+      <Position>5</Position>
+      <DataType>BOOLEAN(0,-1)|4</DataType>
+    </column>
+    <index id="11" parent="3" name="ix_Album_name">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="11" parent="3" name="ix_Album_year">
+    <index id="12" parent="3" name="ix_Album_year">
       <ColNames>year</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="12" parent="3" name="ix_Album_price">
+    <index id="13" parent="3" name="ix_Album_price">
       <ColNames>price</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="13" parent="3">
-      <ColNames>id</ColNames>
+    <key id="14" parent="3">
+      <ColNames>id)
+check (has_preview in (0
+1</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="14" parent="4" name="id">
+    <column id="15" parent="4" name="id">
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="4" name="name">
+    <column id="16" parent="4" name="name">
       <Position>1</Position>
       <DataType>VARCHAR(0,-1)|12</DataType>
     </column>
-    <column id="16" parent="4" name="length">
+    <column id="17" parent="4" name="length">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <column id="17" parent="4" name="audio_url">
+    <column id="18" parent="4" name="audio_url">
       <Position>3</Position>
       <DataType>VARCHAR(0,-1)|12</DataType>
     </column>
-    <column id="18" parent="4" name="video_url">
+    <column id="19" parent="4" name="video_url">
       <Position>4</Position>
       <DataType>VARCHAR(0,-1)|12</DataType>
     </column>
-    <column id="19" parent="4" name="display_order">
+    <column id="20" parent="4" name="display_order">
       <Position>5</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <column id="20" parent="4" name="album_id">
+    <column id="21" parent="4" name="album_id">
       <Position>6</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <index id="21" parent="4" name="ix_Track_name">
+    <index id="22" parent="4" name="ix_Track_name">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="22" parent="4" name="ix_Track_display_order">
+    <index id="23" parent="4" name="ix_Track_display_order">
       <ColNames>display_order</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="23" parent="4">
+    <key id="24" parent="4">
       <ColNames>id)
 foreign key(album_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="24" parent="4" name="#FAKE_Track_1">
+    <foreign-key id="25" parent="4" name="#FAKE_Track_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>album_id</ColNames>
       <Deferrable>1</Deferrable>

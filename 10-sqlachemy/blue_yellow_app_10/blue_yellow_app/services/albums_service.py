@@ -1,5 +1,10 @@
 class AlbumsService:
     @staticmethod
+    def newget_albums():
+        # todo: get albums from DB.
+        return []
+
+    @staticmethod
     def get_albums():
         return [
             {
