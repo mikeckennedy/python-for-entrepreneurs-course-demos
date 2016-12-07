@@ -18,3 +18,12 @@ class NewAlbumViewModel(ViewModelBase):
         self.album_image = data_dict.get('album_image')
         self.url = data_dict.get('url')
         self.tracks_text = data_dict.get('tracks_text')
+
+    @property
+    def track_titles(self):
+        return [
+            t.strip()
+            for t in self.tracks_text.split('\n')
+            if t and t.strip()
+        ]
+

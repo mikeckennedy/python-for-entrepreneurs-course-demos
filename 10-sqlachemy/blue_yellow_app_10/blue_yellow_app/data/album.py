@@ -15,6 +15,7 @@ class Album(SqlAlchemyBase):
     price = sqlalchemy.Column(sqlalchemy.Float, index=True)
     album_image = sqlalchemy.Column(sqlalchemy.String)
     has_preview = sqlalchemy.Column(sqlalchemy.Boolean, default=False)
+    is_published = sqlalchemy.Column(sqlalchemy.Boolean, default=False)
 
     tracks = sqlalchemy.orm.relationship('Track', back_populates='album',
                                          order_by='Track.display_order',

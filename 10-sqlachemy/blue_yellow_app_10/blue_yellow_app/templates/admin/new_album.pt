@@ -19,7 +19,7 @@
                                placeholder=" year released (YYYY)"  class="form-control">
                         <input name="price" required type="number" value="${price}"
                                placeholder=" price (in USD)"  class="form-control">
-                        <input name="album_image" required type="url" value="${album_image}"
+                        <input name="album_image" required type="text" value="${album_image}"
                                placeholder=" url to image (http://...)" class="form-control">
                         <input name="url" required type="text" value="${url}"
                                placeholder=" slug for album on site" class="form-control">

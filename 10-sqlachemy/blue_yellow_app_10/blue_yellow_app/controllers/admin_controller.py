@@ -1,7 +1,7 @@
 import pyramid_handlers
 from blue_yellow_app.controllers.base_controller import BaseController
 from blue_yellow_app.viewmodels.newalbumviewmodel import NewAlbumViewModel
-from blue_yellow_app.viewmodels.register_viewmodel import RegisterViewModel
+from blue_yellow_app.services.albums_service import AlbumsService
 
 
 class AccountController(BaseController):
@@ -25,7 +25,14 @@ class AccountController(BaseController):
         # if not vm.validate():
         #     return vm.to_dict()
 
-        # TODO: Create album in DB
+        AlbumsService.create_album(
+            vm.title,
+            vm.year,
+            vm.album_image,
+            vm.price,
+            vm.url,
+            vm.track_titles
+        )
 
         # redirect
         self.redirect('/albums')
