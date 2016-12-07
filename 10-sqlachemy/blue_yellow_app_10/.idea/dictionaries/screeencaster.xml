@@ -5,6 +5,7 @@
       <w>sqlalchemy</w>
       <w>sqlite</w>
       <w>tablename</w>
+      <w>yyyy</w>
     </words>
   </dictionary>
 </component>

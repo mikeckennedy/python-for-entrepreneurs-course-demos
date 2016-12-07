@@ -17,7 +17,7 @@
                                placeholder=" album title"  class="form-control">
                         <input name="year" required type="number" value="${year}"
                                placeholder=" year released (YYYY)"  class="form-control">
-                        <input name="price" required type="number" value="${price}"
+                        <input name="price" required type="text" value="${price}"
                                placeholder=" price (in USD)"  class="form-control">
                         <input name="album_image" required type="text" value="${album_image}"
                                placeholder=" url to image (http://...)" class="form-control">
