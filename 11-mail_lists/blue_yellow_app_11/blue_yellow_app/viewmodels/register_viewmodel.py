@@ -1,16 +1,13 @@
-from blue_yellow_app.viewmodels.viewmodelbase import ViewModelBase
+from blue_yellow_app.viewmodels.signin_viewmodel import SigninViewModel
 
 
-class RegisterViewModel(ViewModelBase):
+class RegisterViewModel(SigninViewModel):
     def __init__(self):
-        self.email = None
-        self.password = None
+        super().__init__()
         self.confirm_password = None
-        self.error = None
 
     def from_dict(self, data_dict):
-        self.email = data_dict.get('email')
-        self.password = data_dict.get('password')
+        super().from_dict(data_dict)
         self.confirm_password = data_dict.get('confirm_password')
 
     def validate(self):

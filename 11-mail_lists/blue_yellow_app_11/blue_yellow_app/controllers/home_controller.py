@@ -14,6 +14,10 @@ class HomeController(BaseController):
     def about(self):
         return {'value': 'ABOUT'}
 
+    @pyramid_handlers.action(renderer='templates/home/bookus.pt')
+    def bookus(self):
+        return {}
+
     @pyramid_handlers.action(renderer='templates/home/contact.pt')
     def contact(self):
         return {'value': 'CONTACT'}

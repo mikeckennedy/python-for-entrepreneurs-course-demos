@@ -1,7 +1,28 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <h1>Sign into your account</h1>
 
+        <div class="container  account">
+            <div class="row upcoming">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Sign into your account</h1>
+
+                    <div class="error-msg" tal:condition="error">
+                        Error: ${error}
+                    </div>
+
+                    <form class="standard-form" action="" method="POST">
+                        <input name="email" required type="email" value="${email}" placeholder="email address"
+                               class="form-control">
+                        <input name="password" required type="password" value="${password}" placeholder="password"
+                               class="form-control">
+                        <button type="submit" class="btn btn-success">Sign in</button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
     </div>
 </div>

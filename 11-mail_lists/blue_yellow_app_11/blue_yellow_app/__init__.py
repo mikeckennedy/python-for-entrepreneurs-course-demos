@@ -5,6 +5,7 @@ import blue_yellow_app.controllers.home_controller as home
 import blue_yellow_app.controllers.albums_controller as albums
 import blue_yellow_app.controllers.account_controller as account
 import blue_yellow_app.controllers.admin_controller as admin
+import blue_yellow_app.controllers.newsletter_controller as news
 from blue_yellow_app.data.dbsession import DbSessionFactory
 
 
@@ -22,7 +23,6 @@ def main(_, **settings):
     init_includes(config)
     init_routing(config)
     init_db(config)
-    init_email(config)
 
     return config.make_wsgi_app()
 
@@ -36,6 +36,7 @@ def init_routing(config):
     add_controller_routes(config, albums.AlbumsController, 'albums')
     add_controller_routes(config, account.AccountController, 'account')
     add_controller_routes(config, admin.AdminController, 'admin')
+    add_controller_routes(config, news.NewsletterController, 'newsletter')
 
     config.scan()
 
