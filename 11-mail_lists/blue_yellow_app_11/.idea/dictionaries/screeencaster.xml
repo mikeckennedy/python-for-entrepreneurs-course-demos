@@ -2,6 +2,7 @@
   <dictionary name="screeencaster">
     <words>
       <w>bookus</w>
+      <w>mailchimp</w>
       <w>sqlalchemy</w>
       <w>sqlite</w>
       <w>tablename</w>

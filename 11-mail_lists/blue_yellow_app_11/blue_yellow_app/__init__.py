@@ -7,6 +7,7 @@ import blue_yellow_app.controllers.account_controller as account
 import blue_yellow_app.controllers.admin_controller as admin
 import blue_yellow_app.controllers.newsletter_controller as news
 from blue_yellow_app.data.dbsession import DbSessionFactory
+from blue_yellow_app.services.mailinglist_service import MailingListService
 
 
 def init_db(config):
@@ -23,8 +24,17 @@ def main(_, **settings):
     init_includes(config)
     init_routing(config)
     init_db(config)
+    init_mailing_list(config)
 
     return config.make_wsgi_app()
+
+
+def init_mailing_list(config):
+    settings = config.get_settings()
+    mailchimp_api = settings.get('mailchimp_api')
+    mailchimp_list_id = settings.get('mailchimp_list_id')
+
+    MailingListService.global_init(mailchimp_api, mailchimp_list_id)
 
 
 def init_routing(config):
