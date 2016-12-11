@@ -5,6 +5,8 @@ from blue_yellow_app.data.modelbase import SqlAlchemyBase
 import blue_yellow_app.data.album
 # noinspection PyUnresolvedReferences
 import blue_yellow_app.data.track
+# noinspection PyUnresolvedReferences
+import blue_yellow_app.data.account
 
 
 class DbSessionFactory:

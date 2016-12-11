@@ -1,5 +1,6 @@
 import pyramid_handlers
 from blue_yellow_app.controllers.base_controller import BaseController
+from blue_yellow_app.services.account_service import AccountService
 from blue_yellow_app.viewmodels.register_viewmodel import RegisterViewModel
 from blue_yellow_app.viewmodels.signin_viewmodel import SigninViewModel
 
@@ -22,9 +23,12 @@ class AccountController(BaseController):
         vm = SigninViewModel()
         vm.from_dict(self.data_dict)
 
-        # TODO: Use DB to validate users
+        account = AccountService.get_authenticated_account(vm.email, vm.password)
+        if not account:
+            vm.error = "Email address or password are incorrect."
+            return vm.to_dict()
 
-        return vm.to_dict()
+        return self.redirect('/account')
 
     @pyramid_handlers.action(renderer='templates/account/register.pt',
                              request_method='GET',
@@ -44,10 +48,15 @@ class AccountController(BaseController):
         if vm.error:
             return vm.to_dict()
 
-        # TODO: Create user in DB
+        account = AccountService.find_account_by_email(vm.email)
+        if account:
+            vm.error = "An account with this email already exists. " \
+                       "Please log in instead."
+            return vm.to_dict()
 
-        # validate no account exists, passwords match
-        # create account in DB
+        account = AccountService.create_account(vm.email, vm.password)
+        print("Registered new user: " + account.email)
+
         # send welcome email
 
         # redirect

@@ -9,19 +9,21 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'mailchimp',
+    'passlib',
     'pyramid',
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'pyramid_handlers',
     'waitress',
-    'sqlalchemy', 'mailchimp',
-    ]
+    'sqlalchemy'
+]
 
 tests_require = [
     'WebTest >= 1.3.1',  # py3 compatibility
     'pytest',  # includes virtualenv
     'pytest-cov',
-    ]
+]
 
 setup(name='blue_yellow_app',
       version='0.0',
