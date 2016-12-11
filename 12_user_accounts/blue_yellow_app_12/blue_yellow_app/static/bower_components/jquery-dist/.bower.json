@@ -1,0 +1,33 @@
+{
+  "name": "jquery-dist",
+  "version": "2.1.3",
+  "authors": [
+    "Tyler Long <tyler4long@gmail.com>"
+  ],
+  "description": "jquery.min.js",
+  "main": "jquery.min.js",
+  "keywords": [
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tylerlong/jquery-dist",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "README.md",
+    "fabfile.py"
+  ],
+  "_release": "2.1.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.3",
+    "commit": "a25281ac05e35b52b6f339293053269e7de4bb74"
+  },
+  "_source": "https://github.com/tylerlong/jquery-dist.git",
+  "_target": "^2.1.3",
+  "_originalSource": "jquery-dist",
+  "_direct": true
+}

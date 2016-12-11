@@ -1,0 +1,20 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <div class="container friends">
+            <div class="row upcoming ">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Ooops</h1>
+                    <div class="large-content-text">
+                        Sorry but it seems something went wrong with that sign up.<br>
+                        <br>
+                        Try hitting that back button and verifying your email address was valid.<br>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
