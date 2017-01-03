@@ -3,11 +3,16 @@ from blue_yellow_app.controllers.base_controller import BaseController
 from blue_yellow_app.services.account_service import AccountService
 from blue_yellow_app.viewmodels.register_viewmodel import RegisterViewModel
 from blue_yellow_app.viewmodels.signin_viewmodel import SigninViewModel
+import blue_yellow_app.infrastructure.cookie_auth as cookie_auth
 
 
 class AccountController(BaseController):
     @pyramid_handlers.action(renderer='templates/account/index.pt')
     def index(self):
+        if not self.logged_in_user_id:
+            print("Cannot view account page, must login")
+            self.redirect('/account/signin')
+
         return {}
 
     @pyramid_handlers.action(renderer='templates/account/signin.pt',
@@ -28,7 +33,14 @@ class AccountController(BaseController):
             vm.error = "Email address or password are incorrect."
             return vm.to_dict()
 
+        cookie_auth.set_auth(self.request, account.id)
+
         return self.redirect('/account')
+
+    @pyramid_handlers.action()
+    def logout(self):
+        cookie_auth.logout(self.request)
+        self.redirect('/')
 
     @pyramid_handlers.action(renderer='templates/account/register.pt',
                              request_method='GET',

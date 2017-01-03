@@ -68,11 +68,17 @@
                 <li>
                     <a href="/home/contact">contact</a>
                 </li>
-                <li>
+                <li tal:condition="not view.logged_in_user_id">
                     <a href="/account/signin">sign in</a>
                 </li>
-                <li>
+                <li tal:condition="not view.logged_in_user_id">
                     <a href="/account/register">register</a>
+                </li>
+                <li tal:condition="view.logged_in_user_id">
+                    <a href="/account">account</a>
+                </li>
+                <li tal:condition="view.logged_in_user_id">
+                    <a href="/account/logout">logout</a>
                 </li>
             </ul>
         </div>
