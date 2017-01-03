@@ -1,0 +1,40 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container">
+            <div class="row upcoming">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Create an album</h1>
+
+                    <div class="error-msg" tal:condition="error">
+                        Error: ${error}
+                    </div>
+
+                    <form class="standard-form" action="" method="POST">
+                        <input name="title" required type="text" value="${title}"
+                               placeholder=" album title"  class="form-control">
+                        <input name="year" required type="number" value="${year}"
+                               placeholder=" year released (YYYY)"  class="form-control">
+                        <input name="price" required type="text" value="${price}"
+                               placeholder=" price (in USD)"  class="form-control">
+                        <input name="album_image" required type="text" value="${album_image}"
+                               placeholder=" url to image (http://...)" class="form-control">
+                        <input name="url" required type="text" value="${url}"
+                               placeholder=" slug for album on site" class="form-control">
+
+                        <textarea name="tracks_text" rows="5"
+                                  placeholder="Enter track names (one per line)"
+                                  class="form-control"
+                        >${tracks_text}</textarea>
+
+                        <button type="submit" class="btn btn-success">Create Album</button>
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

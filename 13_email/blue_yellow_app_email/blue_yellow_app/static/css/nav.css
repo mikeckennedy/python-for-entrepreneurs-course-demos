@@ -1,0 +1,41 @@
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-brand img {
+    height: 28px;
+    display: inline-block;
+}
+
+a.navbar-brand img {
+    vertical-align: middle;
+}
+a.navbar-brand {
+    white-space: nowrap;
+    font-size: 24px;
+}
+
+.navbar-inverse a.navbar-brand {
+    color: white;
+}
+
+.navbar-inverse {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navbar-nav > li > a {
+    padding-top: 8px;
+    padding-bottom: 0px;
+
+}
+.nav>li>a {
+    padding: 5px;
+}
+
+.navbar-brand, .nav {
+    font-size: 18px;
+}
