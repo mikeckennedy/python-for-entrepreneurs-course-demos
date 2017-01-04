@@ -9,7 +9,9 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'html2text',
     'mailchimp',
+    'mailer',
     'passlib',
     'pyramid',
     'pyramid_chameleon',

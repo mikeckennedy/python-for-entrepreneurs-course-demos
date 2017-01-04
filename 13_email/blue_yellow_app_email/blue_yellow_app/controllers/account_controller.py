@@ -1,6 +1,7 @@
 import pyramid_handlers
 from blue_yellow_app.controllers.base_controller import BaseController
 from blue_yellow_app.services.account_service import AccountService
+from blue_yellow_app.services.email_service import EmailService
 from blue_yellow_app.viewmodels.register_viewmodel import RegisterViewModel
 from blue_yellow_app.viewmodels.signin_viewmodel import SigninViewModel
 import blue_yellow_app.infrastructure.cookie_auth as cookie_auth
@@ -68,8 +69,10 @@ class AccountController(BaseController):
 
         account = AccountService.create_account(vm.email, vm.password)
         print("Registered new user: " + account.email)
+        cookie_auth.set_auth(self.request, account.id)
 
         # send welcome email
+        EmailService.send_welcome_email(account.email)
 
         # redirect
         print("Redirecting to account index page...")
