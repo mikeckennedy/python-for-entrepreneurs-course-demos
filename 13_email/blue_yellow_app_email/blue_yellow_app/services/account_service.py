@@ -61,3 +61,17 @@ class AccountService:
             .first()
 
         return account
+
+    @staticmethod
+    def create_reset_code(account):
+        session = DbSessionFactory.create_session()
+        # TODO: Create code, associate with user, return it
+
+    @classmethod
+    def find_reset_code(cls, code):
+
+        if not code or not code.strip():
+            return None
+
+        session = DbSessionFactory.create_session()
+        # TODO: Query for code details, return it.
