@@ -4,8 +4,8 @@
 
         <div class="container  account">
             <div class="row upcoming">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
                     <h1>Sign into your account</h1>
 
                     <div class="error-msg" tal:condition="error">
@@ -18,11 +18,14 @@
                         <input name="password" required type="password" value="${password}" placeholder="password"
                                class="form-control">
                         <button type="submit" class="btn btn-success">Sign in</button>
-                    </form>
 
+                        <div class="text-muted">
+                            Forgot your login info? Just <a href="/account/forgot_password">reset it</a>.
+                        </div>
+                    </form>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
-            <div class="col-md-3"></div>
         </div>
     </div>
 </div>

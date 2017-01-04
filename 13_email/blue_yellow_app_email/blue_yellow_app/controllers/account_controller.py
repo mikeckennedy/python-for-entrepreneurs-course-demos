@@ -2,7 +2,9 @@ import pyramid_handlers
 from blue_yellow_app.controllers.base_controller import BaseController
 from blue_yellow_app.services.account_service import AccountService
 from blue_yellow_app.services.email_service import EmailService
+from blue_yellow_app.viewmodels.forgotpassword_viewmodel import ForgotPasswordViewModel
 from blue_yellow_app.viewmodels.register_viewmodel import RegisterViewModel
+from blue_yellow_app.viewmodels.resetpassword_viewmodel import ResetPasswordViewModel
 from blue_yellow_app.viewmodels.signin_viewmodel import SigninViewModel
 import blue_yellow_app.infrastructure.cookie_auth as cookie_auth
 
@@ -77,3 +79,44 @@ class AccountController(BaseController):
         # redirect
         print("Redirecting to account index page...")
         self.redirect('/account')
+
+    # Form to generate reset code, trigger email (get)
+    @pyramid_handlers.action(renderer='templates/account/forgot_password.pt',
+                             request_method='GET',
+                             name='forgot_password')
+    def forgot_password_get(self):
+        vm = ForgotPasswordViewModel()
+        return vm.to_dict()
+
+    # Form to generate reset code, trigger email (post)
+    @pyramid_handlers.action(renderer='templates/account/forgot_password.pt',
+                             request_method='POST',
+                             name='forgot_password')
+    def forgot_password_post(self):
+        vm = ForgotPasswordViewModel()
+        vm.from_dict(self.data_dict)
+
+        return vm.to_dict()
+
+    # Form to actually enter the new password based on reset code (get)
+    @pyramid_handlers.action(renderer='templates/account/reset_password.pt',
+                             request_method='GET',
+                             name='reset_password')
+    def reset_password_get(self):
+        vm = ResetPasswordViewModel()
+        return vm.to_dict()
+
+    # Form to actually enter the new password based on reset code (post)
+    @pyramid_handlers.action(renderer='templates/account/reset_password.pt',
+                             request_method='POST',
+                             name='reset_password')
+    def reset_password_post(self):
+        vm = ResetPasswordViewModel()
+        vm.from_dict(self.data_dict)
+        vm.is_get = False
+        return vm.to_dict()
+
+    # A reset has been sent via email
+    @pyramid_handlers.action(renderer='templates/account/reset_sent.pt')
+    def reset_sent(self):
+        return {}
