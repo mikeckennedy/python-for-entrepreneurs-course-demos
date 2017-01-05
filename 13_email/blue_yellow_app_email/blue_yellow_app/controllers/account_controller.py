@@ -96,7 +96,21 @@ class AccountController(BaseController):
         vm = ForgotPasswordViewModel()
         vm.from_dict(self.data_dict)
 
-        return vm.to_dict()
+        vm.validate()
+        if vm.error:
+            return vm.to_dict()
+
+        reset = AccountService.create_reset_code(vm.email)
+        if not reset:
+            vm.error = 'Cannot find the account with that email.'
+            return vm.to_dict()
+
+        EmailService.send_password_reset_email(vm.email, reset.id)
+        print("Would email the code {} to {}".format(
+            reset.id, vm.email
+        ))
+
+        self.redirect('/account/reset_sent')
 
     # Form to actually enter the new password based on reset code (get)
     @pyramid_handlers.action(renderer='templates/account/reset_password.pt',
@@ -104,6 +118,8 @@ class AccountController(BaseController):
                              name='reset_password')
     def reset_password_get(self):
         vm = ResetPasswordViewModel()
+        vm.from_dict(self.data_dict)
+        vm.validate()
         return vm.to_dict()
 
     # Form to actually enter the new password based on reset code (post)
@@ -114,6 +130,16 @@ class AccountController(BaseController):
         vm = ResetPasswordViewModel()
         vm.from_dict(self.data_dict)
         vm.is_get = False
+
+        vm.validate()
+        if vm.error_msg:
+            return vm.to_dict()
+
+        AccountService.use_reset_code(vm.reset_code, self.request.remote_addr)
+        account = AccountService.find_account_by_id(vm.reset.user_id)
+        AccountService.set_password(vm.password, account.id)
+
+        vm.message = 'Your password has been reset, please login.'
         return vm.to_dict()
 
     # A reset has been sent via email

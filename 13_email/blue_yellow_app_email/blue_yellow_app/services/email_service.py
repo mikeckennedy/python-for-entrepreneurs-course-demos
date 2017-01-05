@@ -59,3 +59,12 @@ class EmailService:
             {'email': email}
         )
         EmailService.send_email(email, 'Welcome to Blue Yellow Rockets', html_body)
+
+    @classmethod
+    def send_password_reset_email(cls, email, reset_id):
+
+        html_body = EmailTemplateParser.expand(
+            EmailTemplateParser.reset_password,
+            {'reset_code': reset_id}
+        )
+        EmailService.send_email(email, 'Reset your password at Blue Yellow Rockets', html_body)

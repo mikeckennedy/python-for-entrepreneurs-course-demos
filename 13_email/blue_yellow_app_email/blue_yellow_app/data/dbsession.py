@@ -7,6 +7,8 @@ import blue_yellow_app.data.album
 import blue_yellow_app.data.track
 # noinspection PyUnresolvedReferences
 import blue_yellow_app.data.account
+# noinspection PyUnresolvedReferences
+import blue_yellow_app.data.passwordreset
 
 
 class DbSessionFactory:

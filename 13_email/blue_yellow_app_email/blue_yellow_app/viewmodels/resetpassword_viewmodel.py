@@ -1,3 +1,5 @@
+import datetime
+
 from blue_yellow_app.services.account_service import AccountService
 from blue_yellow_app.viewmodels.viewmodelbase import ViewModelBase
 
@@ -19,11 +21,11 @@ class ResetPasswordViewModel(ViewModelBase):
 
         self.password = data_dict.get('password')
         if self.reset_code:
-            pass  # TODO: Get code from DB
+            self.reset = AccountService.find_reset_code(self.reset_code)
 
     def validate(self):
         self.error_msg = None
-        if not self.reset_code or not self.reset_code.strip():
+        if not self.reset:
             self.error_msg = "Reset code not found"
             return
 
@@ -35,5 +37,16 @@ class ResetPasswordViewModel(ViewModelBase):
                 self.error_msg = 'You must enter a password with at least a few characters'
                 return
 
-        # TODO: Validate code has not expired
-        # TODO: Validate code has not been used
+        if self.reset.was_used:
+            self.error_msg = 'This reset code has already been used.'
+            return
+
+        if self.reset.was_used:
+            self.error_msg = 'This reset code has already been used.'
+            return
+
+        dt = datetime.datetime.now() - self.reset.created_date
+        days = dt.total_seconds() / 60 / 60 / 24
+        if days > 1:
+            self.error_msg = 'This reset code has expired, generate a new one.'
+            return

@@ -1,6 +1,9 @@
+import datetime
+
 from passlib.handlers.sha2_crypt import sha512_crypt
 from blue_yellow_app.data.account import Account
 from blue_yellow_app.data.dbsession import DbSessionFactory
+from blue_yellow_app.data.passwordreset import PasswordReset
 
 
 class AccountService:
@@ -63,9 +66,22 @@ class AccountService:
         return account
 
     @staticmethod
-    def create_reset_code(account):
+    def create_reset_code(email):
+
+        account = AccountService.find_account_by_email(email)
+        if not account:
+            return None
+
         session = DbSessionFactory.create_session()
-        # TODO: Create code, associate with user, return it
+
+        reset = PasswordReset()
+        reset.used_ip_address = '1.2.3.4'  # set for real
+        reset.user_id = account.id
+
+        session.add(reset)
+        session.commit()
+
+        return reset
 
     @classmethod
     def find_reset_code(cls, code):
@@ -74,4 +90,42 @@ class AccountService:
             return None
 
         session = DbSessionFactory.create_session()
-        # TODO: Query for code details, return it.
+        reset = session.query(PasswordReset).\
+            filter(PasswordReset.id == code).\
+            first()
+
+        return reset
+
+    @classmethod
+    def use_reset_code(cls, reset_code, user_ip):
+        session = DbSessionFactory.create_session()
+
+        reset = session.query(PasswordReset). \
+            filter(PasswordReset.id == reset_code). \
+            first()
+
+        if not reset:
+            return
+
+        reset.used_ip_address = user_ip
+        reset.was_used = True
+        reset.used_date = datetime.datetime.now()
+
+        session.commit()
+
+    @classmethod
+    def set_password(cls, plain_text_password, account_id):
+        print('Resetting password for user {}'.format(account_id))
+        session = DbSessionFactory.create_session()
+
+        account = session.query(Account). \
+            filter(Account.id == account_id). \
+            first()
+
+        if not account:
+            print("Warning: Cannot reset password, no account found.")
+            return
+
+        print("New password set.")
+        account.password_hash = AccountService.hash_text(plain_text_password)
+        session.commit()
