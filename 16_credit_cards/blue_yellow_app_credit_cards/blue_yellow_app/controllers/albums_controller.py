@@ -1,6 +1,7 @@
 import pyramid_handlers
 from blue_yellow_app.controllers.base_controller import BaseController
 from blue_yellow_app.services.albums_service import AlbumsService
+from blue_yellow_app.services.store_service import StoreService
 
 
 class AlbumsController(BaseController):
