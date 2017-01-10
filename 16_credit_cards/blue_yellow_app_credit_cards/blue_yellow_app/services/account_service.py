@@ -57,6 +57,8 @@ class AccountService:
         if not user_id:
             return None
 
+        user_id = user_id.strip()
+
         session = DbSessionFactory.create_session()
 
         account = session.query(Account) \

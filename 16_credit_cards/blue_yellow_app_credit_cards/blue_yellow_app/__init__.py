@@ -6,8 +6,10 @@ import blue_yellow_app.controllers.albums_controller as albums
 import blue_yellow_app.controllers.account_controller as account
 import blue_yellow_app.controllers.admin_controller as admin
 import blue_yellow_app.controllers.newsletter_controller as news
+import blue_yellow_app.controllers.store_controller as store
 from blue_yellow_app.data.dbsession import DbSessionFactory
 from blue_yellow_app.email.template_paser import EmailTemplateParser
+from blue_yellow_app.infrastructure.credit_card_processor import CreditCardProcessor
 from blue_yellow_app.services.email_service import EmailService
 from blue_yellow_app.services.mailinglist_service import MailingListService
 
@@ -24,6 +26,7 @@ def main(_, **settings):
     init_mailing_list(config)
     init_smtp_mail(config)
     init_email_templates(config)
+    init_credit_cards(config)
 
     return config.make_wsgi_app()
 
@@ -81,6 +84,20 @@ def init_mailing_list(config):
     MailingListService.global_init(mailchimp_api, mailchimp_list_id)
 
 
+def init_credit_cards(config):
+    unset = 'ADD_YOUR_API_KEY'
+
+    settings = config.get_settings()
+    stripe_private_key = settings.get('stripe_private_key')
+    stripe_public_key = settings.get('stripe_public_key')
+
+    if stripe_public_key == unset:
+        print("WARNING: Stripe API values not set in config file. "
+              "Credit card purchases will not work.")
+
+    CreditCardProcessor.global_init(stripe_private_key, stripe_public_key)
+
+
 def init_routing(config):
     config.add_static_view('static', 'static', cache_max_age=3600)
 
@@ -91,6 +108,7 @@ def init_routing(config):
     add_controller_routes(config, account.AccountController, 'account')
     add_controller_routes(config, admin.AdminController, 'admin')
     add_controller_routes(config, news.NewsletterController, 'newsletter')
+    add_controller_routes(config, store.StoreController, 'store')
 
     config.scan()
 

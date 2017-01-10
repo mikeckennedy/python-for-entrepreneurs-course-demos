@@ -63,8 +63,16 @@ class AlbumsService:
         session.add(album)
 
         for idx, title in enumerate(track_titles):
-            track = Track(name=title, length=60, display_order=idx+1)
+            track = Track(name=title, length=60, display_order=idx + 1)
             album.tracks.append(track)
 
         session.commit()
         return album
+
+    @classmethod
+    def get_album_by_id(cls, album_id):
+        session = DbSessionFactory.create_session()
+
+        return session.query(Album). \
+            filter(Album.id == album_id) \
+            .first()

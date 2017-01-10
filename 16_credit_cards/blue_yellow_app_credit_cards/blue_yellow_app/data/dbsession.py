@@ -9,6 +9,8 @@ import blue_yellow_app.data.track
 import blue_yellow_app.data.account
 # noinspection PyUnresolvedReferences
 import blue_yellow_app.data.passwordreset
+# noinspection PyUnresolvedReferences
+import blue_yellow_app.data.purchase
 
 
 class DbSessionFactory:

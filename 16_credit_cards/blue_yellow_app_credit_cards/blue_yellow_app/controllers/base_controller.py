@@ -18,7 +18,7 @@ class BaseController:
 
     @property
     def is_logged_in(self):
-        return False
+        return cookie_auth.get_user_id_via_auth_cookie(self.request) is not None
 
     # noinspection PyMethodMayBeStatic
     @suppress()
@@ -38,7 +38,8 @@ class BaseController:
 
     @property
     def logged_in_user_id(self):
-        return cookie_auth.get_user_id_via_auth_cookie(self.request)
+        user_id = cookie_auth.get_user_id_via_auth_cookie(self.request)
+        return user_id
 
     @property
     def logged_in_user(self):
@@ -46,4 +47,4 @@ class BaseController:
         if not uid:
             return None
 
-        AccountService.find_account_by_id(uid)
+        return AccountService.find_account_by_id(uid)
