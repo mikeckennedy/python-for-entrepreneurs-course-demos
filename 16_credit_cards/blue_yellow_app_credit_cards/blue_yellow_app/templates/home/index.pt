@@ -1,0 +1,151 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <!-- Header -->
+        <a name="about"></a>
+        <div class="jumbotron">
+
+            <div id="hero-message">
+                <h1>Blue/Yellow Rockets</h1>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="/albums" role="button">Albums</a>
+                    <a class="btn btn-primary btn-lg" href="#upcoming" role="button">Upcoming Events</a>
+                </p>
+                <p class="subtitle">For those about to rock, we invoke you</p>
+            </div>
+
+        </div>
+        <!-- /.intro-header -->
+
+        <!-- Page Content -->
+
+        <a name="newsletter"></a>
+        <div class="content-section-a ${view.alternate_row_style()}">
+
+            <div class="container">
+                <div class="row">
+                    <form id="newsletter" action="/newsletter/add_subscriber" method="POST">
+                        <input class="form-control"
+                               type="email"
+                               name="email"
+                               required
+                               placeholder=" Enter your email for awesome updates!"/>
+                        <button type="submit" class="form-control btn btn-danger"
+                        >Get notified
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+
+
+        <a name="upcoming"></a>
+        <div class="content-section-a  ${view.alternate_row_style()}">
+
+            <div class="container">
+                <div class="row upcoming">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3 img-section">
+                        <img src="/static/img/event.jpg"
+                             class="img img-responsive"/>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="content">
+                            <h2>Upcoming Events</h2>
+                            <ul class="">
+                                <li>March 15th, The Bottleneck, Laurence KS</li>
+                                <li>March 17th, The Laughing Goat, Boulder CO</li>
+                                <li>March 20th, The State Room, Salt Lake City UT</li>
+                                <li>March 24th, Crystal Ballroom, Portland OR</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+
+
+        <a name="band"></a>
+        <div class="content-section-a  ${view.alternate_row_style()}">
+
+            <div class="container">
+                <div class="row band">
+                    <h2>Band Members</h2>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-2 band-members">
+                        <img src="/static/img/members/drummer.jpg"
+                             class="img img-circle img-responsive"/>
+                        <span>Dave Wilson</span>
+                    </div>
+                    <div class="col-sm-2 band-members">
+                        <img src="/static/img/members/singer.jpg" class="img img-circle img-responsive"/>
+                        <span>Mark Spencer</span>
+                    </div>
+                    <div class="col-sm-2 band-members">
+                        <img src="/static/img/members/guitarist.jpg" class="img img-circle img-responsive"/>
+                        <span>Rags</span>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+
+
+        <a name="bookus"></a>
+        <div class="content-section-a  ${view.alternate_row_style()} bookus">
+
+            <div class="container">
+                <div class="row band">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <div class="content">
+                            <h2>Book us</h2>
+                            <p class="lead">
+                                We love to travel and thrive on live events.
+                                We've done huge concerts down to the most
+                                intimate events.<br>
+                                <br>
+                                Just <a href="/home/book_us">get in touch</a> and start the conversation.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 img-section">
+                        <a href="/home/book_us"><img src="/static/img/book-us.jpg"
+                                                     class="img img-responsive"/></a>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+
+
+
+    </div>
+
+    <div metal:fill-slot="additional_css">
+        <link href="/static/css/home.css?cacheId=${view.build_cache_id('/static/css/home.css')}" rel="stylesheet">
+    </div>
+</div>
