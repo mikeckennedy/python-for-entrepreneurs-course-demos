@@ -1,0 +1,20 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <div class="container full-page-content" style="text-align: center">
+            <div>
+                <h1>Check your email,<br>your reset link has been sent</h1>
+                <br>
+            </div>
+            <div class="" style="text-align: center">
+
+                <div>
+                    Just click the link in your email to reset
+                    your password and log in.
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

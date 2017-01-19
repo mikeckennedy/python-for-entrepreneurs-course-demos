@@ -1,0 +1,60 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container albums-page">
+            <div class="row upcoming">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+
+
+                    <h1>Albums</h1>
+                    <div class="album-in-list" tal:repeat="a albums">
+                        <img src="${a.album_image}" alt="">
+
+                        <div class="album-title">${a.name}
+                            <a href="#" tal:condition="a.has_preview">preview</a></div>
+                        <div>
+                            <ul>
+                                <li tal:repeat="t a.tracks">
+                                        ${t.name}
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <form action="/store/complete/${a.id}" method="POST"
+                              tal:condition="view.is_logged_in"
+                              style="float: left; margin-top: 0px; margin-left: 50px; margin-bottom: 20px;"
+                        >
+                            <script
+                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="${stripe_pub_key}"
+                                    data-amount="${int(a.price*100)}"
+                                    data-currency="USD"
+                                    data-label="Buy Album: $${a.price}"
+                                    data-allow-remember-me="false"
+                                    data-name="Blue / Yellow Rockets"
+                                    data-description="${a.name} album"
+                                    data-image="/static/img/logo.png"
+                                    data-locale="auto"
+                                    data-email="${view.logged_in_user.email if view.is_logged_in else None}"
+                                    data-zip-code="true">
+                            </script>
+                        </form>
+
+                        <div style="clear: both;"></div>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="/admin/new_album">Add new</a>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
