@@ -34,9 +34,11 @@ class AccountController(BaseController):
         account = AccountService.get_authenticated_account(vm.email, vm.password)
         if not account:
             vm.error = "Email address or password are incorrect."
+            self.log.notice("Failed login attempt: " + vm.error)
             return vm.to_dict()
 
         cookie_auth.set_auth(self.request, account.id)
+        self.log.notice("User successfully logged in: " + vm.email)
 
         return self.redirect('/account')
 

@@ -21,6 +21,10 @@ class StoreController(BaseController):
         StoreService.purchase_album(self.logged_in_user, album, album.price, token)
 
         # TODO: send email receipt to self.data_dict['stripeEmail']
+        self.log.notice("YAY, we have a purchase: {} bought {}".format(
+            self.logged_in_user.email,
+            album.name
+        ))
 
         self.redirect('/store/success/{}'.format(album.id))
 

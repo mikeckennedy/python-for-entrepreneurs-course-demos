@@ -13,7 +13,7 @@ class StoreService:
 
         charge = CreditCardProcessor.complete_stripe_purchase(stripe_token,
                                                               desc, amount_paid_usd)
-        print(charge)
+        # print(charge)
         StoreService.__record_purchase(user.id, album.id, amount_paid_usd, desc)
 
     @staticmethod

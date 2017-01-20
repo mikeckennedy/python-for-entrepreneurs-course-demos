@@ -18,7 +18,7 @@ requires = [
     'pyramid_debugtoolbar',
     'pyramid_handlers',
     'waitress',
-    'sqlalchemy', 'stripe'
+    'sqlalchemy', 'stripe', 'logbook'
 ]
 
 tests_require = [

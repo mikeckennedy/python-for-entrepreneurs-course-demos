@@ -1,3 +1,5 @@
+import logbook
+
 import blue_yellow_app.infrastructure.static_cache as static_cache
 import pyramid.renderers
 import pyramid.httpexceptions as exc
@@ -15,6 +17,9 @@ class BaseController:
         layout_render = pyramid.renderers.get_renderer('blue_yellow_app:templates/shared/_layout.pt')
         impl = layout_render.implementation()
         self.layout = impl.macros['layout']
+
+        log_name = 'Ctrls/' + type(self).__name__.replace("Controller", "")
+        self.log = logbook.Logger(log_name)
 
     @property
     def is_logged_in(self):
