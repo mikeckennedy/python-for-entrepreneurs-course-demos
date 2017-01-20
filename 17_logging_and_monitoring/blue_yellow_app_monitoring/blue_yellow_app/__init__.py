@@ -144,6 +144,7 @@ def add_controller_routes(config, ctrl, prefix):
 def init_includes(config):
     config.include('pyramid_chameleon')
     config.include('pyramid_handlers')
+    config.include('rollbar.contrib.pyramid')
 
 
 def log_package_versions():

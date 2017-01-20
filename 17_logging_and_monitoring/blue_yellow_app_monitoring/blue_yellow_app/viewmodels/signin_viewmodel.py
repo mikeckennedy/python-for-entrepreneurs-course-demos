@@ -10,3 +10,6 @@ class SigninViewModel(ViewModelBase):
     def from_dict(self, data_dict):
         self.email = data_dict.get('email')
         self.password = data_dict.get('password')
+
+        # Just to test rollbar:
+        # raise ValueError("Ka Boom!")

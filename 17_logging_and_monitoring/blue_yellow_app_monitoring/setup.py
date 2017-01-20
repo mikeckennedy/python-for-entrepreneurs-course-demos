@@ -10,6 +10,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 
 requires = [
     'html2text',
+    'logbook',
     'mailchimp',
     'mailer',
     'passlib',
@@ -17,8 +18,10 @@ requires = [
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'pyramid_handlers',
+    'rollbar',
+    'sqlalchemy',
+    'stripe',
     'waitress',
-    'sqlalchemy', 'stripe', 'logbook'
 ]
 
 tests_require = [
