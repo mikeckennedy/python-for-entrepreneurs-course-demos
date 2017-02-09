@@ -1,0 +1,72 @@
+00:01 Now that we have the site kind of fitting with our old site and the new site 
+00:04 like our navigation works more or less like we'd want and so on, 
+00:08 it's time to start adding our copy and our content,
+00:11 let's begin with this huge image right here, 
+00:14 like this image is pretty decent but we can do better. 
+00:17 So, we are going to take this image here, many of the images 
+00:20 you are going to see me use here are images I've gotten from Flickr, 
+00:24 under creative commons commercially allowed uses, 
+00:28 so I'll be sure to link to those somewhere in the site or something to give credit, 
+00:32 that's the requirement for using them, but I am going to put them here. 
+00:35 Another great place to go is Death To The Stock Photos 
+00:39 if you want free images or you know, for a real site, like for my sites,
+00:42 I paid a couple of dollars, like ten dollars for my images,
+00:45 and it makes all the difference to have a great image. 
+00:48 So we want to take this and move it into our site, over here, 
+00:51 we already have our hero, great, so the next thing to do is go to the landing page 
+00:55 and find this section and change this, I don't think it's that one, 
+01:01 change this one, to hero.jpg and notice down here 
+01:09 there is another mistake so let's actually put this on there as well. 
+01:15 I think one image we weren't seeing we'll see in the moment, 
+01:18 okay, let's go refresh again, oh we've lost our image, 
+01:22 of course, because it's not on the theme, it's right there. 
+01:26 Alright, beautiful. Check this out, isn't that cool, 
+01:29 here we have our hero, our guys rocking on on stage 
+01:32 like I already want to listen to the music that they are playing,
+01:35 and of course, we are going to need to change this, this, change this links, 
+01:39 that's all easy to do, let's go to the bottom really quick, 
+01:42 oh yeah, this little plant image was messed up in the css so it didn't show up. 
+01:46 Okay, great, now, let's flip back over to what we were looking for, 
+01:50 here we have this and if you look, notice, this is a little shorter, 
+01:54 than over there, so we can look at that really quick. 
+01:59 Here you can see that we've set the height to be slightly different and so on, 
+02:03 so let me go ahead and just take this, 
+02:06 and we'll move this over, to our home, remember, 
+02:09 we can start using our home now, this is only going to appear on the homepage 
+02:13 so let's see if that works, I want to double check that that's actually a jumbotron 
+02:19 alright, let's see how well I did, there we go,
+02:23 now you can't quite see if I scroll just a little bit though, 
+02:25 ooh this is not quite the thing, hold on, 
+02:28 that I think was supposed to be the jumbotron here we go, 
+02:31 so you can see it's not quite as huge, we need to move the stuff up 
+02:34 and of course we will be doing that as we go, right, it doesn't have to be perfect, 
+02:37 you get the idea of how to do it, that's the main takeaway here. 
+02:40 So next, let's focus on these bits here, 
+02:44 so I am going to be copying some of this stuff 
+02:47 out of our existing or sort of final target site, 
+02:50 there is no sense in you guys watching me write this copy, right, 
+02:54 so for example, this top thing up here like this, we can just use that. 
+02:59 
+03:04 Okay, so I've copied this bit over and I changed the layout 
+03:07 just slightly for what we have going on here, 
+03:12 so let me just give you the quick summary because like I said, 
+03:15 it's not worth you watching me create all the copy for the entire site here. 
+03:19 There is a lot of stuff that was going on in the theme 
+03:22 and I just simplified this down to this jumbotron 
+03:25 and then this message that is contained within it, 
+03:28  but it uses exactly the same settings for like the cover image and so on. 
+03:31 So, here we have an H1 and then I put a paragraph that has the two buttons 
+03:35 and these are just Bootstrap buttons, button primary, large, 
+03:39 one goes for out albums and one is going to go
+03:42 when we have them to our upcoming events.
+03:45 Then after that we had our little subtitle
+03:47 "for those about to rock we invoke you" 
+03:49 and of course those need colors as well. 
+03:52 So here you can see we are setting the yellow color for the subtitle. 
+03:57 Alright, so I think this top part is in good shape, even our little navigation works, 
+04:02 how about that, so I feel like we've come a long way already, 
+04:05 now let's scroll down, now we're getting two pieces 
+04:08 that maybe this main content that we need to work with. 
+04:12 So our hero image and our main H1, H2 section 
+04:16 with our call to action buttons is done, 
+04:19 now it's time to focus on the rest of this homepage. 

@@ -1,0 +1,85 @@
+00:02 Let's add email capabilities to our web app. 
+00:05 So you'll see that I've copied the previous working version 
+00:09 to a new folder 13 email, and renamed the project as well. 
+00:13 So, be sure to open that one to get the code into github project. 
+00:17 Now, I have also done a few other things in preparation. 
+00:20 One is I added the ability for us to indicate
+00:23 whether our web app is in debug or release mode. 
+00:26 And, why do we care about that? 
+00:29 Well, if we were working with some say user account
+00:32 or testing some kind of bug related to email, 
+00:34 we don't want to accidentally send a bunch of email to real live users 
+00:38 and indicate or tell them hey something has changed about your account 
+00:42 or whatever it is we've triggered, 
+00:45 when in actuality we only changed our local database and nothing really changed. 
+00:50 So having this debug mode is pretty important if the emails 
+00:54 you are messing with might actually go to someone other than you, 
+00:57 so I'll talk about how we did that, and we also have this init smtp mail 
+01:02 as opposed to the mailing list which we had before, 
+01:05 so let's just look how this goes together. 
+01:07 So here I now put little dividers here so you can see what is going on, 
+01:10 we have a mode, we can set this to dev or we can set it to prod, 
+01:13 honestly if you set it to anything other than dev 
+01:17 it's going to treat itself as in production. 
+01:20 So we're going to pull that in and check that 
+01:22 and then this is left over from the MailChimp section the mailing list, 
+01:26 and then here we are going to need four pieces of information 
+01:29 that we would get from SES, Simple Email Service, 
+01:32 so you go on and go to your SES account, or you create an AWS account,
+01:36 go to the SES section, turn that on, you are going to have to verify your domains 
+01:41 before SES will send from a domain on your behalf, 
+01:44 you have to verify that you control that domain, 
+01:47 so I had to go through this step to verify talkpython.fm 
+01:50 so that I could send email to the users and say this email is from michael@talkpython.fm. 
+01:58 So you've got to do all those steps and then at the end, 
+02:01 you'll come up to a section where you get the username password 
+02:05 and the server address and the port; so, we are going to have all that here, 
+02:08 that is going to be great, you'll just fill those in, 
+02:11 and let's go check the mode real quick, 
+02:14 so here you can see we are going to set the mode, we are going to grab this
+02:18 and we are going to set it depending on whether that setting 
+02:22 is set to dev or not, really, simple, right. 
+02:25 And then, down here, then here in the email, 
+02:28 we are not quite done with this section but we are going to come down here, 
+02:32 we'll get the settings, and we'll get those four values
+02:35 and I also have this unset which is what is in github right now, 
+02:39 and I'll just print a warning if I run it it'll say warning, smtp values are not set, 
+02:43 and so we want to make sure it just says look, 
+02:46 you are not going to really be able to send mail unless you go in 
+02:49 and tweak this and put in your actual settings. 
+02:52 It doesn't have to be SES, it's going to be any smtp server 
+02:54 but the one we are using is SES. 
+02:57 Great, so now we are ready to add email capabilities, 
+03:00 let's go over here and add an email service. 
+03:03 So anytime we want to send email we are just going to go back to this service 
+03:07 and we are going to do it here. 
+03:12 So let's create a class, it's going to mostly hold static information, 
+03:19 it's going to need to hold the username and the password, 
+03:23 the four things that you just saw, or five really, 
+03:26 including whether it's in debug mode so let me just create those really quickly. 
+03:30 So we want to have some way to set these values, 
+03:33 we don't really want to let them expose them outside, 
+03:36 put the double underscore to sort of hide them, 
+03:38 so I want to have a method called global init. 
+03:42 And it's going to pass in things lie the username, the password and so on. 
+03:45 And then we'll just store them. 
+03:48 Now, one thing we do need to do is this needs to be a number, 
+03:50 so we are going to need to convert it and what I have over here is not a number 
+03:54 so I am going to put zero, but just realize, zero is not the right answer, 
+03:58 there is three or four options, none of which is zero, 
+04:03 okay, so zero there because this is going to be a number, 
+04:05 so this will setup all of our emails here. 
+04:10 The next thing we need to do is import this 
+04:15 and call the setup function here, so let's do this. 
+04:21 And the other thing we need is we are going to need global dev mode, 
+04:25 to indicate whether it's in debug or not. 
+04:29 Okay, so that will initialize the email service, 
+04:35 so then later when we want to call create an smtp server client, send the email, 
+04:40 it's going to have everything it needs, 
+04:43 and we are just basically carrying those on from within the config file onto here, 
+04:47 we make sure the production any also has a numerical value here. 
+04:53 Great, let's run it, make sure everything works, 
+04:56 it looks like it is starting just fine, beautifully,
+04:59 now notice, you didn't see those warnings about your setup is not working 
+05:02 because I am using a separate config file that I am not including in the source code 
+05:07 because it has my own settings we should actually be able to send mail. 

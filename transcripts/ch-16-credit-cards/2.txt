@@ -1,0 +1,40 @@
+00:02 So how do we get started accepting credit cards?
+00:05 Well, it's gotten much easier than it used to be, that's the good news. 
+00:09 When I first started working with ecommerce systems, 
+00:12 you had to go and set up a payment gateway and a credit card processor 
+00:18 and you had to have a proper merchant account at your bank, 
+00:22 which meant extra paper work, extra validation, all sorts of hassles and whatnot 
+00:27 and the APIs to integrate these were not pretty,
+00:31 so the thing that comes to mind for this is authorize.net but there are many of them.
+00:34 Now, the world has gotten easier since then, so for example, 
+00:37 PayPal has great options for integrating payments 
+00:42 and direct credit card processing into your application. 
+00:45 Another one Braintree, is a little more credit card focused 
+00:50 and they actually were purchased or acquired by PayPal, 
+00:53 so these are kind of the same company but two different offerings, 
+00:57 and I would say the startup darling of credit card processing these days is Stripe.
+01:03 Companies like Uber use Stripe, so you know they are big companies
+01:08 that rely on this and that works really well. 
+01:12 And it turns out that for my business, I also use Stripe, 
+01:15 you may or may not have noticed that when you purchased this course, 
+01:18 but I am using Stripe and I've used it across several web applications,
+01:22 different companies and it has been fabulous, it's super easy to use, 
+01:25 they have great Python support and we are going to see 
+01:28 how to integrate Stripe payments into our web application. 
+01:31 Now Stripe has actually a bunch of different options and ways
+01:34 in which you can work with it. 
+01:37 You can create your own payment checkout thing, 
+01:40 create the forms on your web application, manage all the stuff 
+01:45 and just use them to actually charge the card, that's one option. 
+01:48 Or you can use this thing called Stripe checkout. 
+01:51 And Stripe checkout is a really simple one click, 
+01:55 enter the central information buy it and go. 
+01:59 It works on web apps, it works on mobile apps, it's really cool, 
+02:03 it's super easy to integrate, and it saves us 
+02:06 some of the challenges about PCI compliance, 
+02:09 because we never even see the credit card, it actually goes, 
+02:14 this is a little pop up comes via Javascript straight out of Stripe,
+02:17 they take the credit card, they do the processing on it, 
+02:22 so they give us this one time token where we can finalize the payment, 
+02:26 and do all the additional processing 
+02:29 like recording our database, the purchase details. 

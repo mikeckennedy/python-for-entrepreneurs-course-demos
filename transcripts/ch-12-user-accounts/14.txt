@@ -1,0 +1,32 @@
+00:02 So you can see, here I am on my account page 
+00:05 and we can only access that if you are logged in, 
+00:09 however, the main navigation does not indicate whether or not I am logged in
+00:12 and of course we want that to change, 
+00:14 so let's take the information that our controllers know, 
+00:17 about the user, whether or not they are logged in 
+00:20 and let's push that on to the master view here. 
+00:22 So we come down to, let's get this out of our way, don't need that, 
+00:26 come down here to our shared layout, and not far down, 
+00:30 we have our navigation bit, about sign in and register. 
+00:33 And let's go over here and do a conditional so we'll say tal condition, 
+00:37 now we actually already have access to the controller, 
+00:42 now the reason that we have access to it is we have this base controller 
+00:47 and we are guaranteed every single request that runs through Python
+00:50 is running through that based controller in some way or another. 
+00:54 So it's doing good stuff for us here, so what we are going to do is 
+00:57 we say if it's not the case that the view remember that's Pyramid's terminology 
+01:01 for the view controller, is the way we structured it and what did we call this, 
+01:06 we called this like logged in user or something like that, 
+01:09 logged in user id, as a property. 
+01:11 So if it's not the case that there is a valid logged in user, 
+01:15 then we want to show a sign in and we also want to show register. 
+01:19 but we're going to have an alternate version for when you are signed in. 
+01:22 This is going to be log out, let's do account here, and maybe just like this, 
+01:26 and this will be log out, I don't think we've written log out yet but we're going to. 
+01:38 Okay, so if the user is signed in, you should see this,
+01:42 if the user is not signed in, you should see the sign in features.
+01:45 So let's go over here and refresh this, remember, we're signed in right now 
+01:49 boom, sign in, log out, but if we open it in a private browsing session, 
+01:53 sign in, register, if we do sign in register, then we are signed in. 
+01:57 Beautiful, right. 
+01:59 Check that the account works, log out, it's not found yet, let's go write that. 

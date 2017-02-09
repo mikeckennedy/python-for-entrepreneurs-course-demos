@@ -1,0 +1,30 @@
+00:02 Now that you've seen password resets in action, 
+00:05 let's review the fundamental data structure that was central to this whole process, 
+00:09 so here is our password reset class which maps to our password reset table 
+00:14 via the dunder table name, and you can see that our id was created 
+00:19 with the intention of making this not easy to guess, 
+00:23 remember, that was one of our keys to a good reset process was that 
+00:26 it's not reset one, reset two, but it's a big hard to guess 
+00:31 more or less randomly generated thing, 
+00:34 so our default value for a lambda here does that. 
+00:37 we want to store the create a date and we just do that with the default value as well, 
+00:41 but we need that create a date so that we can expire these 
+00:44 after certain amount of time, in our demo we choose one day. 
+00:48 And then finally, we need to be able to use up the reset code, 
+00:52 so we have a used date so we know when it was used, 
+00:55 just to keep it simple as a boolean, we have a was used, 
+00:58 our used ip address actually had two vales, 
+01:00 in the beginning it was the ip address used to create the reset code, 
+01:04 and then in the end, we overwrote that value with the actual ip address 
+01:08 used to apply that code to the account.
+01:12 Maybe I should have two separate fields 
+01:15 created by ip address used by ip address 
+01:19 it's up to you, how you want to store that. 
+01:22 And finally, this password reset needs to apply to a particular user,
+01:26 and we make that link by them providing their email address, 
+01:31 we can then look up the account, we don't let them log in but we do grab the id 
+01:34 and associate it here so if they actually own that address they can go to their email 
+01:38 which we sent this code to them, the id basically, in their email they click it, 
+01:43 they come back and then they can set that code for that user. 
+01:47 Alright, that's it for password resets, there is kind of a lot of small little steps, 
+01:51 but you can grab the most of the code from github and just adapt it to your purpose. 

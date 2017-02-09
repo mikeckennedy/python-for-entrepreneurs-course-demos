@@ -1,0 +1,106 @@
+00:03 When it comes to images, Bootstrap has a lot of options to work with. 
+00:07 We'll see that they will into two basic categories. 
+00:10 First of all, Bootstrap lets us define responsive images. 
+00:14 And, one of the challenges with images can be, on small screens, 
+00:19 they can create like huge scroll bars and tweak the design
+00:22 to not fit on the page of say a phone, but on a large design, 
+00:26 if you have a 27 inch screen like I have at my house, 
+00:30 then you have these little tiny images designed for phones and it looks silly. 
+00:35 So, how do you set the correct size? That could be a challenge. 
+00:38 So, with responsive images, you can tell the image to basically 
+00:41 take the size of the container, and often that container could be a grid cell 
+00:46 that is like one third of the screen or a quarter of the screen, something like that. 
+00:51 So we have these responsive images, we also have a couple of ways 
+00:55 to apply different looking feel without actually changing the images. 
+00:59 So we can change their shape and style, not in some image editing software
+01:03 like Pixelmator or Photoshop or something like that, 
+01:06 but just apply in css and that way if you change your mind 
+01:10 you maybe want to circle at one point 
+01:13 then you would like it to have just a little polaroid border later,
+01:16 you can do that and you don't have to actually redesign the image. 
+01:19 So let's look at these two aspects of images in Bootstrap. 
+01:25 Let's start with responsive images, so I am going to open this in a browser, 
+01:33 there is a very large logo and if I zoom it back, you can see that's its size. 
+01:38 But more importantly, let's have it keep the size and let me see if I can change it, 
+01:42 nope, it's just too big and now we've got to scroll to it 
+01:45 and imagine this is a phone it looks like this, 
+01:49 it's not a super experience looking at this image, right.
+01:52 So let's see how we can change this, 
+01:55 well, we come over here to say this is an image, and it is responsive. 
+02:00 That's all we have to do. 
+02:03 Because we are including Bootstrap it defines its class, image responsive, 
+02:06 and this does not use Javascript, it just uses css styles. 
+02:09 So now, if I refresh, you can see it fits into this area, 
+02:13 and as it gets bigger, it sort of fits the full screen. 
+02:17 Now, it's huge, because all that is on this page, is the image,
+02:21 so the image besides a 50 pixel border that I've added on the body itself 
+02:26 it's just taking the size of the body. 
+02:29 But, imagine this is just some small part of an overall page, 
+02:32 we can see this over at training.talkpython.fm, down here. 
+02:37 So if we make things wider, you can see we have these images here 
+02:41 but as things get skinnier, you can see that we have these images here,
+02:46 these little featured courses, 
+02:49 those have image responsive style as well as they are in the grid 
+02:52 so here when they break like this they fit onto a single row, 
+02:56 because the grid is too small to be grid like, as it gets bigger, 
+02:59 then they break into their various grid cells and now they fit exactly within the grid, 
+03:06 I've actually set a maximum width so they don't get like ridiculously big 
+03:09 but they are still responsive. 
+03:13 The other style is the shapes, so let's look at those.
+03:18 So here we have that same image once again, 
+03:21 and it's just included three times in a grid, each one takes up one, 
+03:26 there are four columns at one third of the screen. 
+03:28 Now, what if we would like this one to be by itself, this one to be rounded, 
+03:34 this one have a little polaroid thing, so I'll show you those styles here, 
+03:37 let's start up with the first one to be rounded. 
+03:43 So if we apply rounded to it, you can see it just takes a little bit of an edge off the corners.
+03:48 And, I personally really like that, again, 
+03:51 you can see I have these are image rounded over here,
+03:55 and there it is again, right, super easy, you could set the border radius and so on, 
+03:59 but image rounded lets you put the idea of rounded images, 
+04:04 rounded edges on the image, but then tweak that with css on what exactly that means. 
+04:10 Now over here, very common thing is to have a circle, 
+04:13 maybe we have one on this page, let's see, 
+04:16 if I go to about, I think I do, yeah, there, 
+04:20 so there is a picture of me and that's actually a square picture 
+04:23 but it has the image circle style applied to it. 
+04:28 So if we actually view this image, you can see it's square, 
+04:31 I didn't edit that, make it round in Photoshop or something, 
+04:34 I just applied the style to it, so let's do do that over here. 
+04:38 Let's make this one a circle. 
+04:41 Now, circle is not quite the right word, circle implies equal radius all the way around, 
+04:49 what that really should be called is oval but there you go, 
+04:54 we have a perfect circle because it's a square image if the image was 
+04:58 twice as long as it's wide you would get kind of an oval thing; 
+05:01 so just be aware, really the images you are going to apply the circle style to
+05:04 have to be basically square. 
+05:07 But this I really like the circle style, I don't know why it just seems a little class here, 
+05:12 it lets you focusing on as long as it's in the center 
+05:17 whatever is the real subject of the image. 
+05:20 In this case it's the logo not the sunbeamy things around the outside. 
+05:25 And finally, the last one is going to be a little bit hard to see 
+05:28 but you can use the image thumbnail style, let's wrap this around, 
+05:36 and this gives you kind of a little polaroid effect,
+05:39 this one I've used before but I use this much one less often, this one, 
+05:43 these two are my go to styles from Bootstrap. 
+05:46 So for responsive images, you can see we can set the class image-responsive. 
+05:53 And as our screen goes from wide to skinny, 
+05:56 you can see that the image basically adjusts to however much space it has, 
+06:00 in this case, like I said, it's taking the full screen which is kind of ridiculous 
+06:04 you would never really do that 
+06:07 but it makes perfect sense in one of these grid cells or something like that as we saw it. 
+06:10 Also notice that we are applying two styles, 
+06:13 the shape style and the responsive style together. 
+06:16 So image circle to make it circular to give it a shape 
+06:20 and then image responsive to give it its size, 
+06:23 so you can combine these without any problems. 
+06:26 We also saw we have the three image styles we have rounded, circle, and thumbnail. 
+06:32 So we can set just image-rounded, image-circle and image-thumbnail, 
+06:37 and I also applied image responsive because this is in a grid 
+06:41 and I want these three elements to take up basically however much room they have 
+06:44 within their grid cell which is more or less a third of the screen. 
+06:47 So before you reach for Photoshop or Pixelmator or some sort of actual editing tool, 
+06:52 of course you need to trim up your images and so on, 
+06:55 but before you overdo it trying to create circles, and rounded edges and whatnot, 
+07:00 be sure to leverage these Bootstrap styles 
+07:03 so most of the design of your image can actually be done in css. 

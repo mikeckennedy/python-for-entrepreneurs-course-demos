@@ -1,0 +1,64 @@
+00:00 Remember back when we created the register method? 
+00:03 We added this little bit said hey when we figure out to send email, 
+00:06 we are going to send an email here. 
+00:08 So I want to go through two levels, I want to send a very basic email 
+00:11 just to show that sending emails is working and then we want to come back 
+00:14 and we want to look it away to send very nice beautiful emails
+00:17 like I showed you in the beginning of this chapter. 
+00:20 Okay, so we are going to come here, we want to go email service,
+00:23 and let PyCharm import that, thank you PyCharm 
+00:27 and we want to call send welcome email, 
+00:31 and we are going to need to say who we are sending it to, 
+00:33 remember, we don't actually get their name we just have their email address, 
+00:36 so we'll just send them an email say hey you, welcome. 
+00:39 Alright, so PyCharm can write this function for us, like so, 
+00:44 and it defaults to a class method, I am cool with that, 
+00:47 you can change it to static if you want or do something else, 
+00:50 so what we are going to do is we are going to come up with the html body, 
+00:54 and it's just going to be standard html. 
+00:57 So let's do something like this. 
+01:06 Okay so here is a pretty cheesy html email that we are going to use, 
+01:13 and let's just make this one, let's make this one strong 
+01:16 so you can see some of the markdown stuff happening. 
+01:19 We are going to send this email and the way we are going to do it
+01:22 is we are just now going to call emails service right, any email service, 
+01:26 we want to call that basic send mail and we have to give the to address, 
+01:31 which is email, subject is going to be welcome to blue yellow rockets, 
+01:37 and the body is just going to be this html body here. 
+01:41 Right, that's all we got to do. 
+01:43 Now we are going to get much more advanced about constructing interesting stuff, 
+01:46 we are not going to write html like this much longer, but for a simple test, 
+01:50 let's try this, we are going to run the site, and hopefully, 
+01:54 there is a lot of moving parts here, hopefully we got to write, 
+01:58 so let's go over here and log out, and we are going to go register, 
+02:02 and I am going to try different account, I am going to do plus blue yellow,
+02:07 it's a trick you can do on any gmail address, is put a plus wherever you want 
+02:11 and it basically registers as a separate address,
+02:14 use the same password, it's very fancy, it's called test, so let's go. 
+02:19 Oh it looks like it didn't quite work, so obviously, I forgot it was in dev mode, 
+02:25 so that is not going to send anything, and up here in this register 
+02:29 we forgot to do out cookie auth, remember we did our cookie auth in sign in 
+02:33 but we didn't do it here, but the account was created, I have to create another one. 
+02:37 Let's store the fact right away, let's do it almost immediately. 
+02:43 Store the cookie auth, so here we are going to sign in, 
+02:46 and we are going to send our welcome email, 
+02:48 and let's just go over here and put this not in dev mode. 
+02:52 Okay, I've actually set it to be not in dev mode,
+02:55 what I have in my real apps over here is, I'll print this out, 
+02:59 so let's go and do it here we'll say print 
+03:04 running in such and such mode we'll say dev, 
+03:10 dev mode, else try again, okay so now you can see 
+03:18 we are running a producted mode, because I changed that, 
+03:22 let's register one more time, 
+03:26 plus blue yellow to and back here for the sending,
+03:30 alright, registered, we just sent one live message, great, 
+03:36 now let's go checkout my email, you can see it took a second to do the email sending 
+03:41 and then it redirected, it didn't crash, that is already a good sign 
+03:45 so let me go check my email and see what I've got. 
+03:47 Awesome, look what we've got here you guys, welcome to our site,
+03:50 I can see we have some sort of misspelling here, thanks for registering with you, 
+03:54 here is this, it should be us right, and I should probably put a new line in there, 
+03:58 but that is not the point. 
+04:02 Look we sent, let me zoom this back a little, here we go, 
+04:05 we sent our email to us, html email via Amazon SES, 
+00:01 it sent it to that address, how cool is that? 

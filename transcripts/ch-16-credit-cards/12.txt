@@ -1,0 +1,96 @@
+00:01 So let's talk about how you are going to price and sell your product or services. 
+00:07 We have a product and we want people to buy it. 
+00:09 It seems to me there is three popular basic ways 
+00:12 that are generally accepted for this,
+00:15 we could have our customers come in and say 
+00:18 alright, here is what we offer, it's this price per month,
+00:22 enter your credit card and we will charge you indefinitely. 
+00:25 So, we could use a subscription 
+00:28 and here we'll charge them a small amount over and over. 
+00:31 This business model it's quite popular and growing in popularity 
+00:34 because once you get somebody to sign up, it's great. 
+00:38 Right, I am thinking of things like 1 Password 
+00:40 that used to be able to buy it for 25 bucks,
+00:43 now it's 6.99 a month, indefinitely right, so that's great work if you can get it, 
+00:48 but then you end up with a lot of challenges, 
+00:52 you end up with having to make sure 
+00:55 there is always some reason for customers to stay,
+00:58 that they are always continuing to get value from you, 
+01:00 continue to get more value, and that sounds really great, 
+01:03 but it can also put competitive pressures on you, that are not great, 
+01:07 I am going to give you an example at the end, 
+01:09 where this might not have been the best choice. 
+01:12 So this is very popular, it work pretty well, it's well known,
+01:15 it's well understood, but many people are reluctant to buy a subscription 
+01:19 that could just go on and on and on, they like to get a thing and own it. 
+01:22 Well, if you have a thing, a customer can come along,
+01:25 they can pay you more money and they can own that thing. 
+01:28 So for example courses at Talk Python Training this is how you buy them. 
+01:33 I ask a little bit more money than a subscription, a lot of these video places are like 
+01:37 30 bucks a month, for my courses I typically ask 40, 60, 70 bucks, something like that, 
+01:42 but once you pay one time, it's yours forever, at least until I go out of business 
+01:48 and something terrible is wrong, but until then, I'll give you access forever, 
+01:52 you don't have to pay again, to get access to this course, 
+01:56 you have it as a reference and so on, it's something that you almost own. 
+02:00 Another way is to say look, I am going to get a lot of users, 
+02:04 not just a reasonable amount but a lot of users 
+02:08 and I am going to have a thing the users are going to come, 
+02:11 check out the thing, but instead of having them pay for it, 
+02:13 I am going to sideload that, I am going to give them a little bit of an ad, 
+02:17 and I am going to charge the advertisers a couple of them lots of money 
+02:21 and it will be free for all the many users. 
+02:24 So an example of this might be my podcast, right, like my podcast is entirely free, 
+02:28 at the time of this recording it's coming up on 3 million downloads, 
+02:32 and nobody who has downloaded has given me any money 
+02:38 for the right of downloading and listening to it, I just do it for free. 
+02:41 But because I have so many listeners and users, 
+02:43 I can go and speak to companies that have something to sell, 
+02:47 something to communicate, the story they need to get to the Python audience, 
+02:51 and they are very happy to pay a decent amount that makes the podcast ad model work. 
+02:56 If I try the ad model on the courses, maybe I could make it work, 
+03:00 maybe I couldn't, I could tell you right now, with the number of users I have, 
+03:04 the ad model would not work. I have a good number of users,
+03:07 I am very happy how that's going, but it's not 3 million. 
+03:10 So these are different scales, you really got to think about it, so like I said, 
+03:15 I'll give you an example, like subscriptions I think this is what people go to first,
+03:18 it's really tempting to say I am going to set up a renewal, automatic renewal billing, 
+03:23 give me your credit card every month I am going to charge you 10 bucks, 
+03:27 whatever it is, it could vary. 
+03:30 This works okay, it works pretty well for software 
+03:33 if it's software people are going to use all the time, 
+03:35 like Office, people use Office a lot, 
+03:38 they are happy to pay like 6.99 a month, 
+03:42 a lot of the online course models have this,
+03:45 but I decided when I came along with mine that I was going to go 
+03:49 with the single purchase, so why did I not do the subscriptions? 
+03:52 Well, if I look at the competing, the other companies making online courses, 
+03:58 so those might include Pluralsight, it might include Lynda.com, things like that, 
+04:04 those are good people I know some of the folks at each of those companies. 
+04:08 But, the challenge I have is I think my courses are pretty high quality, 
+04:12 it's what people tell me, it seems like the feedback is really good, 
+04:15 I put a lot of energy to make them highly polished and hopefully you are enjoying it.
+04:20 But, because it's just me, me and Matt and a few people in the future 
+04:27 but it's not a huge number of people, if I am going to try to compete 
+04:30 against a company like Pluralsight, they have like five thousand courses, 
+04:33 so a subscription to my place for a couple of courses, 
+04:38 even if you really like these courses, and a subscription to a place 
+04:41 of five thousand courses those are really unbalanced, 
+04:44 and it's really challenging for me to make the case, 
+04:47 you should have your subscription with me, than you should with the other place. 
+04:51 On the other hand, if you want to learn one thing, 
+04:53 if you really want to learn about Python and building web apps, 
+04:58 that you can create as business, like this course, where you really want to get started, 
+05:01 you want to take the Jumpstart course- well, if the price is not too high, 
+05:05 it makes total sense to pay that one time to learn that thing high quality
+05:09 in a place that you know and trust. 
+05:12 Okay, but it doesn't necessarily mean a subscription that is going to go on and on and on, 
+05:17 if I can only generate five courses a year. 
+05:20 Maybe that makes sense, maybe it doesn't. 
+05:23 My calculus was that the single purchase model would alleviate 
+05:26 some of that catalog unbalance friction 
+05:30 that I would have to really compete uphill against, 
+05:33 and I think that's worked really well. 
+05:35 Hopefully that little look inside my thinking, whether it was flawed or not, 
+05:39 it seems to be going okay but that's what I came up with, 
+05:42 hopefully that gives you an understanding how to price your model, 
+05:46 looking at your competitors, and so on. 

@@ -1,0 +1,83 @@
+00:01 Our email service is all initialized, it has everything it needs 
+00:04 in terms of credentials and connection info to get started.
+00:07 What it doesn't have is the ability to create an smtp client or send an email 
+00:10 so let's work on those things. 
+00:12 So first thing we are going to do is we are going to add another static method 
+00:16 and this is just going to be used locally, I don't think it will be used outside, 
+00:19 so I'll call this create smtp server, 
+00:22 right now I am going to return none, 
+00:27 now we could use Python't built in email system 
+00:29 but I want to use something different, 
+00:32 I am going to use a package called mailer, so if we come over here.
+00:36 we can go and check out the documentation for this character, 
+00:41 so mailer is just a simple package that makes it easier for us to send email, 
+00:45 you can see that we can setup an html version, a plain text version 
+00:50 if the client that receives the message doesn't want to see html, 
+00:55 they can actually display just the text and handle attachments, things like that. 
+00:58 So we are going to use this mailer package, so we are going to start 
+01:02 just letting PyCharm drive for us, so we'll say import mailer and PyCharm says 
+01:07 you know, I don't really know what mailer is but I can install it for you and we'll let it.
+01:16 Okay that was great, now it's going to say oh first of all, 
+01:19 it's going to say add requirement mailer to setup, 
+01:23 so when you install it it will automatically install mailer rather than crash, 
+01:27 you definitely want to do that, and now the last thing is it's going to say 
+01:31 look, we are not using that. Alright so what we want to do, 
+01:35 is come down here and create an smtp client like so, 
+01:45 so we are just going to create an instance to this mailer class, 
+01:48 and we just need to set the host, the port, whether or not to use tls,
+01:52 is it encrypted or not, so here I have just copied those values in, 
+01:56 set the host port, username, password and to use encryption, 
+01:59 and we are just going to return that.
+02:01 Anywhere we need to create one of these abilities, to send the message,
+02:04 we are going to call this function to get it started. 
+02:06 The next thing we want to do is we want to be able to send a basic email, 
+02:10 that is going to be the base method that the erst of this class is going to use, 
+02:15 so we are going to add methods like send password reset, 
+02:19 send new account, send purchase email, 
+02:21 all of these things and what those are going to do is 
+02:24 they are going to basically build up the information that goes into the email 
+02:28 and then they are going to feed it off to this method 
+02:30 which will actually do the sending. 
+02:32 So for this one we don't need too much information, 
+02:35 we are going to need a to address, a subject and an html body. 
+02:42 Alright, so the first thing we want to do is we want to get access to this smtp server 
+02:49 and there is lots of things that can go wrong, so let's start here. 
+02:54 So now we have our server, let's just add the except block, 
+02:59 we'll do better than that in a minute, the next thing we want to do is 
+03:04 we want to create a message we want to send so we'll say from= 
+03:10 now let's just use a standard from address, so let's go up here and do this. 
+03:17 Now in order for this to work, because the credentials at SES 
+03:22 I have only approve sending out of talkpython.fm 
+03:26 I am going to use a talk python address. 
+03:29 So it will be demo and this will be talk python demo, something to this effect, right, 
+03:34 you will need to change this to be whatever your domain that you verified with SES is. 
+03:40 So let's go down here, 
+03:44 let's make sure we set the character set to utf8 that's pretty standard,
+03:50 like so, and then let's go ahead and set the subject to be the subject 
+03:55 and we'll set the html to be the html body. 
+03:58 Now it gets a little complicated, I have some html, 
+04:02 how do I set the body to some text version of the html body, what do I do here, 
+04:09 well, it might sound complicated, but it turns out it's not complicated, 
+04:14 we are going to use a nice little package. 
+04:16 So if we come over here, to pypi.io we can look for html to text, 
+04:22 so this will turn html into markdown structured text 
+04:26 so for example if we have like bold in our html it will just go ** 
+04:32 and put the words in there, standard markdown.
+04:35 So that actually seems like a pretty decent compromise for 
+04:39 well if you want to look at html we'll give you kind of markdown that you can read. 
+04:44 So we are going to use html to text.
+04:47 And again, PyCharm can take care of everything for us. 
+04:54 
+04:57 And with that handy package, it is super easy to convert this to text. 
+05:04 We just give it the html that we want to convert, and boom, we are done. 
+05:10 So now we've created our message, we've created our sender, 
+05:13 it's up to us to just send it. 
+05:17 Easy enough, right, no problem at all, but maybe we want to check, 
+05:21 remember we have that debug mode, we'll say if it's in the debug mode, 
+05:29 so let's say if it's not in debug mode, then we want to send it. 
+05:33 Otherwise, let's do this. 
+05:37 Let's print this out, just so we know that something went wrong here, 
+05:44 and maybe just so that you can see things happen, 
+05:48 let's do a print sending message live, something like that and we'll do an else, 
+05:52 print skipping send email is in dev mode. 
+06:00 Alright, the next thing for us to do is to actually test this out by sending some mail. 

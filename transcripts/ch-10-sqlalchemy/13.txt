@@ -1,0 +1,17 @@
+00:00 So let's review, real quickly. 
+00:03 The core element of what we did was this create album method, 
+00:06 so we created an album and we gave it the data needed, 
+00:09 the way we did this is we create a session using the session factory,
+00:12 in this case we were inserting so we allocate new objects 
+00:15 and add them to the session,
+00:17 we want to add some related dependent objects like these tracks, 
+00:20 so we go and use our relationship that we have, 
+00:23 we append to the tracks and when things got inserted, 
+00:26 all the foreign key relationships 
+00:28 for the auto-incremented ids were all worked out 
+00:31 we called commit, we returned the album, we did a little print, 
+00:34 we haven't looked at that yet but somewhere in here 
+00:37 there should be created a new album with id 2. 
+00:41 So you can see that after we called commit our album 
+00:45 now actually had its primary key back which we can use for all sorts of things, 
+00:50 you maybe want to use this for further processing in your app. 

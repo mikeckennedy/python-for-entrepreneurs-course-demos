@@ -1,0 +1,98 @@
+00:00 So let's look behind the scenes at my account at 99 designs. 
+00:04 I launched my newest podcast Python Bytes, 
+00:07 which is like latest news and headlines show for the Python community. 
+00:11 I had no idea what I should use for a logo but I knew that I did not want 
+00:17 yet another go to python.org get the main logo and put the microphone by it, 
+00:23 or something silly based on that, I wanted something creative and unique. 
+00:27 And I am pretty decent at web design, I am not very decent at graphic arts. 
+00:30 I knew I needed to get help, so here is an ad I posted a while ago,
+00:34 or a contest as they call them here. 
+00:37 And you can see it's 699 dollars and that is kid of expensive 
+00:41 but that's a bit of a premium pack, I think you can do it for like 399 dollars, 
+00:45 something to that effect, but I wanted a few extra things as well as 
+00:51 I wanted to pay just a little bit more to get some of the better artists to come along,
+00:55 and you can also guarantee it, that means you are going to start the contest 
+00:59 and you promise to pay somebody 700 dollars 
+01:02 at the end regardless of what happens.
+01:05 and, that's a bit of a risk, but I had good experience with 99 designs 
+01:08 before and you'll get better artists,
+01:11 and you'll get more people participating if you do that. 
+01:14 So here you can see I've awarded a winner, this guy was really good, 
+01:17 and you can see here is what it is, I want Python Bytes podcast logo 
+01:21 on social media, I currently run this podcast etc, 
+01:24 so I talk about here is the background information, I run this other one, 
+01:28 here is the things I am going to need, and so on, and here is how it works. 
+01:31 It takes you through and says how much do you like modern versus classical,
+01:36 mature versus youthful, like which way are you going, 
+01:40 are you going for a sophisticated design or a playful fun design and so on. 
+01:44 It asks you all these questions when you get started, and then, more importantly,
+01:47 it shows you a bunch of various designs and then you could say I like this one, 
+01:52 I don't like this one, I like this one, I really like this one, 
+01:56 I really don't like that one, and then, this stuff is supplied to the artists, 
+01:59 in the beginning, like oh, I really like this one, if I had something like this for Python, 
+02:03 maybe I'd be happy, right, so they can use that to kind of get a sense
+02:06 for what visually you are looking for. 
+02:10 So I created this contest and I ran it only for, I think I ran it for three days, 
+02:15 it could run for either a week or two weeks, I don't recall but, 
+02:18 you can run it for a while and I actually stopped it earlier 
+02:22 because I was really pleased with one of the designs 
+02:26 and I was feeling increasingly bad 
+02:29 as more and more people were doing work and submitting designs I am like, 
+02:32 no, none of these are even close to the one that I chose in my opinion. 
+02:35 I could have gotten a lot more submissions by letting it play out over time, 
+02:38 but let me go ahead and show you what I did get. 
+02:42 So here I am going to flip through these designs, you can see I said no,
+02:47 I am not interested in this, so this one did not speak to me, look at this, 
+02:51 like what is that, a cactus, no I think it's microphone, 
+02:54 there seems to be a snake embedded in the middle but what's the other stuff,
+02:59 this doesn't make any sense, but let me just flip through a few. 
+03:01 This is the one, the design that I actually picked, but not in its original form, 
+03:05 I went to this guy and said hey this is really cool and clever,
+03:08 could you give this to me on white, and in a few other formats? 
+03:11 So I really liked this one, here is a few other, he also submitted this in the beginning. 
+03:15 This one, actually this one is ok, but I don't know, 
+03:18 it's still just like a basic remixing of that logo and there is rules like 
+03:24 legal copyright protection trademark protection I guess, 
+03:28 against remixing the Python logo as I found out, long story,
+03:32 but, these are not bad but I think they break that rule so I couldn't pick them, 
+03:37 this one was pretty cool, but one of the things I did that didn't think through 
+03:42 when I first put the contest together is that it asks you is this a blind contest 
+03:46 or can the artists see each other's submissions as they come in. 
+03:49 And they saw that I liked the submission with this snake and the bars, 
+03:53 and this guy or a girl immediately started making other designs 
+03:56 with that exact same thing and so this is pretty clever, 
+03:59 I really thought well they just like basically, literally ripped off 
+04:04 that guy's idea about the snake, and then started incorporating it. 
+04:07 So in the future I would actually create blind contest 
+04:10 where the designers can't see each other's work, 
+04:12 but once you've started the contest, you can't change it, 
+04:15 so I was kind of stuck with that. 
+04:17 Again, just remixes of the Python logo, 
+04:20 I think this is actually against the trademark. 
+04:23 04:34 This one I actually liked pretty well, but again, 
+04:38 it was against the trademark of the Python organization, so I couldn't use it. 
+04:43 So now, we are starting to narrow in on the final design that I really liked, 
+04:47 see different colors, a little bit of feedback, 
+04:49 could you do it on the white, things like this. 
+04:52 And then, here is the final design that I went with. 
+04:56 Oh I chose this guy as the winner, we worked back and forth for three or four days 
+05:00 and they ended up delivering all the various sizes and styles 
+05:04 that I needed to get the website launched, and if you look at the final product, 
+05:07 here is the website, the final product on pythonbytes.fm with the logo 
+05:12 and the design that I got from 99 designs. 
+05:16 Now, I got this picture here in the center, and I got that little icon at the top left 
+05:20 but other than that, I designed the whole page using bootstrap 
+05:24 and themes and so on,
+05:26 but if you look throughout the site you can see 
+05:29 how the sparse white background of the design and the colors were really central 
+05:34 to the rest of the web design, so once I had this design I'm like oh, 
+05:37 I think I can totally design the site around this and make it look really good, 
+05:41 so over here you can see a lot of the colors 
+05:44 that come from here, over there, things like that. 
+05:47 So 99 designs, I've had two contests there and they have both come out really well, 
+05:53 so that's not a huge sampling but my experience has been it's been a great place 
+05:58 to get help for graphic design, especially when you don't really know what you want,
+06:02 because you get many submissions and then you can work with artists over time 
+06:06 to get what you want, rather than picking an artist and trying to work with them 
+06:10 until you come up with something, 
+06:12 you can get a bunch of different submissions and ideas all at once. 

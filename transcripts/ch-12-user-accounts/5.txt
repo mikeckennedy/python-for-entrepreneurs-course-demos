@@ -1,0 +1,140 @@
+00:02 So we have our account table, now let's go insert some data into it. 
+00:05 Let me run the app and remind you guys how this is supposed to happen, 
+00:08 so we come over here, clear that up a bit, 
+00:11 we can register and we can put in our information right here. 
+00:15 But this did nothing before because we had no account class, 
+00:18 and no data access, let's review. 
+00:21 So here is our account controller, and we have sign in and we have register, 
+00:25 remember this follows the get, post redirect pattern and this is already fine, 
+00:32 we just went to that page and it looked great. 
+00:34 What we want to do is we want to register here 
+00:37 and let's just check the validation really quick, 
+00:39 it looks like the password and confirm password have to match 
+00:42 we have to have a password and we have to have some kind of email, 
+00:45 you might want to check that this is like matching the regular expression 
+00:47 or it's some kind of proper email, at least it has an @ and a dot in it. 
+00:51 Something like this. 
+00:53 Okay, so now what we are going to do is we want to create the user here, 
+00:55 now we don't want to just allocate a new instance of an account, 
+00:58 set some properties and store it, this account creation and whatnot, 
+01:02 it's a little complex we are going to hash the passwords 
+01:05 and we're going to do a few other things as well, 
+01:09 like the other major parts of our data access, we're going to have a service 
+01:12 whose job is to manage all that stuff and here we're just going to call create account 
+01:16 on the service thing, so I am going to call this account service, 
+01:19 it's going to handle things like generating password resets, 
+01:21 changing passwords, etc. 
+01:25 Okay, we'll create a class, AccountService, and it's going to be mostly static stuff, 
+01:31 let's add a method here, called create account. 
+01:37 Now, it's going to take the email, it's going to take the password, 
+01:41 I think everything else is auto generated, the user only enters their email, 
+01:45 their password and the confirm password 
+01:47 which if they match, great, we'll just send one,
+01:50 if they don't then we won't ever let them get here
+01:52 But I want to be very clear here that this is the plain text password,
+01:56 this is not what we want to put into the database, 
+01:59 okay so up here we're going to have to import the account and let's do it like this, 
+02:08 let's say from that import account, I just want to work with that character right there 
+02:13 and we are also going to need the session, 
+02:16 so we're going to need to start out like everything we do by creating a db session, 
+02:22 so we'll say session= that, and later we want a session.commit.
+02:27 And somewhere in between what we want to do is 
+02:30 we want to say account=account like that, and we could set, remember, 
+02:36 we could use keyword value arguments here 
+02:38 or we could just say account.email= the email they passed in, 
+02:44 an account.password hash = I'm just going to write something bad for a minute,
+02:50 hash plus plain text password, right.
+02:54 The next thing we are going to do is talk about how to generate this, 
+02:57 this is just temporarily please don't do this, just to show you 
+02:59 how this whole process is going to work. 
+03:02 So there is one final step and that's going to be session.add account. Like that. 
+03:06 Then we commit it, and then we're all done. 
+03:11 So we are going to actually come and create the user,
+03:18 and this is not imported, is it, 
+03:22 it's cool, we've got auto completion for anyway 
+03:24 but we're going to need to import it for this to work. 
+03:26 Now the other thing to be careful here is this is actually not return, 
+03:30 so just to use this thing here we're going to print out the email address, 
+03:33 now, this should be complaining a little bit more 
+03:36 because we're not actually returning the account, there we go, so we're returning it, 
+03:40 we'll be able to print this out here, so we have this step right here, 
+03:45 let me put this send welcome email down here 
+03:48 because we're not going to get to send welcome email until, 
+03:51 we'll we have email working there are we, but this part, 
+03:53 this little step here don't forget this. 
+03:56 There is a couple of places or ways which we could validate this, 
+03:59 so we're going to have to do something like this. 
+04:03 So here we want to do something like find the account by email, right,
+04:06 this doesn't exist yet, we're going to write it in just a second, and, 
+04:10 if the account is not none, we want to do something like this, 
+04:14 vm.error an account with this email already exists, 
+04:18 and we'll just stay on the same form so we'll say like so, 
+04:22 remember how awesome our view models are, well, 
+04:25 here they are being awesome again, so we are going to want to, 
+04:28 this doesn't exist, we've got to write that, 
+04:30 we want to make sure that this is not already an account existing here for this email, right, 
+04:34 if they forgot they created account they might try to create it again 
+04:37 or if they have problems logging in, and they go maybe I never did create an account, 
+04:40 let me try and register, like nope, you are going to need to reset your password, 
+04:43 something to that effect but here we've created it 
+04:46 and we probably want to log something interesting 
+04:48 but for now I am just going to print it out. 
+04:52 Okay, so let's finish this little part right here, right, 
+04:54 this is why we create this account service, 
+04:57 there is going to be a bunch of these little helper methods, all to do with accounts, 
+05:01 and we can just stash them here, use them throughout our app 
+05:04 and forget about it and not make really complicated action methods. 
+05:08 Alright, so again, we are going to need the session 
+05:10 but this time instead of doing an insert we're going to do a query 
+05:14 so we'll say count= session.query (Account), we want to do a filter,okay, 
+05:26 so we are going to get just the first one, now we could do one 
+05:30 but I think one will throw an exception of none is found 
+05:33 and ideally one won't be found in our particular use case here. 
+05:37 So first is better. Now we are not just going to use this for the register method, 
+05:40 we're going to use this for login, we're going to use this for all sorts of things
+05:43 but we need it for register right now so we're going to go ahead and write this,
+05:47 there is one thing you might want to be careful of, 
+05:50 what if there is a space in their email, right, 
+05:52 when they entered it in the form there was a little space, 
+05:55 or maybe it's upper case and you want a lower case, something like that, 
+06:00 so we've got to be really careful here maybe we'll do a test, 
+06:02 we could do this in our view model, but the emails could come from all over the place 
+06:06 not just that one view model, so let's make sure this particular method is durable 
+06:09 under bad inputs, so we'll say something like this, if not email, 
+06:15 so if there is nothing here, we're just going to return none, 
+06:18 so there is going to be no account, it's empty, 
+06:21 remember that's not nullable, and then we can just say this. 
+06:27 Get the little case version, strip off all the white space, 
+06:31 and then we'll go through our little database trick here. 
+06:34 Great, I think we are ready to roll, let's give this a test, in fact, let's debug it, 
+06:37 we'll step through our little account register step. 
+06:41 Alright, are you guys ready to register? 
+06:43 I am here we go, okay, my email address is going to be let's say this one, 
+06:48 it doesn't really matter, it's going to be test 
+06:51 and this will be test two, we'll just make sure our matching email works, 
+06:54 so we come down here nope, it didn't validate, alright, let it go, 
+07:01 the password and confirmation don't match, 
+07:03 okay let's just make this test, one more time, I am going to step over, 
+07:06 this time it should validate, alright,
+07:08 so we're going to run this find account by email notice it came back none, right here, 
+07:12 that's good, we don't have an existing account, 
+07:16 we just created the account inserted into the database, we get back, 
+07:21 now we have this account let's open it up and have a look, 
+07:24 here we have our id look, the id is this big giant thing created as well,
+07:27 here is what day and time it is right now, here is the email address I use, and so on. 
+07:32 Great, so I am just going to let it go, 
+07:34 and we should have redirected to your account. 
+07:37 Yes, it works. Now of course, we did not hash the password, 
+07:40 we are going to talk about that next, let's just look really quick. 
+07:45 Here we got our id, and this and our hash test password, 
+07:49 not the best password there is but that is okay. 
+07:52 Very cool. Let's try to log in again with this, and just test our code 
+07:56 make sure we are getting that one object back so let's go, 
+08:01 now, notice this still says sign in and register,
+08:03 we haven't managed the whether or not the user is logged in within our web app, 
+08:07 within the database, it's all done so let's put the same email address 
+08:10 and test, and test, register, and it's going to come down here 
+08:14 and hopefully our little test about creating an account that exists, 
+08:18 oh look, here is an account that already exists by that same email address, 
+08:22 so guess what, there is a problem, this account already exists let's go tell the user. 
+08:26 Well, you can't log in that account already exists. 

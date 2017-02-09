@@ -1,0 +1,101 @@
+00:03 It's time to have users in our application. 
+00:06 So let's start by creating a class over here in data, we have our albums, 
+00:10 we have our tracks, let's have an account. 
+00:13 
+00:16 And it's going to be very similar over here, we're going to use these things, 
+00:20 actually a bunch of this, let me just copy that, don't need the ordering list,
+00:25 may not need the ORM we'll find out in a moment. 
+00:29 So we're going to create a class, called account. 
+00:31 And it's going to derive from sqlalchemy base like all the things 
+00:34 we map to sqlaclhemy and let's go and give it a dunder table name, 
+00:38 now we need to give it things like an id. 
+00:42 
+00:48 So here is a very rudimentary user, for our database. 
+00:51 There is a couple of things I want to talk about here as we are going through this. 
+00:55 First of all, it's really important to have an email for your users, 
+00:58 you will be super surprised how quickly people forget their log ins, 
+01:03 one of the very first things people do when they go create an account is 
+01:07 they will create an account, maybe they will mistype the password, 
+01:10 they will have to come in and reset their password so email is important. 
+01:13 Also, you want to be able to put them on your mailing list and so on. 
+01:17 So email, however, because email is often used as a unique identifier for your account,
+01:21 it's important that this is unique and you want to do queries 
+01:25 by like find me the user with this email when they log in and stuff 
+01:28 so you will have an index so let's add all of those.
+01:33 Okay so now we have a nice strong email, we will have a create a date here 
+01:40 let's just make it really easy for the create a date to get set 
+01:43 so this doesn't get forgotten or incorrectly done, 
+01:46 so what we're going to do is as soon as you create one of these accounts 
+01:50 and insert into the database, we are just going to set the create a date to right now,
+01:54 so we want to import date time, and now, and if you want to just do the days
+02:01 you can do today but we're doing now because we might want to know 
+02:05 like to the second when accounts were created, 
+02:07 oh I almost made a mistake here, be very careful, do not put the parenthesis here, 
+02:12 you want the function not the value. 
+02:15 Now are you going to do queries, and reports based on this create a date, 
+02:19 like show me all the users created today than you want an index, 
+02:22 I am not planning on that so that is fine. 
+02:25 Here we have the emails confirmed, we don't want this to be nullable, 
+02:29 but we do want to have a default value 
+02:31 and by default let's say the email is not confirmed.
+02:37 Same thing down here, some users when they log in
+02:40 you will want to be able to give them access, namely you, 
+02:44 and people that work with you, give them access to backend tooling 
+02:48 and other higher order features, maybe higher permissions, 
+02:51 so this is an easy way to create a set of super users that can really manage the site 
+02:57 in a real rich application with many people involved you probably want group policy 
+03:01 but we're starting simple, we are going to start here. 
+03:04 Okay, so the last thing to talk about is the id, now it's totally reasonable
+03:10 if we put the id as an auto incrementing number, 
+03:13 but there are few drawbacks we need to consider in that case. 
+03:17 So if we go over here, imagine that there is an account page, 
+03:20 I think there actually is, yeey, your account, 
+03:22 we could view the account of some user 
+03:25 and it was like this, account/7, yeah, it's not found but imagine it was found; 
+03:30 if you had that url, you might wonder what is at account 8 
+03:35 or account 6, or account 1, 
+03:37 and you might start poking around the site 
+03:40 and so one o f the things you might consider, 
+03:43 you don't have to do this, but I do on my sites is make things like this, 
+03:47 where it would be really easy to guess or enumerate or loop over all of the elements 
+03:52 in your site if for some reason a bit of security got to lax 
+03:55 and you didn't verify that that was the same user 
+03:58 or they were super user or something like this, 
+04:00 what we can do is we can make this look more like that, and randomly generate it, 
+04:04 maybe a little more interesting than that but we'll make it a big alpha numeric thing 
+04:08 that is extremely hard to guess, and is not numerable in which case 
+04:12 one- you don't reveal how many users you have like if you are super excited 
+04:17 about a new service and you are thinking about buying it for your business 
+04:20 and you come along and you see oh, I am user 52, maybe this is not a real business, 
+04:25 I thought this was really popular, right, that should send a wrong message as well, 
+04:28 so for a couple of reasons like that you might want to make the actual account id 
+04:31 not just the basic number. 
+04:34 So, let's do that here. 
+04:37 So I am going to import uuid, and we're going to let me just show you here, 
+04:45 so we're going to use uuid4, which comes out like this 
+04:50 and we would like just basically this text in here to be our user id, 
+04:55 we could keep the dashes or we could replace them, with that, 
+05:04 so we can use something like this, here, as the generation of our key,
+05:09 so this is not going to be an integer, this is going to be a string and this is of course
+05:14 going to be the primary key is true and we want to set the default 
+05:18 to be basically that generation sequences that I just wrote, 
+05:23 so we are going to give it a lambda that takes no parameters 
+05:26 and it's going to return that code right there. 
+05:28 And of course, we've got to do it like so. 
+05:32 Alright, so now this should give us a non discoverable non leaking 
+05:37 how many users you have sort of id for account base here, so that's great. 
+05:41 Primary key should make it unique and indexed, 
+05:43 we'll have our email, created account, confirm, super easy. 
+05:47 I think we're good, we also don't need that 
+05:50 for a simple beginner account I am going to declare this thing is ready to go. 
+05:54 Wait, it's not ready yet, I've realized there is one super important thing, that we need to store, 
+05:59 so we have our user id, you notice there is not a user name, 
+06:02 I am just going to use email as the user name,
+06:06 but when they log in having the email is not enough, 
+06:09 you would probably want to have a password, right, so we could write this, 
+06:13 do not write that, do not put the password in your database, 
+06:19 do not put the plain text password in your database,
+06:22 we are going to talk about how to deal with this
+06:24 but we're going to put a one way hash 
+06:27 of the password very strong, hard to reverse, in the database. 
+06:32 Okay, now this account class is ready to roll. 

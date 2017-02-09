@@ -1,0 +1,46 @@
+00:03 It's time to go from decent design to really good design. 
+00:06 We are going to use something called a frontend framework to do this, 
+00:10 so let's talk about what we are going to particularly focus on 
+00:13 about frontend frameworks. 
+00:15 We are going to start by doing a quick survey, 
+00:18 in this course we are going to use Bootstrap, 
+00:20 but you'll see that Bootstrap is not the only choice 
+00:22 and I am not necessarily recommending you use it 
+00:24 because there is actually a ton of god choices
+00:26 which we'll see a few of them right now, 
+00:28 Bootstrap is just the most popular and the one I really know the best 
+00:31 so that's why I use it. 
+00:33 Speaking of Bootstrap, we are going to do a quick introduction 
+00:36 for those of you who haven't heard of Bootstrap, 
+00:39 or I am sure you have heard of Bootstrap but maybe don't know 
+00:42 exactly what is that comprised of and what the moving parts there are. 
+00:45 We are going to focus specifically on the grid layout. 
+00:49 Now, this is a topic that very much likely would be best at the end 
+00:53 because this is kind of a complicated topic relative to the other Bootstrap stuff 
+00:57 which is very obviously visible and visual, 
+01:00 but it's also one of the most important parts about Bootstrap, 
+01:03 we are going to use it for the other examples in this chapter
+01:06 so we are going to put it right up front and focus on grid layout. 
+01:10 Next come up a set of UI components, 
+01:13 these are buttons, images, forms, navigation, dialogue, and themes. 
+01:17 So we are going to focus on these various parts of Bootstrap that we can work with, 
+01:21 the first five or so are quite small, 
+01:23 see there is a really great set of buttons for call to actions, 
+01:27 a lot of small classes you can apply to images to get a big bank for your buck and so on. 
+01:33 But themes at the end is the thing that really makes this super important 
+01:37 as the entire chapter, because, 
+01:40 while knowing how to use Bootstrap is important, 
+01:43 if you just start from there, you still have to basically be a designer 
+01:45 and be creative and build this, and even if you are, 
+01:49 you don't necessarily want to start from zero, 
+01:52 you want to start from more or less something that is like what you want to work with, 
+01:55 so we'll see that themes allow us to find something that is a very close fit 
+01:58 to the design that we are looking for, 
+02:01 and then we can just drop in and boom, make it ours. 
+02:04 Finally, we are going to bring this all together by building out this 
+02:07 Bootstrap based design using a beautiful theme 
+02:11 for the Blue Yellow Rockets website. 
+02:14 So you've seen several pictures of the Blue Yellow Rockets website 
+02:17 as I've talked about what we are going to build throughout this course, 
+02:20 this is what we're actually going to put that html css and images together 
+02:23 to make something that looks like our end product. 

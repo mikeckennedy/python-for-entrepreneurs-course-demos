@@ -1,0 +1,66 @@
+00:01 So like some of the other demos, there is a lot of moving parts 
+00:04 but you've seen them over and over and so seeing them one more time 
+00:07 is just going to slow things down. 
+00:10 So I did a little bit of pre-work to get the web app ready 
+00:13 for all this integration that we are going to do. 
+00:16 First of all, notice, I've created a Stripe checkout settings, 
+00:19 in our various configuration files, the development.any and production.any. 
+00:24 Now, when you create your Stripe account you are going to see 
+00:27 we have a public key and a private key. 
+00:30 The public key actually goes into your webpage, in that Javascript form. 
+00:34 Your private key is what you use to finalize the token, 
+00:37 public key can be public, as you imagine. 
+00:40 Private keys should never be public. You want to protect those. 
+00:43 Also, you have two types of  keys, you have a public test key,
+00:47 you have a test key set of keys and you have a live set of keys. 
+00:52 So, you want to make sure that the development.any has the test keys, 
+00:57 for most of the time, maybe one time you want to switch it to live 
+01:00 and do a purchase on your own credit card, 
+01:03 but the majority of the time you want this to be the test keys and then in production, 
+01:09 over here you want to put your actually live keys. 
+01:14 It's really nice because they actually have the word "live" or the word "test" in the API keys.
+01:19 Next, we want to read these in, so we're doing that in the dunder init, 
+01:23 down here and I've added an init credit cards, so here I have this unset things, 
+01:28 you can see the warnings or just pointing those two keys 
+01:31 and I created this thing called a credit card processor 
+01:34 and we're passing that configuration over here. 
+01:37 And this thing is going to have a couple of functions about actually doing the purchase,
+01:41 finalizing the purchase, reporting certain types of errors, things like that. 
+01:45 So what we're going to do in part of this demo is
+01:49 we are going to write the code that goes here. 
+01:51 We've also created a few other things, I've created this store service, 
+01:56 which will actually finalize the purchase in a larger scope, 
+02:01 it's going to charge the credit card but it also record the purchase in the database 
+02:05 things like that, so we'll have, it will manage everything that has to be done 
+02:10 for sort of completing a purchase, recording in our system, record it on Stripe, 
+02:15 and up here we have somewhere in the database we want to store these purchases 
+02:20 so once we finalize it was Stripe, we don't want to depend on Stripe any further, 
+02:24 we want to have a record of the purchase in our database. 
+02:28 So this is pretty bare minimum, but it will do, we are going to have an id, 
+02:32 it can be autoincremented numerical, nobody is going to see this, 
+02:36 we want to know when the purchase was done and we have a default of when we insert it,
+02:40 which basically is always correct, we're going to give it a description, 
+02:45 so we can say like hey they bought this album or that album, whatever. 
+02:50 How much did they pay, maybe they had a discount code, 
+02:53 if we do that kind of thing like coupon codes, 
+02:55 we'd want to store that here on the record as well, 
+02:58 but we're not doing that so we'll just say they paid this amount. 
+03:01 The price could change at the album over time. 
+03:03 And then we have just some relationships to say this is the album they bought 
+03:07 and this is the account or the user who bought it. 
+03:10 Finally, we have a store service in an album,
+03:16 store controller and an album controller 
+03:20 so up here, we're going to have when we show our albums, 
+03:23 we're going to want to actually put that buy button next to each album, 
+03:26 now we don't have an album details page, 
+03:28 it would probably make much more sense to put the buy button on the details page,
+03:32 but for now we are just going to stick it next to the album.
+03:37 And once we do we are going to need to have that post back go somewhere 
+03:41 so to isolate the credit card processing we have a store controller 
+03:45 so whenever we purchase something, 
+03:48 we'll tell that Stripe form to post back to store/complete, 
+03:52 and this method if things work correctly, we'll send them to success, 
+03:57 if they fail, well, we'll send them to the failed method here. 
+04:00 Alright, so that's what we have to build upon, 
+04:05 let's go and implement these various methods 
+04:08 and add our Stripe checkout code to the template. 

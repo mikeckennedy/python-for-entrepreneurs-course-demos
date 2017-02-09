@@ -1,0 +1,37 @@
+00:02 Let's review what it took to get Stripe checkout integrated with our webpage. 
+00:07 Remember, all we really had to do was add a little bit of html 
+00:10 that referenced the checkout script, set some properties, 
+00:14 probably dynamically computed from our Chameleon templates, 
+00:18 and Stripe took care of the rest. 
+00:21 So here you can see we've got our form, we've put it onto our page 
+00:24 and this is actually the checkout code for the training website where you buy courses. 
+00:28 So, the action is /purchase/complete/course url 
+00:33 because we need to figure out what course you purchased and then the source, 
+00:38 notice the https is highlighted to the Stripe js, it's really important 
+00:42 that this code runs on a page that is running over ssl so you don't get in a trouble, 
+00:46 and then you have to pass in your stripe public key 
+00:50 and here we're grabbing it off the base controller 
+00:53 but in another example we just passed it as part of the dictionary, 
+00:56 we have to set the amount in cents and the default is US dollars in cents, 
+01:01 here we're setting the active email so if you happen to be logged in
+01:05 then it will automatically prefill that, but you don't have to be, 
+01:10 it will just be empty and you fill it in, turn off remember, set the name, 
+01:14 this is the name of the company you are buying it from, remember across the top, 
+01:17 we are also setting the data-image to set the picture, right, that's a little icon, 
+01:22 the little Talk Python To Me icon, 
+01:25 you want a label to say what it is you are buying
+01:28 so buy the course for this price, and you also get a little bit longer description 
+01:31 but none of these get to be very long so be sure to test them. 
+01:34 And that's it, you out this on your page, it's going to prefil and preload 
+01:39 and put a little button that will say whatever it says 
+01:42 in this case it will say buy course for this amount of money, when they click it, 
+01:46 it's going to go through all the checkout process, 
+01:48 with the few things that you have there, 
+01:51 and finally if it does work correctly, it's going to post back to purchase/complete/url. 
+01:57 So you have this button you'll be able to click it and when the user clicks it 
+02:01 you'll see something like this. 
+02:04 Really nice, we saw this form is quite smart, 
+02:08 it does a little wiggly animation to tell if the things are not right, 
+02:11 it's quite intuitive and friendly, and it's a very good purchase funnel 
+02:15 because there is very little to fill out here, 
+02:18 especially if your email is already prepopulated. 

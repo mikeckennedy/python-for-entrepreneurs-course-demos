@@ -1,0 +1,160 @@
+00:01 Let's add that Stripe checkout purchase dialog to our albums. 
+00:05 If we look over here and we go to the albums page, 
+00:08 I've already added this buy button. 
+00:11 Now if I click it you can see it doesn't do anything, this doesn't come from Stripe. 
+00:14 I just want to have a place for it. 
+00:17 Now of course, this really should be a link that takes us to a details about the album 
+00:20 with reviews and all sorts of reviews, and from there we can buy it, 
+00:24 but for now we are just going to have this button where we buy it, directly,
+00:29 because displaying albums isn't really the point of this web app. 
+00:32 Okay, so let's replace this placeholder Bootstrap button 
+00:37 with the Stripe checkout button that will let us do this. 
+00:41 
+00:45 So in order to do that, we are going to need to take 
+00:48 the Stripe checkout code which is that, and let's go find that template file. 
+00:55 So here this is out little button, and what we are going to do, notice, 
+01:01 that we're actually getting the price here from the album, 
+01:04 remember we're looping up here, here is our tal repeat, 
+01:10 we are looping over all the albums that were passed to this view, 
+01:13 we'll name them a, so down here if I want to get the price I can say $${a.price} 
+01:19 and I put another dollar sign there 
+01:21 because I want the dollar sign to appear in front of the number to say 
+01:25 buy it for a dollar, 9, 99, rather than just buy 9.99 with no currency. 
+01:30 Okay, so this thing is out, but I am going to leave it there for just one second 
+01:36 and paste what we've got from there, I am going to do that 
+01:39 because I want the style information here, so that it will like float and so on. 
+01:45 Okay, let's just do that straight away, now here is a test code, 
+01:50 we are going to replace that with our test code in just a second,
+01:53 but let's just see what happens. 
+01:56 Great, so now this is switched to pay with card, 
+01:59 one thing that you'll find is you don't have a lot of control over how this button looks, 
+02:03 that's unfortunate but as far as I can tell, you can't do much for that. 
+02:06 Here when we click it you'll see it automatically pops up, 
+02:09 we can enter our email, credit card, the expiration date, CVC, 
+02:14 this "remember me" I don't really take this, I am going to take that away, 
+02:18 but it could remember this information for you if you want, 
+02:21 it's so simple, people don't buy stuff that frequently I am willing to let them type it in 
+02:27 once or twice, twice or three times, I guess. 
+02:29 If they are going to come back and make a purchase. 
+02:32 Notice also two things, this is in test mode and this is powered by Stripe. 
+02:36 So this is where you might have noticed if you either recognize the style log, 
+02:40 or you just saw this powered by Stripe. 
+02:43 Okay, great, so how do we take our information and put it in here?
+02:48 First of all, let's look right at the top. 
+02:52 This /your service side code it sounds problematic, 
+02:57 let's say what we have up here for our controller, 
+03:00 we have a store and then we had a complete is what I believe we had, 
+03:04 let's verify that that is what it is. 
+03:08 Store controller, so /store and /complete. 
+03:12 Okay, great, so that's what we are going to have, so here we are going to post 
+03:16 to the correct thing to complete this, this is definitely good. 
+03:19 Now it's really important that the site that serves this also is under https, 
+03:25 okay, if your site does not have an ssl certificate, and you put this on your page, 
+03:32 theoretically people could intercept the page and do various bad things to it 
+03:39 so you can read the Stripe checkout docs about this 
+03:42 but basically you need your site to run over ssl 
+03:45 so like if you look back over here, this is running over ssl. 
+03:49 So let's first of all start getting this code to be our code that came from our configuration file,
+03:55 remember, this is just something I grabbed from Stripe. 
+03:58 So over here in the albums controller, that's the controller rendering this page, 
+04:02 what I need to do is pass the extra information, 
+04:05 so let's say we have the Stripe key, 
+04:08 this can be the public key, I'll just make it super obvious about that.
+04:12 And then, here I imported the credit card processor 
+04:15 and it has a Stripe public key, let me show you. 
+04:20 As a Stripe public key as public but not the private key, right, 
+04:23 hiding that from everyone else as best I can.
+04:26 Okay, so let's make this a little more legible, there, 
+04:33 so we're going to put that where this key goes.
+04:39 So you guys already know how to do that, dollar curly thing, 
+04:43 and then we just put the value of the key, the amount here, 
+04:47 this is not going to be the amount, 
+04:49 the amount is actually going to be the price of the album.
+04:51 Now notice, this is in cents, US dollars, well, you've got to say the currency, 
+04:56 so data-currency="USD" and then here, we want this to be in cents, 
+05:06 so we say a.price that's in dollars, so then we need times 100, 
+05:12 and we probably don't want a float for cents, so we'll do something like that, 
+05:17 convert it to cents and then drop off any decimal point that might be there. 
+05:23 Next, this is going to be the name of the company this comes from, 
+05:28 so like Talk Python this is that section up there, 
+05:33 so this would be Blue Yellow Rockets, 
+05:39 this is not necessarily how it appears on your credit card, 
+05:42 you can kind of figure that on the user's credit card,
+05:44 you can configure that in your Stripe account. 
+05:47 This is going to be Blue Yellow and then we'll put something, 
+05:53 what do we want, it's going to be the name of the album, and then album. 
+06:00 Here this is the little icon that shows up, in our example here it's this little store, 
+06:05 but over here notice it's this logo right there and that just comes out of like
+06:10 /static/image/whatever, you can make that up long as you have a square image,
+06:15 you can stick it there and it will take on that shape, it's auto, 
+06:20 okay that's fine and do we want the zip code, that's true. 
+06:24 I think we can also do this.
+06:28 Okay, let's go back and refresh, like it's got to rerun this code, refresh it, 
+06:39 okay, pay with card, remember me it's wrong, 
+06:44 I'll figure out how to do that in a second, 
+06:47 here we go, what we are going to buy, Blue Yellow Rockets, 
+06:49 maybe I should just drop this, because you only have a little bit of room to work with here, 
+06:53 so we have instead of this Blue Yellow album name we'll just do it like that, here, 
+06:59 we can buy "Digital Age Boys and Girls" and we're going to pay 9.99 for that. 
+07:04 Now that's the price of this one, this one is 12.99 that one 19.22, 
+07:09 whatever we made up right, here is the Year Of The Snake,
+07:13 so it would be nice if this little pay with card thing sort of set the price, 
+07:17 so let's go down here where is this pay with card. 
+07:21 Okay, I had to lookup what this was, it's data-label and oddly, 
+07:25 it's not in like the Stripe example and then remember me was allowed, 
+07:29 actually you can come over here to checkout stripe.com/docs/checkout 
+07:36 and go to the reference and there is all sorts of stuff you can put in here, 
+07:39 so like data image, data name, data look how and currency, 
+07:46 like they say the default is USD 
+07:50 here is the data label, you can even pay with bitcoin 
+07:53 if you want to actually receive bitcoins they won't auto convert bitcoins for you, 
+07:59 things like that, so let's try again make sure it's saved, try again, 
+08:03 now it says buy album, 9.99, buy album 19.22 and when I click it 
+08:07 the remember me thing is gone, that's cool, 
+08:11 Blue Yellow Rockets Year Of The Snake. 
+08:14 Maybe the last thing to do is we could like work with this here to get that picture changed 
+08:18 and then I'll call integrated, so here is the link to that Python image, 
+08:23 why don't we just use that for now. 
+08:26 So we can go to image, we'll just say like so. 
+08:31 So now let's try again, ta da, there is a little image, it's not perfect, right, 
+08:34 I mean this is not really our logo this is just the Python logo but whatever, right, 
+08:38 our Blue Yellow Rockets guys would pay some small amount 
+08:42 to have like some graphic artists do something for them, 
+08:45 we'll talk later about actually how you might get that done really cheaply, 
+08:49 but we come up with some kind of logo, stick it there,
+08:51 we got our Blue Yellow Rockets, that's the company, 
+08:54 this is the item you are buying The Digital Age Boys And Girls album,
+08:58 putting your email address, and we'll actually be able to do this. 
+09:06 In test mode, this is really important, you can use 4242 sixteen times, 
+09:14 as a test valid code, 
+09:18 in fact, there is actually a bunch of test card numbers here, like you can test Visa, 
+09:25 you can test debit, Master Card, international ones, 
+09:28 you can test for specifically like invalid funds, expired cards, all sorts of stuff, 
+09:35 credit card, address failures, so you can use this to test, 
+09:40 the one we're using is this top one, just a basic Visa. 
+09:43 Now, as long as I put in something valid here, 
+09:47 and I put in something here and there we go, and look it passed, 
+09:57 on Stripe it passed and then it went over to our store to complete it, 
+10:01 but of course, we haven't written this function, have we, so, it wasn't valid. 
+10:06 That's going to be our next thing, to write and implement the finalization of that, 
+10:10 but when you noticed, that that turned green, 
+10:13 that actually did the processing on stripe.com. 
+10:17 So if I come over here and I put in like if I leave this blank, 
+10:22 and I try to pay it will say no, no, no, if I put in like here 
+10:25 I think I put that card number in wrong so that should fail, 
+10:29 
+10:32 notice this card number, there is a way to check with credit cards if the number itself, 
+10:36 it's like an integrity check on it, you can do that, but we can have a test 
+10:40 like I can come over here and have some kind of failed payment, declined, 
+10:45 you guys are going to get really good at typing this by the way, 
+10:51 so this card is actually going to be declined, 
+10:54 so I don't think it will even get pass this screen, 
+10:58 yeah they are like yeah, I don't think so. 
+11:01 I think the CVV has declined here, yeah, if I look back at this, 
+11:05 this is going to decline with incorrect CVV,
+11:08 this is going to decline with the processing error, 
+11:16 so you get an error back from the server, error occurred while processing your card, 
+11:20 maybe try again, that's like the credit card equivalent, did you reboot it, 
+11:23 okay, so you could see this is actually a really nice interface, 
+11:27 and the final thing we need to so is just handle that whole store/complete, 
+11:33 you'll see that's actually quite simple. 

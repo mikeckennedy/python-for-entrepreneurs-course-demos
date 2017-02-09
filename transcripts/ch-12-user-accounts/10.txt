@@ -1,0 +1,17 @@
+00:02 Now that we've stored users correctly and safely in our database,
+00:06 it's time to have them log in and log out. 
+00:09 We've seen this where we can go and either register for the site
+00:12 or we can sign into the site and our code would actually verify the sign in correctly. 
+00:17 However, even after we signed in, 
+00:20 you would see that the web app doesn't really know 
+00:23 that the user is signed in, so they come here, they click sign in, 
+00:26 they click on this and what we would like to have happen is
+00:28 once we redirect them over to their account page or wherever it is
+00:33 we are going to redirect them to, we'd like to change that navigation to say
+00:36 here is your account, we'd like every single request be able to know 
+00:41 which user is signed in and basically answer two questions, 
+00:44 is there a user signed in and what is their id or actually retrieve them 
+00:48 from the database automatically. 
+00:50 So we're going to spend the next couple of videos, 
+00:53 a demo and some concepts talking about how to make this happen
+00:56 in our web app, in Pyramid. You'll see it's quite easy.

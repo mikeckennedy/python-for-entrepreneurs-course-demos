@@ -1,0 +1,65 @@
+00:02 You are going to want a professional looking email address 
+00:05 for your contact page and for your communications. 
+00:08 Here on training.talkpython.fm you can contact me just go to the bottom 
+00:12 and click on contact and right here it says all you got to do is 
+00:16 you can find us on Twitter or send us an email at contact@talkpython.fm. 
+00:20 How do we do that? 
+00:23 Well, it used to be you could use things like google apps 
+00:26 and just create a free accounts there and set those up as custom domains 
+00:29 and that went away a few years ago. 
+00:32 So, I could setup my own server but I have already gone through this two times, 
+00:35 don't set up your own email server, here is the third time, 
+00:38 don't set up your own email server, 
+00:41 I'll show you a service that is amazing for this kind of stuff. 
+00:44 Okay, so I own the domain talkpython.fm and I want to add email to it. 
+00:49 There is a great service called po box, pobox.com 
+00:53 and you can come over to po box and you can for 35 dollars a year 
+00:58 set up custom email routing, rules, spam filters, 
+01:04 all sorts of stuff on top of your own custom domains. 
+01:08 Now you can also pay a little bit more and set up an inbox there 
+01:12 and do your email there entirely, but I think gmail is one of the best 
+01:16 email systems out there these days and so what I do is I just have all the email, 
+01:20 with various rules redirecting to a host of gmail aliases and addresses. 
+01:27 So think about that, 35 bucks a year 
+01:32 and you have high quality, properly implemented, 
+01:35 no need to worry about it, you don't need to keep it running inbound email. 
+01:40 I'll take you on a quick tour of my po box. 
+01:43 So over here, just to show you the pricing for individuals, come down here, 
+01:47 you can get the full mail system for 50 bucks, or this is what I have, po box plus, 
+01:51 all I care about forwarding, forwarding up to five different addresses,
+01:55 use your own domain, and you even get an outbound smtp server 
+01:58 so I can send mail through basically outbound email 
+02:03 and as a reply somebody writes me a message 
+02:06 to contact@talkpython.fm, I can reply to them and it looks like 
+02:10 it's coming from contact@talkpython.fm, but they don't really have a server. 
+02:14 So that's the service I have, I am logged in over here, 
+02:18 you can see I can add a variety of addresses so if I want to add address 
+02:22 maybe I could do something like support@ these are my various domains, 
+02:28 talkpython.fm, boom, I hit add and it will tell me which email address do you want to use, 
+02:34 I could say let's use mikeyckennedy plus talkpythonsupport@gmail,
+02:40 whatever you want, then I can do rules against this, in my gmail, right. 
+02:45 I am not going to click this and actually add this but that is how I would do it.
+02:49 You can see I've got a bunch of senders, I've got spam filtering turned on, 
+02:54 I can blackmail addresses so if some address starts getting spammed a ton
+02:58 I can delete that address and tell it to like throw away those emails and so on. 
+03:04 Basically you just have to set up your mail settings when you add a new domain,
+03:08 so that's easy, they take you through it and so on. 
+03:12 Over here you can see some stats, I'll just show you some numbers real quick, 
+03:15 so apparently this is the email traffic that I had, right, 
+03:18 this is how many emails I sent or received so green is delivered, these are held, 
+03:24 these are spam, I get quite a bit of spam because I publicly list my email address, 
+03:27 so obviously it gets spammed like crazy,
+03:30 but these guys are pretty good at dropping it and then I forward it to gmail 
+03:33 and they also get rid of the erst of the spam, nothing really bounce, 
+03:36 maybe one bounce there- no, no bounce, it's all good, 
+03:40 and these are the ones I've replied to, 
+03:42 you can see over here it tells you like those are messages sent to other people 
+03:46 through the smtp server here, right,
+03:49 that's me replying to people that sent me messages, over there. 
+03:52 Po box, it's beautiful, you don't have to do anything at all in your server, 
+03:55 all you have to do is map your domains, mx records, the mail records, 
+03:59 to the right settings here that they are going to give you, 
+04:02 then you set up rules to forward it to where you really care to answer your emails, 
+04:06 and like in my gmail, I set up an alias for contact at talkpython.fm 
+04:10 so I can even send outbound from gmail as that and I can also automatically reply 
+04:16 from that address if somebody sends it to me and so on. 

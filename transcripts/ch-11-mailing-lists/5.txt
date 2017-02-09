@@ -1,0 +1,82 @@
+00:02 Our next goal is going to be to make this form work. 
+00:06 Remember we put this form on the page 
+00:08 when we did our bootstrap stuff ,but it went nowhere. 
+00:11 Well guess what, it's going to go somewhere now. 
+00:13 In fact, there is a few steps that I thought well, 
+00:15 it's not really worth you watch me do this 
+00:17 because we've done it several times over and over again, 
+00:20 so I did a little bit of work off camera, let me just give you the rundown on that 
+00:23 so I created a newsletter controller, and now if you look back here, 
+00:27 and you look where this form submits to, 
+00:30 you'll see it goes to newsletter/ add subscriber as a post, 
+00:35 okay, so this is unusual because it's not posting back to the same page, right, 
+00:41 but it's kind of weird to post back to index the homepage, 
+00:44 so we are posting over to this area and letting this 
+00:47 controller handle newsletters all on its own. 
+00:49 So here this is a post to newsletter/ add subscriber, 
+00:52 and we don't have a git, basically the index is the git, 
+00:55 so our first goal is going to be to get that information from the subscriber,
+01:00 what they've posted to the form and then we're going to go and call, 
+01:04 once we have the email address, which we don't have yet, we're going to call, 
+01:08 we are going to go to the mailing list service and import that 
+01:13 and then we're going to call add subscriber with email. 
+01:17 And we also maybe want to check whether or not this works here so we'll say 
+01:21 if this did work then what are we going to do, 
+01:25 we are going to redirect over to hey you subsrcibed, 
+01:31 if something else, if it doesn't work, we'd like to redirect to /newsletter/failed. 
+01:38 Now how do I know that, because over here, I've actually created 
+01:42 well you can see the two methods down there but more importantly, 
+01:45 I've created the subscribed and failed pieces and these are more or less static html 
+01:49 that says well, we had a problem subscribing you, failed, 
+01:52 or subscribe like hey you are on the list, awesome, thanks for signing up, 
+01:57 here is a few more things you can do. 
+01:59 So what we're going to do is we want to actually finish this method, 
+02:04 so that we can capture this,
+02:07 and then we're going to write just a little bit of detail here 
+02:10 in this video and then we'll come back and do a proper MailChimp API section. 
+02:14 Okay, so how do we get a hold of this email here, well, 
+02:17 we could go and actually create a view model but it's literally one piece of data 
+02:22 so I am kind of thinking we're just going to get direct access to it 
+02:26 now if you look down here in the base controller,
+02:28 I've created this property called data dict
+02:31 which merges the get post and match dict so this is routing, this is query string, 
+02:36 and this is the form post okay, and it is like order precedence from bottom to top, 
+02:43 so I am just going to use this property 
+02:46 and somewhere in there is going to be the email presumably, 
+02:48 so we'll do something like this we'll say self.data dict is now get email,
+02:52 and let's just go back to verify that's actually what we're calling this I think it is, 
+02:59 but go to our form, which is right here, name is email, 
+03:04 that's the one that is going to tell us what we've got to look for, 
+03:08 I just want to get that, we probably want to do a test 
+03:10 although we could have this thing check as well, 
+03:13 so we could say if not email go like so.
+03:17 Right, maybe we even want to check the format of the email 
+03:20 but the MailChimp API should tell us if we get it wrong. 
+03:23 We also have a required, if you look back over here, 
+03:27 you can see we have a required and it's a type email, 
+03:30 so at least form the html perspective this should be mostly good, 
+03:33 but of course, people could post to this end point without actually going through our html 
+03:37 or without running the validation, using some other mechanisms, 
+03:43 so we want to make sure we validated here, as well. 
+03:46 So next let's go down here and return nothing, well, 
+03:49 this is actually going to return none, which is going to come back false, 
+03:52 and so it's going to go to failed, but let's just run this 
+03:54 and see it's running through its steps here. 
+03:58 I am going to come down here, here is my email address, 
+04:01 and let's get notified, remember, it's going to call that function, 
+04:04 the function is going to return none implicitly, that's going to not be true 
+04:07 so we should go to failed. 
+04:10 And apparently, add subscriber is missing its email, 
+04:13 did I forget to pass that, let's look. 
+04:15 Here. Oh no, I upgraded that from an instance method, 
+04:20 to a static method without realizing that PyCharm had helped me out there, 
+04:25 so no I did pass the email I just screwed up, 
+04:28 alright, let's run that again, add subscriber, 
+04:30 yes I want to send whatever that was, 
+04:33 boom, oops, it seems that we were wrong with that signup, 
+04:35 try hitting the back button, verifying your email address was valid, 
+04:38 so we could look and yes, it is valid, of course, 
+04:40 our code is broken that's why we're actually ending up here, right, 
+04:43 we haven't written it, but that's kind of flow, 
+04:45 alternatively, it should say yeey, you succeeded,
+04:47 welcome to the list and we are happy to have you part of our community. 

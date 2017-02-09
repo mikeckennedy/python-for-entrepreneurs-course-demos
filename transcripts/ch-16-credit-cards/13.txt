@@ -1,0 +1,63 @@
+00:01 Not all of your purchases are going to come through your credit card system. 
+00:07 In fact, some of your best customers will not ever 
+00:12 put their credit card into your credit card system. 
+00:15 And that's okay, so not all your purchases are going to be single purchases, 
+00:20 they are not going to come through the credit card system, 
+00:23 your best customers aren't going to use this. 
+00:26 Why? Not because they don't trust you, 
+00:29 but because your best customers are going to want to come
+00:32 and buy ten, twenty, a hundred, a thousand of your thing, 
+00:35 and probably they don't want to do that by putting a thousand things
+00:39 into their shopping cart or in my case they would have to actually make 
+00:43 a thousand separate purchases, the way the checkout flow works. 
+00:46 Instead, what they are going to do, is they are going to give you a purchase order, 
+00:50 and you are going to send them an invoice and then, some time later, 
+00:53 it always seems to be longer than you would expect, 
+00:56 longer than you kind of agreed upon, and way more variable, but eventually, 
+01:00 they will pay that invoice and you'll get money in a big chunk. 
+01:04 So, that's really great. Now, maybe this is old hat to you, 
+01:09 when I very first got started it was not to me, 
+01:13 and so it's great to have software to help you keep track of this. 
+01:16 So I have two recommendations, both of these are online systems that I can recommend. 
+01:21 So for my accounting, I actually use FreshBooks, and FreshBooks is decent, 
+01:26 it has like a starter tier that's like 15 dollars a month, 
+01:30 in the beginning it feels like a big deal, 
+01:32 but once it serves to help you with enough payments and taxes and so on, 
+01:35 then it doesn't seem like such a big deal after that. 
+01:39 So you can use FreshBooks, this is cool, it will let you fill out the details, 
+01:43 and an invoice, in response to a purchase order, 
+01:46 it will actually email these directly to the people, 
+01:49 you can set up Stripe and PayPal as places you can receive money 
+01:52 and then when they fulfill those, when they pay those invoices 
+01:55 which they can do online, the money will automatically go into your account. 
+02:00 Or, you can say send me a cheque here or 
+02:03 there is a variety of other ways in which you can pay. 
+02:06 So FreshBooks is really nice, I recommend it, 
+02:09 I've been using it for a few years and it's worked out great for me. 
+02:13 Another one that is a little newer is this thing called Invoiced. 
+02:16 And Invoiced is really nice it seems like a little more polished than FreshBooks, 
+02:20 it seems a little bit newer, I know FreshBooks has been talking about 
+02:23 they just spent ten million dollars on redesign of their web app.
+02:27 So I suspect FreshBooks is going to get a big bump any day now, 
+02:30 whenever that thing goes live, but it's not live yet, so for the time being,
+02:34 at the time of this recording, Invoiced seems more polished, 
+02:38 it's also cool that Invoiced has a truly free tier you get like ten clients in one user, 
+02:44 the user being you and ten clients from which you can accept invoices and so on. 
+02:49 Either one of these, I recommend you just check out both 
+02:52 and pick whichever one works best for you, 
+02:55 but there will come a time sooner rather than later, hopefully,
+02:58 that you are going to need to handle invoices and invoicing and all that kind of stuff.
+03:02 In fact, even the stuff that comes through Stripe for the credit card purchases, 
+03:06 the one off purchases on my training site,
+03:10 I actually just take those and bulk them into an invoice that I sort of pay for myself,
+03:15 right, here is my training course fee and boom, there it goes, 
+03:18 and so then it mixes them with all my other invoices, 
+03:21 things like from the podcast ad revenue which are almost exclusively 
+03:25 done through invoices, as well as a few consulting things independently here, 
+03:31 so it just lets everything go under this one accounting software 
+03:34 which works well because I run my stuff as a sole proprietorship 
+03:37 so all the income I have to deal with personally anyway, 
+03:40 if you are in S Corp you would probably do it differently. 
+03:43 Nonetheless, make sure you get some software to help out with accounting, 
+03:46 because accounting is not fun but the software makes it well, 
+03:49 almost fun, certainly when you get paid is fun. 

@@ -1,0 +1,43 @@
+00:01 Alright, let's start adding the behaviors that we need to do this password reset.
+00:05 The first thing that we are going to need to do is we are going to need to add data, 
+00:09 so we've got our account class, our albums, and our tracks, 
+00:13 we are going to need another table in the database so let's add it. 
+00:17 Now, what goes in here is going to be very similar, 
+00:20 we are going to derive from sqlalchemy base, 
+00:23 we are going to set a dunder table name, we are going to add a bunch of columns. 
+00:26 Let me go ahead and just put those into place. 
+00:28 Alright, so here is our password reset model, 
+00:31 and we are going to map it to the password reset table. 
+00:33 Now, let's just review, so we have our id and remember we don't want it to be guessable, 
+00:37 this should not be an auto incrementing id, but it should be the primary key 
+00:41 so we are using a string, setting the primary key to true, 
+00:44 and then we are using this lambda to set a default value 
+00:47 that is generated from a random uuid4 which is a 32 bit alphanumeric string, 
+00:54 32 character id which we are turning to a string 
+00:59 and then we are getting rid of the dashes that come with it. 
+01:02 And we are also keeping track of when it was created, 
+01:05 so that one, we just know when it was created, 
+01:08 and two, we can know when it should expire. 
+01:10 We keep track of whether or not it was used and when, 
+01:13 we probably could put those into one by checking for null on the use date, 
+01:16 but it's not a table we expect to have tons of records in so that's fine. 
+01:20 And then, a little analytics like who actually did this, who was the user, 
+01:25 where did they come from, right, so if you need to go back 
+01:29 and auditing and you get a crazy number of reset requests 
+01:33 and it all coming from one IP address, or some IP block or something like that, 
+01:37 you could potentially use that information to block future reset requests. 
+01:41 Finally, last but not least you are going to need to tie this reset request to a particular user, 
+01:46 so when somebody comes back with that email address to reset it, 
+01:49 it's actually going to reset the password for this user 
+01:52 so we have a foreign key relationship mapping back to that user, right. 
+01:56 So let's look at the database, over here, notice, 
+02:01 we have account album and track but we have no reset request. 
+02:06 We run this, and we refresh, we should now have password reset, 
+02:13 oh, we do not, and back to sqlalchemy, why don't we,
+02:17 apparently no one has loaded up this code, so let's go do that. 
+02:21 Remember this bit? Try again. 
+02:28 Oh oops, it looks like I called that user id, 
+02:32 when I should have called that account.id, 
+02:38 okay, great. It looks like everything ran well, if I refresh this, 
+02:43 we should have our password reset, it looks like the database is ready for us 
+02:47 to put a bunch of password resets in it.  

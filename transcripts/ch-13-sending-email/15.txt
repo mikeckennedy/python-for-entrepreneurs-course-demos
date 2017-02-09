@@ -1,0 +1,91 @@
+00:01 Okay we have an active reset code, 
+00:03 we have all the validation and details to pull it back from the database, 
+00:06 final thing to do, set the password, use up the reset code. 
+00:11 Let me open this in a second window here, there we go, so I can have the old one, 
+00:16 and have it in two places, we can see that it gets used up again, 
+00:21 okay, let's just do a bit of validation, we'll say if vm.validate 
+00:26 we haven't called this method yet but does that return an error, no, it doesn't 
+00:31 so we'll just check for the error here, 
+00:34 
+00:38 now, when we do get this correct, we want to redirect, 
+00:42 we don't want to redirect, we are just going to set the message, sorry
+00:45 so we are going to say vm.message= your password has been reset, please log in, 
+00:52 something to that effect, and then we'll return vm.to dict. 
+00:57 Okay, beautiful, now, what is left here, well, actually doing the reset 
+01:03 so we'll say account service and we want to do a couple of things, right, 
+01:08 remember this verified that we have a reset code that it is not expired, 
+01:13 it exists, things like that, so we can go over here and just use that, 
+01:17 so we have to do these two operations, and the order doesn't matter too much 
+01:20 but let's use up the reset code first. 
+01:23 So we'll say use reset code vm.reset which one do we want to pass, 
+01:30 it doesn't really matter, let's just pass the code, keep the dependencies a little lower,
+01:35 it's just a string rather than, actual class, I want to add this method here, 
+01:41 and so all we are going to do is we want to create a session, 
+01:47 we want to get the reset code, and we'll say if not reset, return, 
+01:54 and then what we are going to do is we are just going to do a couple of things, 
+01:57 we also need to set the user ip so you can see we have three things to set, 
+02:02 the use date, datetime. now, whether it was used, 
+02:08 I could combine those like I said, and then we want to set this. 
+02:11 Alright. So we are going to say our ip address is user ip, was used is true, 
+02:22 actually I get this exactly right, usedate=datetime, right, 
+02:36 so it was used now, and we don't want to forget to say session.commit. 
+02:41 And this probably should reset code. 
+02:47 Okay, so what are we going to do, we are going to come in, we want to create a session, 
+02:50 we are going to query for the code, yes we got it before 
+02:52 but that was associated with this previous session we got disconnected 
+02:56 when we left very likely do let's just get it again. 
+03:01 We'll do a quick test to make sure in case some reason, 
+03:03 somebody calls this with an invalid code, we are not going to crash by working with none,
+03:08 and then we are going to basically use up this code, 
+03:11 we are going to say that it was used by this ip address, on this date and yes it is used, 
+03:14 and then we are going to call save which will push that back, 
+03:18 okay, that is step one, over here; step two will be set password, 
+03:26 we are going to set the password for a particular user so let's get the account, 
+03:31 we'll say account service.find account by id, we have vm.reset remember, 
+03:42 we have a user id foreign key constraint there. 
+03:47 And I am not going to check if this account exists 
+03:49 because there is a foreign key constraint here so this should always map to something. 
+03:55 So this should return something, maybe that is a bad assumption, we'll see. 
+03:59 We'll say let's just pass the account id over here. 
+04:04 
+04:14 Okay, so this should actually be pretty easy, again, 
+04:18 we are going to get something from the database 
+04:21 and it's going to look really similar to this.
+04:25 Okay, so juggle this around a little, we are going to have plain text password, 
+04:29 we are going to pass it in, and we are going to pass the account id, 
+04:32 so we are going to get the account, and just again, 
+04:35 this could be called somewhere else without the same validation 
+04:38 so let's just verify that this is not going to crash, 
+04:40 and then all we have to do is go to the account and set the password hash,
+04:44 remember, we don't want to set it to the plain text password, 
+04:47 we are going to do this. 
+04:49 But luckily, we already have this method, something about hashing text,
+04:53 and we'll give it the plain text password, and then we just call session.commit, 
+04:58 this is cool, this lets us set the password within code, any time we want to, 
+05:04 it just happens to be right now we are doing this in the context of 
+05:08 some kind of password reset workflow, 
+05:11 maybe there is some other mechanism where we want to manually create an account 
+05:14 and then set its password or I don't know, 
+05:17 but this method will let us set passwords for any account whatsoever. 
+05:21 Alright,  let's take this thing for a spin, rerun it, if we come over here, 
+05:25 and let's just make sure everything is hanging together, 
+05:29 let me just do a quick test, here, show my password is this and it was test, T-E-S-T 
+05:36 okay, great, come back and test that again in a minute, so I want to set it to cat.
+05:42 And, of course, remember I added that user ip well, we didn't pass it along, did we,
+05:52 alright, so let's go ahead and pass it along, 
+05:55 we can click here and get right back to it, 
+05:57 so this is going to take the ip address, 
+05:59 and we can actually get that from self.request.remote address, 
+06:02 okay, try again, ready, let's just resubmit the form, 
+06:07 and we should probably change this color, it's not super obvious here, 
+06:12 maybe make a color, or make that a little more obvious, 
+06:15 but your password has been rest, please log in. 
+06:18 Hey, I set it to cat, let's try this again, so I am going to try my old password, 
+06:27 test, no that's incorrect, let me try the new one I just set cat. 
+06:31 Alright, so it turns out that my try to login didn't work, why didn't it work, 
+06:39 well, I had a bit of a mistake right here, check this out, 
+06:43 account service set password, that's probably not the password I want to use, is it.
+06:50 Okay, let's actually set the password, this way.
+06:55 Okay, I am going to set the password cat, your password's been set, 
+07:00 let's try the old one first, test no, let's try the new one now, cat. 
+07:05 Boom, we now have a new password, it is very secure it's called cat. 

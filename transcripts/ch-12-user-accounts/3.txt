@@ -1,0 +1,36 @@
+00:02 Here is the account class we created, it's called account, obviously, 
+00:06 and it derives from sqlaclhemy base and it has a dunder table name
+00:09 that matches the type name, just like all of our entities do, 
+00:13 we're going to give it an id, a create a date, whether or not that user is a super user 
+00:17 and then the ability to log in via email and a password, remember, hashed password. 
+00:23 Now, the id is a little bit different, remember we didn't want to leak 
+00:27 how many users we had or let people poke around by guessing their user id, right, 
+00:33 like mine is 100, what's at 101, who knows, 
+00:36 let's go poke around and see if we can find that. 
+00:39 So we are making this a string, and we created a default function 
+00:42 which is a lambda that just returns the uuid4 as text 
+00:47 so it'll be a nice big alpha numeric thing that we can't guess easily 
+00:52 and of course don't forget to set it to be the primary key. 
+00:55 We also might want to run reports on hey how many users were created today, 
+01:00 how many users were created this year and so on. 
+01:03 So we created a datetime column, now in my demo I realized I created a date, 
+01:07 not a datetime and I went and updated it, notice, we probably want the minutes, 
+01:10 hours, minutes and seconds, so datetime, not date 
+01:13 and then we are going to set that to be the default of datetime.datetime.now 
+01:18 without parenthesis okay. 
+01:20 Then we want to give a little bit of permissions management, 
+01:25 very basic to our account here, and whether or not this user is a super user 
+01:29 and they have access to do all sorts of interesting additional high privilege things 
+01:34 in our site or if they are just a regular user 
+01:37 and they could only access what regular users can do. 
+01:40 So we set that as a boolean but by default it's false, 
+01:43 we also wanted this to give the ability to log in so basically 
+01:48 as far as the user is concerned, their credentials are their email address, 
+01:52 don't need a name and an email, if you are going to get an email anyway 
+01:55 just use that as the user id. Or as their ability to log in, right. 
+02:00 So have their email here, and of course that has to be unique, 
+02:04 we want to do searches by it so index is true, and it can't be null. 
+02:08 Also, we're not going to store the password, 
+02:11 we're going to store the password hash as a string, 
+02:13 it's very important to not store passwords, 
+02:16 and we'll talk about a couple of solutions on this. 

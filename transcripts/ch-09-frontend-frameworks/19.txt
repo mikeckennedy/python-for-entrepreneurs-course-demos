@@ -1,0 +1,21 @@
+00:02 So you now know about Bootstrap. 
+00:05 But there is one last step to go from bad to decent to amazing. 
+00:10 So far we've gone from bad to decent, using the basics of Bootstrap. 
+00:16 So here let's call this bad one number one. 
+00:20 Number two, this is our basic page with Bootstrap, we could now improve this of course,
+00:24 with our dialogues and out buttons and things like that, 
+00:28 but still, this design is not going to win too many users. 
+00:31 We need to really let our page shine. 
+00:34 So what we are going to do to make that happen is 
+00:37 we are going to take our knowledge of Bootstrap, 
+00:39 our knowledge of html, and put it together with themes. 
+00:42 So, we could start with this thing on the left, 
+00:45 with basic css in Bootstrap we get to middle, 
+00:48 and then with the Bootstrap theme, we get something super compelling 
+00:51 and modern looking here on the right. 
+00:54 One of the wonderful things about themes and Bootstrap themes in particular is 
+00:58 there are many to choose from, so you'll see you get a lot of choice 
+01:01 on how your page looks
+01:03 then you can mix in a few images you get from a graphic artist
+01:06 or from some sort of stock photography,
+01:09 put your own copy in there and you are ready to roll. 

@@ -1,0 +1,54 @@
+00:03 So, let's create a MailChimp account, here we are, 
+00:06 notice we have free pricing, and let's just check out pricing real quick. 
+00:09 We come down here, you either be a little lamb, a bit of a stallion or a pro marketer. 
+00:14 Let's see, what do we get for this free version, so forever free, 
+00:19 we can come down here and it says you can have up to 2 thousand subscribers. 
+00:23 Now, 2 thousand subscribers is actually a significant number, 
+00:27 and you can send up to six emails per month to your entire list, right, 
+00:33 so if you have 2 thousand subscribers, you can send 6 emails to 2 thousand people per month, 
+00:39 and then, the price goes up after that, it gets a little bit expensive, 
+00:44 like quite quickly for example, so you'll see it says starting at 
+00:49 but you can go tot his growing business section that says, 
+00:52 well, it's free up to here, what if you have 3 thousand, it's 50 bucks. 
+00:57 What if you have 5 thousand, 5001, you see it's 55, 
+01:03 what if you have 10 thousand, 80 bucks a month. 
+01:06 So these numbers actually go up quite quickly 
+01:09 but I can tell you if you have 10 thousand qualified leads for your business, 
+01:12 this should be a small percentage of your monthly revenue, 
+01:16 okay, so this is actually 80 dollars well spent. 
+01:22 The prices on the other platforms that I showed you, are similar, 
+01:26 okay, so let's go create an account here, so this is going to be- alright, 
+01:31 my account is ready to create let's get rolling. 
+01:36 Alright, confirming my email, check for humanity, let's see, 
+01:41 all the squares are street signs, that looks solid to me. 
+01:46 Hey, I'm not a robot, good to know, thank you MailChimp. 
+01:55 Alright, after going through a bunch of steps, verifying my email, 
+01:58 filling out my address, we now have an account, 
+02:02 yeey, it's basically empty but whatever, so down here as we have our list, 
+02:07 you'll see your sort of list growth reports and whatnot going here, 
+02:11 we can import existing subscribers like if we have a database 
+02:14 full of usernames and emails things like that, but we're just going to create a list. 
+02:19 The list is going to be blue yellow band
+02:26 the default from email address will be let's just put michael@talkpython.fm 
+02:32 default from name will be Michael at Talk Python in a slightly different way, 
+02:39 you signed up, you registered to get notified of events and albums, blue yellow rockets.
+02:52 Okay, and we have to have our addresses as this part of the can spam story 
+02:59 we can get notified of these various things but we're not going to do this, 
+03:02 by the way that's not my real address. 
+03:04 Okay, so now we have no subscribers, but more importantly we have a list. 
+03:08 So now that we have our list crated, we're going to need two things 
+03:11 in order to integrate it with our website, 
+03:14 we're going to need a list id and we're going to need our secret API key. 
+03:18 So let's go get our list id first. 
+03:25 So down here at the bottom, onto the details for our list we can take this
+03:28 and we can use this in our website, so this is our list id, 
+03:32 we're also going to need the public API key 
+03:35 so I am going to go to my account, and then extras API keys 
+03:38 and I am going to come down here and I am going to create an API key,
+03:44 now I am not going to show you guys this, 
+03:46 because I don't want you messing with my account and send an email on my behalf 
+03:49 but I am going to create an API key and I am going to copy that over to the web app, 
+03:57 So you can see I've created a new API key and it is ready to use, 
+04:00 so we've set up a MailChimp account, we've created a list, 
+04:04 we've added an API key to our account, 
+04:06 we're ready to now integrate this into our web application. 

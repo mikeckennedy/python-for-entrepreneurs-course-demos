@@ -1,0 +1,67 @@
+00:03 So a question you have to answer for yourself is do you want 
+00:06 the do it yourself version or do you want the API version. 
+00:09 So, you've seen what's involved to some degree, we're not finished yet 
+00:12 with creating the managing accounts in your application, 
+00:15 we've done all the best practices around creating 
+00:17 and managing accounts and passwords, 
+00:19 but we still have things like what if the user forgets the account, 
+00:22 how do we send them a password reset, things like that. 
+00:25 And, it might be worth considering working with something like Stormpath, 
+00:29 so Stormpath is basically authentication and identity as a service, 
+00:35 so instead of storing your users directly, 
+00:37 you integrate with their API they store that information, 
+00:40 they set up all sorts of things, in fact, let me just show you a video they put together 
+00:45 and you can decide whether or not you want to use what I have shown you, 
+00:48 or what they are up to. 
+00:53 For decades, software developers custom built every part of an application in house. 
+00:56 But today, great software teams don't build anything they don't have to, 
+01:00 building user management your application is extraordinarily time consuming, 
+01:03 and to do it right is even more difficult, because you have to be a security expert. 
+01:06 Stormpath is a user management API built for developers 
+01:10 so they can plug it into their applications, to offload user management 
+01:14 so they can get back to building the core of their applications. 
+01:16 Thousands of companies across industries use Stormpath, 
+01:19 from early stage startups to the federal government. 
+01:22 And all of them are using it for the same reason, 
+01:25 to get their applications out to market faster and reduce the risk of getting it wrong.
+01:28 Stormpath supports many different forms of authentication, 
+01:30 from API keys to usernames and passwords, to oauth tokens, 
+01:34 we also make it easy for the end users to login to your application using credentials 
+01:38 they might already have in other systems, 
+01:40 whether be Facebook or Google or enterprise single sign on systems. 
+01:43 Stormpath is also the most powerful authorization API available, 
+01:46 we support simple role based access control mechanisms using just user groups, 
+01:50 all the way to very complicated per user permissioning schemes. 
+01:55 Also Stormpath is the only API that will give you a native multi tendency data model 
+01:59 so if you need to support multiple organizations in your application, 
+02:02 Stormpath has you covered out of the box. 
+02:04 If you Stormpath, you'll never store credentials again, 
+02:07 you can give us as little or as much of the user did as you want, 
+02:10 and we take care of all the security. 
+02:12 Stormpath uses security best practices that have been peer reviewed 
+02:15 and vetted to provide the best in class security possible. 
+02:19 We provide developers everything they need, to get up and running in a few minutes, 
+02:22 we've got comprehensive stks, we've got extensive documentation, 
+02:26 we've got fantastic live support to help you throughout implementation.
+02:32 We really pride ourselves on having really good developer support, 
+02:35 if you want a question answered about Stormpath 
+02:37 you re going to be talking to someone technical who can help you out with your use case.
+02:40 Today's applications need to scale from ten users to ten million. 
+02:43 If you get a burst of traffic our infrastructure will automatically scale
+02:46 to handle that additional load. And then when your load goes back to normal, 
+02:50 our infrastructure will scale down for you automatically as well. 
+02:52 You can implement Stormpath in three lines of code 
+02:55 and be off and running with production great user management. 
+02:57 You can own the burden of building identity infrastructure 
+03:01 or you can rely on Stormpath, with trusted experts in user management. 
+03:04 Get started today, with the free developer account on stormpath.com. 
+03:09 So that looks pretty cool and you know, 
+03:13 if I had known about Stormpath when I started creating my site, 
+03:16 maybe I would have used them, I ma not entirely sure, 
+03:18 I am really happy the way things are working for me,
+03:21 but one of the goals of this class and one of your goals should be 
+03:24 to get up and running as fast as possible, if Stormpath helps you do that, 
+03:28 then feel free to sign up for their free tier and go, they've got self registration, 
+03:32 they manage a login screens, the password resets, 
+03:35 the verification and welcome emails,
+03:38 all sorts of stuff that you would have to write yourself. 

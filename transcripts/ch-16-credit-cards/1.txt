@@ -1,0 +1,84 @@
+00:02 So are you ready to learn about how to take your online web app 
+00:05 and make money with it?
+00:08 Accept credit cards, set up business models, 
+00:11 talk a little bit about charging for products, things like that? 
+00:14 Well those are the kinds of things we are going to learn in this chapter, 
+00:17 we are going to start with accepting credit cards and actually working with the APIs 
+00:21 as well as just talking more generally about some of the options we have 
+00:24 for creating and accepting purchases via credit cards in or web applications. 
+00:29 Once you start accepting money you will have to of course have a business model 
+00:34 and that has sort of two components in my mind, 
+00:37 on one is how doyou form a company, right, 
+00:41 once you accept money and you start entering purchase agreements with people, 
+00:44 you don't want to do this personally, right, 
+00:47 you want to do this through some kind of formal business that has limited liability, 
+00:50 or some kind of protection for you, at least in the United States, 
+00:53 the two primary models are LLC Limited Liability Companies and Corporations, 
+00:58 so we'll talk a little bit about that 
+01:00 and even if you are outside of the United States 
+01:03 how you can still create one of these within the US as a US company, 
+01:07 if that makes sense.
+01:09 The other part of this is how do you actually sell your product, 
+01:12 do you sell by recurring subscriptions, do you sell by one off purchases, 
+01:16 do you not sell it at all but sell ads, things like this, 
+01:20 we'll talk about some of the trade-offs there. 
+01:23 And finally, we'll also talk about other ways to accept money from customers, 
+01:26 we'll see that many of your best customers won't put their credit cards into your system,
+01:31 instead, they will say can we do a bulk purchase, 
+01:34 can we buy something for my team, I'd like to set up some kind of arrangement 
+01:38 for my whole company, things like that, 
+01:40 and for that you typically use purchase orders and invoices 
+01:43 so we'll talk very briefly about those as well. 
+01:45 Now, once you've created your web app, it can be scary to charge for money. 
+01:49 But there is a picture I want you to keep in your mind, 
+01:53 something like this- it's definitely something that's hard to get right, 
+01:57 how much should you charge, what business models should you use, 
+02:00 if you charge will all of your users quit, 
+02:03 instead of thinking of charging money as a negative, think of it as a positive. 
+02:06 As long as you are fair, charging money will allow your business to grow, 
+02:09 it will allow you to hire other people to make whatever your users like now, 
+02:13 make that more awesome and provide more value to them. 
+02:16 Not everybody will pay for what you have, 
+02:18 maybe you have some kind of free trial model or something to this effect, 
+02:22 I don't know what your web app is, but your business will definitely be well, 
+02:26 a business and not a hobby if you charge money for it 
+02:30 and it will let you put all of your time and energy into it 
+02:33 once you get it to grow strong enough 
+02:35 so think of charging money or asking for money from your customers and users 
+02:38 really as your ability to grow. 
+02:41 They are getting value out of what you are doing, 
+02:44 many of them will be more than happy to support your work long as you are fair about it. 
+02:48 The path is not always a straight line, to where you are going. 
+02:52 Let me give you a little bit of example from how I started. 
+02:55 In April of 2015 I started the podcast, 
+02:59 and in the beginning it was just a hobby more or less, 
+03:03 I never really expected anybody would sponsor it, 
+03:07 you can see there is an ad at the top of the page, I didn't expect that, 
+03:10 that was a pleasant surprise and so I started this as just something to share 
+03:14 with the community, start telling stories and something I wanted to do 
+03:19 but then I realized after companies came and started to want to sponsor and so on, 
+03:23 that maybe I could make something more out of this, 
+03:26 maybe I could actually if I could take it a little bit farther, 
+03:29 I could actually make this my job, make the podcast more awesome, 
+03:32 put more energy into it, make sure that it keeps going, things like that. 
+03:36 moreover, I had always wanted to start some kind of online training company 
+03:40 but there is such a chicken and egg problem of how do you find people 
+03:45 who like what you are doing, how do you get people to know about you, 
+03:49 how do you get them to trust you. 
+03:51 Instead of just going and saying starting this company directly,
+03:54 I actually started the podcast first and then once that had a good audience 
+03:59 and people knew me and trusted me from there, then I felt confident 
+04:02 to actually go and launch Talk Python Training where you are taking this course. 
+04:07 So had I just gone and tried to start this training company on my own, 
+04:10 maybe I would have succeeded but the odds would have certainly been against it, 
+04:15 it would have been much harder than if I already had built up some kind of audience. 
+04:19 maybe I could have made this work going through some other training company 
+04:23 and try and work basically as a sub contractor like an author on royalties sort of thing, 
+04:27 but starting my own business that was quite risky.
+04:30 However, with the podcast there as the foundation, then it becomes not so risky, 
+04:35 so I want you to think about all the building blocks in the way 
+04:38 you might create one thing and then level it up to another 
+04:41 instead of necessarily just going directly towards the thing 
+04:44 that you might have in mind at the end. 
+04:47 Okay, so there is many building blocks, 
+04:49 many ways to put this together and build up a business and just be creative. 

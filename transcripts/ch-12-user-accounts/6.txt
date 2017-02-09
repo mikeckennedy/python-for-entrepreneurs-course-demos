@@ -1,0 +1,185 @@
+00:03 Why should we hash our passwords?
+00:06 No matter how carefully you are with your database, 
+00:09 there is a chance that it will get leaked, 
+00:11 whether it's from pour coding practices, like sql injection attacks 
+00:15 which we're luckily relatively immune from, 
+00:19 because we're using an ORM with sqlalchemy, 
+00:22 or maybe you have a copy of the production database on your laptop 
+00:26 and your laptop gets stolen and you don't have your hard disk encrypted 
+00:29 or there is a million reasons why you might lose this data, 
+00:34 what you'd like to do is set it up so that if you lose this data,
+00:37 the report might say something like this- Gawker was hacked, but don't worry,
+00:41 it looks like they use all the best practices around account management 
+00:44 and storing them into database and it's extremely unlikely 
+00:47 anyone can take these passwords and do anything with them 
+00:51 other than knowing your email address, which that's really not that private, is it.
+00:55 That's not what this Gawker report says. 
+01:00 Let's jump over here and have a look. 
+01:04 Because, this is just the way these things go and I want to really make it clear
+01:07 that this is super important and you got to get it just right. 
+01:10 I think you'll really appreciate what I am going to show you afterwards 
+01:13 because it makes getting it right way easier. 
+01:16 Alright, so it says oh it looks like about a million passwords were stolen, 
+01:19 initial attack etc etc, I don't really care, did they hash their passwords, 
+01:24 yeah the mysql data contain 1.2 million accounts half of them were kind of, 
+01:29 didn't have a hash at all which meant they connected through like Facebook, 
+01:33 or something where the password wasn't ever given to the site, 
+01:36 so that leaves about 750 thousand potentially vulnerable ones 
+01:40 so they did hash the stored password fabulous, 
+01:44 and they even salted them, good job Gawker. 
+01:46 And so compared to places that don't hey this is actually really good. 
+01:50 Unfortunately, neither salting nor hashing was done very well, 
+01:55 they were done using some weak algorithm, 
+01:58 they were stored in some ridiculously small amount of size, etc etc etc. 
+02:03 You don't want to be a part of this, 
+02:06 they have reported that 400 thousand cracked, whatever.
+02:10 This is not the kind of press that you want, right, 
+02:12 all press is good press except for this kind of press I suppose, so, 
+02:16 how do we solve this problem, well, we hash things correctly, 
+02:20 luckily there is a fantastic library called passlib 
+02:23 and I've used passlib a number of times and it's great, 
+02:26 so it's a password hashing library for Python 2 and Python 3 
+02:29 and we're going to use it now to create password hashes 
+02:33 in a really excellent way on this website that we're building. 
+02:36 So here is the passlib documentation and it's really easy to create, 
+02:40 notice, here we have some password "toomanysecrets", 
+02:44 and this is the kind of thing that actually we are going to store in the database. 
+02:48 Okay, so how do we get started?
+02:51 Well we're going to get started by pip installing and there is a number of ways let's go,
+02:56 the place we're going to need to do the hash is down here, 
+02:59 and let's actually create another function specifically for doing this hash. 
+03:09 Okay so we're going to write this function hash text, 
+03:12 and to do that we'er going to use passlib, 
+03:17 now notice this is not part of our requirements so we're going to add that there, that's good,
+03:22 remember, that puts it over here, let's do a little cleanup on this 
+03:26 and you know what PyCharm- passlib is not misspelled, thanks so much. 
+03:29 I don't know about you, but I like to be able to scan this, 
+03:32 so alphabetic, like that, it seems really nice. 
+03:36 Okay, so we have passlib here that's great,
+03:39 I guess I already installed passlib fro whatever reason playing around with something, 
+03:43 but if you don't have it installed, remember, 
+03:45 you are going to want to make sure you install passlib. 
+03:51 Okay, so this is going to go away, we want to say account service.hash text 
+03:57 and this will be the plain text password, 
+04:00 okay, so if we write this correctly, we'll be in good shape. 
+04:03 Now, it turns out we don't need all the passlib, we can just get one thing from it, 
+04:07 and we are going to go here to this thing called handlers, 
+04:10 sha2_crypt, and here we're going to import sh5.12_crypt
+04:14 there is a couple of options in our passlib, if we are getting started, walkthroughs I think, 
+04:21 the first thing is if we find the way to new application quick start guide 
+04:24 you'll see it's the first thing it's choosing the hash so it says these are four good choices,
+04:29 four different algorithms you can choose, becrypt
+04:32 becrypt is probably the best one although I've seen people have problems
+04:36 installing it on different operating systems and whatnot, 
+04:40 so I am not going to use becrypt for this example, you can if you like, 
+04:44 if you get it working perfect, if not we're going to use 5.12, sha 5.12 hash
+04:48 here which is very strong, actually sorry, we're using this one. 
+04:52 What's really cool about this is they actually give you, 
+04:55 they keep track at this and say all this four hashes share the following properties, 
+04:59 there are no known voulnerabilities, it's widely documented and reviewed algorithms, 
+05:03 public domain and so on, there is a few other things that we'll come back to, right. 
+05:07 It works across the number of OSs and applications. 
+05:10 Really really nice, we don't have to worry about this, 
+05:13 and they even keep track of it for us. 
+05:16 What do we have to do here to write this, to implement all these best practices? 
+05:21 We are going to need to take the password, we're going to hash it, 
+05:24 we don't have to just hash it once, because even though that does obscure the password 
+05:28 it can be guessed really easily these days with GPU based password crackers 
+05:33 and all sorts of things like that so you want to do this over and over 
+05:36 until this becomes computationally expensive to guess, 
+05:40 not too much for you to log in, but computationally expensive to guess. 
+05:44 So we're going to take that and hash it over and over and over iteratively, 
+05:47 something like a 150 thousand times and then we are going to take that, 
+05:51 the input is going to consist of the original password and some salt 
+05:56 and choosing a strong algorithm, all of those things we need to keep track of using this. 
+06:02 Let me show you how that works, let's go down to our hash password, 
+06:05 okay, so we are going to return, let me just hold it for a minute, 
+06:10 now here is what we are going to do,w e are going to go to this 
+06:14 and we are going to say encrypt, and what are we going to give it, 
+06:16 plain text password. Problem solved. 
+06:19 Alright, one thing we probably want to set is a number of rounds, 
+06:22 and we're going to set it to a 150 thousand. 
+06:27 Python 3.6 we could write this, and make it really obvious,
+06:31 we are not running Python 3.6 it's almost put but it's not yet. 
+06:34 What this tells us to do, is not just take the password plus the salt 
+06:37 and hash it with this strong algorithm but then fold that over 
+06:40 and do it again and again a 150 thousand times. 
+06:43 So I would say you know, do this until it takes a little bit of time to log in, 
+06:48 do it so, maybe it takes a tenth of a second computationally to do this, right
+06:54 you are going to do this when they log in as well as when we create the account. 
+06:57 And, well, we can go back and just look in our database when this works, 
+07:01 so let's one more time create an account with proper hashing, as you saw,
+07:06 I better use a different email address, 
+07:08 I am going to put in test, just the word test, off it goes, that worked perfectly, 
+07:13 and very quickly and so I didn't notice any slowness and like why is this thing lagging, 
+07:18 like it felt instant, if I go over here and look at my table and I refresh this, 
+07:22 we now have a new thing and instead of hash test we have this, 
+07:27 let me put this over here just to show you, look at that puppy, okay, 
+07:32 so it gives you a little bit information about the algorithm 
+07:36 so that it can reverify the number of rounds because over time, 
+07:40 this is great but in five years 150 thousand might not be fast enough, 
+07:44 maybe we want 1.5 million. 
+07:47 So this lets you over time upgrade your account any time somebody logs in 
+07:51 we see oh this is actually an old one, we want to add some more rounds to it, 
+07:54 you could recompute their hash if it validates. 
+07:57 And then, in here we've got the password plus the salt, all over there. 
+08:02 Right, so if this gets leaked to the internet, 
+08:05 determining if that is the word test is not going to be simple, 
+08:09 it's going to be simple, it's going to be much much harder 
+08:13 than if you just had put in the database of course, 
+08:16 it's going to be much harder than if you had just hashed it once, 
+08:18 because it's doing a 150 thousand times, and because it has the salt 
+08:21 it's not clear that it's just four characters, it was probably much more than that. 
+08:25 And the salt was randomly generated along with this. 
+08:29 Okay, excellent, now final thing is, we've created our accounts 
+08:34 how do we test a log in, alright so let's do that. 
+08:39 Let's start at the controller level, 
+08:42 so up here we have a sign in, hello, sign in, great, and now we need to validate this, 
+08:47 so let's just say this account service so we are going to say get authenticated account 
+08:52 and of course, we're going to pass the email, remember, that's our user name, 
+08:56 and we are going to pass the password, and then we'll say if not account, right, 
+09:00 either we got an account or we didn't, we'll figure out how we do this in a second, 
+09:03 we are going to set an error, so we'll just set the error and return to dict stay on that page,
+09:10 otherwise, we are going to do something like return self.redirect to /account 
+09:16 or wherever we want to go, right, 
+09:19 this is just going to be our indicator that everything worked, so let's try this method,
+09:22 you'll see as easy it was to create the hash is also as easy to validate it. 
+09:28 Again, this is plain text password, now I can't just reencrypt the password 
+09:34 and then test it against the database, because it actually contains randomly generated salt, 
+09:39 so every time you encrypt it you get a different answer even for the same plain text, 
+09:44 but, what I can do is part of that big string of text stores all the things it needs to- 
+09:50 basically to do that internally without regenerating stuff. 
+09:55 So what I can come down here and do is first I have to get the account, 
+09:59 so I'll say find account by email address, right, so that is going to be really easy; 
+10:04 does the account exist, yes or no, and then if it doesn't, 
+10:07 then we're going to return nothing, but if the account exists what I need to do
+10:12 is actually validate that this plain text run through the same algorithm with the same salt,
+10:16 generates the same crazy character set. 
+10:19 How do I do that- I say here and I say verify,
+10:23 and I give it the secret which is just going to be the plain text password 
+10:27 and the hash is on the account, like so. 
+10:31 Right, lets just remind you over here, it's this, it's that field, alright. 
+10:37 So we are just going to return and this returns true and false so let's say false. 
+10:41 Actually, we are going to want the account from this 
+10:46 so we'll say if not that, then return account. 
+10:51 Okay, let's make sure we get this right, we get the account by email address, 
+10:55 and if we have no account under that email then we're done, then, 
+10:59 we're going to verify with the same information, let passlib handle that for us, 
+11:04 if that doesn't work we are going to return no account if it does, return account. 
+11:08 Alright, let's try it, are you ready to sign in to our first account, okay, sign in, let's see, 
+11:13 they both have the same password I am going to try this one 
+11:16 and I am going to put first something wrong I am going to put the word cat, 
+11:20 cat is not the password bam, look at that, error email address or password incorrect. 
+11:25 Let me say test, bam, you are logged in and it felt instant to me,
+11:29 I mean, you know how it comes across in the video 
+11:32 but I am trying to be a little bit loud wacking on the keyboard 
+11:37 so you can hear it so let's do this one, you have to be careful, remember, 
+11:41 this one its password wasn't generated with the sha or whatever, 
+11:45 so this one I just put in hash something and it is going to crash if I try it, 
+11:48 if I do this one, I'll just log in again, test 1, 2, 3, 
+11:51 I'll make a lot noise here how quick it is, nice and speedy, it's fine remember. 
+11:55 Okay so that is how we manage the accounts, 
+11:58 the final thing that we have to see is how do we actually indicate that 
+12:01 in our website that people are logged in across more than just one request 
+12:05 and the trick to that is going to be cookies. 
+ 

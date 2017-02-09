@@ -1,0 +1,31 @@
+00:01 Alright, it's time to actually send this email instead of just print it out, 
+00:04 let's say email service.send we have these various things here, 
+00:08 let's do send the password reset. 
+00:11 
+00:16 And what do we got to pass, we are going to need to pass the email, 
+00:19 and the reset code. 
+00:22 And we don't need to pass the whole thing, we can just pass the reset id, 
+00:25 so let's generate this method. 
+00:31 Okay, now it's going to be very similar to this one, 
+00:34 so I'll just copy that really quickly, and instead of sending welcome 
+00:39 we are going to send password reset, reset password, which I have already done, 
+00:43 it's got the email, I don't think we actually we need the email in that part of it, 
+00:49 what we need is the rest code, let's just double check that really quick,
+00:55 we need the reset code, so here this goes like this, 
+00:59 and we have the rest id then we'll say, this is going to be reset your password, 
+01:05 it's kind of a long title but we are going to go with it. 
+01:11 Okay, let's see what we get here. 
+01:15 Let's go over here and generate yet another reset, 
+01:19 this time it's a little because it's actually sending the email, 
+01:22 you can see down here, sending message, live and then boom, 
+01:26 it says we would have send it, that's left over, we actually did send it, 
+01:29 let me check my email, 
+01:32 hey look what we found, in our email. reset your password, 
+01:35 and here you can see the url, let me o=hover over this, 
+01:39 shows you some great long code, reset password and I put local host, 
+01:43 please don't really put local host in yours, 
+01:45 but so I could do the demo without doing some kind of deployment, here we go,
+01:48 so if I click this, it should take us back to our app with this reset your password. 
+01:53 Now in the next video I am going to come back 
+01:55 and actually use that code right there to validate and perform the reset. 
+01:59 And that will wrap up everything to do with the password resets. 

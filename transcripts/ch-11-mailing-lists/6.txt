@@ -1,0 +1,134 @@
+00:03 Alright, now we are ready, we've got our mail list service, 
+00:07 ready to manage subscribers, adding, removing, updating subscribers, 
+00:10 all those kinds of things, we've got our forms and our controller, 
+00:14 a get post redirect pattern ready to do this gathers the data from the users, 
+00:19 all that is left is to actually call the MailChimp API itself. 
+00:22 
+00:27 So it probably doesn't surprise you to know that
+00:29 MailChimp is available right here on PyPi. 
+00:34 So all we've got to do is pip install MailChimp, 
+00:36 now, there is a couple of ways we can do this, 
+00:38 remember, we're using this virtual environment, 
+00:41 yours probably is different but this is the one I am using for this demo
+00:44 so I need to make sure whatever I do I do it here, 
+00:46 now we could come up here, this is pretty sleek, 
+00:48 I could just import MailChimp like this, now notice, 
+00:52 MailChimp has a little red thing saying there is no module named MailChimp, 
+00:56 but PyCharm is smart and it knows that this is a package on PyPi 
+00:59 and we could install it, so one way to install it is
+01:02 just hit enter and let PyCharm do it here;
+01:04 another one is we could actually go to the interpreter and say 
+01:07 I want to add MailChimp and it will go find it, here, so it's just to show you, 
+01:13 the third way you can install this of course is to go over here 
+01:16 and activate that virtual environment, so source or .space activate the path to it, 
+01:23 and then we could just pip install MailChimp it's going to download, install it, 
+01:30 boom, everything is ready to go, 
+01:33 one thing that you need to be careful of with MailChimp
+01:36 is this doc opt requirement, the current version with doc opt is 0.6.3, 
+01:41 but this won't run with 6.3 this only runs with 0.4.0 
+01:46 so you have to pin that version here for doc opt which is really frustrating 
+01:49 but whatever, that's the way it works. 
+01:52 Okay, so we have this installed, we need to put this as a requirement in our setup.py 
+01:55 so when we install this into our server,
+01:59 it's automatically going to bring along the dependencies MailChimp doc opt and so on,
+02:03 after all that, we are ready to create this, call this API here, 
+02:07 so the way ti works is we say mailchimp.Mailchimp like so, 
+02:11 and what we need to pass is you can see is the API key, 
+02:14 so this is going to be MailingListService.mailchimp_api maybe we should call that key,
+02:19 I don't know, whatever, that is what we're going to use, 
+02:21 and then it's just literally one function call, so maybe we want to do some tests, 
+02:26 we'll say if not email return false, we don't really want to take an empty email, 
+02:31 now, the MailChimp API throws exceptions and we maybe don't want to throw 
+02:38 a straight up exception so we could just catch them and return true or false, 
+02:41 so let's do this, we'll say API, now in here there is a lot of things, folders, lists, 
+02:47 so what we care about are lists, and on the list, we can do things like batch subscribe, 
+02:53 or get the clients, we'll look at growth history but what we just want to do is subscribe 
+02:57 and there is a whole bunch of options, I'll show you what will work well, 
+03:01 so first of all, we're going to pass in the list id, like so, so that goes in, 
+03:08 remember that came out of our any file or configuration file, through the dunder init, 
+03:13 back over to here; next, we have to pass the email and we pass this as a dictionary 
+03:19 which is kind of funky, but it's okay, it'll work, 
+03:24 so we are going to have our email, 
+03:26 and we probably want to do things like strip it so if there is any spaces, 
+03:30 maybe lower case, so it's sort of canonically just the lower case 
+03:34 no white space variant here, the next thing is merge vars, 
+03:37 we are not going to use merge vars here, these play important roles 
+03:40 for things like first name, last name, they allow you to do segmentation, 
+03:46 so like paying customers versus free customers, and all sorts of stuff like that, 
+03:51 we'll talk about that when we get to the concept section, 
+03:54 but we're going to set two other things here, 
+03:56 we're going to set double opt in to be in false, 
+03:58 so what double opt in is and you can decide what you put here, 
+04:02 MailChimp if I say true will actually send and email to the email address entered saying 
+04:07 hey it looks like you want to subscribe tot his mailing list, 
+04:10 click this button to confirm your subscription there. 
+04:13 I am going to assume people coming to my site are qualified leads, 
+04:16 maybe you want to sat that to be true, the default is true, and so on. 
+04:20 So we'll say update existing, this is pretty important, if you are doing this multiple times, 
+04:25 or different levels, especially in the segmentation stuff, 
+04:27 so if this is already here and sort of failing to subscribe I just want to update them, 
+04:32 and replace interests as false. 
+04:35 So, interest this doesn't matter so much here but I want to put it here anyway 
+04:39 so when you get to the next section, if you go farther with MailChimp
+04:43 that you don't accidentally leave this out, so what is this about, 
+04:46 this has to do with interest groups, and you can use interest groups for segmentation, 
+04:50 so like I said, paying customers, people bought this course, 
+04:53 people came from here and there, if you say true there, the default, 
+04:56 it will only allowed them to be in one group, if you say false,
+05:00 you will be able to build them up so a customer can be both 
+05:03 the paying customer and originating from a web cast and interested in data science, 
+05:07 or whatever it is like your groups are consisting of. 
+05:12 Okay, so we've got one little squiggly thing here, 
+05:14 what is this unhappy about- the missing except, 
+05:18 okay, so if that worked, we are going to return true, if it doesn't work, 
+05:22 let's catch an exception, do a print and later we could log this to somewhere 
+05:27 like roll bar or something, but we'll just catch it, like so, 
+05:30 and we'll print error during mailing 
+05:34 so here we can print that out and then let's return false.
+05:38 Okay, so I think we're ready, what do you guys think, 
+05:41 do you want to try this, do you want to sign up to our email list, 
+05:43 we could email ourselves, that sounds cool, let's run it. 
+05:46 Okay, here we are again, it's running, it didn't crash,
+05:51 that's good that means that we've probably setup MailChimp alright, 
+05:54 so I'll come down I'll put my email address in again, 
+05:57 and let's get notified, actually let me use my other one, 
+06:00 the one I used to register at MailChimp, so, I'll use my 
+06:03 michael@michaelckennedy.net, are we ready? 
+06:06 Go! Awesome, you're on the list, okay, so I think that worked,
+06:11 we actually could have caught the response form the API and print it out, 
+06:15 the response, but let's just go look at the MailChimp results 
+06:18 see if we're now on our list,
+06:21 anyway, here is what I decided to write, awesome, 
+06:23 you are on the list something fun and playful. 
+06:25 Thanks for signing up to be notified about upcoming events and albums 
+06:28 remember this is our band, you address is in good hands we won't spam you 
+06:31 and by the way, hey why don't you sign up and follow our twitter account as well, 
+06:34 like if you are willing to sign up on the list 
+06:36 you are probably willing to follow our twitter account, 
+06:39 so, this is great, let's go check it at MailChimp. 
+06:42 Awesome, look, our blue yellow band has a subscriber, exciting, 
+06:46 let's go look who is it, want to bet- I think I know who it is, 
+06:50 awesome, michael@michaelckennedy.net. 
+06:53 So, check this out, we just subscribed it, apparently it's evening time, 
+06:58 maybe I should go eat dinner, I don't know, 
+07:00 we can even see more information about ourselves here like what groups we're in, 
+07:03 I can make this customer or this person an important person in my list 
+07:08 so I can manage them separately, maybe they are like the head of an account, 
+07:11 at some company I am trying to work with so I want to make sure I treat them well,
+07:15 you can see all the activity about like past campaigns, 
+07:18 how I as a subscriber am basically responding. 
+07:24 MailChimp does ecommerce tracking 
+07:27 for certain things I don't use that but you could here, 
+07:29 social profiles like I could, you know, I think it will start pulling stuff
+07:32 like if it finds my gmail registered somewhere but that email I just used 
+07:37 is not really registered anywhere, it's just something that I know will get to me, 
+07:40 so I doubt you'll see it anywhere in that list. 
+07:44 Alright, so here you go, how are we, we were signed up via the API, 
+07:50 we did not detect the language because guess what, 
+07:53 I didn't use the form that they filled out, instead I used just the API, 
+07:56 and this is the time zone in GMT. 
+07:59 Great, so this is a really good start, 
+08:01 but, hopefully we end up with thousands of people in this list, 
+08:04 not just me signing up to myself, but that's how you use MailChimp. 
+08:07 Pretty easy, create an account, create a list, get the list id, 
+08:11 create API key pip install, the MailChimp API and boom api.list.subscribe.

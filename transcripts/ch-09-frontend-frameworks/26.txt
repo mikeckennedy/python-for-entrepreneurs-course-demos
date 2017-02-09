@@ -1,0 +1,47 @@
+00:01 Okay, let's see what's next.
+00:03 Well, we've already added our get notified section,
+00:06 now we want this upcoming events, 
+00:09 and we of course want this to be responsive 
+00:11 so if I make it smaller, we want the images to go like so, 
+00:14 we want that to go underneath, we don't this to look too weird,
+00:17 it is kind of weird that the image is so big just temporarily 
+00:20 but we are going to use our Bootstrap grid again to do this. 
+00:24 And if you look of course these images that come from the original, 
+00:28 are exactly responsive in the same way,
+00:31 that is where most of this behavior is coming from. 
+00:34 So again, let's come down here and we've got, here is our form, 
+00:37 so let's rename this to newsletter or something like that, 
+00:41 so that we can link to it, we are going to do this again, 
+00:44 but now, we want to do things a little bit differently. 
+00:49 Like I said, we are going to work with this a b stuff in a better way 
+00:53 but I'll just put b for the moment. Inside here instead of having this, 
+00:56 we are going to have some different html and I am just going to paste it, 
+00:59 like I said, not worth watching me type, I'll just copy. 
+01:03 So what we are going to do is actually we want to get rid of that one, 
+01:07 now what we want to do is we want to have a section that has that picture, 
+01:11 so here is the picture of one of our live events to try to tell everyone okay, 
+01:16 look how fun it is to come to our concert. 
+01:18 Next to it in the responsive way we are going to have 
+01:21 some really cool upcoming events, so if you are in North Kansas, Bottleneck, 
+01:25 they've got awesome stuff, I'll be sure to stop there, Boulder Colorado, 
+01:29 Crystal Ballroom Portland, lots of good places, so we are going to be, 
+01:32 our band is going to be playing there, and we want to have this responsive layout, 
+01:37 so notice, we've got this section here, that's just like a padding if you will,
+01:41 there we've got 3 and a 5 and a 2 and if I did things right, 
+01:46 adding those up add to 12 and it does, so remember, 
+01:49 we need 12 columns to make up the whole grid 
+01:53 and this will be 3 twelfths wide of screen 
+01:57 and this will be 5 twelfths wide of the screen,
+02:00 When you think of it as a ratio. 
+02:03 We are going to need to add this image, I don't think it's here, no it's not,
+02:06 so over here we've got our event, there it is, it looks like fun, right, 
+02:09 I just can't wait for some stage event to start to happen. 
+02:13 Alright, so we'll put that over here, like this, great, 
+02:18 and let's just look at our site again. 
+02:22 so it should appear right under this newsletter 
+02:25 and if i refresh it, look at that, beautiful,
+02:28 you can even see the alternating style a, b, a, b, going. 
+02:31 When we're done we'll have a darker color, 
+02:33 but that is that, now let's check the responsiveness. 
+02:36 There we go, responsive, just like we expected, really cool, huh? 
+02:41 Okay, so that section is done.  
