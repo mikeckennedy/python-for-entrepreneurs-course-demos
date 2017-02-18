@@ -39,4 +39,7 @@ class Game:
 
     # noinspection PyMethodMayBeStatic
     def clear(self):
-        os.system('clear')
+        if os.name == 'nt':
+            os.system('cls')
+        else:
+            os.system('clear')
