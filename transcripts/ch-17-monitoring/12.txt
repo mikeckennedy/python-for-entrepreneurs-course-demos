@@ -1,0 +1,47 @@
+00:01 Let's review the core concepts of integrating Rollbar into a Pyramid web application 
+00:05 like the Blue Yellow Rockets App. 
+00:08 So, most of this is going to happen in the configuration.any file, 
+00:13 we replaced our app main with pipeline main and the pipeline 
+00:17 basically lets Rollbar get a look at all the requests and then it feeds it on to our app, 
+00:24 and then it rolls it back and so if there is kind of errors or anything like that 
+00:29 Rollar will get to catch them before they flow back to the user. 
+00:32 We added our Rollbar ids here, we have our Javascript one 
+00:36 if we want to use that injected in code, we also have the ones 
+00:40 that we got directly from Rollbar that they pull in themselves 
+00:43 so rollbar.access token rollbar.environment, 
+00:46 be sure to set the environment correctly,
+00:48 remember that really helps knowing whether you should freak out 
+00:51 if you see an error or oh no that's just test, don't worry about it, 
+00:54 we can say which branch back in github we want to go from, 
+00:57 we also need to add this filter:rollbar 
+01:00 and set our environment and access token there as well. 
+01:04 it looks like in the slides I have dev in production, don't make those different, whatever, 
+01:08 those should make them the same. 
+01:11 Okay, so you put that in here, make sure you set, you install Rollbar the package 
+01:16 and you set it as a requirement in your setup, and once you've done that, 
+01:19 then you can just config.include rollbar.contrib.pyramid, 
+01:25 in your main setup somehow and that is all you have to do, 
+01:30 all the errors that are uncaught will be reported to Rollbar, how lovely is that?
+01:33 Now, there is one more step, because sometimes you actually handle errors 
+01:38 there is a crash and you don't want to let your app crash,
+01:40 you never want to let your app crash so ideally you handle these errors 
+01:44 and Rollbar will say you didn't handle this one, 
+01:47 you should have a try except or more error handling or something, 
+01:50 but if you do handle it, it won't show up in Rollbar unless you take some special steps. 
+01:55 So if we are going to report handled errors, 
+01:58 we are going to need to import Rollbar initialize it with our access token 
+02:03 and the mode production dev, whatever, probably pull that out of a configuration file, 
+02:06 and then we are going to do a try except block, 
+02:12 so we'll try something risky and if we just want to report a message 
+02:15 not a full on error we can say we got an IO Error for the risky operation 
+02:18 and this is just a warning, we handled it, it's cool. 
+02:21 If it's entirely uncaught, maybe we want to actually submit it as a full on error 
+02:27 as if it were uncaught, so we can report exception info 
+02:30 and that will just create more or less what you saw when we didn't handle it at all. 
+02:34 But this way we can catch the error still report it, 
+02:37 but not have our users see an entirely terrible crashed server right,
+02:43 that definitely shakes people's confidence in your product. 
+02:46 Alright, that's Rollbar, super easy to integrate, they've got a free plan 
+02:53 and it is super valuable, I really appreciate it having it around, 
+02:55 so if you depend on your site being up for your business, 
+02:58 something like Rollbar is definitely recommended. 

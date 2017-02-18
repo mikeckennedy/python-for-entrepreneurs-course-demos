@@ -1,0 +1,28 @@
+00:02 Logging is great, but how often do you actually look at your log files, 
+00:05 when something is wrong with your application, you want to know, 
+00:09 you need to know right now, you would like everyone on the team to get a notice, 
+00:13 the website is down, users are getting errors and so on. 
+00:17 So, the way we do this is by integrating some kind of monitoring system 
+00:23 into our web application, the one that I recommend 
+00:27 and the one that I've been using for a long time is called Rollbar. 
+00:31 And, Rollbar is cool because it works across many different technologies 
+00:34 like it's great with Python, but it also works with NoJs, client side Javascript .Net, 
+00:39 you name it, Ruby, lots of different platforms are supported, 
+00:43 so you can sort of bring all of your monitoring from different applications 
+00:47 together even if you are not using Python for everything. 
+00:50 So, we're going to go and look inside of Rollbar 
+00:54 and I'l take you on a tour of my Rollbar account, then we'll create a new application, 
+00:59 which is going to be the monitoring app, 
+01:03 or the app that we are going to monitor inside Rollbar 
+01:06 and we are going to associate that with our Blue Yellow Rockets web app 
+01:09 that we've been building this whole time. 
+01:12 And then, once we get it setup, we'll see if there is an error we'll get a notification
+01:16 and all sorts of places, we can setup our email, I am going to setup a Slack channel 
+01:21 so we'll get a notification in Slack, and then when we do get that notification of the error, 
+01:25 it actually contains all this information, it contains information
+01:30 about where the stack trace or traceback was, 
+01:33 what the value of the local variables when it crashed were, 
+01:37 what operating system and browser were they using 
+01:41 when they caused this crash and so on, and so on.
+01:44 Lots of pieces of information we'll be able to use here 
+01:47 to really quickly track down and solve the problem. Alright, let's get going to Rollbar. 

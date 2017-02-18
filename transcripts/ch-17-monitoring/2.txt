@@ -1,0 +1,61 @@
+00:03 Welcome to level one, logging. 
+00:06 So here is a log file from Talk Python Training, 
+00:09 I've edited it down for a couple of things, condense some information 
+00:14 to remove things like usernames or email addresses and whatnot, 
+00:17 but this is more or less what comes off of the server. 
+00:21 And, here I want to highlight a couple of things we can learn about this log, 
+00:25 in fact, I learned a few things even just looking at it 
+00:29 for this presentation, so hey, that's pretty cool. 
+00:32 Alright. now let's start with user actions, so here you can see 
+00:35 I've specifically added login information to the account controller 
+00:42 to the purchase controller, things like that. 
+00:45 So you can see here, here is a case where a user successfully logged in to the app 
+00:49 and coming back to the class, thank you, whoever that is, that's awesome. 
+00:53 They can also see over here that somebody who is not yet a user 
+00:57 has come to the website and they filled out that Mailchimp newsletter form
+01:00 right on the front page that says hey I am not ready to buy class yet 
+01:04 but some of the stuff on your list looks really coo, 
+01:06 just let me know when it's finished so they enter their email address, 
+01:08 and they subscribed to the mailing list, also very cool, thank you. 
+01:12 And down here, you can see somebody has logged out, 
+01:16 so in my actual logs I have the username and email address 
+01:20 just so I can sort of corelate that back to who these people are, 
+01:23 but of course, I don't really want to violate their privacy. 
+01:27 So I took that out, but you can add these actions, so you see oh cool, 
+01:30 people are using my web app in this way. 
+01:33 We can also see things like search engines, so down here 
+01:36 you can see some kind of search engine is trying 
+01:41 to actually get to the lecture 52018 from this course. 
+01:45 Well, that search engine didn't buy access to that course 
+01:49 so I am not letting them in, I am actually not sure where that is coming from, 
+01:53 and that's one of the things I am learning, I tweaked my sitemap a little bit 
+01:56 and I am not really sure how it got here so I am going to look into this, 
+02:02 but nonetheless, you can see what search engines are up to, 
+02:06 and you can even see what hackers are up to, and let me just tell you, 
+02:09 if you have a website on the internet, it is constantly under attack, 
+02:14 you put a website up, it gets a little bit popular,
+02:18 you'll be blown away at like how many hack attempts are on it. 
+02:22 So, here we can see that somebody is trying to look and see 
+02:27 if I am running a Wordpress site, and if I am they are going to then flip over, 
+02:32 they are trying to load the login page and then they are going to start dictionary attacking it 
+02:36 or using default passwords or something like that. 
+02:40 So you are oh my god, someone is hacking my site, yeah, they do it, all the time. 
+02:45 So, you just have to make sure that you have your security story down, 
+02:49 you have to make sure that your website is patched, 
+02:53 do that in Linux or whatever right, behind the scenes and make sure it's patched, 
+02:57 make sure that all your dependencies like Pyramid stuff are up to date, 
+03:01 like you need to be super vigilant because you can see 
+03:04 even in just the simple set of logs here, people are hacking way on it, 
+03:08 and these are just the ones that went to places that were not found, right, 
+03:13 who knows what else is they are doing that I haven't put logging in for. 
+03:18 So the big question is how do I generate this log? 
+03:21 Python itself has login built in, but I want to show you something 
+03:26 that I think is a pretty significant improvement over Python's default login. 
+03:31 And that is Logbook. So Logbook is a package put together by Armin Ronacher, 
+03:37 Armin Ronacher is the guy behind Flask so you know this is solid software, 
+03:41 and you can see from this little welcome to Logbook hello world example 
+03:45 that it's very simple to get started, you'll see that it's nice to compose these
+03:50 across different layers of our application, lots of good stuff, ok. 
+03:55 So over the next couple of videos, we're going to be introducing Logbook 
+03:59 adding Logbook to our web application, and logging a couple of types of information
+04:04 and some of the requests, like you saw in that previous screen. 

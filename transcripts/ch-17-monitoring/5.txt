@@ -1,0 +1,75 @@
+00:01 Now that we have logging set up, there is one additional thing 
+00:04 I'd like to do at app startup that I think will make the forensic story 
+00:08 much stronger for our application, 
+00:13 If you run into an error, if you are having a hard time reproducing it, 
+00:16 or even if you discover a security vulnerability,
+00:19 it would be really good to know when in your app's life cycle 
+00:22 is it running which package, right, which version of that package.
+00:27 So what I am going to do is add the ability to find all of the dependencies 
+00:31 of our application and log out the dependency and the version at the start. 
+00:35 That way when you go back into the logs you can actually see 
+00:39 which version it's running on for all the packages and their dependencies, 
+00:43 and their dependencies and so on, when you are looking at the log file, 
+00:47 so if you have to go back six months and you see some things happening, 
+00:51 you could actually check that version of some library 
+00:54 that may have been giving you trouble, and see if it was just the version it was running on 
+00:57 or if that's still long running problem with your app. 
+01:02 So let's go down to our logging bit here and we'll write one more function. 
+01:06 Log package versions. So let PyCharm write that, thank you, 
+01:14 but this is going to be big and ugly 
+01:17 so I am going to put it at the very bottom, down here like this. 
+01:20 Okay, now the implementation for this is not especially insightful, 
+01:24 so let me just drop it in. 
+01:28 Okay, so what we are going to do is we are going to get the startup log, 
+01:31 and then we are going to set some requirements that we're using, 
+01:35 I'll show you how to get that in a second, 
+01:38 we are going to put them in alphabetical order, 
+01:41 and then first of all, we are going to print out the Python version, 
+01:44 which is great to have in your log files every time your app starts, 
+01:47 and then for each package we are going to print out its version as well, 
+01:51 and finally we'll do just a tad bit of timing so that we'll know whether or not 
+01:55 this is putting lots of pressure on our app startup, right, 
+01:58 if this takes three seconds maybe it's not worth it, if it takes 50 miliseconds,
+02:01 it's probably great to have it in the logs. 
+02:04 Okay, so how do we figure out what the requirements are? 
+02:07 Well, remember, we are using this particular virtual environment, 
+02:12 blue yellow env, now I've activated it here, so when I type pip list 
+02:18 these are actually the dependencies that only this application uses, 
+02:24 remember this environment is tied in a one to one mapping over to this application, 
+02:29 so what is here is what is used by the application. 
+02:32 If I had added something that I stopped using it, I could pip uninstall it, right, 
+02:36 but this list basically is what we need, so we can just use a different format json 
+02:43 and this will actually be something we can drop into Python and use. 
+02:47 So here we have this list of requirements and we can just drop that in, 
+02:52 do a little formatting, and notice the version is listed here, 
+02:57 we are not going to use the version. 
+03:00 What we are going to do instead, is we are just going to use the name part, 
+03:04 now you'll be tempted to go through and like delete the version, whatnot, 
+03:09 because you want to have this nice and cleaned up, but here is the thing, 
+03:13 as soon as you reinstall another dependency 
+03:16 you are going to need to rerun this code here
+03:19 and recopy and paste that chunk there and it's going to get messy 
+03:22 so my view is just leave it more or less like however it is once you just format the file. 
+03:27 So let's go and run this and see the logging of our versions. 
+03:32 Excellent, look at that, okay so if we go to the top, 
+03:38 logging initialized here is the Python version info so we are running on 3.6.0 
+03:45 right now which is built for Apple, fantastic,
+03:48 and then the package versions we got Chameleon 3 remember, 
+03:51 I deleted it here, right, we are not using the version of this list,
+03:55 just let it tag along because it's a pain to maintain. 
+03:58 Doc opt- we have to use doc opt 0.4.0 at the current time, 
+04:03 because MailChimp doesn't support the newer one, 
+04:07 I don't know why but that is really annoying, here we just installed Logbook 1.0.0 and so on.
+04:11 So this is cool, right, this is all of our versions and how long did it take to generate it,
+04:15 34 milliseconds, acceptable. 
+04:18 Also we are running in production mode, which is cool, 
+04:22 that's because of the particular hidden any file 
+04:26 that I am going to put a bunch of production settings into, 
+04:29 and then here is our other various things so connecting to the database 
+04:33 with this connection stream, and starting the server 
+04:36 right this actually comes out of the PyCharm, 
+04:39 but this is a print statement that should be converted to some kind of log statement, 
+04:43 you can tell because it doesn't have the date time level and section of the app. 
+04:48 I don't know what you think about this version stuff here, 
+04:51 but I really love o have this in my logs 
+04:54 so I can go back and see what was running when. 

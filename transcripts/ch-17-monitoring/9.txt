@@ -1,0 +1,103 @@
+00:02 Let's look inside my Rollbar account.
+00:05 I have got a couple of web applications registered here is Talk Python Training 
+00:09 I also have Python Bytes registered there, 
+00:12 I have got Talk Python The Podcast site which handles a huge amount of traffic, 
+00:16 that site is registered here and so on. Right now, 
+00:19 I am on the Talk Python Training dashboard, and you can see 
+00:22 there is a couple of errors that have occurred, now it might look like this is a problem, 
+00:25 but in fact these are not coming from production, 
+00:29 they are coming from somewhere else and so we don't need to worry about them too much,
+00:32 we can go and resolve them and they will just go away from our dashboard, 
+00:36 but nothing major is going on right now, there will be some items that have occurred, 
+00:40 some errors that have occurred that I have archived away,
+00:44 so let’s look over here, this is the items section, 
+00:47 and we can see here is all the errors and other activity on my site that has occurred 
+00:55 over as long as the data is stored, 
+00:58 okay, so you can see all activity, all dates and so on, 
+01:01 and if we are only looking for errors, we could come over here and say 
+01:05 just show me the errors and it also makes the deployment story here, 
+01:10 so for example here is some errors that have occurred 
+01:13 and then these are the deploys that have happened, 
+01:16 and if I click this, here it will actually take me
+01:19 to view the files that were deployed, you can see the changes in github 
+01:22 and all the commits and all then link over to github from there and so on. 
+01:25 And, these are actually the ones that have been resolved, that have been fixed, 
+01:29 so here is an error that I ran into, you can see it occurred in production, 
+01:34 and then once I realized what was happening, I replicated it in dev 
+01:40 and then I pushed a new release out and it was fixed. 
+01:45 So, this I got a notice, basically a little pop up saying hey, 
+01:49 something is wrong with your app here, so that was really nice 
+01:53 that it told me this error and you can see I've checked little box 
+01:57 to say this is solved, so if I see the open items it will be gone now. 
+02:01 So let me give you a concrete story where this has really helped me 
+02:04 and then we'll look and see how that happened. 
+02:07 So over here I've got this section what users think. 
+02:10 And this is just like reviews that I got off of iTunes and other people 
+02:16 sent me on public places like Twitter or something, 
+02:19 so when people say cool things about the show, 
+02:22 I put it here so people who are new to the show they come and look 
+02:25 oh maybe this is worth subscribing to, right, 
+02:28 so thanks Nigel who says, "Michael finds great guests for the show, 
+02:31 and really motivates me to become a better Python programmer, thanks for all the effort,"
+02:34 really cool, and this is like randomly selected, so as I refresh this, 
+02:37 you'll see different quotes coming up here, that leads us to error number 49, 
+02:42 what has happened here? 
+02:45 So it turned out I entered these quotes into a database locally, 
+02:47 I developed this UI locally and I tested it, it worked great 
+02:52 and then I pushed everything to production; 
+02:54 sqlalchemy recreated the database structure just fine on the server 
+02:58 but, this set was empty because I hadn't yet gone to the admin section 
+03:03 and entered all of the pieces, I hadn't entered any quotes basically 
+03:07 and somewhere we were doing doing random.choice and it turns out 
+03:13 you cannot choose from an empty sequence which took down the homepage of my website.
+03:17 So that freaked me out a little bit, I got a quick notification 
+03:21 and I went over to Rollbar and said oh my gosh, what is going on here 
+03:25 and actually I didn't even know that this was the error 
+03:30 I just saw cannot load page 500, something like that. 
+03:33 So I drop in here it says okay, let's see, here is the problem,
+03:37 we've got in the home controller, and the home view model 
+03:43 which is calling this function get random views and we are specifying the count, 
+03:47 notice how it defaults to 3 but that is the value we are passing, 
+03:51 and then we are calling choice.append and we are doing a random.choice 
+03:56 so basically we did a query to the database, get all the reviews back 
+04:01 and then we are going to do random.choice for as many times as this count is passed in.
+04:05 And, what is the conclusion? 
+04:08 Well, the conclusion is that reviews was empty. 
+04:12 So this is a pretty simple error to solve, but if it was more complex 
+04:15 we can do a couple of cool things like look, I can click here and I can see the arguments,
+04:21 these are the arguments that were passed to random, notice the sequence is empty. 
+04:27 And I can open up the arguments here and say okay self was passed, to this function, 
+04:32 get random reviews, and count was apparently took on the default and just did 3. 
+04:38 But if this was a different number, it would have captured the
+04:41 actual arguments passed here, how cool is that? 
+04:44 So you also see the locals like we are creating the chosen things 
+04:48 and so you can see all the data, that was present when there was an error 
+04:52 and that is super helpful. 
+04:54 So, we can also see how many times this has occurred, 
+04:57 this happened at this time, on this machine, on this address this looks like 
+05:01 it was me reproducing it in the dev mode but it did happen unfortunately in production. 
+05:05 You can integrate with this people API or you can say
+05:08 if ever there was an error here is the active user 
+05:12 so you could actually contact the user and say hey Joe,
+05:16 I see you bought my class and you came to this page and it crashed, 
+05:19 here was the problem, we got that fixed, thanks for reporting it or whatever. 
+05:23 So browser OS, information about IP addresses and it says 
+05:30 they were not able to find a deploy that caused it 
+05:34 because it wasn't actually caused by a deploy, 
+05:37 it was just- I guess it was caused by a deploy, but sometimes they can go back 
+05:40 and look at the github this in integrated with github they can find 
+05:43 actually a deployment that caused it, okay, 
+05:46 here is the first deployment that it saw the error in. 
+05:48 And similar items, nobody's run into this problem, 
+05:51 you can go to community solutions and see if anybody has a fix for, 
+05:54 you cannot select from an empty sequence. 
+05:57 Alright, so this is really nice information to have, and the fact that it appears instantly, 
+06:04 in all the places that you are going to set up an integration with, 
+06:07 is really like the half the value, just right there, 
+06:11 just getting notified immediately when there is an error, 
+06:13 and then that notification coming with all this great information 
+06:16 so you don't really need to debug it, you just got to go fix the code. 
+06:21 Well, that's really great too. 
+06:23 So, in the subsequent videos I am going to show you 
+06:26 how to integrate Rollbar into the Blue Yellow Rockets application 
+06:28 and that should be really easy to do. 
