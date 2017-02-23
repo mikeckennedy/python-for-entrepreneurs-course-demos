@@ -13,7 +13,7 @@ class AdminController(BaseController):
         vm = NewAlbumViewModel()
         return vm.to_dict()
 
-    # POST /account/register
+    # POST /admin/new_album
     @pyramid_handlers.action(renderer='templates/admin/new_album.pt',
                              request_method='POST',
                              name='new_album')
