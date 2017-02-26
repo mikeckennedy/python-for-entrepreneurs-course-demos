@@ -18,7 +18,7 @@ Once you've created a virtual environment via
 
 (Make sure this is python 3: `python -V` -> 3...)
 
-You activate it differently. It's activate.bat is in scripts not bin (why?):
+You activate it differently. It's `activate.bat` is in scripts not bin (why?):
 
 `FOLDER_NAME/scripts/activate.bat`
 
@@ -26,7 +26,7 @@ You activate it differently. It's activate.bat is in scripts not bin (why?):
 
 As noted above, `pip3` and `python3` are commands on unix systems but not windows (why?).
 
-But you an easily create them. Just create two batch files and put them somewhere that is in your path (e.g. the same folder that contains python.exe for v3?).
+But you can easily create them. Just create two batch files and put them somewhere that is in your path (e.g. the same folder that contains python.exe for v3?).
 
 **pip3.bat**
 `pip.exe`
