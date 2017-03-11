@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en-us" metal:define-macro="layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Michael Kennedy">
+    <link rel="shortcut icon"
+          href="/static/img/fav.png?cacheId=${view.build_cache_id('/static/img/fav.png')}">
+
+    <title>Blue / Yellow Rockets</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
+          rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+
+    <!-- Custom styles for this scaffold -->
+    <link href="/static/css/landing-page.css?cacheId=${view.build_cache_id('/static/css/landing-page.css')}"
+          rel="stylesheet">
+    <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}" rel="stylesheet">
+    <link href="/static/css/nav.css?cacheId=${view.build_cache_id('/static/css/nav.css')}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
+    <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
+    <![endif]-->
+
+    <div metal:define-slot="additional_css"></div>
+
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/static/img/logo.png"/> <span class="blue-foreground">Blue</span> / <span
+                    class="yellow-foreground">Yellow</span> Rockets</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/albums">albums</a>
+                </li>
+                <li>
+                    <a href="/home/bookus">book us</a>
+                </li>
+                <li>
+                    <a href="/home/contact">contact</a>
+                </li>
+                <li tal:condition="not view.logged_in_user_id">
+                    <a href="/account/signin">sign in</a>
+                </li>
+                <li tal:condition="not view.logged_in_user_id">
+                    <a href="/account/register">register</a>
+                </li>
+                <li tal:condition="view.logged_in_user_id">
+                    <a href="/account">account</a>
+                </li>
+                <li tal:condition="view.logged_in_user_id">
+                    <a href="/account/logout">logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<div class="main_content">
+    <div metal:define-slot="main_content"></div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-4 mission">
+                <div class="section-header">Our story</div>
+                This site is not a real site. It's a just a real live demo
+                from my online video course
+                <a href="https://training.talkpython.fm/courses/details/python-for-entrepreneurs-with-html-css-pyramid-sqlalchemy-bootstrap-stripe-and-mailchimp">
+                    Python for Entrepreneurs</a>.<br>
+                <br>
+                Blue / Yellow Rockets was built
+                during the class to show how
+                to create a website in Python, but also all the business related features
+                no one sees (mailing lists, credit card payments, email, etc).
+
+            </div>
+            <div class="col-md-3">
+                <div class="social">
+                    <div class="section-header">Connect with us</div>
+                    <div><a href="mailto:contact@talkpython.fm" target="_blank"
+                    ><i class="fa fa-envelope"></i> email</a>
+                    </div>
+                    <div>
+                        <a href="https://training.talkpython.fm/courses/details/python-for-entrepreneurs-with-html-css-pyramid-sqlalchemy-bootstrap-stripe-and-mailchimp"
+                           target="_blank"><i class="fa fa-file-video-o"></i> course</a></div>
+                    <div><a href="https://github.com/mikeckennedy/python-for-entrepreneurs-course-demos"
+                            target="_blank"><i class="fa fa-github"></i> github</a></div>
+                    <div><a href="https://twitter.com/TalkPython" target="_blank"><i class="fa fa-twitter"></i>
+                        twitter</a>
+                    </div>
+                    <div><a href="/home/image_credits" ><i
+                            class="fa fa-picture-o" aria-hidden="true"></i> credits</a></div>
+                    <div><a href="https://www.youtube.com/channel/UCKPSmMfDsXTKrCZApukcJ7A" target="_blank"><i
+                            class="fa fa-youtube"></i> youtube</a></div>
+                    <div><a href="https://talkpython.fm/" target="_blank"><i class="fa fa-microphone"></i>
+                        podcast</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+
+                <div class="copyright">
+                    Copyright &copy; 2016 <a href="https://training.talkpython.fm/"
+                                             target="_blank">Talk Python Training</a>. All rights reserved.
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/bower_components/jquery-dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery-dist/jquery.min.js')}"></script>
+<script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
+<div metal:define-slot="additional_js"></div>
+
+</body>
+</html>

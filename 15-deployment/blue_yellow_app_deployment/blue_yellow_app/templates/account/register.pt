@@ -1,0 +1,33 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container account">
+            <div class="row upcoming">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Create an account</h1>
+
+                    <div class="error-msg" tal:condition="error">
+                        Error: ${error}
+                    </div>
+
+                    <form class="standard-form" action="" method="POST">
+                        <input name="email" required type="email" value="${email}" placeholder="email address"
+                               class="form-control">
+                        <input name="password" required type="password" value="${password}" placeholder="password"
+                               class="form-control">
+                        <input name="confirm_password" required type="password" value="${confirm_password}"
+                               placeholder="confirm password"
+                               class="form-control">
+                        <button type="submit" class="btn btn-success">Register</button>
+                    </form>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
