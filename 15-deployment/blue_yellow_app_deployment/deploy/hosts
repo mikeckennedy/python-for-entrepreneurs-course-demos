@@ -1,0 +1,2 @@
+[init_config]
+162.243.151.207 ansible_python_interpreter=/usr/bin/python3

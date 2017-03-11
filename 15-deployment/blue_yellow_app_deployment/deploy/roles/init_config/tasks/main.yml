@@ -1,0 +1,61 @@
+###
+# establishes non-root user with sudo privileges
+##
+- name: update, upgrade packages install fail2ban
+  apt:
+    name: fail2ban
+    state: present
+    update_cache: yes
+
+
+- name: create a non-root group
+  group:
+    name: "{{ deploy_group }}"
+    state: present
+
+
+- name: create non-root user
+  user:
+    name: "{{ deploy_user }}"
+    group: "{{ deploy_group }}"
+    shell: "/bin/bash"
+    state: present
+
+
+- name: add authorized_key to non-root user
+  authorized_key:
+    user: "{{ deploy_user }}"
+    state: present
+    key: "{{ lookup('file', ssh_dir + ssh_key_name + '.pub') }}"
+
+
+- name: add non-root group to sudo privileges
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: "^{{ deploy_group }}"
+    line: "%{{ deploy_group }} ALL=(ALL) NOPASSWD: ALL"
+    validate: visudo -cf %s
+
+
+- name: disable root SSH logins
+  replace:
+    destfile: /etc/ssh/sshd_config
+    regexp: "^PermitRootLogin yes"
+    replace: "PermitRootLogin no"
+    backup: no
+
+
+- name: disable SSH logins by password
+  replace:
+    destfile: /etc/ssh/sshd_config
+    regexp: "^PasswordAuthentication yes"
+    replace: "PasswordAuthentication no"
+    backup: no
+
+
+- name: restart SSH service
+  service:
+    name: ssh
+    state: restarted
+

@@ -1,0 +1,8 @@
+###
+# Locks down the server and set up a non-root user
+##
+- name: apply initial config to server
+  hosts: init_config
+  user: root
+  roles:
+    - init_config
