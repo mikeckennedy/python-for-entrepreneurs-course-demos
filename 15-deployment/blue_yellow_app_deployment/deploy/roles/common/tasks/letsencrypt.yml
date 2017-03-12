@@ -1,0 +1,48 @@
+###
+# install Let's Encrypt and Nginx packages and create certs
+##
+- name: ensure letsencrypt and nginx packages are installed
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  become: true
+  with_items:
+    - "letsencrypt"
+    - "nginx"
+
+
+- name: check if certs already created
+  stat:
+    path: "/etc/letsencrypt/live/{{ fqdn }}"
+  register: certs
+  become: true
+
+
+- name: stop nginx
+  service:
+    name: nginx
+    state: stopped
+  become: true
+  when: not certs.stat.exists
+
+
+- name: create certificate with letsencrypt command
+  shell: "letsencrypt certonly --standalone -d {{ fqdn }} -w {{ web_serve_dir }} -m {{ ssl_cert_email }} --agree-tos --renew-by-default"
+  become: true
+  when: not certs.stat.exists
+
+
+- name: generate strong Diffie-Hellman group
+  shell: "openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048"
+  become: true
+  when: not certs.stat.exists
+
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+  become: true
+  when: not certs.stat.exists
+

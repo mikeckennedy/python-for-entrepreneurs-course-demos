@@ -2,3 +2,7 @@ deploy_group: deployers
 deploy_user: deployer
 ssh_dir: "/home/matt/"
 ssh_key_name: "do_deploy"
+
+fqdn: "www.pythondeploymentexample.com"
+web_serve_dir: "/var/www/html"
+ssl_cert_email: "matthew.makai@gmail.com"
