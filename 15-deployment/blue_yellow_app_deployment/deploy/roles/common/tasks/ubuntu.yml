@@ -1,0 +1,32 @@
+###
+# updates APT package cache and installs packages
+# also enables the firewall
+##
+- name: ensure python packages are installed
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  become: true
+  with_items:
+    - "python-virtualenv"
+    - "python3-dev"
+
+
+- name: enable SSH in firewall
+  ufw: rule=allow port=22
+  become: true
+
+
+- name: enable HTTP in firewall
+  ufw: rule=allow port=80
+  become: true
+
+
+- name: enable HTTPS in firewall
+  ufw: rule=allow port=443
+  become: true
+
+
+- name: enable the firewall itself
+  ufw: state=enabled
+  become: true
