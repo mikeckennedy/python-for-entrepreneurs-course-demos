@@ -10,3 +10,12 @@ ssl_cert_email: "matthew.makai@gmail.com"
 wsgi_server_port: 6543
 app_name: blueyellow
 app_dir: "/home/{{ deploy_user }}/{{ app_name }}"
+
+
+local_deploy_key_dir: /home/matt
+code_repository: ssh://git@github.com/mattmakai/python-for-entrepreneurs-course-demos.git
+read_only_deploy_key_name: read_only_key
+
+
+venv_dir: "/home/{{ deploy_user }}/venv"
+sub_app_dir: "{{ app_dir }}/15-deployment/blue_yellow_app_deployment"

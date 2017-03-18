@@ -1,0 +1,27 @@
+###
+# handles app dependencies and the virtualenv
+##
+
+- name:
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  become: true
+  with_items:
+    - python3-venv 
+    - python3-pip
+
+- name: check if virtualenv should be created
+  stat:
+    path: "{{ venv_dir }}"
+  register: venv_created
+
+
+- name: create virtualenv if does not already exist
+  shell: "python3 -m venv {{ venv_dir }}"
+  when: not venv_created.stat.exists
+
+
+- name: use pip to install project dependencies
+  shell: "cd {{ sub_app_dir }}; {{ venv_dir }}/bin/pip3 install --upgrade -e ."
+

@@ -1,0 +1,22 @@
+###
+# clones our repo onto the deployment server
+##
+
+- name: ensure Git is installed
+  apt: name=git-core state=present update_cache=yes
+  become: true
+
+
+- name: create deploy key directory
+  file: path=/home/{{ deploy_user }}/git_deploy_key state=directory
+
+
+- name: ensure deploy key is on the remote server
+  copy: src={{ local_deploy_key_dir }}/{{ read_only_deploy_key_name }}
+        dest=/home/{{ deploy_user }}/git_deploy_key/{{ read_only_deploy_key_name }}
+        mode=0600 owner={{ deploy_user }} group={{ deploy_group }}
+
+- name: clone or pull latest code
+  git: repo={{ code_repository }} dest={{ app_dir }}
+       key_file=/home/{{ deploy_user }}/git_deploy_key/{{ read_only_deploy_key_name }}
+       accept_hostkey=yes
