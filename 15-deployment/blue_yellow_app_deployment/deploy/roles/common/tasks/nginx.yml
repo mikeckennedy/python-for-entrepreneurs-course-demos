@@ -1,0 +1,20 @@
+###
+# configure Nginx with HTTPS
+##
+
+- name: double check Nginx is installed
+  apt: name=nginx state=present update_cache=yes
+  become: true
+
+
+- name: delete symbolic linked website if necessary
+  file: path=/etc/nginx/site-enabled/default state=absent
+  become: true
+
+
+- name: write Nginx SSL config
+  template: src=nginx_ssl.conf.j2
+            dest=/etc/nginx/conf.d/{{ app_name }}.conf
+  become: true
+  notify:
+    - restart nginx

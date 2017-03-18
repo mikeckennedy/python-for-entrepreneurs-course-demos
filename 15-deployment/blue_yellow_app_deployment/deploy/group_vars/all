@@ -6,3 +6,7 @@ ssh_key_name: "do_deploy"
 fqdn: "www.pythondeploymentexample.com"
 web_serve_dir: "/var/www/html"
 ssl_cert_email: "matthew.makai@gmail.com"
+
+wsgi_server_port: 6543
+app_name: blueyellow
+app_dir: "/home/{{ deploy_user }}/{{ app_name }}"

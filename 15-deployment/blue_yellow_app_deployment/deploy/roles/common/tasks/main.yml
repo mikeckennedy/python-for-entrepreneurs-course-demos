@@ -1,9 +1,9 @@
 ###
 # configures server and install our web app from source
 ##
-#- include: ubuntu.yml
+- include: ubuntu.yml
 - include: letsencrypt.yml
-# - include: nginx_ssl.yml
+- include: nginx.yml
 # - include: git.yml
 # - include: dependencies.yml
 # - include: wsgi.yml
