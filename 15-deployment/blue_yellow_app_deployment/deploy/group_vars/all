@@ -19,3 +19,9 @@ read_only_deploy_key_name: read_only_key
 
 venv_dir: "/home/{{ deploy_user }}/venv"
 sub_app_dir: "{{ app_dir }}/15-deployment/blue_yellow_app_deployment"
+
+
+twilio_account_sid: ACxxxxxxx
+twilio_auth_token: yyyyyyyyyy
+twilio_number: "+1"
+alert_number: "+1"

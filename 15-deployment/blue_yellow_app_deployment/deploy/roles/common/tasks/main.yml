@@ -6,5 +6,5 @@
 - include: nginx.yml
 - include: git.yml
 - include: dependencies.yml
-# - include: wsgi.yml
-# - include: notify.yml
+- include: wsgi.yml
+- include: notify.yml

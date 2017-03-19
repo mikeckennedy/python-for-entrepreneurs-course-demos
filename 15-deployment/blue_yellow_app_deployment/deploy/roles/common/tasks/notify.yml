@@ -1,0 +1,12 @@
+###
+# notify deployer(s) about deployment
+##
+
+- name: send SMS alert about deployment
+  twilio:
+    msg: "App deployment complete!"
+    account_sid: "{{ twilio_account_sid }}"
+    auth_token: "{{ twilio_auth_token }}"
+    from_number: "{{ twilio_number }}"
+    to_number: "{{ alert_number }}"
+  delegate_to: localhost
