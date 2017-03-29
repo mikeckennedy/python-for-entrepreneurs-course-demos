@@ -64,3 +64,5 @@ misc.xml
 
 # Ansible temp files
 15-deployment/blue_yellow_app_deployment/deploy/deploy.retry
+.DS_Store
+1-intro-app/.idea
