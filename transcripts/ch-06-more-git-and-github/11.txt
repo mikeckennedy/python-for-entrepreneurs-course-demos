@@ -1,0 +1,38 @@
+00:01 You've made some changes to your repository on github through the web user interface, 
+00:04 or one of your collaborators has pushed some changes to github, 
+00:08 how do you get that code into your local repository? 
+00:11 That is where the opposite of the git push command comes in- git pull. 
+00:14 Git pull will take the commits and the code within those commits 
+00:18 from a remote repository and pull it down into your local repository, 
+00:23 you've already got the hang on the git push command 
+00:26 so we'll slide back over into terminal and you can take a look 
+00:29 at how this one works, we just made our change directly on github, 
+00:32 now what this means is there a remote repository 
+00:34 that is stored on github is one commit ahead of our local repository, 
+00:37 this situation can also come up when other people that you are working with 
+00:41 commit and then push up their code to the central repository that is stored on github.
+00:46 It needs some way to take those new commits 
+00:49 and bring them down to your local git repository, 
+00:52 let's do this now with the git pull command, 
+00:54 I've switched over into my full stack Python local repository, 
+00:57 we can say if we type get status there is no in progress changes 
+01:01 that have not yet been committed, 
+01:04 however, if we use the git log command and we just say give me the last commit, 
+01:07 we'll see add markdown stub page but that is not the way 
+01:12 this commit was actually created on github. 
+01:15 So now we can say git pull and then specify where we want to pull from, 
+01:18 so I want to pull from origin, but before we do that, 
+01:21 let's take a look with the git remote command 
+01:24 and we'll see that origin is set up for Matt Makai fullstackpython.com git repository, 
+01:29 that is the right location and we can say git pull origin 
+01:32 and now it's going to pull down the changes from a certain branch, 
+01:36 so I made those changes in the github pages branch, 
+01:39 and I'll press enter and now we get our changes that we made 
+01:42 directly through the github web user interface 
+01:45 and we pulled down that latest commit. 
+01:48 So just as we used git push earlier when we made local changes 
+01:51 we can use git pull t pull down changes from remote repositories. 
+01:55 And that is how you keep everything in sync. 
+01:57 We've covered a lot of ground in this chapter, but with all these commands, 
+02:00 you are in great shape to keep track of all the changes in your repository 
+02:04 and along with github, work with other collaborators on your project. 

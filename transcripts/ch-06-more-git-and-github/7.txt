@@ -1,0 +1,39 @@
+00:00 Now that we have the git remote command in our tool belt, 
+00:03 we can use the git push command to transfer 
+00:05 our new commits to another repository, 
+00:07 let's push the change that we made in this chapter 
+00:09 on the course demos repository up to github. 
+00:12 We got our change committed, 
+00:16 and we can see that we have remote repository, with the name of origin, 
+00:19 let's push our new commit up so this repository is synced 
+00:24 with what we have on github, you can use the git push command so git push 
+00:27 and then we're going to specify the name of that remote repository, 
+00:30 and there is one more thing, we need to specify the branch, 
+00:33 and we've been working in the master branch so far, 
+00:36 before I kick this off, I want to just escape out of that command, 
+00:39 not push up yet, and show git branch we're working on master. 
+00:44 Git branch shows up which branch we're currently in, 
+00:47 but how do we get into master? Well, the first time you run git init, 
+00:51 it's going to create the master branch for you, 
+00:54 that is where all of your changes are being made, 
+00:57 unless you explicitly specify that you want to work in a different branch, 
+01:00 if you're making small changes to your project, 
+01:03 then you may never need to use other branches, you can just stick to master. 
+01:06 Let's get back to pushing up our code. 
+01:09 Again, git push, origin master, now, github is going to challenge us 
+01:13 for our username and password in my case it's mattmakai, 
+01:16 I'll paste in my password, and now we can see we pushed up to github. 
+01:23 We push from our master branch, into the master branch of the private repository. 
+01:28 Now when Michael is working on this project, 
+01:31 he can pull down these changes and he can see the new file that we added,
+01:34 git push is only one way that we can push our changes up, 
+01:37 we can also use a pull request via github which can often be much easier 
+01:41 for code review purposes and when you're working with the bunch of other people, 
+01:45 git push is great when you're working on a repository by yourself, 
+01:48 or with just one other person, pull request tend to scale, to a much larger teams,
+01:53 and we'll take a look at those a little bit later in the course.
+01:56 For now, you should be able to use the git remote and git push commands 
+02:00 in order to sync your changes up from your local repository into github. 
+02:05 That provides you one way you can work with other people, 
+02:08 and it also backs up your repository just in case anything happens 
+02:11 to your local system, and you need to pull down everything from github. 

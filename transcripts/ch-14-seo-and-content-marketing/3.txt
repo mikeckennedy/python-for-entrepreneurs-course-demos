@@ -1,0 +1,66 @@
+00:00 Let's dive into constructing titles and header tags.
+00:03 The main rule around titles and headers is that they should be 
+00:06 as short as possible and name should match your target keywords. 
+00:10 So the first thing you'd want to do is come up with the list of keywords 
+00:14 that you believe your customers 
+00:16 or prospective customers are going to be searching for.
+00:19 Let's say I've created a new Python task queue that competes with celery
+00:22 that I think people should use instead of the celery task queue, 
+00:25 I want to write articles around that topic, 
+00:27 but there is a right way and a wrong way to write a title,
+00:30 for example, this one isn't terrible because it has some keywords in it, 
+00:34 like code execution but it's probably not what people are going to be searching for
+00:38 when they are looking for a task queue or trying to find out 
+00:40 what other task queues are out there in the Python ecosystem. 
+00:43 Rather than talk about something like what you did, 
+00:46 how I learned about offloading code execution, 
+00:48 the focus should be on the concept and the implementation itself. 
+00:52 Let's say I've created my own task queue called backer, 
+00:55 and now I want people to discover it. 
+00:58 Well, I could write a title instead of offloading code execution 
+01:02 we'll have this specific terms in it like Python, we'll say task queue, 
+01:05 background Python jobs with the backer task queue, and then the name of the site, 
+01:10 so the focus changes from what you did to what actually the content is on that page, 
+01:14 more likely, that a reader is going to be interested in an article 
+01:18 with this title when they are looking to adopt a new task queue. 
+01:21 Let's get out of the Python ecosystem a little bit and switch over 
+01:24 to an example where you've created a business 
+01:26 where you have gym equipment that you're selling. 
+01:28 You've written down a list of keywords you want to target, bench press, 
+01:31 because your machine can substitute for bench pressing, home exercises, 
+01:33 and in general weight lifting; certainly you could have an article, 
+01:36 that would be "Ten Weight Lifting Tips For Beginners", it's not a terrible title, 
+01:39 but it's much better to break that out, into multiple more specific titles. 
+01:44 Now the good part is the "Ten Weight Lifting Tips For Beginners" had weight lifting in it, 
+01:48 but it's unlikely that anyone is searching for ten weight lifting tips, 
+01:52 but it is likely that people are searching for a solution to that problem, 
+01:55 maybe they don't know what the proper form is for bench pressing, 
+01:58 we'll say the name of your business is Ultimate Home Gym,
+02:02 you can have an article specifically on proper flat bench press form 
+02:05 that will target bench press as a keyword, break out another one 
+02:08 of those weight lifting tips into "Four Exercises That You Could Do At Home" 
+02:12 that will touch on not only exercising but the people are looking for 
+02:15 something to do at home rather than going to a gym. 
+02:18 And then let's say one of those other tips was Wireless Headphones To Get
+02:21 that could be an entirely separate article, 
+02:24 it's targeting not just headphones in general 
+02:26 which is a really broad category, but weight lifting headphones, 
+02:29 ones that are good for doing exercises so it's more likely 
+02:33 that the audience that are searching for an article like that is going to be interested 
+02:36 in your home gym equipment, rather than if you just said best wireless headphones, 
+02:39 they could be for any purpose, and they land on your ultimate home gym website
+02:43 and they are not at all interested in home gym equipment, 
+02:45 you are self selecting your audience by choosing the right titles. 
+02:48 So here is what this looks like in HTML. 
+02:51 You've already got a lot of web development experience under your belt 
+02:53 so this should look familiar, but your title would be 
+02:55 the title of the article and then the brand 
+02:57 that you're trying to build, most likely the name of your business, 
+03:00 but you're going to want to have that end of the title, 
+03:02 so in the search results people are going to see the name of your business 
+03:05 at the end of the title, and in the h1 tag, we'll not have the name, 
+03:09 it will simply be the title of the content that you've created 
+03:12 and there should only be one of each of these elements on every single page. 
+03:16 That way you've kept it clean and clear both for the search engines 
+03:19 and of course for the people that are reading your article 
+03:21 and hopefully will become customers. 

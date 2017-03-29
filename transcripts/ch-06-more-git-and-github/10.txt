@@ -1,0 +1,66 @@
+00:00 Github's user interface makes it easy to collaborate with other people, 
+00:03 by adding them to your public or private repository. 
+00:06 You can also handle issues through their interface
+00:08 whether you are creating them or just responding to tickets. 
+00:11 There is another handy feature on github that I sometimes use 
+00:14 especially when it comes to documentation. 
+00:16 And that is you can modify files directly on github. 
+00:18 Your are unlikely to use this for any of your coding, 
+00:21 but, it can be handy if you need to make some tweaks to a readme 
+00:23 or any other text files you've got in your repository. 
+00:26 I like to show this to people because if someone doesn't already have
+00:29 git and github set up, they just need a github account 
+00:31 and they can modify files directly through their web browser. 
+00:34 It lowers the barrier to entry in case you're working with somebody 
+00:37 who is a bit less technically savvy, let's take a look at how it works. 
+00:40 Let's edit a file directly in github right now. 
+00:44 Click into a repository that you want to use. 
+00:46 In this case I am just going to use full stack Python 
+00:49 and when your repository comes up, as usual, 
+00:51 it will list all the files that are in your repository. 
+00:53 Now you can click into any of these files and I will show you the contents 
+00:57 and if you just want a copy and paste version, just a raw file you can get that 
+01:02 just by clicking the raw button on the user interface. 
+01:05 For  this example, I am going to go back and take a look at the readme 
+01:08 and modify the readme directly. 
+01:11 So click into a file that you want to edit 
+01:13 right on github, and then click the little pencil icon, edit this file. 
+01:16 This brings up the editor where you can modify the file 
+01:23 and also preview he changes, I'll just make a small edit, 
+01:26 I'll say view all topics on the table of contents page, copy and paste url, 
+01:35 and then it is on table of contents, html. 
+01:42 Alright, let's say that is the change that I want to make, 
+01:45 and then we can commit the changes, they should look familiar, 
+01:47 this is the same as using the git add and git commit command 
+01:50 on the command line, we give it a title, that actually could be all that we specify 
+01:54 so we could just say update readme with link to table of contents, 
+01:59 but we can also add an extended description 
+02:02 just like when we used the git commit command and it opens up text editor 
+02:05 where we can add a longer description in addition to the title, 
+02:09 just a couple of reminders, you should have your title be less than 50 characters
+02:13 anything longer than that really should be condensed 
+02:15 and then added to the extended description if you just can't quite fit it 
+02:19 into that 50 character limit, I'll add a quick description here, 
+02:21 and obviously for much larger commits you are going to want to have 
+02:26 a really detailed description of what exactly changed 
+02:29 and particularly why those files changed as opposed to the what 
+02:32 because the what would be captured in the dif 
+02:36 between the two commit versions, I'll add the why here and say 
+02:38 because the table of contents page has all topics and the intro does not. 
+02:44 There are two options down here we can commit directly to a branch,
+02:49 in our course repository we've been using the master branch 
+02:52 and for many repositories people are just working on the master branch. 
+02:55 We can also create what is called a new branch and a pull request, 
+02:59 and if you are just working on the repository by yourself, 
+03:02 typically you are just going to commit directly to the branch. 
+03:04 And that is what we'll do here, okay, now our change is committed 
+03:07 and there is a new commit that was just created and we'll see it up in the corner here, 
+03:10 if we click on it, it's going to show us the dif between the old commit, 
+03:13 the second to latest commit and the absolute latest commit which was just created 
+03:17 if we flip back over into a readme file, we can see the change that we've made here,
+03:22 view all topics, on a table of contents page, 
+03:25 that is how you edit files directly on github, 
+03:28 this can come in handy if you're working with someone
+03:30 who doesn't have git installed locally and they just want to edit 
+03:33 through the web ui or if you just want to make a few tweaks to your project 
+03:36 and don't have access to your local development environment. 

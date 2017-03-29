@@ -1,0 +1,63 @@
+00:00 Titles are often too short for a reader to really grasp 
+00:03 whether the information contained on a page is what they are looking for or not. 
+00:07 So meta descriptions provide a bridge between the title
+00:09 and the full content that is in the page; let's take a look at an example, 
+00:13 let's go back to searching for Python web development, 
+00:17 now as we saw earlier, this brief description here is specified 
+00:21 by the meta description on that page itself, and we can view 
+00:24 that when we look at the page source. 
+00:27 Put the meta name=description and the content for that meta description. 
+00:31 The meta description should be an expanded description 
+00:34 for what your page is all about, 
+00:37 now it should still contain the keywords that you want to target for searches 
+00:40 to land on this page, and note that by having a meta description 
+00:43 it does not guarantee that that page when it's in the search results 
+00:46 will actually display the same description, for example, 
+00:49 if we take a look at Python deployments, 
+00:52 I have a meta description on this page and yet, it's not displayed here, 
+00:57 Google decide that there is a better description for this page 
+01:00 than the meta description that I gave. 
+01:02 If we take a look at the deployment page, and we pull up the meta description, 
+01:05 we can see it's a perfectly reasonable way to describe the page and in some cases,
+01:10 depending on the keywords that are searched for, in fact, 
+01:13 if we search for this exact meta description, we'll see that the meta description 
+01:22 actually does appear in this case, so it's a case by case basis based 
+01:26 on the search terms that are plugged in, 
+01:29 don't get too hung up if your exact meta description 
+01:32 is not always displayed on the search terms. 
+01:35 So make sure every single page has a meta description. 
+01:38 And here is some additional rules that you are going to want to follow 
+01:41 when writing meta descriptions for your content. 
+01:43 First off, it should be less than a 128 characters, now technically,
+01:46 on mobile searches it can be less than 130 characters 
+01:50 but I typically leave one or two characters room 
+01:55 and I aim for less than 128 characters, otherwise, the description will be cut off.
+01:58 And that is okay, Google will just append 3 periods to the end of the description 
+02:02 but this is typically targeting 128 characters, it's a good practice 
+02:07 to increase the likelihood that your meta description will appear 
+02:11 exactly as you wanted it on mobile and desktop searches, 
+02:14 include the keyword terms that you want people to find your content for
+02:18 based on their searches, so it's no different from the titles or the headers in that case,
+02:24 it's just that we have more room in which to describe the content on the page,
+02:27 meta description should be unique for each page, in fact, 
+02:31 it's a search penalty if you have the exact same meta description 
+02:34 on every single page on your site, at that point,
+02:37 the search engines are pretty much just going to ignore it 
+02:39 because it's not relevant to each page it's just a blank catch all description. 
+02:43 Think about the meta description as sort of an elevator pitch for your content, 
+02:47 instead of getting one phrase for the title, you get 10 to 15 seconds 
+02:51 to rattle off what the page includes, and why someone would want to read it. 
+02:55 Now just like the title and the h1 elements, you should only have 
+02:58 a single meta description for each page, 
+03:02 otherwise it's completely unclear which meta description should be used 
+03:05 likely that will resolve in a penalty against your search results. 
+03:08 Don't get too hang up on meta descriptions, each page doesn't have to have 
+03:12 the perfectly tailored crafted meta description, just take your title 
+03:15 and expand upon it a little bit, make sure it has all the keywords that you want 
+03:18 and if you had to cut certain keywords that are related to your content from the title, 
+03:22 put them into the meta description. 
+03:24 And just make sure it makes sense, 
+03:26 you want the meta description to be readable by human, 
+03:28 not just look like a bunch of random keywords strung together,
+03:31 just write a clear concise sentence that contains your keywords 
+03:34 and that is all you need to do for the meta description on each page. 
