@@ -11,7 +11,7 @@
 00:43 click on settings for the project and go to make sure you have source control integrated, 
 00:48 so you can get extra information, but notifications, that's where we want to go, 
 00:52 so right now we have email, and we could connect this to Bitbucket issues 
-00:58 or if you are using campfire or create github issues automatically from this, 
+00:58 or if you are using campfire or create GitHub issues automatically from this, 
 01:02 all of those are awesome, I'll just scroll through, we got Jira, we've got Slack, 
 01:07 we've got Trello, you can sort of break out of the box and do web hooks, 
 01:12 all you want, I am going to integrate this with Slack. 

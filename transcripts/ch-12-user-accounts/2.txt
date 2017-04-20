@@ -52,7 +52,7 @@
 03:20 I think there actually is, yeey, your account, 
 03:22 we could view the account of some user 
 03:25 and it was like this, account/7, yeah, it's not found but imagine it was found; 
-03:30 if you had that url, you might wonder what is at account 8 
+03:30 if you had that URL, you might wonder what is at account 8 
 03:35 or account 6, or account 1, 
 03:37 and you might start poking around the site 
 03:40 and so one o f the things you might consider, 

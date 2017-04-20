@@ -7,7 +7,7 @@
 00:20 Let's look at an example and how I've used dialogues on my training website, 
 00:23 so here I am in an incognito window, so not logged in, 
 00:27 on one of the course listing pages, and it happens to be this course, 
-00:30 you can see the url at the bottom if you want to try this yourself.
+00:30 you can see the URL at the bottom if you want to try this yourself.
 00:33 If you click on one of these lectures, and you are not logged in, 
 00:36 it's important that's you're not logged in for this to work, 
 00:39 it will pop up a dialogue that says hey look, 

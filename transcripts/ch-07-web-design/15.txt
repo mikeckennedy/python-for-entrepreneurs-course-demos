@@ -28,7 +28,7 @@
 1:32 if we look at the black thing before I run this is this, 
 1:34 and it contains the div and it contains the image. 
 1:37 But when I run this, now all of the sudden the dunecat is shooting out the bottom 
-1:41 and the main content is wrapping around it, ok that's bizzare, 
+1:41 and the main content is wrapping around it, OK that's bizzare, 
 1:44 why is it not like at least lined up with this vertically, 
 1:48 we wanted to go to the right of that thing. 
 1:51 Well, in html, the way it works, the thing you would like to float- let me rephrase, 
@@ -45,7 +45,7 @@
 2:34 so there is a anti float if you will, that we can set here, 
 2:38 and we can put more or less any html item here but a div is like zero height 
 2:43 if it has no content, so this is decent, 
-2:45 and the way you stop this floating is you say ok, 
+2:45 and the way you stop this floating is you say OK, 
 2:49 here is the end of the stuff that wraps, 
 2:52 now make a new line as you say clear : both. 
 2:55 We could technically just say clear left but let's just say clear both, 

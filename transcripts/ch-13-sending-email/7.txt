@@ -7,7 +7,7 @@
 00:28 what was your email, how did you pay, things like that. 
 00:31 So, you can imagine the rest of the formatting that you already saw, 
 00:34 stick this right in the middle and that is pretty much what you get, 
-00:38 so I'll use a dictionary with the course url fragment set, the course price, 
+00:38 so I'll use a dictionary with the course URL fragment set, the course price, 
 00:43 already formatted, I typically format that to a string in Python 
 00:47 and send it over like 69.00 or just 69 however you want it to appear, 
 00:52 so you don't rely on the string, 

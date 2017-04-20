@@ -55,7 +55,7 @@
 03:37 Armin Ronacher is the guy behind Flask so you know this is solid software, 
 03:41 and you can see from this little welcome to Logbook hello world example 
 03:45 that it's very simple to get started, you'll see that it's nice to compose these
-03:50 across different layers of our application, lots of good stuff, ok. 
+03:50 across different layers of our application, lots of good stuff, OK. 
 03:55 So over the next couple of videos, we're going to be introducing Logbook 
 03:59 adding Logbook to our web application, and logging a couple of types of information
 04:04 and some of the requests, like you saw in that previous screen. 

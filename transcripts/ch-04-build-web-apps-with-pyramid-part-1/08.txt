@@ -30,7 +30,7 @@
 1:52 we also have to register our app. 
 1:54 Let's go and just click install just to see what happens. 
 1:57 Watch the little progress bar in the bottom right, 
-2:00 ok, everything is almost ready to go, but just like before, 
+2:00 OK, everything is almost ready to go, but just like before, 
 2:03 if I try to run this, you'll see that this app does not exist, 
 2:08 right, this package does not exist 
 2:10 and we talked about this being a proper package and registering it in place 

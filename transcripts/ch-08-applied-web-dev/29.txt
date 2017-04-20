@@ -41,7 +41,7 @@
 02:23 and just grab this and in our get we need to supply the same information,
 02:29 of course these are all none, they are none but they must exist
 02:34 when we try to access them out of the dictionary that is the model, 
-02:38 let's try one more time, ok, great, it didn't crush, let's put this email as jeff
+02:38 let's try one more time, OK, great, it didn't crush, let's put this email as jeff
 02:44 and I'll put this as the password, now I'll try to hit this, see what happens, boom, 
 02:49 how nice does that look, error the password and confirmation don't match, 
 02:53 and you can see obviously it’s the in password, 

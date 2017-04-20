@@ -4,7 +4,7 @@
 00:09 in this video we'll take a look at one of those desktop applications, 
 00:12 there are many of them out there but SourceTree 
 00:15 which is made by Atlassian is one of the best. 
-00:17 We'll download, install, and set up SourceTree with our github account, 
+00:17 We'll download, install, and set up SourceTree with our GitHub account, 
 00:20 so we can get a little bit of extra help managing our git repositories. 
 00:23 The first step to get SourceTree is to get a sourcetreeapp.com and download it for mac, 
 00:28 of whichever operating system that you are working on, once that's saved, 
@@ -12,11 +12,11 @@
 00:35 either by dropping its applications or through the installer if you're on windows.
 00:40 Once it's installed, we can open it up, and if you get a confirmation just click open, 
 00:45 now we do need to use an Atlasian account in order to log in here, 
-00:50 but we're going to connect this to github instead. 
+00:50 but we're going to connect this to GitHub instead. 
 00:53 So, if you don't have an Atlassian account, go to atllasian.com and sign up for one, 
 00:58 just  a free account, once you've got that in place, 
 01:01 we'll say use an existing account and we can log in, okay, now we're registered, 
-01:06 and we can set it up, click github and we're going to use the oauth authentication, 
+01:06 and we can set it up, click GitHub and we're going to use the oauth authentication, 
 01:11 we'll connect our account, if you enable too factor authentication, 
 01:16 you'll need to get the verification code, punch that in and you should be verified, 
 01:21 well to give it access to some of our account, 

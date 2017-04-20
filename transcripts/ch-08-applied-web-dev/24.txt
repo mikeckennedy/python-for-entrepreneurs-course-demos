@@ -22,7 +22,7 @@
 01:18 in this case we are going to redirect them to a welcome page 
 01:21 that helps them get started with our site
 01:24 so this is how almost all forms work, get, to get the original form, you edit it, 
-01:28 post back usually the same url not required but is helpful, 
+01:28 post back usually the same URL not required but is helpful, 
 01:32 and then if everything is good, we are going to make some changes and redirect, 
 01:35 to some new place.
 01:38 If we were adding a book to a book store we might redirect to the details of the book, 

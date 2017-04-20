@@ -27,7 +27,7 @@
 01:47 and say vm not from dict, remember, 
 01:50 we have this merge dictionary, it has the routes, 
 01:53 it has the query string, it has the forms, all that, 
-01:55 so if we rerun this, it should revalidate, ok, now it's found the code, that's good, 
+01:55 so if we rerun this, it should revalidate, OK, now it's found the code, that's good, 
 02:04 so next, now we have a code, let's try to get it from the database, 
 02:07 and that's going to come out of the account service, 
 02:09 I think it's probably the best place, so we'll say account service.find reset code 

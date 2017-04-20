@@ -12,7 +12,7 @@
 00:46 be sure to set the environment correctly,
 00:48 remember that really helps knowing whether you should freak out 
 00:51 if you see an error or oh no that's just test, don't worry about it, 
-00:54 we can say which branch back in github we want to go from, 
+00:54 we can say which branch back in GitHub we want to go from, 
 00:57 we also need to add this filter:rollbar 
 01:00 and set our environment and access token there as well. 
 01:04 it looks like in the slides I have dev in production, don't make those different, whatever, 

@@ -13,7 +13,7 @@
 0:48 So here is what we have, we have an outside piece, 
 0:51 we have an inside piece and the inside piece contains 
 0:54 a thing called contained, and it has content.
-0:57 So the thing we will focus on is this inside piece, ok, 
+0:57 So the thing we will focus on is this inside piece, OK, 
 1:01 how is it affected for by what is inside it, 
 1:05 and how does it affect its relationship with the outside as well as the contained element. 
 1:10 So let's go and run this, and pull it up. 

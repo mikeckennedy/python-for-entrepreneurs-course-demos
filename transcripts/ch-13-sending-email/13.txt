@@ -21,7 +21,7 @@
 01:26 it says we would have send it, that's left over, we actually did send it, 
 01:29 let me check my email, 
 01:32 hey look what we found, in our email. reset your password, 
-01:35 and here you can see the url, let me o=hover over this, 
+01:35 and here you can see the URL, let me o=hover over this, 
 01:39 shows you some great long code, reset password and I put local host, 
 01:43 please don't really put local host in yours, 
 01:45 but so I could do the demo without doing some kind of deployment, here we go,

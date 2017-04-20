@@ -1,6 +1,6 @@
 00:02 So how do we get started accepting credit cards?
 00:05 Well, it's gotten much easier than it used to be, that's the good news. 
-00:09 When I first started working with ecommerce systems, 
+00:09 When I first started working with e-commerce systems, 
 00:12 you had to go and set up a payment gateway and a credit card processor 
 00:18 and you had to have a proper merchant account at your bank, 
 00:22 which meant extra paper work, extra validation, all sorts of hassles and whatnot 

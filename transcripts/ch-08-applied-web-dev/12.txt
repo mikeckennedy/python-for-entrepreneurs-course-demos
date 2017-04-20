@@ -3,8 +3,8 @@
 00:10 but one of the challenges you run into in this nice and easy routing that we've set up, 
 00:14 this pattern matching we've set up is methods
 00:18 that are not necessarily intended to be public, 
-00:20 can become externally callable via some url. 
-00:25 So in this example we've got something that is meant to be mapped to your url 
+00:20 can become externally callable via some URL. 
+00:25 So in this example we've got something that is meant to be mapped to your URL 
 00:29 the index and you can see it checks and says if there is no data 
 00:32 we are going to reset the data and then we are going to do something else. 
 00:35 Now maybe that reset data has consequences 

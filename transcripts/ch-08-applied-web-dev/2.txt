@@ -3,7 +3,7 @@
 0:07 This is a website that comes from the very first Pyramid section that we did, 
 0:12 we just created a new site and this is the one that we did with the command line, 
 0:16 and you can look over here and you can see I've made the copy, 
-0:20 this is the demos github repository, come over here 
+0:20 this is the demos GitHub repository, come over here 
 0:23 you can see I've made a 4 applied web dev and here is our app. 
 0:28 I just copied this over but I just wanted to make sure 
 0:31 that you guys had separate versions so you could see it in different stages. 

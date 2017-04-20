@@ -21,7 +21,7 @@
 01:17 until the green bar is all the way over to the right side. 
 01:24 After we've moved our mouse around enough to generate randomness, 
 01:29 we'll get the key generated, now what you'll see here is the public key 
-01:34 for pasting into an authorized key file or for uploading to github, 
+01:34 for pasting into an authorized key file or for uploading to GitHub, 
 01:39 so we can copy and paste that and put that wherever we want. 
 01:43 This is public key so anyone can have this, this file can be shared publicly. 
 01:46 Now just like with the ssh key gen command we can add a pass phrase if we choose.
@@ -33,7 +33,7 @@
 02:12 under downloads you might want to call it just entrepreneurs.pub 
 02:19 and we can save our private key and we call this just entrepreneurs. 
 02:26 We can bring this up in our downloads folder, this is the public key, 
-02:31 we can share this widely, we'll copy and paste this into github 
+02:31 we can share this widely, we'll copy and paste this into GitHub 
 02:34 and then we have our private key. 
 02:37 So that's how we generate public and private keys on Windows 
 02:40 using the putty gen application.

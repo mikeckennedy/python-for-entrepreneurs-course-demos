@@ -14,7 +14,7 @@
 0:38 This is going to be another list and this is going to contain 
 0:41 all the distinct plays that we could have,
 0:44 so we might have red, we might have blue, we might have green, 
-0:47 let's say we are going to have four colors, ok. 
+0:47 let's say we are going to have four colors, OK. 
 0:49 Now, in order to make this a little nicer game, 
 0:51 let's add some color and some more verbiage, 
 0:54 but we want to have a short thing to test against, 
@@ -154,8 +154,8 @@
 8:31 they must have gotten them all right so we'll say return true. 
 8:34 All right, I think our game is just about ready to play, 
 8:37 let's save it and then run it over here and see what we get; green, 
-8:42 ok, so it says one move we have to remember, and that was g, 
-8:46 ok, worked, green, green, green, green, now red, so g, g, r, 
+8:42 OK, so it says one move we have to remember, and that was g, 
+8:46 OK, worked, green, green, green, green, now red, so g, g, r, 
 8:55 it really seems to like red and green.
 9:00 Let's just put something wrong so we can see that it said all right, look, 
 9:04 you entered something wrong, it's supposed to be green, you said red, there it goes. 

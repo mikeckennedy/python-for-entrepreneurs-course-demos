@@ -92,7 +92,7 @@
 4:53 and the convention is this __name__ that is in the module 
 4:56 whatever module's been run, 
 4:58 if it's being imported the name will be the name of the module like program or game,
-5:03 but if it's being executed as a target, it will be __main__ and we can say ok,
+5:03 but if it's being executed as a target, it will be __main__ and we can say OK,
 5:07 this is the time where we want to call this method we just wrote. 
 5:10 I can see that PyCharm says we don't yet have this method, 
 5:13 let's go and write that as well and it's going to need to return true or false. 

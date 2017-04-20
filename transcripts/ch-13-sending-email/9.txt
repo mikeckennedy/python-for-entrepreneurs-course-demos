@@ -27,7 +27,7 @@
 01:31 to a good password reset process, 
 01:34 there is a couple of things you want to be really careful about, 
 01:36 first of all, most importantly, this should not be guessable. 
-01:41 Here is two possible url schemes, 
+01:41 Here is two possible URL schemes, 
 01:44 which of course derive the underlined database schema, 
 01:48 here at the top one, if I want to reset my password at talk python to me, 
 01:53 I could do this, I could say account/reset some big alphanumeric string 

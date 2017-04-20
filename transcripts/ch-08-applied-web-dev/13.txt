@@ -72,7 +72,7 @@
 04:22 there is a whole bunch of urls that talk about what courses you have, 
 04:24 what courses have transcripts, how you register, how you log in and so on
 04:29 and so for our test what we actually do is we go and we get the site map, 
-04:36 and then for each url on the site map we come back 
+04:36 and then for each URL on the site map we come back 
 04:39 and we do a request against it and verify that the request is supposed to be 
 04:44 either a 200 or a redirect. 
 04:48 So if there is some problem with any of those pages, 

@@ -54,6 +54,6 @@
 03:06 We also used html to text because we want a text alternate version 
 03:10 if you are not going to be able to see the html what does the plain text version look like, 
 03:15 but we can use this html to text to get that. 
-03:18 You could even let your users decide ok, 
+03:18 You could even let your users decide OK, 
 03:21 I want to receive text messages or I want to receive html messages 
 03:24 and then you could just only set one or the other in the body in your mail message. 

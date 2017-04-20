@@ -21,14 +21,14 @@
 1:19 Your first inclination would be to do this. 
 1:23 And it's fine, you can totally bower install bootstrap, 
 1:26 but you are going to get all of the assets 
-1:28 and things basically clone the entire bootstrap repo in github 
+1:28 and things basically clone the entire bootstrap repo in GitHub 
 1:33 so you have all the building blocks, 
 1:35 not just the stuff you want to ship for your after work, 
 1:38 so there is a shorter version you can use, so if you say -css, 
 1:42 it just brings kind of non intuitive, it brings a css javascript and fonts 
 1:47 but basically the distribution folder for bootstrap. 
 1:51 So I've already installed this, it doesn't need to download it, 
-1:53 you can see it's taking this straightfrom github, it's validated it and it's installed it. 
+1:53 you can see it's taking this straightfrom GitHub, it's validated it and it's installed it. 
 1:58 Now if we go back here, you can see we have bower components, bootstrap css, 
 2:02 little bower project file we've got the css that we need, minified non minified, 
 2:06 we've got the fonts and we've got the javascript, again minified and non minified. 
@@ -88,7 +88,7 @@
 5:23 so here you can see our bootstrap, if I click on this great, we have Twitter bootstrap. 
 5:28 And what else were we looking for, response js but of course, 
 5:31 these are only brought in for IE8, I really hope no one is using IE8, 
-5:35 all right let's check this out, one more time, jquery, ok, good, jquery is good, 
+5:35 all right let's check this out, one more time, jquery, OK, good, jquery is good, 
 5:39 and the bootstrap js perfect, 
 5:42 so it looks like we've successfully moved to bower 
 5:47 managing our various dependencies, bootstrap distribution, 

@@ -41,10 +41,10 @@
 02:18 we get 404 not found and you can see there was no processing on the server, 
 02:22 again we try it for the base which also has this supress decorator, 404, 
 02:26 but things like our about page work perfect, 
-02:30 ok so what's the supress thing about? 
+02:30 OK so what's the supress thing about? 
 02:32 Supress is just a really simple decorator that I wrote, and it just has a little trick, 
 02:36 so what it does is it comes along and it says 
-02:39 ok we are going to be like any other action that Pyramid might go look for, 
+02:39 OK we are going to be like any other action that Pyramid might go look for, 
 02:43 but instead of doing whatever action decorator does, 
 02:49 we are going to say look, the request method that we are looking for
 02:52 remember, you can specify the request method
@@ -53,7 +53,7 @@
 03:00 is not an http verb, so normally this is post get put delete etc, a few other ones.
 03:08 Not an http verb, it is not something the browser is going to send, 
 03:13 you can put a random gui there just something that is not get post 
-03:16 and that will mean there is going to be no match, regardless of how the url routing gets setup. 
+03:16 and that will mean there is going to be no match, regardless of how the URL routing gets setup. 
 03:20 So very simple fix to make sure that there are certain methods that you don't expose,
 03:24 now on some web apps I realize this just doesn't matter, 
 03:27 people poking around it's not going to make a difference 

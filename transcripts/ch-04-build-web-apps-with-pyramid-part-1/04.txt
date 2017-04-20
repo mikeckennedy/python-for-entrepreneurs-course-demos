@@ -32,7 +32,7 @@
 1:47 so having a pretty fast framework is a real benefit. 
 1:52 Pyramid has 100% test coverage and their philosophy is if it ain't tested it's broken. 
 1:57 So you can count on new releases of Pyramid not breaking your code. 
-2:03 As you can see, Pyramid is open source, it's available on github 
+2:03 As you can see, Pyramid is open source, it's available on GitHub 
 2:07 and is distributed under a permissive open source license. 
 2:10 Finally, Pyramid is one of the few frameworks 
 2:14 that takes a forward looking approach to Python 3.

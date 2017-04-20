@@ -28,7 +28,7 @@
 01:18 web development for Full Stack Python appears first in this list of search results. 
 01:23 A couple of things we can see about this, 
 01:25 number one, we've got the full title for this web page, 
-01:28 we've got the specific url including bolded parts of the url 
+01:28 we've got the specific URL including bolded parts of the URL 
 01:33 that matches our search terms, Python web development. 
 01:36 That is an indicator, not only to Google but for the searcher 
 01:39 that this web page is exactly the content that they are looking for 
@@ -96,11 +96,11 @@
 05:03 now it's a little small, so let's bump up the size here. 
 05:06 Now we can see there is two ads, 
 05:10 and then again, Python web development pops up. 
-05:14 Now the layout is a little bit different here, instead of the full url 
-05:18 or seeing almost a categorization but this actually still follows the url, 
+05:14 Now the layout is a little bit different here, instead of the full URL 
+05:18 or seeing almost a categorization but this actually still follows the URL, 
 05:22 saying the site is full stack Python and it's one level deep. 
-05:26 When we click on it, we'll see that there is, and this is the url structure, 
-05:31 it's at the base url, there is no subfolder for example
+05:26 When we click on it, we'll see that there is, and this is the URL structure, 
+05:31 it's at the base URL, there is no subfolder for example
 05:35 if we were to say blog in here, it's not under the blog subfolder, 
 05:40 it is just one level deep on Full Stack Python. 
 05:44 Now how does this look on mobile, it looks pretty good 
@@ -150,7 +150,7 @@
 08:20 Let's say we want to write a book or some guide on monitoring 
 08:23 and we want people to be able to find monitoring. 
 08:26 Now, I have a page on that as well, and you will see it follows the same pattern 
-08:33 as the other one, we have a nice, clean h1 tag, good url structure, 
+08:33 as the other one, we have a nice, clean h1 tag, good URL structure, 
 08:35 that is not too deeply nested in a bunch of subfolders, 
 08:37 and again, we have a bunch of useful information 
 08:40 along with links to other projects and services that are going to be useful 

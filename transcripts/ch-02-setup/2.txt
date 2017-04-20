@@ -46,7 +46,7 @@
 2:43 not as good as PyCharm but still, not bad. 
 2:46 Another good recommendation is Atom, 
 2:49 if you want the more light weight text editor so you can download that, 
-2:53 and it's also free, this is from github. 
+2:53 and it's also free, this is from GitHub. 
 2:56 But like I said, we are going to be using PyCharm for most of the course, 
 2:59 and it really is more full featured, more helpful, 
 3:03 more efficient than most of these. 

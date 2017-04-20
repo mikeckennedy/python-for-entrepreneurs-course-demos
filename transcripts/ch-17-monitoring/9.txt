@@ -19,8 +19,8 @@
 01:10 so for example here is some errors that have occurred 
 01:13 and then these are the deploys that have happened, 
 01:16 and if I click this, here it will actually take me
-01:19 to view the files that were deployed, you can see the changes in github 
-01:22 and all the commits and all then link over to github from there and so on. 
+01:19 to view the files that were deployed, you can see the changes in GitHub 
+01:22 and all the commits and all then link over to GitHub from there and so on. 
 01:25 And, these are actually the ones that have been resolved, that have been fixed, 
 01:29 so here is an error that I ran into, you can see it occurred in production, 
 01:34 and then once I realized what was happening, I replicated it in dev 
@@ -85,7 +85,7 @@
 05:30 they were not able to find a deploy that caused it 
 05:34 because it wasn't actually caused by a deploy, 
 05:37 it was just- I guess it was caused by a deploy, but sometimes they can go back 
-05:40 and look at the github this in integrated with github they can find 
+05:40 and look at the GitHub this in integrated with GitHub they can find 
 05:43 actually a deployment that caused it, okay, 
 05:46 here is the first deployment that it saw the error in. 
 05:48 And similar items, nobody's run into this problem, 

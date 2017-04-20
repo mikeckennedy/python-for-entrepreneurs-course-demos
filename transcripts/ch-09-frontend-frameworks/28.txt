@@ -59,7 +59,7 @@
 03:40 then, it says alright, this is cool all you've got to do is include that 
 03:44 plus the font awesome css and then you style it to be whatever color you want, 
 03:48 you want the Facebook blue, just set a css style for this thing, and it will be that color. 
-03:53 So I did that for all of the little social bits like for the email, here is one for github,
+03:53 So I did that for all of the little social bits like for the email, here is one for GitHub,
 03:58 here is one for some video file, here is one for YouTube and so on, 
 04:03 so if you look at the bottom of our file here, you can see all of those little things, 
 04:07 the YouTube looks a little funky because it's so squished. 

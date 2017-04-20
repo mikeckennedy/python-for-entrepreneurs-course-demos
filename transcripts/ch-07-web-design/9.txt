@@ -69,7 +69,7 @@
 4:37 So what we are saying here is tr with no space means 
 4:40 and, and so tr with the hash and the thing means the table row 
 4:46 with the latest episode id and the this month class. 
-4:50 You will have this page in the code that you can get from github,
+4:50 You will have this page in the code that you can get from GitHub,
 4:53 and download it and run it and tweak the html, play with the css selectors, 
 4:58 do all the stuff that you want, you can even come back here 
 5:01 and select the things that we are interacting with up here like I want the input 

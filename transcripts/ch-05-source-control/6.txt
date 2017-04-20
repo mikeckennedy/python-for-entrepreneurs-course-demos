@@ -4,7 +4,7 @@
 00:12 of all the changes in your source code that underpins your business; 
 00:15 let's say you are developing your application and you are happily hacking along 
 00:18 in a single source file just get things started. 
-00:21 and you've decided ok, I'm at a good spot, I want to save this, 
+00:21 and you've decided OK, I'm at a good spot, I want to save this, 
 00:24 so you use the git init command, you start adding changes with the git add 
 00:27 and the git commit commands and over time,
 00:30 you build up file history in your git repository for that file. 
@@ -60,5 +60,5 @@
 03:21 Now the one other bit about repositories containing 
 03:23 all of the changes that you've ever made to the source code, 
 03:26 is that the repositories can easily be copied and backed up on remote servers and services;
-03:30 this is where services such as github and bitbucket come in.
+03:30 this is where services such as GitHub and bitbucket come in.
 

@@ -11,7 +11,7 @@
 00:36 and they have methods so here the action is just double quote 
 00:39 which means it's going to submit back to the same page, that render this form, 
 00:44 so if the page that rendered it was /accounts/sign in,
-00:49 it's going to post back, to that exact same url, and this is usually what you want. 
+00:49 it's going to post back, to that exact same URL, and this is usually what you want. 
 00:54 It also has a method the method is post, it could be get, 
 00:58 it could be some other thing that might limit us in a few ways, 
 01:00 typically post is important, post communicates to the server 

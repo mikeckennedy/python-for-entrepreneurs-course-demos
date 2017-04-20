@@ -16,7 +16,7 @@
 00:50 technically we could get away with this 
 00:54 but we are going to want to add a second method in a moment,
 00:58 but let's just start here, this is going to be our let's just put a note to ourselves,
-01:01 get /account/register, ok, let's just make sure this works. 
+01:01 get /account/register, OK, let's just make sure this works. 
 01:07 Here we are in our home page, notice I've added a register option up here 
 01:12 and if I click it, it just takes us to account/register, hey create an account, 
 01:16 so the first thing we have to do is create the form, 
@@ -43,7 +43,7 @@
 02:32 but we'll be able to apply some styles and techniques to it later 
 02:36 when we get to the front end frameworks to make it really nice looking. 
 02:40 So if we refresh the page, we now see this here, so what is this 
-02:46 ok so let's try to make this little nicer, 
+02:46 OK so let's try to make this little nicer, 
 02:49 notice that we don't know what's in here there is a couple of ways we could do it, 
 02:53 we could have the text preceding it, 
 02:55 saying like email address: and then put the form, password: put the form, 

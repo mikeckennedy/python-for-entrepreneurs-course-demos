@@ -53,7 +53,7 @@
 03:04 notice how pyCharm puts little line continuation for us, thank you, 
 03:07 so this is pretty straightforward, order by, 
 03:11 but what do I do if I want to order by descending, 
-03:14 I can tell you already, there is not a order by des ok, 
+03:14 I can tell you already, there is not a order by des OK, 
 03:17 this is the only order by function we have. 
 03:19 so it's not entirely obvious but we can come over here 
 03:22 and on these we have like descending, ascending,

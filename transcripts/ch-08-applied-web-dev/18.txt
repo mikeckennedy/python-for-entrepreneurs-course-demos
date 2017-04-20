@@ -47,7 +47,7 @@
 02:51 and we'll create a local variable for each time through the loop 
 02:54 so here we are going to create- now that we are floating this we don't need this anymore,
 02:57 we are going to create an image 
-03:00 and we are going to use the image url from the each album coming through 
+03:00 and we are going to use the image URL from the each album coming through 
 03:04 again, we want to set the title use the tal conditional on whether or not it has a preview 
 03:09 and then we are going to go the albums tracks and loop over those as well. 
 03:14 And you can see that our albums are on the screen in a pretty decent way 

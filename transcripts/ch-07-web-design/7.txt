@@ -9,7 +9,7 @@
 0:26 and don't come and get it again, for the next however long- 
 0:29 I think the default will be just an hour, but I don't recall if I have changed that in the site.
 0:33 Nonetheless, we want this to change when we change it, 
-0:37 so the easiest way to make this change is if we had a different url, 
+0:37 so the easiest way to make this change is if we had a different URL, 
 0:41 so over here, we can see our css with our color we put back, 
 0:45 the easiest way to sort of trick the browser is 
 0:48 you come over here and you can put some query string on the end 
@@ -18,7 +18,7 @@
 0:58 and it will reload that because hey it's never seen site.css ? cache id = 42
 1:05 it's only seen site.css, so if we can somehow make this thing go on the end 
 1:11 and make this number change if and only if the contents of this file changes, 
-1:14 well, then we can create a way that we'll always have a new url for new files
+1:14 well, then we can create a way that we'll always have a new URL for new files
 1:19 but then if it's tied to the contents, 
 1:22 like the same contents always generate the same number there, 
 1:25 it won't generate different numbers for the same content 
@@ -55,12 +55,12 @@
 3:03 update our hash and then we are going to return a hexdigest. 
 3:07 So this is short hexadecimal string that we can stick into that cache id. 
 3:13 Now, this works perfect, and there are two criteria
-3:16 first, that this is a full local file name path not a web url path, right, 
+3:16 first, that this is a full local file name path not a web URL path, right, 
 3:24 we need to pull this off our hard drive not off the web,
 3:27 second that had better exist or this is going to throw an error. 
 3:30 So up here we have a little bit of error checking 
 3:34 and juggling to make sure that's the case, 
-3:35 so we are going to be pass a url, we have to somehow convert this url 
+3:35 so we are going to be pass a URL, we have to somehow convert this URL 
 3:38 into a full file path, so here is the trick that makes this super easy- 
 3:43 every module in Python has a dunder file, 
 3:47 and this dunder file is the full path to whatever file it is you are working in, 

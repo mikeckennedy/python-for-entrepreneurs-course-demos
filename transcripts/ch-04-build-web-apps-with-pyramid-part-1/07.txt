@@ -34,7 +34,7 @@
 1:50 Once we've registered our package, we can now run pserve 
 1:54 and give it the development. any file, you can see the server starts, 
 1:58 it loads our web app and it serves it on some port of its choosing. 
-2:01 If we open that url in the browser, you can see we have an active website, 
+2:01 If we open that URL in the browser, you can see we have an active website, 
 2:06 everything is up and running and working just great. 
 2:09 Note that if you end up with 0.0.0.0 as your IP address 
 2:12 on Windows that doesn't work, 

@@ -2,7 +2,7 @@
 0:05 that you are going to use to build your application when you are using Pyramid. 
 0:08 The first thing that we want to do is take a request from the outside world 
 0:12 and somehow map this into our application and that all begins with routes, 
-0:16 routes are url patterns that we then map into particular view methods, 
+0:16 routes are URL patterns that we then map into particular view methods, 
 0:20 speaking of views, these are the methods 
 0:23 that are going to process our request,
 0:24 whether they show us an html page through rendering a template 

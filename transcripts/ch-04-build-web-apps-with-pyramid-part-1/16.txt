@@ -12,7 +12,7 @@
 0:46 So what it's going to do is this div that has the tal repeat is going to be repeated 
 0:51 for as many times as there are albums and each time through a will have a different value.
 0:55 Then we want to go and say a is one of these individual albums, 
-0:59 let's say that url for buying it is going to be a.url and the title, 
+0:59 let's say that URL for buying it is going to be a.url and the title, 
 1:03 the text we want for the link is buy whatever the title is so a.title. 
 1:08 So values that pull out the text or look at the string representation of data passed in, 
 1:13 will be passed within, there is $ expression and like I said, these can be methods, 
@@ -21,7 +21,7 @@
 1:26 so we only want to show preview music if there is some kind of preview available,
 1:31 remember, some of our albums have previews, some of them didn't. 
 1:35 So, here we can say tal condition and it will completely leave this segment, 
-1:39 or this node out of the url, if has preview is falsie. 
+1:39 or this node out of the URL, if has preview is falsie. 
 1:44 Now if we run this and we give it a set of albums, 
 1:47 we can come out looking something like this, 
 1:49 assuming we've given it basically zero style. 

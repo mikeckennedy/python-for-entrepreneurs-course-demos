@@ -41,7 +41,7 @@
 2:14 Especially when you are newer, it will help you even more, 
 2:17 bur regardless of your experience level, I think PyCharm is a much better choice, 
 2:20 nonetheless, you may want to use Sublime text 
-2:24 or Atom is also a great Python capable editor from github. 
+2:24 or Atom is also a great Python capable editor from GitHub. 
 2:28 So those are your choices for the editors. 
 2:31 Now, we've got Python, we downloaded it,
 2:33 I actually already downloaded it because it's kind of large, so let's go and install this. 

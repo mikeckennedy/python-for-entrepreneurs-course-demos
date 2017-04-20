@@ -50,7 +50,7 @@
 02:50 and say well, we want to store this data and we want to make sure 
 02:53 we have this so let's just put it into __init__ 
 02:57 and down here obviously this is not what we want, 
-03:00 we want to say self. let me just clean this up, ok, 
+03:00 we want to say self. let me just clean this up, OK, 
 03:08 now we have this data here, and if we call to dict 
 03:11 we are actually going to end up returning a dictionary with email as a key,
 03:16 because remember, __dict__ is basically where the fields are stored, 

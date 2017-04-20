@@ -1,6 +1,6 @@
-00:01 Github makes it really easy to create a git repositories through their user interface
+00:01 GitHub makes it really easy to create a git repositories through their user interface
 00:05 and that's what we'll take a look at in this video. 
-00:08 Log into your github account, and bring up your profile page, 
+00:08 Log into your GitHub account, and bring up your profile page, 
 00:11 we're going to click the plus icon up at the top and say new repository, 
 00:15 give your repository a name for the project that you're working on, 
 00:18 you can just call it my project for now. 
@@ -42,6 +42,6 @@
 02:21 and this will contain all of the files that are in this repository, 
 02:24 that can be really useful, but what we really want to do is work on this project 
 02:27 and that's where we are going to need to clone this repository. 
-02:31 This is the url that we can use to clone the repository 
+02:31 This is the URL that we can use to clone the repository 
 02:33 which will give us all the files and the version history 
 02:36 for that git repository locally on our system. 

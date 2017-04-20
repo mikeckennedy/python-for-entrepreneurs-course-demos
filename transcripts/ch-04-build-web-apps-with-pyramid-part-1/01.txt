@@ -10,7 +10,7 @@
 0:33 Spotify is also using Python for their web front end
 0:36 Nasa- rockets and spaceships and all sorts of amazing stuff, they are using Python
 0:41 bitly the short link app is built with Python.
-0:44 Bitbucket, Atlassian’s competitor to github is built with Python, that's very nice
+0:44 Bitbucket, Atlassian’s competitor to GitHub is built with Python, that's very nice
 0:50 Survey Monkey they use Python all over the place
 0:53 Quora, the best general Q&A spot on the internet, 
 0:57 they are passionate, passionate users of Python, 
@@ -51,6 +51,6 @@
 2:52 inside the code that does that. 
 2:54 If you'd like to see where this information came from, 
 2:57 read a little bit more about how each company or product is using Python, 
-2:59 you can just check out this bitly url down here at the bottom, 
+2:59 you can just check out this bitly URL down here at the bottom, 
 3:02 and there is a nice write up featuring these companies as well as more. 
 

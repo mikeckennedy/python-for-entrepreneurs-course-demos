@@ -54,7 +54,7 @@
 3:00 That said, if you don't want to use PyCharm, you don't have to, 
 3:03 you could use something like Sublime text, this is a great editor, 
 3:06 so you can get that at sublimetext.com 
-3:09 or Atom, at atom.io from github, also, a good more light weight editor. 
+3:09 or Atom, at atom.io from GitHub, also, a good more light weight editor. 
 3:13 So, I already downloaded PyCharm because it's little big,
 3:16 and let's just run that, there is really not to much to do here 
 3:20 just got to decide how you want to either put it on your desktop 

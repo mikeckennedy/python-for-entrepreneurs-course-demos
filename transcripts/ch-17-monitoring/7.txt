@@ -48,7 +48,7 @@
 03:12 And users successfully logged in, and you see messages like this at the bottom, 
 03:16 so notice controller/account user login successful, and I wrote this function, 
 03:22 property really, extra log details, and I put that in the controller base as well 
-03:27 and it looks at self.request and it will pull out the ip address, the user agent, the url etc, 
+03:27 and it looks at self.request and it will pull out the ip address, the user agent, the URL etc, 
 03:33 there is a bunch of things on the request object you can log automatically 
 03:38 and that gives you additional information so if some user comes and says 
 03:42 oh I had this error, this thing didn't show up you can look at their OS,
