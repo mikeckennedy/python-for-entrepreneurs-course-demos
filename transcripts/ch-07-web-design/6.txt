@@ -24,7 +24,7 @@
 1:34 and the index page, and over here we've got some colors. 
 1:37 Now, let's change a color, see it's black on white what if we want to change the color, 
 1:42 now this is pretty cool, check this out in PyCharm, 
-1:45 notice there is a black thing on the left and if I hit alt enter 
+1:45 notice there is a black thing on the left and if I hit Alt+Enter 
 1:47 it will say hey you can change the color, what do you want the color to be
 1:50 pick something that you've recently worked with, or whatever, right, 
 1:54 so this lets you go and say you know what, 
