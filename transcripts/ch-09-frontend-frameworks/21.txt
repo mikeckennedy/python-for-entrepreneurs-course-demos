@@ -12,7 +12,7 @@
 00:35 like this one is really wonderful and so on, 
 00:38 but we are going to use this landing page theme mostly because that's what I used. 
 00:42 So, if you are really going to use this as your website, 
-00:45 it probably makes sense you go fork it, on github, 
+00:45 it probably makes sense you go fork it, on GitHub, 
 00:48 just so you have a copy, that said, we are going to stop by just downloading it. 
 00:51 Alright, let's just look in here and see what we've got. 
 00:54 This is what came out and over here, now you can see we have this landing page. 

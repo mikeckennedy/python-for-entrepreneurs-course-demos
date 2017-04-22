@@ -19,7 +19,7 @@
 1:02 this is going to be a reset your password method 
 1:09 and note we've given it the route name of reset post, 
 1:11 you can see on the next line it's only accepting form posts. 
-1:13 If you do a straight request against this url, it'll just say I can't find this for you, 
+1:13 If you do a straight request against this URL, it'll just say I can't find this for you, 
 1:18 but if you do an http post against it, 
 1:20 it will say I am actually in the process of reset my password, 
 1:24 here is the form data, well it will be happy to process it. 
@@ -37,7 +37,7 @@
 2:01 Notice the reset password.pt view will be used to show the error 
 2:06 and presumably that's the same as the get version that they filled out the form to say 
 2:10 I need to reset my password and here is my email. 
-2:12 If everything goes ok, we'll do something like 
+2:12 If everything goes OK, we'll do something like 
 2:15 send them an email saying here is the link 
 2:18 and then finally we'll send them back a message that says 
 2:20 check your email for the reset code. 

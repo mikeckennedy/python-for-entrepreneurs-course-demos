@@ -66,7 +66,7 @@
 04:00 alright this is what it looks like in its raw form it has, congratulations {email} 
 04:05 obviously this is going to be replaced dynamically, so how does that work,
 04:09 we have our favorite album this all needs to be like a link to back, 
-04:13 the images and stuff, full url back, whatever your real domain is, 
+04:13 the images and stuff, full URL back, whatever your real domain is, 
 04:18 we don't have a domain yet for our blue yellow rockets
 04:21 so I can't really easily do that. 
 04:23 Alright, so here is the template, now how do we load and expand this, 
@@ -159,7 +159,7 @@
 10:36 and I said that is not good, let's do better, so now we got this better one, right, 
 10:42 here is our picture, congratulations, this is the email expansion 
 10:46 that used to be curly email and we passed the value when we registered, 
-10:50 and it expanded it to this, right, so you can use this as url fragments 
+10:50 and it expanded it to this, right, so you can use this as URL fragments 
 10:54 like hey you just bought the album, click here to go download it, 
 10:59 whatever you need to do you can pass in as many of those things in that dictionary 
 11:02 as you need to, and of course, everything else is static html 
@@ -174,7 +174,7 @@
 11:37 and then in the email service, we had to know that this thing required an email 
 11:42 and the template to expand it, so you are going to have to write
 11:46 a send password reset and it is going to take like, you know, 
-11:49 the reset password url and things like that. 
+11:49 the reset password URL and things like that. 
 11:52 Alright, this blue yellow rockets web app is totally hooked up with outbound email, 
 11:55 with mailing list, the last thing we need to talk about with regard to email is 
 11:58 how do we let people contact us, how do we put something like 

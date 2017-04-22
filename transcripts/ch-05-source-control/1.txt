@@ -1,4 +1,4 @@
- 00:01 In this section, we are going to go over source control with Git and github. 
+ 00:01 In this section, we are going to go over source control with Git and GitHub. 
 00:04 But what is source control? 
 00:06 Source control is a concept, 
 00:08 and we are going to use a specific implementation of source control named Git. 

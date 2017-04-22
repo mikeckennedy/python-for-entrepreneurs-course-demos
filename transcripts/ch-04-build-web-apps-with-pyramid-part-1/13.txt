@@ -15,15 +15,15 @@
 0:46 Then we get to the more dynamic content and these are called routes, 
 0:50 so what we are going to do is add some routes, we'll add four here, 
 0:54 the first one called home goes to just for slash, 
-0:58 and notice, there is a name and then there is a url pattern, 
+0:58 and notice, there is a name and then there is a URL pattern, 
 1:01 so the name has to be unique, among all the other routes, 
-1:04 and then the url pattern can be just a simple static url or it can be data driven. 
+1:04 and then the URL pattern can be just a simple static URL or it can be data driven. 
 1:10 The first two home and albums these are always the same, these are just static, 
 1:13 the album one however is more interesting. 
 1:16 Notice it's /albums/some name fragment, 
 1:20 so this is like some kind of name or title that we can use to look up the album by title.
 1:26 So we could have just /albums 1, /albums 2 but that's not good for SEO 
-1:31 and it's not very cool looking in the url bar either, 
+1:31 and it's not very cool looking in the URL bar either, 
 1:35 I am not sure if they have /albums/ something involving the actual name of the album. 
 1:44 So when we get to our view method, 
 1:48 name fragment is actually going to be a variable or value passed over to our view. 

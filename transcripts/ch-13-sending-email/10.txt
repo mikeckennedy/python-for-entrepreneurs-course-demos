@@ -41,7 +41,7 @@
 02:33 so we heard about your password at blue yellow rockets, remember,
 02:37 this is an image and I haven't changed it, 
 02:40 we are just going to go with that image for now. 
-02:42 If you click this button to reset it, it's going to take you to this url 
+02:42 If you click this button to reset it, it's going to take you to this URL 
 02:45 which is where things are running. 
 02:48 And then it's going to say account/reset password 
 02:51 and then we are going to replace the reset code 

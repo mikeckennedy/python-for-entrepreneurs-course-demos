@@ -48,7 +48,7 @@
 02:33 Begin rsa private key, it has very long hash 
 02:35 and then it'll have the end of the private key, again, 
 02:38 don't share that with anybody, but now you have the two files 
-02:41 that you need and we can plug them into github 
+02:41 that you need and we can plug them into GitHub 
 02:44 or when we need them for other purposes later, 
 02:47 so save these files somewhere safe, never share your private key 
 02:51 and you can actually have your public key out wherever you want. 

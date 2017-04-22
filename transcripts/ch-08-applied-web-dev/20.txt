@@ -6,7 +6,7 @@
 00:17 you'll see that we can use the concept of a Macro 
 00:19 basically to write this functionality for ourselves. 
 00:24 So what do we do? 
-00:26 Let's start by creating a new folder here, and we'll call this shared, ok. 
+00:26 Let's start by creating a new folder here, and we'll call this shared, OK. 
 00:30 Now the easiest thing to do is the majority of our content here 
 00:33 actually that we've been working in this is just the home page is actually 
 00:37 all the stuff we want shared everywhere, 
@@ -92,7 +92,7 @@
 06:00 but because this is a package it needs to look inside the package, 
 06:04 and the name of the package is blue yellow app, 
 06:07 so we'll say look inside the package like so, and let's try again. 
-06:12 Ta-da, ok so this is pretty cool, let's just take a really quick moment 
+06:12 Ta-da, OK so this is pretty cool, let's just take a really quick moment 
 06:18 and apply this to a couple of other pages like home and contact. 
 06:26 So we just need something like this and we can actually even simplify it here 
 06:31 so let's go right to the top, 

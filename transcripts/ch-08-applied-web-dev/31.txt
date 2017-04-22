@@ -45,12 +45,12 @@
 02:52 not a set of errors that could possibly occur. 
 02:55 Ok, and then up here we are going to say validate 
 02:57 and then we are just going to say if there is an error,
-03:01 we don't really care or know what it is, we just don't want to display the page, ok, 
+03:01 we don't really care or know what it is, we just don't want to display the page, OK, 
 03:06 so we are going to create the view model, we are stored from the post data, 
 03:11 we'll do a validation and we'll just see if it failed the validation 
 03:15 we'll go and just show the form again, we don't have to worry in this area what happens,
 03:19 but what we do care about is up here, we'll start working with vm.email and things like that
-03:24 to create the account assuming everything was setup ok.
+03:24 to create the account assuming everything was setup OK.
 03:27 Alright, last bit, let's try, one more time. 
 03:32 So over here, we'll put in an email address, 
 03:34 the password is going to be I'll make them mismatch for a minute, 
@@ -62,7 +62,7 @@
 03:55 like if the password is empty you could say something like this,
 03:58 like maybe we want to bail out of here 
 04:01 as soon as we can so we could change this to return right, 
-04:04 we are not collecting a set of errors, and we'll say if not self.email ok, great, 
+04:04 we are not collecting a set of errors, and we'll say if not self.email OK, great, 
 04:12 now we are really validating for all the things that we probably care about,
 04:15 we could also check for valid email using regular expression or whatever, 
 04:18 but you can get the idea, right, so if I just hit register, you must specify a password, 
@@ -78,7 +78,7 @@
 04:58 and we have a from dict, which will read the form post basically, 
 05:02 and then a validation, and look how much simpler this becomes. 
 05:05 So let's go over here, I'll show you cool trick on the accounts control, 
-05:10 I can go to local history, show history, I haven't checked this into github 
+05:10 I can go to local history, show history, I haven't checked this into GitHub 
 05:13 but let's have a look anyway, so we can compare this against yesterday, 
 05:19 oops, that's not good enough, there we go, 
 05:22 so we can compare this against this so you can see that the get call is much simpler

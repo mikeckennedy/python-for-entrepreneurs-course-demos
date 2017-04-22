@@ -72,7 +72,7 @@
 04:56 but we'll deal with that in just a minute, 
 04:59 let's just say self.redirect store/success, down here. 
 05:04 Okay, now this success template doesn't exist so it's not going to go so well 
-05:09 but if we see that url store/success we know that things are going pretty good, okay. 
+05:09 but if we see that URL store/success we know that things are going pretty good, okay. 
 05:14 So let's write get album by id really quick, so this should be simple enough, 
 05:20 session, you want to create a session and then we are going to say query 
 05:26 or let's just say return and we are going to do session.query of album, filter, 

@@ -4,18 +4,18 @@
 00:14 But Bootstrap is just one among many frontend css design frameworks. 
 00:20 Here is Bootstrap, this sign that you are looking at right now,
 00:23 I just grabbed one off the internet, this one is designed and built in Bootstrap.
-00:28 Now, at the top I put the number of github stars for each project
+00:28 Now, at the top I put the number of GitHub stars for each project
 00:33 so you can see relatively how popular it is and then the link to get it at the bottom,
-00:37 so you can see that Bootstrap has little over a 100 thousand github stars 
+00:37 so you can see that Bootstrap has little over a 100 thousand GitHub stars 
 00:41 that is some serious love it's getting, 
 00:44 The second most popular framework is Semantic UI.
-00:50 And you can see it's quite popular as well, 30 thousand github stars 
+00:50 And you can see it's quite popular as well, 30 thousand GitHub stars 
 00:53 and its main claim to fame is that it's very simple and easy to work with
 00:57 as well as it integrates with many third party libraries 
 01:00 so it's easy to bring lots of stuff together. 
 01:03 Foundation is a lovely looking framework, 
 01:06 and it sells itself as an enterprise grid responsive frontend framework
-01:11 And so, you can check it out, it's got 24 thousand github stars 
+01:11 And so, you can check it out, it's got 24 thousand GitHub stars 
 01:14 all of these are extremely popular, it's just sort of dwarf by Bootstrap, right. 
 01:19 So this one is really popular, really well done. 
 01:22 Materialize is cool if you like the Google Material design 
@@ -27,7 +27,7 @@
 01:42 this is a really good looking way to build your website and like I said, 
 01:46 if you want to make it look consistent with Google's Material design, this is really great. 
 01:51 And there are many, many more such frontend frameworks. 
-01:54 This article here, you can see the url at the bottom, 
+01:54 This article here, you can see the URL at the bottom, 
 01:58 it is the top ten frontend frameworks of 2016, and of course, 
 02:01 all the frameworks I just showed you are listed there, but there are another six or so. 
 02:06 So you can look around there, what's cool about this article is 

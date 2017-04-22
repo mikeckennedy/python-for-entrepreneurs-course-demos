@@ -112,7 +112,7 @@
 6:07 oh I see, that's a form control which is input, 
 6:10 you can see this is your email address. 
 6:12 All right, so you can get actually a pretty interesting view 
-6:15 by looking around and going ok, I want to try to understand 
+6:15 by looking around and going OK, I want to try to understand 
 6:19 what are the building blocks of this piece 
 6:21 how do they put that together, and you could do that pretty well 
 6:24 with this tilt 3d thing, and you get it for Firefox over here at add ons/tilt. 

@@ -6,7 +6,7 @@
 0:21 and I'll say this will be init_includes or something like that
 0:26 so down here you can see we are now just calling this function 
 0:28 and we can do this for the init_routing, 
-0:35 ok so like I said, as this grows we kind of want to have 
+0:35 OK so like I said, as this grows we kind of want to have 
 0:39 a bunch of pieces init_login, init_database etc. 
 0:41 Ok, when you see this config.add_route, this is for the traditional routing, 
 0:47 the ones that go straight on functions with the @view_config like so. 
@@ -14,7 +14,7 @@
 0:56 we are going to say config.add_handler,
 1:01 and in here we are going to specify a route name 
 1:04 just like you have home above, I'll call this home_ctrl, something like this, 
-1:09 and then I need to give it a url, so let's say the url is going to be /home/ 
+1:09 and then I need to give it a URL, so let's say the URL is going to be /home/ 
 1:12 and then we get our flexibility by saying action,
 1:17 so if we have the action method here, like so, 
 1:20 then we can just have this one route and it maps to /home/index /home/about/
@@ -61,7 +61,7 @@
 4:04 so over here I would like to have really just home/index 
 4:08 also stand in for / so let's comment that out, 
 4:13 I want to do another one I will just say call this root or something like that 
-4:16 we'll just say the url is going to be / home now we come over here 
+4:16 we'll just say the URL is going to be / home now we come over here 
 4:19 and say the action is going to be index, with an n. 
 4:23 Ok, so this tells the Pyramid handler system look if somebody comes to / 
 4:28 just render the home/ index, 
@@ -70,8 +70,8 @@
 4:40 we are going to have to go over to our view and not try to map it to a thing called home
 4:44 which doesn't exist, so let's just entirely comment that out, 
 4:47 in fact let's just go for broke, delete it. 
-4:51 I got a warning because it's used in the tests down here but that's ok. 
-4:57 Put those on hold for a minute, ok let's try again. 
+4:51 I got a warning because it's used in the tests down here but that's OK. 
+4:57 Put those on hold for a minute, OK let's try again. 
 5:01 Now, check this out, we're up here on / and we get value of controllers home, about, 
 5:06 over here / index or like this, same thing. 
 5:11 Now of course we probably want to change this link up here to just be / 
@@ -95,6 +95,6 @@
 6:30 This is not required, but I find this to be a much better way to organize large applications,
 6:35 it's hard maybe to convince some of you if you just want to write functions, 
 6:38 but as you go through it, you'll see here is one more cool feature, 
-6:42 here is one more cool feature, and they will just build up until you are like ok, I get it. 
+6:42 here is one more cool feature, and they will just build up until you are like OK, I get it. 
 6:48 And if not, it's fine, just use the other style. 
 

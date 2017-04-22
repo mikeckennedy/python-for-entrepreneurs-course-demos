@@ -37,7 +37,7 @@
 02:15 here we go, put something like that, now if it works, 
 02:18 this is going to go all the way the server 
 02:20 and the server actually did further validation set 
-02:23 what you typed here did not match what you typed there, ok, 
+02:23 what you typed here did not match what you typed there, OK, 
 02:26 this should let us through, cool, 
 02:28 now notice this actually looks different in different browsers
 02:30 so here this is Firefox and you saw how this was represented, 

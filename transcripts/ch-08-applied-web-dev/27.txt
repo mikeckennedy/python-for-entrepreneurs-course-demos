@@ -26,7 +26,7 @@
 01:25 it will crush the site if we don't do a get, 
 01:27 if we just do ('email') but this will just make it null 
 01:30 if it's not there, so we want to do this again for a few things, 
-01:33 ok and let's just print this out just to see that the data is getting here, 
+01:33 OK and let's just print this out just to see that the data is getting here, 
 01:38 we are not going to do anything with it yet, but we'll print out the data. 
 01:43 This is going to be jeff@jeff.com, password is going to be the letter a, 
 01:51 this is going to be also the letter a, 

@@ -2,7 +2,7 @@
 00:03 we've created a list and we've created an API key 
 00:05 let's start moving this into our web application. 
 00:09 So here you can see I've created blue yellow app 11, 
-00:12 so this is in a separate section in a github repo 
+00:12 so this is in a separate section in a GitHub repo 
 00:15 so you can see the snapshots over time, 
 00:17 so make sure that you go to the correct section if you want to check out this code. 
 00:20 One of the things is how do we get this API key into our app, 

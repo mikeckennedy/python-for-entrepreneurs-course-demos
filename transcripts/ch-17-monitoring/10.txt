@@ -1,7 +1,7 @@
 00:02 Now you've seen what Rollbar is all about, 
 00:04 you probably want to add it to your app and the first thing you need to do is 
 00:07 create an app in Rollbar that represents your app that you are actually building, 
-00:12 so you can create a brand new project or I am going to create one from github repo, 
+00:12 so you can create a brand new project or I am going to create one from GitHub repo, 
 00:15 
 00:19 and that's it, I just click that button and boom, it was done, 
 00:22 so you can see I did this from the demos repository, 

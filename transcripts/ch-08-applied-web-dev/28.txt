@@ -11,18 +11,18 @@
 00:36 and maybe get just a few more percent people to actually sign up for our site, 
 00:40 that would be really nice so we can decide if we want this in practice, 
 00:43 but these are the types of things, 
-00:45 validate that the data is ok that they actually entered an email 
+00:45 validate that the data is OK that they actually entered an email 
 00:48 the email is valid things like this, and then if it we'll create an account, 
 00:51 I'll send a welcome email and then what we want to do is we want to redirect. 
 00:55 We can just raise an exception, a specific exception type. 
 01:00 Now this redirect pattern, I told you get post redirect is super common, 
-01:05 so the ability to redirect to a url is also something you need all the time, 
+01:05 so the ability to redirect to a URL is also something you need all the time, 
 01:08 where the stuff that all the action methods need go, it goes in the base controller, 
 01:13 so let's write a redirect function over here. 
 01:15 So here we'll just have def redirect, and then we'll have to_url, 
 01:20 where do we want them to go?
-01:23 It could be on our site, it could be somewhere else, it just depends what url we put. 
-01:26 ok we are going to need access to this exception thing, 
+01:23 It could be on our site, it could be somewhere else, it just depends what URL we put. 
+01:26 OK we are going to need access to this exception thing, 
 01:29 so let's go over here and say import pyramid.httpexceptions 
 01:34 and let's keep it a little bit short so let's say as exc 
 01:37 so we don't have to type out that long thing, 

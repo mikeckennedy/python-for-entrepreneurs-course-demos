@@ -27,4 +27,4 @@
 01:38 which we sent this code to them, the id basically, in their email they click it, 
 01:43 they come back and then they can set that code for that user. 
 01:47 Alright, that's it for password resets, there is kind of a lot of small little steps, 
-01:51 but you can grab the most of the code from github and just adapt it to your purpose. 
+01:51 but you can grab the most of the code from GitHub and just adapt it to your purpose. 

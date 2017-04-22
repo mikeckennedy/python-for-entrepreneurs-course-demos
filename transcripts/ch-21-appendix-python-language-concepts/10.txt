@@ -19,7 +19,7 @@
 0:51 that the method was not necessarily designed for, but, like I said, 
 0:53 we are not going to dive too deeply into those, 
 0:57 here is the basic way to define the method- 
-0:59 def name parenthesy arguments and then colon,
+0:59 def name parenthesis arguments and then colon,
 1:02 to define the block that is the method. 
 1:04 Here we would probably do something like validate the arguments 
 1:07 like throw some kind of value error or something, 

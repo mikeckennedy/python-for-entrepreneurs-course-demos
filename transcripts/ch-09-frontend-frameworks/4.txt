@@ -12,7 +12,7 @@
 00:35 we could run a command line command and just have that happen. 
 00:38 So, if we do that, we get a Bower components folder, 
 00:43 and of course, we want that to be in our static folder.
-00:46 Let's jump over here to the github repository, 
+00:46 Let's jump over here to the GitHub repository, 
 00:49 just real quickly and see how this looks in our actual example 
 00:52 we are going to be working with.
 00:54 Over here is the Blue Yellow App and I've called it Blue Yellow App 9, 

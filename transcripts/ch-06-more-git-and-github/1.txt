@@ -1,6 +1,6 @@
-00:01 We got our first taste of git and github in the previous chapter,
+00:01 We got our first taste of git and GitHub in the previous chapter,
 00:04 and we have a little bunch of monotonous one time setup where we installed git, 
-00:06 signed up for github and configured our account so that everything was connected. 
+00:06 signed up for GitHub and configured our account so that everything was connected. 
 00:10 With all that out of the way, we're going to get more hands on with git in this chapter. 
 00:14 First, we're going to take a look at the git commands, 
 00:18 git add, commit, status, push, pull, remote and a few others. 
@@ -8,9 +8,9 @@
 00:24 to use it as a version control system. 
 00:26 Source control is critical even if you're working on your project by yourself, 
 00:30 if you're working with others, we're also going to cover 
-00:33 collaborating with other github users, we'll add collaborators to our repository, 
+00:33 collaborating with other GitHub users, we'll add collaborators to our repository, 
 00:36 and take a look at how pull requests and issues work. 
-00:39 Learning about collaborating through github will set us up great for later on, 
+00:39 Learning about collaborating through GitHub will set us up great for later on, 
 00:42 in one of the chapters where we take a look 
 00:44 at working with other people on our businesses. 
 00:47 Most of our time in the videos in this chapter are going to be spent on the command line, 

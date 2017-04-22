@@ -66,11 +66,11 @@
 03:22 all you have to do is make sure that the content length is appropriate 
 03:25 and that your writing is clear, it's appropriate for the audience that you're writing for. 
 03:29 Url structure is also important for search engine optimization, 
-03:32 what is better for you as a user, if url contains the exact keywords 
+03:32 what is better for you as a user, if URL contains the exact keywords 
 03:37 that you're searching for so that you can remember 
-03:40 what you're even reading when you just look at the url itself, 
+03:40 what you're even reading when you just look at the URL itself, 
 03:43 or a hash with a bunch of random digits,
-03:46 so we'll cover what makes a good url structure, 
+03:46 so we'll cover what makes a good URL structure, 
 03:48 so you can make sure that your site follows a certain practice 
 03:51 that is going to be most optimal for search engines to index; 
 03:54 and we'll also cover site loading times, page size, mobile support, 

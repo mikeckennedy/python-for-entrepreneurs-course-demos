@@ -20,7 +20,7 @@
 01:15 So, we want to first talk about how we can at least record this information locally, 
 01:19 some of it, so that we have it, and ideally, we would get notified,
 01:24 right away like possibly by the time the user was done typing up an email saying 
-01:29 look I went to this url it crashed, you've already actually got it fixed, 
+01:29 look I went to this URL it crashed, you've already actually got it fixed, 
 01:33 or you are already working on the fix and you can shoot them a quick note 
 01:37 hey thanks, I already noticed here is the problem, come back in 15 minutes 
 01:41 and everything will be working great, 
@@ -42,7 +42,7 @@
 02:37 But, like I said, ideally, you'd like to know straight away when that happened, 
 02:42 so we are going to talk about monitoring with the Rollbar, 
 02:44 and how we can actually capture, not just some of what went wrong, 
-02:49 but possibly even the state of the variables in the call stack, the url, 
+02:49 but possibly even the state of the variables in the call stack, the URL, 
 02:53 the platform version, the browser version, everything about the application state 
 03:01 from both the client side and the server side and send those notifications to us right away.
 03:06 Slack, text message, whatever. 

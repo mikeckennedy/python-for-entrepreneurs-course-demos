@@ -41,7 +41,7 @@
 02:19 and it's going to derive from SQLAlchemy base. 
 02:22 Okay, we're off to get start, and then 
 02:25 we're just going to specify the columns here as well. 
-02:29 There, we have an ID a name a length an audio and video url 
+02:29 There, we have an ID a name a length an audio and video URL 
 02:33 as well as the order in which this track should appear within the album. 
 02:37 Now there is a couple of other things that we should come back to and we will, 
 02:40 like relationships, this track should be tied to a particular album, 

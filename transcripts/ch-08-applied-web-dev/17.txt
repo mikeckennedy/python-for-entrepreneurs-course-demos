@@ -26,11 +26,11 @@
 01:58 Oops, I always do this, I always say in, and in is not the syntax, 
 02:02 it's just variable and then the set. 
 02:04 So there we go, we've got this, I am starting to not like the float thing so much here
-02:09 but that's ok, let's change this form an H2 to a div with a class=album title 
+02:09 but that's OK, let's change this form an H2 to a div with a class=album title 
 02:16 and do a little style on that. 
 02:20 And we'll just set the font size to like 18 pixels or something 
 02:23 there is a lot of padding that goes on with those pieces, 
-02:26 with the headers, ok, that's alright, and while we're at it, 
+02:26 with the headers, OK, that's alright, and while we're at it, 
 02:31 let's do one more thing, let's put this free, this preview over by the title. 
 02:36 Here we go, and I think that looks not great, 
 02:40 but I don't want to spend too much time doing design,

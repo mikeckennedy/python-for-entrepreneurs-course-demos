@@ -1,7 +1,7 @@
 00:02 Let's add email capabilities to our web app. 
 00:05 So you'll see that I've copied the previous working version 
 00:09 to a new folder 13 email, and renamed the project as well. 
-00:13 So, be sure to open that one to get the code into github project. 
+00:13 So, be sure to open that one to get the code into GitHub project. 
 00:17 Now, I have also done a few other things in preparation. 
 00:20 One is I added the ability for us to indicate
 00:23 whether our web app is in debug or release mode. 
@@ -42,7 +42,7 @@
 02:25 And then, down here, then here in the email, 
 02:28 we are not quite done with this section but we are going to come down here, 
 02:32 we'll get the settings, and we'll get those four values
-02:35 and I also have this unset which is what is in github right now, 
+02:35 and I also have this unset which is what is in GitHub right now, 
 02:39 and I'll just print a warning if I run it it'll say warning, smtp values are not set, 
 02:43 and so we want to make sure it just says look, 
 02:46 you are not going to really be able to send mail unless you go in 

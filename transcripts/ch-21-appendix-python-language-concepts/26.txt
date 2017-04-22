@@ -4,7 +4,7 @@
 0:13 Here we have some get active customers method, 
 0:16 maybe it goes to a database, maybe it just goes to some data structure, 
 0:19 it doesn't really matter, but it comes back with an iterable set of users, 
-0:23 so we could loop over all of the users, using a for in loop to find the users 
+0:23 so we could loop over all of the users, using a "for...in" loop to find the users 
 0:29 who have paid today and get their usernames and put that into a list. 
 0:33 So what we do is we create a list, some name paying usernames 
 0:38 and we'd for in over those to loop over all of them and then we do a test, 
@@ -48,4 +48,4 @@
 2:44 The imperative style of programming required separate language structures 
 2:48 that required their own blocks, 
 2:51 so you can't really compose for in loops but you can compose these comprehensions 
-2:54 which makes then really useful in places the for in loop wouldn't be. 
+2:54 which makes then really useful in places the "for...in" loop wouldn't be. 

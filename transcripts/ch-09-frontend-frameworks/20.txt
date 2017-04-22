@@ -16,12 +16,12 @@
 00:51 you'll see this is actually right there on gihub you can fork it 
 00:55 and below if you scroll down, 
 00:57 you can see there is 70 comments about people trying to implement this theme and so on.
-01:01 You also can get a nice live preview, download it or view the source on github. 
+01:01 You also can get a nice live preview, download it or view the source on GitHub. 
 01:05 So, if we click the live preview, there is the page, 
 01:08 and we can scroll down and look through it, 
 01:11 see it's got these nice little animations, things pop in as you go along. 
 01:14 I would be absolutely comfortable having this site represent my business. 
-01:18 So this one is called Creative, you can see the url up there, let's look at a few more. 
+01:18 So this one is called Creative, you can see the URL up there, let's look at a few more. 
 01:23 So here is another one I pulled out of that site, Start Bootstrap, 
 01:26 so you can scroll along and it has this nice big skyline things are wide open, 
 01:30 so this is really good, what you'll see that's often common in these Bootstrap themes 
@@ -34,7 +34,7 @@
 01:54 Those correspond very well to div.containers containing div.rows 
 02:00 and then you can do whatever stuff like grids and whatnot you want in there. 
 02:04 So here you can see all this stuff, very nice theme, and if you want to use this one, 
-02:08 you can actually see it's right here on github you can go grab it. 
+02:08 you can actually see it's right here on GitHub you can go grab it. 
 02:11 Maybe you are not into some kind of startup with the splashy front end screen, 
 02:14 maybe you need like a dashboard type of thing, 
 02:17 so look, they have these really cool dashboards ones as well, 

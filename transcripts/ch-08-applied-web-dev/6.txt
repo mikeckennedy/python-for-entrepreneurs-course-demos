@@ -45,7 +45,7 @@
 2:55 and so that's how I am going to call this, and then we are going to add three methods, 
 2:58 we are going to have a def index, for now I'll just say pass 
 3:01 and then we'll do this for about and we'll do it for contact. 
-3:04 Do a little format, great, ok so remember, what we need to return here is a dictionary. 
+3:04 Do a little format, great, OK so remember, what we need to return here is a dictionary. 
 3:10 And we also need to tell the index about and contact methods 
 3:14 what template they should use to render that dictionary, 
 3:19 so we'll say Pyramid handlers.action and we'll say render = it's going to be

@@ -38,7 +38,7 @@
 02:12 it's going to say well there is nothing at /account/register, 
 02:15 yet there is something at /account/register_get, 
 02:19 so what we have to do is we have to say tie these back together 
-02:22 and say no no these both respond to the register url 
+02:22 and say no no these both respond to the register URL 
 02:26 but they have to have different names so they can coexist, 
 02:28 so we set the name of this here to be like so. 
 02:33 Now of course rerun the Python now everything should be working good

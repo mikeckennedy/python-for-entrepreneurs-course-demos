@@ -1,6 +1,6 @@
  0:01 In Python we have a fantastically simple way 
 0:04 to work with collections and sequences. 
-0:06 It's called the for in loop and it looks like this. 
+0:06 It's called the "for...in" loop and it looks like this. 
 0:08 You just say for some variable name in some collection, 
 0:13 so here we have for item in items and that creates the variable called item 
 0:16 and we are looping over the collection items, 
