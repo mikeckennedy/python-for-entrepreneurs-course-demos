@@ -1,7 +1,7 @@
 00:03 So let's take a quick survey of frontend frameworks. 
 00:06 We said that we are using Bootstrap for this course, 
 00:09 and Bootstrap is by far the most popular and widely used one.
-00:14 But Bootstrap is just one among many frontend css design frameworks. 
+00:14 But Bootstrap is just one among many frontend CSS design frameworks. 
 00:20 Here is Bootstrap, this sign that you are looking at right now,
 00:23 I just grabbed one off the internet, this one is designed and built in Bootstrap.
 00:28 Now, at the top I put the number of GitHub stars for each project

@@ -15,7 +15,7 @@
 0:52 directory /action name file convention and that works very well for me, 
 0:58 so we are going to specify this here and then notice, 
 1:00 we are actually setting the request method so this method will only be called 
-1:04 if there is an http post to that URL that we've mapped it to, 
+1:04 if there is an HTTP post to that URL that we've mapped it to, 
 1:08 if there is a get there is some other not shown method that is run, 
 1:11 so here we can filter by request method, 
 1:14 in Python you can't have method overloading by parameter, 

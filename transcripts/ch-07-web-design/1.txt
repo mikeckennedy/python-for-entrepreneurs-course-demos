@@ -11,8 +11,8 @@
 0:31 let me ask you could you design this site today, could you design AirBnB, 
 0:36 the way it is on the screen here today, without much effort? 
 0:39 If you could, you could probably skip this section, 
-0:42 we are going to be talking about foundational stuff some of the core concepts in css, 
-0:47 and some techniques we can use to make our life easier when working with css. 
+0:42 we are going to be talking about foundational stuff some of the core concepts in CSS, 
+0:47 and some techniques we can use to make our life easier when working with CSS. 
 0:51 If you could literally design this site today, then feel free to skip to the next chapter.
 0:58 All right, are you still here? 
 1:00 Great, then I am assuming that you are probably thinking but I'm not a designer, 
@@ -36,21 +36,21 @@
 2:10 so that you can build maybe not perfect AirBnB looking apps, 
 2:14 but good enough so that either it could be a prototype or you can evolve it 
 2:20 or maybe bring on a graphic designer at the very end. 
-2:23 So the goal of this chapter is to learn the css basics. 
-2:27 Now, we could go on and on and on and have an entire course on css, 
+2:23 So the goal of this chapter is to learn the CSS basics. 
+2:27 Now, we could go on and on and on and have an entire course on CSS, 
 2:31 but that's not the theme of this course;
 2:34 the theme of this course is teach you enough for each step 
 2:37 so that you can get about building your business and do something awesome, 
 2:40 so keeping on that theme, we are going to talk about just a handful of items 
-2:43 starting with css selectors.
-2:45 You must know css selectors to be effective with css. 
-2:49 Also, the css box model and related to that how the box model 
+2:43 starting with CSS selectors.
+2:45 You must know CSS selectors to be effective with CSS. 
+2:49 Also, the CSS box model and related to that how the box model 
 2:54 plays with the layout and display modes. 
 2:56 We are also going to talk about floating items, you know, 
 2:59 making this thing stick to the right side of the screen, 
 3:01 while stuff floats around it and stuff like that. 
 3:03 When things don't go perfect, you'll want to use the browser developer tools, 
-3:07 so we'll talk briefly about the browser developer tools with how they relate to css. 
+3:07 so we'll talk briefly about the browser developer tools with how they relate to CSS. 
 3:12 Think of this whole chapter as a pre cursor to the front end frameworks, 
 3:16 so that when we get there you'll be comfortable and confident with working with them. 
 3:20 Ok, so I want to tell you you can learn enough web design. 
@@ -73,11 +73,11 @@
 4:22 The final thought that I want to leave you with is you can learn enough web design
 4:26 to make decent products and decent websites. 
 4:29 If you take the tools I am going to show you in this class 
-4:32 and you put a little effort into learning the css basics 
+4:32 and you put a little effort into learning the CSS basics 
 4:35 and a little bit of practice, you'll be totally fine. 
 4:37 I feel like, personally the sites I build these days, 
 4:40 they might not be AirBnB quality but they are definitely decent, 
 4:43 and I used to fear working on the web I totally was just a rich client sort of guy 
-4:49 and could totally get that stuff right, but web css, I had no idea. 
+4:49 and could totally get that stuff right, but web CSS, I had no idea. 
 4:52 So, some of the things I'll show you kind of helped me on my journey 
 4:56 and I think they'll help you as well. 

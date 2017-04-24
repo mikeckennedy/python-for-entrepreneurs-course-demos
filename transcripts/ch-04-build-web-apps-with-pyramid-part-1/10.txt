@@ -8,11 +8,11 @@
 0:26 and we'll add on many more concepts and conventions of our own, 
 0:29 but they will be framed around this basic skeleton. 
 0:33 So let's start at the top. 
-0:35 At the top we see the static folder, and here we have css, Javascript, images, 
+0:35 At the top we see the static folder, and here we have CSS, Javascript, images, 
 0:40 basically these are the static files that are just served up directly 
 0:44 as files they are not processed as some kind of action request 
 0:48 that our Python code is going to handle we just say here is an image, 
-0:51 here is a css file and so on. 
+0:51 here is a CSS file and so on. 
 0:54 There is a special rule for cashing inside this folder 
 0:57 I believe  the default is one hour
 0:59 but of course you probably want to make that higher 
@@ -27,11 +27,11 @@
 1:29 but as much as I need to corelate that with the Pyramid words 
 1:33 or folder names or things like that I'll try to line this up for you. 
 1:37 So we have the templates folder, 
-1:39 and this is where the dynamic html pages that are rendered by Pyramid itself go, 
+1:39 and this is where the dynamic HTML pages that are rendered by Pyramid itself go, 
 1:43 so for example if I wanted to make a request, go to a database, 
 1:47 pull back ten items, let's say we are doing a book store, 
 1:50 get ten books back, pass that book data off to this template, 
-1:54 this template will generate the html page that has 
+1:54 this template will generate the HTML page that has 
 1:57 like basically ten rows of whatever, 
 1:59 we do to put a book if it's a listing or whatever. 
 2:03 So these pt files, these are chameleon templates and they are in there, 
@@ -49,11 +49,11 @@
 2:45 but they don't really test anything important in the basic code of course. 
 2:48 Finally, we have things called views, in the mvc world these are controllers, 
 2:51 these are the methods that run 
-2:53 when a request and http request comes into our web app, 
+2:53 when a request and HTTP request comes into our web app, 
 2:57 you'll find one of the methods in this views file 
 3:00 for now we are going to expand greatly on this later, 
 3:03 but for the starter project there is some functions in here, 
-3:05 and we map urls to the various functions and then those run, 
+3:05 and we map URLs to the various functions and then those run, 
 3:08 they select a template out of the template folder and pass some data, 
 3:11 boom, we have a magic dynamic data driven web app. 
 3:15 You also see this .egg info folder and a bunch of stuff under there, 

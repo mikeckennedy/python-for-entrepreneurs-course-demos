@@ -1,5 +1,5 @@
 00:02 Any web app worth interacting with must have 
-00:05 not just html forms for user input, but beautiful and engaging ones. 
+00:05 not just HTML forms for user input, but beautiful and engaging ones. 
 00:11 Too often they look more like this,
 00:15 here is a registration page that has a few icons and so that's kind of cool, 
 00:19 but other than the few icons it really looks terrible, 
@@ -18,7 +18,7 @@
 01:08 Now it just so happens that this registration page here on the right
 01:12 comes from this place called codepen 
 01:16 and someone there was nice enough to actually create this in a form that we can play with.
-01:19 So if you go over here you'll see that you can actually play with the css and the html 
+01:19 So if you go over here you'll see that you can actually play with the CSS and the HTML 
 01:23 and you can come over here and change it, however you want. 
 01:28 now it says registration dialogue. 
 01:30 So if you like this form and you want to play with it, 

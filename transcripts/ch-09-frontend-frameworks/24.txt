@@ -25,7 +25,7 @@
 01:32 like I already want to listen to the music that they are playing,
 01:35 and of course, we are going to need to change this, this, change this links, 
 01:39 that's all easy to do, let's go to the bottom really quick, 
-01:42 oh yeah, this little plant image was messed up in the css so it didn't show up. 
+01:42 oh yeah, this little plant image was messed up in the CSS so it didn't show up. 
 01:46 Okay, great, now, let's flip back over to what we were looking for, 
 01:50 here we have this and if you look, notice, this is a little shorter, 
 01:54 than over there, so we can look at that really quick. 

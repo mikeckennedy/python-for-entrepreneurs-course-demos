@@ -1,13 +1,13 @@
- 0:03 There is a variety of ways we can style HTML pages with css. 
+ 0:03 There is a variety of ways we can style HTML pages with CSS. 
 0:07 But by far the most flexible and most modular and professional way to do this 
 0:12 is to use one or more style sheets. 
 0:16 So, let's look really quickly at what goes in the style sheet some of the major pieces, 
 0:19 and we'll use these ideas throughout the rest of this chapter, 
 0:22 and really, honestly through the rest of this course. 
-0:25 Here we have this file and this static folder called site.css 
+0:25 Here we have this file and this static folder called site.CSS 
 0:29 and any page we wanted to use it, obviously we have to include that style sheet 
 0:33 being present in the site obviously isn't enough, 
-0:35 you have to include it in each and every html page you wanted to style, 
+0:35 you have to include it in each and every HTML page you wanted to style, 
 0:39 and we'll see when we get to the more advanced 
 0:43 the second part of the web development a way to unify this across our entire site 
 0:47 so we put in one and only one place and it flows across the site, 
@@ -15,12 +15,12 @@
 0:55 link to our style sheet with the rel style sheet settings. 
 0:58 Now notice, we don't have to close it off here, unless we are doing xhtml, 
 1:02 all the html5 content browsers these days totally understand it like this. 
-1:06 The first thing that we can do is we can target elements that are just native to html, 
+1:06 The first thing that we can do is we can target elements that are just native to HTML, 
 1:11 so here we are going to target the body and we could target things like 
 1:15 paragraphs, divs, a for anchors and things like that. 
-1:18 And so you can specify by a name, there is not that many html elements 
+1:18 And so you can specify by a name, there is not that many HTML elements 
 1:21 so there is a limited set of what you can put here of course.
-1:25 But, you can have these bare names for html elements 
+1:25 But, you can have these bare names for HTML elements 
 1:28 and then you can style them and this is very common,
 1:31 you might want to style tables look or h1 h2 headers look and things like that. 
 1:37 Here you can see we are setting the background color 
@@ -29,12 +29,12 @@
 1:50 And the format here is totally standard, 
 1:52 you have the selector and the selectors can be complex as we'll see in just a second, 
 1:56 so body but this could be very complicated, 
-1:58 then we have curly brace a bunch of css properties we are going to set 
+1:58 then we have curly brace a bunch of CSS properties we are going to set 
 2:02 and then there is a close curly. Of course, semi colon each line. 
 2:05 So let's look at something a little more flexible, 
-2:08 if we want to style my css class, instead of just saying the name 
-2:12 we say .name, so in css . (dot) means class. 
-2:16 And, we can map that over to html that looks like this,
+2:08 if we want to style my CSS class, instead of just saying the name 
+2:12 we say .name, so in CSS . (dot) means class. 
+2:16 And, we can map that over to HTML that looks like this,
 2:19 there's class= whatever you out after the dot.
 2:22 And here we are just doing more properties, 
 2:24 we are working with the box style for a little bit 
@@ -62,8 +62,8 @@
 3:51 it's directly contained within this thing, so ul and then right within it,
 3:56 there is something with id profile. So, the hash there maps to id. 
 4:04 So we have bare elements, we have .things for classes 
-4:08 and we have #things for ids, so here you can see #name maps to id=name in html. 
-4:14 Now, this is style sheet, so this is kind of the ss, if you will of css, 
+4:08 and we have #things for ids, so here you can see #name maps to id=name in HTML. 
+4:14 Now, this is style sheet, so this is kind of the ss, if you will of CSS, 
 4:21 the other part is the cascading and inheritance styles, so if we look over here, 
 4:25 we can say .content .lead and this is a specialization of the content setting. 
 4:31 On the second item we are staying everything with content has padding of 20, 
@@ -79,6 +79,6 @@
 5:09 so it's making the fonts more specific,
 5:12 but the line height because the more specialized one doesn't apply 
 5:17 it falls back to just the content, so the line height of the content with lead is also 1.25 em. 
-5:23 So that is a light introduction to css, 
+5:23 So that is a light introduction to CSS, 
 5:26 this will give you a little bit of a handhold on where we are getting started 
 5:30 and we are going to look at selectors in much greater detail in an upcoming video. 

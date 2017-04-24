@@ -2,18 +2,18 @@
 00:07 maybe a few more brs here, to put some new lines, things like that, 
 00:11 but this worked, but this is not how you want to write your email, right, 
 00:16 it would be much better if you just had either actually the ability to edit the email, 
-00:20 maybe you write it as markdown and then transform it to html as you send it, 
+00:20 maybe you write it as markdown and then transform it to HTML as you send it, 
 00:24 or at least have a separate file so it's not in your Python code. 
 00:27 So that's what we are going to look at now, 
 00:30 so let's come over here and I'll make a folder called email, 
 00:34 and what we are going to do is we are going to create some templates, 
 00:38 so let me go ahead and make a folder named templates as well, 
-00:43 in here we are going to put the base html 
-00:46 because not only are we going to have stuff like this with all the html in it, 
+00:43 in here we are going to put the base HTML 
+00:46 because not only are we going to have stuff like this with all the HTML in it, 
 00:49 you will see that there is going to be styles galore to make this work 
 00:53 in all of various email clients and look pretty and things like that, 
 00:58 so you definitely don't want it in here, so let's go and change this, 
-01:01 we want to create a welcome html file, and it's going to look like this, 
+01:01 we want to create a welcome HTML file, and it's going to look like this, 
 01:06 now, not all of these pieces really mean anything, 
 01:08 like this title doesn't really mean anything, as far as the email client goes, 
 01:12 because it's just going to use whatever the subject is. 
@@ -23,8 +23,8 @@
 01:25 but I don't think it's going to show up in any client anywhere. 
 01:29 Now notice here, we are setting all sorts of styles on the body, 
 01:33 now, you might be tempted to say well Michael, 
-01:37 why don't you do this and put a css style here or even better, 
-01:41 why don't you create a css style sheet and link to it, 
+01:37 why don't you do this and put a CSS style here or even better, 
+01:41 why don't you create a CSS style sheet and link to it, 
 01:44 I didn't do that because it doesn't work. 
 01:46 Sometimes under certain circumstances some of it will work 
 01:49 but style sheets are not a good idea for these email messages, 
@@ -57,7 +57,7 @@
 03:27 we don't need that right now, and down here we have this find your course right now, 
 03:31 how about we change this to find your favorite album. 
 03:36 Okay, and notice we've got links back to wherever we want to go,
-03:41 and the style is set straight on it, right, I wish we could do css 
+03:41 and the style is set straight on it, right, I wish we could do CSS 
 03:44 but it doesn't seem to work reliably so we are not doing it,
 03:48 and here is a little bit, right, there is a little picture of me, 
 03:50 with some links and stuff at the bottom, 
@@ -71,7 +71,7 @@
 04:21 so I can't really easily do that. 
 04:23 Alright, so here is the template, now how do we load and expand this, 
 04:26 we basically want to take all this content in here, replace things like this, 
-04:32 and then use this as the html body that we are going to send in that basic send the message,
+04:32 and then use this as the HTML body that we are going to send in that basic send the message,
 04:37 So let me add a function, let me add a file here, we'll call this template parser, 
 04:45 so what we are going to do in this template parser, spelled correctly, 
 04:48 is we are going to have all the templates loaded up and set, so over here, 
@@ -132,13 +132,13 @@
 08:58 and then it calls this internally, who knows, but this will let us expand that out. 
 09:02 So let's go to our email service, and we are going to change our send welcome email, 
 09:08 now our body is not this anymore, 
-09:13 so html body is going to be our email template parser 
+09:13 so HTML body is going to be our email template parser 
 09:20 and what we are going to so is we are going to say expand 
 09:23 and what do we want to give it, not a huge fan of the way this looks 
 09:27 but we want to give it welcome and we are going to give it a dictionary with email 
 09:31 and the value is going to be just whatever the email is. 
 09:35 And that is all we are going to change, we want to go to that template parser, 
-09:38 we want to say grab that html that we stored in the file, 
+09:38 we want to say grab that HTML that we stored in the file, 
 09:42 that is easy to edit with smart tools that have intellisense, 
 09:45 and give that to a designer they can do whatever they want with it. 
 09:48 We are going to load that up and we have already loaded it in memory 
@@ -162,15 +162,15 @@
 10:50 and it expanded it to this, right, so you can use this as URL fragments 
 10:54 like hey you just bought the album, click here to go download it, 
 10:59 whatever you need to do you can pass in as many of those things in that dictionary 
-11:02 as you need to, and of course, everything else is static html 
+11:02 as you need to, and of course, everything else is static HTML 
 11:06 and here is thanks for registering, Michael in the band and so on. 
 11:10 So this is, by the way, I recommend you guys send emails, 
-11:13 you come up with these little email templates, and you just write them as pure html, 
+11:13 you come up with these little email templates, and you just write them as pure HTML, 
 11:17 you put little placeholders where the values have to pop in and off it goes, 
 11:22 you already have all the infrastructure you are going to need to do this 
 11:25 with this template parser, all you have to do 
 11:29 to continue to add new email capabilities, is basically the add new templates, 
-11:33 so you obviously have to write the html of the email you are going to send, 
+11:33 so you obviously have to write the HTML of the email you are going to send, 
 11:37 and then in the email service, we had to know that this thing required an email 
 11:42 and the template to expand it, so you are going to have to write
 11:46 a send password reset and it is going to take like, you know, 

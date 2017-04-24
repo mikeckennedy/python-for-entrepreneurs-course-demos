@@ -20,7 +20,7 @@
 1:09 and note we've given it the route name of reset post, 
 1:11 you can see on the next line it's only accepting form posts. 
 1:13 If you do a straight request against this URL, it'll just say I can't find this for you, 
-1:18 but if you do an http post against it, 
+1:18 but if you do an HTTP post against it, 
 1:20 it will say I am actually in the process of reset my password, 
 1:24 here is the form data, well it will be happy to process it. 
 1:26 Notice it also has a template 

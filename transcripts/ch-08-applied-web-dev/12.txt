@@ -17,11 +17,11 @@
 01:00 maybe it's fine but maybe it's not and if it's not what do you do about it?
 01:03 Well, you saw that we can create this suppress decorator, 
 01:06 it's also an action decorator, it just happens to change 
-01:09 the target request method in http. 
+01:09 the target request method in HTTP. 
 01:12 So basically we tell Pyramid handlers look, this function should only be called 
-01:16 if the browser sends a not an http verb type request, instead of get post and so on, 
+01:16 if the browser sends a not an HTTP verb type request, instead of get post and so on, 
 01:23 let me just put that at suppress onto the various methods 
-01:27 we want to basically make inaccessible by using the invalid http verb.
+01:27 we want to basically make inaccessible by using the invalid HTTP verb.
 01:31 Now we can safely put these methods on our controller classes 
 01:34 and we won't be concerned about them possibly getting called inappropriately. 
 

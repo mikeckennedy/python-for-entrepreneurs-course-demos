@@ -24,7 +24,7 @@
 01:17 for the people with like low visibility or blind folks things like that, 
 01:20 so you can help them out by putting things about your navigation up here, 
 01:24 it all starts with the class navbar and this is what it actually looks like, 
-01:28 the thing that we are seeing here in html, this is it up here, 
+01:28 the thing that we are seeing here in HTML, this is it up here, 
 01:31 with these little dropdowns, and so on. 
 01:35  So it's navbar and it has this light color because it's navbar default 
 01:38 and this brand over here, this is like your logo, right, your brand area,
@@ -38,7 +38,7 @@
 02:12 and then they have this little dropdown here, right, 
 02:15 so these are lot of unordered lists and list items and hyperlinks and so on. 
 02:18 Okay so let's see how this works on our page. 
-02:21 So, here I have copied into nav that html, just the standalone html file, 
+02:21 So, here I have copied into nav that HTML, just the standalone HTML file, 
 02:26 everything we need, let's start by looking at the head, 
 02:29 we are including Bootstrap, 337 happens to be the current one and like I said, 
 02:32 we are including the Bootstrap js file which depends upon JQuery 
@@ -87,7 +87,7 @@
 05:12 and this doesn't have just to do with navigation, 
 05:14 it just happens to be something you typically will need to use 
 05:17 if you have a rich navigation on top; 
-05:21 so over here in the css category, we have responsive utilities,
+05:21 so over here in the CSS category, we have responsive utilities,
 05:25 now check this out, we can come over here 
 05:29 and we can dynamically show via visible, or hide via hidden various elements on our page.
 05:35 And notice, these each apply to one screen size, 

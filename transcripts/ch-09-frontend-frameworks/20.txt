@@ -11,7 +11,7 @@
 00:34 At startbootstrap.com you can see that there is a bunch of Bootstrap themes here, 
 00:38 if we scroll along, these are really nice because they are both free and open source.
 00:42 Remember that beautiful website I showed you? 
-00:45 Well, besides the content of the html, 
+00:45 Well, besides the content of the HTML, 
 00:48 that's the theme right there and if I open this up, 
 00:51 you'll see this is actually right there on gihub you can fork it 
 00:55 and below if you scroll down, 

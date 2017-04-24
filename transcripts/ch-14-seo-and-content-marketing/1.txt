@@ -53,7 +53,7 @@
 02:41 so that people can discover you and you will use some basic principles of SEO
 02:44 in order to make sure that content appears higher in the search rankings, 
 02:47 so what are we going to cover in this chapter, 
-02:49 first off, when you break down an html page, 
+02:49 first off, when you break down an HTML page, 
 02:52 there is certain elements that explain to Google what that page is about, 
 02:55 and this has been true of any search engine, 
 02:58 since the start of the world wide web, the title tag, the h1 tags, meta descriptions. 

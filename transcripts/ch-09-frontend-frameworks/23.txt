@@ -14,9 +14,9 @@
 00:47 I am going to go and just put it right in here, 
 00:50 the stuff that is only relevant for the homepage 
 00:53 because the homepage is going to be fairly styled up, relative to the rest of our site, 
-00:59 I am going to actually create the css page for that. 
-01:05 Alright, so here is our home css let's go over here and let's add that in. 
-01:10 Now remember, we added this little section for additional css, 
+00:59 I am going to actually create the CSS page for that. 
+01:05 Alright, so here is our home CSS let's go over here and let's add that in. 
+01:10 Now remember, we added this little section for additional CSS, 
 01:14 it's exactly what we need, let me just copy what we got up here, 
 01:17 so I don't have to type it out again, so down here we're going to put home, 
 01:22 this is blank right now so it will have no effect but it's going to be all lined up, 
@@ -25,7 +25,7 @@
 01:34 if we refresh, do some view source, 
 01:38 it looks like I had misspelled this 
 01:42 yeah, here we go, alright so now you can see we have our home section 
-01:46 and now we have our custom css that our home page is adding back as well, 
+01:46 and now we have our custom CSS that our home page is adding back as well, 
 01:51 it's empty so there is not much to it, but it allows us to kind of go crazy, 
 01:56 not worry about messing up the rest of our site, like I said, 
 02:00 I find the landing pages usually have a lot of styling done to them, relatively speaking. 
@@ -33,7 +33,7 @@
 02:06 We could use our developer tools to find out. 
 02:10 So it looks like this main content here has this padding, 
 02:13 if we could take away, oh wouldn't that look better? Heck yeah, okay, 
-02:17 So this is from site css line 6. Thank you Chrome for telling me that, 
+02:17 So this is from site CSS line 6. Thank you Chrome for telling me that, 
 02:22 so over here, on line 6, we don't want that anymore, do we, 
 02:26 let's make it actually super explicit, main content has now no padding, 
 02:31 when we refresh it, 
@@ -58,7 +58,7 @@
 03:50 oops, did I save this, oh, there we go, I forgot my . (dot)
 03:56 I must have missed that when I copied it, okay, now it runs, 
 03:59 okay, this is good, fiddling with that gets us pretty close. 
-04:03 Instead of spending more time tweaking it, let me just drop in another css file, 
+04:03 Instead of spending more time tweaking it, let me just drop in another CSS file, 
 04:07 and we can talk about it. 
 04:10 So offline I created this thing called navbar,
 04:13 it sets the border radius we talked about that earlier, 

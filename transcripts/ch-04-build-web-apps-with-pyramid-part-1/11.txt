@@ -5,7 +5,7 @@
 0:16 routes are URL patterns that we then map into particular view methods, 
 0:20 speaking of views, these are the methods 
 0:23 that are going to process our request,
-0:24 whether they show us an html page through rendering a template 
+0:24 whether they show us an HTML page through rendering a template 
 0:29 or make some kind of update to a database and do a redirect, 
 0:31 that's where we are going to do it, is it in these view methods. 
 0:35 And note that in mvc these are called controllers. 
@@ -13,7 +13,7 @@
 0:42 typically what we'll do with our views is we'll come up with some sort of data 
 0:45 and then we'll pass that off to a dynamic template 
 0:48 and this template is going to take that data 
-0:51 and turn it into html that actually goes back to the user. 
+0:51 and turn it into HTML that actually goes back to the user. 
 0:54 The thing that flows between the views and the templates are called models, 
 0:59 and these are basically dictionaries in Python 
 1:01 and this is both data and behavior that we can pass to the view. 

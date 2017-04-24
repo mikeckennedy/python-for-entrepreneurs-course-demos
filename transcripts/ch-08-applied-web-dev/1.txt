@@ -29,7 +29,7 @@
 1:44 and you'll see that we have a single layout page that defines 
 1:47 basically a hole where the customized content goes for each particular view, 
 1:51 and then we are going to put all that stuff, 
-1:53 all the css all those sort of wrapper bits of the html in one page, 
+1:53 all the CSS all those sort of wrapper bits of the HTML in one page, 
 1:57 one template and share it across the whole thing. 
 2:00 So that means if we want to add a new page it's super easy, we just fill in that hole,
 2:04 if, more importantly, if we want to change the look and feel for our site, 

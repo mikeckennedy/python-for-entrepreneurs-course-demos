@@ -1,8 +1,8 @@
-00:01 Maybe a little css will have to work, so how do we style this? 
+00:01 Maybe a little CSS will have to work, so how do we style this? 
 00:04 Let's go look at the page source- look how nice and clean this is, first of all, 
 00:08 so this little block that we were working with that has the class, 
 00:12 the whole thing got duplicated each time 
-00:15 so we can just style album and class image in css let's go do that. 
+00:15 so we can just style album and class image in CSS let's go do that. 
 00:20 
 00:26 So here is our style, we can come over here and let's start by going down, 
 00:30 we'll figure out some other stuff to put in there in a minute 

@@ -1,15 +1,15 @@
 0:02 Let's wrap up this section by saying what we haven't covered 
 0:05 and what we might still be covering in the feature. 
-0:08 I tried to give you the essence of web design and the essence of css, 
-0:12 and style sheets and tweaking the html and those kinds of things. 
+0:08 I tried to give you the essence of web design and the essence of CSS, 
+0:12 and style sheets and tweaking the HTML and those kinds of things. 
 0:15 But there is plenty of stuff we haven't covered and I'll let you know why. 
 0:19 So, things the that stand out in my mind
 0:21 the highest most important one probably still remaining is this concept 
 0:25 first of all the front end frameworks like bootstrap ui kit and so on. 
 0:29 And within them are things like grid layout. 
 0:32 So more than just displaying line block of float right
-0:35 you can do a ton of layout and design with the css grid definitions 
-0:39 that come not as part of css but as part of these frameworks, 
+0:35 you can do a ton of layout and design with the CSS grid definitions 
+0:39 that come not as part of CSS but as part of these frameworks, 
 0:43 so we are going to cover that later, when we get to the front end frameworks. 
 0:46 Topography and fonts, there is a lot to getting the right fonts 
 0:51 that look good on all the screens, that look really readable 
@@ -34,9 +34,9 @@
 1:50 we are absolutely going to cover later in the web design part too, 
 1:53 LESS and SASS these are things that we are not going to cover 
 1:57 but it's worth pointing out
-2:00 css is great, but for large sites it can become pretty unwieldy, 
-2:03 I worked on some sites where we had ten thousand lines of css
-2:06 I mean it was a ridiculous amount of css, and when you get to that scale, 
+2:00 CSS is great, but for large sites it can become pretty unwieldy, 
+2:03 I worked on some sites where we had ten thousand lines of CSS
+2:06 I mean it was a ridiculous amount of CSS, and when you get to that scale, 
 2:10 you want to do things that are sort of problematic,
 2:13 like you would like to say here is the color we are using 
 2:17 for these types of use cases in this site, 
@@ -47,8 +47,8 @@
 2:32 but then compile them back into one really easily for performance, 
 2:36 say when you go to production. 
 2:38 LESS and SASS have these features and more, 
-2:40 so it's high level programming language for css 
-2:44 that then you transpile or compile down to actual css. 
+2:40 so it's high level programming language for CSS 
+2:44 that then you transpile or compile down to actual CSS. 
 2:48 If you go look at the bootstrap source code, 
 2:51 it's built this way and you'll see it in a lot of places. 
 2:54 It's worth checking out but it's just this is not a design class

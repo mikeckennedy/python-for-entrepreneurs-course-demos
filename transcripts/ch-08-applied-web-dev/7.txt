@@ -43,7 +43,7 @@
 2:46 alright, so what do we need to pass along here, 
 2:48 so we need to return a dictionary and we said there was going to be a value 
 2:52 and the value is going to be HOME, I'll just put all caps home just so we can see. 
-2:57 The other thing we need to pass is we need to pass that css cache busting thing, 
+2:57 The other thing we need to pass is we need to pass that CSS cache busting thing, 
 3:01 that we worked on before, I'll show you how we don't ever have to do this again 
 3:05 but just for now so it works, we are going to pass it. 
 3:09 Alright, let's try it one more time. Come over here /home beautiful, 

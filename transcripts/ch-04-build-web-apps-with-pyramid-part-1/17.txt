@@ -3,7 +3,7 @@
 0:09 of all the various Python libraries we are using. 
 0:12 But web apps are not just about Python. 
 0:14 In fact, you don't typically even see the Python as a user, 
-0:18 but what you do see are css frameworks, Javascript libraries 
+0:18 but what you do see are CSS frameworks, Javascript libraries 
 0:21 and various front end interactive pieces 
 0:24 and PyCharm and pip have no real great way to deal with those dependencies. 
 0:29 But there are a couple of systems out there that do. 
@@ -17,9 +17,9 @@
 0:51 So let's look at our website in PyCharm and see where these dependencies might be 
 0:55 and how we can switch to using Bower to manage them. 
 0:58 Here is the app we created in PyCharm using the scaffolding. 
-1:02 Notice here we have some static pieces, the Pyramid logo, the css theme and so on, 
+1:02 Notice here we have some static pieces, the Pyramid logo, the CSS theme and so on, 
 1:07 and so where are dependencies? 
-1:10 We are actually using Javascript and we are using css, 
+1:10 We are actually using Javascript and we are using CSS, 
 1:13 front end frameworks,w e are using for example Bootstrap, 
 1:17 well, the way it works, if we go over here to this template, 
 1:20 we are going to pull this out so there is one common template 

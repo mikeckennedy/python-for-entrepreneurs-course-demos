@@ -1,4 +1,4 @@
- 0:01 Let's look at some of the key concepts behind the css box model. 
+ 0:01 Let's look at some of the key concepts behind the CSS box model. 
 0:04 As we saw there is basically four things that define the box. 
 0:07 First of all, what is the content's width and height, 
 0:10 and then how much padding is there, how much of a border is there 
@@ -16,8 +16,8 @@
 1:00 and if you pull up the computed box model settings 
 1:04 you can actually see the exact pieces that make up the box model. 
 1:08 So this lets you visually understand the box model but how do you control it? 
-1:13 Especially in css? Well, we can look at our css file and see, 
-1:16 so over here we have our site.css and we are going to style something with the lead class,
+1:13 Especially in CSS? Well, we can look at our CSS file and see, 
+1:16 so over here we have our site.CSS and we are going to style something with the lead class,
 1:21 and we can set the padding, the margin and the border, 
 1:24 you can either do this in a multistep way
 1:27 here we are setting the padding all the way around to be 5 on each side 
@@ -28,7 +28,7 @@
 1:42 so I often want to be really explicit I'll say padding left for example 
 1:46 or margin left something like that. 
 1:49 Here we are setting the margin and we are using 5 pixels all the way around, 
-1:52 you can use any of the css measuring units, you can say 5 pixels, 
+1:52 you can use any of the CSS measuring units, you can say 5 pixels, 
 1:55 you can say 5 em so 5 line heights, things like that, 
 1:59 we are also setting the border, so the border here is 1 pixel, it's solid and it's gray 
 2:05 which looks very similar to the border on this code block
@@ -36,4 +36,4 @@
 2:11 You can also set things like border radius 
 2:13 which will give the whole element sort of a rounded edge style 
 2:16 which can be kind of nice sometimes. 
-2:18 So this is how you control the box in css.
+2:18 So this is how you control the box in CSS.

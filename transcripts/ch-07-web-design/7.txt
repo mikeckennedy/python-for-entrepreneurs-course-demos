@@ -10,13 +10,13 @@
 0:29 I think the default will be just an hour, but I don't recall if I have changed that in the site.
 0:33 Nonetheless, we want this to change when we change it, 
 0:37 so the easiest way to make this change is if we had a different URL, 
-0:41 so over here, we can see our css with our color we put back, 
+0:41 so over here, we can see our CSS with our color we put back, 
 0:45 the easiest way to sort of trick the browser is 
 0:48 you come over here and you can put some query string on the end 
 0:52 and you say ? whatever, it doesn't affect the web server at all, 
 0:55 so we can say things like cache id = 42 
-0:58 and it will reload that because hey it's never seen site.css ? cache id = 42
-1:05 it's only seen site.css, so if we can somehow make this thing go on the end 
+0:58 and it will reload that because hey it's never seen site.CSS ? cache id = 42
+1:05 it's only seen site.CSS, so if we can somehow make this thing go on the end 
 1:11 and make this number change if and only if the contents of this file changes, 
 1:14 well, then we can create a way that we'll always have a new URL for new files
 1:19 but then if it's tied to the contents, 
@@ -25,7 +25,7 @@
 1:27 which means they won't keep redownloading it. 
 1:30 So once it gets cached it will have the right effect for us, 
 1:33 so let's see how we do that. 
-1:36 We are not going to need to do anything to the site css file, 
+1:36 We are not going to need to do anything to the site CSS file, 
 1:39 but we are going to need to understand the contents of it. 
 1:42 Now over here in the views, what we would normally do 
 1:45 is we would normally just return the model like this. 
@@ -48,7 +48,7 @@
 2:42 that is the content of the file, this works for text files, 
 2:46 by basically treating them as binary so rb, 
 2:49 so what are we going to do, we are going to say I am looking for a file, 
-2:52 like the site.css full path to it, let's create an md5 
+2:52 like the site.CSS full path to it, let's create an md5 
 2:56 and we are going to open this in a with block, 
 2:58 so it gets closed straight away, 
 2:59 we'll do a full read to just read all the data out of the file, 
@@ -72,7 +72,7 @@
 4:07 and then I want to strip off the file name part and just get the directory 
 4:10 where that file lives, that is our route directory, right, it's here,
 4:15 there is the directory we can use it. 
-4:18 And so when we say things like /static/css/site.css 
+4:18 And so when we say things like /static/CSS/site.CSS 
 4:22 well, guess what, if we append this directory to it,
 4:25 then we have the full local path, right so full path here,  
 4:31 check for the file exiting get the hash kick it out. 
@@ -82,7 +82,7 @@
 4:43 There is another step here that I am skipping as well, in production, 
 4:46 you don't want to do this recomputing over and over and over again, 
 4:50 that would be not terribly expensive, but it would be inefficient,
-4:53 especially if you have lots of images lots of javascript, lots of css. 
+4:53 especially if you have lots of images lots of javascript, lots of CSS. 
 4:57 So what we do is we would store this hash in a dictionary, 
 5:01 and only computed if we haven't seen it already since our process started up. 
 5:06 There is a few more nuance bits around there so in the final app 
@@ -104,19 +104,19 @@
 6:09 all right, last step, let's put it over here. 
 6:12 So let's apply to these two so this is fine and then we want to say ? cache id 
 6:17 or you can put whatever you want to, it doesn't matter, = and then
-6:20 I need to call that function and put the hash value of theme.css. 
+6:20 I need to call that function and put the hash value of theme.CSS. 
 6:25 So we are going to say $ { to tell Chameleon 
 6:28 hey I want to execute some code, 
 6:31 the code that I want to execute is this built cache id, 
 6:33 so I want to do this and then we need to give it well that file here. 
 6:37 So let's do this, we just pass it like that, 
 6:41 it looks little ugly on this end but it saves so much trouble and it's totally worth it. 
-6:47 Now, I would do this to all the css and all the Javascript on this page, 
+6:47 Now, I would do this to all the CSS and all the Javascript on this page, 
 6:51 but for now, let's just do it on these two.
 6:54 First of all, let's see that hey it still looks styled, this is a good sign, 
 6:58 and if we go and view source again, it's not there, 
 7:01 and if we view source here, notice now
-7:06 we have this cache id site.css cach id and so on. 
+7:06 we have this cache id site.CSS cach id and so on. 
 7:09 So, if we change this file I'll leave this open and put it on the end here, 
 7:14 and I'll go and make some kind of change to it, first of all, 
 7:18 if I refresh refresh view page source, notice as I flip back and forth 
@@ -125,7 +125,7 @@
 7:34 and this becomes yellow, I can come over here and I just click it, 
 7:40 remember, this wasn't working before, boom, instantly changed, 
 7:43 if I do a view page source you can see now the cache id totally changes. 
-7:48 So my browser has an old version of site.css 
-7:52 and a new one but because the html it only uses the new one. 
+7:48 So my browser has an old version of site.CSS 
+7:52 and a new one but because the HTML it only uses the new one. 
 7:55 This is beautiful, this means we will never have to worry about this caching problem
 7:58 either in a development mode or in a production mode

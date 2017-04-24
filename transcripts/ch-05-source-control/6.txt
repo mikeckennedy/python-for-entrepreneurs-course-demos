@@ -39,15 +39,15 @@
 02:15 Let's try to run this right now.
 02:17 The git diff command is showing me the files that I actually changed, 
 02:20 so if we take a look at the third line and the fourth line here, 
-02:24 about author.html we can then glance down and see red where lines were removed 
+02:24 about author.HTML we can then glance down and see red where lines were removed 
 02:29 and green where I added something. 
-02:31 So in this case it really was just changing some in line css styling on the top banner 
+02:31 So in this case it really was just changing some in line CSS styling on the top banner 
 02:35 and if we press space bar we are just going to go through more of the changes that were made, 
 02:40 but it looks like I was doing  here was I changed the base template 
 02:43 and I made some changes to the top banner on the site 
-02:46 and that cascaded through all the html files. 
+02:46 and that cascaded through all the HTML files. 
 02:48 So if we fly through all the changes here, 
-02:50 we'll see that all the html files that had that banner were changed, 
+02:50 we'll see that all the HTML files that had that banner were changed, 
 02:53 seeing these changes and then taking a look at the commit messages is super helpful 
 02:56 for figuring out how changes were made over time to the repository. 
 03:00 So that's the git log an git diff commands. 

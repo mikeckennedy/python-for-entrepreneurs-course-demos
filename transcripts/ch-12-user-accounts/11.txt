@@ -82,7 +82,7 @@
 05:23 Now you would think, you would think that this is going to work. 
 05:27 However, let's find out. So I rerun this, I go over here and refresh 
 05:32 and if we go and actually look in the network tools, 
-05:36 let's do one more request there we go, and only see html, okay, great. 
+05:36 let's do one more request there we go, and only see HTML, okay, great. 
 05:44 So if we look at this and we look at the cookies, 
 05:46 you can see that PyCharm has inserted some kind of cookie for us 
 05:50 because it wants to be able to debug this request, right, 

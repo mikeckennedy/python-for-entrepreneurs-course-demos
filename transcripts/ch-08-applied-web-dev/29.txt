@@ -28,7 +28,7 @@
 01:37 so we can make it red or stand out or something, 
 01:39 and we'll do a tal condition and only show it if the truthiness of error is true, 
 01:44 so it's a string that is not empty something like that. 
-01:47 Let's add a quick red color for that css class, 
+01:47 Let's add a quick red color for that CSS class, 
 01:51 now this is not going to work the way you would hope, I think, let's go and run it. 
 01:55 And we'll see how successful we've been spoiler alert, not successful yet. 
 02:00 So I go over here and I want to register, 

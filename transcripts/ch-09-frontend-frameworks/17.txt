@@ -10,7 +10,7 @@
 00:31 we've got to put this section, this modal dialogue, with the fade option, 
 00:36 role dialogue and then here we can see 
 00:38 we have the header and you can put whatever you want there, 
-00:41 you have the body, alright, this is just standard html that fits into the container, 
+00:41 you have the body, alright, this is just standard HTML that fits into the container, 
 00:44 whatever size that is and then at the bottom, we've got our two buttons, 
 00:48 one has the data dismiss modal and one is just standard button 
 00:52 that we could hook some kind of event, submit a form, whatever. 
@@ -21,9 +21,9 @@
 01:09 certainly buttons and hyperlinks even if they are styled as buttons, 
 01:13 will do it and the reason it will do it is it says data toggle modal 
 01:17 and so that's going to toggle the modal, 
-01:20 and then the specific dialogue it's going to target this is a css selector#my modal 
+01:20 and then the specific dialogue it's going to target this is a CSS selector#my modal 
 01:26 so id my modal which is right here. 
-01:29 So these two things are linked together by that css selector by the id. 
+01:29 So these two things are linked together by that CSS selector by the id. 
 01:33 Let's look at this in action. 
 01:36 Well, first of all, we can click it here, and it comes up looking like so,
 01:39 alright, let's look at it in our code. 
@@ -54,11 +54,11 @@
 03:12 Just there is a lot of pieces, there is a lot of nesting here, 
 03:15 you've got modal, modal dialogue, modal content, modal header etc, 
 03:19 so just be really careful to not mess up what goes where, right, 
-03:25 so you want to balance your html tags, don't leave an unclosed div or paragraph 
+03:25 so you want to balance your HTML tags, don't leave an unclosed div or paragraph 
 03:30 or whatever because that's going to mess up the dialogue 
 03:34 and it can cause all sorts of weird problems like one example I had messed up, 
 03:37 I missed some kind of closed tag and the dialogue would show 
 03:41 but it would never go away.
 03:43 Or it would show and it there were like cycle showing over and over it was very bizzare. 
 03:46 So as long as you're careful about and make sure you close everything 
-03:49 and it's well formed html, you are in good shape. 
+03:49 and it's well formed HTML, you are in good shape. 

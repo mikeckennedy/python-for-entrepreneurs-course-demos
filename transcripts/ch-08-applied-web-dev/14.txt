@@ -9,7 +9,7 @@
 00:29 just change that to Pyramid_Ginger 2 
 00:32 similarly, if you like Mako, go for that. 
 00:35 In this section we are going to focus on two things, 
-00:38 we are going to focus on how to use template to define data driven html pages, 
+00:38 we are going to focus on how to use template to define data driven HTML pages, 
 00:43 and how to use Chameleon to build a shared single definition of the site design. 
 00:50 So, how do we build one view that basically defines the master view 
 00:55 for all the pages and then each individual page just adds its own special content, 

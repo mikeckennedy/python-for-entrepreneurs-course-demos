@@ -8,7 +8,7 @@
 0:25 so at the core, the language itself is quite functional and does many things for us, 
 0:31 the next shell out is the standard library,
 0:35 and in the standard library we have file io, regular expressions, 
-0:39 http capabilities, things like that.
+0:39 HTTP capabilities, things like that.
 0:42 In the next shell outside of that, are all of the packages 
 0:45 and external projects written for and in Python, 
 0:49 so for example when we want to add credit card capabilities to our website, 

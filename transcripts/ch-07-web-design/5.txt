@@ -4,7 +4,7 @@
 0:10 and make sure that our page loads as fast as possible. 
 0:13 But when we are trying to develop the site or deploy new versions of the site, 
 0:17 this can be problematic. 
-0:19 So imagine, we've started out with this css file 
+0:19 So imagine, we've started out with this CSS file 
 0:22 in the very standard black text on the white background. 
 0:26 So here our body has the color black and the background of white, 
 0:30 and it looks like this- that's pretty decent, 
@@ -14,7 +14,7 @@
 0:42 where the font is white and the color is very dark grey or something like that 
 0:48 and we either edit this and try to load it for ourselves 
 0:52 or we push it to production and visitors who have been there before 
-0:55 and previously cached the original site.css 
+0:55 and previously cached the original site.CSS 
 0:58 come back and when they view the page it still looks the same 
 1:01 or when we are developing it and we view the page it still looks the same 
 1:04 and this is totally frustrating, 

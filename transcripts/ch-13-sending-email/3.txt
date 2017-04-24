@@ -11,8 +11,8 @@
 00:32 I am going to use a package called mailer, so if we come over here.
 00:36 we can go and check out the documentation for this character, 
 00:41 so mailer is just a simple package that makes it easier for us to send email, 
-00:45 you can see that we can setup an html version, a plain text version 
-00:50 if the client that receives the message doesn't want to see html, 
+00:45 you can see that we can setup an HTML version, a plain text version 
+00:50 if the client that receives the message doesn't want to see HTML, 
 00:55 they can actually display just the text and handle attachments, things like that. 
 00:58 So we are going to use this mailer package, so we are going to start 
 01:02 just letting PyCharm drive for us, so we'll say import mailer and PyCharm says 
@@ -39,7 +39,7 @@
 02:28 and then they are going to feed it off to this method 
 02:30 which will actually do the sending. 
 02:32 So for this one we don't need too much information, 
-02:35 we are going to need a to address, a subject and an html body. 
+02:35 we are going to need a to address, a subject and an HTML body. 
 02:42 Alright, so the first thing we want to do is we want to get access to this smtp server 
 02:49 and there is lots of things that can go wrong, so let's start here. 
 02:54 So now we have our server, let's just add the except block, 
@@ -54,22 +54,22 @@
 03:40 So let's go down here, 
 03:44 let's make sure we set the character set to utf8 that's pretty standard,
 03:50 like so, and then let's go ahead and set the subject to be the subject 
-03:55 and we'll set the html to be the html body. 
-03:58 Now it gets a little complicated, I have some html, 
-04:02 how do I set the body to some text version of the html body, what do I do here, 
+03:55 and we'll set the HTML to be the HTML body. 
+03:58 Now it gets a little complicated, I have some HTML, 
+04:02 how do I set the body to some text version of the HTML body, what do I do here, 
 04:09 well, it might sound complicated, but it turns out it's not complicated, 
 04:14 we are going to use a nice little package. 
-04:16 So if we come over here, to pypi.io we can look for html to text, 
-04:22 so this will turn html into markdown structured text 
-04:26 so for example if we have like bold in our html it will just go ** 
+04:16 So if we come over here, to pypi.io we can look for HTML to text, 
+04:22 so this will turn HTML into markdown structured text 
+04:26 so for example if we have like bold in our HTML it will just go ** 
 04:32 and put the words in there, standard markdown.
 04:35 So that actually seems like a pretty decent compromise for 
-04:39 well if you want to look at html we'll give you kind of markdown that you can read. 
-04:44 So we are going to use html to text.
+04:39 well if you want to look at HTML we'll give you kind of markdown that you can read. 
+04:44 So we are going to use HTML to text.
 04:47 And again, PyCharm can take care of everything for us. 
 04:54 
 04:57 And with that handy package, it is super easy to convert this to text. 
-05:04 We just give it the html that we want to convert, and boom, we are done. 
+05:04 We just give it the HTML that we want to convert, and boom, we are done. 
 05:10 So now we've created our message, we've created our sender, 
 05:13 it's up to us to just send it. 
 05:17 Easy enough, right, no problem at all, but maybe we want to check, 

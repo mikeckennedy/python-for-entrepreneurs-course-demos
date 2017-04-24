@@ -4,7 +4,7 @@
 0:14 to make sure it installs globally not just for this project. 
 0:17 Than you could ask hey, what version of Bower do I have, I have 1.7.9 great. 
 0:20 Now you could start using Bower to install your dependencies 
-0:23 so we have Bower install bootstrap- css 
+0:23 so we have Bower install bootstrap- CSS 
 0:26 and that will give us just the distribution version of bootstrap, 
 0:30 we can also then install a few other dependencies here we are installing jquery dist 
 0:35 which gives us just the distributed version not the building blocks for jquery 
@@ -15,7 +15,7 @@
 0:52 and that we are going to put the Bower components in there, 
 0:54 we have our three folders that were installed and managed by Bower, 
 0:57 it has the bower.json file so it can keep track of versions and what not, 
-1:01 as well as the various things we need so css, 
+1:01 as well as the various things we need so CSS, 
 1:03 fonts and js from our bootstrap distribution. 
 1:07 Then we can ask Bower what packages are we using, 
 1:10 and notice here there is an actual upgrade for angular js 

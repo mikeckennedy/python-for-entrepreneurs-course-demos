@@ -10,7 +10,7 @@
 00:29 So now what we need to do is we need to put in your email address, 
 00:32 and this is going to submit this back, 
 00:36 so let's write the code that when we submit this form, 
-00:39 notice it's required through html 5 and our view model test to see the email is there. 
+00:39 notice it's required through HTML 5 and our view model test to see the email is there. 
 00:43 When we submit this form correctly, we'll then create one of those password resets,
 00:48 assuming that we can find the account. 
 00:51 Okay, here we are in the forgotten password get post redirect set of functions, 

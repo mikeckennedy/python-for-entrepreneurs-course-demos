@@ -42,7 +42,7 @@
 02:29 which is the instance of the controller class and all of its properties and fields and so on, 
 02:34 so we can say tal conditional don't show this if they are logged in, 
 02:38 do show this if they are logged in, or show this if they're not logged in rather. 
-02:42 And then we come down here and we say create little prototypical html block
+02:42 And then we come down here and we say create little prototypical HTML block
 02:48 that we want to work with and then we'll say tal repeat 
 02:51 and we'll create a local variable for each time through the loop 
 02:54 so here we are going to create- now that we are floating this we don't need this anymore,

@@ -17,9 +17,9 @@
 00:56 which you all are taking, so I want to put that as the footer. 
 00:58 I'm going to go over here, and the footer is shared across all the pages 
 01:02 so it's in the layout, here is the footer that is already there, 
-01:05 this came from the theme let's drop it, it's using the html 5 footer tag which is great, 
+01:05 this came from the theme let's drop it, it's using the HTML 5 footer tag which is great, 
 01:09 I use a new copy that I wrote, and we'll just talk about it real quick, 
-01:13 here, again using html 5, you can see it's using the grid layout, 
+01:13 here, again using HTML 5, you can see it's using the grid layout, 
 01:17 and it has a few bits of padding and then here is our story Blue Yellow Rockets, etc
 01:24 now, there is one thing that's really notable here, 
 01:27 and let's just see how this looks and then we'll talk about it. 
@@ -46,7 +46,7 @@
 02:50 Well, if you've got a normal image, the image has a color 
 02:54 and if you make the image a different size than it's meant to be, 
 02:57 it gets real grainy or fuzzy or weird patterns up here and things like that. 
-03:01 With fonts, you can infinitely scale them and you can color them with css. 
+03:01 With fonts, you can infinitely scale them and you can color them with CSS. 
 03:06 If you go over here and just search for font awesome, 
 03:10 you can see first thing that comes up fontawesome.io 
 03:14 and they are actually running a kickstarter that is insanely successful, 
@@ -57,8 +57,8 @@
 03:32 I am looking for stuff to do with Facebook, and then there is all the icons, 
 03:36 like I could get any one of these, let's suppose Facebook square is what I want, 
 03:40 then, it says alright, this is cool all you've got to do is include that 
-03:44 plus the font awesome css and then you style it to be whatever color you want, 
-03:48 you want the Facebook blue, just set a css style for this thing, and it will be that color. 
+03:44 plus the font awesome CSS and then you style it to be whatever color you want, 
+03:48 you want the Facebook blue, just set a CSS style for this thing, and it will be that color. 
 03:53 So I did that for all of the little social bits like for the email, here is one for GitHub,
 03:58 here is one for some video file, here is one for YouTube and so on, 
 04:03 so if you look at the bottom of our file here, you can see all of those little things, 

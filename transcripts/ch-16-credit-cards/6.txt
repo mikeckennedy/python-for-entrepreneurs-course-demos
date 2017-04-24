@@ -1,5 +1,5 @@
 00:02 Let's review what it took to get Stripe checkout integrated with our webpage. 
-00:07 Remember, all we really had to do was add a little bit of html 
+00:07 Remember, all we really had to do was add a little bit of HTML 
 00:10 that referenced the checkout script, set some properties, 
 00:14 probably dynamically computed from our Chameleon templates, 
 00:18 and Stripe took care of the rest. 

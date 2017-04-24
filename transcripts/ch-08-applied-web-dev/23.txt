@@ -1,7 +1,7 @@
 00:03 Everything we've done so far has been data that the users can consume, 
 00:06 but they haven't been able to contribute or edit it in even the simplest way. 
 00:11 We are going to address that now in the next couple of lectures. 
-00:13 So let's start by talking about html forms 
+00:13 So let's start by talking about HTML forms 
 00:16 specifically within the context of Chameleon templates, but also in general. 
 00:20 Here is a form and this is a very simple form, 
 00:23 what it lets users do is enter their email address and their password 

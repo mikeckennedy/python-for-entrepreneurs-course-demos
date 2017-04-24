@@ -11,7 +11,7 @@
 00:39 created by the starter project, and we converted it to a macro, 
 00:42 here you can see we are saying metal:define-macro and we give it a name,
 00:46 in this case I wanted to call it layout. 
-00:48 Notice we are applying that to the html tag so the entire page, 
+00:48 Notice we are applying that to the HTML tag so the entire page, 
 00:51 and then we define several slots that the dependent pages can use
 00:55 to stick in and populate the page, 
 00:58 here I've highlighted the main content where all the data goes 
@@ -46,7 +46,7 @@
 02:41 is there just a packages you can include that does this magic? 
 02:44 Well, yes, there actually is a package you can include called Pyramid layout. 
 02:47 But if you go back and look what we did, 
-02:50 there is literally nine lines of code that weren't just already boiler plate html 
+02:50 there is literally nine lines of code that weren't just already boiler plate HTML 
 02:54 and if you go read through here, it's not particularly simple, 
 02:58 I mean, what they are doing is great, but I feel like it's just overkill
 03:02 and there is too much going on here, so you can pick whichever makes you happy,

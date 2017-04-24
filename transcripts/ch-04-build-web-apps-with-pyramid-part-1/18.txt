@@ -9,7 +9,7 @@
 0:34 this is our top level for a website, here is the egg info from setup.py develop 
 0:40 and here is the actual logic of our application, 
 0:44 in the static folder is where we would like to put things 
-0:47 like javascript, css, images and so on, 
+0:47 like javascript, CSS, images and so on, 
 0:49 so that seems like the right place for bower to manage its dependencies 
 0:53 which largely consists of those things. 
 0:56 So let's go over here, we can see that I am actually in that folder, in the static folder 
@@ -24,13 +24,13 @@
 1:28 and things basically clone the entire bootstrap repo in GitHub 
 1:33 so you have all the building blocks, 
 1:35 not just the stuff you want to ship for your after work, 
-1:38 so there is a shorter version you can use, so if you say -css, 
-1:42 it just brings kind of non intuitive, it brings a css javascript and fonts 
+1:38 so there is a shorter version you can use, so if you say -CSS, 
+1:42 it just brings kind of non intuitive, it brings a CSS javascript and fonts 
 1:47 but basically the distribution folder for bootstrap. 
 1:51 So I've already installed this, it doesn't need to download it, 
 1:53 you can see it's taking this straightfrom GitHub, it's validated it and it's installed it. 
-1:58 Now if we go back here, you can see we have bower components, bootstrap css, 
-2:02 little bower project file we've got the css that we need, minified non minified, 
+1:58 Now if we go back here, you can see we have bower components, bootstrap CSS, 
+2:02 little bower project file we've got the CSS that we need, minified non minified, 
 2:06 we've got the fonts and we've got the javascript, again minified and non minified. 
 2:12 What's so different about this? 
 2:14 Well, one we have it offline, we could have just gone 
@@ -53,7 +53,7 @@
 3:11 so font awesome for example there are our fonts. 
 3:15 And the last thing to do is go to our template and start using these 
 3:18 instead of the ones that are coming off the cdn. 
-3:22 Notice over here how this refreshed, let's go and find our bootstrap css here 
+3:22 Notice over here how this refreshed, let's go and find our bootstrap CSS here 
 3:27 copy the path, and let's update this. 
 3:33 Now you don't want the whole path of course, 
 3:37 you just want from static down because this is sort of the folder 
@@ -63,7 +63,7 @@
 3:48 Now, there is one little detail about this possibly getting cashed and if we update it, 
 3:53 that could be a problem, it rarely is for bootstrap, it much more likely is for our site. 
 3:58 Let's do the same for html5 shive and respond js. 
-4:05 Great, so that should take care of things for the css 
+4:05 Great, so that should take care of things for the CSS 
 4:08 and now we just have to do the javascript. 
 4:12 I have no intention of debugging these so let's just keep using the min versions. 
 4:16 All right, let's run the site, it better still look the same. 

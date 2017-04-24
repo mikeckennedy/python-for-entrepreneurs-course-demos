@@ -4,7 +4,7 @@
 00:15 imagine there is text, or there is pictures, or something much more complicated 
 00:20 like some hierarchy of a thing, containing a div, 
 00:23 containing an image and whatnot. 
-00:25 We have different css classes on the screen here, 
+00:25 We have different CSS classes on the screen here, 
 00:28 you see I have column md, so md stands for medium, 
 00:33 down here we have some column lg, that stands for large. 
 00:36 And down here we have small. What do those mean? 
@@ -40,22 +40,22 @@
 02:39 So it's really easy to put stuff into these grid cells, as we'll see, 
 02:42 but this is how these various pieces work, 
 02:45 we also have extra small, there might also be an extra large, 
-02:48 we'll see when we get to the concept, all the various css classes, 
+02:48 we'll see when we get to the concept, all the various CSS classes, 
 02:51 the exact pixel size, and what that means and so on.
 02:55 Let's look at the code to make this work. 
-02:57 So for all the demos in this css section, 
+02:57 So for all the demos in this CSS section, 
 03:00 except for the final bit where we design the whole front page, 
-03:03 I've created this Bootstrap example snippet folder and put a bunch of straight html, 
+03:03 I've created this Bootstrap example snippet folder and put a bunch of straight HTML, 
 03:07 we have one image we are working with, 
 03:10 and we are just using Bootstrap straight off the CDN. 
-03:13 So these are basically empty html pages 
+03:13 So these are basically empty HTML pages 
 03:16 except for the fact that they have Bootstrap 
 03:20 and then we put this grid stuff or various things like buttons 
 03:23 and the other ones, or dialogues and so on. 
 03:26 And you also don't need PyCharm to open them, 
 03:28 you can just double click them and view them right off the file system most likely. 
 03:31 Alright, so here you can see we have the grid pieces, 
-03:34 you can see these same css classes, 
+03:34 you can see these same CSS classes, 
 03:37 notice I put that as text and as the class so it's really clear what is going on there. 
 03:41 Now it always goes like this, we have some section that is called a container, 
 03:46 and it contains a number of rows, 

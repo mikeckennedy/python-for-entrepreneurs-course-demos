@@ -23,10 +23,10 @@
 01:15 So we call our function you just looked at, create smtp sender, to get  the smtp client; 
 01:20 then we want to create a message object, set the from address, 
 01:23 the to address, the character set, the subject, 
-01:26 at the html body and we are also going to set the body 
+01:26 at the HTML body and we are also going to set the body 
 01:30 so that there is an alternate view if somebody has 
-01:34 show html turned off in their mail client,
-01:36 they will still see something and we use the html to text package 
+01:34 show HTML turned off in their mail client,
+01:36 they will still see something and we use the HTML to text package 
 01:40 to actually turn that into markdown in a real simple way. 
 01:43 So that will give them a decent representation of some kind of body there 
 01:48 and then we also added a debug mode to our configuration files, 
@@ -51,9 +51,9 @@
 02:56 pip install mailer, you saw that we just let PyCharm handle all of that, 
 02:59 this is a really nice package building on top of Python's ability to send mail 
 03:03 and it just makes it a little bit nicer. 
-03:06 We also used html to text because we want a text alternate version 
-03:10 if you are not going to be able to see the html what does the plain text version look like, 
-03:15 but we can use this html to text to get that. 
+03:06 We also used HTML to text because we want a text alternate version 
+03:10 if you are not going to be able to see the HTML what does the plain text version look like, 
+03:15 but we can use this HTML to text to get that. 
 03:18 You could even let your users decide OK, 
-03:21 I want to receive text messages or I want to receive html messages 
+03:21 I want to receive text messages or I want to receive HTML messages 
 03:24 and then you could just only set one or the other in the body in your mail message. 

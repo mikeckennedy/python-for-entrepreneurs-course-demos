@@ -28,7 +28,7 @@
 01:16 This brings up the editor where you can modify the file 
 01:23 and also preview he changes, I'll just make a small edit, 
 01:26 I'll say view all topics on the table of contents page, copy and paste URL, 
-01:35 and then it is on table of contents, html. 
+01:35 and then it is on table of contents, HTML. 
 01:42 Alright, let's say that is the change that I want to make, 
 01:45 and then we can commit the changes, they should look familiar, 
 01:47 this is the same as using the git add and git commit command 

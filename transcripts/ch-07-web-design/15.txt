@@ -1,5 +1,5 @@
  0:02 Let's return to our design web app. 
-0:04 Here we have a very basic set of html, we have a top div 
+0:04 Here we have a very basic set of HTML, we have a top div 
 0:08 and within we have two things, we have this is a message 
 0:10 and we have some dunecat picture whatever that looks like. 
 0:14 And then we have a paragraph, 
@@ -31,7 +31,7 @@
 1:41 and the main content is wrapping around it, OK that's bizzare, 
 1:44 why is it not like at least lined up with this vertically, 
 1:48 we wanted to go to the right of that thing. 
-1:51 Well, in html, the way it works, the thing you would like to float- let me rephrase, 
+1:51 Well, in HTML, the way it works, the thing you would like to float- let me rephrase, 
 1:58 the thing you want to wrap around it goes after the thing that is floating. 
 2:02 So in order to get that to work right, we've got to say the things that floats first
 2:06 and then the various pieces that go around it, 
@@ -43,7 +43,7 @@
 2:25 we need to tell basically the browser that this stuff is all suppose to wrap around it
 2:30 but everything after that, is not, it's suppose to go back to normal layout, 
 2:34 so there is a anti float if you will, that we can set here, 
-2:38 and we can put more or less any html item here but a div is like zero height 
+2:38 and we can put more or less any HTML item here but a div is like zero height 
 2:43 if it has no content, so this is decent, 
 2:45 and the way you stop this floating is you say OK, 
 2:49 here is the end of the stuff that wraps, 

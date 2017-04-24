@@ -61,13 +61,13 @@
 03:18 that this one file is not yet staged to be committed, 
 03:21 however, I don't want to just commit this one file 
 03:24 I also want to regenerate the site 
-03:26 so that new html files are created from the markdown. 
+03:26 so that new HTML files are created from the markdown. 
 03:29 In order to regenerate the site I add a shortcut command, 
 03:32 I just type m and it runs a make file which handles everything for me. 
 03:35 And now there should be three files that are modified. 
-03:39 The html file that gets generated and then the original markdown source file, 
+03:39 The HTML file that gets generated and then the original markdown source file, 
 03:43 now, we can add these three files, I am going to change into the root directory
-03:47 where all and change log.html are located 
+03:47 where all and change log.HTML are located 
 03:51 and then I'll run the git add command with period, 
 03:53 period means add any files in the current directory or subdirectories 
 03:56 for a git repository, there is one flag you should know about, 

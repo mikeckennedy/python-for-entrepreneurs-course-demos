@@ -7,7 +7,7 @@
 00:22 you'll see it already is going to look quite a bit better. 
 00:24 So it will look like this. 
 00:26 Now, the title slightly changed but other than that it's identical, 
-00:29 other than just including the Bootstrap css, 
+00:29 other than just including the Bootstrap CSS, 
 00:32 but notice how much more pleasant it is to look at. 
 00:35 How much nicer the words are in terms of reading. 
 00:39 The line height changed just a little bit, the fonts and spacing,
@@ -52,10 +52,10 @@
 03:07 take your pick there, something that can auto update and manage that for us. 
 03:10 So let me just click on getting started, and it talks about how you download,
 03:14 I talked about you can just download the Bootstrap source, 
-03:17 it comes with Saas, so kind of a higher level than css design language there, 
+03:17 it comes with Saas, so kind of a higher level than CSS design language there, 
 03:22 you can use the CDN, that's what you get from the startup projects in Pyramid 
 03:26 or you can install with Bower, just bower install bootstrap 
-03:29 or maybe a better option is to use bootstrap-css 
+03:29 or maybe a better option is to use bootstrap-CSS 
 03:34 and that will give you a smaller version. 
 03:37 You could also install with npm if you don't want to use Bower. 
 03:40 Let's look at a few examples. 
@@ -76,24 +76,24 @@
 04:34 cool progress bars, and so on. 
 04:37 So next, let's go back to the Bootstrap site, 
 04:41 they could work on their layout there a little bit couldn't they? 
-04:44 Let's look at css, the design elements you have to work with 
-04:47 are broken into a couple of categories, you've got css, 
-04:50 which are the core css elements, 
+04:44 Let's look at CSS, the design elements you have to work with 
+04:47 are broken into a couple of categories, you've got CSS, 
+04:50 which are the core CSS elements, 
 04:52 and you've got components and then things that require Javascript to work, 
 04:56 so that goes at the end, these are broken up into different pieces, 
 05:00 and we can check them out. 
 05:03 So there is a couple of things to notice over here, 
 05:05 that Bootstrap is HTML 5 friendly, it's mobile first I talked about topography, 
-05:09 I haven't talked about normalize, css but normalize is really important. 
+05:09 I haven't talked about normalize, CSS but normalize is really important. 
 05:13 One of the pains of web design is 
-05:17 when on different browsers the same HTML css looks different, 
+05:17 when on different browsers the same HTML CSS looks different, 
 05:22 and often that difference arises from the browser having no explicit style for a thing 
 05:27 and then making their assumption about how that should look 
 05:31 and if say Firefox has a different assumption about how H1 should look 
 05:35 compared to say Chrome, then that's going to look a little bit different. 
 05:39 Normalize explicitly sets every single possible style 
 05:42 so those types of challenges basically don't exist. 
-05:46 So when you include Bootstrap you get one of these reset or normalization css files 
+05:46 So when you include Bootstrap you get one of these reset or normalization CSS files 
 05:51 which is great, we are going to talk about the grid system 
 05:54 and how you can use that to achieve tabular type layout that is also responsive, 
 06:00 it's not just tables jammed in there, we talked about topography, 
@@ -142,7 +142,7 @@
 08:26 or Scrollspies also, super cool. 
 08:29 Let's look at Modal real quick; so if we had some kind of link, 
 08:33 we are going to click and have something that looks like this come up, 
-08:36 and put whatever html in the middle we like that's great, 
+08:36 and put whatever HTML in the middle we like that's great, 
 08:39 of course we can style it here 
 08:41 we can launch a Modal dialogue and it kind of pops in, 
 08:43 and whatever you want to put in here you can have 
