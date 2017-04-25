@@ -53,7 +53,7 @@
 3:30 except for one dime ever, like that would be ideal if it never ever downloaded it again,
 3:35 because that means when people visit your site or more importantly 
 3:39 when they got o like the second page it's instantly got all the images,
-3:43 all the CSS, all the Javascript, and it doesn't ever go back to your site, pull that in. 
+3:43 all the CSS, all the JavaScript, and it doesn't ever go back to your site, pull that in. 
 3:47 So we want to aggressively cache things 
 3:51 but you can see there is this problems it introduces,
 3:54 now, I said you don't run into that problem as much, 
@@ -62,11 +62,11 @@
 4:03 sorry it was still black, but is I force refresh it it goes to white. 
 4:06 Now notice, over here that I am running the production version, 
 4:10 let me check out the run configurations I've made, 
-4:13 one of them is running production.any and the other one is running development.any,
+4:13 one of them is running production.ini and the other one is running development.ini,
 4:18 so normally, you are going to be running development and when you do that locally, 
 4:22 you are going to most of the time not run into this caching problem, 
 4:27 you are still going to run into it and like I said, 
-4:29 it's worse around Javascript but it's not as bad. 
+4:29 it's worse around JavaScript but it's not as bad. 
 4:32 But in production, it's going to be a problem for your users, 
 4:35 and so we might as well solve it now at the beginning, 
 4:38 and we won't run into it ever in development and our users won't either. 

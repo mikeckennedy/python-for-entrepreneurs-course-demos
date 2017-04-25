@@ -4,7 +4,7 @@
 00:19 Now, here I just typed it in, and we saw that we use the file, 
 00:23 if we were going to trigger file logging and if there was nothing we just logged standard out.
 00:28 Now, in practice this probably as we did goes into your 
-00:32 development.any and your production. any, but where you get it from it doesn't matter, 
+00:32 development.ini and your production.ini, but where you get it from it doesn't matter, 
 00:36 we set the filename and we set the level, and then if we have a filename, 
 00:40 we must want to log to it but if we don't we'll say 
 00:43 stream handler standard out we set the level. 

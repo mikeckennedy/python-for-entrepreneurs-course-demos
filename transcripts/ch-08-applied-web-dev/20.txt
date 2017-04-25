@@ -41,7 +41,7 @@
 02:17 so up here, right at the end let's say right there, 
 02:21 after our theme CSS and site CSS we can have additional CSS
 02:27 and down at the end, we can come down here 
-02:31 and after all of our Javascript gets imported we could have additional js. 
+02:31 and after all of our JavaScript gets imported we could have additional js. 
 02:34 And these are three places that the pages like index 
 02:38 and about can optionally insert their data, 
 02:42 so this defines the layout, shared template. 

@@ -7,7 +7,7 @@
 00:26 that you put on your page if you take some of the form code I think, 
 00:29 but the API key you want to make this is not shared so be careful with it. 
 00:34 Here you saw we put it into our project any file, 
-00:37 we have the development.any and the production.any 
+00:37 we have the development.ini and the production.ini 
 00:40 and then we're going to use the config.get_settings to pull that out by key 
 00:44 so here config.get_settings gets that settings dictionary right there 
 00:48 and then we just get the value from the dictionary,

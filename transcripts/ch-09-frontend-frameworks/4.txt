@@ -20,8 +20,8 @@
 01:00 and not the one from web design or web starters and so on.
 01:03 And if we look in here, you can see in the static folder, 
 01:05 we have the CSS that we write, the images that we create, 
-01:08 the Javascript that we are going to write, and we have Bower components, 
-01:12 and in here, we've got Bootstrap CSS, JQuery, we also have Font Awesome, 
+01:08 the JavaScript that we are going to write, and we have Bower components, 
+01:12 and in here, we've got Bootstrap CSS, jQuery, we also have Font Awesome, 
 01:16 which is really great, we are going to be making good use of that,
 01:19 we've got HTML 5shiv and respond for the older internet explorer 
 01:22 and non responsive or non HTML 5 browsers, so we don't use that very often. 

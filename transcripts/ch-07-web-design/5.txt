@@ -21,10 +21,10 @@
 1:07 I want you to wear two hats when you think about this problem- 
 1:09 on one hand, it's annoying for you as a developer constantly changing your site 
 1:14 that these styles don't change and adapt with you, 
-1:17 this is true for images this is true for Javascript and it’s also true for style sheets.
-1:22 I suspect it's probably the worst for Javascript because there is no visual confirmation 
+1:17 this is true for images this is true for JavaScript and it’s also true for style sheets.
+1:22 I suspect it's probably the worst for JavaScript because there is no visual confirmation 
 1:27 that something is happening or changing 
-1:30 or you have the fresh version when you are working with Javascript, 
+1:30 or you have the fresh version when you are working with JavaScript, 
 1:33 but you have the problem across all these static resources. 
 1:36 Now, there are ways that you can tweak your browser 
 1:38 say if you turn on the developer tools and say while I'm in developer tool mode 

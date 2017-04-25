@@ -45,19 +45,19 @@
 2:20 and we can say you know what, what if I just want the width of this image 
 2:24 or what it would look like if it's a 150 pixels. 
 2:26 And you can just set it and tweak it here. So this is really cool for the design.
-2:29 We also have a console which is basically just a Javascript console 
+2:29 We also have a console which is basically just a JavaScript console 
 2:33 and so you can do anything that you would normally do, 
 2:35 like if I want to find all the images, on the page, I can give it the CSS selector, 
 2:39 and you can see it came back with five images, 
 2:42 we could even do a little function on it, 
 2:45 we could log out what we have in on images, 
 2:48 to run this, you can see actually those are all the images on the page, 
-2:50 whatever Javascript you want to run, you can do this here.
+2:50 whatever JavaScript you want to run, you can do this here.
 2:53 This is also important for showing you errors 
-2:55 like if there is a Javascript error on the page or if there is like a 404 or 500 
+2:55 like if there is a JavaScript error on the page or if there is like a 404 or 500 
 2:59 you'll often see them show up down here as well; all right, so this is cool. 
 3:02 And like here you can see the various things we have it turned on for, right, 
-3:07 we could show errors and warnings for Javascript or less, yeah. 
+3:07 we could show errors and warnings for JavaScript or less, yeah. 
 3:10 Pretty remarkable that actually the print in the console still lets you go back 
 3:14 and select these in the dom, I haven't realized that before, this is pretty amazing. 
 3:19 Ok, we can go to the style editor and do some styles here 
@@ -74,10 +74,10 @@
 3:52 but I'm on the West Coast so like the ping time is a 100 milliseconds, 
 3:55 just to get there, so this is pretty good response time, 
 3:58 we can come down here and view like a particular page, 140 milliseconds. 
-4:02 We can also see things about the CSS, and we can see things about Javascript, 
+4:02 We can also see things about the CSS, and we can see things about JavaScript, 
 4:06 we can see things about images. 
 4:08 One thing to notice, we talked about the cashing and cache busting, 
-4:11 so notice this here bootstrap min that's a cache id, font awesome cache id, 
+4:11 so notice this here bootstrap min that's a cache id, Font Awesome cache id, 
 4:15 all these things, here notice, out of the cache, out of the cache, 
 4:20 so there is quite a few requests going back to this page, 
 4:23 get me these images, get me these style sheets, get me these fonts, 

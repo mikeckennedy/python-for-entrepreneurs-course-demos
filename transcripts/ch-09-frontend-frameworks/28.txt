@@ -40,14 +40,14 @@
 02:20 so these are not actually images at all, like see this email, let's go find that email.
 02:25 Alright, so up here a little bit there is an email, 
 02:28 there is mail to contact to talkpython.fm and this is what appears to be the image, 
-02:34 in fact, this is awesome, this is font awesome, so font awesome,
+02:34 in fact, this is awesome, this is Font Awesome, so Font Awesome,
 02:39 remember, we installed that up here in the bower components, 
 02:43 it has fonts that act as images, and why is that important or cool? 
 02:50 Well, if you've got a normal image, the image has a color 
 02:54 and if you make the image a different size than it's meant to be, 
 02:57 it gets real grainy or fuzzy or weird patterns up here and things like that. 
 03:01 With fonts, you can infinitely scale them and you can color them with CSS. 
-03:06 If you go over here and just search for font awesome, 
+03:06 If you go over here and just search for Font Awesome, 
 03:10 you can see first thing that comes up fontawesome.io 
 03:14 and they are actually running a kickstarter that is insanely successful, 
 03:17 like insanely successful, they are almost to a million dollars, unbelievable. 
@@ -57,13 +57,13 @@
 03:32 I am looking for stuff to do with Facebook, and then there is all the icons, 
 03:36 like I could get any one of these, let's suppose Facebook square is what I want, 
 03:40 then, it says alright, this is cool all you've got to do is include that 
-03:44 plus the font awesome CSS and then you style it to be whatever color you want, 
+03:44 plus the Font Awesome CSS and then you style it to be whatever color you want, 
 03:48 you want the Facebook blue, just set a CSS style for this thing, and it will be that color. 
 03:53 So I did that for all of the little social bits like for the email, here is one for GitHub,
 03:58 here is one for some video file, here is one for YouTube and so on, 
 04:03 so if you look at the bottom of our file here, you can see all of those little things, 
 04:07 the YouTube looks a little funky because it's so squished. 
-04:10 I really like this, I find this font awesome, little fonts or icons to be really helpful 
+04:10 I really like this, I find this Font Awesome, little fonts or icons to be really helpful 
 04:14 because you can continue to style them, 
 04:17 you don't have to keep building new images,
 04:20 so make sure you look there first, 

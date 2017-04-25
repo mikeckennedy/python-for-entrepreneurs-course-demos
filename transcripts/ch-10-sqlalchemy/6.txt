@@ -54,7 +54,7 @@
 03:18 this information here that's coming along here, 
 03:22 we probably want to pass that in the configuration file, 
 03:26 maybe we want something different for production, 
-03:28 so from the production.any to development.any. 
+03:28 so from the production.ini to development.ini. 
 03:32 So we'll come back and deal with that in a little bit, but,
 03:35 let's go and run this and see what happens, we are going to call, 
 03:38 when we say run it's going to fire main, it's going to call init db, 

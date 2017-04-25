@@ -79,7 +79,7 @@
 04:44 Let's look at CSS, the design elements you have to work with 
 04:47 are broken into a couple of categories, you've got CSS, 
 04:50 which are the core CSS elements, 
-04:52 and you've got components and then things that require Javascript to work, 
+04:52 and you've got components and then things that require JavaScript to work, 
 04:56 so that goes at the end, these are broken up into different pieces, 
 05:00 and we can check them out. 
 05:03 So there is a couple of things to notice over here, 
@@ -126,8 +126,8 @@
 07:28 So you can sort of style these icons better if they are fonts than if they are fixed images. 
 07:32 The most important take from this section we are going to work with is navigation, 
 07:35 so you'll see little warnings as well like 
-07:39 warning, this requires the Javascript to be available 
-07:42 which requires JQuery and the Javascript file for Bootstrap. 
+07:39 warning, this requires the JavaScript to be available 
+07:42 which requires jQuery and the JavaScript file for Bootstrap. 
 07:45 So you can have little tabs, like this, these are nice, 
 07:48 or you can have these things called Pills, over here,
 07:51 or more likely, what we are interested in is the nav bar, 
@@ -137,7 +137,7 @@
 08:06 we have forms, like search boxes, all kinds of stuff. 
 08:09 And we can even change this to be a dark version or a light version, 
 08:13 depending on whether we put the nav inverse or nav default. 
-08:20 Last over in the Javascript area you'll find some cool things as well, 
+08:20 Last over in the JavaScript area you'll find some cool things as well, 
 08:23 for example, Modal dialogues are really great 
 08:26 or Scrollspies also, super cool. 
 08:29 Let's look at Modal real quick; so if we had some kind of link, 

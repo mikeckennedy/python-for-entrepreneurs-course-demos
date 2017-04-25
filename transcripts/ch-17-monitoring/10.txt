@@ -6,7 +6,7 @@
 00:19 and that's it, I just click that button and boom, it was done, 
 00:22 so you can see I did this from the demos repository, 
 00:26 I'll probably end up changing these codes over time, 
-00:29 but if we were going to do Javascript like AngularJs, JQuery type stuff, 
+00:29 but if we were going to do JavaScript like AngularJs, jQuery type stuff, 
 00:34 and catch client side errors you can use this code 
 00:38 and we are going to do mostly server side error tracking this is going to be 
 00:42 for our Python app so we are going to want to use this code. 
@@ -16,7 +16,7 @@
 00:57 how to handle error messages and things like that, 
 01:01 we'll go down to the configuration reference, 
 01:08 actually click on code brace integrations, Python and then we have Pyramid. 
-01:12 So it says in your any file production.any or whatever, 
+01:12 So it says in your any file production.ini or whatever, 
 01:17 you are going to add this to the Rollbar includes, you can do it here in the includes, 
 01:22 I actually like to have that in code so let's go over and do that in code here, 
 01:27 so in our dunder init, come up to the top there is an init includes, 
@@ -64,7 +64,7 @@
 04:57 Alright, so it looks like it's working, one thing I just want to double check 
 05:00 before we get going is notice it says environemt=production, 
 05:03 let's change that to dev, first of all,
-05:05 let's take that away from it, let's move this stuff over into the production.any, 
+05:05 let's take that away from it, let's move this stuff over into the production.ini, 
 05:10 
 05:15 what else do we need to check, check this little top bit here, 
 05:21 and we have the filter I believe at the bottom. Fantastic.
@@ -114,7 +114,7 @@
 08:36 people know there is no person, we didn't integrate the people API 
 08:40 there these are the browsers, it loos like Firefox is causing us, 
 08:44 Firefox 50 is causing us a lot of problems, 
-08:46 obviously this is both more important in the Javascript reporting 
+08:46 obviously this is both more important in the JavaScript reporting 
 08:51 as well as in real life. 
 08:53 Okay, we have IP addresses, this is the one, is there expected deploy, no,
 08:59 see if it click over here what do we get here is exception, you get all the information. 

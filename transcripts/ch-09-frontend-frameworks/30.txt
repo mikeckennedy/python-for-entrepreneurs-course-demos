@@ -19,7 +19,7 @@
 01:12 and you don't have to do this, this is like the work a computer can do. 
 01:16 What we can do is we can actually tell our view hey, 
 01:19 I would like you to just manage this for me, so how do we do that? 
-01:23 Probably, you could also do some kind of cool alternating CSS JQuery thing, 
+01:23 Probably, you could also do some kind of cool alternating CSS jQuery thing, 
 01:27 but we are just going to do it straight up in Python. 
 01:30 So remember our view, or our controller is over here. 
 01:34 We want to give this view some capability, remember when the page is rendered, 
@@ -94,7 +94,7 @@
 06:24 then it's easy to do in a set of Chameleon templates. 
 06:28 So this technique is usable for alternating rows like I said, 
 06:31 there is like some CSS and other things you can do, 
-06:34 some Javascript to pull that off, that's not a huge deal, 
+06:34 some JavaScript to pull that off, that's not a huge deal, 
 06:37 but this technique is much more broadly applicable than just for alternating rows 
 06:43 so I wanted to make sure to show it to you, and of course, 
 06:46 this is how it works on my website. 

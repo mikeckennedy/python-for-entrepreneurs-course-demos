@@ -42,7 +42,7 @@
 2:28 of course, we are saving that for a little bit later, but just to look ahead,
 2:31 it's going to start right there.
 2:34 If for some reason you really don't want to use PyCharm,
-2:37 Sublime Text is a great option, it has support for Python, Javascript, CSS,
+2:37 Sublime Text is a great option, it has support for Python, JavaScript, CSS,
 2:43 not as good as PyCharm but still, not bad.
 2:46 Another good recommendation is Atom,
 2:49 if you want the more lightweight text editor, so you can download that,

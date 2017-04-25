@@ -11,7 +11,7 @@
 0:31 which will happen automatically.
 0:34 Pyramid comes with scaffolding, and what that means is 
 0:36 there is a lot of moving parts to the website, you've got your CSS, 
-0:40 your Javascript, your static folders, your views, it has unit tests, 
+0:40 your JavaScript, your static folders, your views, it has unit tests, 
 0:45 it itself is a Python package, so it has some files associated with that 
 0:49 and while you can of course create all these yourself, 
 0:52 it's completely non-productive 

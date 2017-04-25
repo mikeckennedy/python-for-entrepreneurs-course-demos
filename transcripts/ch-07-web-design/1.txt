@@ -51,18 +51,18 @@
 3:01 while stuff floats around it and stuff like that. 
 3:03 When things don't go perfect, you'll want to use the browser developer tools, 
 3:07 so we'll talk briefly about the browser developer tools with how they relate to CSS. 
-3:12 Think of this whole chapter as a pre cursor to the front end frameworks, 
+3:12 Think of this whole chapter as a pre cursor to the front-end frameworks, 
 3:16 so that when we get there you'll be comfortable and confident with working with them. 
 3:20 Ok, so I want to tell you you can learn enough web design. 
 3:24 Even if thing on the right here totally scares you, we are not starting from here,
 3:27 that's what it looked like in 1996, but thankfully, it's not 1996, it's 2016, at least at the
 3:35 recording of this video, so today we have things like 
-3:37 front end frameworks, bootstrap ui kit, we have font sets 
-3:41 including all the topography and settings that come with the front end frameworks 
-3:44 but also things like font awesome
+3:37 front-end frameworks, bootstrap ui kit, we have font sets 
+3:41 including all the topography and settings that come with the front-end frameworks 
+3:44 but also things like Font Awesome
 3:47 which is basically that you bring in hundreds of different types of little graphics 
 3:50 that you can use and style into your site perfectly. 
-3:53 There is theme aggregators that take the various front end themes 
+3:53 There is theme aggregators that take the various front-end themes 
 3:57 and then create a whole bunch of different styles on those 
 4:00 and then you can go pick one, download it and stick into your site; 
 4:03 and we have graphic arts on demand. 

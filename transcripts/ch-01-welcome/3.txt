@@ -31,7 +31,7 @@
 1:37 that you can build something that is functional and - not terrible - let's say,
 1:41 and if you're great at design you could probably do way better than that,
 1:44 but we'll get you started so that you are at least comfortable with HTML and CSS
-1:47 and some of the front end frameworks,
+1:47 and some of the front-end frameworks,
 1:49 we are going to use Bootstrap but there are a couple of options there.
 1:52 So, these are the technologies involved in building your web application.
 1:55 And while you are building it,
@@ -40,7 +40,7 @@
 2:03 our enhanced editor that will let us do all kinds of things,
 2:06 we can create a Pyramid web app with it,
 2:08 we can of course edit the Python code access and manage our database,
-2:12 work with Javascript and CSS and HTML,
+2:12 work with JavaScript and CSS and HTML,
 2:15 it's a great all-around editor for what we are trying to do.
 2:18 We are going to use git and GitHub to manage our code,
 2:21 make sure that it's safe and sound,

@@ -7,14 +7,14 @@
 0:24 Let's look at a few of the use cases. 
 0:26 The Onion, the hilarious fake news organization, 
 0:30 their web application is built in Python
-0:33 Spotify is also using Python for their web front end
+0:33 Spotify is also using Python for their web front-end
 0:36 NASA - rockets and spaceships and all sorts of amazing stuff, they are using Python
 0:41 bitly, the short link app, is built with Python.
 0:44 Bitbucket, Atlassian’s competitor to GitHub is built with Python, that's very nice
 0:50 Survey Monkey, they use Python all over the place
 0:53 Quora, the best general Q&A spot on the internet, 
 0:57 they are passionate, passionate users of Python, 
-1:00 not only do they use Python for most of their app and their web front end, 
+1:00 not only do they use Python for most of their app and their web front-end, 
 1:04 you'll see them right frequently looking inside their engineering organization 
 1:08 talking about the challenges and how they solve them in Python and so on. 
 1:11 Disqus, one of the most popular comment add-ins for your web site

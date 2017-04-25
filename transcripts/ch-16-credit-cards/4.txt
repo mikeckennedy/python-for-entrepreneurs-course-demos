@@ -4,16 +4,16 @@
 00:10 So I did a little bit of pre-work to get the web app ready 
 00:13 for all this integration that we are going to do. 
 00:16 First of all, notice, I've created a Stripe checkout settings, 
-00:19 in our various configuration files, the development.any and production.any. 
+00:19 in our various configuration files, the development.ini and production.ini. 
 00:24 Now, when you create your Stripe account you are going to see 
 00:27 we have a public key and a private key. 
-00:30 The public key actually goes into your webpage, in that Javascript form. 
+00:30 The public key actually goes into your webpage, in that JavaScript form. 
 00:34 Your private key is what you use to finalize the token, 
 00:37 public key can be public, as you imagine. 
 00:40 Private keys should never be public. You want to protect those. 
 00:43 Also, you have two types of  keys, you have a public test key,
 00:47 you have a test key set of keys and you have a live set of keys. 
-00:52 So, you want to make sure that the development.any has the test keys, 
+00:52 So, you want to make sure that the development.ini has the test keys, 
 00:57 for most of the time, maybe one time you want to switch it to live 
 01:00 and do a purchase on your own credit card, 
 01:03 but the majority of the time you want this to be the test keys and then in production, 

@@ -1,9 +1,9 @@
 00:01 Here we are back in PyCharm. And this is our master layout page. 
 00:04 What we want to do is we want to bring in the common elements, files actually, 
 00:09 from that landing page theme that we were just working with. 
-00:13 So over here, we have our CSS, we are going to be using font awesome, 
-00:18 now, I believe I already installed Font awesome here, yes I did, using Bower 
-00:22 so I am not going to use their copy of font awesome, 
+00:13 So over here, we have our CSS, we are going to be using Font Awesome, 
+00:18 now, I believe I already installed Font Awesome here, yes I did, using Bower 
+00:22 so I am not going to use their copy of Font Awesome, 
 00:26 remember, Bower lets us track for updates and automatically update and things like that, 
 00:29 they have some fonts, this actually comes from Bootstrap itself, 
 00:33 so we are not going to need to do anything for that, we have some images, 
@@ -14,8 +14,8 @@
 00:47 as well as our home/ index.pt file, we'll take the common look and feel, 
 00:53 we'll put it in the master, we'll take the inner bits 
 00:56 that are just the landing page, we'll put that into index.pt. 
-01:00 And then of course we have the Javascript, 
-01:03 this Javascript is just the Bootstrap stuff as well. 
+01:00 And then of course we have the JavaScript, 
+01:03 this JavaScript is just the Bootstrap stuff as well. 
 01:06 So, let's just start deleting stuff until we get  it down to what we actually need, 
 01:10 so here is CSS, we don't need that, in fact all we need is this landing CSS 
 01:14 and this index.HTML, and the images. 
@@ -53,16 +53,16 @@
 03:14 and it's easiest just to link directly into them 
 03:18 and that's what this theme is doing, 
 03:21 I don't know where the fonts appear on this page but we are going to put this, 
-03:25 and you can see they're also doing the fonts from font awesome
+03:25 and you can see they're also doing the fonts from Font Awesome
 03:30 let's make sure those both get in here
-03:33 but we are going to have to of course change font awesome a little bit. 
+03:33 but we are going to have to of course change Font Awesome a little bit. 
 03:36 So we'll go over here like this, organize it, so we can keep track, 
-03:39 now we are not going to go to relative font awesome 
-03:42 in fact, we are going to go to /static/, this is easier, bower font awesome
+03:39 now we are not going to go to relative Font Awesome 
+03:42 in fact, we are going to go to /static/, this is easier, bower Font Awesome
 03:51 we'll just copy the path and then we'll have to fix it 
 03:54 because it's going to have my full path,
 03:57 we'll go back here and it's top the static that we're looking for, 
-04:00 alright, so there is our font awesome, 
+04:00 alright, so there is our Font Awesome, 
 04:03 and we've got the Google fonts here in https, 
 04:06 sometimes you'll see this written like that, 
 04:09 which means use whatever scheme to access the fonts that you have here 
@@ -104,14 +104,14 @@
 06:25 we are just going to start collapsing these little sections until we get to a section, 
 06:28 this one, we want to make sure we have the footer,
 06:31 at the end, so let's take this footer and bring it out, 
-06:34 and notice we have JQuery and Bootstrap, but I think we have that already,
+06:34 and notice we have jQuery and Bootstrap, but I think we have that already,
 06:38 so now we go down past our navigation, here is the main content, 
 06:41 the stuff we left in index.HTML it's going to go here but not in this page,
 06:45 it's going to go into index.pt. 
 06:48 Now, after that of course, we are going to have a footer. 
 06:51 A proper HTML 5 footer that is, and for now I am going to leave it 
 06:55 looking like things look here. 
-06:58 Okay, we have JQuery, we have Bootstrap, 
+06:58 Okay, we have jQuery, we have Bootstrap, 
 07:01 and we even have a spot for our additional stuff when we want it. 
 07:04 So I think things are okay, we are going to be missing a few images, 
 07:08 but we don't have any content yet. 

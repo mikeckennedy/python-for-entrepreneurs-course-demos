@@ -169,12 +169,12 @@
 09:32 that it's all compressed down together in a single line 
 09:34 or as close to a single line as possible 
 09:37 and it's been hand tuned to make sure it's as fast as possible
-09:40 and there is no Javascript outside of one addition here 
+09:40 and there is no JavaScript outside of one addition here 
 09:44 and that is just Google analytics, 
 09:46 so we do have a Google analytics snippet here 
 09:48 but it loads at the very end of when the page loads 
 09:51 because it's in the last element that appears right before the close of the body, 
-09:54 there is no other JQuery or React or Angular, nothing like that on this page, 
+09:54 there is no other jQuery or React or Angular, nothing like that on this page, 
 09:59 which means that it loads extremely fast and site speed is really important
 10:03 for appearing higher up in the search results. 
 10:06 So that is a quick overview with a couple of example pages, 

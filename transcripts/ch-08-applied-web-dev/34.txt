@@ -50,7 +50,7 @@
 02:59 So you can see with a little bit of required and a little bit of type  equals email,
 03:04 everything is good, you might wonder 
 03:06 hey should I just skip this whole service side validation thing 
-03:10 and put it all in here in a Javascript or HTML 5? 
+03:10 and put it all in here in a JavaScript or HTML 5? 
 03:13 No, it's super easy to take these things and just HTTP post them to the server, 
 03:18 as some sort of app or something like requests, 
 03:21 and entirely skip the whole client side validation 

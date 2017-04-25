@@ -29,7 +29,7 @@
 01:55 well, we come over here to say this is an image, and it is responsive. 
 02:00 That's all we have to do. 
 02:03 Because we are including Bootstrap it defines its class, image responsive, 
-02:06 and this does not use Javascript, it just uses CSS styles. 
+02:06 and this does not use JavaScript, it just uses CSS styles. 
 02:09 So now, if I refresh, you can see it fits into this area, 
 02:13 and as it gets bigger, it sort of fits the full screen. 
 02:17 Now, it's huge, because all that is on this page, is the image,

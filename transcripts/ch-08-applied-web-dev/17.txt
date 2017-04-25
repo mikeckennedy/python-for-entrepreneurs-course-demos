@@ -53,7 +53,7 @@
 03:39 how cool is that, alright, so things are looking pretty good over here, 
 03:42 we've got our data passed in, it's flowing down here, we're rendering it really well, 
 03:47 granted we are not going to do much styling yet, 
-03:50 I am going to wait until we get to the front end framework parts 
-03:53 before we really go all in on making this beautiful and what not. 
+03:50 I am going to wait until we get to the front-end framework parts 
+03:53 before we really go all in on making this beautiful and whatnot. 
 03:56 So let's consider this temporarily good enough. 
 

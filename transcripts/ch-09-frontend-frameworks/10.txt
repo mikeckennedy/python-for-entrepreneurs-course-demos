@@ -3,16 +3,16 @@
 00:07 So, we have the default navbar, there is actually a brand image,
 00:10 you can put all sorts of links and stuff in there, 
 00:15 now if we slow down here, let's see, 
-00:18 it requires Javascript so you'll see we're going to use this navbar collapse 
+00:18 it requires JavaScript so you'll see we're going to use this navbar collapse 
 00:21 that was that 'hamburger menu' thing, 
 00:23 in order for the 'hamburger menu' to expand, 
-00:25 we have to include the Bootstrap Javascript on pages that use this 
+00:25 we have to include the Bootstrap JavaScript on pages that use this 
 00:28 and this pretty much looks like all of your sites, 
 00:31 so if you are going this in the expanded version 
-00:34 you are going to need to use include the Bootstrap Javascript. 
+00:34 you are going to need to use include the Bootstrap JavaScript. 
 00:37 It's no big deal to do so, but it might be something not on your radar, 
-00:40 so make sure you do do that and that library requires JQuery 
-00:44 so JQuery needs to precede it in the include statements. 
+00:40 so make sure you do do that and that library requires jQuery 
+00:44 so jQuery needs to precede it in the include statements. 
 00:48 Okay, so you'll see this nav bars, there is a lot of moving pieces here 
 00:52 and I find it just so much easier to just copy this, 
 00:56 like here you can see this is the 'hamburger menu', 
@@ -41,7 +41,7 @@
 02:21 So, here I have copied into nav that HTML, just the standalone HTML file, 
 02:26 everything we need, let's start by looking at the head, 
 02:29 we are including Bootstrap, 337 happens to be the current one and like I said, 
-02:32 we are including the Bootstrap js file which depends upon JQuery 
+02:32 we are including the Bootstrap js file which depends upon jQuery 
 02:38 so we are including both those here. 
 02:40 Then we have the nav, remember nav is an html5 element
 02:44 and it tells the browsers and search engines this is the navigation for the site,

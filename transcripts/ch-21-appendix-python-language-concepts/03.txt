@@ -1,6 +1,6 @@
  0:01 One of the unique concepts in Python is to minimize the number of symbols 
 0:05 and control structures in the language. 
-0:08 For example, in C and C based languages like C# and Javascript 
+0:08 For example, in C and C based languages like C# and JavaScript 
 0:12 you have lots of curly braces, and variable declarations and so on,
 0:16 to define structures and blocks. 
 0:19 In Python, it's all about the white space, and indentation. 

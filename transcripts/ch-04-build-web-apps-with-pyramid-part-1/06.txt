@@ -57,7 +57,7 @@
 3:17 either your first time setting up 
 3:19 or when you go to deploy it somewhere or something like that. 
 3:22 So let me just try to run this, so we can say pserve 
-3:26 and give either the development.ini or prod.any, 
+3:26 and give either the development.ini or prod.ini, 
 3:31 either development or production configuration file. 
 3:33 When I run this, it's going to give me an error. 
 3:36 Waitress is not found, if I install waitress it will give another error, 

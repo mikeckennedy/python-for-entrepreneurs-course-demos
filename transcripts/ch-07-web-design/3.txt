@@ -6,6 +6,6 @@
 0:15 So this book I found very approachable 
 0:17 and I sort of went through it and learned a little bit each day and got better at it.
 0:21 I think you'll get a ton out of going through this section, web design foundations, 
-0:25 and then the front end frameworks we get to later, 
+0:25 and then the front-end frameworks we get to later, 
 0:28 but if you want further reading you want more detail and maybe even a reference, 
 0:31 well, "CSS The Missing Manual" definitely I think that's a good one. 

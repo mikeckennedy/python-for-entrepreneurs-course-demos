@@ -3,8 +3,8 @@
 0:07 and we'll continue to use through this whole section, 
 0:10 this whole chapter and let's fire it up.
 0:15 So, we have a special CSS selectors page and it's just a little HTML form 
-0:20 with a little bit of fancy Javascript that I created 
-0:23 and we are just going to use that Javascript to explore selectors. 
+0:20 with a little bit of fancy JavaScript that I created 
+0:23 and we are just going to use that JavaScript to explore selectors. 
 0:27 So notice there is an entry box up here we can out any arbitrary CSS selector, 
 0:31 and this little dialogue here gives us some tips on the things 
 0:36 that we can involve in our search, so we have a table, 
@@ -36,7 +36,7 @@
 2:20 Not super interesting, so let's undo that, 
 2:23 we could find all of the table rows if we just hit tr, 
 2:26 remember you can find and select any element with just the note name, 
-2:31 so here we are passing this into jquery and jquery uses CSS to find elements, 
+2:31 so here we are passing this into jQuery and jQuery uses CSS to find elements, 
 2:36 and then do whatever you are going to do with them, 
 2:38 but the idea id really what you would do is you would put this in your CSS style sheets 
 2:43 and then use it to target the styles of a thing. 

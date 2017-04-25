@@ -35,7 +35,7 @@
 02:00 and then you can do whatever stuff like grids and whatnot you want in there. 
 02:04 So here you can see all this stuff, very nice theme, and if you want to use this one, 
 02:08 you can actually see it's right here on GitHub you can go grab it. 
-02:11 Maybe you are not into some kind of startup with the splashy front end screen, 
+02:11 Maybe you are not into some kind of startup with the splashy front-end screen, 
 02:14 maybe you need like a dashboard type of thing, 
 02:17 so look, they have these really cool dashboards ones as well, 
 02:19 we can go over here and look at some charts, 

@@ -82,7 +82,7 @@
 4:43 There is another step here that I am skipping as well, in production, 
 4:46 you don't want to do this recomputing over and over and over again, 
 4:50 that would be not terribly expensive, but it would be inefficient,
-4:53 especially if you have lots of images lots of javascript, lots of CSS. 
+4:53 especially if you have lots of images lots of JavaScript, lots of CSS. 
 4:57 So what we do is we would store this hash in a dictionary, 
 5:01 and only computed if we haven't seen it already since our process started up. 
 5:06 There is a few more nuance bits around there so in the final app 
@@ -111,7 +111,7 @@
 6:33 so I want to do this and then we need to give it well that file here. 
 6:37 So let's do this, we just pass it like that, 
 6:41 it looks little ugly on this end but it saves so much trouble and it's totally worth it. 
-6:47 Now, I would do this to all the CSS and all the Javascript on this page, 
+6:47 Now, I would do this to all the CSS and all the JavaScript on this page, 
 6:51 but for now, let's just do it on these two.
 6:54 First of all, let's see that hey it still looks styled, this is a good sign, 
 6:58 and if we go and view source again, it's not there, 
