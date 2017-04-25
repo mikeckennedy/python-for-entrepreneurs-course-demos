@@ -1,0 +1,154 @@
+body {
+    color: #fafafa;
+    background-color: #000;
+}
+
+.main_content {
+    background-color: #222222;
+    line-height: 1.5em;
+    padding: 0px;
+}
+
+.nav {
+    background-color: black;
+    color: white;
+}
+
+.nav a {
+    color: white;
+    margin: 10px;
+}
+
+.nav a:visited, .nav a:active {
+    text-decoration: none;
+}
+
+.navbar-inverse {
+    background-color: #000;
+    border-color: #080808;
+}
+
+.account-nav {
+    float: right;
+}
+
+/* ********** ALBUM LIST ********* */
+.album-in-list{
+}
+
+.album-in-list ul {
+    margin-top:10px;
+}
+.album-in-list .album-title {
+    padding-top:10px;
+    margin-bottom: 5px;
+}
+
+.album-in-list img {
+    height: 150px;
+    float: left;
+    margin: 10px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.album-in-list .album-title {
+    font-size: 18px;
+}
+
+form.standard-form input{
+    color: black;
+}
+
+.standard-form input,
+.standard-form textarea
+{
+    width: 350px;
+}
+.standard-form textarea {
+    margin-left: 10px;
+}
+
+.standard-form input, .standard-form button {
+    margin: 10px;
+}
+
+.error-msg {
+    color: red;
+}
+
+.main_content {
+    margin-top: 51px;
+}
+
+.yellow-foreground {
+    color: #ffdb3d;
+}
+
+.blue-foreground {
+    color: #326aa5;
+}
+
+footer {
+    background-color: black;
+    padding: 40px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+footer {
+    color: #555;
+}
+
+footer .row {
+    padding: 0px;
+    padding-bottom: 1em;
+    margin: 0px;
+}
+
+footer a, footer .section-header {
+    color: #999;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer .mission {
+    text-align: left;
+}
+
+footer .social {
+    /*text-align: left;*/
+    line-height: 1.75em;
+}
+
+footer .social > div > a {
+    width: 75px;
+    text-align: left;
+    display: inline-block;
+}
+
+.large-content-text {
+    font-size: 18px;
+}
+
+.main-text,
+.large-content-text {
+    font-weight: 300;
+    line-height:1.75em;
+}
+
+.friends .twitter {
+    font-size: 36px;
+    margin-left: 100px;
+}
+.friends .large-content-text {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.account form {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}

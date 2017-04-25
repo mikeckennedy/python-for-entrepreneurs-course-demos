@@ -1,0 +1,19 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <h1>Albums</h1>
+        <div class="album-in-list" tal:repeat="a albums">
+            <img src="${a.image}" alt="">
+            <div class="album-title">${a.title}
+                <a href="#" tal:condition="a.has_preview">preview</a></div>
+            <div>
+                <ul>
+                    <li tal:repeat="t a.tracks">
+                            ${t.title}
+                    </li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</div>

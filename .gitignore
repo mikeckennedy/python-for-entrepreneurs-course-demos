@@ -11,7 +11,7 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
+# dist/
 downloads/
 eggs/
 .eggs/
@@ -23,6 +23,14 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# PyCharm
+.idea
+
+# macOS
+.DS_Store
+
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -64,12 +72,3 @@ misc.xml
 
 # Ansible temp files
 15-deployment/blue_yellow_app_deployment/deploy/deploy.retry
-.DS_Store
-1-intro-app/.idea
-10-sqlachemy/.idea
-11-mail_lists/blue_yellow_app_11/.idea
-9-bootstrap/blue_yellow_app_9/.idea
-12_user_accounts/blue_yellow_app_12/.idea
-17_logging_and_monitoring/blue_yellow_app_monitoring/.idea
-3-design-section/designable_web/.idea
-4-applied-web/blue_yellow_app/.idea

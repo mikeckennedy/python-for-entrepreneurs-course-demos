@@ -1,0 +1,10 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+        <h1>Home page</h1>
+        <div>The value from the controller is ${value}.</div>
+    </div>
+
+    <div metal:fill-slot="addtional_css">
+        <!-- Added by index.pt -->
+    </div>
+</div>

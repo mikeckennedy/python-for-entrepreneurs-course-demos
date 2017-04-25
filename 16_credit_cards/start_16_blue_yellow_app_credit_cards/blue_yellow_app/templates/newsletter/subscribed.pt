@@ -1,0 +1,26 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <div class="container friends">
+            <div class="row upcoming ">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Awesome, you're on the list!</h1>
+                    <div class="large-content-text">
+                        Thanks so much for signing up to be notified of
+                        upcoming events and albums.<br>
+                        Your email address is in good hands. We hate spam just as much as you do!<br>
+                        <br>
+                        If you haven't already, also follow us on twitter:<br>
+                        <br>
+                        <a href="https://twitter.com/talkpython" target="_blank"
+                           class="twitter"
+                        ><i class="fa fa-twitter"></i> @talkpython</a><br>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

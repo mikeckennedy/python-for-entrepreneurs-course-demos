@@ -1,0 +1,77 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+        <style>
+            .att-img {
+                width: 300px;
+            }
+            .att-p {
+                border-top: 1px solid gray;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+        </style>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Image credits</h1>
+                    <p>Thank you to all of the artists who made their work available
+                        via <a href="https://www.flickr.com/">flickr</a>.<br>
+                        <br>
+                        I have used the following images under the creative commons
+                        commercial license with attribution:<br>
+                        <a style="text-align: center; padding: 20px; display: block;"
+                                href="https://creativecommons.org/licenses/by-sa/2.0/"><img
+                                src="/static/img/cc-comm-attr.png" alt=""></a>
+                    </p>
+                    <p>
+                        The following list of images fulfills the attribution section
+                        of the license. Thank you to each artist / photographer.
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/albums/snake_album.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/torkildr/4226629784">Torkild Retvedt</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/albums/digital_album.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/qthomasbower/2694705552">qthomasbower</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/hero.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/rogerzmusic/13083141153">The Zender Agenda</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/event.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/vr/4061265439">Jason Kasper</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/book-us.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/photocindy/4946114680">Photo Cindy</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/members/drummer.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/59207552@N08/13226901474">James Mackintosh</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/members/guitarist.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/pete_m/15422233887/">Feast of Music</a><br>
+                        Alterations: cropped
+                    </p>
+                    <p class="att-p">
+                        <img src="/static/img/members/singer.jpg" class='att-img' alt=""><br>
+                        Photographer: <a href="https://www.flickr.com/photos/flo_and_me/3342612982">Vincent van der Heijden</a><br>
+                        Alterations: cropped
+                    </p>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
