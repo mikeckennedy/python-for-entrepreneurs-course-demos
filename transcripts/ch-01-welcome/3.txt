@@ -42,7 +42,7 @@
 2:08 we can of course edit the Python code access and manage our database,
 2:12 work with JavaScript and CSS and HTML,
 2:15 it's a great all-around editor for what we are trying to do.
-2:18 We are going to use git and GitHub to manage our code,
+2:18 We are going to use Git and GitHub to manage our code,
 2:21 make sure that it's safe and sound,
 2:23 we can always get back to a previous working version and most importantly,
 2:26 it will let us aggressively experiment

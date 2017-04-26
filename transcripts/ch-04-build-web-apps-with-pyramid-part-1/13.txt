@@ -14,7 +14,7 @@
 0:43 weeks, months, maybe even years, depending on what you are trying to do. 
 0:46 Then we get to the more dynamic content and these are called routes, 
 0:50 so what we are going to do is add some routes, we'll add four here, 
-0:54 the first one called home goes to just for slash, 
+0:54 the first one called home goes to just forward slash, 
 0:58 and notice, there is a name and then there is a URL pattern, 
 1:01 so the name has to be unique, among all the other routes, 
 1:05 and then the URL pattern can be just a simple static URL or it can be data-driven. 

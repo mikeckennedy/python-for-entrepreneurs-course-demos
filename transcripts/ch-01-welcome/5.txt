@@ -24,5 +24,5 @@
 1:07 here at this URL, you will be able to go and download
 1:09 everything you see us create throughout this class,
 1:12 so I recommend you go right now to
-1:14 GitHub.com/mikeckennedy/python-for-entrepreneurs-course-demos.
+1:14 github.com/mikeckennedy/python-for-entrepreneurs-course-demos.
 1:19 Maybe that's a little bit long, but go there and either star this or fork it or both.

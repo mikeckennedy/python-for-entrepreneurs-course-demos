@@ -21,7 +21,7 @@
 01:16 you'll need to get the verification code, punch that in and you should be verified, 
 01:21 well to give it access to some of our account, 
 01:23 including both public and private repositories, 
-01:27 and we'll have it generate an ssh key for us. 
+01:27 and we'll have it generate an SSH key for us. 
 01:30 Click copy to keyboard, awesome, so now it's listing all the repositories
 01:38 that we have got associated with our account, and this may take a few minutes, 
 01:42 once the list is populated, we can click on a specific repository, 
