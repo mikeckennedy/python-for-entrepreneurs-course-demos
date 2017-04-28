@@ -1,47 +1,47 @@
 00:01 GitHub makes it really easy to create a Git repositories through their user interface
-00:05 and that's what we'll take a look at in this video. 
-00:08 Log into your GitHub account, and bring up your profile page, 
-00:11 we're going to click the plus icon up at the top and say "new repository", 
-00:15 give your repository a name for the project that you're working on, 
-00:18 you can just call it "myproject" for now. 
-00:20 So give it the name that you want for yours. 
-00:22 Give it an optional description. "This is the code for my project." 
-00:28 and then here is a really important part, 
-00:30 you can make this repository either public or private, 
-00:33 one thing to note is that if you don't have an upgraded account for $7 a month, 
-00:37 you won't be able to create private repositories, 
-00:39 so if I click on this right now, it will ask me to upgrade my account. 
-00:43 For this video we'll just create a public repository 
-00:46 that will serve as an example for what we're creating, 
-00:50 there is a few other options down here, one is: "Do you want to initialize this repository 
-00:54 with the readme file?". This readme file is a description of what the project is 
-00:59 some installation instructions, really whatever you want to put in there 
+00:05 and that's what we'll take a look at in this video.
+00:08 Log into your GitHub account, and bring up your profile page,
+00:11 we're going to click the plus icon up at the top and say "new repository",
+00:15 give your repository a name for the project that you're working on,
+00:18 you can just call it "myproject" for now.
+00:20 So give it the name that you want for yours.
+00:22 Give it an optional description. "This is the code for my project."
+00:28 and then here is a really important part,
+00:30 you can make this repository either public or private,
+00:33 one thing to note is that if you don't have an upgraded account for $7 a month,
+00:37 you won't be able to create private repositories,
+00:39 so if I click on this right now, it will ask me to upgrade my account.
+00:43 For this video we'll just create a public repository
+00:46 that will serve as an example for what we're creating,
+00:50 there is a few other options down here, one is: "Do you want to initialize this repository
+00:54 with the readme file?". This readme file is a description of what the project is
+00:59 some installation instructions, really whatever you want to put in there
 01:02 that you think is going to be useful to the reader.
-01:04 And that reader might be you, say six months or a year down the road 
-01:08 if you start working on the project and set it aside, 
-01:10 every project should have a readme with some explicit instructions 
-01:13 for how to set it up and what the project's purpose is. 
-01:16 We'll click "initialize this repository with the readme", 
-01:19 and then there is two other parts here you can add .gitignore file 
-01:22 and this is going to specify the Git "hey, these are a bunch of files 
-01:25 that I don't want added to version controlling, don't track these files." 
-01:29 And these are set up for specific programming languages, 
-01:32 in this case we'll choose Python and we can add a license, 
-01:35 licenses are typically used for open source projects, and I use the MIT license, 
+01:04 And that reader might be you, say six months or a year down the road
+01:08 if you start working on the project and set it aside,
+01:10 every project should have a readme with some explicit instructions
+01:13 for how to set it up and what the project's purpose is.
+01:16 We'll click "initialize this repository with the readme",
+01:19 and then there is two other parts here you can add .gitignore file
+01:22 and this is going to specify the Git "hey, these are a bunch of files
+01:25 that I don't want added to version controlling, don't track these files."
+01:29 And these are set up for specific programming languages,
+01:32 in this case we'll choose Python and we can add a license,
+01:35 licenses are typically used for open source projects, and I use the MIT license,
 01:40 if you're just building your business,
-01:41 then chances are you won't have to worry about a license, 
-01:44 it's really for open source projects so that people understand 
-01:47 what the explicit responsibilities are when using the code that comes in that repository. 
-01:51 Once we've got all this set up, we can click "Create repository", awesome. 
-01:56 Now, we've got the files that we've specified, yes we wanted the gitignore, 
-02:00 we have a license, which is the MIT 
-02:06 and we have a readme file, which specifies that this is my project 
-02:11 and just the description, and then we can work on these files. 
-02:14 The next step would be to clone or download this project, 
-02:17 so we could just go over here and say "download a zip file" 
-02:19 and this will contain all of the files that are in this repository, 
-02:23 that can be really useful, but what we really want to do is work on this project 
-02:26 and that's where we are going to need to clone this repository. 
-02:29 This is the URL that we can use to clone the repository 
-02:31 which will give us all the files and the version history 
-02:34 for that Git repository locally on our system. 
+01:41 then chances are you won't have to worry about a license,
+01:44 it's really for open source projects so that people understand
+01:47 what the explicit responsibilities are when using the code that comes in that repository.
+01:51 Once we've got all this set up, we can click "Create repository", awesome.
+01:56 Now, we've got the files that we've specified, yes we wanted the gitignore,
+02:00 we have a license, which is the MIT
+02:06 and we have a readme file, which specifies that this is my project
+02:11 and just the description, and then we can work on these files.
+02:14 The next step would be to clone or download this project,
+02:17 so we could just go over here and say "download a zip file"
+02:19 and this will contain all of the files that are in this repository,
+02:23 that can be really useful, but what we really want to do is work on this project
+02:26 and that's where we are going to need to clone this repository.
+02:29 This is the URL that we can use to clone the repository
+02:31 which will give us all the files and the version history
+02:34 for that Git repository locally on our system.

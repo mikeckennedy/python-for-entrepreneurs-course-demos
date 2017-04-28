@@ -1,56 +1,55 @@
-00:01 In this video, we're going to use the ssh-keygen tool, 
-00:04 on Linux and Mac OS X, in order to generate our public and private SSH keys. 
-00:09 we've shifted over into the command line, 
-00:11 and we're going to use the ssh-keygen application. 
-00:15 But before we do that, I want to introduce the "man" command, 
-00:18 "man" is for manual, so if we type "man ssh-keygen", it will give us all the parameters 
-00:22 and some contextual information about using the ssh-keygen application, 
-00:27 if you are ever wondering which arguments you should be using with the command, 
-00:30 use the "man" command in order to take a look 
-00:35 at what that command is that you are going to be using. 
-00:37 Now, we can use the ssh-keygen command and we pass it two parameters, 
-00:41 the first is "-t", so we're specifying what type of key we want to create, 
-00:45 and pass an "rsa" for the RSA type, and we'll pass on the number of bits 
-00:49 that we want for our key, we'll say 2048, 
-00:52 now 2048 should be the default and most systems 
-00:54 but we want to manually specify that, just in case, 
+00:01 In this video, we're going to use the ssh-keygen tool,
+00:04 on Linux and Mac OS X, in order to generate our public and private SSH keys.
+00:09 we've shifted over into the command line,
+00:11 and we're going to use the ssh-keygen application.
+00:15 But before we do that, I want to introduce the "man" command,
+00:18 "man" is for manual, so if we type "man ssh-keygen", it will give us all the parameters
+00:22 and some contextual information about using the ssh-keygen application,
+00:27 if you are ever wondering which arguments you should be using with the command,
+00:30 use the "man" command in order to take a look
+00:35 at what that command is that you are going to be using.
+00:37 Now, we can use the ssh-keygen command and we pass it two parameters,
+00:41 the first is "-t", so we're specifying what type of key we want to create,
+00:45 and pass an "rsa" for the RSA type, and we'll pass on the number of bits
+00:49 that we want for our key, we'll say 2048,
+00:52 now 2048 should be the default and most systems
+00:54 but we want to manually specify that, just in case,
 00:56 by default on some systems is less than that,
 00:58 we want to make sure it's a strong key that is unbreakable by current technology.
-01:03 And when we press Enter, it's going to ask us: "Where do you want to save this key?" 
-01:06 You could save it under your default .ssh subdirectory, which is under home, 
-01:10 but we're going to specify right here, I typically like to take a look 
-01:13 at the files after they're generated, 
+01:03 And when we press Enter, it's going to ask us: "Where do you want to save this key?"
+01:06 You could save it under your default .ssh subdirectory, which is under home,
+01:10 but we're going to specify right here, I typically like to take a look
+01:13 at the files after they're generated,
 01:15 and we'll call it ./entrepreneurs, by specifying the period and forward slash,
-01:19 we are going to save it in the current directory. 
-01:20 This is up to you, if you want to use a passphrase, 
+01:19 we are going to save it in the current directory.
+01:20 This is up to you, if you want to use a passphrase,
 01:22 I typically use a pass phrase on most of my key pairs,
-01:27 it depends on whether I'm using them for automated deployments or not, 
-01:29 anything where I need to automate it I will typically not have a passphrase, 
+01:27 it depends on whether I'm using them for automated deployments or not,
+01:29 anything where I need to automate it I will typically not have a passphrase,
 01:33 but for my development keys I typically do have a passphrase,
-01:36 just in case that key somehow wherever did get lost. 
-01:39 So in this case, I won't put in a passphrase but typically I will 
-01:42 and it's going to be up to you whether you want to do that or not. 
-01:44 I would recommend for your development purposes have a passphrase 
-01:48 and then anything that you're doing with deployments, you don't need a passphrase. 
-01:51 Our key has been generated, and there is two files that are created here, 
-01:54 the first one is a .pub and a .pub file is a public key, 
-01:59 the one without .pub is our private key. 
-02:02 These are plain text files we can take a look at whichever one we want, 
-02:06 and it will actually show us the inside of the file, 
-02:08 when you want to upload a public key, you can just copy this bit of text 
-02:12 and then paste it where it needs to go. 
-02:14 The other key that's been generated is our private key, 
-02:16 now typically we would not want to share this private key with anyone, 
-02:19 you can think of this as the only key that unlocks what has been encrypted 
-02:25 with your public key, so let's take a look now, 
-02:28 I normally wouldn't show my own private key but we'll take a look 
-02:31 of what's inside the private key file. 
-02:33 "BEGIN RSA PRIVATE KEY", it has very long hash 
-02:35 and then it'll have the end of the private key, again, 
-02:38 don't share that with anybody, but now you have the two files 
-02:41 that you need and we can plug them into GitHub 
-02:43 or when we need them for other purposes later, 
-02:45 so save these files somewhere safe, never share your private key 
-02:49 and you can actually have your public key out wherever you want. 
-02:52 We have just generated our public and private keys using the ssh-keygen application. 
-
+01:36 just in case that key somehow wherever did get lost.
+01:39 So in this case, I won't put in a passphrase but typically I will
+01:42 and it's going to be up to you whether you want to do that or not.
+01:44 I would recommend for your development purposes have a passphrase
+01:48 and then anything that you're doing with deployments, you don't need a passphrase.
+01:51 Our key has been generated, and there is two files that are created here,
+01:54 the first one is a .pub and a .pub file is a public key,
+01:59 the one without .pub is our private key.
+02:02 These are plain text files we can take a look at whichever one we want,
+02:06 and it will actually show us the inside of the file,
+02:08 when you want to upload a public key, you can just copy this bit of text
+02:12 and then paste it where it needs to go.
+02:14 The other key that's been generated is our private key,
+02:16 now typically we would not want to share this private key with anyone,
+02:19 you can think of this as the only key that unlocks what has been encrypted
+02:25 with your public key, so let's take a look now,
+02:28 I normally wouldn't show my own private key but we'll take a look
+02:31 of what's inside the private key file.
+02:33 "BEGIN RSA PRIVATE KEY", it has very long hash
+02:35 and then it'll have the end of the private key, again,
+02:38 don't share that with anybody, but now you have the two files
+02:41 that you need and we can plug them into GitHub
+02:43 or when we need them for other purposes later,
+02:45 so save these files somewhere safe, never share your private key
+02:49 and you can actually have your public key out wherever you want.
+02:52 We have just generated our public and private keys using the ssh-keygen application.

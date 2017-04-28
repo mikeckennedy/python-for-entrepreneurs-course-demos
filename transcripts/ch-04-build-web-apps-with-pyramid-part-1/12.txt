@@ -1,46 +1,45 @@
- 0:01 Let's look at the views we get when we create a brand new app from the scaffold in Pyramid. 
-0:05 Now, this is not a very realistic one but it lets us point out the key elements 
-0:09 and we'll look at a more realistic one afterwards. 
-0:11 It all starts by importing the view_config decorator from pyramid.view 
-0:16 and here we can specify the route name as well as the template 
-0:19 that will be rendered from this view. 
-0:22 Next, we define a method, the method name doesn't have to correspond anything 
-0:26 in the view configuration or anything like this, 
-0:29 it just happens to be some kind of method that takes a request object, 
-0:33 it doesn't have to do anything with it but it does need to have the right structure 
-0:36 that is going to do some sort of processing, 
-0:38 here we just create a dictionary and pass some static data 
-0:41 so, we are going to create a model as a dictionary, this one has a project key in it, 
-0:46 we are going to pass it to mytemplate.pt, 
-0:48 this is a Chameleon template and somewhere it presumably is working 
-0:51 with the value of project so it will display web app somewhere. 
-0:56 Like I said, that previous view, not so realistic. 
-0:58 Let's look at maybe something more realistic here, so what this method is, 
-1:02 this is going to be a "reset your password" method 
-1:06 and note we've given it the route_name of reset_post, 
-1:10 you can see on the next line it's only accepting form posts. 
-1:13 If you do a straight request against this URL, it'll just say "I can't find this for you", 
-1:18 but if you do an HTTP post against it, 
-1:20 it will say I am actually in the process of resetting my password, 
-1:23 here is the form data, well it will be happy to process it. 
-1:26 Notice it also has a template 
-1:28 and the template name corresponds to the template method, 
-1:31 this is not required like I said but for sanity sake, I would recommend it. 
-1:36 So what does it look like to handle this request? 
-1:38 Well, it begins with going to our request it has a POST and a get dictionary 
-1:44 and we are going to go to the POST dictionary 
-1:46 and get the email that was submitted in the form. 
-1:49 next, we are going to go to our data layer and create a password reset request, 
-1:53 we'll pass over the email and presumably in here 
-1:55 we'll also check in if the email is empty, or doesn't exist 
-1:58 or it's just going to return an error and say "we cannot reset your password", 
-2:01 Notice the reset_password.pt view will be used to show the error 
-2:05 and presumably that's the same as the get version that they filled out the form to say 
-2:10 I need to reset my password and here is my email. 
-2:12 If everything goes OK, we'll do something like 
-2:14 send them an email saying "here is the link" 
-2:17 and then finally we'll send them back a message that says 
+0:01 Let's look at the views we get when we create a brand new app from the scaffold in Pyramid.
+0:05 Now, this is not a very realistic one but it lets us point out the key elements
+0:09 and we'll look at a more realistic one afterwards.
+0:11 It all starts by importing the view_config decorator from pyramid.view
+0:16 and here we can specify the route name as well as the template
+0:19 that will be rendered from this view.
+0:22 Next, we define a method, the method name doesn't have to correspond anything
+0:26 in the view configuration or anything like this,
+0:29 it just happens to be some kind of method that takes a request object,
+0:33 it doesn't have to do anything with it but it does need to have the right structure
+0:36 that is going to do some sort of processing,
+0:38 here we just create a dictionary and pass some static data
+0:41 so, we are going to create a model as a dictionary, this one has a project key in it,
+0:46 we are going to pass it to mytemplate.pt,
+0:48 this is a Chameleon template and somewhere it presumably is working
+0:51 with the value of project so it will display web app somewhere.
+0:56 Like I said, that previous view, not so realistic.
+0:58 Let's look at maybe something more realistic here, so what this method is,
+1:02 this is going to be a "reset your password" method
+1:06 and note we've given it the route_name of reset_post,
+1:10 you can see on the next line it's only accepting form posts.
+1:13 If you do a straight request against this URL, it'll just say "I can't find this for you",
+1:18 but if you do an HTTP post against it,
+1:20 it will say I am actually in the process of resetting my password,
+1:23 here is the form data, well it will be happy to process it.
+1:26 Notice it also has a template
+1:28 and the template name corresponds to the template method,
+1:31 this is not required like I said but for sanity sake, I would recommend it.
+1:36 So what does it look like to handle this request?
+1:38 Well, it begins with going to our request it has a POST and a get dictionary
+1:44 and we are going to go to the POST dictionary
+1:46 and get the email that was submitted in the form.
+1:49 next, we are going to go to our data layer and create a password reset request,
+1:53 we'll pass over the email and presumably in here
+1:55 we'll also check in if the email is empty, or doesn't exist
+1:58 or it's just going to return an error and say "we cannot reset your password",
+2:01 Notice the reset_password.pt view will be used to show the error
+2:05 and presumably that's the same as the get version that they filled out the form to say
+2:10 I need to reset my password and here is my email.
+2:12 If everything goes OK, we'll do something like
+2:14 send them an email saying "here is the link"
+2:17 and then finally we'll send them back a message that says
 2:20 "check your email for the reset code."
-2:22 This is what a realistic view looks like in Pyramid 
-2:25 and you will write probably hundreds of them, building your application. 
-
+2:22 This is what a realistic view looks like in Pyramid
+2:25 and you will write probably hundreds of them, building your application.
