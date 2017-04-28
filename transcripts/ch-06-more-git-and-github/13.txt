@@ -1,44 +1,44 @@
-00:00 We've gone through a lot in the past two chapters on git and GitHub, 
-00:02 let's just take a few minutes to summarize what we went over at high level. 
-00:05 First we dug into git command such as git add,
+00:00 We've gone through a lot in the past two chapters on Git and GitHub, 
+00:03 let's just take a few minutes to summarize what we went over at high level. 
+00:06 First we dug into Git commands, such as "git add",
 00:09 to add modified files to a staging area, 
-00:12 git commit, which actually commits them to the index for git, 
-00:15 git status, which allows us to see what's been modified since our last commit, 
-00:19 git log which shows us all the commits that have done 
-00:23 throughout the entire history of our git repository, 
-00:25 and git push and git pull to move files to and from local and remote repositories. 
-00:30 As I've said a few times throughput the course of these videos 
-00:33 these are all the building blocks for using git 
+00:12 "git commit", which actually commits them to the index for Git, 
+00:16 "git status", which allows us to see what's been modified since our last commit, 
+00:20 "git log", which shows us all the commits that we have done 
+00:23 throughout the entire history of our Git repository, 
+00:25 and "git push" and "git pull" to move files to and from local and remote repositories. 
+00:31 As I've said a few times throughout the course of these videos, 
+00:33 these are all the building blocks for using Git 
 00:35 and while you need to become comfortable with each one, 
-00:38 they really work together in combination, with git in our tool belt, 
+00:38 they really work together in combination, with Git in our tool belt, 
 00:41 we're able to use GitHub to collaborate with other users on our projects, 
-00:44 in some cases, this will just mean that people can file issues tickets 
+00:45 in some cases, this will just mean that people can file issues tickets 
 00:48 against bugs they found in your application. 
-00:50 Other times, you will actually be working with people on code, 
+00:51 Other times, you will actually be working with people on code, 
 00:53 where you will be pushing and pulling from the repository 
-00:56 and while git and GitHub can be overwhelming for non developers, 
-00:58 you can also use gui tools such as Source Tree to make it easier 
+00:56 and while git and GitHub can be overwhelming for non-developers, 
+00:58 you can also use GUI tools such as SourceTree to make it easier 
 01:02 to add and modify files that you're working on others with. 
-01:05 As I said at the start of this chapter, you really need to have daily practice 
-01:09 with each of these commands in order to build muscle memory. 
-01:12 get in the good habit of making small commits at a time, 
+01:06 As I said at the start of this chapter, you really need to have daily practice 
+01:10 with each of these commands in order to build muscle memory. 
+01:12 Get in the good habit of making small commits at a time, 
 01:15 pushing them up to your repositories on GitHub and in general, 
 01:18 make it a part of your daily workflow as you're building your projects. 
-01:20 Now what do you do if you get stuck? 
+01:21 Now what do you do if you get stuck? 
 01:23 Well, here is some more resources to help, 
-01:25 there is a couple of pages that I work on constantly on fullstackpython, 
-01:27 which are source control and get, and this will provide many more 
+01:25 there is a couple of pages that I work on constantly on Full Stack Python, 
+01:27 which are Source Control and Git, and this will provide many more 
 01:31 tutorials and resources and additional context for what these tools can do for you. 
-01:35 Now, if either of these pages, or any page on full stack python 
+01:35 Now, if either of these pages, or any page on Full Stack Python 
 01:38 doesn't have what you're looking for, you can file an issue ticket 
-01:41 at the URL you see here, whatever questions you have about using git and source control, 
+01:41 at the URL you see here. Whatever questions you have about using git and source control, 
 01:45 I'd love to be able to answer them on these pages 
-01:47 so that not only you can get the answer that you need, 
-01:50 but also anyone else who is reading full stack python and of course,
-01:53 you can ask questions on twitter, either myself 
+01:48 so that not only you can get the answer that you need, 
+01:50 but also anyone else who is reading Full Stack Python and of course,
+01:53 you can ask questions on Twitter, either myself 
 01:56 @fullstackoython or Michael on @talkpython. 
 01:59 Git can take a while for you to wrap your head around what is happening, 
 02:02 but once you get comfortable with it, it's a really great safety net for your projects, 
-02:05 where you know that your code is not only backed up, 
-02:08 but you can also roll back to early versions in case you accidentally introduce bugs 
+02:06 where you know that your code is not only backed up, 
+02:08 but you can also roll back to earlier versions in case you accidentally introduce bugs 
 02:12 or just need to see what changed. With that, let's keep working on our projects.  

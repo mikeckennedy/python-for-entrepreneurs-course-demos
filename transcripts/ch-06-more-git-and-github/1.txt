@@ -1,29 +1,29 @@
-00:01 We got our first taste of git and GitHub in the previous chapter,
-00:04 and we have a little bunch of monotonous one time setup where we installed git, 
-00:06 signed up for GitHub and configured our account so that everything was connected. 
-00:10 With all that out of the way, we're going to get more hands on with git in this chapter. 
-00:14 First, we're going to take a look at the git commands, 
+00:01 We got our first taste of Git and GitHub in the previous chapter,
+00:03 and we have a little bunch of monotonous one-time setup where we installed Git, 
+00:07 signed up for GitHub and configured our account so that everything was connected. 
+00:10 With all that out of the way, we're going to get more hands on with Git in this chapter. 
+00:15 First, we're going to take a look at the Git commands, 
 00:18 git add, commit, status, push, pull, remote and a few others. 
-00:21 These are the basic building blocks of git that allow us 
+00:21 These are the basic building blocks of Git that allow us 
 00:24 to use it as a version control system. 
 00:26 Source control is critical even if you're working on your project by yourself, 
-00:30 if you're working with others, we're also going to cover 
-00:33 collaborating with other GitHub users, we'll add collaborators to our repository, 
+00:29 if you're working with others, we're also going to cover 
+00:31 collaborating with other GitHub users, we'll add collaborators to our repository, 
 00:36 and take a look at how pull requests and issues work. 
-00:39 Learning about collaborating through GitHub will set us up great for later on, 
+00:38 Learning about collaborating through GitHub will set us up great for later on, 
 00:42 in one of the chapters where we take a look 
 00:44 at working with other people on our businesses. 
-00:47 Most of our time in the videos in this chapter are going to be spent on the command line, 
-00:50 it's better to get comfortable with all the git commands on the command line first, 
+00:16 Most of our time in the videos in this chapter are going to be spent on the command line, 
+00:50 it's better to get comfortable with all the Git commands on the command line first, 
 00:53 because that's really where you're going to be working most of the time. 
-00:56 But we'll also take a look at graphical user interfaces, these guis are clients 
+00:55 But we'll also take a look at graphical user interfaces, these GUIs are clients 
 00:59 that can make some confusing tasks easier by providing visuals 
 01:02 that make it easier to understand the outcome of the commands we're trying to run. 
 01:06 Those are the three primary objectives for this chapter. 
-01:09 I also recommend that you take some time each day to practice using git 
+01:09 I also recommend that you take some time each day to practice using Git 
 01:13 so you can build your muscle memory, 
-01:15 so the git is a tool that boosts your productivity rather than getting in your way 
-01:18 whenever you are trying to get something accomplished. 
-01:21 Both Michael and I have been using git for the last several years 
-01:24 and I can say with experience, when you use it regularly the tool becomes second nature to you
+01:15 so the Git is a tool that boosts your productivity rather than getting in your way 
+01:17 whenever you are trying to get something accomplished. 
+01:19 Both Michael and I have been using Git for the last several years 
+01:22 and I can say with experience: When you use it regularly, the tool becomes second nature to you
  

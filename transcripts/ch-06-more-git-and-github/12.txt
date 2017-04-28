@@ -1,50 +1,50 @@
-00:01 All these git commands can get a bit confusing, 
-00:03 so it's helpful to have a user interface through a desktop application 
-00:06 to help you manage all of your changes in git, 
-00:09 in this video we'll take a look at one of those desktop applications, 
-00:12 there are many of them out there but SourceTree 
-00:15 which is made by Atlassian is one of the best. 
+00:00 All these git commands can get a bit confusing, 
+00:02 so it's helpful to have a user interface through a desktop application 
+00:06 to help you manage all of your changes in Git.
+00:09 In this video, we'll take a look at one of those desktop applications, 
+00:12 there are many of them out there but SourceTree, 
+00:15 which is made by Atlassian, is one of the best. 
 00:17 We'll download, install, and set up SourceTree with our GitHub account, 
 00:20 so we can get a little bit of extra help managing our git repositories. 
-00:23 The first step to get SourceTree is to get a sourcetreeapp.com and download it for mac, 
-00:28 of whichever operating system that you are working on, once that's saved, 
+00:23 The first step to get SourceTree is to get a sourcetreeapp.com and download it for Mac, 
+00:28 or whichever operating system that you are working on, once that's saved, 
 00:32 we can open it up, once it's extracted install it, 
-00:35 either by dropping its applications or through the installer if you're on windows.
-00:40 Once it's installed, we can open it up, and if you get a confirmation just click open, 
-00:45 now we do need to use an Atlasian account in order to log in here, 
+00:35 either by dropping it to applications or through the installer if you're on Windows.
+00:41 Once it's installed, we can open it up, and if you get a confirmation, just click open, 
+00:46 now we do need to use an Atlasian account in order to log in here, 
 00:50 but we're going to connect this to GitHub instead. 
 00:53 So, if you don't have an Atlassian account, go to atllasian.com and sign up for one, 
 00:58 just  a free account, once you've got that in place, 
-01:01 we'll say use an existing account and we can log in, okay, now we're registered, 
-01:06 and we can set it up, click GitHub and we're going to use the oauth authentication, 
-01:11 we'll connect our account, if you enable too factor authentication, 
-01:16 you'll need to get the verification code, punch that in and you should be verified, 
+01:01 we'll say "use an existing account" and we can log in, okay, now we're registered, 
+01:06 and we can set it up, click GitHub and we're going to use the OAuth authentication, 
+01:13 we'll connect our account, if you enabled too factor authentication, 
+01:17 you'll need to get the verification code, punch that in and you should be verified, 
 01:21 well to give it access to some of our account, 
-01:23 including both public and private repositories, 
+01:24 including both public and private repositories, 
 01:27 and we'll have it generate an SSH key for us. 
-01:30 Click copy to keyboard, awesome, so now it's listing all the repositories
+01:32 Click "Copy to Clipboard", awesome, so now it's listing all the repositories
 01:38 that we have got associated with our account, and this may take a few minutes, 
-01:42 once the list is populated, we can click on a specific repository, 
-01:46 and we can also search so I'll search for full stack python 
-01:51 and we can specify where we want to clone that repository. 
+01:43 once the list is populated, we can click on a specific repository, 
+01:47 and we can also search, so I'll search for "fullstackpython" 
+01:52 and we can specify where we want to clone that repository. 
 01:55 For now I'll just put this under my home directory. 
-01:58 Since I already have most of my repositories on my local system instead of cloning one, 
+01:58 Since I already have most of my repositories on my local system, instead of cloning one, 
 02:02 I am going to just add it based off of the files that are in my local file system,
-02:05 now there is a few ways we could do this,
-02:09 one way is just to drag and drop into the tool from the finder 
-02:11 or we can click scan a directory, alright, now I've added full stack python, 
-02:15 this allows us to work with all of our git history within a nice graphical user interface 
-02:21 instead of just using the command line. 
-02:24 To be honest, I don't really use gui tools all that much, 
+02:06 now there is a few ways we could do this,
+02:08 one way is just to drag and drop into the tool from the finder 
+02:12 or we can click "Scan a directory", alright, now I've added Full Stack Python, 
+02:17 this allows us to work with all of our Git history within a nice graphical user interface 
+02:22 instead of just using the command line. 
+02:24 To be honest, I don't really use GUI tools all that much, 
 02:27 I tend to stay right on the command line and you can do everything you need to do 
 02:30 on the command line, but especially when you're learning all these commands together, 
 02:34 it can be helpful to have this tool and essentially it's going to run the commands 
 02:37 behind the scenes for you. I won't go into all the features, 
-02:40 that source tree offers but I will show you that you can compare various commits
-02:44 you can see what's changed, in each of those commits and just in general,
+02:41 that SourceTree offers but I will show you that you can compare various commits
+02:45 you can see what's changed, in each of those commits and just in general,
 02:49 as you start to add commits to your project for your business, 
-02:52 there is a nice way to go through everything just in case you've introduced the facts 
+02:52 there is a nice way to go through everything just in case you've introduced defects 
 02:55 and you need to fix them, go back and see what's changed, those sorts of tasks. 
-02:59 That is a real quick overview, of how you can sue gui tools, 
-03:01 like source tree in order to manage and view 
-03:04 all the changes you're making to your projects through git. 
+02:59 That is a real quick overview, of how you can sue GUI tools, 
+03:02 like SourceTree in order to manage and view 
+03:04 all the changes you're making to your projects through Git. 
