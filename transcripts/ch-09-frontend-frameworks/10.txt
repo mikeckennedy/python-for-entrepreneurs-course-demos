@@ -43,7 +43,7 @@
 02:29 we are including Bootstrap, 337 happens to be the current one and like I said, 
 02:32 we are including the Bootstrap js file which depends upon jQuery 
 02:38 so we are including both those here. 
-02:40 Then we have the nav, remember nav is an html5 element
+02:40 Then we have the nav, remember nav is an HTML5 element
 02:44 and it tells the browsers and search engines this is the navigation for the site,
 02:49 that's really important because if you do searches 
 02:52 you'll see that this navigation can actually drive what shows up on Google. 
