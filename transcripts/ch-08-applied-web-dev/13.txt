@@ -69,7 +69,7 @@
 04:09 but I think is highly effective, if you look at the website, 
 04:15 there is the site map, the xml,
 04:19 and if you actually view it in a way you can look at, 
-04:22 there is a whole bunch of urls that talk about what courses you have, 
+04:22 there is a whole bunch of URLs that talk about what courses you have, 
 04:24 what courses have transcripts, how you register, how you log in and so on
 04:29 and so for our test what we actually do is we go and we get the site map, 
 04:36 and then for each URL on the site map we come back 

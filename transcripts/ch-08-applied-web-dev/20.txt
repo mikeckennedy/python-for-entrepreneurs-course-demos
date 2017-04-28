@@ -28,7 +28,7 @@
 01:28 So we can come up here and use the macro extension language for tal 
 01:32 so metal, and in metal we'll say define macro. 
 01:37 Oh oops, I am doing the wrong spot. 
-01:39 Let's do it down here actually on the html, sorry.
+01:39 Let's do it down here actually on the HTML, sorry.
 01:41 Metal, define macro, and you make up this name, 
 01:44 you can call it whatever you want but you have to remember what it's called, 
 01:47 so _layout and then we are going to come down 
@@ -37,18 +37,18 @@
 01:58 so we are going to put a div in here, and we are going to add another metal definition, 
 02:02 this time we are going to define the slot and let's go and just call it also a main content, 
 02:07 so this is where the main content of the page will be inserted into our overall thing. 
-02:12 We also, like I said maybe we want to allow people to insert additional css 
+02:12 We also, like I said maybe we want to allow people to insert additional CSS 
 02:17 so up here, right at the end let's say right there, 
-02:21 after our theme css and site css we can have additional css
+02:21 after our theme CSS and site CSS we can have additional CSS
 02:27 and down at the end, we can come down here 
-02:31 and after all of our Javascript gets imported we could have additional js. 
+02:31 and after all of our JavaScript gets imported we could have additional js. 
 02:34 And these are three places that the pages like index 
 02:38 and about can optionally insert their data, 
 02:42 so this defines the layout, shared template. 
 02:47 The next thing to do is convert our index to use this template, 
 02:52 and now this is going to get much, much simpler as you will see 
 02:55 so let's just do like this for a minute, we are going to say
-02:58 we want a div on here, we are not going to put all the html 
+02:58 we want a div on here, we are not going to put all the HTML 
 03:01 because that is coming in from the layout, 
 03:03 and then we'll say metal use macro,
 03:06 which one do we want to use, well, it turns out that we have to grab that macro 
@@ -63,10 +63,10 @@
 03:40 which slot this goes into, remember we have three slots, 
 03:43 so we'll say metal:fill-slot, we'll say main content, 
 03:54 and just to show you how we can use the other ones, we'll add one more spot here, 
-03:57 we'll say div, we'll say fill slot and let's just say this is going to be additional css 
+03:57 we'll say div, we'll say fill slot and let's just say this is going to be additional CSS 
 04:04 and in here let's just put a comment but you'll see that it gets put in the page. 
-04:08 Of course this would be some sort of css include if we were actually trying to augment 
-04:13 just these pages css on top of the main site look and feel. 
+04:08 Of course this would be some sort of CSS include if we were actually trying to augment 
+04:13 just these pages CSS on top of the main site look and feel. 
 04:18 Now, if we run this, it's not going to work so well. 
 04:21 It says home controller has no attribute called layout.
 04:26 Great, why doesn't it have an attribute called layout? 
@@ -121,7 +121,7 @@
 08:00 now that's a minor change but the point is 
 08:02 any change we want flows across the entire site, 
 08:05 remember, now it's so much easier to add no content 
-08:09 and not worry about all that html stuff, 
+08:09 and not worry about all that HTML stuff, 
 08:11 we'll just have to basically duplicate one of these things 
 08:14 and fill out the main content and we're good to go.
 

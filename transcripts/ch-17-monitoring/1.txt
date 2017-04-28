@@ -1,7 +1,7 @@
 00:03 The last thing you want to see in your web app  is some kind of crash, 
 00:07 a 500 error or maybe it's even a little more subtle than this falling octacad, 
 00:12 maybe it's some button doesn't work, because behind the scenes, 
-00:17 it's calling some kind of Javascript thing where that's crashing. 
+00:17 it's calling some kind of JavaScript thing where that's crashing. 
 00:20 So, how do we know when this has happened, right, 
 00:24 our server is not going to tell us, it's just going to return 500 to the user and that's it. 
 00:28 Our users will tell us sometimes, if someone comes to buy something from you 

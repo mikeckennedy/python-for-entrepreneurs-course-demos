@@ -14,20 +14,20 @@
 00:39 Alright, so PyCharm can write this function for us, like so, 
 00:44 and it defaults to a class method, I am cool with that, 
 00:47 you can change it to static if you want or do something else, 
-00:50 so what we are going to do is we are going to come up with the html body, 
-00:54 and it's just going to be standard html. 
+00:50 so what we are going to do is we are going to come up with the HTML body, 
+00:54 and it's just going to be standard HTML. 
 00:57 So let's do something like this. 
-01:06 Okay so here is a pretty cheesy html email that we are going to use, 
+01:06 Okay so here is a pretty cheesy HTML email that we are going to use, 
 01:13 and let's just make this one, let's make this one strong 
 01:16 so you can see some of the markdown stuff happening. 
 01:19 We are going to send this email and the way we are going to do it
 01:22 is we are just now going to call emails service right, any email service, 
 01:26 we want to call that basic send mail and we have to give the to address, 
 01:31 which is email, subject is going to be welcome to blue yellow rockets, 
-01:37 and the body is just going to be this html body here. 
+01:37 and the body is just going to be this HTML body here. 
 01:41 Right, that's all we got to do. 
 01:43 Now we are going to get much more advanced about constructing interesting stuff, 
-01:46 we are not going to write html like this much longer, but for a simple test, 
+01:46 we are not going to write HTML like this much longer, but for a simple test, 
 01:50 let's try this, we are going to run the site, and hopefully, 
 01:54 there is a lot of moving parts here, hopefully we got to write, 
 01:58 so let's go over here and log out, and we are going to go register, 
@@ -60,5 +60,5 @@
 03:54 here is this, it should be us right, and I should probably put a new line in there, 
 03:58 but that is not the point. 
 04:02 Look we sent, let me zoom this back a little, here we go, 
-04:05 we sent our email to us, html email via Amazon SES, 
+04:05 we sent our email to us, HTML email via Amazon SES, 
 00:01 it sent it to that address, how cool is that? 

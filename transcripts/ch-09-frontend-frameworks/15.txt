@@ -1,8 +1,8 @@
 00:02 As we've seen, beautiful forms are key to user engagement and happiness. 
 00:06 And, you just want your app to look beautiful and entice people to interact with it. 
 00:11 So we've seen that those forms on the left can easily be transformed 
-00:15 to the forms on the right, using just a couple of css statements 
-00:20 and some Bootstrap css classes. 
+00:15 to the forms on the right, using just a couple of CSS statements 
+00:20 and some Bootstrap CSS classes. 
 00:23 Remember, we've added form control to the inputs and text areas, 
 00:27 button to the button, 
 00:30 and we added a little margin to input some text areas. 
@@ -17,4 +17,4 @@
 01:01 So we threw this input and text areas style to say let's set the max width to 350 
 01:05 and we also thought they were a little cramped so let's put a margin on it. 
 01:09 And that's how we got that really nice looking form 
-01:12 out of basically raw html with Bootstrap.
+01:12 out of basically raw HTML with Bootstrap.

@@ -26,7 +26,7 @@
 01:31 if something else, if it doesn't work, we'd like to redirect to /newsletter/failed. 
 01:38 Now how do I know that, because over here, I've actually created 
 01:42 well you can see the two methods down there but more importantly, 
-01:45 I've created the subscribed and failed pieces and these are more or less static html 
+01:45 I've created the subscribed and failed pieces and these are more or less static HTML 
 01:49 that says well, we had a problem subscribing you, failed, 
 01:52 or subscribe like hey you are on the list, awesome, thanks for signing up, 
 01:57 here is a few more things you can do. 
@@ -54,8 +54,8 @@
 03:20 but the MailChimp API should tell us if we get it wrong. 
 03:23 We also have a required, if you look back over here, 
 03:27 you can see we have a required and it's a type email, 
-03:30 so at least form the html perspective this should be mostly good, 
-03:33 but of course, people could post to this end point without actually going through our html 
+03:30 so at least form the HTML perspective this should be mostly good, 
+03:33 but of course, people could post to this end point without actually going through our HTML 
 03:37 or without running the validation, using some other mechanisms, 
 03:43 so we want to make sure we validated here, as well. 
 03:46 So next let's go down here and return nothing, well, 

@@ -1,11 +1,11 @@
  0:01 Now that we saw there is over 88 thousand packages at pypi.org, 
 0:04 we can just grab and bring into our projects and add great functionality 
-0:08 http processing, web services, web frameworks, database access, you name it, 
+0:08 HTTP processing, web services, web frameworks, database access, you name it, 
 0:14 the question becomes how do we get those form pypi, into our system 
 0:19 or, any distributable package even if we actually just have a zip file of the contents, 
 0:25 and the answer is pip. Pip knows about the Python Package Index 
 0:29 and when we type pip install a package, here we are typing pip install requests, 
-0:33 one of the most popular packages in Python, which is an http client, 
+0:33 one of the most popular packages in Python, which is an HTTP client, 
 0:37 pip will go and look in a certain location on the Python Package Index. 
 0:42 And here you can see it found it, it downloaded version 2.9.1 and it unzipped it, 
 0:46 installed it in the right location, cleaned everything up, beautiful. 

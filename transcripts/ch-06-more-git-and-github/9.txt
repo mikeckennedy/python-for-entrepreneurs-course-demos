@@ -1,56 +1,56 @@
-00:00 At this point you've got all the basic commands to work properly with git, 
+00:00 At this point you've got all the basic commands to work properly with git,
 00:03 we've used the git remote and git push commands to push our code up to GitHub,
-00:07 and now it's time to switch back over to GitHub, 
-00:10 take a look at the web user interface, and start figuring out 
-00:12 how we can collaborate with other people on our projects. 
-00:15 Now even if you only plan to work on your project yourself, 
-00:18 there still might come a point where you want to add somebody 
-00:21 to your repositories they can do a code review for you, 
-00:23 or you could have someone helping out with the documentation or the testing. 
-00:26 You can also set up a GitHub repository for your business 
-00:30 if people want to file issues you could use GitHub as a way to track those issues. 
-00:34 So whether you're working solo or with other people GitHub can be really useful. 
-00:38 Log into GitHub and it will show your newsfeed, 
-00:41 you have all the activity for the people you follow. 
-00:42 Click on your profile and then go to the repository 
-00:46 where you have the Python for entrepreneurs course demos, 
-00:49 and I am going to use the full stack Python repo for this example, 
-00:52 the first thing that we're going to do is take a look at the issues, 
-00:56 when you click on your repository, you'll see your code, issues, pull requests 
-01:00 and a bunch of other bits up on the top menu. 
-01:03 Click on issues and this will bring up the issues menu, 
-01:05 now if you have an open project for your business, anyone can file issues against it, 
-01:11 so that is one where you may want to handle 
-01:14 if there are any issues with your service, you can say file an issue request on GitHub, 
-01:18 or maybe a separate repository that you've created 
-01:20 where you can respond to those tickets, creating issues is easy, 
-01:22 just click the new issue button, and then you can create a title 
-01:25 and write your comment with a more detailed description of what the issue is. 
+00:07 and now it's time to switch back over to GitHub,
+00:10 take a look at the web user interface, and start figuring out
+00:12 how we can collaborate with other people on our projects.
+00:15 Now even if you only plan to work on your project yourself,
+00:18 there still might come a point where you want to add somebody
+00:21 to your repositories they can do a code review for you,
+00:23 or you could have someone helping out with the documentation or the testing.
+00:26 You can also set up a GitHub repository for your business
+00:30 if people want to file issues, you could use GitHub as a way to track those issues.
+00:35 So whether you're working solo or with other people, GitHub can be really useful.
+00:38 Log into GitHub and it will show your newsfeed,
+00:41 you have all the activity for the people you follow.
+00:44 Click on your profile and then go to the repository
+00:46 where you have the Python for entrepreneurs course demos,
+00:49 and I am going to use the full stack Python repo for this example,
+00:53 the first thing that we're going to do is take a look at the issues,
+00:56 when you click on your repository, you'll see your code, issues, pull requests
+01:01 and a bunch of other bits up on the top menu.
+01:03 Click on issues and this will bring up the issues menu,
+01:05 now if you have an open project for your business, anyone can file issues against it.
+01:11 So that is one where you may want to handle
+01:12 if there are any issues with your service, you can say "file an issue request on GitHub",
+01:16 or maybe a separate repository that you've created
+01:18 where you can respond to those tickets, creating issues is easy,
+01:21 just click the "New issue" button, and then you can create a title
+01:25 and write your comment with a more detailed description of what the issue is.
 01:29 And then you can save it and if you create a contributing file,
-01:32 in the base of you repository, so we can see contributing.restructure text, 
-01:39 this will give information about how people should file their issues 
-01:43 against this repository, so creating issues is that easy, just create the new issue, 
+01:32 in the base of you repository, so we can see CONTRIBUTING.rs text,
+01:41 this will give information about how people should file their issues
+01:43 against this repository, so creating issues is that easy, just create the new issue,
 01:47 and you can tell other people create a new issue on GitHub in open repository.
-01:51 However, if you are running your business off of a private repository, 
-01:55 you've upgraded your GitHub account, created a private repository, 
-01:58 no one will be able to see your repository 
-02:00 and they won't be able to file any issues against it, 
-02:03 if you're working with other people on your team, or you've hired some contractors 
-02:06 and you want them to be able to handle issues, you need to add a collaborator. 
-02:09 The way to add a collaborator is to go up into settings on your specific repository 
+01:51 However, if you are running your business off of a private repository,
+01:55 you've upgraded your GitHub account, created a private repository,
+01:58 no one will be able to see your repository
+02:00 and they won't be able to file any issues against it,
+02:03 if you're working with other people on your team, or you've hired some contractors
+02:06 and you want them to be able to handle issues, you need to add a collaborator.
+02:10 The way to add a collaborator is to go up into settings on your specific repository
 02:14 and click the collaborators menu item, you will see a text box here,
-02:18 and you can add either a GitHub username or an email address 
-02:21 and we'll send them a notification they've been added as a collaborator 
-02:24 and they can either accept or reject that. 
+02:18 and you can add either a GitHub username or an email address
+02:21 and we'll send them a notification they've been added as a collaborator
+02:24 and they can either accept or reject that.
 02:27 I am going to show an example right now, I'll add Michael to this repository,
-02:29 he is not currently a collaborator, there is no collaborators on this project, 
-02:32 as we can see here. I'll click add collaborator, and now he is going to get an invite 
-02:36 to become a collaborator on this project, once he has accepted that, 
-02:40 he has full access to the project, he can handle issues, modify any of the code, 
-02:45 so you don't want to just add anybody as a collaborator, 
-02:47 only add the folks that you trust and then any general issues 
-02:50 that you want to track, you can have an open repository 
-02:54 where people can file those issues, you don't have to add them as collaborators. 
-02:57 So that is all you need to do, in order to add issues, 
-03:00 and handle invites for collaborators on your project 
-03:02 and you can add as many collaborators as you want. 
+02:29 he is not currently a collaborator, there is no collaborators on this project,
+02:32 as we can see here. I'll click "Add collaborator", and now he is going to get an invite
+02:36 to become a collaborator on this project, once he has accepted that,
+02:41 he has full access to the project, he can handle issues, modify any of the code,
+02:45 so you don't want to just add anybody as a collaborator,
+02:47 only add the folks that you trust and then any general issues
+02:50 that you want to track, you can have an open repository
+02:54 where people can file those issues, you don't have to add them as collaborators.
+02:57 So that is all you need to do, in order to add issues,
+03:59 and handle invites for collaborators on your project
+03:02 and you can add as many collaborators as you want.

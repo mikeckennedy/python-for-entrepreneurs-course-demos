@@ -1,49 +1,49 @@
-00:00 So far in this chapter, we've taken a look a lot of the commands 
-00:03 that allow you to add changes to the staging area, 
-00:06 commit your code, push those changes up to other repositories, 
-00:09 whether those re local or in the cloud. 
-00:12 As you start to accumulate all of these commits, 
-00:14 it's often useful to go back and look at what previous changes were made, 
-00:17 for example, the Full Stack Python repository has almost 2000 commits, 
-00:20 so if I want to see when I added a new page 
-00:23 or when I may have introduced some typos, I can just go back 
-00:28 with another command we'll introduce in this chapter, which is git log. 
-00:31 Back on the command line, in our course demos repository let's run git log. 
-00:34 What we're seeing are all the changes made in reverse chronological order, 
-00:38 by commit. If you press the space bar, 
-00:41 we'll continue to scroll through all the commits until we get to the original one, 
-00:46 which will be much further down. 
-00:49 What if we only want to see commits that have happened say this year, 
-00:52 we can use the git log after and punch in the year, a month and a date, 
-00:59 and it will only give us the commits that have been made in 2017, 
-01:02 so this is much shorter list and we'll run out and get to the end pretty quickly. 
-01:07 so again that's a git log, after, you can also use before, 
-01:12 and then you punch in a date by the year, month and day. 
-01:17 And that will give you everything before or after a specific date. 
-01:21 When we use git log, we are only seeing a short summary 
-01:24 with the author of the date and the commit message, 
-01:27 what if we want to see more detailed information about the specific files 
-01:31 that have changed, well, if we want to see all the details, 
-01:33 we can use the git log -p command, 
-01:38 and this will give us the low level changes, 
-01:40 every single one of them the difference between the old file and the new 
-01:43 that has changed in this specific commit, but this is pretty overwhelming, 
-01:47 so instead of using git log -p typically, most developers use the --stat argument. 
-01:55 This will give you at a glance all the files that have changed 
-01:59 and roughly how many changes were made to those files, 
-02:02 so this is much easier to scroll through and see what has changed 
-02:06 over the past few commits. Using git log without any arguments, 
-02:10 will give us the laundry list of the author, the date and the commit title 
+00:00 So far in this chapter, we've taken a look a lot of the commands
+00:03 that allow you to add changes to the staging area,
+00:06 commit your code, push those changes up to other repositories,
+00:09 whether those are local or in the cloud.
+00:11 As you start to accumulate all of these commits,
+00:14 it's often useful to go back and look at what previous changes were made,
+00:17 for example, the Full Stack Python repository has almost 2000 commits,
+00:21 so if I want to see when I added a new page
+00:23 or when I may have introduced some typos, I can just go back
+00:27 with another command we'll introduce in this chapter, which is "git log".
+00:30 Back on the command line, in our course demos repository let's run "git log".
+00:34 What we're seeing are all the changes made in reverse chronological order,
+00:38 by commit. If you press the space bar,
+00:41 we'll continue to scroll through all the commits until we get to the original one,
+00:46 which will be much further down.
+00:49 What if we only want to see commits that have happened say this year,
+00:52 we can use the "git log --after" and punch in the year, a month and a date,
+00:59 and it will only give us the commits that have been made in 2017,
+01:02 so this is much shorter list and we'll run out and get to the end pretty quickly.
+01:07 so again that's a "git log --after", you can also use "before",
+01:12 and then you punch in a date by the year, month and day.
+01:17 And that will give you everything before or after a specific date.
+01:21 When we use "git log", we are only seeing a short summary
+01:24 with the author of the date and the commit message,
+01:27 what if we want to see more detailed information about the specific files
+01:31 that have changed, well, if we want to see all the details,
+01:34 we can use the "git log -p" command,
+01:38 and this will give us the low level changes,
+01:40 every single one of them the difference between the old file and the new
+01:43 that has changed in this specific commit, but this is pretty overwhelming,
+01:48 so instead of using "git log -p" typically, most developers use the --stat argument.
+01:56 This will give you at a glance all the files that have changed
+01:59 and roughly how many changes were made to those files,
+02:02 so this is much easier to scroll through and see what has changed
+02:06 over the past few commits. Using "git log" without any arguments,
+02:10 will give us the laundry list of the author, the date and the commit title
 02:14 for every single commit, the -p flag will give us absolutely everything
-02:18 about each commit, the --stat argument gives us a hybrid with all the files 
-02:23 that have changed, and if we want to see a really condensed version 
-02:27 of all of our commits, we can use the one line argument, 
-02:31 this is going to give us a very condensed version 
-02:34 of just the last seven hex digits in a commit, 
-02:39 and then the title for that commit, and you can see why commit messages 
-02:44 are so important, because eventually, you will have a laundry list 
-02:47 of these throughout the entire history of your project 
-02:50 and it's going to be really useful for you and anyone else that you're working with 
-02:53 to be able to see everything at a glance. 
-02:56 That is the git log command, and some of the common arguments 
-02:59 that you'll use after you start building up your commit history. 
+02:18 about each commit, the --stat argument gives us a hybrid with all the files
+02:24 that have changed, and if we want to see a really condensed version
+02:27 of all of our commits, we can use the --oneline argument,
+02:31 this is going to give us a very condensed version
+02:34 of just the last seven hex digits in a commit,
+02:39 and then the title for that commit, and you can see why commit messages
+02:44 are so important, because eventually, you will have a laundry list
+02:47 of these throughout the entire history of your project
+02:50 and it's going to be really useful for you and anyone else that you're working with
+02:53 to be able to see everything at a glance.
+02:56 That is the "git log" command, and some of the common arguments
+02:59 that you'll use after you start building up your commit history.

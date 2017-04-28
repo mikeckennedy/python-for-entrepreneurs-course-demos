@@ -9,7 +9,7 @@
 00:27 I use a tool called Cloudflare, Cloudflare is a service you pay for monthly
 00:33 and you can set your DNS records so that the Cloudflare 
 00:36 will serve up your site through an HTTPS connection. 
-00:39 It also has some nice benefits where it will minify your HTML css and Javascript 
+00:39 It also has some nice benefits where it will minify your HTML CSS and JavaScript 
 00:44 and in general, it will just make your site faster. 
 00:46 But this is what I use in order to easily add HTTPS to Full Stack Python. 
 00:49 Of course, you could set up your own HTTPS certificate 
@@ -24,7 +24,7 @@
 01:15 it should be completely readable and the way that you would accomplish this 
 01:18 is through responsive design, Full Stack Python is based on Bootstrap version 3 
 01:22 which has responsive design built right into it, 
-01:25 and I recommend using a css framework 
+01:25 and I recommend using a CSS framework 
 01:28 that just has responsive design built into it, 
 01:30 use that as you are building your site up. 
 01:33 So we can see all this looks fine on whatever mobile device you are using, 

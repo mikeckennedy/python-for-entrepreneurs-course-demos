@@ -1,8 +1,8 @@
-0:02 So let's talk about css selectors as a concept;
+0:02 So let's talk about CSS selectors as a concept;
 0:05 we've seen that you can select by type, 
-0:07 so we can start out with this site.css file here 
-0:10 and we can select my html node, so a body, div etc,
-0:15 we can select by css class that's . (dot) 
+0:07 so we can start out with this site.CSS file here 
+0:10 and we can select my HTML node, so a body, div etc,
+0:15 we can select by CSS class that's . (dot) 
 0:19 so here we want all things that have the lead class 
 0:21 which would be including this paragraph up here, 
 0:24 or we would say I want all the divs that are main, right, 

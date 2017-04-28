@@ -34,7 +34,7 @@
 01:58 If we do validate, then we'll work with the various fields on that view model, 
 02:03 so view model email address, view model password and so on, 
 02:06 once we actually create the account and do the login and so on,
-02:09 then we might raise an http found exception 
+02:09 then we might raise an HTTP found exception 
 02:12 to redirect the user to wherever they need to go.
 02:15 Remember, the get post redirect pattern. 
 02:19 Here it is, with view models.

@@ -88,7 +88,7 @@
 04:38 It looks just as good as the desktop version, 
 04:40 because people are searching both on mobile and on desktop 
 04:42 and you want to support both. 
-04:44 And you can do that by making sure that your css 
+04:44 And you can do that by making sure that your CSS 
 04:47 which you learned about earlier, is following responsive design. 
 04:50 Now let's try this search term again, on the iPhone 6, simulating the iPhone 6. 
 04:53 And we can still search up top here, we can say Python web development, 
@@ -129,7 +129,7 @@
 07:03 by doing the view source on the web development page, 
 07:06 I want to point out some important elements on this page, 
 07:09 that we're going to dive into further in the next few videos. 
-07:12 Now you already know I'll write html and there is some important elements here, 
+07:12 Now you already know I'll write HTML and there is some important elements here, 
 07:17 one of which the meta description, meta name=description, 
 07:21 is not actually a required element on a web page, 
 07:23 but it's really important because this is what often sets the description 
@@ -164,17 +164,17 @@
 09:11 the content that is on this page, so this is just a link 
 09:14 and it's styled with a larger font, but it is not the h1 tag. 
 09:18 Another bit that is important here is that this page when we go to the source 
-09:22 it's very simple lightweight amount of html and other related content, 
-09:27 for example, the css is minified, which means 
+09:22 it's very simple lightweight amount of HTML and other related content, 
+09:27 for example, the CSS is minified, which means 
 09:32 that it's all compressed down together in a single line 
 09:34 or as close to a single line as possible 
 09:37 and it's been hand tuned to make sure it's as fast as possible
-09:40 and there is no Javascript outside of one addition here 
+09:40 and there is no JavaScript outside of one addition here 
 09:44 and that is just Google analytics, 
 09:46 so we do have a Google analytics snippet here 
 09:48 but it loads at the very end of when the page loads 
 09:51 because it's in the last element that appears right before the close of the body, 
-09:54 there is no other JQuery or React or Angular, nothing like that on this page, 
+09:54 there is no other jQuery or React or Angular, nothing like that on this page, 
 09:59 which means that it loads extremely fast and site speed is really important
 10:03 for appearing higher up in the search results. 
 10:06 So that is a quick overview with a couple of example pages, 

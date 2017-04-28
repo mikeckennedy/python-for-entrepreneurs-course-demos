@@ -42,7 +42,7 @@
 02:36 How do we tie this thing, let's give it a class of album in list like that, 
 02:43 how do we tie this thing back to the albums 
 02:46 and how do we do a loop, things like that. 
-02:48 So, when we get to controlling this html dynamically, 
+02:48 So, when we get to controlling this HTML dynamically, 
 02:52 you'll see that there is a bunch of stuff under tal for template attribute language, 
 02:56 so we have attributes, case, conditional, on error, replace, 
 03:00 all sorts of things and the one that we are looking for right now is repeat 

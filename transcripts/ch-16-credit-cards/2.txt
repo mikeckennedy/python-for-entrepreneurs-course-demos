@@ -33,7 +33,7 @@
 02:03 it's super easy to integrate, and it saves us 
 02:06 some of the challenges about PCI compliance, 
 02:09 because we never even see the credit card, it actually goes, 
-02:14 this is a little pop up comes via Javascript straight out of Stripe,
+02:14 this is a little pop up comes via JavaScript straight out of Stripe,
 02:17 they take the credit card, they do the processing on it, 
 02:22 so they give us this one time token where we can finalize the payment, 
 02:26 and do all the additional processing 

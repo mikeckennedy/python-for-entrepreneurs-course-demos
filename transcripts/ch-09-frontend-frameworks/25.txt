@@ -27,7 +27,7 @@
 01:20 we are going to do better than the way they are doing their content a, b stuff 
 01:23 in a moment, and, up here, we have a container and a row
 01:27 this is Bootstrap grid stuff, so let's go in here, we are just going to take up the whole row, 
-01:31 and I am going to paste the html from there 
+01:31 and I am going to paste the HTML from there 
 01:33 because there is really no value in you guys watching me type that like I said, 
 01:36 we are going to have a form, it's going to have an input, 
 01:39 it is going to be a form control, that's Bootstrap, 

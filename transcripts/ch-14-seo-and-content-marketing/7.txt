@@ -3,28 +3,28 @@
 00:07 Fast can mean a couple of different things, the page load performance is important,
 00:11 both in your server responding to the web browser's requests, 
 00:15 so keeping the number of requests low is important, 
-00:17 but also the rendering time once the html, css and Javascript is downloaded, 
-00:21 the browser has to render everything, so keeping the css small 
-00:25 and the Javascript minimal improves the rendering time in the web browser. 
+00:17 but also the rendering time once the HTML, CSS and JavaScript is downloaded, 
+00:21 the browser has to render everything, so keeping the CSS small 
+00:25 and the JavaScript minimal improves the rendering time in the web browser. 
 00:31 Let's see how we can measure the speed off of the 
 00:33 web frameworks page as an example on Full Stack Python. 
 00:36 In Chrome, I am often in the network tab of the developer tools, 
 00:39 so when you open up developer tools, go to this network tab 
 00:42 and we want to see how fast does this page load, press the refresh button, 
-00:45 and empty cash and hard reload, so we'll clear all of the files
+00:45 and empty cache and hard reload, so we'll clear all of the files
 00:49 that you've already downloaded, and reload everything. 
 00:52 Now if we make this a little larger, we'll get this handy dashboard down below, 
 00:56 the things that are most important to look for here are these are the files 
 00:59 that you are actually downloading, and then a little waterfall diagram, 
 01:02 that will show you when those files were downloaded, 
-01:05 so the first thing is always the html page, the actual page 
+01:05 so the first thing is always the HTML page, the actual page 
 01:08 that forms the backbone of the content 
 01:10 and then that page has references to other files, 
-01:13 like the css, or the images that are on the page, 
+01:13 like the CSS, or the images that are on the page, 
 01:16 so we can see the page itself is first and then after that,
 01:19 once we have the page in the web browser, 
-01:22 the web browser then sees oh I got to also get the css, I got to get these images, 
-01:26 and then we'll initiate request after the html is downloaded, 
+01:22 the web browser then sees oh I got to also get the CSS, I got to get these images, 
+01:26 and then we'll initiate request after the HTML is downloaded, 
 01:30 so that is why we can see these bars start after the page itself downloads. 
 01:35 Now the size is important, the average web page in 2016 
 01:39 was something like 1,5 MB that is just insanely large, 
@@ -35,7 +35,7 @@
 01:58 so throttling is disabled, we can change the presets, 
 02:02 we can say well what if they are only on regular 3G connection, 
 02:05 what does that look like and then again,
-02:08 hit shift and then empty cash and hard reload, 
+02:08 hit shift and then empty cache and hard reload, 
 02:11 and this is going to simulate a much slower connection. 
 02:14 Now this took three fourths of a second to finish. 
 02:17 On our fast, no throttled connection it finished in a tenth of the time, 
@@ -53,7 +53,7 @@
 03:11 You can see this massive dependency, and all these different files, 
 03:16 and a lot of it is just ad networks. It took us 33 seconds to load the front page 
 03:21 and it's still going, this is why you want to avoid 
-03:26 adding a ton of Javascript to your pages. Alright, let's go back over here,
+03:26 adding a ton of JavaScript to your pages. Alright, let's go back over here,
 03:29 what else can we clean from the Chrome developer tools? 
 03:34 You can see the total amount transferred, so this page is a little bit less than 35 KB, 
 03:38 this would load really well on an old school modem, 
@@ -61,7 +61,7 @@
 03:46 Even people on the oldest cell phone networks are going to be able
 03:49 to load this page that is what you should target when you're creating content, 
 03:52 and you're creating your blog, avoid using 
-03:55 Javascript model view controller frameworks like Angular, 
+03:55 JavaScript model view controller frameworks like Angular, 
 03:58 when you are creating content that other people are suppose to read. 
 04:01 The reason why this matters for search results is think about the user experience, 
 04:05 if your search result is the top one, a searcher clicks on it 
@@ -70,8 +70,8 @@
 04:15 or the faster they can see that it is for them, 
 04:18 and get the information that they need, that is a better user experience, 
 04:21 regardless of the search engine whether you're on Google or Bing or DuckDuckGo. 
-04:24 Reduce the number of files, don't have a bunch of css files there, 
-04:29 don't have a bunch of Javascript, put them together if possible, 
+04:24 Reduce the number of files, don't have a bunch of CSS files there, 
+04:29 don't have a bunch of JavaScript, put them together if possible, 
 04:33 make sure that your images are small 
 04:36 unless they really need to be large and detailed. 
 04:38 Now how do you get a benchmark other than the Chrome developer tools, 
@@ -109,7 +109,7 @@
 06:18 and it's going to analyze both from mobile and from desktop 
 06:21 and then provide us with some fixes. 
 06:24 There will typically be other rules when you are working with your unoptimized site 
-06:28 where maybe you don't have minified css, 
+06:28 where maybe you don't have minified CSS, 
 06:31 or you have a bunch of redirects that are not necessary 
 06:34 so what is great about this is you are going to be testing for both mobile and desktop 
 06:38 and it's another free tool that allow you to improve the content 

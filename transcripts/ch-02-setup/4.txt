@@ -4,7 +4,7 @@
 0:13 so there is a couple of things we need to take this course,
 0:16 we need Python 3, and we need PyCharm.
 0:18 As we get it farther into the course,
-0:21 you'll see that there is some packages we need, we are also going to need git,
+0:21 you'll see that there is some packages we need, we are also going to need Git,
 0:24 but let's save installing that until later, this is what you need to get started.
 0:27 So, the first thing is to ask well, "do you have Python 3?"
 0:31 Let's find out. If you just type python --version, you'll see that that's Python 2.

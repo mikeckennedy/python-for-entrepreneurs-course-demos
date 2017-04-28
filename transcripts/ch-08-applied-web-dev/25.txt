@@ -41,7 +41,7 @@
 02:26 Now just prepare yourself, this is not going to look very good, 
 02:29 it's going to look probably straight out of 1994, 
 02:32 but we'll be able to apply some styles and techniques to it later 
-02:36 when we get to the front end frameworks to make it really nice looking. 
+02:36 when we get to the front-end frameworks to make it really nice looking. 
 02:40 So if we refresh the page, we now see this here, so what is this 
 02:46 OK so let's try to make this little nicer, 
 02:49 notice that we don't know what's in here there is a couple of ways we could do it, 

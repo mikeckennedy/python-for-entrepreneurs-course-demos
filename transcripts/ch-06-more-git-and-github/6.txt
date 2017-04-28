@@ -1,43 +1,43 @@
-00:01 So far we've only been working with our local git repository with these commands. 
-00:04 But git is known as a distributed version control system 
-00:07 the word distributed is important, because with each git repository 
-00:10 we get not only the current version of the git repository, 
-00:14 we get ever single change that has ever been made in that repository, 
-00:18 the setup is different than earlier version control systems 
-00:21 where you had to check files in and out of the central repository, 
-00:24 now with git we can share and sync up remote git repositories with each other. 
-00:29 That is where the git remote command comes in. 
-00:32 The git remote command allows us to control and specify the remote repositories 
-00:37 that we want our local git repository to work with. 
-00:43 We added the resources.markdown file to the staging area 
-00:47 and then committed it to our local git repository. 
-00:50 Next, we'll use the git remote command to specify which repositories 
-00:53 not hosted on our local system we want to sync up with,
-00:57 whether that is pulling down files from them or pushing changes to them. 
-01:00 remember we cloned this repository from GitHub using the git clone command, 
-01:05 so there is already a git remote repository associated with this repository, 
-01:09 if we type the git remote command we'll see that there is one 
-01:13 but that doesn't give us a lot of context for what origin is, 
-01:16 I always use the git remote command with the -v option, this is for verbose. 
-01:22 -v describes not only the name of the other repositories, 
-01:26 but also the URL where that repository lives, 
-01:29 what happens if we use the git init command, 
-01:32 to create a new git repository and don't have any remote repositories, 
-01:35 we can clear our way existing remote repositories with the git remote remove command.
-01:40 Now when we type in get remote-v we'll see that there is nothing there, 
-01:43 but we actually wanted origin as a remote repository, 
-01:46 so we can add it back in, git remote add and then the name of the other repository 
-01:52 and then the URL for that repository. 
-01:55 Now again, git remote -v and we'll see we have origin back as a remote repository. 
-02:02 And we can absolutely have more than one git remote repository at a time 
-02:06 so we could say personal server and then add a URL 
+00:01 So far we've only been working with our local Git repository with these commands.
+00:04 But Git is known as a distributed version control system
+00:07 the word distributed is important, because with each Git repository
+00:11 we get not only the current version of the Git repository,
+00:14 we get ever single change that has ever been made in that repository,
+00:18 the setup is different than earlier version control systems
+00:21 where you had to check files in and out of the central repository,
+00:25 now with Git, we can share and sync up remote Git repositories with each other.
+00:30 That is where the "git remote" command comes in.
+00:32 The "git remote" command allows us to control and specify the remote repositories
+00:38 that we want our local Git repository to work with.
+00:44 We added the resources.markdown file to the staging area
+00:47 and then committed it to our local Git repository.
+00:50 Next, we'll use the "git remote" command to specify which repositories
+00:54 not hosted on our local system we want to sync up with,
+00:57 whether that is pulling down files from them or pushing changes to them.
+01:01 Remember, we cloned this repository from GitHub using the "git clone" command,
+01:05 so there is already a Git remote repository associated with this repository,
+01:11 if we type the "git remote" command we'll see that there is one
+01:13 but that doesn't give us a lot of context for what origin is,
+01:16 I always use the "git remote command" with the "-v" option, this is for verbose.
+01:22 "-v" describes not only the name of the other repositories,
+01:26 but also the URL where that repository lives,
+01:29 what happens if we use the "git init" command,
+01:32 to create a new Git repository and don't have any remote repositories,
+01:35 we can clear our way, existing remote repositories, with the "git remote remove" command.
+01:40 Now when we type in "get remote -v", we'll see that there is nothing there,
+01:43 but we actually wanted origin as a remote repository,
+01:46 so we can add it back in, "git remote add" and then the name of the other repository
+01:52 and then the URL for that repository.
+01:56 Now again, "git remote -v" and we'll see we have origin back as a remote repository.
+02:02 And we can absolutely have more than one Git remote repository at a time
+02:06 so we could say personal server and then add a URL
 02:12 that is along with our personal server.
-02:14 So for example I could have a git.matmakai.com 
-02:17 and we can say course demos for that. 
-02:20 Then when we type git remote -v, we'll see we both have origin
-02:24 which is for GitHub and personal server, that's the git remote command, 
-02:28 used to specify other repositories that we want to sync our files 
-02:32 and our file history and the commit history 
-02:36 which contains all of the changes to our files over time. 
-02:39 After setting remote git repositories, we can then use other commands 
-02:43 such as git pull and git push, to sync those changes.  
+02:14 So for example I could have a git.matmakai.com
+02:17 and we can say "course-demos" for that.
+02:20 Then when we type "git remote -v", we'll see we both have origin
+02:24 which is for GitHub and personal server, that's the "git remote" command,
+02:28 used to specify other repositories that we want to sync our files
+02:34 and our file history and the commit history,
+02:36 which contains all of the changes to our files over time.
+02:39 After setting remote Git repositories, we can then use other commands
+02:43 such as "git pull" and "git push", to sync those changes.

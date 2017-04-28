@@ -42,5 +42,5 @@
 02:11 for the Blue Yellow Rockets website. 
 02:14 So you've seen several pictures of the Blue Yellow Rockets website 
 02:17 as I've talked about what we are going to build throughout this course, 
-02:20 this is what we're actually going to put that html css and images together 
+02:20 this is what we're actually going to put that HTML CSS and images together 
 02:23 to make something that looks like our end product. 

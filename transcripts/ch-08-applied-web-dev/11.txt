@@ -50,8 +50,8 @@
 02:52 remember, you can specify the request method
 02:54 that is a match for this particular action, 
 02:57 we are going to say the request method that is a match for this one
-03:00 is not an http verb, so normally this is post get put delete etc, a few other ones.
-03:08 Not an http verb, it is not something the browser is going to send, 
+03:00 is not an HTTP verb, so normally this is post get put delete etc, a few other ones.
+03:08 Not an HTTP verb, it is not something the browser is going to send, 
 03:13 you can put a random gui there just something that is not get post 
 03:16 and that will mean there is going to be no match, regardless of how the URL routing gets setup. 
 03:20 So very simple fix to make sure that there are certain methods that you don't expose,

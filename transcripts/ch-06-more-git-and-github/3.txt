@@ -1,87 +1,85 @@
-00:01 Now that we're familiar with the git status command, 
-00:03 we can start adding files to our git repository, 
-00:06 git has a two step process for committing files, 
-00:08 the two step process requires us to add files and then commit them. 
-00:12 First we'll visualize the git add and git commit commands, 
-00:15 and then we'll see an example on the command line. 
-00:18 Let's say we've got a pretty typical git repository on your local system, 
-00:21 it's got a bunch of files and subfolders with files within them. 
-00:25 In most repositories there would be a read me file,
-00:27 maybe an app.py something that contains your Python code, 
-00:30 and of course you want to make some changes to these files, 
-00:32 so you open them up in your text editor, you make the modifications that you need to, 
-00:35 in this case we'll say that readme.markdown and app.py were modified. 
-00:39 Now what happens when you run the git status command, 
-00:42 assuming that you have at least one commit in your git repository, 
-00:44 you'll have a commit hash, this commit contains the most latest file changes
-00:49 excluding the ones that you just made to read me an app.py. 
-00:52 So when we run the git status command, 
-00:55 it will say that there is untracked modifications to read me an app.py. 
-00:58 The first step for us to get these added to a new commit, 
-01:02 is to run the git add command and point to readme.markdown and app.py.
-01:07 If we run git add with these two files, then the staging area will be updated,
-01:11 and if we run git status again, these files are not yet committed 
-01:15 but they are part of the staging area and ready to be committed. 
-01:18 The next step would be for us to run the git commit command, 
-01:21 we don't have to specify specific files with the git commit command, 
-01:25 because, it's just going to take whatever is in the staging area, it's all or nothing, 
-01:29 when we run git commit and we give it a commit message, 
-01:32 it will create a new commit and that commit has a specific hash, 
-01:35 so for example let's say our new hash is 12ab0f1. 
-01:41 Now this is actually just the shorten version of the full commit hash, 
-01:43 the full commit hash is a much longer length which we'll see in just a moment, 
-01:47 finally, if we run the git status command again,
-01:49 it's going to say that there are no modifications to any files, 
-01:52 because the modifications that we made to read me 
-01:55 and app.py have been committed to our git repository.
-01:58 Let's see what this looks like with an example project. 
-02:01 I'll run through an example of how I use the git add and git commit commands, 
-02:04 as part of creating the Full Stack Python open source project. 
-02:07 Don't worry about falling along for now, 
-02:10 we'll go through an example with the course demos, 
-02:12 git repository in the next video, this example is just to give you an idea
-02:15 of how these commands fit together. 
-02:18 I'm already in the Full Stack Python project 
-02:21 and we can use the git log command to see what the latest commit is, 
-02:23 I mentioned a moment ago that the hash was actually 
-02:26 a part of a much longer hash, this is the full hash for git commit; 
+00:01 Now that we're familiar with the "git status" command,
+00:03 we can start adding files to our Git repository,
+00:06 Git has a two step process for committing files,
+00:08 the two step process requires us to add files and then commit them.
+00:12 First we'll visualize the "git add" and "git commit" commands,
+00:15 and then we'll see an example on the command line.
+00:18 Let's say we've got a pretty typical Git repository on your local system,
+00:21 it's got a bunch of files and subfolders with files within them.
+00:24 In most repositories there would be a README file,
+00:27 maybe an app.py, something that contains your Python code,
+00:30 and of course you want to make some changes to these files,
+00:32 so you open them up in your text editor, you make the modifications that you need to,
+00:35 in this case we'll say that README.md and app.py were modified.
+00:39 Now what happens when you run the "git status" command?
+00:42 Assuming that you have at least one commit in your Git repository,
+00:45 you'll have a commit hash, this commit contains the most latest file changes,
+00:49 excluding the ones that you just made to README an app.py.
+00:52 So when we run the "git status" command,
+00:54 it will say that there is untracked modifications to README an app.py.
+00:58 The first step for us to get these added to a new commit,
+01:02 is to run the "git add" command and point to README.md and app.py.
+01:07 If we run "git add" with these two files, then the staging area will be updated,
+01:12 and if we run "git status" again, these files are not yet committed
+01:15 but they are part of the staging area and ready to be committed.
+01:18 The next step would be for us to run the "git commit" command,
+01:21 we don't have to specify specific files with the "git commit" command,
+01:25 because, it's just going to take whatever is in the staging area, it's all or nothing,
+01:29 when we run "git commit" and we give it a commit message,
+01:32 it will create a new commit and that commit has a specific hash,
+01:35 so for example let's say our new hash is 12ab0f1.
+01:41 Now this is actually just the shortened version of the full commit hash,
+01:44 the full commit hash is a much longer length, which we'll see in just a moment,
+01:47 finally, if we run the "git status" command again,
+01:50 it's going to say that there are no modifications to any files,
+01:52 because the modifications that we made to README
+01:55 and app.py have been committed to our Git repository.
+01:58 Let's see what this looks like with an example project.
+02:01 I'll run through an example of how I use the "git add" and "git commit" commands,
+02:04 as part of creating the Full Stack Python open source project.
+02:08 Don't worry about falling along for now,
+02:10 we'll go through an example with the course demos,
+02:12 Git repository in the next video, this example is just to give you an idea
+02:16 of how these commands fit together.
+02:18 I'm already in the Full Stack Python project
+02:20 and we can use the "git log" command to see what the latest commit is,
+02:23 I mentioned a moment ago that the hash was actually
+02:26 a part of a much longer hash, this is the full hash for "git commit";
 02:30 however the last seven digits are typically enough to identify a unique commit
-02:34 within a git repository, and most recent commit was done on December 19th 
-02:38 when I added some new no sql resources. 
-02:40 We're going to add another commit now. 
-02:43 However, there aren't any changes that we need to commit, 
-02:46 I am going to modify one of the files and regenerate the site, 
-02:49 so that we have some changes. 
-02:53 I'll use a text editor of my choice to open up one of the pages, 
-02:56 which is the change log, I was fortunate enough 
-03:02 to cross the 800 thousand reader mark for the year, 
-03:05 so I'll add a little note about that in here. 
-03:09 
-03:14 So now this one file is modified, so if we type git status it will show us 
-03:18 that this one file is not yet staged to be committed, 
-03:21 however, I don't want to just commit this one file 
-03:24 I also want to regenerate the site 
-03:26 so that new html files are created from the markdown. 
-03:29 In order to regenerate the site I add a shortcut command, 
-03:32 I just type m and it runs a make file which handles everything for me. 
-03:35 And now there should be three files that are modified. 
-03:39 The html file that gets generated and then the original markdown source file, 
+02:34 within a Git repository, and most recent commit was done on December 19th
+02:38 when I added some new NoSQL resources.
+02:41 We're going to add another commit now.
+02:43 However, there aren't any changes that we need to commit,
+02:46 I am going to modify one of the files and regenerate the site,
+02:49 so that we have some changes.
+02:51 I'll use a text editor of my choice to open up one of the pages,
+02:56 which is the change log.
+03:02 I was fortunate enough to cross the 800,000 reader mark for the year,
+03:05 so I'll add a little note about that in here.
+03:15 So now this one file is modified, so if we type "git status", it will show us
+03:18 that this one file is not yet staged to be committed,
+03:21 however, I don't want to just commit this one file
+03:24 I also want to regenerate the site
+03:26 so that new HTML files are created from the markdown.
+03:29 In order to regenerate the site, I add a shortcut command,
+03:31 I just type "m" and it runs a makefile, which handles everything for me.
+03:35 And now there should be three files that are modified.
+03:39 The HTML file that gets generated and then the original markdown source file,
 03:43 now, we can add these three files, I am going to change into the root directory
-03:47 where all and change log.html are located 
-03:51 and then I'll run the git add command with period, 
-03:53 period means add any files in the current directory or subdirectories 
-03:56 for a git repository, there is one flag you should know about, 
-03:58 in case you're deleting files and that would be the -A flag, 
-04:01 this includes everything when you're adding files, 
-04:05 including deleted files which are not normally added 
-04:08 unless you specify the -A argument. 
-04:11 If you already added files to the staging area you can continue to add them
-04:15 over and over again, and it won't change anything, 
-04:17 and it won't commit them until you actually use the git commit command, 
-04:20 let's do that now. We are going to use git command 
-04:22 and we'll use the -m flag in order to specify a message on the command line. 
-04:26 
-04:33 Now we've added and committed some files, and if type git status, 
-04:36 it's going to say there is nothing to commit and we can continue to work on new files. 
-04:39 So that's an example of how I use the git status add 
-04:43 and commit commands together to work on full stack Python and byte size chunks.  
+03:47 where all and change-log.html are located
+03:50 and then I'll run the "git add" command with period,
+03:52 period means add any files in the current directory or subdirectories
+03:56 for a "Git repository", there is one flag you should know about,
+03:58 in case you're deleting files and that would be the -A flag,
+04:02 this includes everything when you're adding files,
+04:05 including deleted files which are not normally added
+04:08 unless you specify the -A argument.
+04:12 If you already added files to the staging area, you can continue to add them
+04:15 over and over again, and it won't change anything,
+04:17 and it won't commit them until you actually use the "git commit" command,
+04:20 let's do that now. We are going to use "git commit"
+04:22 and we'll use the "-m" flag in order to specify a message on the command line.
+04:32 Now we've added and committed some files, and if type "git status",
+04:35 it's going to say there is nothing to commit and we can continue to work on new files.
+04:40 So that's an example of how I use the "git status", "add"
+04:43 and "commit" commands together to work on full stack Python and Byte Size Chunks.

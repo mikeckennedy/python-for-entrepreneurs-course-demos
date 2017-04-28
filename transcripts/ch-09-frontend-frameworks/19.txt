@@ -8,9 +8,9 @@
 00:31 We need to really let our page shine. 
 00:34 So what we are going to do to make that happen is 
 00:37 we are going to take our knowledge of Bootstrap, 
-00:39 our knowledge of html, and put it together with themes. 
+00:39 our knowledge of HTML, and put it together with themes. 
 00:42 So, we could start with this thing on the left, 
-00:45 with basic css in Bootstrap we get to middle, 
+00:45 with basic CSS in Bootstrap we get to middle, 
 00:48 and then with the Bootstrap theme, we get something super compelling 
 00:51 and modern looking here on the right. 
 00:54 One of the wonderful things about themes and Bootstrap themes in particular is 

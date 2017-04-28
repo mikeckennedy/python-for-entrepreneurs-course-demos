@@ -37,7 +37,7 @@
 02:11 Now notice we can set the location, we can set the details, the headers, comments, 
 02:16 all sorts of stuff but we are just going to say the location is the  to_url. 
 02:20 But if it's not permanent, we are going to raise the different type of exception, 
-02:24 http found so I know you are looking for this but I found it over there 
+02:24 HTTP found so I know you are looking for this but I found it over there 
 02:28 so go redirect over to this to_url. 
 02:32 So PyCharm is still in this, this can be static, let's just tell it, hey don't bother me. 
 02:37 Don't make it look like there is something wrong with this, 

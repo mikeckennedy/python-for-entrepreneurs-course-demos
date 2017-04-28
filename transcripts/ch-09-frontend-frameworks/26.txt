@@ -15,7 +15,7 @@
 00:44 but now, we want to do things a little bit differently. 
 00:49 Like I said, we are going to work with this a b stuff in a better way 
 00:53 but I'll just put b for the moment. Inside here instead of having this, 
-00:56 we are going to have some different html and I am just going to paste it, 
+00:56 we are going to have some different HTML and I am just going to paste it, 
 00:59 like I said, not worth watching me type, I'll just copy. 
 01:03 So what we are going to do is actually we want to get rid of that one, 
 01:07 now what we want to do is we want to have a section that has that picture, 

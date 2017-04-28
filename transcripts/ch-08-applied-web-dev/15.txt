@@ -1,4 +1,4 @@
-00:02 It's time to write some code that actually generates some interesting html, 
+00:02 It's time to write some code that actually generates some interesting HTML, 
 00:06 not just the static stuff that we've been playing with. 
 00:09 So I made a few changes to the web app, off screen,
 00:12 just so we're ready and you don't have to watch me do a bunch of boiler plate stuff. 
@@ -9,7 +9,7 @@
 00:30 through using that index page template as the renderer 
 00:34 right now we are returning nothing, 
 00:36 we are going to add something more interesting here in a moment, 
-00:41 I have also mapped this album controller to a set of urls 
+00:41 I have also mapped this album controller to a set of URLs 
 00:45 and I've added this add controller routes method here 
 00:48 kind of like I showed you in Talk Python, 
 00:51 over here I am saying for any given controller
@@ -23,7 +23,7 @@
 01:27 So we have this albums controller, this index method which maps to just /albums, through this, 
 01:35 and we've got this basic code here, I've updated the fav icons 
 01:38 we are not using the default one anymore, we'll see that in a moment 
-01:41 and we've added some basic html to this page, 
+01:41 and we've added some basic HTML to this page, 
 01:45 here is our little nav section up here and we just have these albums, 
 01:49 so we are going to come back and talk about this nav section in a moment, 
 01:53 for now let's talk about getting some interesting data over here, 

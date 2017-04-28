@@ -1,36 +1,35 @@
-00:01 We learned the conceptual idea behind git add and git commit. 
-00:04 Let's dive back into the command line, so we can test out the git add command. 
-00:07 I am in the Python For Entrepreneurs course demos git repository. 
+00:01 We learned the conceptual idea behind "git add" and "git commit".
+00:03 Let's dive back into the command line, so we can test out the Git add command.
+00:07 I am in the Python For Entrepreneurs course demos Git repository.
 00:11 But there is nothing that's changed in this repository
-00:13 so when I run the git status command it tells me that there is nothing to commit. 
-00:16 This repository contains all the source code for the entire course 
-00:20 and if you look at all the directories, you'll see the example code, 
-00:23 for each of the chapters, now this chapter on git doesn't have any example code 
-00:27 but I am going to add some resources that I think are really useful 
-00:30 when you're getting started with git. 
-00:32 I am going to create a new directory, this will be for chapter six, 
-00:36 we'll move in, and I am going to create a resources file. 
-00:40 We'll just add a single resource to this file for now, 
-00:45 that way we can test the git add command. 
-00:49 
-00:56 This is just a link to the Full Stack Python source control 
-00:59 page that has many resources, not only for git 
-01:02 but for the general source control concept as well. 
-01:05 We'll save this file and then quit out and now when we type git status, 
-01:09 we'll see that we have a single file that needs to be changed, 
-01:12 but it seems a little odd, it's not pointing to this specific file 
-01:15 that we just created resources.markdown, what git is telling us 
-01:18 is that there is actually a new directory that has files within it that needs to be added, 
-01:21 I'll move up one directory, and now I'll explicitly specify 
-01:25 we want to add the git resources directory. 
-01:28 When we type git status, we'll see that there is a new file in a new directory 
-01:31 that needs to be committed to the repository. 
-01:34 We've set up the file for staging, what happens if we accidentally added this 
-01:37 to our staging area, that is where the git reset command comes in handy, 
-01:41 we can type git reset head and now, we're back to where we were before, 
-01:45 there is a new directory, a new file, but they are not in the staging area. 
-01:49 We'll add this again and this time we'll use the period which says 
-01:52 add every single change that is from this directory 
-01:55 and every subdirectory within this directory. 
-01:58 Git status command, and now we're ready to commit this file
-02:02 and the new directory, but we'll handle that in the next video. 
+00:13 so when I run the "git status" command it tells me that there is nothing to commit.
+00:17 This repository contains all the source code for the entire course
+00:20 and if you look at all the directories, you'll see the example code,
+00:23 for each of the chapters, now this chapter on Git doesn't have any example code
+00:27 but I am going to add some resources that I think are really useful
+00:30 when you're getting started with Git.
+00:32 I am going to create a new directory, this will be for chapter six,
+00:37 we'll move in, and I am going to create a resources file.
+00:43 We'll just add a single resource to this file for now,
+00:47 that way we can test the "git add" command.
+00:56 This is just a link to the Full Stack Python source control
+00:59 page that has many resources, not only for Git
+01:02 but for the general source control concept as well.
+01:05 We'll save this file and then quit out and now when we type "git status",
+01:08 we'll see that we have a single file that needs to be changed,
+01:11 but it seems a little odd, it's not pointing to this specific file
+01:14 that we just created resources.markdown, what Git is telling us
+01:17 is that there is actually a new directory that has files within it that needs to be added,
+01:21 I'll move up one directory, and now I'll explicitly specify
+01:25 we want to add the Git resources directory.
+01:28 When we type "git status", we'll see that there is a new file in a new directory
+01:31 that needs to be committed to the repository.
+01:34 We've set up the file for staging, what happens if we accidentally added this
+01:37 to our staging area, that is where the "git reset" command comes in handy,
+01:41 we can type "git reset HEAD" and now, we're back to where we were before,
+01:45 there is a new directory, a new file, but they are not in the staging area.
+01:49 We'll add this again and this time we'll use the period, which says
+01:52 add every single change that is from this directory
+01:55 and every subdirectory within this directory.
+01:58 "git status" command, and now we're ready to commit this file
+02:02 and the new directory, but we'll handle that in the next video.

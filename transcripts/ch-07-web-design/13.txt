@@ -2,15 +2,15 @@
 0:05 and layout works in conjunction with the box model,
 0:08 to basically determine how things look on the screen where they get placed, 
 0:12 when there is new line wraps and so on. 
-0:14 If you understand a few things about css like the layout, 
+0:14 If you understand a few things about CSS like the layout, 
 0:17 the box model and the selectors, you are like 80% of the way there. 
 0:22 So, let's take a pretty cool example here, here we have a list of items, 
 0:25 they are actually hyper links that go to the various parts of our pages, 
-0:29 home, css selectors, css box model layout and float items, 
+0:29 home, CSS selectors, CSS box model layout and float items, 
 0:33 so these should be pretty familiar to you by now, 
 0:36 that's just the little list that's on the home screen but notice this is on /layout,
 0:40 there is no extra stuff, it's really just this little bit on the screen. 
-0:43 So we are going to do just a little bit of css and tweak with the layout 
+0:43 So we are going to do just a little bit of CSS and tweak with the layout 
 0:46 to turn this into a full on navigational menu. 
 0:50 Now, just to be clear, this navigational menu is probably not 
 0:54 what you wanted to do for real navigation, 

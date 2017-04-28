@@ -1,4 +1,4 @@
- 00:01 Let's review html 5 validation. 
+ 00:01 Let's review HTML 5 validation. 
 00:06 So there is a couple of things that we can do
 00:09 to help our users understand what they should put in here. 
 00:12 First of all, we've added required so here this is just for the sign in, 

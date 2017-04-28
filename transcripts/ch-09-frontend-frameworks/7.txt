@@ -11,11 +11,11 @@
 00:35 actually using the placeholders rather than the separate labels that apply 
 00:38 to the areas where you type in your text. 
 00:41 But notice, down here at the bottom, it's very clear what they want you to do. 
-00:45 They want you to click "create account" and if you look at this in html, 
+00:45 They want you to click "create account" and if you look at this in HTML, 
 00:49 this is actually a <button type= "submit">,  it comes from a form. 
 00:54 Up here, we also have something that looks like a button, 
 00:57 and this is just a hyperlink to go log in. 
-01:00 So, the concept of a button doesn't have to tie to the html thing- the button, 
+01:00 So, the concept of a button doesn't have to tie to the HTML thing- the button, 
 01:04 more correctly, it should tie to some kind of user action. 
 01:07 Sometimes that's submitting the form, sometimes that's going somewhere. 
 01:13 So, let's take a quick look at Talk Python Training, 
@@ -44,14 +44,14 @@
 02:38 At least if they just subscribe to the podcast and never came back here, 
 02:41 that would make me happy. 
 02:43 Down here you can see another call to action, now, just like in the Wistia example, 
-02:47 up here, this is actually a button if we look at the html you'll see that it's a button, 
+02:47 up here, this is actually a button if we look at the HTML you'll see that it's a button, 
 02:52 but down here, this is just a hyperlink that actually opens in a new tab 
 02:55 over to Talk Python To Me. 
 02:58 So, let's look behind the scenes how that works. 
 03:01 So you'll see that buttons are easy in Bootstrap. 
 03:03 Here is that subscribed form, and I've styled it so it's a nice tight little thing here, 
-03:09 if we look at the html you can see we've got a form, 
-03:12 with an input type equals html, required, all that kind of stuff. 
+03:09 if we look at the HTML you can see we've got a form, 
+03:12 with an input type equals HTML, required, all that kind of stuff. 
 03:16 But what's relevant for this discussion is we have a button, 
 03:19 it has a type equals submit, 
 03:22 and then we're using the bootstrap classes that say 

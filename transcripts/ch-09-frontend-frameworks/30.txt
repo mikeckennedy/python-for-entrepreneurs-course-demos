@@ -19,7 +19,7 @@
 01:12 and you don't have to do this, this is like the work a computer can do. 
 01:16 What we can do is we can actually tell our view hey, 
 01:19 I would like you to just manage this for me, so how do we do that? 
-01:23 Probably, you could also do some kind of cool alternating css JQuery thing, 
+01:23 Probably, you could also do some kind of cool alternating CSS jQuery thing, 
 01:27 but we are just going to do it straight up in Python. 
 01:30 So remember our view, or our controller is over here. 
 01:34 We want to give this view some capability, remember when the page is rendered, 
@@ -51,7 +51,7 @@
 03:37 what it's going to do is toggle its mode from true to false, true to false, true to false, 
 03:42 and let's actually-
 03:49 let's do it like this so it starts with whatever its real value is not the opposite. 
-03:53 And it's going to return this which we can sue as css, class. 
+03:53 And it's going to return this which we can sue as CSS, class. 
 03:56 Okay, so up here, we are going to say get me the alternate style 
 04:01 and we are just going to put this on every slice, 
 04:03 and when we duplicate one of these slices, like who cares, 
@@ -86,15 +86,15 @@
 05:58 forget this section. It's out, now if I run it, look the site works 
 06:02 from the design perspective perfectly. 
 06:05 And so we can do just little bits of I don't know what you think of them, 
-06:10 as like html helpers, that our templates can use, 
+06:10 as like HTML helpers, that our templates can use, 
 06:13 Chameleon templates can reach back and go hey,
 06:16 I know you can keep track of state because you are an object, 
 06:19 you are an instance of an object, and you can run Python code, 
 06:21 so just do a little bit of like more advanced computing 
 06:24 then it's easy to do in a set of Chameleon templates. 
 06:28 So this technique is usable for alternating rows like I said, 
-06:31 there is like some css and other things you can do, 
-06:34 some Javascript to pull that off, that's not a huge deal, 
+06:31 there is like some CSS and other things you can do, 
+06:34 some JavaScript to pull that off, that's not a huge deal, 
 06:37 but this technique is much more broadly applicable than just for alternating rows 
 06:43 so I wanted to make sure to show it to you, and of course, 
 06:46 this is how it works on my website. 

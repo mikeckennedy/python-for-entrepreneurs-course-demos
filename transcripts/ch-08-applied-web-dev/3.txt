@@ -17,7 +17,7 @@
 1:01 a handler called  account and then there might be a register log in log out. 
 1:06 And those might be all grouped into the same class 
 1:08 and you can imagine there will be other functionality private methods 
-1:12 and what not that will be used across those different action methods 
+1:12 and whatnot that will be used across those different action methods 
 1:15 as you work with users. 
 1:18 We also see there is less routing work.
 1:21 Now, there is two ways to reduce the routing work, 

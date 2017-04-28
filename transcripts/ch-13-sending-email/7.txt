@@ -1,4 +1,4 @@
-00:02 We've seen that sending templated emails that is a plain html file 
+00:02 We've seen that sending templated emails that is a plain HTML file 
 00:07 with a few little replacement pieces of text in here is incredibly easy in Python. 
 00:13 So, here is a fragment from the email template I use 
 00:17 when you purchase a course from me at Talk Python training. 
@@ -18,16 +18,16 @@
 01:11 So this is really easy, how do we load this up and actually send it? 
 01:15 This method sort of combines two of the things we did, 
 01:18 it's a little harder to use but if we want to get a template from a file 
-01:22 so we'd pass in the html file name in a replacement dictionary, 
+01:22 so we'd pass in the HTML file name in a replacement dictionary, 
 01:27 and we'll just read the text in, not all emails are going to have a replacement, 
 01:31 like maybe you are going to send hey thanks for signing up 
 01:34 and that is the same for everybody, you don't have to pass like some dictionary, 
-01:38 you can just send, just return the html. 
+01:38 you can just send, just return the HTML. 
 01:40 But if we do have a replacement dictionary we are going to use
 01:44 my little curly syntax {some text name} 
 01:47 and we'll just do a replace straight up string replace on all the keys in the dictionaries 
 01:52 with their various values and return it. 
-01:54 And that is it, you are sending html email out of files that you can manage separately 
+01:54 And that is it, you are sending HTML email out of files that you can manage separately 
 02:00 that are not in code, that are not in a database, that are very simple for people 
 02:03 who are not programmers or just want to use design tools 
-02:06 like html editors on it. 
+02:06 like HTML editors on it. 

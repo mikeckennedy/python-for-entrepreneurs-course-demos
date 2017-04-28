@@ -6,7 +6,7 @@
 00:23 into our web application, the one that I recommend 
 00:27 and the one that I've been using for a long time is called Rollbar. 
 00:31 And, Rollbar is cool because it works across many different technologies 
-00:34 like it's great with Python, but it also works with NoJs, client side Javascript .Net, 
+00:34 like it's great with Python, but it also works with NoJs, client side JavaScript .Net, 
 00:39 you name it, Ruby, lots of different platforms are supported, 
 00:43 so you can sort of bring all of your monitoring from different applications 
 00:47 together even if you are not using Python for everything. 

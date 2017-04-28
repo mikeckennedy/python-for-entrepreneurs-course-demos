@@ -34,8 +34,8 @@
 01:54 this is how it looks with no Bootstrap at all, right?
 01:58 Okay. But there are a few things that we need to work on first of all, 
 02:02 that these things are touching each other, that is not super good 
-02:06 so let's go fix that and normally, this would be in the css file
-02:09 but just because these are standalone html pieces, 
+02:06 so let's go fix that and normally, this would be in the CSS file
+02:09 but just because these are standalone HTML pieces, 
 02:12 let me just stick it in here so let's say any time we have a form, 
 02:15 and the form has an input, or the form has a text area
 02:20 or it has a button, any of those things. 
@@ -53,7 +53,7 @@
 02:58 and this is looking pretty good but notice, 
 03:00 it's fully across the screen, now, it depends on the container it's in 
 03:04 or whether or not this is okay, if you look at Bootstrap, 
-03:07 if you go over here on Bootstrap and you check out the css thing, 
+03:07 if you go over here on Bootstrap and you check out the CSS thing, 
 03:11 it says look, they have decided to be mobile first, 
 03:15 and so, and you can kind of tell like this is more or less built to look good 
 03:19 on something that is like that size, it looks less good on something like this, 
@@ -69,7 +69,7 @@
 03:56 so we just want to limit how much it grows. 
 03:59 So, to me, this is a pretty good looking form already, 
 04:01 and all we've done is use the inputs 
-04:05 and stuff in the text area is form-control plus a little css 
+04:05 and stuff in the text area is form-control plus a little CSS 
 04:11 to set the padding and to set the max width 
 04:14 and for the buttons we've just used btn, btn- primary 
 04:18 or you could use danger, you could use whatever, success, 

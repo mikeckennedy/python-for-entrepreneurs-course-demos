@@ -1,73 +1,73 @@
-00:01 Once new, modified or deleted files are in the git staging area, 
-00:04 then we need to use the git commit command 
-00:07 to permanently track those changes as part of a specific git commit. 
-00:10 Unlike the git add command 
-00:13 the git commit command does not specify particular files, 
-00:17 git commit will simply take all of the files that are in the staging area 
-00:20 and add them to the next commit, we use the resources.markdown file 
-00:24 which is already in our staging area from the last video, 
-00:28 as an example, after typing git commit you'll see this screen, 
+00:01 Once new, modified or deleted files are in the Git staging area,
+00:04 then we need to use the "git commit" command
+00:06 to permanently track those changes as part of a specific Git commit.
+00:12 Unlike the "git add" command
+00:13 the "git commit" command does not specify particular files,
+00:17 "git commit" will simply take all of the files that are in the staging area
+00:20 and add them to the next commit, we use the resources.markdown file,
+00:25 which is already in our staging area from the last video,
+00:28 as an example, after typing "git commit", you'll see this screen,
 00:31 which will ask you to enter a commit message,
-00:33 the complexity of the commit message is going to depend 
-00:36 on how many changes you made; typically it's a good practice 
-00:39 to just make small changes at a time. 
-00:42 Your repositories can have as many commits as you want, 
+00:33 the complexity of the commit message is going to depend
+00:35 on how many changes you made; typically it's a good practice
+00:39 to just make small changes at a time.
+00:42 Your repositories can have as many commits as you want,
 00:45 so just adding a single file or a few files at a time,
-00:49 many times a day is a completely acceptable 
-00:52 and quite frankly a really good practice to get in a habit of. 
-00:56 What should you type when you see the git commit message screen? 
-00:59 In this case, I've only changed a single file, so we can have 
-01:03 a very simple commit message, once you've entered your message, 
-01:06 save the file, and then we can quit out of here and now our commit is complete. 
+00:49 many times a day is a completely acceptable
+00:52 and quite frankly a really good practice to get in a habit of.
+00:56 What should you type when you see the "git commit" message screen?
+00:59 In this case, I've only changed a single file, so we can have
+01:02 a very simple commit message, once you've entered your message,
+01:06 save the file, and then we can quit out of here and now our commit is complete.
 01:10 Writing commit message is a bit of an art, let's talk about how to do it well.
-01:15 First off, what should be in a commit message, you should give context 
-01:19 on the changes that you've made to other developers, 
-01:22 now, these other developers may actually be you six or twelve months in the future, 
-01:26 the commit message should be the one line that allows you 
-01:29 to jog your memory or understand if you can't remember 
+01:15 First off, what should be in a commit message, you should give context
+01:19 on the changes that you've made to other developers,
+01:22 now, these other developers may actually be you six or twelve months in the future,
+01:26 the commit message should be the one line that allows you
+01:29 to jog your memory or understand if you can't remember
 01:33 what this commit was all about.
-01:36 Why is this group of files together, as part of a single commit. 
-01:41 It will take some practice to get used to giving context to messages 
-01:45 in just a short phrase, but, go about it in an intentional way, 
-01:49 and be consistent in the way that you write your messages, 
-01:52 the first line of your commit message should be the title 
-01:55 and that should be less than 50 characters. 
-01:58 If you can't express everything that you want the reader 
-02:02 to know about this commit message, in less than 50 characters, 
-02:05 come up with that short title, give a blank line 
-02:08 and then write the rest of your commit message. 
-02:11 In many cases, you're only going to be adding one or two files, 
-02:15 maybe just making a simple change and in that case you can use the -m flag, 
-02:20 git commit -m and then pass a string in with your commit message, 
-02:24 it won't take you to the text editor where you are going to enter your commit message,
-02:28 you will immediately enter your commit message on the command line, 
-02:31 when you use the -m flag. 
-02:33 Those are some principles behind git commit messages, 
-02:36 let's take a look at few examples of good and bad commits. 
-02:39 A really great example, the git commit title would be "remove deprecated API calls", 
+01:36 Why is this group of files together, as part of a single commit.
+01:41 It will take some practice to get used to giving context to messages
+01:45 in just a short phrase, but, go about it in an intentional way,
+01:49 and be consistent in the way that you write your messages,
+01:52 the first line of your commit message should be the title
+01:55 and that should be less than 50 characters.
+01:58 If you can't express everything that you want the reader
+02:02 to know about this commit message, in less than 50 characters,
+02:05 come up with that short title, give a blank line
+02:08 and then write the rest of your commit message.
+02:11 In many cases, you're only going to be adding one or two files,
+02:15 maybe just making a simple change and in that case you can use the -m flag,
+02:20 "git commit -m" and then pass a string in with your commit message,
+02:25 it won't take you to the text editor where you are going to enter your commit message,
+02:28 you will immediately enter your commit message on the command line,
+02:31 when you use the -m flag.
+02:33 Those are some principles behind "git commit" messages,
+02:36 let's take a look at few examples of good and bad commits.
+02:40 A really great example, the "git commit" title would be "remove deprecated API calls",
 02:44 at high level, you're removing some functionality,
-02:48 a contrived bad example would be "January 12th work", 
-02:52 first off the commit message already has a time stamps, 
-02:55 you don't need to include that in your commit title, and second of all, 
-02:58 it just doesn't give you any context for what happened. 
-03:01 How is January 12th work any different than January 13th work? 
-03:04 Another solid example of the commit title would be "fix typos in readme", 
-03:09 it's simple to the point and just tells you hey, this is a commit 
-03:12 in which I made one single change to the read me file, 
-03:15 the counter to this great example would be the bad example, 
-03:17 "Kelsys grammar checking", there is no context for who Kelsey is 
-03:20 and grammar checking, what actually changed. 
-03:23 Finally, another great example would be "simplify image filter processing", 
-03:27 this looks like some sort of feature change that is going to be relevant 
-03:30 if you're working on that specific repository and you know the files 
-03:34 that are in that repository; a bad counter example would be just 
-03:37 "changing code in the zeta module", well first off, 
-03:40 we'll know which files are changed as part of the commit, 
-03:43 and second thing is changing code doesn't give us any context, 
-03:45 of course we're changing code, this is git repository, this is a commit, 
-03:49 what actually changed, in this case, 
+02:48 a contrived bad example would be "January 12th work",
+02:52 first off, the commit message already has time stamps,
+02:55 you don't need to include that in your commit title, and second of all,
+02:58 it just doesn't give you any context for what happened.
+03:01 How is January 12th work any different than January 13th work?
+03:04 Another solid example of the commit title would be "fix typos in README",
+03:09 it's simple to the point and just tells you "hey, this is a commit
+03:12 in which I made one single change to the README file",
+03:15 the counter to this great example would be the bad example,
+03:17 "Kelsys grammar checking", there is no context for who Kelsey is
+03:20 and grammar checking, what actually changed?
+03:23 Finally, another great example would be "simplify image filter processing",
+03:27 this looks like some sort of feature change that is going to be relevant
+03:30 if you're working on that specific repository and you know the files
+03:34 that are in that repository; a bad counter example would be just
+03:37 "changing code in the zeta module", well first off,
+03:39 we'll know which files are changed as part of the commit,
+03:42 and second thing is changing code doesn't give us any context,
+03:45 of course we're changing code, this is Git repository, this is a commit,
+03:49 what actually changed, in this case,
 03:52 this message doesn't give us any context at all.
-03:55 So now you know how to use the git commit command, 
-03:58 and you learned the difference between good and bad commit titles, 
-04:01 with that, you know the git status, add and commit commands
-04:04 which we'll be using constantly as you work on your projects. 
+03:55 So now you know how to use the "git commit" command,
+03:57 and you learned the difference between good and bad commit titles,
+04:00 with that, you know the "git status", "add" and "commit" commands
+04:04 which we'll be using constantly as you work on your projects.

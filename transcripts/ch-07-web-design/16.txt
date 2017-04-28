@@ -4,7 +4,7 @@
 0:12 and message and other stuff to float left, and then, after that,
 0:15 we want to go back to normal layout put the main content below. 
 0:19 All right, so how does this work with float? 
-0:21 Here is our css file, we can just tell it hey image, float to the right, 
+0:21 Here is our CSS file, we can just tell it hey image, float to the right, 
 0:25 and like I said before, you are going to probably need more specific
 0:28 like image #cat if the cat had cat id or something like this, right, 
 0:35 you don't want to float all the images, 

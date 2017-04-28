@@ -10,11 +10,11 @@
 00:35 that it was a proper email address, we probably should do that. 
 00:39 however, let's go back over here and see if we can take 
 00:42 a little bit of the load off the server and make it a little nicer experience for our users, 
-00:47 let's add client side validation using html 5, this is super easy folks, 
-00:51 so all of these fields, are going to be required, and in html 5 in modern browsers, 
+00:47 let's add client side validation using HTML 5, this is super easy folks, 
+00:51 so all of these fields, are going to be required, and in HTML 5 in modern browsers, 
 00:57 we can say that they are required by adding the required attribute. 
 01:01 Literally, this is all we have to do. Like this. 
-01:04 Now, if I come over here and I reload, reload the html and I hit go, 
+01:04 Now, if I come over here and I reload, reload the HTML and I hit go, 
 01:09 notice all the required ones turn red and fill out 
 01:12 and if I bring up the server here again, as I click this, 
 01:16 notice, there is no going to the server, this is purely client side 
@@ -22,7 +22,7 @@
 01:24 How nice, huh? 
 01:27 The other thing we want to do is we want to validate 
 01:30 that this is not just required up here, but is an email, 
-01:33 so in html 5 we have a few new types, one of them being email. 
+01:33 so in HTML 5 we have a few new types, one of them being email. 
 01:38 So if I refresh this again, I can come over here and I can put the, the, if I say go, 
 01:45 well it looks like 1password thinks I am creating account, 
 01:48 that's not what I am up to, go away. 
@@ -50,10 +50,10 @@
 02:59 So you can see with a little bit of required and a little bit of type  equals email,
 03:04 everything is good, you might wonder 
 03:06 hey should I just skip this whole service side validation thing 
-03:10 and put it all in here in a Javascript or html 5? 
-03:13 No, it's super easy to take these things and just http post them to the server, 
+03:10 and put it all in here in a JavaScript or HTML 5? 
+03:13 No, it's super easy to take these things and just HTTP post them to the server, 
 03:18 as some sort of app or something like requests, 
 03:21 and entirely skip the whole client side validation 
 03:23 so you are going to need the server side validation too, 
 03:26 but you will probably give your users a slightly nicer experience 
-03:29 with the little sprinkling of html 5 validation. 
+03:29 with the little sprinkling of HTML 5 validation. 

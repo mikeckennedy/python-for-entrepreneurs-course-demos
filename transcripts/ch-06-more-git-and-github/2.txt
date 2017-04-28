@@ -1,36 +1,36 @@
-00:01 We're going to dig into all the fundamental commands that are part of git. 
-00:04 You can think of commands like git status as the building blocks
-00:07 for how to use the git version control system;
-00:10 now the best way to get comfortable with these commands is 
-00:13 just to get to the command line and start working. 
-00:16 At the end of the previous chapter, we cloned the git repository
-00:19 that has all the demos for this course, 
-00:21 change into that directory if you are not already there, because we cloned 
-00:24 a git repository, this is already enabled to use all the git commands; 
-00:27 git status tells us all the changes that have happened in the git repository 
-00:30 since our last commit. In this case, there is nothing to commit 
-00:33 because we just cloned a repository, we haven't changed any files. 
-00:36 If we were to create a new file in this repository, 
-00:39 then git status would show us that that file has not yet been committed to the index. 
-00:42 Let's do that now, I am going to say touch new file, 
-00:46 and this is just an example of a generic file, and now if we say git status,
-00:49 it's going to say this file, new file is untracked. 
-00:52 Every file that is new or has modifications that has not yet been added to git 
-00:56 will show up in this list. If we delete this file 
-00:59 before it's added to the git repository, then it will disappear from this list. 
-01:03 So if we remove new file, and then again we type git status we'll see 
-01:09 nothing to commit, there is no list of new files or file modifications 
-01:12 because within this directory and all the subdirectories that git is tracking 
-01:16 in this repository, nothing has been changed, that is really all there is to it, 
-01:19 when you're working with the git status command. 
-01:22 Git status is one of those commands you don't even really think about all that much, 
-01:25 when you've been using git for a long time, it just becomes an intuitive command 
-01:28 so that you can check which files you've been working on 
-01:31 and what you need to add and commit to your git repository. 
-01:33 One handy feature you can use to get yourself familiar with all these commands 
-01:36 and the flags that you can set on them, is to use git--help
-01:41 and then the name of the command, so in our case, status. 
+00:01 We're going to dig into all the fundamental commands that are part of Git.
+00:04 You can think of commands like "git status" as the building blocks
+00:07 for how to use the Git version control system;
+00:10 now the best way to get comfortable with these commands is
+00:12 just to get to the command line and start working.
+00:15 At the end of the previous chapter, we cloned the Git repository
+00:18 that has all the demos for this course,
+00:20 change into that directory if you are not already there, because we cloned
+00:23 a Git repository, this is already enabled to use all the Git commands;
+00:26 "git status" tells us all the changes that have happened in the Git repository
+00:30 since our last commit. In this case, there is nothing to commit,
+00:32 because we just cloned a repository, we haven't changed any files.
+00:36 If we were to create a new file in this repository,
+00:38 then "git status" would show us that that file has not yet been committed to the index.
+00:42 Let's do that now, I am going to say "touch newfile",
+00:46 and this is just an example of a generic file, and now if we say "git status",
+00:49 it's going to say this file, newfile is untracked.
+00:52 Every file that is new or has modifications that has not yet been added to Git
+00:56 will show up in this list. If we delete this file
+00:59 before it's added to the Git repository, then it will disappear from this list.
+01:03 So if we remove new file, and then again we type "git status", we'll see
+01:08 nothing to commit, there is no list of new files or file modifications
+01:12 because within this directory and all the subdirectories that Git is tracking
+01:15 in this repository, nothing has been changed, that is really all there is to it,
+01:19 when you're working with the "git status" command.
+01:21 Git status is one of those commands you don't even really think about all that much,
+01:24 when you've been using Git for a long time, it just becomes an intuitive command
+01:27 so that you can check which files you've been working on
+01:29 and what you need to add and commit to your Git repository.
+01:33 One handy feature you can use to get yourself familiar with all these commands
+01:36 and the flags that you can set on them, is to use "git --help"
+01:41 and then the name of the command, so in our case, "status".
 01:44 This brings up the man page that will explain what the command does
-01:48 and any options that are available as arguments, scroll through the page 
-01:51 using the space bar, and type q in order to escape, that is git status, 
-01:55 it's one of our helpful building blocks for working with git. 
+01:48 and any options that are available as arguments, scroll through the page
+01:51 using the space bar, and type "q" in order to escape, that is "git status",
+01:55 it's one of our helpful building blocks for working with Git.

@@ -7,7 +7,7 @@
 00:23 now, a user comes along and maybe they want to register for the site,
 00:27 so they are going to come along 
 00:30 and they are going to do a get request to accounts/register. 
-00:32 And that's going to bring down the html, the form that you saw in the previous video 
+00:32 And that's going to bring down the HTML, the form that you saw in the previous video 
 00:36 that has the inputs and buttons and actions and all that sort of stuff. 
 00:40 The user is going to edit this locally, and then once they are ready, 
 00:44 they are going to post that data, that form back to the server.
@@ -18,7 +18,7 @@
 01:05 we want to take them somewhere, maybe we want to take them to our catalogue 
 01:08 or we want to take them to their account page 
 01:11 where they can set their picture or whatever, 
-01:13 but we are going to do a redirect, an http code 3 or 2 redirect, 
+01:13 but we are going to do a redirect, an HTTP code 3 or 2 redirect, 
 01:18 in this case we are going to redirect them to a welcome page 
 01:21 that helps them get started with our site
 01:24 so this is how almost all forms work, get, to get the original form, you edit it, 

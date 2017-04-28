@@ -10,7 +10,7 @@
 0:30 All right, so you saw this picture in the introduction, 
 0:33 and here we just have these items, 
 0:36 you can there is really not much going on and it's really just this ordered list, OK. 
-0:41 The other thing we want to observe is we want to include in this layout css 
+0:41 The other thing we want to observe is we want to include in this layout CSS 
 0:44 and of course we are using our cache id thing so we don't have to worry about that.
 0:47 Right, now if we look over here, this just says make the fonts big, 
 0:51 and put no spacing or no padding in the body. 
@@ -27,13 +27,13 @@
 1:28 other than their little number there. 
 1:31 What we want to do is tell them don't take up the whole thing,
 1:33 just take up as much space as you need to. 
-1:35 so we can come down here and say display this is basically the css command 
-1:39 or css property that we are going to focus on for this demo is the display. 
+1:35 so we can come down here and say display this is basically the CSS command 
+1:39 or CSS property that we are going to focus on for this demo is the display. 
 1:43 So, there is things like block and there is this list item which is out, 
 1:48 it's actually displayed right now but it's also behaving more like a block if you will. 
 1:52 What we want to do is say look, 
 1:55 we'd still like to apply the box model to these list items, 
-1:57 but we want them to flow kind of like words in html do, 
+1:57 but we want them to flow kind of like words in HTML do, 
 2:01 and the word wrap and not taking new lines on their own 
 2:03 just sort of take however space they need.
 2:06 So we can do that by just setting them to inline block. 
@@ -41,7 +41,7 @@
 2:13 now let's go over here and let's set this to be 
 2:17 my favorite dark color-222 and run it again,
 2:21 this is all right, we'd like to set the color here 
-2:24 and this is something that you'll see that's a little bit funky in css. 
+2:24 and this is something that you'll see that's a little bit funky in CSS. 
 2:27 Sometimes you try to set the color and what these are actually are hyperlinks, 
 2:31 and so I can come down here and I can say you know what, 
 2:34 I want the color of everything in there to be let's say white,

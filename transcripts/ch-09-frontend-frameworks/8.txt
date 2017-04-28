@@ -14,7 +14,7 @@
 00:55 to apply different looking feel without actually changing the images. 
 00:59 So we can change their shape and style, not in some image editing software
 01:03 like Pixelmator or Photoshop or something like that, 
-01:06 but just apply in css and that way if you change your mind 
+01:06 but just apply in CSS and that way if you change your mind 
 01:10 you maybe want to circle at one point 
 01:13 then you would like it to have just a little polaroid border later,
 01:16 you can do that and you don't have to actually redesign the image. 
@@ -29,7 +29,7 @@
 01:55 well, we come over here to say this is an image, and it is responsive. 
 02:00 That's all we have to do. 
 02:03 Because we are including Bootstrap it defines its class, image responsive, 
-02:06 and this does not use Javascript, it just uses css styles. 
+02:06 and this does not use JavaScript, it just uses CSS styles. 
 02:09 So now, if I refresh, you can see it fits into this area, 
 02:13 and as it gets bigger, it sort of fits the full screen. 
 02:17 Now, it's huge, because all that is on this page, is the image,
@@ -58,7 +58,7 @@
 03:51 you can see I have these are image rounded over here,
 03:55 and there it is again, right, super easy, you could set the border radius and so on, 
 03:59 but image rounded lets you put the idea of rounded images, 
-04:04 rounded edges on the image, but then tweak that with css on what exactly that means. 
+04:04 rounded edges on the image, but then tweak that with CSS on what exactly that means. 
 04:10 Now over here, very common thing is to have a circle, 
 04:13 maybe we have one on this page, let's see, 
 04:16 if I go to about, I think I do, yeah, there, 
@@ -103,4 +103,4 @@
 06:52 of course you need to trim up your images and so on, 
 06:55 but before you overdo it trying to create circles, and rounded edges and whatnot, 
 07:00 be sure to leverage these Bootstrap styles 
-07:03 so most of the design of your image can actually be done in css. 
+07:03 so most of the design of your image can actually be done in CSS. 
