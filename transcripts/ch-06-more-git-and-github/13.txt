@@ -36,7 +36,7 @@
 01:48 so that not only you can get the answer that you need, 
 01:50 but also anyone else who is reading Full Stack Python and of course,
 01:53 you can ask questions on Twitter, either myself 
-01:56 @fullstackoython or Michael on @talkpython. 
+01:56 @fullstackpython or Michael on @talkpython. 
 01:59 Git can take a while for you to wrap your head around what is happening, 
 02:02 but once you get comfortable with it, it's a really great safety net for your projects, 
 02:06 where you know that your code is not only backed up, 
