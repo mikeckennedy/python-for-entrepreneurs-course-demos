@@ -98,7 +98,7 @@
 4:59 let's just say they are passing for now so we can see the other stuff working.
 5:02 All right, so like I said, there is going to be a little bit of a problem when we run this,
 5:06 but let's go ahead and save and run this.
-5:08 Now, how do we run this? Right click over here
+5:08 Now, how do we run this? Right-click over here
 5:11 and we can say "run" and pick whatever thing it is we want to run, and run,
 5:16 now, notice, it doesn't really like this stuff being empty here when we call clear,
 5:20 and really we have to just run this outside in the terminal.

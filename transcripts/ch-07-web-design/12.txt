@@ -10,14 +10,14 @@
 0:32 And then the border is blue, and then the margins are always transparent 
 0:36 and see through, so they define some space but nothing that you can visually see. 
 0:43 We also saw that the developer tools let you quickly and easily understand the box model
-0:49 so if you right click on some element, you hover over it, 
+0:49 so if you right-click on some element, you hover over it, 
 0:51 you can see the computed size with the regard to the box model 
 0:55 and the top left here like it says LI 152.31 times 46 
 1:00 and if you pull up the computed box model settings 
 1:04 you can actually see the exact pieces that make up the box model. 
 1:08 So this lets you visually understand the box model but how do you control it? 
 1:13 Especially in CSS? Well, we can look at our CSS file and see, 
-1:16 so over here we have our site.CSS and we are going to style something with the lead class,
+1:16 so over here we have our site.css and we are going to style something with the lead class,
 1:21 and we can set the padding, the margin and the border, 
 1:24 you can either do this in a multistep way
 1:27 here we are setting the padding all the way around to be 5 on each side 

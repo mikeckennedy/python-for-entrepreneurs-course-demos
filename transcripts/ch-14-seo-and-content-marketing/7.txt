@@ -94,7 +94,7 @@
 05:26 you can do tests from those locations. 
 05:29 And it will give you some insights into what you can do to improve your performance, 
 05:31 some of these you may not necessarily be able to do, for example, 
-05:34 leverage browser cashing, this is just an issue with Google analytics, 
+05:34 leverage browser caching, this is just an issue with Google analytics, 
 05:39 nothing I can really do about that to make it better. 
 05:43 But the rest of these, especially for an unoptimized site could be really low score, 
 05:46 so are going to want to address those. 

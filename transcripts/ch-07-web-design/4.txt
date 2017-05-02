@@ -4,7 +4,7 @@
 0:15 So, let's look really quickly at what goes in the style sheet, some of the major pieces,
 0:19 and we'll use these ideas throughout the rest of this chapter,
 0:22 and really, honestly through the rest of this course.
-0:25 Here we have this file and this static folder called site.CSS
+0:25 Here we have this file and this static folder called site.css
 0:29 and any page we wanted to use it, obviously we have to include that style sheet
 0:33 being present in the site obviously isn't enough,
 0:35 you have to include it in each and every HTML page you wanted to style,
