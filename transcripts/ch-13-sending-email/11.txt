@@ -3,7 +3,7 @@
 00:09 so we've got our account class, our albums, and our tracks, 
 00:13 we are going to need another table in the database so let's add it. 
 00:17 Now, what goes in here is going to be very similar, 
-00:20 we are going to derive from sqlalchemy base, 
+00:20 we are going to derive from SQLAlchemy base, 
 00:23 we are going to set a dunder table name, we are going to add a bunch of columns. 
 00:26 Let me go ahead and just put those into place. 
 00:28 Alright, so here is our password reset model, 
@@ -33,7 +33,7 @@
 01:56 So let's look at the database, over here, notice, 
 02:01 we have account album and track but we have no reset request. 
 02:06 We run this, and we refresh, we should now have password reset, 
-02:13 oh, we do not, and back to sqlalchemy, why don't we,
+02:13 oh, we do not, and back to SQLAlchemy, why don't we,
 02:17 apparently no one has loaded up this code, so let's go do that. 
 02:21 Remember this bit? Try again. 
 02:28 Oh oops, it looks like I called that user id, 

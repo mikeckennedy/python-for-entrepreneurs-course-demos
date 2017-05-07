@@ -10,7 +10,7 @@
 00:34 well, we need to do that again, and for account.
 00:38 Now if I run it, what this is doing is making sure we have that 
 00:42 before we call create all on our sqlalchmey base, 
-00:45 the sqlalchemy base has seen the account, so run that again, 
+00:45 the SQLAlchemy base has seen the account, so run that again, 
 00:49 over here, a little refresh, 
 00:52 yeey we have an account class with all the things we'd like. 
 00:56 We have our text id, we have our email with the uniqueness, 

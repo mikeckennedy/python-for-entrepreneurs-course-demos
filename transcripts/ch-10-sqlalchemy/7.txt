@@ -50,7 +50,7 @@
 02:39 but on this side, we are going to actually have a one to many relationship, 
 02:43 one album has many tracks so we are going to have track here 
 02:47 and what do we put to actually have a collection- 
-02:51 well, again, SQLALchemy ORM relationship, here this is going to be track, 
+02:51 well, again, SQLAlchemy ORM relationship, here this is going to be track, 
 03:01 and just like before it's going to back populates this time album, 
 03:07 that's the actual name over here so that is talking about this, 
 03:11 it's going to back populate that, and then there is 

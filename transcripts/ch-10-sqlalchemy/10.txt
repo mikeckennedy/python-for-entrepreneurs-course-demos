@@ -1,13 +1,13 @@
 00:02 Now that we have our schema created, let's actually query some data. 
 00:05 Now, in order to either insert update, delete, or query data, we're going to 
 00:11 need to talk about this db session factory and the unit of work pattern. 
-00:15 The way sqlalchemy works we've already said is 
+00:15 The way SQLAlchemy works we've already said is 
 00:18 to use the unit of work design pattern 
 00:21 and what that means is you begin a unit of work, you make a bunch of 
 00:23 changes, inserts, updates and deletes and then when you are finally done 
 00:28 you can either abandon the unit of work or you can commit it. 
 00:32 The final step here is to actually create the thing that manages this unit of work for us.
-00:37 Okay, so if we look up here, we are going to need to import sqlalchemy.orm 
+00:37 Okay, so if we look up here, we are going to need to import SQLAlchemy.orm 
 00:44 and down here we're going to create I am going to say
 00:47 sqlalchmey.orm.session maker kind of like declarative base
 00:51 this factory method here is going to create this thing that will itself be 

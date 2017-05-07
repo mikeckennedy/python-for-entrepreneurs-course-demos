@@ -50,7 +50,7 @@
 03:12 Let's just do the query ever so slightly differently. 
 03:15 So, let's go over here, and we'll say if not user id, we'll return none, 
 03:19 I don't care about this lower case thing, it's not likely the case is changing, 
-03:24 we want to create the database session and we are going to do a query with sqlalchemy 
+03:24 we want to create the database session and we are going to do a query with SQLAlchemy 
 03:28 to say the id is equal to the user id there is the first. 
 03:31 Okay, then anywhere we want for down here maybe we want to go to the albums 
 03:37 and we want to do, we somehow want to get access to the user, 

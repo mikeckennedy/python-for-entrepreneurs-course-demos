@@ -32,8 +32,8 @@
 1:46 populated with a hundred thousand customer objects,
 1:48 and the keyword is the email address you would put in the email 
 1:51 for the specific customer you are looking for. 
-1:53 Now, if we ask for something that doesn't exist, this will crush with a key error exception, 
-1:57so for example if I said info bracket of height, there is no height, so it will crush. 
+1:53 Now, if we ask for something that doesn't exist, this will crash with a key error exception, 
+1:57so for example if I said info bracket of height, there is no height, so it will crash. 
 2:01 there is a wide range of ways in which we can get the value out 
 2:05 or check for the existence of a value, 
 2:07 but the most straightforward is to use it in this in operator, 

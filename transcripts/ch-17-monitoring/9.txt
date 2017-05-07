@@ -45,7 +45,7 @@
 02:45 So it turned out I entered these quotes into a database locally, 
 02:47 I developed this UI locally and I tested it, it worked great 
 02:52 and then I pushed everything to production; 
-02:54 sqlalchemy recreated the database structure just fine on the server 
+02:54 SQLAlchemy recreated the database structure just fine on the server 
 02:58 but, this set was empty because I hadn't yet gone to the admin section 
 03:03 and entered all of the pieces, I hadn't entered any quotes basically 
 03:07 and somewhere we were doing doing random.choice and it turns out 

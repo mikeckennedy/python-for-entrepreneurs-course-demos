@@ -1,7 +1,7 @@
 00:01 Okay so how do we create the schema in the database from this. 
 00:04 Well, what we are going to do is we are going to back to this session factory 
 00:07 and pick up with this engine here, 
-00:09 so it turns out that our SQLALchemy base class here has a metadata, property.
+00:09 so it turns out that our SQLAlchemy base class here has a metadata, property.
 00:15 Now, metadata does not appear in PyCharm's intellisense or autocomplete 
 00:20 which is kind of annoying but just run with it. 
 00:23 Now on here we have a method called create all.
@@ -91,7 +91,7 @@
 05:45 let's put this away, we'll come back to it when it's got something to look at. 
 05:49 This is a little bit tricky, it's easy to solve 
 05:51 but you just got to get used to it when we run this line here, 
-05:54 the sqlalchemy base basically says I would like to, 
+05:54 the SQLAlchemy base basically says I would like to, 
 05:57 I will look to all the classes that derive from me, 
 06:01 and then I will map them to the database, 
 06:04 but in Python, the way that a class gets defined or created it's not a compiled time, 
@@ -128,7 +128,7 @@
 07:55 so what do we do- we came over here, I'll put this away for a moment, 
 07:59 we come over here and we after creating our classes 
 08:03 and as you saw required to give them a primary key,
-08:05 we basically just called sqlalchemy base.metadata.createall 
+08:05 we basically just called SQLAlchemy base.metadata.createall 
 08:12 and because these had been imported, 
 08:15 the sqlaclhemy base now knows about our album, 
 08:18 now knows about track and it was able to create

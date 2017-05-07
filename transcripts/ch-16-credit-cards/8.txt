@@ -18,7 +18,7 @@
 01:17 finally, we'll just say purchase.description is going to be something like, 
 01:23 we'll set that in the line above 
 01:26 and then we just say session.add(purchase) session.commit. 
-01:32 Standard sqlalchemy. So this records it for us. 
+01:32 Standard SQLAlchemy. So this records it for us. 
 01:35 The other thing we need to do is record it in Stripe. 
 01:39 So let's go over here, and we'll say credit card, 
 01:43 I moved all the Stripe stuff over here, 

@@ -61,13 +61,13 @@
 03:43 actually create the associated tracks in the other table so how do we do that, 
 03:48 well, we could do this commit to generate the key and then we could actually go back 
 03:53 and associate the album id on each track with this one 
-03:57 but there is a much better way in sqlalchemy. 
+03:57 but there is a much better way in SQLAlchemy. 
 04:00 We can traverse that relationship, so we can come down here
 04:03 and say for a title in track titles, right, this is a list of strings, 
 04:07 we can create a track like so, 
 04:12 and then we can go to the album and go to its tracks here 
 04:17 and say .append and just like any list, track. 
-04:20 And then this tells sqlalchemy well when you insert this album, 
+04:20 And then this tells SQLAlchemy well when you insert this album, 
 04:24 also take all the tracks and put it in that other table, and set up the foreign key relationship
 04:28 to match whatever the auto-incremented or auto-generated id is, 
 04:33 so again, we are going to have to set a few things here let's just look 
@@ -129,7 +129,7 @@
 08:09 and just make it one query not one that returns an item and then n more things 
 08:16 back to navigate those relationships. 
 08:18 So how do we do that, well, we go over here and we say there are options 
-08:21 and we say joined load now you've got to see import that from sqlalchemy.orm 
+08:21 and we say joined load now you've got to see import that from SQLAlchemy.orm 
 08:24 and then you give it to actual relationship it's going to follow 
 08:28 so it's going to follow tracks on the album, I'm going to continue that, 
 08:32 so notice, down here we had those two queries, let's run this again, 

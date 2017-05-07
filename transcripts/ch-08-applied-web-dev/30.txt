@@ -61,7 +61,7 @@
 03:36 remember that comes from the base view model. 
 03:39 Now, let's go and run this and see that everything still works. 
 03:43 If I go up here and click on register it should provide that information, 
-03:49 remember when it didn't it crushed, boom, there it is, 
+03:49 remember when it didn't it crashed, boom, there it is, 
 03:53 email password, confirmation, and so on. 
 03:56 Ok, so now we've got a little bit of this managed, 
 04:00 this little bit of what that view needs to display itself,  managed right here, 

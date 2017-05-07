@@ -35,7 +35,7 @@
 02:00 and the image and the upcoming event below the up above picture of the band there, 
 02:06 that's actually in the grid layout so that image itself is responsive 
 02:12 so it changes based on the size that it has to work with, 
-02:15 as well as those two components they don't just crush themselves together,
+02:15 as well as those two components they don't just crash themselves together,
 02:19 they fall one on top of the other when it gets too skinny like on mobile as well. 
 02:23 So all of this is going to come from the Bootstrap grid layout and image classes. 
 02:28 So with that in mind, let's go take a quick tour of Bootstrap. 

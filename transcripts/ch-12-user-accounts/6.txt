@@ -3,7 +3,7 @@
 00:09 there is a chance that it will get leaked, 
 00:11 whether it's from pour coding practices, like sql injection attacks 
 00:15 which we're luckily relatively immune from, 
-00:19 because we're using an ORM with sqlalchemy, 
+00:19 because we're using an ORM with SQLAlchemy, 
 00:22 or maybe you have a copy of the production database on your laptop 
 00:26 and your laptop gets stolen and you don't have your hard disk encrypted 
 00:29 or there is a million reasons why you might lose this data, 

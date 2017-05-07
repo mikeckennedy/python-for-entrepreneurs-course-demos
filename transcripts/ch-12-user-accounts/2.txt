@@ -6,7 +6,7 @@
 00:20 actually a bunch of this, let me just copy that, don't need the ordering list,
 00:25 may not need the ORM we'll find out in a moment. 
 00:29 So we're going to create a class, called account. 
-00:31 And it's going to derive from sqlalchemy base like all the things 
+00:31 And it's going to derive from SQLAlchemy base like all the things 
 00:34 we map to sqlaclhemy and let's go and give it a dunder table name, 
 00:38 now we need to give it things like an id. 
 00:42 
