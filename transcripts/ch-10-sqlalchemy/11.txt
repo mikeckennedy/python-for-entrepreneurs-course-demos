@@ -83,7 +83,7 @@
 04:47 when I run it you should see a bunch of stuff. 
 04:50 Hopefully, I haven't mess anything up we are about to find out.
 04:53 So notice all this output, that's not an error, 
-04:57 that's sqlalchemy looking at the tables trying to understand 
+04:57 that's SQLAlchemy looking at the tables trying to understand 
 05:00 tell me about the album, tell me about the track, okay? 
 05:03 That's from echo=true. Now, we go over here, 
 05:06 this is all well and good but if I hit this album's button, 

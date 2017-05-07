@@ -7,7 +7,7 @@
 00:21 We are going to use SQLAlchemy. 
 00:24 SQLAlchemy is the most flexible, powerful, 
 00:27 and popular data access toolkit for Python. 
-00:31 Here you can see at sqlalchemy.org you can find it, 
+00:31 Here you can see at SQLAlchemy.org you can find it, 
 00:33 of course, pip install SQLAlchemy is how we are going to got started.
 00:38 Let's look at a few reasons hwy in addition to being powerful, fast and popular 
 00:41 we might choose SQLAlchemy, a little more nuanced look there. 

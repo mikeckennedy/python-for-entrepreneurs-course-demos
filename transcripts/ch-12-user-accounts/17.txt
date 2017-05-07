@@ -21,7 +21,7 @@
 01:07 it will check to see whether or not it's a value, right, 
 01:10 if there is nobody there, nobody logged in, no id, then just return no user as well, 
 01:13 but if there is a user id, let's go to the account service, 
-01:16 do a sqlalchemy query to the database and retrieve that account, 
+01:16 do a SQLAlchemy query to the database and retrieve that account, 
 01:19 Once you have this on the base controller, you have it on all of the views, right,
 01:22 so then in our layout template, we can actually do a tal conditional 
 01:27 to change what shows up in our navigation. 

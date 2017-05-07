@@ -35,7 +35,7 @@
 01:58 and so on, we are going to come back to that in just a moment, 
 02:02 but let's go ahead and also add a track class. 
 02:07 Again, we are going to do the same thing, 
-02:09 we are going to import SQLALchemy, 
+02:09 we are going to import SQLAlchemy, 
 02:11 we are going to import our SQLAlchemy base class that we created, 
 02:16 and we are going to create a class called track 
 02:19 and it's going to derive from SQLAlchemy base. 

@@ -13,7 +13,7 @@
 0:44 as files, they are not processed as some kind of action request
 0:48 that our Python code is going to handle, we just say here is an image,
 0:51 here is a CSS file and so on.
-0:54 There is a special rule for cashing inside this folder
+0:54 There is a special rule for caching inside this folder
 0:57 I believe  the default is one hour
 0:59 but of course you probably want to make that higher
 1:01 and do some cache busting techniques.

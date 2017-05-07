@@ -27,7 +27,7 @@
 01:27 this thing called the declarative base is actually a base class that is shared 
 01:30 across all of the classes we want to map into our database, 
 01:34 so basically by virtue of our classes we create deriving from this class
-01:38 we are about to state here, this will teach SQLALchemy
+01:38 we are about to state here, this will teach SQLAlchemy
 01:42 about their schemas and their their relationships.
 01:44 We are going to import SQLAlchemy and here we have ext 
 01:47 and then there is a declarative section. 
@@ -46,7 +46,7 @@
 02:31 we are not listing SQLAlchemy as a requirement, 
 02:35 so that means when we move to a new server, 
 02:37 when we say Python setup py develop or install, 
-02:40 it's not going to include SQLALchemy and that is going to be bad, 
+02:40 it's not going to include SQLAlchemy and that is going to be bad, 
 02:43 so we can let PyCharm just add this requirement for us. 
 02:47 The only thing that is mildly unfortunate, 
 02:49 is that it doesn't order or alphabetize and it's not misspelled, 

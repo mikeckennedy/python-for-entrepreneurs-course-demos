@@ -8,7 +8,7 @@
 00:29 Multiple databases maybe multiple bases here, 
 00:32 if you are going to have one database there is just one of these. 
 00:35 And then, any time we want to create a type that maps to the database, 
-00:38 we just derive from the SQLALchemy base.
+00:38 we just derive from the SQLAlchemy base.
 00:41 Here we have album, track , purchase, everything we want 
 00:44 to put into this database is going to derive form this type. 
 00:47 When we actually create those classes, 
@@ -22,7 +22,7 @@
 01:11 Then we have some other columns, 
 01:13 name, year, price, those are different types,
 01:15 string, integer, float, and we also have relationship 
-01:18 so we have tracks and we set this up to be a sqlalchemy.orm.relationship 
+01:18 so we have tracks and we set this up to be a SQLAlchemy.orm.relationship 
 01:22 over to the track of class. 
 01:25 One thing we haven't seen yet is what do we do with default values. 
 01:30 Everything that we've had just a nullable default value is acceptable 
@@ -49,7 +49,7 @@
 02:35 notice that we are not using parenthesis when we are assigning the default, 
 02:39 we are passing the function not now, otherwise, 
 02:42 it would just be the value of when the program started, that would be bad. 
-02:46 but we're going to say SQLALchemy any time you create a password reset, 
+02:46 but we're going to say SQLAlchemy any time you create a password reset, 
 02:49 typical in the database, initialize the create a data by calling now at that time 
 02:53 and the id is a little more interesting, we are actually giving it a lambda here, 
 02:57 so this is lambda that takes no parameters or arguments and returns a string 
@@ -97,7 +97,7 @@
 05:17 it will make zero changes to it, it only creates new tables, 
 05:21 it will not alter or migrate anything, 
 05:24 One of the things worth looking at here is this echo=false, on the engine,
-05:28 sqlalchemy.create engine echo=false 
+05:28 SQLAlchemy.create engine echo=false 
 05:32 we haven't talked about this yet, we'll get to it later, 
 05:34 but if you say echo=true all sorts of diagnostics will start to spit out 
 05:39 of your application and you'll basically see all the sql commands 

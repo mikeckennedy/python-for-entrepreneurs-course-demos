@@ -6,5 +6,5 @@
 00:18 and I am using the underscore prefix to indicate 
 00:21 that this is not the thing you are supposed to access directly, 
 00:23 but is in fact consumed by the other views. 
-00:26 There is nothing that says you have to do it this way, but as your site grows 
-00:29 having some sort of organization like this, is really really helpful. 
+00:26 There is nothing that says you have to do it this way, but as your site grows, 
+00:29 having some sort of organization like this is really, really helpful. 

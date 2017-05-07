@@ -4,7 +4,7 @@
 00:15 often importantly beyond the realm in which you are going to use it, 
 00:19 so you know what you are getting into is going to scale as far as you need it to. 
 00:23 So let's look at what some major companies are doing with SQLAlchemy. 
-00:27 Dropbox is using SQLALchemy internally, doing some really cool stuff, 
+00:27 Dropbox is using SQLAlchemy internally, doing some really cool stuff, 
 00:32 remember, Dropbox is basically the center of the universe for Python 
 00:35 with the founder Guido van Rossum there and a bunch of the core developers, 
 00:40 so this is a good thing to know that they are using SQLAlchemy. 
@@ -13,7 +13,7 @@
 00:52 in terms of all of their data needs, SQLAlchemy here, that's great.
 00:56 Reddit, Reddit id interesting in that they use the core not the ORM layer, 
 01:00 and Reddit gets a ton of traffic, 
-01:03 and Reddit is using SQLALchemy, so that is really cool. 
+01:03 and Reddit is using SQLAlchemy, so that is really cool. 
 01:06 Firefox is using it, OpenStack, the open source alternative to like AWS, right, 
 01:13 there is huge set of tools and cloud infrastructure, those guys are using that, 
 01:18 Fresh Books for invoices and billing, like if you are an independent contractor, 
@@ -24,9 +24,9 @@
 01:38 Yelp, Yelp is pretty awesome. Triomet, shout out to the local transit 
 01:42 here in Portland Oregon so that is like the buses and the trains and whatnot. 
 01:46 And of course, Talk Python and my related websites, like I said, 
-01:51 the website that you are looking at right now is powered by SQLALchemy. 
+01:51 the website that you are looking at right now is powered by SQLAlchemy. 
 01:55 If you want to know exactly what each one of these companies is doing, 
-01:59 with SQLAlchemy, you can see sqlalchemy.org/organizations.HTML 
+01:59 with SQLAlchemy, you can see SQLAlchemy.org/organizations.HTML 
 02:02 that link there at the bottom lists all of these companies and many more 
 02:06 and it actually has a paragraph or two describing 
 02:09 what each one of them are doing with SQLAlchemy. 
