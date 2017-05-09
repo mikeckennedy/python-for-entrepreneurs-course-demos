@@ -77,11 +77,11 @@
 05:17 convert it to cents and then drop off any decimal point that might be there. 
 05:23 Next, this is going to be the name of the company this comes from, 
 05:28 so like Talk Python this is that section up there, 
-05:33 so this would be Blue Yellow Rockets, 
+05:33 so this would be Blue / Yellow Rockets, 
 05:39 this is not necessarily how it appears on your credit card, 
 05:42 you can kind of figure that on the user's credit card,
 05:44 you can configure that in your Stripe account. 
-05:47 This is going to be Blue Yellow and then we'll put something, 
+05:47 This is going to be Blue / Yellow and then we'll put something, 
 05:53 what do we want, it's going to be the name of the album, and then album. 
 06:00 Here this is the little icon that shows up, in our example here it's this little store, 
 06:05 but over here notice it's this logo right there and that just comes out of like
@@ -92,9 +92,9 @@
 06:28 Okay, let's go back and refresh, like it's got to rerun this code, refresh it, 
 06:39 okay, pay with card, remember me it's wrong, 
 06:44 I'll figure out how to do that in a second, 
-06:47 here we go, what we are going to buy, Blue Yellow Rockets, 
+06:47 here we go, what we are going to buy, Blue / Yellow Rockets, 
 06:49 maybe I should just drop this, because you only have a little bit of room to work with here, 
-06:53 so we have instead of this Blue Yellow album name we'll just do it like that, here, 
+06:53 so we have instead of this Blue / Yellow album name we'll just do it like that, here, 
 06:59 we can buy "Digital Age Boys and Girls" and we're going to pay 9.99 for that. 
 07:04 Now that's the price of this one, this one is 12.99 that one 19.22, 
 07:09 whatever we made up right, here is the Year Of The Snake,
@@ -111,18 +111,18 @@
 07:59 things like that, so let's try again make sure it's saved, try again, 
 08:03 now it says buy album, 9.99, buy album 19.22 and when I click it 
 08:07 the remember me thing is gone, that's cool, 
-08:11 Blue Yellow Rockets Year Of The Snake. 
+08:11 Blue / Yellow Rockets Year Of The Snake. 
 08:14 Maybe the last thing to do is we could like work with this here to get that picture changed 
 08:18 and then I'll call integrated, so here is the link to that Python image, 
 08:23 why don't we just use that for now. 
 08:26 So we can go to image, we'll just say like so. 
 08:31 So now let's try again, ta da, there is a little image, it's not perfect, right, 
 08:34 I mean this is not really our logo this is just the Python logo but whatever, right, 
-08:38 our Blue Yellow Rockets guys would pay some small amount 
+08:38 our Blue / Yellow Rockets guys would pay some small amount 
 08:42 to have like some graphic artists do something for them, 
 08:45 we'll talk later about actually how you might get that done really cheaply, 
 08:49 but we come up with some kind of logo, stick it there,
-08:51 we got our Blue Yellow Rockets, that's the company, 
+08:51 we got our Blue / Yellow Rockets, that's the company, 
 08:54 this is the item you are buying The Digital Age Boys And Girls album,
 08:58 putting your email address, and we'll actually be able to do this. 
 09:06 In test mode, this is really important, you can use 4242 sixteen times, 

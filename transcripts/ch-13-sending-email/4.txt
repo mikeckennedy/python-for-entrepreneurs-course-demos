@@ -23,7 +23,7 @@
 01:19 We are going to send this email and the way we are going to do it
 01:22 is we are just now going to call emails service right, any email service, 
 01:26 we want to call that basic send mail and we have to give the to address, 
-01:31 which is email, subject is going to be welcome to blue yellow rockets, 
+01:31 which is email, subject is going to be welcome to Blue / Yellow rockets, 
 01:37 and the body is just going to be this HTML body here. 
 01:41 Right, that's all we got to do. 
 01:43 Now we are going to get much more advanced about constructing interesting stuff, 

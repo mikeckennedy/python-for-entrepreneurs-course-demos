@@ -16,12 +16,12 @@
 01:03 then I want you to break and turn it to like vertical stacked set of rows. 
 01:08 So, this section here, this should last and retain its grid shape for quite a while, 
 01:15 these right here will retain their grid shape until maybe about 
-01:21 if I shrink it about to this bar, much more than it will probably wrap it, 
+01:20 if I shrink it about to this bar, much more than it will probably wrap it, 
 01:24 it will break down its table form, same with this.
-01:27 We could also control how much of a percentage of the grid things take up, 
-01:32 for whatever reason they use twelve elements so here you can see
-01:38 we have twelve column large ones, this is twelve, this is twelve, 
-01:42 and you basically get than ratio of the screen for each segment that you define. 
+01:27 We could also control how much of a percentage of the grid things take up. 
+01:32 For whatever reason they use twelve elements, so here you can see
+01:36 we have twelve column large ones, this adds a twelve, this adds a twelve, 
+01:42 and you basically get then ratio of the screen for each segment that you define. 
 01:48 So are you ready to see it in action?  Let's see what happens when I resize this. 
 01:51 Alright, so if I get bigger, nothing happens and it gets smaller, 
 01:54 pretty soon the bottom one will break first, 
@@ -29,11 +29,11 @@
 02:02 but any moment now, it's going to break, there you go, now these, 
 02:06 all of the sudden become wrapped on top of each other. 
 02:10 But the small ones and the medium ones, 
-02:13 they still retain their grid form because they are supposed to be grid like longer, 
-02:16 on smaller screens let's say. 
-02:19 So, now the medium ones are going to break, and there they go, 
+02:12 they still retain their grid form because they are supposed to be grid-like longer, 
+02:16 on smaller screens, let's say. 
+02:18 So, now the medium ones are going to break, and there they go, 
 02:22 and you can see the small ones are still there, but eventually, 
-02:26 if I make it skinny enough to small ones, themselves break as well. 
+02:25 if I make it skinny enough to small ones, themselves break as well. 
 02:29 And, it turns into basically a bunch of vertical slices. 
 02:33 And as we put it back, things start to reappear and then eventually, 
 02:37 we can get our grid layout back. 
@@ -45,7 +45,7 @@
 02:55 Let's look at the code to make this work. 
 02:57 So for all the demos in this CSS section, 
 03:00 except for the final bit where we design the whole front page, 
-03:03 I've created this Bootstrap example snippet folder and put a bunch of straight HTML, 
+03:03 I've created this bootstrap-example-snipped folder and put a bunch of straight HTML, 
 03:07 we have one image we are working with, 
 03:10 and we are just using Bootstrap straight off the CDN. 
 03:13 So these are basically empty HTML pages 
@@ -71,7 +71,7 @@
 04:28 but we want them to remain grid like, longer, 
 04:31 even on small but not extra small screens. 
 04:35 And then, at the bottom, we have our twelve cell piece, 
-04:39 piece of one but they fall apart very quickly when the screen gets small 
+04:39 pieces of one but they fall apart very quickly when the screen gets small 
 04:45 because this only works on large and above screens. 
 04:48 It's easy to get this grid stuff somewhat complicated 
 04:53 and I feel like people will sometimes make it more complicated than it needs to be, 
@@ -86,11 +86,11 @@
 05:24 and it's super helpful to design your website using the grid system from Bootstrap 
 05:29 and it's even more important these days, 
 05:32 I haven't mentioned this yet but Google ranks your page higher 
-05:36 if it's mobile friendly for mobile searches. 
+05:36 if it's mobile-friendly for mobile searches. 
 05:39 So if somebody is on their phone, or their tablet, and they search, 
 05:43 if you have a responsive website, there is a better chance 
 05:47 that your website will be listed higher for those search results. 
 05:50 And with the grid, it's really easy to do, so be sure to check that,
-05:54 you can actually look at the Google web master tools, 
+05:54 you can actually look at the Google Webmaster Tools tools, 
 05:57 you can sign up for those, register your site with them 
-06:01 and see whether or not Google thinks your site is responsive and mobile friendly. 
+06:01 and see whether or not Google thinks your site is responsive and mobile-friendly. 

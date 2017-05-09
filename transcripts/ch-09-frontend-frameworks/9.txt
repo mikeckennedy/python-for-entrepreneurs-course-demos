@@ -2,7 +2,7 @@
 00:08 It tells them what the site is about, what are their options, 
 00:11 where can they go, what can they explore, 
 00:13 it's super important to have a good navbar. 
-00:16 Here you can see the one from Blue Yellow Rocket's Band, 
+00:16 Here you can see the one from Blue / Yellow Rockets Band, 
 00:18 we'll put this design together in just a little bit. 
 00:21 It's also important that this navbar adapt to various screen sizes. 
 00:26 So this is great on a desktop, but what if it's small, 

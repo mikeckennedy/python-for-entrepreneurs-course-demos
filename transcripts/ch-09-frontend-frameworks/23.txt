@@ -85,10 +85,10 @@
 05:45 Maybe for the pages we want to actually give it a little more of a margin or whatever, 
 05:49 but this is looking pretty good, now, the last thing about the navigation up here 
 05:53 is this Start Bootstrap, that is not what this is about, is it? 
-05:57 Let's see what were we supposed to say, Blue Yellow Rockets, like this. 
+05:57 Let's see what were we supposed to say, Blue / Yellow Rockets, like this. 
 06:02 Right, so let's go and add that, again, let's go up here in the brand section, 
 06:08 so here we have that part, and I was going to paste this thing in, 
-06:12 we are going to drop that, I was going to say Blue Yellow Rockets 
+06:12 we are going to drop that, I was going to say Blue / Yellow Rockets 
 06:17 I don't know if I've got our image or logo yet, it does not look like it, 
 06:21 so let's start bringing in some of our images. 
 06:24 So here we have our logo let's go and throw in the hero on as well, 
@@ -104,7 +104,7 @@
 07:00 so let's add that into our site down here, so that's the official Python, 
 07:07 something close to the official Python yellow and the official Python blue, 
 07:11 so if we go over here and look again, there we go. 
-07:17 There is our Blue Yellow Rockets of course, all of these fonts are too big 
+07:17 There is our Blue / Yellow Rockets of course, all of these fonts are too big 
 07:21 so let's change the font size of those to see what we get here 
 07:25 and over in site we have our old nav settings about the navigation fonts 
 07:31 let's take that out, we don't have them indicated twice, that's just weird, 

@@ -58,7 +58,7 @@
 3:27 that's what it looked like in 1996, but thankfully, it's not 1996, it's 2016, at least at the
 3:34 recording of this video, so today we have things like
 3:37 front-end frameworks, Bootstrap UI Kit, we have font sets
-3:41 including all the topography and settings that come with the front-end frameworks
+3:41 including all the typography and settings that come with the front-end frameworks
 3:44 but also things like Font Awesome,
 3:47 which is basically that you bring in hundreds of different types of little graphics
 3:50 that you can use and style into your site perfectly.

@@ -65,12 +65,12 @@
 04:01 we would show something different conditionally with a tal,condition 
 04:04 based on the account here. 
 04:06 The forms and the more complicated drop downs are not here, 
-04:09 I wanted to keep it simple and of course, I put the Blue Yellow Rockets. 
+04:09 I wanted to keep it simple and of course, I put the Blue / Yellow Rockets. 
 04:12 We'll have real links on all of these, normally, but just to keep it simple, 
 04:16 it's not really a part of a page yet 
 04:19 so I don't have any actual destinations for these hyperlinks. 
 04:23 So, let's see it in action, 
-04:25 alright, here we have our Blue Yellow Rockets, that's our brand, 
+04:25 alright, here we have our Blue / Yellow Rockets, that's our brand, 
 04:27 it's a little bit bigger, we have our albums, you can see the color changes a little bit,
 04:30 this is all the float left stuff, 
 04:34 here is the nav right, this is our account and logout, 

@@ -1,26 +1,26 @@
 00:03 All users know how to click buttons. 
-00:06 It's one of the primary ways to work with user interfaces, 
-00:09 there is even great cartoon episodes about the inability 
-00:12 to avoid clicking the big shiny red button. 
-00:15 We can use buttons in our websites to help drive user engagement and user action, 
+00:05 It's one of the primary ways to work with user interfaces, 
+00:08 there is even great cartoon episodes about the inability 
+00:11 to avoid clicking the big shiny red button. 
+00:14 We can use buttons in our websites to help drive user engagement and user action, 
 00:19 so here is Wistia, they are video hosting company, 
-00:22 I don't use them I just think they have a good sign up registration page,
+00:22 I don't use them, I just think they have a good sign up registration page,
 00:25 so I am using it as an example. 
-00:28 You can see it's easy to see where your name, and your email and whatnot go, 
+00:27 You can see it's easy to see where your name, and your email and whatnot go, 
 00:31 they are also using the same technique that I recommended, 
-00:35 actually using the placeholders rather than the separate labels that apply 
+00:33 actually using the placeholders rather than the separate labels that apply 
 00:38 to the areas where you type in your text. 
 00:41 But notice, down here at the bottom, it's very clear what they want you to do. 
 00:45 They want you to click "create account" and if you look at this in HTML, 
-00:49 this is actually a <button type= "submit">,  it comes from a form. 
+00:49 this is actually a button type="submit",  it comes from a form. 
 00:54 Up here, we also have something that looks like a button, 
 00:57 and this is just a hyperlink to go log in. 
-01:00 So, the concept of a button doesn't have to tie to the HTML thing- the button, 
+01:00 So, the concept of a button doesn't have to tie to the HTML thing - the "button", 
 01:04 more correctly, it should tie to some kind of user action. 
 01:07 Sometimes that's submitting the form, sometimes that's going somewhere. 
 01:13 So, let's take a quick look at Talk Python Training, 
 01:16 and the use of buttons on the landing page or the homepage, here. 
-01:20 So, if we scroll down a little bit, you can see the first call to action is 
+01:20 So, if we scroll down a little bit, you can see the first call to action is... 
 01:25 I would like for people to subscribe to be notified about new classes, 
 01:28 ideally, what I would really like, from a customer retention perspective 
 01:33 is to get somebody to register, it's a little bit stronger commitment to the site, 
@@ -30,10 +30,10 @@
 01:51 so I can send them newsletters and announcements 
 01:53 about upcoming classes and deals and things like that, 
 01:56 that's really important to the website and to the business. 
-01:59 And so, I've used a button here, to ask people to fill out their email address 
-02:03 it's like michael@talkpython.fm click that and they will be subscribed. 
+01:58 And so, I've used a button here to ask people to fill out their email address 
+02:03 it's like michael@talkpython.fm, click that and they will be subscribed. 
 02:10 The other place where I am using buttons on the landing page, 
-02:13 so if you come down is here. 
+02:13 so if you come down, is here. 
 02:15 So another great way to keep people engaged with 
 02:18 my community and my content, is through the podcast. 
 02:22 And of course the podcast is free, but if people subscribe to the podcast, 
@@ -41,29 +41,28 @@
 02:29 and I think they just generally get inspired a little to learn Python 
 02:32 and they know that I have courses, right, 
 02:35 hopefully that that somehow comes back together. 
-02:38 At least if they just subscribe to the podcast and never came back here, 
-02:41 that would make me happy. 
-02:43 Down here you can see another call to action, now, just like in the Wistia example, 
-02:47 up here, this is actually a button if we look at the HTML you'll see that it's a button, 
-02:52 but down here, this is just a hyperlink that actually opens in a new tab 
+02:37 At least if they just subscribe to the podcast and never came back here, that would make me happy. 
+02:41 Down here you can see another call to action, now, just like in the Wistia example, 
+02:45 up here, this is actually a button, if we look at the HTML you'll see that it's a button, 
+02:51 but down here, this is just a hyperlink that actually opens in a new tab 
 02:55 over to Talk Python To Me. 
-02:58 So, let's look behind the scenes how that works. 
+02:57 So, let's look behind the scenes how that works. 
 03:01 So you'll see that buttons are easy in Bootstrap. 
 03:03 Here is that subscribed form, and I've styled it so it's a nice tight little thing here, 
-03:09 if we look at the HTML you can see we've got a form, 
-03:12 with an input type equals HTML, required, all that kind of stuff. 
+03:09 if we look at the HTML, you can see we've got a form, 
+03:12 with an "input type=" HTML, required, all that kind of stuff. 
 03:16 But what's relevant for this discussion is we have a button, 
-03:19 it has a type equals submit, 
-03:22 and then we're using the bootstrap classes that say 
-03:25 this thing should look like a bootstrap button, the first bootstrap class is btn, 
-03:29 and btn says this is going to take on the general shape of a button, 
+03:19 it has a type="submit", 
+03:22 and then we're using the Bootstrap classes that say 
+03:25 "this thing should look like a Bootstrap button", the first Bootstrap class is btn, 
+03:29 and btn says "this is going to take on the general shape of a button", 
 03:34 and then, there are specializations, 
-03:37 you saw the listen to an episode looked different than this one that is red. 
-03:42 So then we can give it a various action class, danger, info, default, and so on, 
+03:37 you saw the "listen to an episode" looked different than this one that is red. 
+03:42 So then we can give it a various action class: danger, info, default, and so on, 
 03:48 and depending on the theme that you are using, those will take on different colors 
 03:52 and styles but you can classify them like that. 
 03:55 So I think red converts pretty well, it calls people's attention to it and they know okay,
-03:59 I am going to go click this button, so I am using btn-danger 
+03:59 I am going to go click this button, so I am using btn-danger, 
 04:02 which is why this one is red. 
 04:05 If we look farther down below, the call to action to go listen to the podcast, 
 04:09 here you can see this looks exactly the same, except for blue. 
@@ -71,8 +70,8 @@
 04:17 Here we have a  hyperlink, and Bootstrap can style buttons and hyperlinks 
 04:22 to look like these Bootstrap buttons, 
 04:25 like I said, there is these two basic usecases, right. 
-04:28 In this one, we have a hyperlink, again, class = btn 
-04:31 but we are using btn primary which is this blueish color rather than btn-danger. 
+04:27 In this one, we have a hyperlink, again, class="btn 
+04:31 but we are using btn-primary, which is this blueish color rather than btn-danger. 
 04:37 Now there is actually six types of buttons, 
 04:41 here we have default, primary, success, info, warning, danger and link, 
 04:45 like I said, depending on the theme you use, this may, this will look different, 
@@ -81,6 +80,6 @@
 04:59 Then you also have four sizes, the top row,
 05:03 from top to bottom is button large and the class for that is btn-lg, 
 05:08 and then you have just the ones that we have been working with, 
-05:12 the straight up buttons, normal size, and small and then extra small. 
+05:11 the straight up buttons, normal size, and small and then extra small. 
 05:16 So be sure to use these buttons in your web design 
-05:19 any time you need a clear call to action. 
+05:18 any time you need a clear call to action. 

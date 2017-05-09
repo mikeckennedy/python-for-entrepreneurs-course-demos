@@ -1,7 +1,7 @@
 00:02 Do you remember that scary page from the web design section?
 00:05 It looked like this, it was just plain basic HTML, zero styling. 
 00:09 My contention was that most of you were like 
-00:12 oh my gosh, I don't even know where to start when looking at something like this, 
+00:12 "oh my gosh, I don't even know where to start when looking at something like this" 
 00:15 to try to make it look like AirBnB or something beautiful. 
 00:19 If we just take Bootstrap and drop it into there,
 00:22 you'll see it already is going to look quite a bit better. 
@@ -12,49 +12,49 @@
 00:35 How much nicer the words are in terms of reading. 
 00:39 The line height changed just a little bit, the fonts and spacing,
 00:43 the spacing between the letters, the spacing between the lines, all of that, 
-00:47 the topography is much cleaner, the headings look better, 
+00:47 the typography is much cleaner, the headings look better, 
 00:51 the colors are adjusted a little bit. 
-00:53 Bootstrap just by including it will take any page and make it look a little bit better, 
+00:53 Bootstrap, just by including it, will take any page and make it look a little bit better, 
 00:59 but we want to go a lot farther than that,  remember, this is our goal, 
-01:02 this is the landing page or homepage of our Blue Yellow Rocket Band. 
+01:02 this is the landing page or homepage of our Blue / Yellow Rocket Band. 
 01:07 Now, let's just do a quick tour to point out some various pieces 
 01:12 that we are going to see on our tour of Bootstrap. 
 01:14 So we have this nav bar across the top, that comes from Bootstrap, 
 01:18 you can't see it because I am not resizing the screenshot, 
-01:21 but if I did, you would see that that is a responsive design 
-01:24 that turns into a slightly different version on mobile than it does on wide desktop screens. 
+01:20 but if I did, you would see that that is a responsive design 
+01:23 that turns into a slightly different version on mobile than it does on wide desktop screens. 
 01:27 We have nice looking call to action buttons, 
-01:30 albums, upcoming events and get notified, 
+01:30 albums, upcoming events and "get notified", 
 01:33 we have this big banner, this hero image to call out to people coming to our page
-01:38 to just let them know boom, here is the band, 
-01:42 like you are on stage with them here, 
-01:45 and this is part of one the themes that we are going to bring in, 
+01:38 to just let them know "boom, here is the band", 
+01:41 like you are on stage with them here, 
+01:44 and this is part of one the themes that we are going to bring in, 
 01:48 you can see the form about getting notified looks pretty nice, 
 01:52 that comes from Bootstrap, both the button as well as the form and the way it behaves,
 01:57 from some of the form controls in Bootstrap 
 02:00 and the image and the upcoming event below the up above picture of the band there, 
 02:06 that's actually in the grid layout so that image itself is responsive 
 02:12 so it changes based on the size that it has to work with, 
-02:15 as well as those two components they don't just crash themselves together,
+02:15 as well as those two components, they don't just crush themselves together,
 02:19 they fall one on top of the other when it gets too skinny like on mobile as well. 
 02:23 So all of this is going to come from the Bootstrap grid layout and image classes. 
 02:28 So with that in mind, let's go take a quick tour of Bootstrap. 
-02:32 Now, you may be tempted to pull up bootstrap.com that's not Bootstrap; 
-02:36 getbootstrap.com that's where Bootstrap lives, just remember, 
+02:32 Now, you may be tempted to pull up bootstrap.com, that's not Bootstrap; 
+02:36 getbootstrap.com, that's where Bootstrap lives, just remember, 
 02:41 there is some sort of the weird site just at bootstrap.com.
 02:44 So here we are at getbootstrap.com, 
 02:47 notice there is a notification a Bootstrap 4 is coming pretty soon,
 02:50 so it's not released yet, I believe there is few breaking changes 
 02:54 so just be aware when that comes out;
-02:57 but here is what we want to look at; we want to look at Bootstrap 
-03:00 and it's broken into a couple of sections we can download the zip file and solve that way,
-03:04 I am actually recommending the way to do this as via Bower or npm, 
+02:55 but here is what we want to look at; we want to look at Bootstrap 
+02:58 and it's broken into a couple of sections, we can download the zip file and solve it that way,
+03:03 I am actually recommending the way to do this as via Bower or npm, 
 03:07 take your pick there, something that can auto update and manage that for us. 
 03:10 So let me just click on getting started, and it talks about how you download,
 03:14 I talked about you can just download the Bootstrap source, 
 03:17 it comes with Saas, so kind of a higher level than CSS design language there, 
 03:22 you can use the CDN, that's what you get from the startup projects in Pyramid 
-03:26 or you can install with Bower, just bower install bootstrap 
+03:26 or you can install with Bower, just "bower install bootstrap" 
 03:29 or maybe a better option is to use bootstrap-CSS 
 03:34 and that will give you a smaller version. 
 03:37 You could also install with npm if you don't want to use Bower. 
@@ -63,15 +63,15 @@
 03:47 You can flip through and you see there is a bunch of options, 
 03:50 of all the various things you can do, here is a nice little Cover thing, 
 03:53 here is a Carousel, and so on, let's just focus on this one real quick. 
-03:58 So here you can see we have the nice let's call it well, this thing 
-04:02 that says theme example at the top, you can see the navigation, 
+03:58 So here you can see we have the nice let's call it "well", this thing 
+04:01 that says "theme example" at the top, you can see the navigation, 
 04:05 the navigation is a little dropdown and if I change the size 
 04:08 it should even become responsive and it does, like this, very nice. 
 04:11 All that is automatic. 
-04:15 There is some nice buttons, different sizes, and colors and so on, tables. 
+04:14 There is some nice buttons, different sizes, and colors and so on, tables. 
 04:19 You don't think too much about styling tables these days 
-04:22 because people shy away from them, but when you have tabular data guess what, 
-04:26 a table is pretty sweet and they have nice easy designs for it, we've got thumbnails, 
+04:22 because people shy away from them, but when you have tabular data - guess what, 
+04:25 a table is pretty sweet and they have nice easy designs for it, we've got thumbnails, 
 04:29 these labels here, badges, dropdowns, all kinds of stuff,
 04:34 cool progress bars, and so on. 
 04:37 So next, let's go back to the Bootstrap site, 
@@ -82,10 +82,10 @@
 04:52 and you've got components and then things that require JavaScript to work, 
 04:56 so that goes at the end, these are broken up into different pieces, 
 05:00 and we can check them out. 
-05:03 So there is a couple of things to notice over here, 
-05:05 that Bootstrap is HTML 5 friendly, it's mobile first I talked about topography, 
-05:09 I haven't talked about normalize, CSS but normalize is really important. 
-05:13 One of the pains of web design is 
+05:02 So there is a couple of things to notice over here, 
+05:04 that Bootstrap is HTML 5-friendly, it's mobile first, I talked about typography, 
+05:09 I haven't talked about normalize.css but normalize is really important. 
+05:14 One of the pains of web design is 
 05:17 when on different browsers the same HTML CSS looks different, 
 05:22 and often that difference arises from the browser having no explicit style for a thing 
 05:27 and then making their assumption about how that should look 
@@ -93,15 +93,15 @@
 05:35 compared to say Chrome, then that's going to look a little bit different. 
 05:39 Normalize explicitly sets every single possible style 
 05:42 so those types of challenges basically don't exist. 
-05:46 So when you include Bootstrap you get one of these reset or normalization CSS files 
+05:46 So when you include Bootstrap, you get one of these reset or normalization.css files 
 05:51 which is great, we are going to talk about the grid system 
 05:54 and how you can use that to achieve tabular type layout that is also responsive, 
-06:00 it's not just tables jammed in there, we talked about topography, 
+06:00 it's not just tables jammed in there, we talked about typography, 
 06:03 tables have really nice ways to style them, 
-06:06 let's see if we can pull up one, like this is a pretty good looking table, table striped, 
+06:06 let's see if we can pull up one, like this is a pretty good looking table, table-striped, 
 06:10 here you can see the alternating styles, it's a little subtle, so a little bit harder to see, 
 06:15 so all you've got to do is throw it on there 
-06:17 and your table looks much better automatically striped. 
+06:16 and your table looks much better automatically striped. 
 06:19 You can see that forms look much better in here, 
 06:22 so we can use like form control elements, we are going to get into that, buttons, 
 06:26 we have some nice looking buttons and colored call to action 
@@ -110,18 +110,18 @@
 06:37 you can see what different image shapes that we have to work with, 
 06:40 as well as responsiveness. 
 06:42 Speaking of responsive, Bootstrap comes with a number of 
-06:45 responsive design helper classes so for example, 
+06:45 responsive design helper classes. So for example, 
 06:49 if you've got certain page elements that should only show up on large screens 
 06:52 and you want a different representation or a small one, 
 06:55 you can combine these settings to basically hide those. 
-06:59 I use this often in navigation less so outside of there.
+06:59 I use this often in navigation, less so outside of there.
 07:03 Now, let's look at the components, 
-07:06 there is a few interesting elements in the components, we have these Glyphicons,
+07:05 there is a few interesting elements in the components, we have these Glyphicons,
 07:09 these are okay, Font Awesome is way better, 
 07:11 and so I'll be using Font Awesome for our stuff, but it kind of plays the same role. 
 07:15 The idea is to use a font for little icons rather than pictures 
 07:18 because you can perfectly resize them by changing the font size 
-07:22 and change the color by just changing the color for an element 
+07:22 and change the color by just changing the color for an element, 
 07:25 which is very hard to do with images.
 07:28 So you can sort of style these icons better if they are fonts than if they are fixed images. 
 07:32 The most important take from this section we are going to work with is navigation, 
@@ -134,8 +134,8 @@
 07:55 down here, so something like this, make it wider, 
 07:59 it should look all different, here we go we have this nice little dropdown here and links, 
 08:03 stuff that sticks to the right, stuff that sticks to the left, 
-08:06 we have forms, like search boxes, all kinds of stuff. 
-08:09 And we can even change this to be a dark version or a light version, 
+08:05 we have forms, like search boxes, all kinds of stuff. 
+08:08 And we can even change this to be a dark version or a light version, 
 08:13 depending on whether we put the nav inverse or nav default. 
 08:20 Last over in the JavaScript area you'll find some cool things as well, 
 08:23 for example, Modal dialogues are really great 
@@ -144,12 +144,12 @@
 08:33 we are going to click and have something that looks like this come up, 
 08:36 and put whatever HTML in the middle we like that's great, 
 08:39 of course we can style it here 
-08:41 we can launch a Modal dialogue and it kind of pops in, 
+08:40 we can launch a Modal dialogue and it kind of pops in, 
 08:43 and whatever you want to put in here you can have 
 08:45 and you can close it back out and so on.
 08:47 So, we want to make use of that in our design, for sure. 
 08:50 The other thing that's cool down here is Scrollspy, 
-08:53 so the idea is you've got these various sections on your page that relate to navigation, 
+08:52 so the idea is you've got these various sections on your page that relate to navigation, 
 08:57 and as you scroll, you kind of move into these other areas, 
 09:00 and you'd like the navigation at the top to be stuck sort of to track as you move,
 09:06 so if you are kind of doing a more of a one page design, 

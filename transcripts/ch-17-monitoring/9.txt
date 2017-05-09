@@ -99,5 +99,5 @@
 06:16 so you don't really need to debug it, you just got to go fix the code. 
 06:21 Well, that's really great too. 
 06:23 So, in the subsequent videos I am going to show you 
-06:26 how to integrate Rollbar into the Blue Yellow Rockets application 
+06:26 how to integrate Rollbar into the Blue / Yellow Rockets application 
 06:28 and that should be really easy to do. 

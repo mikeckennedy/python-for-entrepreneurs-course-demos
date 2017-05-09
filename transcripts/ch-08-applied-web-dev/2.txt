@@ -32,5 +32,5 @@
 1:57 for ourselves while we are developing but especially for our users, 
 2:00 so everything is setup and ready to roll, 
 2:02 now we are ready to start working with Pyramid handlers
-2:05 and develop our web app for the Blue Yellow Rockets. 
+2:05 and develop our web app for the Blue / Yellow Rockets. 
 

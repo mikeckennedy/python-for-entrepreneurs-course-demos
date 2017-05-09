@@ -38,7 +38,7 @@
 02:20 we now have a template for password reset, here, 
 02:23 and let's just view this in the browser, here you can see this is a basic looking one,
 02:29 this is just one of those template emails we already talked about, 
-02:33 so we heard about your password at blue yellow rockets, remember,
+02:33 so we heard about your password at Blue / Yellow rockets, remember,
 02:37 this is an image and I haven't changed it, 
 02:40 we are just going to go with that image for now. 
 02:42 If you click this button to reset it, it's going to take you to this URL 

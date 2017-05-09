@@ -8,7 +8,7 @@
 0:24 and PyCharm and pip have no real great way to deal with those dependencies.
 0:30 But there are a couple of systems out there that do.
 0:32 One of them is Bower,
-0:34 another one that comes to mind is NPM, which comes with Node.
+0:34 another one that comes to mind is npm, which comes with Node.
 0:38 So you can find Bower at bower.io.
 0:41 Here you can see their little slogan
 0:43 "Web sites are made of lots of things - frameworks, libraries, assets and utilities.

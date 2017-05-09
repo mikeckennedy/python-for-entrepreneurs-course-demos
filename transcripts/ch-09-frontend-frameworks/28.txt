@@ -10,7 +10,7 @@
 00:35 and we have an example of where we are going, we have like, 
 00:39 we're going towards this dark theme so I like this kind of dark part 
 00:42 and I plan on putting this site on the internet so if somebody actually comes across 
-00:45 and he thinks that Blue Yellow Rockets are a real band 
+00:45 and he thinks that Blue / Yellow Rockets are a real band 
 00:48 and they want to like buy something obviously they can't 
 00:51 and so this is just going to basically say
 00:53 look, this site is actually a demo site for this course, 
@@ -20,7 +20,7 @@
 01:05 this came from the theme let's drop it, it's using the HTML 5 footer tag which is great, 
 01:09 I use a new copy that I wrote, and we'll just talk about it real quick, 
 01:13 here, again using HTML 5, you can see it's using the grid layout, 
-01:17 and it has a few bits of padding and then here is our story Blue Yellow Rockets, etc
+01:17 and it has a few bits of padding and then here is our story Blue / Yellow Rockets, etc
 01:24 now, there is one thing that's really notable here, 
 01:27 and let's just see how this looks and then we'll talk about it. 
 01:30 Alright, so watch the footer, at the bottom, there we go,

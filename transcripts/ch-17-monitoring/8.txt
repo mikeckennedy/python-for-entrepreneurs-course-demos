@@ -14,7 +14,7 @@
 00:54 and I'l take you on a tour of my Rollbar account, then we'll create a new application, 
 00:59 which is going to be the monitoring app, 
 01:03 or the app that we are going to monitor inside Rollbar 
-01:06 and we are going to associate that with our Blue Yellow Rockets web app 
+01:06 and we are going to associate that with our Blue / Yellow Rockets web app 
 01:09 that we've been building this whole time. 
 01:12 And then, once we get it setup, we'll see if there is an error we'll get a notification
 01:16 and all sorts of places, we can setup our email, I am going to setup a Slack channel 

@@ -1,5 +1,5 @@
 00:01 It's all these shiny features of Bootstrap that catch your eye when you first get started. 
-00:06 The topography, the images, the buttons and so on, 
+00:06 The typography, the images, the buttons and so on, 
 00:10 but the grid, the grid plays a super important role in helping design websites, 
 00:15 especially from our responsive perspective. 
 00:18 But also from an SEO perspective. 
@@ -20,18 +20,18 @@
 01:05 it doesn't look quite as good like the Talk Python Training 
 01:07 overlaps on some of the little images in the background, 
 01:11 that kind of stuff is really hard to deal with, but look at the apps, 
-01:14 see that Python Jumpstart By Building Ten Apps it's now on top 
-01:17 of the Write Pythonic Code which is on top of the Python for Entrepreneurs part. 
+01:14 see that Python Jumpstart By Building Ten Apps, it's now on top 
+01:17 of the Write Pythonic Code, which is on top of the Python for Entrepreneurs part. 
 01:22 That's because I designed that into a grid and said 
 01:25 I want you to be kind of like a table, 
-01:28 as long as the screen is desktop size, but once it gets too small to fit those images,
-01:32 switch into a vertical layout basically turn the table pieces 
+01:27 as long as the screen is desktop size, but once it gets too small to fit those images,
+01:32 switch into a vertical layout, basically turn the table pieces 
 01:37 or the table columns I guess you call them, 
-01:40 into what would be line breaks and separate rows. 
+01:39 into what would be line breaks and separate rows. 
 01:43 This is the kind of layout that's very easy to achieve with the grid, 
 01:46 we don't have to worry about trying to use sort of invisible tables, 
 01:51 that's not great for SEO unless you actually have tabular data then tables are fine, 
-01:56 but a lot of time people traditionally had used tables for layout which is not a good deal. 
+01:56 but a lot of time people traditionally had used tables for layout, which is not a good deal. 
 02:01 You could try it with divs and floats and so on.
-02:05 but that is also really hard to get it just right and especially as the site changes, 
+02:04 but that is also really hard to get it just right and especially as the site changes, 
 02:09 you'll see Bootstrap has a solid and understandable and predictable solution for this. 

@@ -31,7 +31,7 @@
 02:19 The list is going to be blue yellow band
 02:26 the default from email address will be let's just put michael@talkpython.fm 
 02:32 default from name will be Michael at Talk Python in a slightly different way, 
-02:39 you signed up, you registered to get notified of events and albums, blue yellow rockets.
+02:39 you signed up, you registered to get notified of events and albums, Blue / Yellow rockets.
 02:52 Okay, and we have to have our addresses as this part of the can spam story 
 02:59 we can get notified of these various things but we're not going to do this, 
 03:02 by the way that's not my real address. 

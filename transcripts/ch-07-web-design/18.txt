@@ -11,7 +11,7 @@
 0:34 you can do a ton of layout and design with the CSS grid definitions 
 0:39 that come not as part of CSS but as part of these frameworks, 
 0:43 so we are going to cover that later, when we get to the front-end frameworks. 
-0:46 Topography and fonts, there is a lot to getting the right fonts 
+0:46 Typography and fonts, there is a lot to getting the right fonts 
 0:51 that look good on all the screens, that look really readable 
 0:54 I talked a little bit about line height, there is also letter spacing 
 0:57 and variety of other things that play into this. 
