@@ -1,4 +1,4 @@
-00:01 Okay, the last thing we want to so is now that we've been able to log into our site 
+00:01 OK, the last thing we want to so is now that we've been able to log into our site 
 00:05 is to log out of it; so remember, you can only view this page 
 00:08 if you are logged in and if you log out well, there is no log out. 
 00:12 So let's write lo gout real quick. 
@@ -13,7 +13,7 @@
 00:41 so over here when I go cookie auth and we'll just call it log out 
 00:44 and it's going to need to have access to the request so it can actually do that. 
 00:47 So it turns out that deleting the cookie is a very similar to writing a cookie 
-00:54 where we have this call back, okay, so we are going to come over here 
+00:54 where we have this call back, OK, so we are going to come over here 
 00:57 and we are going to say request at response call back 
 01:00 and this we are going to call delete cookie and in order to delete the cookie, 
 01:03 you don't have to pass the value, you just have to have the request,
@@ -52,7 +52,7 @@
 03:19 I don't care about this lower case thing, it's not likely the case is changing, 
 03:24 we want to create the database session and we are going to do a query with SQLAlchemy 
 03:28 to say the id is equal to the user id there is the first. 
-03:31 Okay, then anywhere we want for down here maybe we want to go to the albums 
+03:31 OK, then anywhere we want for down here maybe we want to go to the albums 
 03:37 and we want to do, we somehow want to get access to the user, 
 03:40 we just say self.logged in user that does the query against the database 
 03:44 using the cookie information we've already stored, 

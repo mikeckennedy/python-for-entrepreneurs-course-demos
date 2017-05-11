@@ -46,7 +46,7 @@
 02:37 I didn't do that in my demo, you probably want to add that to your actual code. 
 02:40 In my real websites, of course the exceptions don't get eaten, 
 02:45 they get dealt with appropriately, whatever you are doing up above that. 
-02:50 Okay, so let's briefly look at the packages, 
+02:50 OK, so let's briefly look at the packages, 
 02:53 here on pypi.org we have the mailer package, 
 02:56 pip install mailer, you saw that we just let PyCharm handle all of that, 
 02:59 this is a really nice package building on top of Python's ability to send mail 

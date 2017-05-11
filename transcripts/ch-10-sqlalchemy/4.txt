@@ -51,7 +51,7 @@
 02:47 The only thing that is mildly unfortunate, 
 02:49 is that it doesn't order or alphabetize and it's not misspelled, 
 02:54 PyCharm, it's how it spells SQLAlchemy.
-02:57 Okay, so first thing we needed is this will be our single base class. 
+02:57 OK, so first thing we needed is this will be our single base class. 
 03:01 Now, basically this is mapped to a particular database, 
 03:05 so if you are talking to multiple databases, like one thing I do on Talk Python is 
 03:08 I've got a core database and then I have the analytics database, 
@@ -67,7 +67,7 @@
 03:47 but let me go ahead and get the foundations of that class ready, 
 03:51 so we are going to add another type here, called db session factor 
 03:55 and this is going to be a class and actually let me rename that to like so, 
-04:00 okay, so we've got our class here, and for a moment, 
+04:00 OK, so we've got our class here, and for a moment, 
 04:05 we are just going to do a pass, now this class is going to need 
 04:08 to work with that model base that we are using above, 
 04:11 so let's do this, let's say from, remember, we can't just say model base,
@@ -86,10 +86,10 @@
 05:00 it's not a proper server like My SQL or SQL Server, something like this, 
 05:04 all we have to provide to create the database, 
 05:08 the connection if you will is the db file,
-05:10 okay, so maybe we want to throw in some error handling 
+05:10 OK, so maybe we want to throw in some error handling 
 05:14 and we could say something like this if not db file raise exception 
 05:18 you must specify database. 
-05:22 okay, so after we get started we got some validated data here,
+05:22 OK, so after we get started we got some validated data here,
 05:27 the first thing we need to do to talk to the database is to create a connection string.
 05:32 SQLAlchemy connection strings are like regular connection strings 
 05:36 but they have a little extra scheme in the front and that scheme tells SQLAlchemy 

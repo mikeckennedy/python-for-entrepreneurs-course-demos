@@ -54,7 +54,7 @@
 03:24 you'll notice that some of them have preview, some of them don't, so that's nice as well.
 03:29 Alright, also here is the new icon, I've just made it this blue-yellow Python logo. 
 03:34 I don't need the Pyramid one anymore, 
-03:36 and of course this navigation is going to be replaced by a bootstrap nav bar 
+03:36 and of course this navigation is going to be replaced by a bootstrap navbar 
 03:39 but for now we'll just keep it there just to sort of help 
 03:42 with this common look and feel concept. 
 

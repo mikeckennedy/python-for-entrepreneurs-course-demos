@@ -1,14 +1,14 @@
-00:01 So let's review the key elements of Bootstrap navigation. 
-00:06 At the top we have a nav element, 
+00:03 So let's review the key elements of Bootstrap navigation. 
+00:07 At the top we have a nav element, 
 00:09 you can also use a div but nav is preferred if possible,
-00:13 and we are going to set the class to be navbar and navbar default, 
+00:13 and we are going to set the class to be navbar and navbar-default, 
 00:17 remember that makes it white, you want to use navbar-inverse to make it dark. 
 00:21 And then, we have a header, that's going to have the brand and the toggle element, 
 00:25 and we are going to have the part
-00:28 that would be collapsed which would be all the menu items. 
+00:27 that would be collapsed, which would be all the menu items. 
 00:31 Here we actually have two sets of menu items, 
-00:34 we have the ones that have the active flag on 
+00:33 we have the ones that have the active flag on 
 00:37 so albums, events and shop, those stick to the left, 
 00:40 and then in the upper right we want account and logout. 
 00:43 Maybe we would make that a single thing with the dropdown, who knows. 
-00:46 We do that via navbar right.
+00:46 We do that via navbar-right.

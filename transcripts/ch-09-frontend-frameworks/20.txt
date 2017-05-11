@@ -2,12 +2,12 @@
 00:04 and see what we can use to start building our website. 
 00:07 I showed you a pretty compelling example I think in that last video 
 00:11 showing how we started at the basic page 
-00:14 and then moving to a somewhat styled plain text page, to a themed page 
+00:13 and then moving to a somewhat styled plain text page, to a themed page 
 00:17 and now I am going to show you how to go find those themes. 
 00:21 Now, in no way is this an exhaustive search of all the places you can go find these,
 00:25 there are many of these Bootstrap theme websites, 
 00:28 one place you can start, a place where I have started 
-00:31 on some of my projects before was Start Bootstrap. 
+00:31 on some of my projects before, was Start Bootstrap. 
 00:34 At startbootstrap.com you can see that there is a bunch of Bootstrap themes here, 
 00:38 if we scroll along, these are really nice because they are both free and open source.
 00:42 Remember that beautiful website I showed you? 
@@ -19,14 +19,14 @@
 01:01 You also can get a nice live preview, download it or view the source on GitHub. 
 01:05 So, if we click the live preview, there is the page, 
 01:08 and we can scroll down and look through it, 
-01:11 see it's got these nice little animations, things pop in as you go along. 
-01:14 I would be absolutely comfortable having this site represent my business. 
+01:10 see it's got these nice little animations, things pop in as you go along. 
+01:13 I would be absolutely comfortable having this site represent my business. 
 01:18 So this one is called Creative, you can see the URL up there, let's look at a few more. 
 01:23 So here is another one I pulled out of that site, Start Bootstrap, 
-01:26 so you can scroll along and it has this nice big skyline things are wide open, 
+01:26 so you can scroll along and it has this nice big skyline, things are wide-open, 
 01:30 so this is really good, what you'll see that's often common in these Bootstrap themes 
-01:34 and a lot of modern websites because it's really easy
-01:37 to conditionally show on high end things, it's easy to add new things, 
+01:34 and a lot of modern websites, because it's really easy
+01:36 to conditionally show on high end things, it's easy to add new things, 
 01:41 take away concepts from your page; 
 01:44 what's common in these sites is these sort of vertical slices 
 01:47 so you can see here is a vertical slice of our services, 
@@ -35,11 +35,11 @@
 02:00 and then you can do whatever stuff like grids and whatnot you want in there. 
 02:04 So here you can see all this stuff, very nice theme, and if you want to use this one, 
 02:08 you can actually see it's right here on GitHub you can go grab it. 
-02:11 Maybe you are not into some kind of startup with the splashy front-end screen, 
-02:14 maybe you need like a dashboard type of thing, 
-02:17 so look, they have these really cool dashboards ones as well, 
-02:19 we can go over here and look at some charts, 
-02:21 scroll down you can see there is these nice charts here, 
+02:10 Maybe you are not into some kind of startup with the splashy front-end screen, 
+02:13 maybe you need like a dashboard type of thing, 
+02:15 so look, they have these really cool dashboard ones as well, 
+02:18 we can go over here and look at some charts, 
+02:20 scroll down, you can see there is these nice charts here, 
 02:23 they are very interactive, and if you want to have a chart like this, 
 02:26 and you want to have these various sort of live tables, these live dashboards and so on, 
 02:31 not every bit of is interactive but you can see all these pieces here, 
@@ -52,21 +52,21 @@
 02:52 maybe you don't want to take that much of the theme but check this out, 
 02:55 here is a nice little navigation starters, you've got these things on the left 
 02:58 and you can just show and hide it like this, 
-03:01 so if you want some kind of navigation like this, you want to start really simple, 
-03:04 you could grab this theme. 
-03:06 So those are the free open source options, and that's great. 
+03:00 so if you want some kind of navigation like this, you want to start really simple, 
+03:03 you could grab this theme. 
+03:05 So those are the free open source options, and that's great. 
 03:10 Sometimes though, you might want to start with a super high quality design, 
 03:15 maybe you are willing to pay like 50 bucks, think about that, 
 03:19 if the thing that is going to represent your business to all the people who come and visit it,
 03:24 that's worth 50 bucks, I am telling you, at least, 
 03:27 so I'll show you a place where you can pay a little bit of money for really nice designs. 
-03:31 So over here at wrapbootstrap.com this is place that doesn't have free themes, 
-03:36 they are pretty darn cheap, but they are not free, 
+03:31 So over here at wrapbootstrap.com, this is place that doesn't have free themes, 
+03:37 they are pretty darn cheap, but they are not free, 
 03:40 so if you look over here you can see we have paid one of 30 
 03:43 I don't know how many items are on the page, 
 03:45 it looks like maybe 20 or something along that line, 
 03:48 if you look at the scroll bar, many, and now check out these themes, 
-03:52 remember, I told you if you are going to build the dashboard looking thing, 
+03:52 remember, I told you if you are going to build the dashboard-looking thing, 
 03:56 this one is s lot better and you would have to pay 12 dollars to get it, can you believe it?
 03:59 Or, actually maybe this one, these are both really nice. 
 04:02 You can see that for just a little bit of money you can get some pretty cool designs, 
@@ -75,49 +75,48 @@
 04:13 live interaction things when it first loads, you can see the little gauges are moving there, 
 04:16 you can toggle these switches, it's got all these little tabs, really nice stuff. 
 04:21 And, this is only a part of it, so like here is a nice social wall, 
-04:24 if we open this up you can go and see how your apps are getting laid out, 
-04:28 it has this little inbox looking thing if you want to like 
+04:24 if we open this up, you can go and see how your apps are getting laid out, 
+04:28 it has this little inbox-looking thing if you want to... like 
 04:31 add some kind of messaging component, you've got graphs, 
 04:34 let's go up a little, you've got all these nice interactive graphs down here, 
 04:39 all kinds of great stuff, so if you are building some kind of 
-04:42 interactive dashboard type thing, 
+04:42 interactive dashboard-type thing, 
 04:45 this is pretty cool, even these little things are nice and interactive, 
 04:49 even have wizards that will walk you through the step one, step two, step three, and so on.
-04:54 Okay, so moving on from the admin world, let's go over here,
-04:57 now, Reen this is another one that has a really nice, fresh design, 
+04:54 OK, so moving on from the admin world, let's go over here.
+04:57 Now Reen, this is another one that has a really nice, fresh design, 
 05:01 you can see they've got this cool user interface here this is basically a place 
 05:05 where they are trying to sell you a bunch of designs, 
-05:08 so 14 000 designs available but, a really nice place where you can come, 
-05:12 find some designs there, again, 
-05:14 another place you can see the demo of this theme, they've got all these variations here, 
+05:08 so 14 000 designs available but a really nice place where you can come, find some designs there.
+05:13 Again, another place, you can see the demo of this theme, they've got all these variations here, 
 05:18 so maybe we want to look at this one. 
 05:21 So this is nice, light and fluffy and if you are doing like analytics or something like that 
 05:25 this might be a good one. 
-05:28 It has these cool sort of section wide background images, pop up stuff and so on. 
+05:29 It has these cool sort of section-wide background images, pop up stuff and so on. 
 05:35 So maybe this makes sense for what you are doing, 
 05:38 and here is another nice template, Epone, 
 05:41 you can go check out all the different samples, 
-05:44 here is a nice about your team page and so on, 
+05:44 here is a nice "about your team" page and so on, 
 05:47 So, I am not necessarily recommending any one of these particular ones, 
 05:51 I just want to point out that there are all these sources, all these places,
-05:55  you can go and find just the right theme for your website, 
-05:58 so if we go look again at let's say Talk Python training 
+05:55 you can go and find just the right theme for your website. 
+05:58 So if we go look again at let's say... Talk Python Training 
 06:04 you'll see that actually this theme that we have going on here 
 06:07 and which is also similar to the theme that we have on 
-06:11 Talk Python To Me the podcast 
+06:11 Talk Python To Me, the podcast, 
 06:14 this theme that we have going on here, this is actually from the first place, 
-06:20 the theme that I use I believe was called landing page 
+06:20 the theme that I use I believe was called Landing Page, 
 06:25 so if I just search for landing page, here we go, it took me a second to find it, 
-06:29 this one landing page, this is the one I actually based my site on
-06:33  if I do a live preview, you'll see this is where that big-
+06:29 this one Landing Page, this is the one I actually based my site on
+06:33 if I do a live preview, you'll see this is where that big...
 06:37 let me pull up Talk Python next to it, 
 06:42 so here you can see this big landing page with these call to action buttons, 
 06:46 that should look kind of familiar, and these sections 
 06:50 where you've got the text and then picture on the right, picture on the left text on the right,
-06:54 alternating slices of the dark- light, dark- light, that should look, 
+06:54 alternating slices of the dark/light, dark/light, that should look, 
 07:02 once we get past the first few parts, that should look kind of familiar here, and so on,
-07:07 down at the bottom, we've got this little footer, and connect with us, 
-07:10 and down at the bottom, we have a footer with, it doesn't quite say connect with us, 
+07:07 down at the bottom, we've got this little footer, and "connect with us", 
+07:10 and down at the bottom, we have a footer with, it doesn't quite say "connect with us", 
 07:15 but similarly, I updated it, obviously I didn't leave it to be exactly the same 
 07:19 I didn't want to just copy their site, I wanted to make my own 
-07:22 but I knew this is really quite close to what I was looking to build, so why not use it. 
+07:22 but I knew this is really quite close to what I was looking to build, so why not use it? 

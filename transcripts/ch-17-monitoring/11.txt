@@ -6,8 +6,8 @@
 00:20 just five minutes ago I got pretty much what we got in our dashboard, 
 00:25 so bam an error has occurred, Python For Entrepreneurs course in dev mode, 
 00:30 here is the error, and this just shows you the trace back of all the various things 
-00:35 that I showed you when we looked around, okay. 
-00:38 So that's really great. But, there is more options okay, so let's go over here, 
+00:35 that I showed you when we looked around, OK. 
+00:38 So that's really great. But, there is more options OK, so let's go over here, 
 00:43 click on settings for the project and go to make sure you have source control integrated, 
 00:48 so you can get extra information, but notifications, that's where we want to go, 
 00:52 so right now we have email, and we could connect this to Bitbucket issues 
@@ -15,7 +15,7 @@
 01:02 all of those are awesome, I'll just scroll through, we got Jira, we've got Slack, 
 01:07 we've got Trello, you can sort of break out of the box and do web hooks, 
 01:12 all you want, I am going to integrate this with Slack. 
-01:15 Okay, so we come down here, I have already authorized Slack
+01:15 OK, so we come down here, I have already authorized Slack
 01:21 and I am going to say enable Slack integration, it says cool I am going to use this 
 01:25 and where is it going to go, I am going to post to a runtime, 
 01:29 so we are going to post all he errors to runtime, save those settings, 
@@ -25,13 +25,13 @@
 01:49 or whatever, we are going to get all of these sent. 
 01:52 But if for some reason I don't want to know when an item is reopened, 
 01:56 I could just delete that, right. 
-02:00 Okay, so let's go cause that error, again. 
+02:00 OK, so let's go cause that error, again. 
 02:03 Here it is, and if I hit it again, it's going to happen, again, 
 02:07 actually let me just make a different error 
 02:10 so you can see what it looks like the first time.
 02:12 It's going to be a value error, and this is going to trigger it, here we go, 
 02:19 sign in again and kaboom, value error. 
-02:24 Okay, now notice, I got a little pop up already right there, now it depends on 
+02:24 OK, now notice, I got a little pop up already right there, now it depends on 
 02:28 how your Slack is set up, if it pops up like an actual notification, 
 02:31 or it just says hey there is something going on, look at this, red thing Rollbar, 
 02:35 nice message, there has been an error in dev, a new value error, kaboom, 

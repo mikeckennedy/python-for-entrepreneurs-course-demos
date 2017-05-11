@@ -107,7 +107,7 @@
 5:45 and I want to know like what is this thing that contains both 
 5:50 the image and this logo up here." 
 5:54 So I can click on this and actually double click it and it will pull this up 
-5:57 and it will say that's the nav bar brand top nav image, here is the actual content. 
+5:57 and it will say that's the navbar brand top nav image, here is the actual content. 
 6:02 Or you can say you know, what is this thing down here, containing this, 
 6:07 oh I see, that's a form control, which is input, 
 6:10 you can see this is your email address. 

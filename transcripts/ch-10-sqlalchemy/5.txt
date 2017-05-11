@@ -39,7 +39,7 @@
 02:11 we are going to import our SQLAlchemy base class that we created, 
 02:16 and we are going to create a class called track 
 02:19 and it's going to derive from SQLAlchemy base. 
-02:22 Okay, we're off to get start, and then 
+02:22 OK, we're off to get start, and then 
 02:25 we're just going to specify the columns here as well. 
 02:29 There, we have an ID a name a length an audio and video URL 
 02:33 as well as the order in which this track should appear within the album. 
@@ -60,7 +60,7 @@
 03:28 if the name of table is the same as the name of your type. 
 03:31 But it doesn't have to be, right, if for some reason you are working with 
 03:34 like an existing database you maybe don't control that. 
-03:38 Okay, so now we've got these two classes 
+03:38 OK, so now we've got these two classes 
 03:41 that are supposed to be mapped to the database,
 03:43 they are incomplete, granted, they have no primary key 
 03:46 for example that's really bad, but before we move on, 

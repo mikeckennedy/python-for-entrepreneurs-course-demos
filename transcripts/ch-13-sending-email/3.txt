@@ -17,7 +17,7 @@
 00:58 So we are going to use this mailer package, so we are going to start 
 01:02 just letting PyCharm drive for us, so we'll say import mailer and PyCharm says 
 01:07 you know, I don't really know what mailer is but I can install it for you and we'll let it.
-01:16 Okay that was great, now it's going to say oh first of all, 
+01:16 OK that was great, now it's going to say oh first of all, 
 01:19 it's going to say add requirement mailer to setup, 
 01:23 so when you install it it will automatically install mailer rather than crash, 
 01:27 you definitely want to do that, and now the last thing is it's going to say 

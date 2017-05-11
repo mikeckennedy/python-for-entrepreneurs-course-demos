@@ -38,7 +38,7 @@
 02:14 with your marketing angle if you say oh and I have this totally custom thing I built, 
 02:18 and they are kind of like what, I don't know if that is a good idea, 
 02:21 if you say hey I use MailChimp or I use git response or something like that, 
-02:24 like okay, great, I know how it works, I can work with that. 
+02:24 like OK, great, I know how it works, I can work with that. 
 02:28 There is a lot of automation and workflow as you'll see, we'll talk a bit about that. 
 02:33 But, you can do things like well, 30 minutes after a purchase, send this email, 
 02:37 and then if they click this button, then send them this email two days later, 

@@ -61,7 +61,7 @@
 03:42 So then we can give it a various action class: danger, info, default, and so on, 
 03:48 and depending on the theme that you are using, those will take on different colors 
 03:52 and styles but you can classify them like that. 
-03:55 So I think red converts pretty well, it calls people's attention to it and they know okay,
+03:55 So I think red converts pretty well, it calls people's attention to it and they know OK,
 03:59 I am going to go click this button, so I am using btn-danger, 
 04:02 which is why this one is red. 
 04:05 If we look farther down below, the call to action to go listen to the podcast, 

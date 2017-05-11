@@ -23,7 +23,7 @@
 01:19 but we're going to have an alternate version for when you are signed in. 
 01:22 This is going to be log out, let's do account here, and maybe just like this, 
 01:26 and this will be log out, I don't think we've written log out yet but we're going to. 
-01:38 Okay, so if the user is signed in, you should see this,
+01:38 OK, so if the user is signed in, you should see this,
 01:42 if the user is not signed in, you should see the sign in features.
 01:45 So let's go over here and refresh this, remember, we're signed in right now 
 01:49 boom, sign in, log out, but if we open it in a private browsing session, 

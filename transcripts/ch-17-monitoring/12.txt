@@ -17,7 +17,7 @@
 01:00 and set our environment and access token there as well. 
 01:04 it looks like in the slides I have dev in production, don't make those different, whatever, 
 01:08 those should make them the same. 
-01:11 Okay, so you put that in here, make sure you set, you install Rollbar the package 
+01:11 OK, so you put that in here, make sure you set, you install Rollbar the package 
 01:16 and you set it as a requirement in your setup, and once you've done that, 
 01:19 then you can just config.include rollbar.contrib.pyramid, 
 01:25 in your main setup somehow and that is all you have to do, 

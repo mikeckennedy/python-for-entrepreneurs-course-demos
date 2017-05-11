@@ -4,7 +4,7 @@
 00:12 and it's going to add the table, remember if the table exists, it won't update it, 
 00:16 but if it doesn't exist it will create it. 
 00:19 But it's not going to work, I want to just remind you why. 
-00:22 Run this, okay, it looks like it's running, fantastic, if we refresh and- no,
+00:22 Run this, OK, it looks like it's running, fantastic, if we refresh and- no,
 00:28 let's go back over here to our db session, remember this business, 
 00:32 where we had to import these things, 
 00:34 well, we need to do that again, and for account.

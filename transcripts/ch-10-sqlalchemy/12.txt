@@ -25,7 +25,7 @@
 01:18 so the vm has a title, and we want to send it the track titles, 
 01:24 so these are the track titles, notice the p here for the property 
 01:27 not the t for straight text.
-01:30 Okay, so we are going to pass that along and we are going to actually have it 
+01:30 OK, so we are going to pass that along and we are going to actually have it 
 01:35 return a new album, this is going to be an instance of this class here, right, 
 01:42 we are going to create one of those and we want to get it back from the database 
 01:46 and the reason why do we want to get it back 
@@ -51,7 +51,7 @@
 02:56 and the way we tell the database to insert it we go here and we say add this album. 
 03:03 And then when we commit it, everything is going to be great, 
 03:07 also we want to return the album, like so. 
-03:11 Okay so this is great but none of the values have been set, so let's go and set these, 
+03:11 OK so this is great but none of the values have been set, so let's go and set these, 
 03:15 so here you'll see that we can set the title is title year=year, 
 03:21 and now these names just happen to line up they don't have to, 
 03:25 as of course, now that's pretty close, there is one other thing we want to set, 
@@ -74,7 +74,7 @@
 04:36 and see what tracks have, so the id is going to be fine, 
 04:39 we are going to need to set the name, 
 04:43 also we are going to need to be a little careful here this is name as well I believe. 
-04:48 Yes, it is name, okay so we want to set the name = title, and what else-
+04:48 Yes, it is name, OK so we want to set the name = title, and what else-
 04:57 actually I don't think we need this, but we do need display order, 
 05:01 remember display order is actually used in figuring out how these will come in here 
 05:06 Now how do we get the display order, 
@@ -97,7 +97,7 @@
 05:58 Let's go. Alright, so over here let's go to albums, see there is none, 
 06:04 so that query works right now, and let's take this test data here 
 06:09 and I am just going to throw some of this in,
-06:13 okay great we've got this all filled out now 
+06:13 OK great we've got this all filled out now 
 06:15 I am going to click it, notice it should go way from new album, 
 06:18 and it should go back to /albums, fingers crossed for the insert. 
 06:22 Boom, wow that actually surprises me, that this works, 
@@ -106,7 +106,7 @@
 06:33 find me where it's published and sort by this, 
 06:36 but you should see actually a second query 
 06:38 and if there were ten albums, you would see eleven queries at the database, that's bad. 
-06:45 Okay so let's go to the very beginning, here is the select album ta ta ta ta from that 
+06:45 OK so let's go to the very beginning, here is the select album ta ta ta ta from that 
 06:48 where it's published, this is the one that gave us the album and then, 
 06:52 we in Chameleon try to loop over the tracks, well the tracks weren't loaded, 
 06:57 we only loaded the albums here, so that is going to go back to the database 
@@ -114,7 +114,7 @@
 07:05 where you select the track ta ta ta from track where the album id 
 07:09 is something and the display order is something, order by display order. 
 07:13 So here this is album one and we are getting that back. 
-07:18 Okay, so we are going to this database, the error I thought you might see 
+07:18 OK, so we are going to this database, the error I thought you might see 
 07:26 was a detached instance what happens is if the session gets cleaned up,
 07:29 we are going to make it happen, no it's still working. 
 07:33 What happens is if this session gets closed and then you try to navigate that relationship, 
@@ -146,7 +146,7 @@
 09:17 because a single album or a single record 
 09:19 in the database, that's kind of boring, right. let's add new again, 
 09:23 and I'll just copy this over from the old data. 
-09:28 Okay, here is the other album, from the fake data that I had entered 
+09:28 OK, here is the other album, from the fake data that I had entered 
 09:32 and let's go ahead and hit create here and now that should work perfectly, 
 09:35 it should create it, insert into the database, redirect to albums, 
 09:38 that's going to do a query again, and let's see does it order over here, 

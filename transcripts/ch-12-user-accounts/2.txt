@@ -22,7 +22,7 @@
 01:21 it's important that this is unique and you want to do queries 
 01:25 by like find me the user with this email when they log in and stuff 
 01:28 so you will have an index so let's add all of those.
-01:33 Okay so now we have a nice strong email, we will have a create a date here 
+01:33 OK so now we have a nice strong email, we will have a create a date here 
 01:40 let's just make it really easy for the create a date to get set 
 01:43 so this doesn't get forgotten or incorrectly done, 
 01:46 so what we're going to do is as soon as you create one of these accounts 
@@ -45,7 +45,7 @@
 02:51 so this is an easy way to create a set of super users that can really manage the site 
 02:57 in a real rich application with many people involved you probably want group policy 
 03:01 but we're starting simple, we are going to start here. 
-03:04 Okay, so the last thing to talk about is the id, now it's totally reasonable
+03:04 OK, so the last thing to talk about is the id, now it's totally reasonable
 03:10 if we put the id as an auto incrementing number, 
 03:13 but there are few drawbacks we need to consider in that case. 
 03:17 So if we go over here, imagine that there is an account page, 
@@ -98,4 +98,4 @@
 06:22 we are going to talk about how to deal with this
 06:24 but we're going to put a one way hash 
 06:27 of the password very strong, hard to reverse, in the database. 
-06:32 Okay, now this account class is ready to roll. 
+06:32 OK, now this account class is ready to roll. 

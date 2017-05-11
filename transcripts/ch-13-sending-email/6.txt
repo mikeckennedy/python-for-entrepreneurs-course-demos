@@ -42,8 +42,8 @@
 02:29 I am not going to create a separate image for the email, but obviously, in your app, 
 02:34 you will not create a blue yellow rockets picture, 
 02:37 instead you will create one for whatever your app is. 
-02:41 So notice we are linking back to it, https is very important, 
-02:44 it's very likely that their client is https so you are better off with that.
+02:41 So notice we are linking back to it, HTTPS is very important, 
+02:44 it's very likely that their client is HTTPS so you are better off with that.
 02:50 We are setting a max width, this margin left, right, and a max width 
 02:56 makes it float in the middle of the page that's cool, 
 02:59 so let's just change this around a little bit, congratulations, 
@@ -56,7 +56,7 @@
 03:24 And we got a little bit here, this div we can just drop this, 
 03:27 we don't need that right now, and down here we have this find your course right now, 
 03:31 how about we change this to find your favorite album. 
-03:36 Okay, and notice we've got links back to wherever we want to go,
+03:36 OK, and notice we've got links back to wherever we want to go,
 03:41 and the style is set straight on it, right, I wish we could do CSS 
 03:44 but it doesn't seem to work reliably so we are not doing it,
 03:48 and here is a little bit, right, there is a little picture of me, 
@@ -79,7 +79,7 @@
 04:58 let's have a reset, password, it's none as well. 
 05:03 And then, let's add a function that we can call, so that at the start of our app 
 05:09 we can pull this in and it will like load up what goes in there 
-05:13 and then we can use them throughout, okay, so let's do this, 
+05:13 and then we can use them throughout, OK, so let's do this, 
 05:17 we don't need any arguments here but we are going to need to call this one time 
 05:20 and we are going to need to use the path module, so let's do this, 
 05:24 we'll say templates, now what we need is we need to get this current folder 
@@ -92,12 +92,12 @@
 06:01 so here we'll get the welcome file, and then we'll say like this, 
 06:04 we'll say welcome file, we are going to open that, 
 06:07 as fin, and then we want to set welcome on a class 
-06:18 just the content, okay, so we'll do this and we would also do this
+06:18 just the content, OK, so we'll do this and we would also do this
 06:22 let's say we'll do one for password reset, there won't be any content for this one, 
 06:31 but just to show that we'll do this for each type of email we want to set, 
 06:37 so welcome email, a reset, a purchase and so on, 
 06:40 you might have like five or ten of these. 
-06:43 Okay, so this we need to call somewhere, let's do that in our dunder init, 
+06:43 OK, so this we need to call somewhere, let's do that in our dunder init, 
 06:48 
 06:54 so we are just going to import this, and we'll call global init, 
 06:58 we just need to call it once, templates, 
@@ -110,7 +110,7 @@
 07:34 so here we will write a function called expand welcome 
 07:37 and as you saw in our welcome email over here 
 07:40 we have this little curly such and such called email. 
-07:45 Okay, so we can come down here and actually, 
+07:45 OK, so we can come down here and actually, 
 07:49 let me just show you more general way, 
 07:52 
 07:58 so we can do it like this we can come down here 

@@ -1,11 +1,11 @@
 00:01 It's time to start focusing on the horizontal slices,
-00:04 let's look at where we're going again. 
-00:06 So over here you can see the next thing we want to do is 
-00:09 anyone who comes who is interested in our site or in our product or a band, 
+00:03 let's look at where we're going again. 
+00:05 So over here you can see the next thing we want to do is... 
+00:08 anyone who comes who is interested in our site or in our product or a band, 
 00:12 we want to encourage them to sign up. 
 00:15 From a business perspective, getting somebody to sign up 
 00:18 on your emailing list is so important, 
-00:21 having a person sign up on your mailing list even if you mail them infrequently 
+00:21 having a person sign up on your mailing list, even if you mail them infrequently 
 00:24 to tell them about the stuff that you have to sell 
 00:27 and in this case maybe this is upcoming events and albums but, 
 00:31 in my case, that might be training classes or podcast episodes. 
@@ -14,35 +14,35 @@
 00:41 having them follow you on Twitter and so on, 
 00:43 so we are going to put this right here.
 00:45 So this is a really simple form here, 
-00:48 if we look at that at inspect element 
-00:51 you'll see it's just a form the post, a newsletter/ add subscriber 
+00:48 if we look at that at "inspect element", 
+00:51 you'll see it's just a form that posts a newsletter/add_subscriber, 
 00:54 we'll talk more about how to implement that later, 
-00:57 and input with a type and a placeholder and a button, okay. 
+00:57 and input with a type and a placeholder and a button, OK. 
 01:00 So let's go add that to our working copy here. 
-01:04 I am going to put it right about there, 
-01:07 so you can see each part has one of these sort of name sections 
+01:04 I am going to put it right about there. 
+01:07 So you can see each part has one of these sort of name sections 
 01:12 so you hyperlink to it, 
 01:14 but it goes content a, content b, content a, content b, and so on, 
 01:17 so I am just going to duplicate this, 
-01:20 we are going to do better than the way they are doing their content a, b stuff 
-01:23 in a moment, and, up here, we have a container and a row
-01:27 this is Bootstrap grid stuff, so let's go in here, we are just going to take up the whole row, 
-01:31 and I am going to paste the HTML from there 
-01:33 because there is really no value in you guys watching me type that like I said, 
-01:36 we are going to have a form, it's going to have an input, 
-01:39 it is going to be a form control, that's Bootstrap, 
-01:41 and it's going to have a button to say get notified. 
-01:44 Let's see what we've done. 
-01:46 Okay, that looks well, not quite like what you expected I suspect, 
+01:19 we are going to do better than the way they are doing their content a, b stuff in a moment
+01:23 and up here, we have a container and a row
+01:25 this is Bootstrap grid stuff, so let's go in here, we are just going to take up the whole row, 
+01:29 and I am going to paste the HTML from there 
+01:32 because there is really no value in you guys watching me type that like I said, 
+01:35 we are going to have a form, it's going to have an input, 
+01:37 it is going to be a form control, that's Bootstrap, 
+01:40 and it's going to have a button to say "get notified". 
+01:43 Let's see what we've done. 
+01:46 OK, that looks well, not quite like what you expected I suspect, 
 01:50 so remember, the Bootstrap forms are ultra focused on mobile, 
 01:55 and this might look decent on a screen that looks like this. 
 01:59 It doesn't look decent on a screen like this, so let's apply some styles real quick. 
-02:03 So, over here I am just going to take some styles that I already put together, 
+02:05 So, over here I am just going to take some styles that I already put together, 
 02:08 so you don't have to watch but let's just talk to it, 
 02:11 we have a form, the form is over here, it has an id, 
-02:15 where have you gone form, there you are, you have an id called newsletter, 
-02:19 so form- newsletter targets exactly that one, we want to set its overall width, 
+02:15 where have you gone, form? There you are, you have an id called "newsletter", 
+02:19 so form#newsletter targets exactly that one, we want to set its overall width, 
 02:23 we are going to display the forms as inline blocks rather than blocks, 
-02:27 we'll set the max width on a various pieces, and then it should look better, let's try. 
+02:27 we'll set the max-width on a various pieces, and then it should look better, let's try. 
 02:31 There we go, that looks pretty nice, right, this is close,
 02:36 to what we were hoping to build I think. 

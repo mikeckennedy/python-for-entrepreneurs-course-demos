@@ -16,7 +16,7 @@
 00:56 And, I don't remember how I figured that out, 
 01:00 I think it was through like real time Google analytics
 01:04 and I said where are you right now, I am in Chicago, 
-01:06 okay, go to these various webpages on my website, 
+01:06 OK, go to these various webpages on my website, 
 01:09 not because I was trying to test him, but I was a little insure, 
 01:14 but really wanted to show him those things there and I happen to have my analytics up 
 01:17 and I look over and it says on this page, one visitor from the Philippines. 

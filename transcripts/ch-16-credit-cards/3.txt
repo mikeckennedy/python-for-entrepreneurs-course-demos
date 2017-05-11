@@ -9,11 +9,11 @@
 00:31 and how I use it, you may recognize this as we go through it, 
 00:34 and then I'll show you a little bit of behind the scenes on stripe.com 
 00:38 and then we are going to write the code ourself. 
-00:42 Okay, so over here, we can go pick a course, you can see I am not logged in,
+00:42 OK, so over here, we can go pick a course, you can see I am not logged in,
 00:45 let's just pick the Jumpstart course, and come down here you can see 
 00:49 there is a button here that says buy now, get lifetime access for 69 dollars. 
 00:53 So, if i click this, notice I am not logged in,
-00:59 it says okay we are going to buy this course, here is a little logo, 
+00:59 it says OK we are going to buy this course, here is a little logo, 
 01:02 I can put in my email, if I were logged in that email would already be pre populated 
 01:06 so I am going to put in a credit card, expiration date, CVC 
 01:10 and I hit pay and that's the entire funnel, that's the entire process. 

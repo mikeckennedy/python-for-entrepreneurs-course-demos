@@ -10,7 +10,7 @@
 00:32 that we can direct to different sources to rotating files directly 
 00:36 from out of the app to the console, maybe even to databases, 
 00:40 we could do all sorts of things with these once we get it to logging framework. 
-00:43 Okay, so to get started, let's go to the beginning of our app here, 
+00:43 OK, so to get started, let's go to the beginning of our app here, 
 00:50 and we are going to have, we've got this init mode, that's cool, 
 00:54 let's go ahead and add one thing at the beginning here, 
 00:58 very first thing we're going to say is init logging,
@@ -39,12 +39,12 @@
 02:28 
 02:32 So remember we are going to get our settings dictionary, say log level 
 02:41 we'll get the log level and we'll say log file name so we get both of those, 
-02:52 okay great, then let's create a file that is going to actually manage the logging, 
+02:52 OK great, then let's create a file that is going to actually manage the logging, 
 02:58 this dunder init is already getting kind of complicated and we are not done yet, 
 03:03 so let me go over here and create one of these services, 
 03:06 we have services for emails, for mailing lists, 
 03:09 for stores, e-commerce whatnot, let's add one for logging. 
-03:14 Okay, like before this is going to follow pretty much the same pattern, 
+03:14 OK, like before this is going to follow pretty much the same pattern, 
 03:21 we have a few sort of static variables here, so I have a static method, 
 03:26 and this is going to take log level, and file name, alright, 
 03:35 so let's just do a quick pass here really quick and we'll just wire these things up, 
@@ -64,10 +64,10 @@
 04:48 So remember we had our log level and our log file name. 
 04:55 Let's set this to be info that's pretty good, and we'll have log file name, 
 05:00 and let's just set that to be ./ we'll just do ./app_log.txt, something like that. 
-05:12 Okay, final thing to make sure this is all hanging together, 
+05:12 OK, final thing to make sure this is all hanging together, 
 05:17 let's just do a little print, logging setup like this, 
 05:27 and we'll just say we are going to print out the log level and the filename.
-05:31 Okay, run it, logging setup, none and none. 
+05:31 OK, run it, logging setup, none and none. 
 05:37 Oh yes, why is that happening, because in a little bit when we get to Rollbar, 
 05:42 I am going to need some more access to private keys 
 05:45 that I can't share with you guys 

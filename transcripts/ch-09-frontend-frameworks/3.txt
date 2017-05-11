@@ -19,7 +19,7 @@
 01:02 this is the landing page or homepage of our Blue / Yellow Rocket Band. 
 01:07 Now, let's just do a quick tour to point out some various pieces 
 01:12 that we are going to see on our tour of Bootstrap. 
-01:14 So we have this nav bar across the top, that comes from Bootstrap, 
+01:14 So we have this navbar across the top, that comes from Bootstrap, 
 01:18 you can't see it because I am not resizing the screenshot, 
 01:20 but if I did, you would see that that is a responsive design 
 01:23 that turns into a slightly different version on mobile than it does on wide desktop screens. 
@@ -117,7 +117,7 @@
 06:59 I use this often in navigation, less so outside of there.
 07:03 Now, let's look at the components, 
 07:05 there is a few interesting elements in the components, we have these Glyphicons,
-07:09 these are okay, Font Awesome is way better, 
+07:09 these are OK, Font Awesome is way better, 
 07:11 and so I'll be using Font Awesome for our stuff, but it kind of plays the same role. 
 07:15 The idea is to use a font for little icons rather than pictures 
 07:18 because you can perfectly resize them by changing the font size 
@@ -130,7 +130,7 @@
 07:42 which requires jQuery and the JavaScript file for Bootstrap. 
 07:45 So you can have little tabs, like this, these are nice, 
 07:48 or you can have these things called Pills, over here,
-07:51 or more likely, what we are interested in is the nav bar, 
+07:51 or more likely, what we are interested in is the navbar, 
 07:55 down here, so something like this, make it wider, 
 07:59 it should look all different, here we go we have this nice little dropdown here and links, 
 08:03 stuff that sticks to the right, stuff that sticks to the left, 

@@ -1,25 +1,25 @@
 00:01 Now that you know Bootstrap, you know about Bootstrap themes, 
 00:04 it's time to take a page that looks like this 
 00:07 and turn it more into a page that looks like this. 
-00:10 As you can imagine we are going to use Bootstrap plus a Bootstrap theme 
-00:13 to jumpstart our path from the left, to the right. 
+00:10 As you can imagine, we are going to use Bootstrap plus a Bootstrap theme 
+00:13 to jumpstart our path from the left to the right. 
 00:16 Let's begin with the theme. 
 00:19 So over here, I am going to use the same theme
-00:22 that I use on Talk Python To Me and Talk Python training 
-00:26 just so that you guys can see like this is the theme I used, right, 
-00:30 you don't necessarily have to pick this theme 
-00:33 as you've seen there are many beautiful themes 
+00:22 that I use on Talk Python To Me and Talk Python Training 
+00:26 just so that you guys can see like this is the theme I used, right? 
+00:30 You don't necessarily have to pick this theme 
+00:32 as you've seen, there are many beautiful themes 
 00:35 like this one is really wonderful and so on, 
-00:38 but we are going to use this landing page theme mostly because that's what I used. 
+00:37 but we are going to use this landing page theme, mostly because that's what I used. 
 00:42 So, if you are really going to use this as your website, 
-00:45 it probably makes sense you go fork it, on GitHub, 
-00:48 just so you have a copy, that said, we are going to stop by just downloading it. 
+00:44 it probably makes sense you go fork it, on GitHub, 
+00:47 just so you have a copy, that said, we are going to stop by just downloading it. 
 00:51 Alright, let's just look in here and see what we've got. 
 00:54 This is what came out and over here, now you can see we have this landing page. 
 00:59 And if I cycle back and forth between our target here, 
-01:02 you can see a lot of similarities like I dropped out this little HR horizontal line, 
-01:09 and move the call to action buttons up and the little subtext or the H3, H2 
-01:16 whatever that is underneath there and so on, let's go down a little bit, 
+01:02 you can see a lot of similarities like I dropped out this little HR, horizontal line, 
+01:09 and moved the call to action buttons up and the little subtext or the H3, H2 
+01:16 whatever that is, underneath there and so on, let's go down a little bit, 
 01:20 to let's say this section here, something like that, 
 01:23 you can see that that looks a lot like this, 
 01:26 well, a little more like that side, actually no, this one. 
@@ -40,5 +40,5 @@
 02:15 You will see over here on the desktop I've got a few images here 
 02:18 that are being used in the page, we'll talk about where do we got those 
 02:23 and how we are going to use them when we get to them, 
-02:26 but we are going to bring that over plus a little bit of our design and content 
+02:26 but we are going to bring that over, plus a little bit of our design and content, 
 02:30 mix it together with the theme and we'll be off to the races. 

@@ -11,7 +11,7 @@
 00:42 Now, watch what is going to happen, when I hit refresh, 
 00:45 notice, oh this one is next to what kind is it, this is an a, well, 
 00:52 it's next to an a above it so it needs to be a b. 
-00:55 Okay, but now below it, below it there is a b, darn it, 
+00:55 OK, but now below it, below it there is a b, darn it, 
 01:00 and now I need to switch that to an a. 
 01:03 Now if I run it again, you can see when I scroll down, 
 01:06 it's like whac-a- mole like as you reorder these things, 
@@ -30,7 +30,7 @@
 01:58 So we can come down here and say this has some kind of field, 
 02:01 alternate mode or something like that, equals false, or some to that effect. 
 02:08 we are going to write a function, get alternate row style, 
-02:18 I'll just call it alternate row style, okay, what we are going to do is 
+02:18 I'll just call it alternate row style, OK, what we are going to do is 
 02:22 we want to say self.alternate_mode= not self. alternate_mode
 02:29 when it has cycled those, it will say if self. alternate_mode 
 02:35 oh my gosh, sorry my C was coming through there for a second, 
@@ -52,7 +52,7 @@
 03:42 and let's actually-
 03:49 let's do it like this so it starts with whatever its real value is not the opposite. 
 03:53 And it's going to return this which we can sue as CSS, class. 
-03:56 Okay, so up here, we are going to say get me the alternate style 
+03:56 OK, so up here, we are going to say get me the alternate style 
 04:01 and we are just going to put this on every slice, 
 04:03 and when we duplicate one of these slices, like who cares, 
 04:05 I am going to say a, and it looks like this. 
@@ -60,20 +60,20 @@
 04:11 we'll probably just have content section, and content section plus the style alternate. 
 04:17 That was the one that was messed up, we had two of them, 
 04:20 and now it's going to get a in this again, 
-04:23 okay, now that was a Python code, so we've got to rerun it 
+04:23 OK, now that was a Python code, so we've got to rerun it 
 04:27 and let's see how it looks here. 
 04:30 It's not going to look so good, because we are not styling it, 
 04:33 based on this but if we were to go look at the page source, 
 04:37 I think it would be good, now let's just go back and style that here, 
 04:41 so we had something about b, right, where did it go, 
 04:44 I'll put it over here, great this could actually go into home
-04:47 which we're going to do in a second, but we want to just look at alternate, okay.
+04:47 which we're going to do in a second, but we want to just look at alternate, OK.
 04:52 So what we have for b, this is what we are going to have now, 
 04:55 and we probably want to make this a little bit stronger, we'll do like this, 
 05:01 if we have the content section a that also has an alternate, 
 05:05 we are going to do this thing to it, and this only applies to the home page, 
 05:10 so let's put it over in the home page section. 
-05:13 Okay, let's see where we are, we are not there yet, alright, 
+05:13 OK, let's see where we are, we are not there yet, alright, 
 05:18 and of course, this style that I was looking for, is down here, here we go, 
 05:25 I think actually that's all I need, let's find out. 
 05:29 No, almost, this one is 222. 

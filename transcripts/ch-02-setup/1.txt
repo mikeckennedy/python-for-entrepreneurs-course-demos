@@ -24,7 +24,7 @@
 1:23 You are going to see throughout this class why this is absolutely the case,
 1:26 but we are not there yet,
 1:28 it's going to take a while to build up all the various moving parts,
-1:30 they are like okay this thing really is awesome,
+1:30 they are like OK, this thing really is awesome,
 1:33 so while ago, back in 2015 I wrote a blog post called
 1:35 Nine Reasons You Should Be Using PyCharm
 1:37 and you are welcome to check that out if you want to see just some of the benefits.

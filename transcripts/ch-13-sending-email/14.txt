@@ -40,10 +40,10 @@
 02:34 we are checking for the password, we don't want to check for that on the get only on the post, 
 02:37 so we have this mechanism to indicate whether it's get or not, 
 02:41 you can see that happening here on the post version, this is false
-02:51 it defaults to true, okay so the last two things is to add validation around the reset code,
+02:51 it defaults to true, OK so the last two things is to add validation around the reset code,
 02:56 so we'll say this, actually let's go ahead and use this up here, 
 03:01 we'll just say if this query didn't actually set a reset thing, 
-03:06 we'll say the reset code is not found, okay, so that will do two in one,
+03:06 we'll say the reset code is not found, OK, so that will do two in one,
 03:10 and then down here we want to say self.reset was used 
 03:15 then we'll do a message like so, this reset code has already been used. 
 03:24 Alright, that's good, and then if it's expired, 
@@ -60,7 +60,7 @@
 04:19 we'll say days is greater than 1, then we are just going to say it's expired, 
 04:24 otherwise, if it makes it through all of this, we are going to be golden. 
 04:27 This reset code has expired. generate a new one 
-04:33 Let's try this again, okay, if I rerun this, how is everything looking? 
+04:33 Let's try this again, OK, if I rerun this, how is everything looking? 
 04:38 Oh reset code not found. Why was it not found? 
 04:41 Because we have not implemented that query yet, let's go do that. 
 04:46 Which one am I talking about?
@@ -73,10 +73,10 @@
 05:25 Oh perfect, so it found it but this one is expired, 
 05:31 apparently it's been more than 24 hours since I've done that last segment, 
 05:37 let's just double check that here. 
-05:40 This was sent, yes, one day ago, beautiful, okay. 
+05:40 This was sent, yes, one day ago, beautiful, OK. 
 05:44 So it looks like it's working, I am going to send a new reset code. 
 05:48 Alright, it was sent, let me check the email, 
-05:53 okay we are in good shape, zero minutes ago, let's see if this one works. 
+05:53 OK we are in good shape, zero minutes ago, let's see if this one works. 
 05:57 Boom it passes all the validation, it's not been used, it's not expired, things like that, 
-06:02 okay, so the next step is actually going to perform the password reset, 
+06:02 OK, so the next step is actually going to perform the password reset, 
 06:08 we'll do that in the next video. 

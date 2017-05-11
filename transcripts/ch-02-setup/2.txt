@@ -3,7 +3,7 @@
 0:10 The first thing you are going to need to do is set up Python 3.
 0:13 We can check to see whether Python 3 is installed,
 0:16 first let's see what happens when we say Python--version.
-0:20 Okay, so we have Python 2.7 installed, that comes with the OS X, that's cool.
+0:20 OK, so we have Python 2.7 installed, that comes with the OS X, that's cool.
 0:24 But if we ask for Python 3, which on OSX we can do by typing python3 like this,
 0:30 you'll see no, there is no Python 3.
 0:32 So, just download it and choose that, choose the 3.5.2

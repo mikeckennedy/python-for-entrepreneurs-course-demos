@@ -17,7 +17,7 @@
 00:51 to log in again just take them to their account. 
 00:54 This is unlikely, but maybe they type training.talkpython.fm in their browser 
 00:59 and it remembers the registration page first or whatever. 
-01:03 Okay so that is basic and then, here is the thing that actually does the work, 
+01:03 OK so that is basic and then, here is the thing that actually does the work, 
 01:07 we are going to have our view model just like I showed you,
 01:10 it's going to verify things like hey the password is required, don't mess around, 
 01:13 and we never touch the database for this.

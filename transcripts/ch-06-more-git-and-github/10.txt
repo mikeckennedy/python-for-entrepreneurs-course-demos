@@ -53,7 +53,7 @@
 02:56 We can also create what is called a new branch and a pull request,
 02:59 and if you are just working on the repository by yourself,
 03:02 typically you are just going to commit directly to the branch.
-03:04 And that is what we'll do here, okay, now our change is committed
+03:04 And that is what we'll do here, OK, now our change is committed
 03:07 and there is a new commit that was just created and we'll see it up in the corner here,
 03:10 if we click on it, it's going to show us the diff between the old commit,
 03:13 the second to latest commit and the absolute latest commit which was just created

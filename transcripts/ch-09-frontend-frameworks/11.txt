@@ -4,37 +4,37 @@
 00:11 Not, always, one of my podcasts is all about the white 
 00:14 but I kind of like this dark style when I am doing developer type stuff,
 00:18 I know this is like a podcast where developers come,
-00:21 we all like dark themes- not all of us, many of us like dark themes,
+00:21 we all like dark themes - not all of us, many of us like dark themes,
 00:24 so how do we do that?
-00:26 Well, it turns out to be super easy. 
-00:29 If we come over here, we can say instead of navbar default, 
-00:33 we can have navbar inverse, now if I just do that, and refresh this page, 
+00:25 Well, it turns out to be super easy. 
+00:27 If we come over here, we can say instead of navbar-default, 
+00:31 we can have navbar-inverse, now if I just do that, and refresh this page, 
 00:36 now you can see we have a nice dark version and everything inverses itself. 
 00:41 It's really great, but notice there is something weird going on,
 00:44 and this makes no sense to me why Bootstrap does this, but they do it.
 00:48 Look, really carefully here, zoom your eyes up here into the corner. 
-00:53 Notice, rounded edges, like what the heck? Why would rounded edges be here?
-00:58 I think they just kind of overdid it on the rounded edges when it comes to navigation. 
+00:53 Notice? Rounded edges, like what the heck? Why would rounded edges be here?
+00:57 I think they just kind of overdid it on the rounded edges when it comes to navigation. 
 01:02 Like it just doesn't make any sense to me, 
-01:05 it seems like it should be a bar across the top. 
-01:08 Never mind, we can fix that really easily. 
-01:11 So up here, we can see .navbar has border radius like that, 
+01:04 it seems like it should be a bar across the top. 
+01:05 Never mind, we can fix that really easily. 
+01:11 So up here, we can see .navbar has border-radius like that, 
 01:17 let's copy this, and here is the way I like, 
 01:20 any time I'm overriding a Bootstrap theme, 
-01:23 instead of sticking this into my main site, 
-01:26 what I would do is I would have a style sheet like this, 
+01:22 instead of sticking this into my main site, 
+01:24 what I would do is I would have a style sheet like this, 
 01:29 I always put this right after Bootstrap. 
-01:33 I can call it something like Bootstrap overrides
-01:37 so, any time you want to change the default behavior Bootstrap put it there
+01:33 I can call it something like bootstrap-overrides.
+01:37 So, any time you want to change the default behavior of Bootstrap, put it there
 01:41 if it's not specifically about your site,
-01:43 so you kind of know like what themes of what things am I doing 
+01:42 so you kind of know like what themes of what things am I doing 
 01:46 specifically to sort of be part of or counteract what Bootstrap is doing. 
-01:51 So let's put this here and we want of course zero,
+01:51 So let's put this here and we want of course "0",
 01:54 now we are going to need to include that 
-01:57 (Michael typing)02:04 so Bootstrap overrides thank you PyCharm. 
-02:07 Now if I go back over here, refresh, 
-02:10 so much better, you can see down here somewhere,
+02:04 so bootstrap-overrides. Thank you, PyCharm. 
+02:06 Now if I go back over here, refresh, 
+02:09 so much better, you can see down here somewhere,
 02:13 this is the border radius that came from Bootstrap 
-02:16 but the Bootstrap overrides said no, no, no, no- stand back, 
-02:20 we're putting zero here and if you look carefully again
+02:16 but the bootstrap-overrides said "no, no, no, no - stand back, 
+02:20 we're putting zero here" and if you look carefully again,
 02:23 now it looks more like you might expect.

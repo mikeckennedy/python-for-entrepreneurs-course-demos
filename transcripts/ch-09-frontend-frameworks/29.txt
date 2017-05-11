@@ -26,13 +26,13 @@
 01:40 but I don't really like the bars, these are supposed to be
 01:45 borders in the previous examples,
 01:48 let's look and see where are they coming from. 
-01:56 Okay, on section b, you can see there is these borders, 
+01:56 OK, on section b, you can see there is these borders, 
 02:00 let's go ahead and take these over here and have a thought about them. 
 02:03 Alright, what do we want to do? 
 02:06 See how I copied it straight out of Firefox, that's beautiful, 
-02:09 so the padding is okay, maybe we want to tighten that up a little bit, 
+02:09 so the padding is OK, maybe we want to tighten that up a little bit, 
 02:14 this one, not so much, let's set that to none, and similarly, down here, 
-02:20 okay, that's pretty good, it may make sense to have a border, right, 
+02:20 OK, that's pretty good, it may make sense to have a border, right, 
 02:23 if we really wanted a border we could do something like this to 1 px solid #111 
 02:32 and then there will be this little border here, 
 02:35 but I don't think it's necessary given the contrast that we already have 

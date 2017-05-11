@@ -1,50 +1,50 @@
 00:01 We have our upcoming events all done, let's see what the next section is. 
-00:04 Okay, so here is upcoming events, okay, the next one is this cool section 
+00:04 OK, so here is upcoming events, OK, the next one is this cool section 
 00:07 with the three band members, here in the middle. 
-00:10 And, we are going to use again, like you imagine one of these horizontal slices 
+00:10 And, we are going to use again, like you imagine, one of these horizontal slices 
 00:14 with grid layouts, so that some kind of responsive design happens, 
-00:17 that's a little insane, but responsive design for the three band members there, 
+00:18 that's a little insane, but responsive design for the three band members there, 
 00:23 of course, we could set max sizes on these images 
 00:26 and that would prevent it from getting too crazy. 
 00:29 So let's duplicate this section, like so, and we are going to switch it, 
 00:35 like I said, we are going to automate that part later, 
-00:38 we want to change this to band  
+00:38 we want to change this to "band"  
 00:42 and in here we are going to put something very similar, not the same, but similar, 
 00:45 where we've got our title that's going to be at the top 
 00:50 and then we have some medium rows, 
-00:53 maybe we want to make those small I think we could do better with that, 
-00:56 those pictures being huge, and of course it's not an sd but it's something with an m, 
+00:52 maybe we want to make those small, I think we could do better with that, 
+00:55 those pictures being huge, and of course it's not an "sd" but it's something with an "m", 
 01:01 alright, so here we're just going to put our little header at the top, 
-01:04 maybe that should be an h3, let's try that, 
+01:04 maybe that should be an H3, let's try that, 
 01:08 we don't want to fight with defining what is important on the page here, 
-01:13 so we are going to have h3 and then again, 
-01:16 have a little bit of padding on the left and right so like basically 25% left, 25% right 
+01:13 so we are going to have H3 and then again, 
+01:16 have a little bit of padding on the left and right, so like basically 25% left, 25% right 
 01:22 and then we'll have three, one sixth worth of images for these guys. 
 01:28 Now, this is going to look a little funky, it's not going to layout just right, 
 01:31 but let's see how far we've come with this, there is the band members, 
 01:36 and, well, I've got to say, I am not impressed with the way Rags is looking, 
-01:39 he is not rocking it out, that's because we didn't move his pictures, so let's do that, 
+01:38 he is not rocking it out, that's because we didn't move his pictures, so let's do that, 
 01:42 go over to the members, there they are, we are going to move their images over, 
 01:48 we'll make a folder for the members, and in there we'll put those three guys. 
-01:53 How about now? 
-01:57 There we go that looks great, right, notice, 
-02:00 some of the Bootstrap things we are doing here, we are doing an image, responsive, 
+01:55 How about now? 
+01:57 There we go, that looks great, right?  
+01:59 Notice some of the Bootstrap things we are doing here, we are doing an image, responsive, 
 02:05 we already talked about that, we are also applying the circle style 
-02:08 because if you look at the original images they are square, but of course here, 
+02:08 because if you look at the original images, they are square, but of course here, 
 02:12 they have got that cool circle look, and I just love the way this 
 02:15 sort of spotlights on them and it looks really good. 
-02:18 The last thing that we need to do is put that in the center of the page so let's give this, 
+02:18 The last thing that we need to do is put that in the center of the page, so let's give this, 
 02:22 we have this band, so we say .band and go to our home and down here, 
 02:27 we can say .band, text align center, like so, if we try again, there we go, 
-02:34 that's great and just for now, I am going to put that back to h2. 
+02:34 that's great and just for now, I am going to put that back to H2. 
 02:40 Alright, I think that looks pretty good, want to check the responsiveness? 
 02:43 You know it's going to work, right? 
-02:46 Okay, so go like this, scroll down, there is the band members, 
+02:46 OK, so go like this, scroll down, there is the band members, 
 02:50 they are kind of huge, but they get smaller. 
 02:53 Now, notice this is a little small, let's do one more thing for the band members 
 02:58 for their names, we'll say it's a block display, that's a little bit bigger fonts, 
 03:02 we'll give it some margin, because right now it's kind of crowding up against that, 
-03:07 let's run it and see how it looks- there we go, that's better. 
+03:07 let's run it and see how it looks. There we go, that's better. 
 03:10 Dave Wilson, Mark Spencer, and so on. 
 03:14 Make it bigger, unwrap, I think the band members are good 
 03:20 and this section is looking done to me. 

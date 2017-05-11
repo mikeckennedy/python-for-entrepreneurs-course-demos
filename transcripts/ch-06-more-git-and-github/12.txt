@@ -15,7 +15,7 @@
 00:50 but we're going to connect this to GitHub instead.
 00:53 So, if you don't have an Atlassian account, go to atllasian.com and sign up for one,
 00:58 just  a free account, once you've got that in place,
-01:01 we'll say "use an existing account" and we can log in, okay, now we're registered,
+01:01 we'll say "use an existing account" and we can log in, OK, now we're registered,
 01:06 and we can set it up, click GitHub and we're going to use the OAuth authentication,
 01:13 we'll connect our account, if you enabled too factor authentication,
 01:17 you'll need to get the verification code, punch that in and you should be verified,

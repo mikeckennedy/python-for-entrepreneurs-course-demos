@@ -26,7 +26,7 @@
 01:46 And of course, Talk Python and my related websites, like I said, 
 01:51 the website that you are looking at right now is powered by SQLAlchemy. 
 01:55 If you want to know exactly what each one of these companies is doing, 
-01:59 with SQLAlchemy, you can see SQLAlchemy.org/organizations.HTML 
+01:59 with SQLAlchemy, you can see SQLAlchemy.org/organizations.html 
 02:02 that link there at the bottom lists all of these companies and many more 
 02:06 and it actually has a paragraph or two describing 
 02:09 what each one of them are doing with SQLAlchemy. 

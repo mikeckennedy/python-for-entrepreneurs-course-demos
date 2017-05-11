@@ -71,7 +71,7 @@
 03:55 like a 1000 times better, if there is a lot of data in index versus no index, right, 
 03:59 so you want to really think about what are you going to query by, 
 04:02 what are you going to filter by, what are you going to order by, 
-04:05 put indexes where that makes sense, okay. 
+04:05 put indexes where that makes sense, OK. 
 04:08 So here we might want to do a report so show us our new daily users, 
 04:11 so we want to index that. 
 04:13 Also we can have uniqueness constraints, so in this case, 

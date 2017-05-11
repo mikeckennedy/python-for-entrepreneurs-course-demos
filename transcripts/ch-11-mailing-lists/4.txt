@@ -30,11 +30,11 @@
 01:37 we just say settings.get or however we do dictionary access, right, 
 01:42 do you want to crash or get null if the key is not there; 
 01:45 so we'll do this, and let's just say that's not misspelled, 
-01:49 so we'll grab this value and then we'll also do for the list id, okay, 
+01:49 so we'll grab this value and then we'll also do for the list id, OK, 
 01:52 so it's loaded into our running Python app, now where do we store it, 
 01:56 well, much like we have an album service, let's create an email service. 
 02:01 Or a mailing list service. 
-02:06 Okay, and down here let's just create a class called mailing list service,
+02:06 OK, and down here let's just create a class called mailing list service,
 02:10 and let's just give it a couple of pieces of information, 
 02:14 first of all, maybe you could hold that, right, 
 02:20 and maybe we could treat these as static 
@@ -57,8 +57,8 @@
 03:38 to get them on the list, but of course, we're not doing this here, 
 03:41 we're going to do this somewhere else. 
 03:44 Let's just go and run the code to make sure that we've gotten something out, 
-03:48 and I will print, let's just print out the length of the list id, okay. 
-03:54 Up and running, okay looks like we imported something
+03:48 and I will print, let's just print out the length of the list id, OK. 
+03:54 Up and running, OK looks like we imported something
 03:59 if that crash was zero,
 04:01 maybe that would be a problem but it looks like it's working. 
 04:04 Now we're ready to structure our controllers and a little bit of other code 

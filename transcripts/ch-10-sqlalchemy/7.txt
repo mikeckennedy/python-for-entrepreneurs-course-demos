@@ -42,7 +42,7 @@
 02:13 so we can do this by back populates. 
 02:15 And then we can say tracks, like so. 
 02:19 And PyCharm wants a new line, so we'll go and give it to it. 
-02:22 Okay great, so this will give us the relationship back to the album,
+02:22 OK great, so this will give us the relationship back to the album,
 02:26 we need the reverse of course. 
 02:29 So let's go over here, now I think this side of the story is more interesting 
 02:34 because over in the track 
@@ -69,7 +69,7 @@
 04:02 So we can create what's called an ordering list, 
 04:04 it comes out of SQLAlchemy as you can see on line 3, 
 04:06 and we can say this is going to be display order as well. 
-04:10 Okay, so this way of we insert something into the object 
+04:10 OK, so this way of we insert something into the object 
 04:12 before it goes to the database, it's also still going to be ordered, 
 04:16 so we don't have like this weird well has it been saved, has it not been saved, 
 04:19 well you can't look at the order if it's not saved, 
@@ -88,8 +88,8 @@
 04:58 there is no additional indexes, so when you're just getting started, 
 05:01 like this, honestly, the easiest thing to do is just blow away the database 
 05:05 and rerun create all let's run it again, 
-05:09 okay so that should recreate the data that will come back in a second, 
+05:09 OK so that should recreate the data that will come back in a second, 
 05:12 if we refresh this, now you can see there is a little bit more stuff, 
 05:15 we've got our album id we've got our foreign key constraint, 
-05:18 things like this, okay.
+05:18 things like this, OK.
 05:21 Our relationships that we just modeled are now created in the database. 

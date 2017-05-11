@@ -38,6 +38,6 @@
 02:21 Remember this bit? Try again. 
 02:28 Oh oops, it looks like I called that user id, 
 02:32 when I should have called that account.id, 
-02:38 okay, great. It looks like everything ran well, if I refresh this, 
+02:38 OK, great. It looks like everything ran well, if I refresh this, 
 02:43 we should have our password reset, it looks like the database is ready for us 
 02:47 to put a bunch of password resets in it.  

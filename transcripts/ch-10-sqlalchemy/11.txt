@@ -1,4 +1,4 @@
-00:01 Okay so how do we use this? Well, there is a couple of things we need to do, 
+00:01 OK so how do we use this? Well, there is a couple of things we need to do, 
 00:04 one our database is empty, so we are going to need
 00:08 to insert some data, that's interesting, 
 00:10 two we are going to need to query the data 
@@ -27,7 +27,7 @@
 01:33 let's give this a function over here, 
 01:36 so we come down here def make this a static method as well, 
 01:41 and we'll call this create session, something like this. 
-01:48 and we'll just return like so, okay, a so instead of doing this 
+01:48 and we'll just return like so, OK, a so instead of doing this 
 01:51 we can do something a little more obvious like create session 
 01:54 and then our goals are going to be to get the data from the database, 
 01:58 so how do we do this? 
@@ -59,7 +59,7 @@
 03:22 and on these we have like descending, ascending,
 03:25 like for substring matches, there is all sorts of interesting functions 
 03:28 on these columns that you can do filtering or ordering by. 
-03:32 Okay, so this is going to give us basically a result, 
+03:32 OK, so this is going to give us basically a result, 
 03:36 a set of results here, or leave it like that.
 03:41 Now, we can go over here and we can say things like .all 
 03:46 and that will snapshot into a list but if we don't do that here 
@@ -71,10 +71,10 @@
 04:06 which still kind of partially tie to the database, 
 04:09 we'd like to snapshot that like this, come over here say .all 
 04:15 and then return albums. 
-04:19 Okay, so that means outside of this function 
+04:19 OK, so that means outside of this function 
 04:21 there is going to be no more data access, 
 04:24 it's not like a dangling open session sort of issue going on, 
-04:27 okay, so this should run and it should give us back nothing, 
+04:27 OK, so this should run and it should give us back nothing, 
 04:31 because there is no data in our database,
 04:33 but let's do one thing so we can actually see what is happening. 
 04:36 Remember, our engine, it has an echo, not there, our engine, 
@@ -84,7 +84,7 @@
 04:50 Hopefully, I haven't mess anything up we are about to find out.
 04:53 So notice all this output, that's not an error, 
 04:57 that's SQLAlchemy looking at the tables trying to understand 
-05:00 tell me about the album, tell me about the track, okay? 
+05:00 tell me about the album, tell me about the track, OK? 
 05:03 That's from echo=true. Now, we go over here, 
 05:06 this is all well and good but if I hit this album's button, 
 05:09 or navigation item here, we are going to go run that query 

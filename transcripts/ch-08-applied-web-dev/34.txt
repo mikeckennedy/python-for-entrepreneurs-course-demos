@@ -54,6 +54,6 @@
 03:13 No, it's super easy to take these things and just HTTP post them to the server, 
 03:18 as some sort of app or something like requests, 
 03:21 and entirely skip the whole client side validation 
-03:23 so you are going to need the server side validation too, 
+03:23 so you are going to need the server-side validation too, 
 03:26 but you will probably give your users a slightly nicer experience 
 03:29 with the little sprinkling of HTML 5 validation. 

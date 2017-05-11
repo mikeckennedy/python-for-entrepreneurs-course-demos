@@ -1,4 +1,4 @@
-00:01 Okay so how do we create the schema in the database from this. 
+00:01 OK so how do we create the schema in the database from this. 
 00:04 Well, what we are going to do is we are going to back to this session factory 
 00:07 and pick up with this engine here, 
 00:09 so it turns out that our SQLAlchemy base class here has a metadata, property.
@@ -13,7 +13,7 @@
 00:43 it only creates new ones if they are missing. 
 00:46 So, there are limitations here but it is quite cool how this gets you started. 
 00:49 if I run it like this it's going to crash. 
-00:52 And the reason it is going to crash is it says okay I know enough 
+00:52 And the reason it is going to crash is it says OK I know enough 
 00:57 about the models to create the database, 
 00:59 but I don't even know what database you want me to create 
 01:02 so how am I supposed to do that; the way we do that is we pass the engine. 
@@ -27,7 +27,7 @@
 01:31 so we are going to come over here and we want to call this
 01:34 global init with the db file, well, what is the db file? 
 01:37 Let's make a place where this data is going to go, 
-01:40 okay, so we'll make another folder, remember, 
+01:40 OK, so we'll make another folder, remember, 
 01:43 maybe a full featured server this would just, 
 01:46 you wouldn't have to have a file location, you would just say go to that server, 
 01:50 that server is configured to store data, but in sqlite there is, 
@@ -85,8 +85,8 @@
 05:19 since I think I've already done it, let's see we'll find out. 
 05:22 Put it over here, no, it doesn't take because it doesn't know what it is, 
 05:27 come over here, notice, nod river files found, so let me install that really quick. 
-05:31 Okay, browse to the blue yellow sqlite and it figured it all out, 
-05:36 so if I hit okay, you should see it will pull it up, however, it's empty, nothing happens. 
+05:31 OK, browse to the blue yellow sqlite and it figured it all out, 
+05:36 so if I hit OK, you should see it will pull it up, however, it's empty, nothing happens. 
 05:41 Like I said, there is no data in this database, so what's going on here, 
 05:45 let's put this away, we'll come back to it when it's got something to look at. 
 05:49 This is a little bit tricky, it's easy to solve 
@@ -108,7 +108,7 @@
 06:46 I have to do this or it's not working, so look at the color, of this icon here. 
 06:50 Now if I run it again, because those tables don't exist, 
 06:53 it should discover these and create them. 
-06:56 Let's find out. Okay, so it didn't work, why didn't it work, it says you know,
+06:56 Let's find out. OK, so it didn't work, why didn't it work, it says you know,
 07:00 there is no way we are going to be able to do queries against this album, 
 07:03 let's go and fix that first. 
 07:05 So over here, we've got our id, and it's easy to make it a primary key, 

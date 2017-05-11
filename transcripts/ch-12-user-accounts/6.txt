@@ -44,24 +44,24 @@
 02:36 So here is the passlib documentation and it's really easy to create, 
 02:40 notice, here we have some password "toomanysecrets", 
 02:44 and this is the kind of thing that actually we are going to store in the database. 
-02:48 Okay, so how do we get started?
+02:48 OK, so how do we get started?
 02:51 Well we're going to get started by pip installing and there is a number of ways let's go,
 02:56 the place we're going to need to do the hash is down here, 
 02:59 and let's actually create another function specifically for doing this hash. 
-03:09 Okay so we're going to write this function hash text, 
+03:09 OK so we're going to write this function hash text, 
 03:12 and to do that we'er going to use passlib, 
 03:17 now notice this is not part of our requirements so we're going to add that there, that's good,
 03:22 remember, that puts it over here, let's do a little cleanup on this 
 03:26 and you know what PyCharm- passlib is not misspelled, thanks so much. 
 03:29 I don't know about you, but I like to be able to scan this, 
 03:32 so alphabetic, like that, it seems really nice. 
-03:36 Okay, so we have passlib here that's great,
+03:36 OK, so we have passlib here that's great,
 03:39 I guess I already installed passlib fro whatever reason playing around with something, 
 03:43 but if you don't have it installed, remember, 
 03:45 you are going to want to make sure you install passlib. 
-03:51 Okay, so this is going to go away, we want to say account service.hash text 
+03:51 OK, so this is going to go away, we want to say account service.hash text 
 03:57 and this will be the plain text password, 
-04:00 okay, so if we write this correctly, we'll be in good shape. 
+04:00 OK, so if we write this correctly, we'll be in good shape. 
 04:03 Now, it turns out we don't need all the passlib, we can just get one thing from it, 
 04:07 and we are going to go here to this thing called handlers, 
 04:10 sha2_crypt, and here we're going to import sh5.12_crypt
@@ -93,7 +93,7 @@
 05:51 the input is going to consist of the original password and some salt 
 05:56 and choosing a strong algorithm, all of those things we need to keep track of using this. 
 06:02 Let me show you how that works, let's go down to our hash password, 
-06:05 okay, so we are going to return, let me just hold it for a minute, 
+06:05 OK, so we are going to return, let me just hold it for a minute, 
 06:10 now here is what we are going to do,w e are going to go to this 
 06:14 and we are going to say encrypt, and what are we going to give it, 
 06:16 plain text password. Problem solved. 
@@ -114,7 +114,7 @@
 07:13 and very quickly and so I didn't notice any slowness and like why is this thing lagging, 
 07:18 like it felt instant, if I go over here and look at my table and I refresh this, 
 07:22 we now have a new thing and instead of hash test we have this, 
-07:27 let me put this over here just to show you, look at that puppy, okay, 
+07:27 let me put this over here just to show you, look at that puppy, OK, 
 07:32 so it gives you a little bit information about the algorithm 
 07:36 so that it can reverify the number of rounds because over time, 
 07:40 this is great but in five years 150 thousand might not be fast enough, 
@@ -131,7 +131,7 @@
 08:18 because it's doing a 150 thousand times, and because it has the salt 
 08:21 it's not clear that it's just four characters, it was probably much more than that. 
 08:25 And the salt was randomly generated along with this. 
-08:29 Okay, excellent, now final thing is, we've created our accounts 
+08:29 OK, excellent, now final thing is, we've created our accounts 
 08:34 how do we test a log in, alright so let's do that. 
 08:39 Let's start at the controller level, 
 08:42 so up here we have a sign in, hello, sign in, great, and now we need to validate this, 
@@ -162,11 +162,11 @@
 10:37 So we are just going to return and this returns true and false so let's say false. 
 10:41 Actually, we are going to want the account from this 
 10:46 so we'll say if not that, then return account. 
-10:51 Okay, let's make sure we get this right, we get the account by email address, 
+10:51 OK, let's make sure we get this right, we get the account by email address, 
 10:55 and if we have no account under that email then we're done, then, 
 10:59 we're going to verify with the same information, let passlib handle that for us, 
 11:04 if that doesn't work we are going to return no account if it does, return account. 
-11:08 Alright, let's try it, are you ready to sign in to our first account, okay, sign in, let's see, 
+11:08 Alright, let's try it, are you ready to sign in to our first account, OK, sign in, let's see, 
 11:13 they both have the same password I am going to try this one 
 11:16 and I am going to put first something wrong I am going to put the word cat, 
 11:20 cat is not the password bam, look at that, error email address or password incorrect. 
@@ -178,7 +178,7 @@
 11:45 so this one I just put in hash something and it is going to crash if I try it, 
 11:48 if I do this one, I'll just log in again, test 1, 2, 3, 
 11:51 I'll make a lot noise here how quick it is, nice and speedy, it's fine remember. 
-11:55 Okay so that is how we manage the accounts, 
+11:55 OK so that is how we manage the accounts, 
 11:58 the final thing that we have to see is how do we actually indicate that 
 12:01 in our website that people are logged in across more than just one request 
 12:05 and the trick to that is going to be cookies. 

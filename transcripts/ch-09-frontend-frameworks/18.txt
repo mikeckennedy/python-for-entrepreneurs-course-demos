@@ -2,22 +2,22 @@
 00:07 Remember, there is two parts, we are going to need some kind of trigger, 
 00:11 that can be a button, or a hyperlink styles of button 
 00:15 or even a plain hyperlink if you really want. 
-00:18 Here, the important part is that we have data-toggle 
-00:22 and that toggle mode is set to modal 
-00:25 and the data-target is set to that id of the modal dialogue, so # in CSS means id. 
+00:17 Here, the important part is that we have data-toggle 
+00:21 and that toggle mode is set to modal 
+00:23 and the data-target is set to that id of the modal dialogue, so # in CSS means id. 
 00:30 And then we are going to have to have the HTML fragment to show 
 00:33 and that is a little more complicated but it's always the same 
-00:36 so you just copy and paste it, it's fine, we have a class modal fade, 
+00:36 so you just copy and paste it, it's fine, we have a class "modal fade", 
 00:39 of course we are setting the id, if you are going to have more than one thing, 
-00:43 one dialogue on your page it's super important that you use different ids, 
-00:48 HTML is suppose to have one and only one thing with the given id 
-00:53 basically id is supposed to be unique per element, 
+00:43 one dialogue on your page, it's super important that you use different ids, 
+00:48 HTML is suppose to have one and only one thing with the given id, 
+00:53 basically id is supposed to be unique per element 
 00:56 and there is some other stuff that we could set, 
-00:59 we've got the modal dialogue, the content, the header, the title, the body, 
-01:02 we also have the data dismiss. 
-01:05 If we want to have like a little close button in the upper right 
-01:08 and maybe a close or cancel button on the bottom 
-01:10 be sure to give them the data-dismiss=modal. 
+00:57 we've got the modal dialogue, the content, the header, the title, the body, 
+01:01 we also have the data-dismiss. 
+01:04 If we want to have like a little "close" button in the upper right 
+01:07 and maybe a "close" or "cancel" button on the bottom 
+01:10 be sure to give them the data-dismiss="modal". 
 01:13 And then, you are free to put whatever you want in product details, 
-01:16 this whole area is just standard HTML so you can use things like the grid layout, 
+01:16 this whole area is just standard HTML, so you can use things like the grid layout, 
 01:21 and hero images, whatever you need. 
