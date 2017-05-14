@@ -38,7 +38,7 @@
 2:06 that service is written in Python and handles several billion requests per day,
 2:11 and is running down around the millisecond response time.
 2:14 Dropbox maybe one of the biggest users of Python
-2:17 most of the backend stuff happening at the company at the server side
+2:17 most of the backend stuff happening at the company at the server-side
 2:21 at Dropbox is happening in Python.
 2:24 The client stuff side, the little box that does the sinking
 2:27 and the app that runs on your machine, also Python interestingly,

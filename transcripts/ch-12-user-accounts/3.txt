@@ -17,7 +17,7 @@
 01:07 not a datetime and I went and updated it, notice, we probably want the minutes, 
 01:10 hours, minutes and seconds, so datetime, not date 
 01:13 and then we are going to set that to be the default of datetime.datetime.now 
-01:18 without parenthesis okay. 
+01:18 without parenthesis OK. 
 01:20 Then we want to give a little bit of permissions management, 
 01:25 very basic to our account here, and whether or not this user is a super user 
 01:29 and they have access to do all sorts of interesting additional high privilege things 

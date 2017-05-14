@@ -4,8 +4,8 @@
 00:12 that are listed in the all topics, for example, web frameworks, 
 00:15 we can see the URL up here at the top, there are no subfolders 
 00:19 between the base URL fullstackpython.com and this particular page,
-00:23 it's a simple URL as possible with perhaps the .HTML. 
-00:27 Now, the .HTML provides no penalty 
+00:23 it's a simple URL as possible with perhaps the .html. 
+00:27 Now, the .html provides no penalty 
 00:31 so whether you have a clean URL with or without that, 
 00:33 for example, if we just had web frameworks, be the same thing, 
 00:36 and I suggest for each of your pages don't nest more than one folder deep 

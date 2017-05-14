@@ -1,8 +1,8 @@
 00:01 I think we've done it, I think we've built the page, 
 00:03 we've adapted the landing page into our site the way we want it, 
 00:06 if we look through, you can see we've got our great little banner 
-00:09 we've got this get notified, we've got upcoming events, we've got band members, 
-00:14 and book us, and we've got even our cool little footer. 
+00:09 we've got this "get notified", we've got upcoming events, we've got band members, 
+00:14 and "book us", and we've got even our cool little footer. 
 00:17 There is two final things I'd like to talk about here, 
 00:20 one is I want to get this become dark like the rest of the site, 
 00:25 so let's see how we can do that. It may be easy. 
@@ -18,34 +18,33 @@
 01:02 but it will definitely darken some things. 
 01:07 Here you can see it's darken the few of them but we have these alternate ones, 
 01:10 why is that this color, let's find out.
-01:13 It turns out, when you're on one of these section a, 
-01:16 the section a has a color- and that's our alternating color, 
+01:13 It turns out, when you're on one of these section "a", 
+01:16 the section "a" has a color- and that's our alternating color, 
 01:24 so here we'll go like this and instead of having that dark, let's set it to like 333. 
 01:33 Now how does that look? 
 01:36 The color, I like the colors pretty well, maybe it's a shade light, not entirely sure, 
-01:40 but I don't really like the bars, these are supposed to be
-01:45 borders in the previous examples,
-01:48 let's look and see where are they coming from. 
-01:56 Okay, on section b, you can see there is these borders, 
-02:00 let's go ahead and take these over here and have a thought about them. 
+01:40 but I don't really like the bars, these are supposed to be borders in the previous examples,
+01:46 let's look and see where are they coming from. 
+01:56 OK, on section "b", you can see there is these borders, 
+01:59 let's go ahead and take these over here and have a thought about them. 
 02:03 Alright, what do we want to do? 
 02:06 See how I copied it straight out of Firefox, that's beautiful, 
-02:09 so the padding is okay, maybe we want to tighten that up a little bit, 
-02:14 this one, not so much, let's set that to none, and similarly, down here, 
-02:20 okay, that's pretty good, it may make sense to have a border, right, 
-02:23 if we really wanted a border we could do something like this to 1 px solid #111 
+02:09 so the padding is OK, maybe we want to tighten that up a little bit, 
+02:14 this one not so much, let's set that to "none", and similarly down here, 
+02:20 OK, that's pretty good, it may make sense to have a border, right, 
+02:23 if we really wanted a border, we could do something like this to 1px solid #111 
 02:32 and then there will be this little border here, 
-02:35 but I don't think it's necessary given the contrast that we already have 
-02:38 between the two levels, right, this is a pretty good contrast, going on here. 
+02:34 but I don't think it's necessary given the contrast that we already have 
+02:38 between the two levels, right, this is a pretty good contrast going on here. 
 02:41 Alright, so there you can see we've got this whole page more or less 
 02:47 looking like what we wanted it, and I know this section, 
 02:52 this demo section here at the end of this chapter is kind of long, 
-02:55 but we went from like zero to a really pretty good looking website, 
+02:55 but we went from like zero to a really pretty good-looking website, 
 03:00 I could get behind having this be my website if I was this band 
 03:04 or if this was somehow representing my business, 
 03:07 I think we could actually do better, 
-03:11 but it's certainly not bad, and we did that by grabbing the theme. 
-03:15 Really great, I am pretty happy with where we've come from, 
+03:09 but it's certainly not bad, and we did that by grabbing the theme. 
+03:13 Really great, I am pretty happy with where we've come from, 
 03:19 hopefully you feel inspired to be able to go grab one of these themes, 
 03:23 apply it to whatever it is you are building and make it awesome. 
 03:26 We have one more thing to come back 

@@ -53,18 +53,18 @@
 04:18 so we'll say yeey, we have a purchase, somebody bought something, 
 04:23 so notice that PytCharm is showing us that we are missing some pieces 
 04:27 so we say self.logged_in_user.email, what did they buy, 
-04:32 they bought album.name. Okay, let's go buy that. 
+04:32 they bought album.name. OK, let's go buy that. 
 04:40 So we'll come over here, let's log out really quick, 
 04:45 log back in take it through the whole process, alright, now we are logged in,
 04:51 we can go to albums and hey, we can buy this album, and remember, 
 04:55 our test codes four twos all the way across, alright, let's buy it. 
 05:04 
-05:08 Success, now let's check out logs, okay, so we've come down here,
+05:08 Success, now let's check out logs, OK, so we've come down here,
 05:13 the user has logged in, we have some request going to Stripe etc, etc, etc, 
 05:20 I think I am printing that out somewhere, we could take that away
 05:26 and then we have controller/store, 
 05:28 yeey, Michael bought Digital Age Boys And Girls. 
-05:31 Okay, so besides that print statement there, which I can get rid of, 
+05:31 OK, so besides that print statement there, which I can get rid of, 
 05:36 you can see we have controller/account, controller/store and so on. 
 05:43 So now, with just this little bit of work, we are going to have a really good login 
 05:47 for the rest of our application. 

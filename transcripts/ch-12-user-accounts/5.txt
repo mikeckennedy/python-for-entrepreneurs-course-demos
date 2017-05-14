@@ -14,7 +14,7 @@
 00:45 you might want to check that this is like matching the regular expression 
 00:47 or it's some kind of proper email, at least it has an @ and a dot in it. 
 00:51 Something like this. 
-00:53 Okay, so now what we are going to do is we want to create the user here, 
+00:53 OK, so now what we are going to do is we want to create the user here, 
 00:55 now we don't want to just allocate a new instance of an account, 
 00:58 set some properties and store it, this account creation and whatnot, 
 01:02 it's a little complex we are going to hash the passwords 
@@ -24,7 +24,7 @@
 01:16 on the service thing, so I am going to call this account service, 
 01:19 it's going to handle things like generating password resets, 
 01:21 changing passwords, etc. 
-01:25 Okay, we'll create a class, AccountService, and it's going to be mostly static stuff, 
+01:25 OK, we'll create a class, AccountService, and it's going to be mostly static stuff, 
 01:31 let's add a method here, called create account. 
 01:37 Now, it's going to take the email, it's going to take the password, 
 01:41 I think everything else is auto generated, the user only enters their email, 
@@ -33,7 +33,7 @@
 01:50 if they don't then we won't ever let them get here
 01:52 But I want to be very clear here that this is the plain text password,
 01:56 this is not what we want to put into the database, 
-01:59 okay so up here we're going to have to import the account and let's do it like this, 
+01:59 OK so up here we're going to have to import the account and let's do it like this, 
 02:08 let's say from that import account, I just want to work with that character right there 
 02:13 and we are also going to need the session, 
 02:16 so we're going to need to start out like everything we do by creating a db session, 
@@ -79,14 +79,14 @@
 04:43 something to that effect but here we've created it 
 04:46 and we probably want to log something interesting 
 04:48 but for now I am just going to print it out. 
-04:52 Okay, so let's finish this little part right here, right, 
+04:52 OK, so let's finish this little part right here, right, 
 04:54 this is why we create this account service, 
 04:57 there is going to be a bunch of these little helper methods, all to do with accounts, 
 05:01 and we can just stash them here, use them throughout our app 
 05:04 and forget about it and not make really complicated action methods. 
 05:08 Alright, so again, we are going to need the session 
 05:10 but this time instead of doing an insert we're going to do a query 
-05:14 so we'll say count= session.query (Account), we want to do a filter,okay, 
+05:14 so we'll say count= session.query (Account), we want to do a filter,OK, 
 05:26 so we are going to get just the first one, now we could do one 
 05:30 but I think one will throw an exception of none is found 
 05:33 and ideally one won't be found in our particular use case here. 
@@ -109,12 +109,12 @@
 06:34 Great, I think we are ready to roll, let's give this a test, in fact, let's debug it, 
 06:37 we'll step through our little account register step. 
 06:41 Alright, are you guys ready to register? 
-06:43 I am here we go, okay, my email address is going to be let's say this one, 
+06:43 I am here we go, OK, my email address is going to be let's say this one, 
 06:48 it doesn't really matter, it's going to be test 
 06:51 and this will be test two, we'll just make sure our matching email works, 
 06:54 so we come down here nope, it didn't validate, alright, let it go, 
 07:01 the password and confirmation don't match, 
-07:03 okay let's just make this test, one more time, I am going to step over, 
+07:03 OK let's just make this test, one more time, I am going to step over, 
 07:06 this time it should validate, alright,
 07:08 so we're going to run this find account by email notice it came back none, right here, 
 07:12 that's good, we don't have an existing account, 
@@ -127,7 +127,7 @@
 07:37 Yes, it works. Now of course, we did not hash the password, 
 07:40 we are going to talk about that next, let's just look really quick. 
 07:45 Here we got our id, and this and our hash test password, 
-07:49 not the best password there is but that is okay. 
+07:49 not the best password there is but that is OK. 
 07:52 Very cool. Let's try to log in again with this, and just test our code 
 07:56 make sure we are getting that one object back so let's go, 
 08:01 now, notice this still says sign in and register,

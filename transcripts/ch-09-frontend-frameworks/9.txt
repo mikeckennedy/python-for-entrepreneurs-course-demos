@@ -2,11 +2,11 @@
 00:08 It tells them what the site is about, what are their options, 
 00:11 where can they go, what can they explore, 
 00:13 it's super important to have a good navbar. 
-00:16 Here you can see the one from Blue Yellow Rocket's Band, 
+00:16 Here you can see the one from Blue / Yellow Rockets Band, 
 00:18 we'll put this design together in just a little bit. 
 00:21 It's also important that this navbar adapt to various screen sizes. 
 00:26 So this is great on a desktop, but what if it's small, 
-00:29 we'd like it to collapse into what is often referred to as a 'hamburger menu' 
+00:29 we'd like it to collapse into what is often referred to as a "hamburger menu" 
 00:33 so these three little lines and that square box are rounded square box. 
 00:37 And when we click that box, would like to see it expand out 
 00:41 and show us the same navigation or very similar navigation here. 

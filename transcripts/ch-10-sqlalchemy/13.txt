@@ -1,17 +1,166 @@
-00:00 So let's review, real quickly. 
-00:03 The core element of what we did was this create album method, 
-00:06 so we created an album and we gave it the data needed, 
-00:09 the way we did this is we create a session using the session factory,
-00:12 in this case we were inserting so we allocate new objects 
-00:15 and add them to the session,
-00:17 we want to add some related dependent objects like these tracks, 
-00:20 so we go and use our relationship that we have, 
-00:23 we append to the tracks and when things got inserted, 
-00:26 all the foreign key relationships 
-00:28 for the auto-incremented ids were all worked out 
-00:31 we called commit, we returned the album, we did a little print, 
-00:34 we haven't looked at that yet but somewhere in here 
-00:37 there should be created a new album with id 2. 
-00:41 So you can see that after we called commit our album 
-00:45 now actually had its primary key back which we can use for all sorts of things, 
-00:50 you maybe want to use this for further processing in your app. 
+00:01 Let's just run this and see what we're going to get.
+00:05 So over here in albums, we have now an add new
+00:08 and this takes us to our admin section and here is our form,
+00:11 you can see it looks pretty decent bootstrap.
+00:13 What we are going to need to do is we are going to need to put in some data,
+00:16 so where does this data come from?
+00:18 Remember we had tracks there before,
+00:20 and those tracks came from this fake data that I entered
+00:23 we're going to reuse that fake data, let's look at what we're going to do
+00:26 in the admin controller here.
+00:29 Now, a pattern that I really like to use when working with ORMs
+00:32 is I like to have a layer of separation between the raw ORM
+00:37 and just straight up queries against the database
+00:40 and the controller our view action methods here.
+00:44 And the way I do that, you can do whatever you want
+00:47 but the way I do this is I have this thing called  an album service,
+00:50 we have an account service and things like that
+00:52 and it will do sort of orchestration of the data, higher order things, right,
+00:55 so here we are going to call get albums that's already being called
+00:58 and it's returning nothing, so that's why that album's page is down empty,
+01:01 here is where the fake data was living, we are also going to be able to create an album,
+01:05 so let's go over here, and let's just do that and insert an album here,
+01:09 we'll go and call this method so I'll say album service which I've already imported,
+01:14 say create album, and what do we have to give it, we have to give it the title,
+01:18 so the vm has a title, and we want to send it the track titles,
+01:24 so these are the track titles, notice the p here for the property
+01:27 not the t for straight text.
+01:30 Okay, so we are going to pass that along and we are going to actually have it
+01:35 return a new album, this is going to be an instance of this class here, right,
+01:42 we are going to create one of those and we want to get it back from the database
+01:46 and the reason why do we want to get it back
+01:48 why don't we just want to insert it and forget it, well,
+01:51 maybe we want to log that was created, we are going to need a piece of information
+01:54 that is not immediately accessible from what the user has given us.
+01:57 Namely the primary key that is an auto incrementing auto-generating id,
+02:02 so we'll say something like this,
+02:06 there, so once we save it to the database it's actually going to come back
+02:12 with its auto-incrementing or auto created id set
+02:15 of course this isn't actually doing anything you saw that it just did a pass
+02:19 but this is what our controller method is going to do
+02:22 now we just have to go and actually create this item here.
+02:26 So as we saw earlier, in the db session factory,
+02:30 we have to create one of these sessions, right,
+02:33 we are going to create a unit of work, we are going to make some inserts,
+02:36 and then we are going to commit that unit of work.
+02:38 So here we'll say session=this we want to do a bunch of work
+02:41 and then we'll say session.commit.
+02:44 So the first thing we want to do is we want to create an album and insert it,
+02:47 well, how do you create an object in Python if you weren't doing database stuff,
+02:51 something like this- there right, so that will create an album
+02:56 and the way we tell the database to insert it we go here and we say add this album.
+03:03 And then when we commit it, everything is going to be great,
+03:07 also we want to return the album, like so.
+03:11 Okay so this is great but none of the values have been set, so let's go and set these,
+03:15 so here you'll see that we can set the title is title year=year,
+03:21 and now these names just happen to line up they don't have to,
+03:25 as of course, now that's pretty close, there is one other thing we want to set,
+03:30 there is an is published we want to set that to true
+03:34  because we are going to want to do some kind of query there based on that.
+03:40 So this will create the album and insert it, the other thing we want to do is
+03:43 actually create the associated tracks in the other table so how do we do that,
+03:48 well, we could do this commit to generate the key and then we could actually go back
+03:53 and associate the album id on each track with this one
+03:57 but there is a much better way in SQLAlchemy.
+04:00 We can traverse that relationship, so we can come down here
+04:03 and say for a title in track titles, right, this is a list of strings,
+04:07 we can create a track like so,
+04:12 and then we can go to the album and go to its tracks here
+04:17 and say .append and just like any list, track.
+04:20 And then this tells SQLAlchemy well when you insert this album,
+04:24 also take all the tracks and put it in that other table, and set up the foreign key relationship
+04:28 to match whatever the auto-incremented or auto-generated id is,
+04:33 so again, we are going to have to set a few things here let's just look
+04:36 and see what tracks have, so the id is going to be fine,
+04:39 we are going to need to set the name,
+04:43 also we are going to need to be a little careful here this is name as well I believe.
+04:48 Yes, it is name, okay so we want to set the name = title, and what else-
+04:57 actually I don't think we need this, but we do need display order,
+05:01 remember display order is actually used in figuring out how these will come in here
+05:06 Now how do we get the display order,
+05:08 let's just put the order in which they appear here
+05:11 the easiest way to do that in Python is to use enumerate
+05:14 and we'll project back an index and the title not just the title
+05:18 so we can come down here and say this is going to be index
+05:20 maybe we'll have one to end not zero to end minus one,
+05:23 and so this is going to associate that with our tracks,
+05:27 and now we are going to call commit, and that should add everything to the database,
+05:32 it's going to be great, except for up here we have our query
+05:35 which I had accidentally deleted, I'll put it back,
+05:37 there is going to be a small problem with this,
+05:39 I want you to see the error because this is super frustrating
+05:41 sometimes when you are working with these views and web apps
+05:45 and I am going to talk about two possible solutions but let's have this work,
+05:49 sort of and then it's going to redirect, and so the working part will be inserted
+05:53 into the database, it's going to redirect to albums,
+05:55 it's going to run this method and this method shouldn't work.
+05:58 Let's go. Alright, so over here let's go to albums, see there is none,
+06:04 so that query works right now, and let's take this test data here
+06:09 and I am just going to throw some of this in,
+06:13 okay great we've got this all filled out now
+06:15 I am going to click it, notice it should go way from new album,
+06:18 and it should go back to /albums, fingers crossed for the insert.
+06:22 Boom, wow that actually surprises me, that this works,
+06:26 let's do a quick clear down here and have a look at what's going on,
+06:29 so if I do a query it's going to write obviously go to the database,
+06:33 find me where it's published and sort by this,
+06:36 but you should see actually a second query
+06:38 and if there were ten albums, you would see eleven queries at the database, that's bad.
+06:45 Okay so let's go to the very beginning, here is the select album ta ta ta ta from that
+06:48 where it's published, this is the one that gave us the album and then,
+06:52 we in Chameleon try to loop over the tracks, well the tracks weren't loaded,
+06:57 we only loaded the albums here, so that is going to go back to the database
+07:01 down here it's going to begin another query
+07:05 where you select the track ta ta ta from track where the album id
+07:09 is something and the display order is something, order by display order.
+07:13 So here this is album one and we are getting that back.
+07:18 Okay, so we are going to this database, the error I thought you might see
+07:26 was a detached instance what happens is if the session gets cleaned up,
+07:29 we are going to make it happen, no it's still working.
+07:33 What happens is if this session gets closed and then you try to navigate that relationship,
+07:39 if you go to one of these albums and say album.tracks
+07:43 it might not have a connection it can use to get back to the database,
+07:47 and so that's not great.
+07:50 So what we can do is we can actually, there is a couple of things we can do,
+07:54 say hang on to the session basically is not good,
+07:57 the other one is we can go and do a join and we could actually,
+08:01  we know that when we call this function it's very likely we want to get the tracks as well,
+08:04 so we could pre join that and remove what's called an n+1 performance problem
+08:09 and just make it one query not one that returns an item and then n more things
+08:16 back to navigate those relationships.
+08:18 So how do we do that, well, we go over here and we say there are options
+08:21 and we say joined load now you've got to see import that from SQLAlchemy.orm
+08:24 and then you give it to actual relationship it's going to follow
+08:28 so it's going to follow tracks on the album, I'm going to continue that,
+08:32 so notice, down here we had those two queries, let's run this again,
+08:35 we've got to rerun the whole site, because the Python changed.
+08:40 If we rerun this again, same behavior,
+08:44 although, we can tell it probably was faster though,
+08:47 but check this out, we were going to do select* from albums
+08:52 left outer join with track as track one on album id=track one.album id
+09:00 so it's actually doing that join, so even we've got a hundred albums back,
+09:03 we are only making one query to the database, so this is really cool,
+09:07 you don't want to use it all the time, like if you don't always need tracks don't do this,
+09:10 but it's great to be able to do it to make everything run faster.
+09:15 While we're at it, let's just add one more album,
+09:17 because a single album or a single record
+09:19 in the database, that's kind of boring, right. let's add new again,
+09:23 and I'll just copy this over from the old data.
+09:28 Okay, here is the other album, from the fake data that I had entered
+09:32 and let's go ahead and hit create here and now that should work perfectly,
+09:35 it should create it, insert into the database, redirect to albums,
+09:38 that's going to do a query again, and let's see does it order over here,
+09:42 it orders by the year descending; the first one was 2001, this is 1999
+09:48 so it should go on the end, ready, set go.
+09:51 And that was just lightning fast, boom, there we are,
+09:55 we've got our year of the snake entered and you can see
+09:59 that the order in which the things are shown here the relationship is traverse,
+10:05 is exactly the order in which they were put in.
+10:08 Let's do one final thing, let's actually open this up and see what's in here
+10:11 so we go to table editor, I am going to close this,
+10:15 and you can see here is the two albums,
+10:18 and we can go over to the track as well
+10:21 and you can see here we've got the new tracks,
+10:24 and the display order, it's 1, 2, 3, 4, 5, 6,
+10:28 1, 2, 3, 4, 5, and here if the foreign key that we are using
+10:30 to associate them back with the album.

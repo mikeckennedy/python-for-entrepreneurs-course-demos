@@ -5,91 +5,90 @@
 00:12 we will be able to put them in the database and so on, 
 00:14 but, one thing that is missing is the relationship, 
 00:16 obviously, a track should have an album associated with it, 
-00:20 so we can come down here and do an album id 
+00:20 so we can come down here and do an album_id 
 00:23 and this can just be an integer column just like that one. 
 00:27 This would let us be able to make the relationship in the database 
 00:30 in the sense there would be a number here we could do another query
 00:34 to go back and find the album and vice versa, 
 00:37 but this is not enough to actually create the relationship,
-00:39 so in order to do that we have to have a SQLAlchemy foreign key 
+00:39 so in order to do that we have to have a sqlalchemy.foreign_key 
 00:43 and here we have to say the name of the table 
 00:47 and the field that we want before. 
-00:50 So this is going to be album.id, in case we go back to that album class 
+00:50 So this is going to be Album.id, in case we go back to that album class 
 00:54 we are looking for the id here. 
 00:56 Now that's part one of this relationship. 
 00:58 So we could use this to actually do the queries to find the tracks and so on, 
-01:05 but SQLAlchemy we'll go a lot farther.
-01:08 So if I were given a track maybe just I'm in a method 
+01:05 but SQLAlchemy will go a lot farther for us.
+01:08 So if I were given a track, maybe just I'm in a method 
 01:14 and somebody does a query to the database to get a track back 
 01:16 and they give it to me, instead of my trying to do another query 
 01:20 to figure out what is the title of the album or something like that, 
 01:24 SQLAlchemy will actually map through lazy loading 
 01:26 the actual album instance that this ID would represent 
-01:31 so we can say this
+01:31 so we can say this...
 01:33 Now, for this relationship to work,
-01:37 this is going to be an ORM piece here, 
-01:40 so we are going to import the ORM at the top, 
-01:42 there is a relationship that we'd like, now, 
+01:35 this is going to be an ORM piece here, 
+01:38 so we are going to import the ORM at the top, 
+01:41 there is a relationship that we'd like, now, 
 01:45 there is all sorts of stuff that we can put in here,
 01:47 let's say album is going to be the relationship, 
 01:49 and we can say on the album class, 
-01:52 there is probably a reversed of this relationship, 
+01:52 there is probably a reverse of this relationship, 
 01:54 there is probably a set of tracks that is a list or something like that,
 01:58 that represents all the tracks that have the id for this particular album. 
-02:03 So we can when we get this album traversing this relationship 
+02:03 So we can when we get this album traversing this relationship, 
 02:07 we'd like it to also know about its tracks. 
 02:10 So there is kind of this two way directional thing here, 
-02:13 so we can do this by back populates. 
-02:15 And then we can say tracks, like so. 
+02:13 so we can do this by back_populates. 
+02:15 And then we can say "tracks", like so. 
 02:19 And PyCharm wants a new line, so we'll go and give it to it. 
-02:22 Okay great, so this will give us the relationship back to the album,
+02:22 OK great, so this will give us the relationship back to the album,
 02:26 we need the reverse of course. 
-02:29 So let's go over here, now I think this side of the story is more interesting 
+02:29 So let's go over here, now I think this side of the story is more interesting, 
 02:34 because over in the track 
 02:37 there is just a singular album and a singular album id, 
-02:39 but on this side, we are going to actually have a one to many relationship, 
-02:43 one album has many tracks so we are going to have track here 
-02:47 and what do we put to actually have a collection- 
-02:51 well, again, SQLAlchemy ORM relationship, here this is going to be track, 
-03:01 and just like before it's going to back populates this time album, 
-03:07 that's the actual name over here so that is talking about this, 
+02:39 but on this side, we are going to actually have a one-to-many relationship, 
+02:43 one album has many tracks, so we are going to have tracks here 
+02:47 and what do we put to actually have a collection?
+02:51 Well, again, sqlalchemy.orm.relationship, here this is going to be "Track", 
+03:01 and just like before, it's going to back_populates this time "album", 
+03:07 that's the actual name over here, so that is talking about this, 
 03:11 it's going to back populate that, and then there is 
 03:14 all sorts of other powerful things we can add. 
-03:17 So for example, we can talk about the order,
+03:16 So for example, we can talk about the order,
 03:19 so, remember we had that, we are going to talk more about this in a minute, 
 03:23 we have a display order over here, so we can say 
 03:25 we would like things in this list to automatically be ordered by display order. 
-03:30 And I think it has to be track.display order, 
+03:30 And I think it has to be Track.display_order, 
 03:35 we can come over here and talk about what type of collection we'd like to use, 
 03:40 by default I think it's a list but one of the problems you can run into 
 03:44 when you have an ordered set like this, like track should always be in order, 
 03:47 if I put a new one in there, before it goes into the database 
 03:51 it's not necessarily ordered, so we can solve it like this. 
-03:54 
 04:02 So we can create what's called an ordering list, 
 04:04 it comes out of SQLAlchemy as you can see on line 3, 
-04:06 and we can say this is going to be display order as well. 
-04:10 Okay, so this way of we insert something into the object 
+04:06 and we can say this is going to be display_order as well. 
+04:10 OK, so this way of we insert something into the object 
 04:12 before it goes to the database, it's also still going to be ordered, 
-04:16 so we don't have like this weird well has it been saved, has it not been saved, 
+04:16 so we don't have like this weird well... has it been saved, has it not been saved, 
 04:19 well you can't look at the order if it's not saved, 
-04:21 like that's no fun, let's not do that. 
+04:21 like... that's no fun, let's not do that. 
 04:24 We could also talk about deletes, the tracks should not exist, 
-04:28 without the album the album can exist without the tracks but not the other way, 
+04:28 without the album. The album can exist without the tracks but not the other way, 
 04:31 so when we delete the album, we would like to also delete the tracks. 
-04:35 So, we can say cascade the deletes to all there, 
+04:35 So, we can say "cascade the deletes to all" there, 
 04:39 that's quite the relationship but I think we're in quite a good place. 
-04:43 Let's see if we can get this to work again, 
-04:45 now, we are not going to be able to run this and have it work in fact, 
-04:48 it will probably crash it might not, 
+04:43 Let's see if we can get this to work again. 
+04:45 Now, we are not going to be able to run this and have it work in fact, 
+04:48 it will probably crash, it might not, 
 04:50 no, there is not enough of a change; if we go look at our database, 
 04:53 there is no change here in terms of 
-04:56 like the track doesn't now have an album ID, 
-04:58 there is no additional indexes, so when you're just getting started, 
+04:56 like the track doesn't now have an album id, 
+04:58 there is no additional indexes, so when you're just getting started 
 05:01 like this, honestly, the easiest thing to do is just blow away the database 
-05:05 and rerun create all let's run it again, 
-05:09 okay so that should recreate the data that will come back in a second, 
+05:05 and rerun create_all, let's run it again, 
+05:09 OK, so that should recreate the data that will come back in a second, 
 05:12 if we refresh this, now you can see there is a little bit more stuff, 
 05:15 we've got our album id we've got our foreign key constraint, 
-05:18 things like this, okay.
+05:18 things like this, OK.
 05:21 Our relationships that we just modeled are now created in the database. 

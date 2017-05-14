@@ -40,7 +40,7 @@
 02:10 We'll get into that a little bit later, but for right now,
 02:12 we can set this up by saying "git config" again, "--global core.editor",
 02:18 and in my case again, I am going to press specify "vim".
-02:22 Okay, so we've got our three things set,
+02:22 OK, so we've got our three things set,
 02:25 we just want to double check that we've set them properly,
 02:27 we can say "git config" and then just list out.
 02:31 Now in my case, user.name is Matt Makai,

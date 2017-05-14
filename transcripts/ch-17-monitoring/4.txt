@@ -3,7 +3,7 @@
 00:08 So, this is probably no surprise, we'll start by saying import Logbook. 
 00:13 Now, remember, this needs to be put into our setup requirements, 
 00:18 this needs to be literally installed because we don't have it yet, 
-00:21 so first, let's install the package, thank you PyCharm, ta- da, okay, 
+00:21 so first, let's install the package, thank you PyCharm, ta- da, OK, 
 00:28 I got to move away for a second, and then come up here, 
 00:32 hit it again and I can add it to the setup, and then it's saying we're not using it 
 00:36 but that's cool because we are going to that now. 
@@ -25,7 +25,7 @@
 01:33 if it sees the string critical, Logbook error, if it sees the string error and so on. 
 01:38 And we are also stripping it and uppercasing it 
 01:41 so there is a little bit of non equalization going on. 
-01:45 Okay, so the first thing we are going to do is say level, 
+01:45 OK, so the first thing we are going to do is say level, 
 01:50 so we want to come here and say get the Logbook level 
 01:56 and we are going to pass in that text and it's going to convert it to that enumeration. 
 01:59 The next thing we got to do is decide where do we go, 
@@ -88,7 +88,7 @@
 05:40 that we are creating, and just print a message to say hey everything is working, 
 05:46 so we'll say the message is, so we'll say logging initialize with the level 
 05:53 and the mode, whether or not it's in file mode or standard out mode. 
-05:59 Okay, and then, we're going to say log service, let's make that static,
+05:59 OK, and then, we're going to say log service, let's make that static,
 06:07 actually let me change that to a static method. 
 06:15 Now, we can do things like we can log, obviously and you can see 
 06:20 that we can specify the level and this is the most generic way to write a log message, 
@@ -111,20 +111,20 @@
 07:36 we could say get our log service there and say log. this is a warning, 
 07:43 so we can warn and we don't need that warning anymore, 
 07:46 because warning is going to be actually inserted into the message by Logbook, 
-07:50 okay, that's cool, we are also printing down here, 
+07:50 OK, that's cool, we are also printing down here, 
 07:54 let's go down and change this to say log.notice, right, there is nothing, 
 08:03 let me go up here yeah, that's a warning up there, great; 
 08:10 this is a notice again, this will be a warning, 
 08:14 take that out, alright, so we are going to warn if MailChimp is not set up 
 08:17 and finally, same thing for credit cards. 
 08:20 
-08:24 Okay, it looks like we have replaced our print messages here, 
+08:24 OK, it looks like we have replaced our print messages here, 
 08:28 let's go and run, and actually, let me change this as well, to not have a file name, 
 08:34 so we'll say there is none here which or we could just cut it out, 
 08:40 and then in production, let me put this over in production as well, 
 08:47 in production, we're going to have this setup, 
 08:50 and maybe this is going to be notice level,
-08:55 and we want to go there, but here we are going to do info but have nothing, okay. 
+08:55 and we want to go there, but here we are going to do info but have nothing, OK. 
 09:00 Let's give it a shot. Huh, remember, that other file I had, 
 09:07 I got to change it as well, but that should give us a chance to see the file logging in action, 
 09:12 so here check this out, I accidentally ran with the other not shown any file, 

@@ -4,23 +4,22 @@
 00:13 that we might want to change about this theme, 
 00:16 so let's go and tweak it so it feels much more like the design that we're hoping for. 
 00:21 Just to remind you, what does that look like, 
-00:24 that looks like- this. 
+00:24 that looks like... this. 
 00:26 It didn't have to match it perfectly, but it has to be sort of where we are going.
 00:31 Let's try to make this fit the best it can with the current design,
 00:34 then we'll start bringing in our elements. 
 00:36 So I want to put the changes required for making this site feel like ours, 
-00:39 into two places, 
-00:42 the stuff that is going to affect the _layout that is going to affect the entire site, 
+00:41 into two places, the stuff that is going to affect the _layout, that is going to affect the entire site, 
 00:47 I am going to go and just put it right in here, 
 00:50 the stuff that is only relevant for the homepage 
 00:53 because the homepage is going to be fairly styled up, relative to the rest of our site, 
 00:59 I am going to actually create the CSS page for that. 
-01:05 Alright, so here is our home CSS let's go over here and let's add that in. 
+01:05 Alright, so here is our home.css, let's go over here and let's add that in. 
 01:10 Now remember, we added this little section for additional CSS, 
 01:14 it's exactly what we need, let me just copy what we got up here, 
 01:17 so I don't have to type it out again, so down here we're going to put home, 
-01:22 this is blank right now so it will have no effect but it's going to be all lined up, 
-01:27 now this is at the bottom but remember, it fills a slot which is at the top so that's all good, 
+01:22 this is blank right now, so it will have no effect but it's going to be all lined up, 
+01:27 now this is at the bottom but remember, it fills a slot which is at the top, so that's all good, 
 01:32 let's just make sure everything is holding together, 
 01:34 if we refresh, do some view source, 
 01:38 it looks like I had misspelled this 
@@ -31,15 +30,15 @@
 02:00 I find the landing pages usually have a lot of styling done to them, relatively speaking. 
 02:03 What else is funky, like what is this white space on the left? 
 02:06 We could use our developer tools to find out. 
-02:10 So it looks like this main content here has this padding, 
-02:13 if we could take away, oh wouldn't that look better? Heck yeah, okay, 
-02:17 So this is from site CSS line 6. Thank you Chrome for telling me that, 
+02:10 So it looks like this main_content here has this padding, 
+02:13 if we could take away, oh wouldn't that look better? Heck yeah, OK, 
+02:17 So this is from site.css line 6. Thank you Chrome for telling me that, 
 02:22 so over here, on line 6, we don't want that anymore, do we, 
-02:26 let's make it actually super explicit, main content has now no padding, 
+02:26 let's make it actually super explicit, main_content has now no padding, 
 02:31 when we refresh it, 
-02:33 oh yeah, it's coming along it's looking better. 
-02:36 Next, let's work on this stuff up here, why is this black and that's not black, 
-02:42 so let's look and figure out why it has a color whatever it does.
+02:33 oh yeah, it's coming along, it's looking better. 
+02:36 Next, let's work on this stuff up here, why is this black and that's not black? 
+02:42 So let's look and figure out why it has a color, whatever it does.
 02:47 I see, so we're setting this .nav to have some various properties, 
 02:51 that the rest of the navbar doesn't. 
 02:55 So let's actually go up and let's just apply this a little bit higher, 
@@ -47,55 +46,55 @@
 03:02 we could even tone down the fonts but I don't mind them being that large, 
 03:06 but, we could say turn this off and just accept the gray color or if we want black, 
 03:11 let's suppose we do, we want to just apply that a little higher. 
-03:16 So up here, it's really the nav inverse, that is setting the color, 
+03:16 So up here, it's really the nav-inverse that is setting the color, 
 03:20 so we are going to go back over here, 
 03:27 right here, let's do this. 
-03:30 And we'll just say background color, let's see what they have here. 
+03:30 And we'll just say background-color, let's see what they have here. 
 03:33 Sometimes it's helpful to actually just go and you can see because it's got 
 03:36 a border color a background color, you can just copy this, and drop it in here 
 03:41 and then we can change it, so while I am a big fan of the 222, 
 03:46 I want to use 000 for that, let's see what the border color means for us, 
-03:50 oops, did I save this, oh, there we go, I forgot my . (dot)
-03:56 I must have missed that when I copied it, okay, now it runs, 
-03:59 okay, this is good, fiddling with that gets us pretty close. 
+03:50 oops, did I save this? Oh, there we go, I forgot my . (dot)
+03:56 I must have missed that when I copied it, OK, now it runs, 
+03:59 OK, this is good, fiddling with that gets us pretty close. 
 04:03 Instead of spending more time tweaking it, let me just drop in another CSS file, 
 04:07 and we can talk about it. 
 04:10 So offline I created this thing called navbar,
-04:13 it sets the border radius we talked about that earlier, 
+04:13 it sets the border radius, we talked about that earlier, 
 04:16 it sets the actual height of the branding image which we'll have in a moment, 
 04:20 what it does if the text has to wrap, as well as a few other elements. 
 04:27 Now of course we want to include those, and so I mean nav here, nav there,
 04:34 so we've got this lined up pretty well, let's do one final thing
-04:39 let's go over here and we have these brs that we threw in when we had the weird layout, 
+04:39 let's go over here and we have these "brs" that we threw in when we had the weird layout, 
 04:44 and that was just to hold them for a minute.
 04:47 Now, we have our navbar looking pretty solid,
 04:50 we can go check her albums, there they are, we can check out book us, 
 04:54 that one we haven't written, contact, we've written that, sort of, 
-04:57 of course we are going to need to something a little more interesting here, 
-05:01 in fact, I think this is going to be the problem throughout the whole site, 
+04:57 of course we are going to need to something a little more interesting here. 
+05:01 In fact, I think this is going to be the problem throughout the whole site, 
 05:05 so let's go and try to address that in, let's go put in the site, 
 05:10 so that has to do with this main content section here, 
-05:14 so let's go down here and add a margin top, to this, 
-05:18 and let's say 50px see if that is sufficient, I think it is, 
+05:14 so let's go down here and add a margin-top to this, 
+05:18 and let's say 50px, see if that is sufficient, I think it is, 
 05:22 this, however high this is, we probably want the margin to be that high. 
 05:29 And it tells us here the height is 51 so you know, why not, let's say 51 I guess. 
 05:35 There we go. 
 05:37 So now as we click around, except for pages that don't exist, 
-05:41 so if we click around you can see this fits right to the top. 
+05:41 so if we click around, you can see this fits right to the top. 
 05:45 Maybe for the pages we want to actually give it a little more of a margin or whatever, 
 05:49 but this is looking pretty good, now, the last thing about the navigation up here 
 05:53 is this Start Bootstrap, that is not what this is about, is it? 
-05:57 Let's see what were we supposed to say, Blue Yellow Rockets, like this. 
+05:57 Let's see what were we supposed to say, Blue / Yellow Rockets, like this. 
 06:02 Right, so let's go and add that, again, let's go up here in the brand section, 
 06:08 so here we have that part, and I was going to paste this thing in, 
-06:12 we are going to drop that, I was going to say Blue Yellow Rockets 
+06:12 we are going to drop that, I was going to say Blue / Yellow Rockets 
 06:17 I don't know if I've got our image or logo yet, it does not look like it, 
 06:21 so let's start bringing in some of our images. 
 06:24 So here we have our logo let's go and throw in the hero on as well, 
 06:29 and we'll put those into images.
 06:32 Now, if we run it again, it won't quite look like what we were going for, 
 06:35 but let's have a look. 
-06:38 Okay, there we go, we've got that, now, 
+06:38 OK, there we go, we've got that, now, 
 06:41 we need to do something about that layout, don't we. 
 06:45 The fonts are too big, or something to that effect, 
 06:48 so we can deal with that in a second, but this is looking good almost, 
@@ -104,18 +103,18 @@
 07:00 so let's add that into our site down here, so that's the official Python, 
 07:07 something close to the official Python yellow and the official Python blue, 
 07:11 so if we go over here and look again, there we go. 
-07:17 There is our Blue Yellow Rockets of course, all of these fonts are too big 
+07:17 There is our Blue / Yellow Rockets. Of course, all of these fonts are too big, 
 07:21 so let's change the font size of those to see what we get here 
 07:25 and over in site we have our old nav settings about the navigation fonts 
 07:31 let's take that out, we don't have them indicated twice, that's just weird, 
-07:36 okay, there we go, we've got that, I guess the final thing is 
+07:36 OK, there we go, we've got that, I guess the final thing is 
 07:42 we probably want to push these down a little bit 
 07:45 and then we can call our navigation done. 
 07:49 So if we set the padding top to be 10, I think that's going to line up pretty well, 
 07:53 let's get it over and see what we're going to get.
 07:59 And maybe 8 is better. 
 08:04 It doesn't sound like much but sometimes that's all the difference, 
-08:07 so all we want to set this padding top which we already had been fiddling with, 
+08:07 so all we want to set this padding top, which we already had been fiddling with, 
 08:12 over here, let's set that to 8.
 08:17 I think we can call this done. 
 08:20 Here we go, maybe we want to change the fonts a little bit, and so on, 

@@ -1,100 +1,99 @@
-00:01 Okay so how do we use this? Well, there is a couple of things we need to do, 
-00:04 one our database is empty, so we are going to need
-00:08 to insert some data, that's interesting, 
-00:10 two we are going to need to query the data 
+00:01 OK so how do we use this? Well, there is a couple of things we need to do.
+00:05 One, our database is empty, so we are going to need
+00:08 to insert some data, that's interesting. 
+00:10 Two, we are going to need to query the data 
 00:13 and I think it will be more fun and have a little more dramatic effect 
-00:16 if we write up the code to query the data we'll see there is nothing there 
+00:16 if we write up the code to query the data, we'll see there is nothing there 
 00:20 and then when we actually insert it it will immediately appear. 
 00:23 So let's go back to our albums controller here 
-00:25 and have a quick look remember we wrote this method here long ago, 
-00:29 I am sure it feels like a long time ago and we have this album service, 
+00:25 and have a quick look. Remember, we wrote this method here long ago, 
+00:29 I am sure it feels like a long time ago and we have this AlbumService, 
 00:33 and this is a design pattern I love to use for these ORMs. 
 00:37 The ORM deals with mapping, classes directly to and from the database
-00:43 but there is often times more applications scale sort of things are happening, 
-00:49 well, I want to join with this or any time I query one of those
-00:52 I want to make sure I also update over here  those types of things. 
+00:43 but there is oftentimes more application-scale sort of things are happening, 
+00:49 well, I want to join with this or any time I query one of those,
+00:52 I want to make sure I also update over here... those types of things. 
 00:55 So I am very keen to have these service things, right, 
 00:59 so services, these are the applications view of accessing the data, 
 01:04 you don't work directly in the ORM, you can if you want 
 01:07 but we are going to go over here and work like this, 
-01:10 we have a function called get albums, 
-01:12 so you can see this is the old get albums, remember we had this fake data, 
+01:10 we have a function called get_albums, 
+01:12 so you can see this is the old_get_albums, remember we had this fake data, 
 01:16 we are going to have a new one here. 
 01:18 So what we are going to do is we are going to go and do a query 
 01:22 so let's say like this, we are going to need to get a hold of one of these sessions, 
-01:26 and again, this is going to be db session factory 
-01:29 and we are going to need to import that and I don't really like this factory factory 
+01:26 and again, this is going to be DbSessionFactory
+01:29 and we are going to need to import that and I don't really like this "Factory.factory", 
 01:33 let's give this a function over here, 
-01:36 so we come down here def make this a static method as well, 
-01:41 and we'll call this create session, something like this. 
-01:48 and we'll just return like so, okay, a so instead of doing this 
-01:51 we can do something a little more obvious like create session 
-01:54 and then our goals are going to be to get the data from the database, 
-01:58 so how do we do this? 
-02:00 What we are going to do is we are going to be able to create queries 
-02:03 from these sessions, so we are going to say session.query 
-02:05 and we give it the type that we want to work with, 
-02:08 in this case we want to query an album, and of course, 
-02:11 we are going to need to import this, maybe we want to do some kind of filtering, 
-02:14 like let's see I changed the album just a little bit here to have an is published. 
+01:36 so we come down here def, make this a static method as well, 
+01:41 and we'll call this create_session, something like this. 
+01:45 and we'll just return like so, OK? So instead of doing this, 
+01:51 we can do something a little more obvious like create_session 
+01:54 and then our goals are going to be to get the data from the database, so how do we do this? 
+01:57 What we are going to do is we are going to be able to create queries 
+02:01 from these sessions, so we are going to say session.query 
+02:04 and we give it the type that we want to work with, 
+02:07 in this case we want to query an album, and of course, 
+02:09 we are going to need to import this, maybe we want to do some kind of filtering, 
+02:14 like let's see, I changed the album just a little bit here to have an is_published. 
 02:18 And this will let us do some kind of interesting queries 
 02:21 if we don't have too much data, so we come over here 
-02:24 and we'll do a query and we'll say something to the effect of filter album, 
-02:29 now, this is what's cool about ORM is you get to express the queries, 
-02:33 this is kind of the where clause if you will, 
-02:35 in terms of the classes so I can say is published, 
-02:40 leave it alone like that or == true however you want. 
+02:24 and we'll do a query and we'll say something to the effect of filter(Album). 
+02:29 Wow, this is what's cool about ORM, is you get to express the queries, 
+02:33 this is kind of the "where" clause if you will, 
+02:35 in terms of the classes, so I can say is_published, 
+02:40 leave it alone like that or == True, however you want. 
 02:44 A lot of times these get kind of complicated, 
-02:46 you might want to do them on multiple lines, so we are going to say order by, 
-02:50 maybe we want to order by album.year, where is year, there is year, 
-02:57 so we want to order by album.year 
+02:46 you might want to do them on multiple lines, so we are going to say order_by, 
+02:50 maybe we want to order by Album.year, where is year? There is year, 
+02:57 so we want to order by Album.year 
 02:59 and maybe we want to actually show the newest ones first, 
 03:02 let's be a little consistent there, 
-03:04 notice how pyCharm puts little line continuation for us, thank you, 
-03:07 so this is pretty straightforward, order by, 
+03:04 notice how PyCharm puts little line continuation for us, thank you. 
+03:07 So this is pretty straightforward, order_by, 
 03:11 but what do I do if I want to order by descending, 
-03:14 I can tell you already, there is not a order by des OK, 
-03:17 this is the only order by function we have. 
-03:19 so it's not entirely obvious but we can come over here 
-03:22 and on these we have like descending, ascending,
-03:25 like for substring matches, there is all sorts of interesting functions 
+03:13 I can tell you already, there is not a order by DESC, OK? 
+03:16 This is the only order_by function we have. 
+03:18 so it's not entirely obvious but we can come over here 
+03:21 and on these we have like descending, ascending,
+03:25 "like" for substring matches, there is all sorts of interesting functions 
 03:28 on these columns that you can do filtering or ordering by. 
-03:32 Okay, so this is going to give us basically a result, 
+03:32 OK, so this is going to give us basically a result, 
 03:36 a set of results here, or leave it like that.
 03:41 Now, we can go over here and we can say things like .all 
 03:46 and that will snapshot into a list but if we don't do that here 
-03:50 we just have an iterable that's still running across the database, 
-03:54 we haven't actually returned anything yet, 
-03:57 so we are going to need to somehow do that. 
-04:00 so let's go ahead and do that, if our goal really is just to return a list, 
-04:03 we don't want to return this results 
-04:06 which still kind of partially tie to the database, 
+03:50 we just have an iterable, that's still running across the database, 
+03:54 we haven't actually returned anything yet. 
+03:57 So, we are going to need to somehow do that. 
+04:00 So let's go ahead and do that, if our goal really is just to return a list, 
+04:03 we don't want to return this "results", 
+04:06 which still kind of partially tied to the database, 
 04:09 we'd like to snapshot that like this, come over here say .all 
 04:15 and then return albums. 
-04:19 Okay, so that means outside of this function 
+04:18 OK, so that means outside of this function 
 04:21 there is going to be no more data access, 
-04:24 it's not like a dangling open session sort of issue going on, 
-04:27 okay, so this should run and it should give us back nothing, 
+04:23 it's not like a dangling open session sort of issue going on, 
+04:27 OK, so this should run and it should give us back nothing, 
 04:31 because there is no data in our database,
-04:33 but let's do one thing so we can actually see what is happening. 
-04:36 Remember, our engine, it has an echo, not there, our engine, 
-04:40 our engine has an echo, and we can say echo=true 
+04:33 but let's do one thing, so we can actually see what is happening. 
+04:36 Remember our engine, it has an echo, not there, our engine, 
+04:40 our engine has an echo, and we can say echo=True 
 04:44 and this will turn on all the debug output, 
-04:47 when I run it you should see a bunch of stuff. 
-04:50 Hopefully, I haven't mess anything up we are about to find out.
+04:47 when I run it, you should see a bunch of stuff. 
+04:49 Hopefully, I haven't messed anything up, we are about to find out.
 04:53 So notice all this output, that's not an error, 
-04:57 that's SQLAlchemy looking at the tables trying to understand 
-05:00 tell me about the album, tell me about the track, okay? 
-05:03 That's from echo=true. Now, we go over here, 
+04:56 that's SQLAlchemy looking at the tables, trying to understand. 
+05:00 Tell me about the album, tell me about the track, OK? 
+05:03 That's from echo=True. Now we go over here, 
 05:06 this is all well and good but if I hit this album's button, 
 05:09 or navigation item here, we are going to go run that query 
 05:12 and let's see what happened. 
-05:14 So check this out, begin implicit transaction select, 
-05:17 just refer to this as star, right this is all the columns--- I come down here, 
-05:28 from album, where album is published, order by album year descending. 
-05:34 How cool is that, let's go back and look at what we wrote. 
-05:38 Session query album filter album is published, 
-05:41 order by album year descending, right, there is album year descending 
+05:14 So check this out, BEGIN implicit transaction, SELECT, 
+05:17 just refer to this as star, right this is all the columns... I come down here, 
+05:28 FROM album, WHERE album is_published, ORDER BY "Album".year DESC. 
+05:34 How cool is that? Let's go back and look at what we wrote. 
+05:38 session.query(album).filter(Album.is_published), 
+05:41 order_by(Album.year.desc()), right, there is album year descending 
 05:44 and then we snapshot that into a list. 
-05:48 Right, so we came back we passed that off to our view, 
+05:48 Right, so we came back, we passed that off to our view, 
 05:51 our view said let's loop over it, oh, there is actually nothing here.  

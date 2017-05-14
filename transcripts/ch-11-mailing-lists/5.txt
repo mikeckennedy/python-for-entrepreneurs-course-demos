@@ -9,7 +9,7 @@
 00:23 so I created a newsletter controller, and now if you look back here, 
 00:27 and you look where this form submits to, 
 00:30 you'll see it goes to newsletter/ add subscriber as a post, 
-00:35 okay, so this is unusual because it's not posting back to the same page, right, 
+00:35 OK, so this is unusual because it's not posting back to the same page, right, 
 00:41 but it's kind of weird to post back to index the homepage, 
 00:44 so we are posting over to this area and letting this 
 00:47 controller handle newsletters all on its own. 
@@ -34,13 +34,13 @@
 02:04 so that we can capture this,
 02:07 and then we're going to write just a little bit of detail here 
 02:10 in this video and then we'll come back and do a proper MailChimp API section. 
-02:14 Okay, so how do we get a hold of this email here, well, 
+02:14 OK, so how do we get a hold of this email here, well, 
 02:17 we could go and actually create a view model but it's literally one piece of data 
 02:22 so I am kind of thinking we're just going to get direct access to it 
 02:26 now if you look down here in the base controller,
 02:28 I've created this property called data dict
 02:31 which merges the get post and match dict so this is routing, this is query string, 
-02:36 and this is the form post okay, and it is like order precedence from bottom to top, 
+02:36 and this is the form post OK, and it is like order precedence from bottom to top, 
 02:43 so I am just going to use this property 
 02:46 and somewhere in there is going to be the email presumably, 
 02:48 so we'll do something like this we'll say self.data dict is now get email,

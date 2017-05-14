@@ -2,7 +2,7 @@
 00:06 We said that we are using Bootstrap for this course, 
 00:09 and Bootstrap is by far the most popular and widely used one.
 00:14 But Bootstrap is just one among many frontend CSS design frameworks. 
-00:20 Here is Bootstrap, this sign that you are looking at right now,
+00:20 Here is Bootstrap, this site that you are looking at right now,
 00:23 I just grabbed one off the internet, this one is designed and built in Bootstrap.
 00:28 Now, at the top I put the number of GitHub stars for each project
 00:33 so you can see relatively how popular it is and then the link to get it at the bottom,
@@ -14,30 +14,30 @@
 00:57 as well as it integrates with many third party libraries 
 01:00 so it's easy to bring lots of stuff together. 
 01:03 Foundation is a lovely looking framework, 
-01:06 and it sells itself as an enterprise grid responsive frontend framework
-01:11 And so, you can check it out, it's got 24 thousand GitHub stars 
+01:06 and it sells itself as an enterprise-grade responsive frontend framework
+01:11 And so, you can check it out, it's got 24 thousand GitHub stars, 
 01:14 all of these are extremely popular, it's just sort of dwarf by Bootstrap, right. 
 01:19 So this one is really popular, really well done. 
 01:22 Materialize is cool if you like the Google Material design 
-01:25 and you want to bring that design into your web application, 
-01:30 you can use Materialize. 
-01:32 Again, 21 thousand stars, Gaggle Mail, this is not the website for Materialize, 
+01:26 and you want to bring that design into your web application, 
+01:29 you can use Materialize. 
+01:31 Again, 21 thousand stars, Gaggle Mail, this is not the website for Materialize, 
 01:36 but it is actually a website built with Materialize, 
 01:39 and personally I think this looks fantastic, right, 
 01:42 this is a really good looking way to build your website and like I said, 
 01:46 if you want to make it look consistent with Google's Material design, this is really great. 
 01:51 And there are many, many more such frontend frameworks. 
 01:54 This article here, you can see the URL at the bottom, 
-01:58 it is the top ten frontend frameworks of 2016, and of course, 
+01:57 it is the top ten frontend frameworks of 2016, and of course, 
 02:01 all the frameworks I just showed you are listed there, but there are another six or so. 
 02:06 So you can look around there, what's cool about this article is 
 02:09 it says here are the pros of this frontend framework, 
 02:12 here are the drawbacks of this frontend framework, 
-02:15 and what makes it special, where you can find it, where you can learn more. 
-02:18 So, if you are not yet decided what you want to use, check out this article this is cool. 
+02:14 and what makes it special, where you can find it, where you can learn more. 
+02:17 So, if you are not yet decided what you want to use, check out this article, this is cool. 
 02:22 I'm here to tell you that Bootstrap is by far the most popular, 
 02:25 and that has important knock on effects, so it's not just well, 
-02:30 other people know how to use it or you can find answers on stack overflow, 
+02:30 other people know how to use it or you can find answers on Stack Overflow, 
 02:33 but when you get to the themes, it's much easier to find the Bootstrap theme 
 02:37 that looks great that you can use, it's not expensive or has the right licensing,
-02:42 a semantic theme right, just popularity helps there.  
+02:42 a Semantic theme right, just popularity helps there. 

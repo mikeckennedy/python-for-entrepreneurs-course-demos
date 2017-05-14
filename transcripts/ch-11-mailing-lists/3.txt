@@ -15,9 +15,9 @@
 01:06 So these numbers actually go up quite quickly 
 01:09 but I can tell you if you have 10 thousand qualified leads for your business, 
 01:12 this should be a small percentage of your monthly revenue, 
-01:16 okay, so this is actually 80 dollars well spent. 
+01:16 OK, so this is actually 80 dollars well spent. 
 01:22 The prices on the other platforms that I showed you, are similar, 
-01:26 okay, so let's go create an account here, so this is going to be- alright, 
+01:26 OK, so let's go create an account here, so this is going to be- alright, 
 01:31 my account is ready to create let's get rolling. 
 01:36 Alright, confirming my email, check for humanity, let's see, 
 01:41 all the squares are street signs, that looks solid to me. 
@@ -31,11 +31,11 @@
 02:19 The list is going to be blue yellow band
 02:26 the default from email address will be let's just put michael@talkpython.fm 
 02:32 default from name will be Michael at Talk Python in a slightly different way, 
-02:39 you signed up, you registered to get notified of events and albums, blue yellow rockets.
-02:52 Okay, and we have to have our addresses as this part of the can spam story 
+02:39 you signed up, you registered to get notified of events and albums, Blue / Yellow rockets.
+02:52 OK, and we have to have our addresses as this part of the can spam story 
 02:59 we can get notified of these various things but we're not going to do this, 
 03:02 by the way that's not my real address. 
-03:04 Okay, so now we have no subscribers, but more importantly we have a list. 
+03:04 OK, so now we have no subscribers, but more importantly we have a list. 
 03:08 So now that we have our list crated, we're going to need two things 
 03:11 in order to integrate it with our website, 
 03:14 we're going to need a list id and we're going to need our secret API key. 

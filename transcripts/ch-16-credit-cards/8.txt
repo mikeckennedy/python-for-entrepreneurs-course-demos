@@ -1,11 +1,11 @@
-00:01 Okay, we have all the information we need, 
+00:01 OK, we have all the information we need, 
 00:04 I guess that we probably want to send this email after this successful purchase, 
 00:08 so we've got this, we need this little print out, I don't think we need that anymore, 
 00:12 that was just a test that we were getting the user and the album passed through correctly, 
 00:16 we got our Stripe token, correctly, now it's just down to doing this bit of code, 
 00:20 let me just verify logged in user album price and token, 
 00:25 user, album, price and token. 
-00:28 Okay, so there is two steps to do, one is to save this to the database, 
+00:28 OK, so there is two steps to do, one is to save this to the database, 
 00:32 that is going to be easy, we are going to do that here so let's just go ahead, 
 00:35 we are going to create our purchase, it's album purchase, 
 00:40 we want to create one of these and let's see what it takes, 
@@ -24,7 +24,7 @@
 01:43 I moved all the Stripe stuff over here, 
 01:47 we'll say complete Srtipe purchase and it's going to take the token, 
 01:51 description and the price in US dollars, amount paid. 
-01:56 So let's go and set this description, okay, so that's what that's going to be, 
+01:56 So let's go and set this description, OK, so that's what that's going to be, 
 02:01 and then, I think in order to complete this purchase we are also going to need 
 02:05 the identity so the email, but that may come with the token, 
 02:08 we're going to find out in the second. 
@@ -36,19 +36,19 @@
 02:33 So those two things we are going to do, 
 02:36 I probably should add a little more validation and error handling, 
 02:40 but for this demo, we are just going to roll with this. 
-02:42 Okay, so final step is to implement that right there. 
+02:42 OK, so final step is to implement that right there. 
 02:45 You can see we haven't gotten far. It turns out the Stripe API is quite simple,
 02:51 we just need to use the Stripe package, so I am going to go up here and import it, 
 02:56 and PyCharm will take care of it for us on a couple of levels, 
 02:59 so it is going to say first of all, install that package, that seemed to go well, 
-03:05 next add it to the requirements, to the setup, okay, 
+03:05 next add it to the requirements, to the setup, OK, 
 03:09 and now this last one is hey you are not using it, 
 03:11 well, that is what we are going to do now.
 03:14 So the way it works is we have to set up, first compute the price, 
 03:18 price in USD, price in cents USD or let me just leave like price in cents, 
 03:26 we are going to round this up, and we are going to take the price in US dollars 
 03:32 and we are going to round base 10 and of course convert that from dollars to cents, 
-03:37 okay, so there is our price, we already have our description, 
+03:37 OK, so there is our price, we already have our description, 
 03:41 and the next thing we need to do is set the API key 
 03:44 so we'll say stripe.api_key = credit card processor. private key, like so, 
 03:55 not the public key, the private key, this is the one you don't share, 
@@ -60,7 +60,7 @@
 04:31 and the description=description. 
 04:37 And then we can return the charge for whoever wants to inspect it, 
 04:40 record details about it and so on. 
-04:43 Okay, so let's just do a quick thing back here, just do a cleanup, 
+04:43 OK, so let's just do a quick thing back here, just do a cleanup, 
 04:55 and let me just print out the charge, so that we can see what happens here. 
 04:59 Now there is a lot of moving parts, but I think we got it right, let's give it a try,
 05:03 so I want to come over here, to this album and I want to buy the album, 
@@ -68,7 +68,7 @@
 05:12 because you do this a lot, we can go to our service, 
 05:18 it's going to finalize this with Stripe and we of course did something wrong here, 
 05:24 our stripe error invalid request looks like I need to convert that to an integer. 
-05:29 I thought we were so close. Okay, let's do this. 
+05:29 I thought we were so close. OK, let's do this. 
 05:35 Try it again, Now I could try to do this again, let's see, 
 05:44 is it going to rerun it or is it going to crash. 
 05:48 Oh look at that, store success, 
@@ -78,12 +78,12 @@
 06:00 but, it went through, the charge went through. 
 06:05 So here you can see all the information we got back. 
 06:09 This is what came back from Stripe, 
-06:14 okay, here is the amount, amount refunded, etc, etc, 
+06:14 OK, here is the amount, amount refunded, etc, etc, 
 06:18 the name of the purchase, the id, this is the thing we can go back 
 06:23 and look up in our Stripe dashboard the exact name of the id 
 06:26 so maybe we want to put that on the purchase, record, 
 06:30 it would be a really good idea to do that, we are not doing it, and so on. 
-06:34 Okay, so our Stripe purchase worked, we just need to write that template, 
+06:34 OK, so our Stripe purchase worked, we just need to write that template, 
 06:38 so I'll do that and pause the video and you can check it our in a second. 
 06:43 Here we go, that's better, right, I just wrote the template and refreshed it 
 06:47 and notice I also added the actual album that we purchased so you can say 
@@ -98,7 +98,7 @@
 07:23 but for the most part those were already done by Stripe, 
 07:26 there will be a few that could fail, so for example, if I hit the back button here, 
 07:31 and I refreshed it, trying to apply this token twice would cause an error, things like that.
-07:35 Okay, so there you have it, we have added credit card processing 
+07:35 OK, so there you have it, we have added credit card processing 
 07:41 via Stripe checkout to our application.
 07:43 Remember, all you need is a bank account, 
 07:46 that can accept direct deposits or automatic, 

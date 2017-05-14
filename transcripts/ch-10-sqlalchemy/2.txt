@@ -11,24 +11,24 @@
 00:44 Uber, I love Uber, so much better than taxis, right, and Uber you can imagine, 
 00:48 this is a huge deployment that Uber has 
 00:52 in terms of all of their data needs, SQLAlchemy here, that's great.
-00:56 Reddit, Reddit id interesting in that they use the core not the ORM layer, 
+00:56 Reddit, Reddit is interesting in that they use the core, not the ORM layer, 
 01:00 and Reddit gets a ton of traffic, 
 01:03 and Reddit is using SQLAlchemy, so that is really cool. 
 01:06 Firefox is using it, OpenStack, the open source alternative to like AWS, right, 
 01:13 there is huge set of tools and cloud infrastructure, those guys are using that, 
 01:18 Fresh Books for invoices and billing, like if you are an independent contractor, 
 01:23 and you want to create invoices and give them your clients, 
-01:27 Fresh Books they use SQLAlchemy, that's great. 
+01:27 Fresh Books, they use SQLAlchemy, that's great. 
 01:30 Hulu, Hulu is pretty sweet, lots of video streaming fun to be had there,
 01:34 and that video streaming fun is powered by- you guessed it, SQLAlchemy.
 01:38 Yelp, Yelp is pretty awesome. Triomet, shout out to the local transit 
-01:42 here in Portland Oregon so that is like the buses and the trains and whatnot. 
+01:42 here in Portland Oregon, so that is like the buses and the trains and whatnot. 
 01:46 And of course, Talk Python and my related websites, like I said, 
 01:51 the website that you are looking at right now is powered by SQLAlchemy. 
 01:55 If you want to know exactly what each one of these companies is doing, 
-01:59 with SQLAlchemy, you can see SQLAlchemy.org/organizations.HTML 
+01:59 with SQLAlchemy, you can see SQLAlchemy.org/organizations.html 
 02:02 that link there at the bottom lists all of these companies and many more 
 02:06 and it actually has a paragraph or two describing 
-02:09 what each one of them are doing with SQLAlchemy. 
-02:12 So if you want to dig in even farther, go and have a look
-02:15 otherwise, we are going to get started digging into the details of SQLAlchemy.
+02:08 what each one of them are doing with SQLAlchemy. 
+02:11 So if you want to dig in even farther, go and have a look
+02:14 otherwise, we are going to get started digging into the details of SQLAlchemy.

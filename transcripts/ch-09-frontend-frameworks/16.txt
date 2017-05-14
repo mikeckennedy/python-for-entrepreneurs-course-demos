@@ -1,31 +1,30 @@
-00:01 So dialogues are relatively new to the web world, they are not new 
-00:07 but, compared to everything else they are fairly new.
+00:04 So dialogues are relatively new to the web world, they are not new 
+00:07 but compared to everything else, they are fairly new.
 00:10 The primary benefit of working with dialogues is 
-00:13 people don't need to leave your page, 
-00:15 you don't obviously need to use nasty secondary pop up windows 
-00:18 which was never great. 
-00:20 Let's look at an example and how I've used dialogues on my training website, 
+00:12 people don't need to leave your page, 
+00:14 you don't obviously need to use nasty secondary pop up windows, which was never great. 
+00:19 Let's look at an example and how I've used dialogues on my training website, 
 00:23 so here I am in an incognito window, so not logged in, 
 00:27 on one of the course listing pages, and it happens to be this course, 
 00:30 you can see the URL at the bottom if you want to try this yourself.
-00:33 If you click on one of these lectures, and you are not logged in, 
-00:36 it's important that's you're not logged in for this to work, 
-00:39 it will pop up a dialogue that says hey look, 
+00:33 If you click on one of these lectures, and you are not logged in... 
+00:36 It's important that's you're not logged in for this to work, 
+00:39 it will pop up a dialogue that says "hey look, 
 00:41 you are not signed in and you don't own this course,
-00:44 so I am not really going to let you watch the video because I spend a lot of time on this, 
+00:43 so I am not really going to let you watch the video, because I spend a lot of time on this, 
 00:47 I've got to pay the bills, or go do something else, 
-00:50 and I don't want to go do something else so help support the course by paying for it.
+00:50 and I don't want to go do something else, so help support the course by paying for it."
 00:53 Well, here I am using this dialogue in Bootstrap to pop up two very quick options,
-00:59 they could either sign in if for some they weren't signed in 
-01:03 and they just didn't realize, oh, if I sign in then I get to my course, 
+00:59 they could either sign in, if for some they weren't signed in 
+01:03 and they just didn't realize "oh, if I sign in then I get to my course", 
 01:06 or you can click that button and it will go to Stripe 
-01:09 and do a credit card purchase right there, we'll get to that section later. 
-01:12 If neither of those two options make sense, 
+01:08 and do a credit card purchase right there, we'll get to that section later. 
+01:13 If neither of those two options make sense, 
 01:15 maybe you are not sure what this course is about, 
-01:18 you want to see whether maybe you want to buy it maybe you don't, 
-01:21 I put a little description in a video at the bottom 
-01:24 where you can watch something very much like this video itself
-01:27 to help convince people you know, give them a little bit of proof 
-01:30 that these videos and these courses are not crummy 
-01:33 but actually pretty decent quality. 
-01:35 You'll see that adding this functionality to our web application is super easy with Bootstrap.
+01:17 you want to see whether maybe you want to buy it maybe you don't, 
+01:20 I put a little description in a video at the bottom 
+01:23 where you can watch something very much like this video itself
+01:26 to help convince people you know, give them a little bit of proof 
+01:29 that these videos and these courses are not crummy 
+01:32 but actually pretty decent quality. 
+01:34 You'll see that adding this functionality to our web application is super easy with Bootstrap.

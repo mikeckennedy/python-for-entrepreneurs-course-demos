@@ -1,0 +1,10 @@
+00:01 So those are the core elements of SQLAlchemy.
+00:04 You'll see it in action as we go through the rest of the course,
+00:07 so you'll probably learn a few more things, but I think you know
+00:10 the majority of the key elements that you need to build your application.
+00:14 Now if you want to get the full story, the history how it's built,
+00:17 why it was built and so on, from the creator of SQLAlchemy himself,
+00:21 listen to this Talk Python episode number 5 with Mike Bayer
+00:25 who created SQLAlchemy back in 2005
+00:28 and he talks about how it's evolved over time,
+00:31 from 2005 to I think this was recorded in 2015.

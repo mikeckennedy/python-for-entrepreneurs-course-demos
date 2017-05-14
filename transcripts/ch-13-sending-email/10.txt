@@ -25,20 +25,20 @@
 01:29 you've done these forms over and over so it's all good, 
 01:32 you can review the code if you want and you'll see it in the demo. 
 01:35 Now at the bottom of the account controller I added the corresponding action methods, 
-01:39 and the view models, okay, so here is the forgot password form, right, 
+01:39 and the view models, OK, so here is the forgot password form, right, 
 01:43 this tells you what it does, we've got the get post redirect pattern, 
 01:48 we are not redirecting yet, we will, it's got the forgot password view model
 01:53 that has a few pieces of information like what is your email address and things like that. 
 01:57 Then of course we have the basic reset sent and then we have the form 
 02:01 to do the actual reset itself. 
-02:04 Okay. But, notice, these don't really do anything, other than just hold the data. 
+02:04 OK. But, notice, these don't really do anything, other than just hold the data. 
 02:08 So our job will be to create the table in the database so it manages the reset password, 
 02:13 set up the code to do the resets and send the emails. 
 02:17 Oh yes, and over in the email section here, 
 02:20 we now have a template for password reset, here, 
 02:23 and let's just view this in the browser, here you can see this is a basic looking one,
 02:29 this is just one of those template emails we already talked about, 
-02:33 so we heard about your password at blue yellow rockets, remember,
+02:33 so we heard about your password at Blue / Yellow rockets, remember,
 02:37 this is an image and I haven't changed it, 
 02:40 we are just going to go with that image for now. 
 02:42 If you click this button to reset it, it's going to take you to this URL 

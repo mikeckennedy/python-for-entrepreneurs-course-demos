@@ -1,28 +1,28 @@
 00:01 So of course, we want to model albums, and albums have tracks and so on.
 00:05 So let's go over here and create a class, called album, like so 
-00:09 and in here we are going to create a class called album. 
+00:09 and in here we are going to create a class called Album. 
 00:13 Now, remember what I said, in order to map this to the database 
 00:18 and have it participate in SQLAlchemy's ORM behaviors, 
 00:21 this class has to share that common base class that we've created, 
-00:24 so we'll say something like this-
-00:31 from model base import SQLAlchemy base 
+00:24 so we'll say something like this:
+00:31 "from modelbase import SqlAlchemyBase" 
 00:34 and then this is going to be our base class here. 
 00:36 We are also going to need to work with SQLAlchemy. 
-00:40 Maybe as you get more used to this we'll import 
+00:40 Maybe as you get more used to this, we'll import 
 00:43 the things that we're just about to use here, 
-00:45 but I am going to leave the name spaces or the module names on here 
+00:45 but I am going to leave the namespaces or the module names on here 
 00:49 so that you can tell explicitly where things are coming from. 
 00:52 So of course, we want to specify what this shape, 
 00:55 what this looks like in the database. 
-00:58 And let's suppose it's going to start up by having an ID, 
+00:58 And let's suppose it's going to start up by having an id, 
 01:01 that would be reasonable, right, this is going to be like our primary key, 
 01:04 notice that we're creating these at the type level, the class level, 
-01:07 not the instance level and the dunder init 
+01:07 not the instance level and the dunder init, 
 01:10 because we are going to use album.id as part of our query syntax later on. 
 01:15 So, it's important to create it this way, 
 01:18 we'll go over here and what we want to do is create a column, right, 
 01:21 and we are going to have a bunch of columns we are also going to have 
-01:24 a name and so on, but these columns they take a couple of parameters, 
+01:24 a name and so on. But these columns, they take a couple of parameters, 
 01:27 one of the things they need is a type, so we'll have an integer, like so, 
 01:32 and we want this to be a primary key, 
 01:34 we'll come back and work on that in a minute. 
@@ -37,32 +37,32 @@
 02:07 Again, we are going to do the same thing, 
 02:09 we are going to import SQLAlchemy, 
 02:11 we are going to import our SQLAlchemy base class that we created, 
-02:16 and we are going to create a class called track 
-02:19 and it's going to derive from SQLAlchemy base. 
-02:22 Okay, we're off to get start, and then 
+02:16 and we are going to create a class called Track 
+02:19 and it's going to derive from SqlAlchemyBase. 
+02:22 OK, we're off to get started, and then 
 02:25 we're just going to specify the columns here as well. 
-02:29 There, we have an ID a name a length an audio and video URL 
+02:29 There, we have an id, a name, a length, an audio and video URL 
 02:33 as well as the order in which this track should appear within the album. 
 02:37 Now there is a couple of other things that we should come back to and we will, 
 02:40 like relationships, this track should be tied to a particular album, 
-02:44 so there should be a many to one relationship from tracks to albums. 
-02:49 Now one final thing before we go on to working with these is 
+02:44 so there should be a many-to-one relationship from tracks to albums. 
+02:49 Now one final thing before we go on to working with these is... 
 02:53 I like to be very explicit about how this class maps to the database, 
-02:59 and so we can come over here, we can set a dunder table name, 
-03:02 to something, like this, so I am going to call it album 
+02:59 and so we can come over here, we can set a __tablename__, 
+03:02 to something like this, so I am going to call it Album 
 03:07 and PyCharm thinks this is misspelled, it's not, right, 
-03:11 so here I am going to make it album, 
-03:13 you could make it something different than like a type name 
+03:11 so here I am going to make it Album, 
+03:13 you could make it something different than like a type name, 
 03:15 so it could be like albums, like this, plural lower case, 
-03:18 but there are times especially when you are working with the relationships, 
+03:18 but there are times, especially when you are working with the relationships, 
 03:21 it's unclear whether you are talking about the thing in the database 
-03:25 or the thing in the model, and so this makes it very clear 
+03:24 or the thing in the model, and so this makes it very clear 
 03:28 if the name of table is the same as the name of your type. 
 03:31 But it doesn't have to be, right, if for some reason you are working with 
-03:34 like an existing database you maybe don't control that. 
-03:38 Okay, so now we've got these two classes 
+03:34 like an existing database, you maybe don't control that. 
+03:38 OK, so now we've got these two classes 
 03:41 that are supposed to be mapped to the database,
 03:43 they are incomplete, granted, they have no primary key 
-03:46 for example that's really bad, but before we move on, 
+03:46 for example, that's really bad. But before we move on, 
 03:50 let's see how we can use SQLAlchemy to actually create the schema 
 03:53 and relationships within our database by just the information we put here. 

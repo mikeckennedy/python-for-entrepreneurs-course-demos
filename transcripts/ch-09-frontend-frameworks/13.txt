@@ -1,29 +1,29 @@
 00:02 Any web app worth interacting with must have 
-00:05 not just HTML forms for user input, but beautiful and engaging ones. 
+00:06 not just HTML forms for user input, but beautiful and engaging ones. 
 00:11 Too often they look more like this,
 00:15 here is a registration page that has a few icons and so that's kind of cool, 
-00:19 but other than the few icons it really looks terrible, 
+00:19 but other than the few icons, it really looks terrible, 
 00:23 it has not much of a style, these are more or less the default styles 
 00:26 that come with your web browser. 
 00:29 However, with just a little bit of work, we can make this look much better. 
 00:34 The one on the right is enticing and you know on the other side of that 
-00:38 'create an account' page is some kind of really cool and engaging application. 
+00:38 "create an account" page is some kind of really cool and engaging application. 
 00:43 The one on the left, this is probably more like something put up on your intranet 
 00:48 that you have to deal with that you dread every time you have to go to it, 
 00:51 and half the time it doesn't even work. 
-00:54 Having these forms that look nice and are engaging is really important 
+00:53 Having these forms that look nice and are engaging is really important 
 00:57 and you'll see the Bootstrap has a couple of options for this, 
-01:02 Bootstrap has a couple of classes that we can use, 
-01:05 that make the basics of having really nice input forms easy. 
+01:01 Bootstrap has a couple of classes that we can use, 
+01:04 that make the basics of having really nice input forms easy. 
 01:08 Now it just so happens that this registration page here on the right
 01:12 comes from this place called codepen 
-01:16 and someone there was nice enough to actually create this in a form that we can play with.
-01:19 So if you go over here you'll see that you can actually play with the CSS and the HTML 
-01:23 and you can come over here and change it, however you want. 
-01:28 now it says registration dialogue. 
-01:30 So if you like this form and you want to play with it, 
+01:14 and someone there was nice enough to actually create this in a form that we can play with.
+01:19 So if you go over here, you'll see that you can actually play with the CSS and the HTML 
+01:23 and you can come over here and change it however you want. 
+01:28 Now it says "registration dialogue". 
+01:29 So if you like this form and you want to play with it, 
 01:32 hey, here is something to start with; 
-01:35 we are going to go back and focus on the simpler form 
-01:38 just building out the ability to create a blog post 
-01:42 and make this form that starts out looking really bad, 
-01:45 look, you are not amazing but pretty decent, just a few key Bootstrap classes. 
+01:34 we are going to go back and focus on the simpler form 
+01:37 just building out the ability to create a blog post 
+01:41 and make this form that starts out looking really bad look...
+01:45 you now, not amazing but pretty decent, just a few key Bootstrap classes. 

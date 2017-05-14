@@ -1,11 +1,11 @@
 00:01 Let's implement store/complete and finalize our purchase. 
-00:04 So just because we went through and clicked this and Stripe even said okay, 
+00:04 So just because we went through and clicked this and Stripe even said OK, 
 00:10 we saw the green checkmark, that didn't charge the card, 
 00:14 it's not until we go through this final step where the card is actually charged 
 00:17 and we just got that token that we could finalize 
 00:20 and do the charge everything was ready to go 
 00:22 and it would have more or less worked. 
-00:25 Okay, so, it's over here in this store/complete method 
+00:25 OK, so, it's over here in this store/complete method 
 00:30 that we are going to work with this, 
 00:33 so let's just start by printing out what get back, 
 00:36 so remember, we have this data dict which is merging all the various dictionaries 
@@ -19,7 +19,7 @@
 01:10 because notice there is no template, no render. 
 01:13 Alright, before that will happen, check out what we got, this is what we got. 
 01:19 I am going to put that here for our reference. 
-01:23 Okay, so there is various things, like this comes from the routing, 
+01:23 OK, so there is various things, like this comes from the routing, 
 01:26 obviously we are going to the complete method but the two things we care about 
 01:29 are the Stripe token and Stripe email probably, so I am just going to make a note, 
 01:35 we're not going to do anything here, send email, 
@@ -56,7 +56,7 @@
 03:49 like this last thing we called it id, so let's just double check on the album, 
 03:53 what comes through there, right, 
 03:55 the album is an integer, so we'll do a convert there. 
-03:59 Okay, great, so then we are going to have this id, 
+03:59 OK, great, so then we are going to have this id, 
 04:04 and let's go and get that album here. 
 04:07 So we are going to convert this, 
 04:12 and we can give it a base sort of default value, 
@@ -71,29 +71,29 @@
 04:53 Now, we should probably check whether or not this succeeds 
 04:56 but we'll deal with that in just a minute, 
 04:59 let's just say self.redirect store/success, down here. 
-05:04 Okay, now this success template doesn't exist so it's not going to go so well 
-05:09 but if we see that URL store/success we know that things are going pretty good, okay. 
+05:04 OK, now this success template doesn't exist so it's not going to go so well 
+05:09 but if we see that URL store/success we know that things are going pretty good, OK. 
 05:14 So let's write get album by id really quick, so this should be simple enough, 
 05:20 session, you want to create a session and then we are going to say query 
 05:26 or let's just say return and we are going to do session.query of album, filter, 
 05:34 we're album.id is album id, and then we'll say first. 
 05:40 So that's pretty simple, right, let's make it a slightly more legible like so. 
-05:48 Okay, so we are going to go to the session, do a query for album, 
+05:48 OK, so we are going to go to the session, do a query for album, 
 05:52 match by id that's a primary key so it's either going to be one or zero 
 05:57 and first we'll return either none or the thing that is there. 
 06:01 So all of this should work, let's do a little print just to make sure this is working 
 06:04 print finalizing purchase for buying that. 
 06:08 So self.logged_in_user.name and album.name. 
-06:21 Okay, so this doesn't actually do anything yet, but let's test what we've got so far. 
+06:21 OK, so this doesn't actually do anything yet, but let's test what we've got so far. 
 06:27 Oh yeah, remember, this is only going to work if we sign in, 
 06:31 so let me sign in really quickly. Oh I changed my password, 
 06:34 I think it's cat now, here, we better update that, 
-06:37 that's important, okay let's go buy this, 
+06:37 that's important, OK let's go buy this, 
 06:40 oh let's do one thing as well, here, let's make this a little bit nicer
 06:44 let's go over here and say data-email, self.logged_in_user.email if- 
 06:56 I forgot what is this base class here, what is it, 
 07:00 for logged in it is is logged in, if that else none.
-07:08 Okay, so if I try this again of course, view, view is that thing. 
+07:08 OK, so if I try this again of course, view, view is that thing. 
 07:16 Now I've added the email address, when I click buy 
 07:21 you could see this is pre populated with the email address tied to my account, 
 07:25 I can't even edit this if I want, here we go, 
@@ -106,7 +106,7 @@
 07:59 but let's just see how that looks really quick. 
 08:01 So if we go to albums, we see the buy button, 
 08:05 if we go to the albums in our private window, 
-08:07 we should not see the buy buttons, okay, great. 
+08:07 we should not see the buy buttons, OK, great. 
 08:10 So now we are guaranteed that we'll have that little message there, cool. 
 08:14 What I do on Talk Python To Me, or in Talk Python Training is 
 08:17 you can enter an email address, 
@@ -129,5 +129,5 @@
 09:19 if I go back and I do the other one, 
 09:22 if I try to buy this one, The Year Of The Snake and it crashes of course 
 09:28 but that's not what is important, what is important is we have purchasing Year Of The Snake,
-09:32 okay so we're passing all this information to the complete method. 
+09:32 OK so we're passing all this information to the complete method. 
 09:37 What's left, well to record it in the database, and to actually finalize it with Stripe. 

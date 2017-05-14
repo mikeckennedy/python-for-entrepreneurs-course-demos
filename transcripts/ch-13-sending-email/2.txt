@@ -67,13 +67,13 @@
 03:50 so we are going to need to convert it and what I have over here is not a number 
 03:54 so I am going to put zero, but just realize, zero is not the right answer, 
 03:58 there is three or four options, none of which is zero, 
-04:03 okay, so zero there because this is going to be a number, 
+04:03 OK, so zero there because this is going to be a number, 
 04:05 so this will setup all of our emails here. 
 04:10 The next thing we need to do is import this 
 04:15 and call the setup function here, so let's do this. 
 04:21 And the other thing we need is we are going to need global dev mode, 
 04:25 to indicate whether it's in debug or not. 
-04:29 Okay, so that will initialize the email service, 
+04:29 OK, so that will initialize the email service, 
 04:35 so then later when we want to call create an smtp server client, send the email, 
 04:40 it's going to have everything it needs, 
 04:43 and we are just basically carrying those on from within the config file onto here, 

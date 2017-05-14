@@ -1,46 +1,45 @@
 00:01 Here we are back in PyCharm. And this is our master layout page. 
 00:04 What we want to do is we want to bring in the common elements, files actually, 
 00:09 from that landing page theme that we were just working with. 
-00:13 So over here, we have our CSS, we are going to be using Font Awesome, 
-00:18 now, I believe I already installed Font Awesome here, yes I did, using Bower 
-00:22 so I am not going to use their copy of Font Awesome, 
-00:26 remember, Bower lets us track for updates and automatically update and things like that, 
+00:13 So over here, we have our CSS, we are going to be using Font Awesome. 
+00:18 Now, I believe I already installed Font Awesome here, yes I did, using Bower 
+00:22 so I am not going to use their copy of Font Awesome. 
+00:25 Remember, Bower lets us track for updates and automatically update and things like that, 
 00:29 they have some fonts, this actually comes from Bootstrap itself, 
 00:33 so we are not going to need to do anything for that, we have some images, 
 00:36 we are going to bring those over initially, 
-00:39 and then we are going to throw them away because 
-00:41 I don't think we are going to use any of their images. 
-00:44 We are going to use index.HTML to basically build our master page
-00:47 as well as our home/ index.pt file, we'll take the common look and feel, 
+00:39 and then we are going to throw them away because I don't think we are going to use any of their images. 
+00:42 We are going to use index.html to basically build our master page
+00:47 as well as our home/index.pt file, we'll take the common look and feel, 
 00:53 we'll put it in the master, we'll take the inner bits 
 00:56 that are just the landing page, we'll put that into index.pt. 
-01:00 And then of course we have the JavaScript, 
-01:03 this JavaScript is just the Bootstrap stuff as well. 
-01:06 So, let's just start deleting stuff until we get  it down to what we actually need, 
+01:00 And then of course we have the JavaScript. 
+01:02 This JavaScript is just the Bootstrap stuff as well. 
+01:05 So, let's just start deleting stuff until we get  it down to what we actually need, 
 01:10 so here is CSS, we don't need that, in fact all we need is this landing CSS 
-01:14 and this index.HTML, and the images. 
+01:14 and this index.html, and the images. 
 01:18 So that's really nice. Let's go over here to our CSS 
 01:21 and we'll just put the landing page in here, I can copy from finder into PyCharm, 
 01:26 that's pretty sweet, so we got this, 
 01:29 and we are going to need to include that of course, 
-01:32 so let's go up here and we'll include that right at the top up here. 
-01:37 So there is our landing page and don't forget to update it over here, 
-01:41 or otherwise that little cache stuff will no longer work, 
+01:31 so let's go up here and we'll include that right at the top up here. 
+01:38 So there is our landing page and don't forget to update it over here, 
+01:42 or otherwise that little cache stuff will no longer work, 
 01:45 we are not going to change that page much, but nonetheless. 
 01:49 You don't want to get caught with the stale CSS,
 01:51 so we have this, and we are going to need our images, 
 01:54 and now I am going to make a folder just so we know like what to keep clean
-01:57 so I'll call this theme, remember, we are going to mostly throw these away,
+01:57 so I'll call this "theme", remember, we are going to mostly throw these away,
 02:01 but I'll put them here for now because we want to get the site looking like the theme, 
-02:05 and then like what we are looking for, okay, so I'll put these over here, 
+02:05 and then like what we are looking for, OK, so I'll put these over here, 
 02:09 of course, we are going to have to patch up the HTML, 
-02:12 speaking of HTML, let's go and look at that, so we can come here, 
+02:12 speaking of HTML, let's go and look at that. So we can come here, 
 02:16 we can see, depending on your experience with HTML how easy it is to go
-02:20 okay this matters, this doesn't matter, 
-02:23 all of this stuff we already have all of that here, 
-02:26 so if you look, here you can see we have all those things, all the title, the author, 
-02:31 let's change that and I suppose I don't really care for taking credit 
-02:34 but I don't want really to give credit to someone else that would be weird, 
+02:20 OK this matters, this doesn't matter, 
+02:22 all of this stuff we already have all of that here, 
+02:25 so if you look, here you can see we have all those things, all the title, the author, 
+02:30 let's change that and I suppose I don't really care for taking credit 
+02:34 but I don't want really to give credit to someone else, that would be weird, 
 02:37 so let's just start deleting, I think maybe it's not the safest 
 02:40 but it's the clear so landing page is out, we have Bootstrap, 
 02:44 the order matters, so Bootstrap first, let's double check we are doing that up here, 
@@ -50,127 +49,125 @@
 03:01 fonts.google.com, yeah, and Google has a bunch of great fonts that you can use, 
 03:08 you can include them into your web page and so on 
 03:11 but they come down in many different formats and varieties 
-03:14 and it's easiest just to link directly into them 
-03:18 and that's what this theme is doing, 
-03:21 I don't know where the fonts appear on this page but we are going to put this, 
-03:25 and you can see they're also doing the fonts from Font Awesome
-03:30 let's make sure those both get in here
-03:33 but we are going to have to of course change Font Awesome a little bit. 
-03:36 So we'll go over here like this, organize it, so we can keep track, 
-03:39 now we are not going to go to relative Font Awesome 
-03:42 in fact, we are going to go to /static/, this is easier, bower Font Awesome
+03:14 and it's easiest just to link directly into them and that's what this theme is doing, 
+03:19 I don't know where the fonts appear on this page but we are going to put this, 
+03:25 and you can see they're also doing the fonts from Font Awesome.
+03:30 Let's make sure those both get in here
+03:32 but we are going to have to of course change Font Awesome a little bit. 
+03:35 So we'll go over here like this, organize it, so we can keep track, 
+03:38 now we are not going to go to relative Font Awesome 
+03:41 in fact, we are going to go to /static/, this is easier, bower, font-awesome
 03:51 we'll just copy the path and then we'll have to fix it 
 03:54 because it's going to have my full path,
-03:57 we'll go back here and it's top the static that we're looking for, 
+03:56 we'll go back here and it's top of the static that we're looking for, 
 04:00 alright, so there is our Font Awesome, 
-04:03 and we've got the Google fonts here in https, 
+04:03 and we've got the Google fonts here in HTTPS, 
 04:06 sometimes you'll see this written like that, 
 04:09 which means use whatever scheme to access the fonts that you have here 
 04:14 so on a basic HTTP go to HTTP Google, 
-04:18 if you are in encrypted page will do https we'll just leave it though. 
-04:22 Alright, I think we have the CSS integrated 
-04:25 let's go back and we'll just keep chipping away at this sucker
+04:18 if you are in encrypted page will do HTTPS, we'll just leave it though. 
+04:22 Alright, I think we have the CSS integrated. 
+04:25 Let's go back and we'll just keep chipping away at this sucker
 04:28 until it looks like the way we want, so that's done, 
-04:32 we already have this working so the head is done, 
-04:35 we again have the English language set and HTML 5 doctype, 
+04:30 we already have this working, so the head is done, 
+04:34 we again have the English language set and HTML 5 DOCTYPE, 
 04:39 now they have a navigation bar over there let's go and just take this, 
-04:43 and we'll fix that up, so down here we have our little nav bar but remember, 
+04:43 and we'll fix that up, so down here we have our little navbar but remember, 
 04:48 this is not the Bootstrap one, this is just a cheesy one I threw in here, 
 04:51 we did our Bootstrap one in a separate file 
 04:55 so let me just keep this here for just a minute so we can copy the pieces 
-04:58 that we are going to need for our links, okay, 
+04:58 that we are going to need for our links, OK, 
 05:01 so we'll come up here, all this stuff is just about the little collapse responsive design, 
 05:06 so we can forget about that, this is really what we're after, 
-05:09 we need some li with some references in them, 
-05:17 okay I have moved those pieces around so we have exactly what we had 
+05:09 we need some "lis" with some references in them, 
+05:17 OK, I have moved those pieces around so we have exactly what we had 
 05:22 in the previous page other than I drop the full long home path there. 
-05:25 Let's look at our target to see where we're going 
+05:26 Let's look at our target to see where we're going 
 05:29 so we can have it look more like that. 
-05:32 So we have albums, book us, and let me just actually copy the path here, 
-05:36 so we have home, let's forget this for a minute, 
-05:40 okay, great, so now we have what we are aiming for in the final design here,
-05:45 now notice, I think book us is not going to work 
-05:48 so now you can see I have basically the navigational items 
+05:31 So we have albums, "book us", and let me just actually copy the path here, 
+05:36 so we have home, let's forget this for a minute. 
+05:40 OK, great, so now we have what we are aiming for in the final design here,
+05:45 now notice, I think "book us" is not going to work. 
+05:48 So now you can see I have basically the navigational items 
 05:51 that we are aiming for in the final one, right, 
 05:55 we don't have to get this perfect, we're just going to get it mostly working 
-05:58 and I think book us might not work yet, I'm not sure. 
+05:58 and I think "book us" might not work yet, I'm not sure. 
 06:01 We can at least get the structure the, navigation in place. 
-06:04 So, let's go up here and see how we're doing, so far so good, 
-06:08 now if we go down here, this part is about this is the landing page, 
+06:04 So, let's go up here and see how we're doing, so far so good. 
+06:07 Now if we go down here, this part is "about", this is the landing page, 
 06:13 this is actually the title, this is the content of the homepage. 
 06:17 So let me start collapsing stuff because 
-06:20 we don't want that in our general layout, right, 
-06:22 the general layout is for all the site not for the homepage, 
-06:25 we are just going to start collapsing these little sections until we get to a section, 
+06:19 we don't want that in our general layout, right, 
+06:22 the general layout is for all the site, not for the homepage, 
+06:24 we are just going to start collapsing these little sections until we get to a section, 
 06:28 this one, we want to make sure we have the footer,
 06:31 at the end, so let's take this footer and bring it out, 
 06:34 and notice we have jQuery and Bootstrap, but I think we have that already,
 06:38 so now we go down past our navigation, here is the main content, 
-06:41 the stuff we left in index.HTML it's going to go here but not in this page,
+06:41 the stuff we left in index.html it's going to go here but not in this page,
 06:45 it's going to go into index.pt. 
 06:48 Now, after that of course, we are going to have a footer. 
 06:51 A proper HTML 5 footer that is, and for now I am going to leave it 
 06:55 looking like things look here. 
-06:58 Okay, we have jQuery, we have Bootstrap, 
+06:58 OK, we have jQuery, we have Bootstrap, 
 07:01 and we even have a spot for our additional stuff when we want it. 
-07:04 So I think things are okay, we are going to be missing a few images, 
+07:04 So I think things are OK, we are going to be missing a few images, 
 07:08 but we don't have any content yet. 
-07:11 Let's go and run this and just see how things work, okay? 
+07:11 Let's go and run this and just see how things work, OK? 
 07:14 I'll just change the title while we are at it up here, 
-07:17 this is going to be the Blue / Yellow Rockets, I think I had spelled it like this, 
+07:15 this is going to be the Blue / Yellow Rockets, I think I had spelled it like this, 
 07:21 are you guys ready to see what happens? Let's go.
 07:25 I'll put it over into Firefox. 
-07:28 Well, we're getting somewhere, we got a few things that we need to work on, right, 
-07:33 that doesn't look great, we do have these elements up here
+07:28 Well, we're getting somewhere, we got a few things that we need to work on, right? 
+07:33 That doesn't look great, we do have these elements up here
 07:37 and we did actually set their color to be black or something, 
 07:40 so now we are going to need to start working on this page. 
 07:45 This is kind of how it goes, you know like oh that looks sort of like something, 
-07:48 but not so much, so first thing we don't want a default light nav bar, 
-07:54 we want an inverse, nav bar inverse, so we refresh this, 
-08:00 that's closer, let's look over here, 
-08:04 I like for the nav bars to be extra dark and so we can keep them in place,
+07:48 but not so much, so first thing we don't want a default light navbar, 
+07:54 we want an inverse, navbar-inverse, so we refresh this, 
+07:59 that's closer, let's look over here, 
+08:04 I like for the navbars to be extra dark and so we can keep them in place,
 08:09 so they stay in place, and they kind of stand out over the various colors of black, 
 08:13 so we can go and work on that, but what you've seen so far 
-08:17 is how to bring this template into our page let's go ahead and do one more piece, 
+08:17 is how to bring this template into our page, let's go ahead and do one more piece, 
 08:22 let's go ahead and finish bringing in the main content, 
 08:25 here you can see we've got something there, 
-08:28 there is a bit of a top bar being stuck in a weird way there 
+08:27 there is a bit of a top bar being stuck in a weird way there 
 08:31 like there is this overlap and we can easily solve that, 
 08:34 but let's just finish bringing in the main elements of the page, 
 08:37 so this is everything that goes into the shared layout. 
 08:41 We are going to need to of course redo the footer text and so on, it's not quite right, 
-08:45 but, everything else that you saw here, from there, upward, 
+08:45 but, everything else that you saw here, from there upward, 
 08:51 all of that is only specific to the home page, it's not specific to the entire site 
-08:58 so where does that go- let's close this stuff, actually, 
-09:01 I am going to need this again in a minute,
-09:04 that goes in home index, right, that's our homepage. 
-09:06 And so what goes there is this, and just for a minute, 
-09:09 I am going to do a couple of brs just so we can see it because remember, 
-09:12 that the nav bar is over top, we'll fix this but let's drop it like this. 
+08:58 so where does that go? Let's close this stuff, actually, I am going to need this again in a minute,
+09:02 that goes in home/index, right, that's our homepage. 
+09:05 And so what goes there is this, and just for a minute, 
+09:09 I am going to do a couple of "brs", just so we can see it because remember, 
+09:12 that the navbar is over top, we'll fix this but let's drop it like this. 
 09:15 Now, here, I am sure there are many images that are not working, 
 09:19 for example, here, let's go and fix that, 
 09:23 so this is going to be /static/image/theme, like that.
-09:29 Let's double check, static/image/theme okay, cool.
+09:29 Let's double check, static/image/theme OK, cool.
 09:35 And let me fix these over here, there is a few more, the dog, of course, 
 09:40 the dog is good but the dog is there; 
 09:43 the phones are good, but the phone's over here. 
-09:46 Okay, everything looks good. 
-09:48 Now, it looks like this is going to work, but what may be the most important feature 
+09:45 OK, everything looks good. 
+09:47 Now, it looks like this is going to work, but what may be the most important feature 
 09:51 is actually missing, let's reload this and see what we got. 
-09:54 Okay, well, there is the landing page, and alright, look at this!
+09:54 OK, well, there is the landing page, and alright, look at this!
 09:58 It's coming along very well actually. 
 10:01 Remember that cool big landing thing right here, with a little pencil, 
 10:04 the guy and the pencil being creative or something, glasses mean creative, 
 10:08 we're missing that and where does that come from?
-10:11 Well, it turns out that over in the CSS, it's actually referring to the file right there, 
-10:16 so just like all the other files we need to appoint to where it goes.
-10:20 Now, it should be in good shape, ta- da, there we go, beautiful. 
+10:10 Well, it turns out that over in the CSS, it's actually referring to the file right there. 
+10:16 So just like all the other files, we need to appoint to where it goes.
+10:20 Now, it should be in good shape, ta-da, there we go, beautiful. 
 10:24 Now there is some weirdness about the body having padding and stuff, 
 10:28 because we're mixing our old design to the new design. 
 10:31 What I am going to do next is we are going to go through 
 10:34 and try to make this look a little better, we need to do some work up here 
 10:37 and we need to do some work on the padding and whatnot. 
-10:40 You can see how we've taken this theme from this time we started with Start Bootstrap
+10:40 You can see how we've taken this theme from, this time we started with Start Bootstrap
 10:46 of course, I said if you want a premium one, they have premium ones here, 
 10:49 they have great premium ones at Wrap Bootstrap as well, we talked about that,
 10:52 we've taken this one and in just a few minutes we've migrated into our site
@@ -181,6 +178,6 @@
 11:13 is actually selecting the pictures, writing the copy that is really compelling, 
 11:18 what is the story you've got, you know, 30 seconds or 15 seconds 
 11:22 to tell everybody what you are about, how do you do that, that's where the hard part is. 
-11:27 But, you know, that's up to your business, you will have to that yourself, 
-11:30 we'll go and move all the other pieces and sort of make this our design 
-11:34 by copying over our goal into this site, in the next video. 
+11:26 But, you know, that's up to your business, you will have to that yourself, 
+11:29 we'll go and move all the other pieces and sort of make this our design 
+11:33 by copying over our goal into this site, in the next video. 

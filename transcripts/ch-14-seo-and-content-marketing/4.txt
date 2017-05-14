@@ -32,7 +32,7 @@
 01:46 on mobile searches it can be less than 130 characters 
 01:50 but I typically leave one or two characters room 
 01:55 and I aim for less than 128 characters, otherwise, the description will be cut off.
-01:58 And that is okay, Google will just append 3 periods to the end of the description 
+01:58 And that is OK, Google will just append 3 periods to the end of the description 
 02:02 but this is typically targeting 128 characters, it's a good practice 
 02:07 to increase the likelihood that your meta description will appear 
 02:11 exactly as you wanted it on mobile and desktop searches, 

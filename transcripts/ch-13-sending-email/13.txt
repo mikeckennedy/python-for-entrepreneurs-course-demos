@@ -6,7 +6,7 @@
 00:19 and the reset code. 
 00:22 And we don't need to pass the whole thing, we can just pass the reset id, 
 00:25 so let's generate this method. 
-00:31 Okay, now it's going to be very similar to this one, 
+00:31 OK, now it's going to be very similar to this one, 
 00:34 so I'll just copy that really quickly, and instead of sending welcome 
 00:39 we are going to send password reset, reset password, which I have already done, 
 00:43 it's got the email, I don't think we actually we need the email in that part of it, 
@@ -14,7 +14,7 @@
 00:55 we need the reset code, so here this goes like this, 
 00:59 and we have the rest id then we'll say, this is going to be reset your password, 
 01:05 it's kind of a long title but we are going to go with it. 
-01:11 Okay, let's see what we get here. 
+01:11 OK, let's see what we get here. 
 01:15 Let's go over here and generate yet another reset, 
 01:19 this time it's a little because it's actually sending the email, 
 01:22 you can see down here, sending message, live and then boom, 

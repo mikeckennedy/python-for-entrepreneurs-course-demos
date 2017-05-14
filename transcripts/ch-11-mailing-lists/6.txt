@@ -28,7 +28,7 @@
 01:41 but this won't run with 6.3 this only runs with 0.4.0 
 01:46 so you have to pin that version here for doc opt which is really frustrating 
 01:49 but whatever, that's the way it works. 
-01:52 Okay, so we have this installed, we need to put this as a requirement in our setup.py 
+01:52 OK, so we have this installed, we need to put this as a requirement in our setup.py 
 01:55 so when we install this into our server,
 01:59 it's automatically going to bring along the dependencies MailChimp doc opt and so on,
 02:03 after all that, we are ready to create this, call this API here, 
@@ -47,7 +47,7 @@
 03:01 so first of all, we're going to pass in the list id, like so, so that goes in, 
 03:08 remember that came out of our any file or configuration file, through the dunder init, 
 03:13 back over to here; next, we have to pass the email and we pass this as a dictionary 
-03:19 which is kind of funky, but it's okay, it'll work, 
+03:19 which is kind of funky, but it's OK, it'll work, 
 03:24 so we are going to have our email, 
 03:26 and we probably want to do things like strip it so if there is any spaces, 
 03:30 maybe lower case, so it's sort of canonically just the lower case 
@@ -78,23 +78,23 @@
 05:00 you will be able to build them up so a customer can be both 
 05:03 the paying customer and originating from a web cast and interested in data science, 
 05:07 or whatever it is like your groups are consisting of. 
-05:12 Okay, so we've got one little squiggly thing here, 
+05:12 OK, so we've got one little squiggly thing here, 
 05:14 what is this unhappy about- the missing except, 
-05:18 okay, so if that worked, we are going to return true, if it doesn't work, 
+05:18 OK, so if that worked, we are going to return true, if it doesn't work, 
 05:22 let's catch an exception, do a print and later we could log this to somewhere 
 05:27 like roll bar or something, but we'll just catch it, like so, 
 05:30 and we'll print error during mailing 
 05:34 so here we can print that out and then let's return false.
-05:38 Okay, so I think we're ready, what do you guys think, 
+05:38 OK, so I think we're ready, what do you guys think, 
 05:41 do you want to try this, do you want to sign up to our email list, 
 05:43 we could email ourselves, that sounds cool, let's run it. 
-05:46 Okay, here we are again, it's running, it didn't crash,
+05:46 OK, here we are again, it's running, it didn't crash,
 05:51 that's good that means that we've probably setup MailChimp alright, 
 05:54 so I'll come down I'll put my email address in again, 
 05:57 and let's get notified, actually let me use my other one, 
 06:00 the one I used to register at MailChimp, so, I'll use my 
 06:03 michael@michaelckennedy.net, are we ready? 
-06:06 Go! Awesome, you're on the list, okay, so I think that worked,
+06:06 Go! Awesome, you're on the list, OK, so I think that worked,
 06:11 we actually could have caught the response form the API and print it out, 
 06:15 the response, but let's just go look at the MailChimp results 
 06:18 see if we're now on our list,

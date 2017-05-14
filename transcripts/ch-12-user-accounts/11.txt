@@ -10,7 +10,7 @@
 00:38 so we are going to define a method called set auth and for set auth 
 00:42 we are going to need two things, we are going to need the request 
 00:45 this is the request that comes into the web action method 
-00:50 and we are going to want to store the user id, okay, now remember, 
+00:50 and we are going to want to store the user id, OK, now remember, 
 00:53 if we look really quickly at our data, where is our user, our account, 
 00:57 our id is actually a sting which is a fairly large
 01:01 I think 32 character alphanumeric string. 
@@ -38,7 +38,7 @@
 02:23 given that user id that will make it much harder for people to guess.
 02:27 So let's begin by coming over here and get the hash, hash val, 
 02:31 now in order to do this, we are going to use a simple library called the hashlib, 
-02:35 okay, so up here, we are going to import hashlib, we want to take our hashlib,
+02:35 OK, so up here, we are going to import hashlib, we want to take our hashlib,
 02:40 and we are going to sha512 algorithm and we are going to hash this user id 
 02:46 but you can't give it a string, you have to give it bytes, 
 02:49 so we can say go over here and code that string, in the bytes, using utf8. 
@@ -50,7 +50,7 @@
 03:12 it turns out we are going to hash something else in just a moment. 
 03:15 So let's come over here and we'll say first we import a cookie_auth alright, 
 03:23 so I want to come down here we are just going to call cookie_auth.set_auth on account.id,
-03:29 okay, so here we sign in, we get the authenticated account,
+03:29 OK, so here we sign in, we get the authenticated account,
 03:33 either we get nothing and we tell them an error 
 03:35 or we get the actual account back then we'll have access to its id 
 03:37 and we should see what is going to happen here. 
@@ -82,7 +82,7 @@
 05:23 Now you would think, you would think that this is going to work. 
 05:27 However, let's find out. So I rerun this, I go over here and refresh 
 05:32 and if we go and actually look in the network tools, 
-05:36 let's do one more request there we go, and only see HTML, okay, great. 
+05:36 let's do one more request there we go, and only see HTML, OK, great. 
 05:44 So if we look at this and we look at the cookies, 
 05:46 you can see that PyCharm has inserted some kind of cookie for us 
 05:50 because it wants to be able to debug this request, right, 
@@ -121,7 +121,7 @@
 07:52 and I am going to call it with of course the request the response that's passed through 
 07:58 in the lower levels of Pyramid and then I am just going to give the cookie name 
 08:02 which will be the auth cookie name and I am going to give it the val. 
-08:06 Okay, so instead of trying to set it directly, 
+08:06 OK, so instead of trying to set it directly, 
 08:08 we are just going to say hey do a call back set it here let's try again. 
 08:12 Reload the page, and now we're going to need to set the cookies, 
 08:17 so let's go to our sign in, now if we look at our get check it out,

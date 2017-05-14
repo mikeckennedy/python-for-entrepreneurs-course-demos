@@ -1,5 +1,5 @@
 00:01 Let's review the core concepts of integrating Rollbar into a Pyramid web application 
-00:05 like the Blue Yellow Rockets App. 
+00:05 like the Blue / Yellow Rockets App. 
 00:08 So, most of this is going to happen in the configuration.ini file, 
 00:13 we replaced our app main with pipeline main and the pipeline 
 00:17 basically lets Rollbar get a look at all the requests and then it feeds it on to our app, 
@@ -17,7 +17,7 @@
 01:00 and set our environment and access token there as well. 
 01:04 it looks like in the slides I have dev in production, don't make those different, whatever, 
 01:08 those should make them the same. 
-01:11 Okay, so you put that in here, make sure you set, you install Rollbar the package 
+01:11 OK, so you put that in here, make sure you set, you install Rollbar the package 
 01:16 and you set it as a requirement in your setup, and once you've done that, 
 01:19 then you can just config.include rollbar.contrib.pyramid, 
 01:25 in your main setup somehow and that is all you have to do, 

@@ -13,7 +13,7 @@
 00:44 so let’s look over here, this is the items section, 
 00:47 and we can see here is all the errors and other activity on my site that has occurred 
 00:55 over as long as the data is stored, 
-00:58 okay, so you can see all activity, all dates and so on, 
+00:58 OK, so you can see all activity, all dates and so on, 
 01:01 and if we are only looking for errors, we could come over here and say 
 01:05 just show me the errors and it also makes the deployment story here, 
 01:10 so for example here is some errors that have occurred 
@@ -54,7 +54,7 @@
 03:21 and I went over to Rollbar and said oh my gosh, what is going on here 
 03:25 and actually I didn't even know that this was the error 
 03:30 I just saw cannot load page 500, something like that. 
-03:33 So I drop in here it says okay, let's see, here is the problem,
+03:33 So I drop in here it says OK, let's see, here is the problem,
 03:37 we've got in the home controller, and the home view model 
 03:43 which is calling this function get random views and we are specifying the count, 
 03:47 notice how it defaults to 3 but that is the value we are passing, 
@@ -66,7 +66,7 @@
 04:12 So this is a pretty simple error to solve, but if it was more complex 
 04:15 we can do a couple of cool things like look, I can click here and I can see the arguments,
 04:21 these are the arguments that were passed to random, notice the sequence is empty. 
-04:27 And I can open up the arguments here and say okay self was passed, to this function, 
+04:27 And I can open up the arguments here and say OK self was passed, to this function, 
 04:32 get random reviews, and count was apparently took on the default and just did 3. 
 04:38 But if this was a different number, it would have captured the
 04:41 actual arguments passed here, how cool is that? 
@@ -86,7 +86,7 @@
 05:34 because it wasn't actually caused by a deploy, 
 05:37 it was just- I guess it was caused by a deploy, but sometimes they can go back 
 05:40 and look at the GitHub this in integrated with GitHub they can find 
-05:43 actually a deployment that caused it, okay, 
+05:43 actually a deployment that caused it, OK, 
 05:46 here is the first deployment that it saw the error in. 
 05:48 And similar items, nobody's run into this problem, 
 05:51 you can go to community solutions and see if anybody has a fix for, 
@@ -99,5 +99,5 @@
 06:16 so you don't really need to debug it, you just got to go fix the code. 
 06:21 Well, that's really great too. 
 06:23 So, in the subsequent videos I am going to show you 
-06:26 how to integrate Rollbar into the Blue Yellow Rockets application 
+06:26 how to integrate Rollbar into the Blue / Yellow Rockets application 
 06:28 and that should be really easy to do. 

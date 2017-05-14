@@ -44,7 +44,7 @@
 02:44 and how we can actually capture, not just some of what went wrong, 
 02:49 but possibly even the state of the variables in the call stack, the URL, 
 02:53 the platform version, the browser version, everything about the application state 
-03:01 from both the client side and the server side and send those notifications to us right away.
+03:01 from both the client side and the server-side and send those notifications to us right away.
 03:06 Slack, text message, whatever. 
 03:09 That's what this chapter is about, first we are going to focus on logging
 03:12 and then we are going to sort of take it to level two the next level with monitoring. 

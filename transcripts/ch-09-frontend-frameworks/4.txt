@@ -1,29 +1,29 @@
 00:03 If you can remember way back to when we first got started with Pyramid, 
 00:07 one of the final things we talked about in that chapter 
-00:10 was how to install and manage our static components, 
+00:09 was how to install and manage our static components, 
 00:13 we talked about Bower installing and managing them with Bower. 
 00:17 And here while we are talking about Bootstrap, 
-00:20 I just want to give you one more reminder like, 
-00:23 use something that could manage and upgrade version our static files, 
-00:26 things like Bootstrap, they are released all the time 
-00:28 and so it's really great to be able to go to Bower 
-00:30 and say upgrade that to some point version release, 
-00:33 here we have 3.3.6, maybe 3.3.7 is current, 
-00:35 we could run a command line command and just have that happen. 
-00:38 So, if we do that, we get a Bower components folder, 
+00:19 I just want to give you one more reminder like, 
+00:21 use something that could manage and upgrade version of our static files, 
+00:25 things like Bootstrap, they are released all the time 
+00:27 and so it's really great to be able to go to Bower 
+00:29 and say upgrade that to some point version release, 
+00:32 here we have 3.3.6, maybe 3.3.7 is current, 
+00:34 we could run a command line command and just have that happen. 
+00:38 So, if we do that, we get a bower_components folder, 
 00:43 and of course, we want that to be in our static folder.
 00:46 Let's jump over here to the GitHub repository, 
 00:49 just real quickly and see how this looks in our actual example 
 00:52 we are going to be working with.
-00:54 Over here is the Blue Yellow App and I've called it Blue Yellow App 9, 
+00:53 Over here is the Blue / Yellow App and I've called it blue_yellow_app_9, 
 00:57 to point out that this is chapter 9 about Boootstrap 
-01:00 and not the one from web design or web starters and so on.
-01:03 And if we look in here, you can see in the static folder, 
-01:05 we have the CSS that we write, the images that we create, 
+00:59 and not the one from web design or web starters and so on.
+01:02 And if we look in here, you can see in the static folder, 
+01:04 we have the CSS that we write, the images that we create, 
 01:08 the JavaScript that we are going to write, and we have Bower components, 
 01:12 and in here, we've got Bootstrap CSS, jQuery, we also have Font Awesome, 
 01:16 which is really great, we are going to be making good use of that,
-01:19 we've got HTML 5shiv and respond for the older internet explorer 
-01:22 and non responsive or non HTML 5 browsers, so we don't use that very often. 
+01:19 we've got HTML5 Shiv and Respond for the older Internet Explorer 
+01:22 and non-responsive or non-HTML 5 browsers, so we don't use that very often. 
 01:28 The basic idea is we are going to install Bootstrap CSS 
 01:32 along with everything else we need, using Bower. 

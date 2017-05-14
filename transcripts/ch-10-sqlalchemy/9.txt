@@ -1,39 +1,39 @@
 00:02 Now that you've seen SQLAlchemy in action 
 00:04 let's go back and review the building blocks. 
-00:07 We saw for the ORM we start with the SQLAlchemy base 
+00:07 We saw for the ORM we start with the SqlAlchemyBase 
 00:11 or whatever you want to call it but the declarative base 
 00:14 created out of the declarative base factory method here. 
-00:18 remember, this is a singletone base class that is used 
-00:21 for the base type of all of your objects that come or map to a single database. 
+00:18 remember, this is a singleton base class that is used 
+00:22 for the base type of all of your objects that come or map to a single database. 
 00:29 Multiple databases maybe multiple bases here, 
-00:32 if you are going to have one database there is just one of these. 
+00:32 if you are going to have one database, there is just one of these. 
 00:35 And then, any time we want to create a type that maps to the database, 
-00:38 we just derive from the SQLAlchemy base.
-00:41 Here we have album, track , purchase, everything we want 
+00:38 we just derive from the SqlAlchemyBase.
+00:41 Here we have album, track, purchase, everything we want 
 00:44 to put into this database is going to derive form this type. 
 00:47 When we actually create those classes, 
-00:51 we probably want to give them a dunder table name 
+00:51 we probably want to give them a __tablename__
 00:54 to be really explicit how they map to the database,
 00:56 we are going to give them a primary key, probably called id,
 00:59 call it whatever you want, and here you can see
-01:02 this one we are giving an integer, primary key that is auto-incremented 
+01:02 this one we are giving an integer, primary key that is autoincremented 
 01:06 by setting the column type to integer, 
-01:08 primary key is true, auto-increment also true. 
+01:08 primary key is True, autoincrement also True. 
 01:11 Then we have some other columns, 
 01:13 name, year, price, those are different types,
-01:15 string, integer, float, and we also have relationship 
-01:18 so we have tracks and we set this up to be a SQLAlchemy.orm.relationship 
+01:15 string, integer, float, and we also have relationship. 
+01:18 So we have tracks and we set this up to be a sqlalchemy.orm.relationship 
 01:22 over to the track of class. 
 01:25 One thing we haven't seen yet is what do we do with default values. 
-01:30 Everything that we've had just a nullable default value is acceptable 
-01:34 because there were like names of albums 
+01:30 Everything that we've had just a nullable default value is acceptable, 
+01:34 because there were like names of albums, 
 01:36 what's the default besides null there anyway, right. 
 01:39 Well, here is the case where default values 
-01:42 of just zero or null don't make sense. 
-01:45 So here we have a password reset. 
+01:41 of just zero or null don't make sense. 
+01:44 So here we have a PasswordReset. 
 01:47 And, we could have created an auto incrementing id 
-01:49 for password resets but how secure do you think that would be, 
-01:52 how secure would it be to have like well,
+01:49 for password resets but how secure do you think that would be? 
+01:52 How secure would it be to have like well,
 01:55 I tried to reset my password and it was 6, 
 01:57 it was /reset/6 what happens if I put 7? Or 5, like, 
 02:04 these things that you can predict
@@ -44,62 +44,62 @@
 02:20 but we don't have to do that we could just do it this way, 
 02:23 What we could do is we can set a default function so we have two versions, 
 02:26 at the bottom we are having a create a date
-02:29 and we want that to just be when the object was created unless you set it otherwise. 
-02:32 So we can actually pass the now function 
+02:29 and we want that to just be when the object was created, unless you set it otherwise. 
+02:32 So we can actually pass the "now" function, 
 02:35 notice that we are not using parenthesis when we are assigning the default, 
-02:39 we are passing the function not now, otherwise, 
+02:39 we are passing the function, not now. Otherwise, 
 02:42 it would just be the value of when the program started, that would be bad. 
-02:46 but we're going to say SQLAlchemy any time you create a password reset, 
-02:49 typical in the database, initialize the create a data by calling now at that time 
+02:46 but we're going to say: "SQLAlchemy, any time you create a password reset, 
+02:49 typical in the database, initialize the createed data by calling now at that time 
 02:53 and the id is a little more interesting, we are actually giving it a lambda here, 
 02:57 so this is lambda that takes no parameters or arguments and returns a string 
-03:02 and what it does is it uses the UUID4 which generates 
+03:02 and what it does is it uses the UUID4, which generates 
 03:06 like a 32 character hexadecimal number with dashes
 03:10 and we want the dashes to go away, just the 32 characters 
-03:13 so this lets us not worry about creating long interesting look up 
-03:19 ids for these password resets, we just set these two defaults 
+03:13 so this lets us not worry about creating long, interesting look up 
+03:19 ids for these password resets, we just set these two defaults, 
 03:23 create a new password reset associated 
 03:25 with the user and call safe and it's good to go.
 03:28 We also saw that primary keys are required 
 03:32 so here we are setting the id in this account to have a primary key, 
-03:35 it's equal to true, and any time we want to do some kind of query 
+03:35 it's equal to True, and any time we want to do some kind of query 
 03:38 like maybe we want to run a report that will tell us about the accounts 
-03:42 created today we want to make sure that we have indexes. 
+03:42 created today, we want to make sure that we have indexes. 
 03:45 So primary keys automatically have indexes, 
 03:48 other things that we want to improve performance, 
 03:51 sometimes dramatically, dramatically improve performance,
 03:55 like a 1000 times better, if there is a lot of data in index versus no index, right, 
 03:59 so you want to really think about what are you going to query by, 
 04:02 what are you going to filter by, what are you going to order by, 
-04:05 put indexes where that makes sense, okay. 
-04:08 So here we might want to do a report so show us our new daily users, 
+04:05 put indexes where that makes sense, OK? 
+04:08 So here we might want to do a report, so show us our new daily users, 
 04:11 so we want to index that. 
 04:13 Also we can have uniqueness constraints, so in this case, 
 04:16 we have the email address associated with the user. 
-04:20 We don't want it to let multiple users have the same email address, right, 
+04:19 We don't want it to let multiple users have the same email address, right, 
 04:23 this could happen really easily if somebody forgets their account 
-04:26 and just says well I must have not registered and registers again. 
+04:25 and just says "well I must have not registered" and registers again. 
 04:29 And then if they say well I forgot my password later, 
-04:32 which account do you reset when they enter their email, right, 
-04:35 it's really not a good deal to have that duplicated 
+04:31 which account do you reset when they enter their email?
+04:35 Right, it's really not a good deal to have that duplicated 
 04:37 so make sure you put the uniqueness constraint in the database. 
-04:40 Finally once you get your classes all mapped out everything is ready to go
+04:40 Finally once you get your classes all mapped out, everything is ready to go,
 04:45 it's time to create the model in the database, to actually create the schema,
 04:50 create the database, set up the tables and so on,
 04:53 remember, you start by importing all of the types. 
-04:56 If Python has not seen those types, has not imported those files 
-05:00 as far as SQLALchmy is concerned, they don't exist, 
+04:56 If Python has not seen those types, has not imported those files, 
+05:00 as far as SQLAlchemy is concerned, they don't exist, 
 05:03 so make sure you import them up there. 
-05:06 And then we're going to create and engine from a connection string 
-05:09 and then we're going to use SQLAlchemy base.metadata.create all, 
+05:05 And then we're going to create and engine from a connection string 
+05:08 and then we're going to use SqlAlchemyBase.metadata.create_all, 
 05:12 and that will create the data. 
 05:14 Remember, if the table already exists when you call this, 
 05:17 it will make zero changes to it, it only creates new tables, 
 05:21 it will not alter or migrate anything, 
-05:24 One of the things worth looking at here is this echo=false, on the engine,
-05:28 SQLAlchemy.create engine echo=false 
-05:32 we haven't talked about this yet, we'll get to it later, 
-05:34 but if you say echo=true all sorts of diagnostics will start to spit out 
-05:39 of your application and you'll basically see all the sql commands 
-05:43 that sqlalchmy is going to send to the database echo to your terminal, 
-05:48 which is really handy so we'll use that as we get into this a little bit more. 
+05:23 One of the things worth looking at here is this echo=False on the engine,
+05:28 SqlAlchemy.create_engine... echo=False. 
+05:32 We haven't talked about this yet, we'll get to it later, 
+05:34 but if you say echo=True, all sorts of diagnostics will start to spit out 
+05:39 of your application and you'll basically see all the SQL commands 
+05:43 that SQLAlchemy is going to send to the database echo to your terminal, 
+05:48 which is really handy, so we'll use that as we get into this a little bit more. 

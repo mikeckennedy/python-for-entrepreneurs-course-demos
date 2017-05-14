@@ -1,56 +1,56 @@
-00:01 Here we are at getbootstrap.com let's check out the navbar 
+00:01 Here we are at getbootstrap.com, let's check out the navbar 
 00:04 and you'll see there is a couple of options. 
 00:07 So, we have the default navbar, there is actually a brand image,
-00:10 you can put all sorts of links and stuff in there, 
-00:15 now if we slow down here, let's see, 
-00:18 it requires JavaScript so you'll see we're going to use this navbar collapse 
-00:21 that was that 'hamburger menu' thing, 
-00:23 in order for the 'hamburger menu' to expand, 
+00:11 you can put all sorts of links and stuff in there, 
+00:14 now if we slow down here, let's see, 
+00:16 it requires JavaScript, so you'll see we're going to use this .navbar-collapse 
+00:20 that was that "hamburger menu" thing, 
+00:22 in order for the "hamburger menu" to expand, 
 00:25 we have to include the Bootstrap JavaScript on pages that use this 
 00:28 and this pretty much looks like all of your sites, 
-00:31 so if you are going this in the expanded version 
-00:34 you are going to need to use include the Bootstrap JavaScript. 
-00:37 It's no big deal to do so, but it might be something not on your radar, 
-00:40 so make sure you do do that and that library requires jQuery 
+00:30 so if you are going this in the expanded version, 
+00:33 you are going to need to use, include the Bootstrap JavaScript. 
+00:36 It's no big deal to do so, but it might be something not on your radar, 
+00:39 so make sure you do do that and that library requires jQuery, 
 00:44 so jQuery needs to precede it in the include statements. 
-00:48 Okay, so you'll see this nav bars, there is a lot of moving pieces here 
+00:48 OK, so you'll see this navbars, there is a lot of moving pieces here 
 00:52 and I find it just so much easier to just copy this, 
-00:56 like here you can see this is the 'hamburger menu', 
+00:56 like here you can see this is the "hamburger menu", 
 00:59 they are actually using the glyphicons for what that looks like, 
 01:02 you can replace that with whatever you want, if you don't want their style. 
 01:05 This part is for screen readers to tell that the action here that they are in, 
 01:10 this will actually expand or collapse the navigation, 
 01:14 so sr-only is for screen readers, 
-01:17 for the people with like low visibility or blind folks things like that, 
+01:16 for the people with like low visibility or blind folks, things like that, 
 01:20 so you can help them out by putting things about your navigation up here, 
 01:24 it all starts with the class navbar and this is what it actually looks like, 
 01:28 the thing that we are seeing here in HTML, this is it up here, 
-01:31 with these little dropdowns, and so on. 
-01:35  So it's navbar and it has this light color because it's navbar default 
+01:30 with these little dropdowns, and so on. 
+01:33 So it's navbar and it has this light color, because it's navbar-default 
 01:38 and this brand over here, this is like your logo, right, your brand area,
-01:43 then we have the main set of links that are on the left, navbar left, 
-01:48 this is our form, all of these things this is navbar left, 
+01:43 then we have the main set of links that are on the left, navbar-left, 
+01:48 this is our form, all of these things this is navbar-left, 
 01:51 you can set an active item, so if we go back up here, you can see this one is active,
 01:57 so if you want to indicate which page they are on you just do that here, 
-02:00 and then we can come down here and see navbar right, 
+02:01 and then we can come down here and see navbar-right, 
 02:04 this might be like your login, logout, user picture
-02:09 if you have people sign into your account, stuff like that, 
-02:12 and then they have this little dropdown here, right, 
-02:15 so these are lot of unordered lists and list items and hyperlinks and so on. 
-02:18 Okay so let's see how this works on our page. 
+02:08 if you have people sign into your account, stuff like that, 
+02:11 and then they have this little dropdown here, right, 
+02:13 so these are lot of unordered lists and list items and hyperlinks and so on. 
+02:18 OK, so let's see how this works on our page. 
 02:21 So, here I have copied into nav that HTML, just the standalone HTML file, 
-02:26 everything we need, let's start by looking at the head, 
-02:29 we are including Bootstrap, 337 happens to be the current one and like I said, 
-02:32 we are including the Bootstrap js file which depends upon jQuery 
+02:26 everything we need, let's start by looking at the "head", 
+02:28 we are including Bootstrap, 3.3.7 happens to be the current one and like I said, 
+02:32 we are including the bootstrap.js file which depends upon jQuery 
 02:38 so we are including both those here. 
 02:40 Then we have the nav, remember nav is an HTML5 element
-02:44 and it tells the browsers and search engines this is the navigation for the site,
+02:44 and it tells the browsers and search engines "this is the navigation for the site",
 02:49 that's really important because if you do searches 
 02:52 you'll see that this navigation can actually drive what shows up on Google. 
-02:56 For example, if I search for Python podcast 
+02:56 For example, if I search for "Python podcast", 
 03:02 you can see some of those items appear in here so for example music appears, 
 03:07 it's also really nice of them to pull out the latest episodes for us, that's pretty cool,
-03:16 again, if we search for Talk Python Training 
+03:16 again, if we search for "Talk Python Training" 
 03:19 and scroll below the ads, courses, about, login, pricing, 
 03:22 they kind of put together a navigation based on some of our nav items, 
 03:26 and some of the other things found on our page. 
@@ -58,23 +58,23 @@
 03:32 what was on the Bootstrap page and dropped it in here, 
 03:35 now I have this nav section, we'll pull that up in the end, 
 03:38 there is now some content here, this just puts some padding around the content. 
-03:42 So, I more or less copied this over and I changed just a few things, 
-03:49 I changed what was up here so we have albums and events, and the shop and so on. 
+03:44 So, I more or less copied this over and I changed just a few things, 
+03:49 I changed what was up here, so we have albums and events and the shop and so on. 
 03:53 And then our navbar right, we have a mistake apparently, 
 03:57 we have the account and logout assuming that we are logged in, right, 
-04:01 we would show something different conditionally with a tal,condition 
+04:01 we would show something different conditionally with a "tal:condition", 
 04:04 based on the account here. 
 04:06 The forms and the more complicated drop downs are not here, 
 04:09 I wanted to keep it simple and of course, I put the Blue Yellow Rockets. 
 04:12 We'll have real links on all of these, normally, but just to keep it simple, 
 04:16 it's not really a part of a page yet 
 04:19 so I don't have any actual destinations for these hyperlinks. 
-04:23 So, let's see it in action, 
-04:25 alright, here we have our Blue Yellow Rockets, that's our brand, 
+04:22 So, let's see it in action, 
+04:24 alright, here we have our Blue / Yellow Rockets, that's our brand, 
 04:27 it's a little bit bigger, we have our albums, you can see the color changes a little bit,
-04:30 this is all the float left stuff, 
-04:34 here is the nav right, this is our account and logout, 
-04:38 and as I move it, you can see the right stuff sticks to the right and the others, doesn't. 
+04:30 this is all the float-left stuff, 
+04:34 here is the nav-right, this is our account and logout, 
+04:37 and as I move it, you can see the right stuff sticks to the right and the others, doesn't. 
 04:41 Now, that's great, except for let's see if it's responsive, 
 04:44 you'll see that it's somewhat responsive, 
 04:47 so yeah, this is not a fantastic user experience right there, 
@@ -83,33 +83,33 @@
 04:58 The problem is, there is like this intermediate stage 
 05:01 where you have too much navigation, right, 
 05:04 like right here where this just goes all wanky. 
-05:07 So, the other thin that we can bring in, are the responsive utilities, 
+05:07 So, the other thing that we can bring in are the responsive utilities, 
 05:12 and this doesn't have just to do with navigation, 
 05:14 it just happens to be something you typically will need to use 
 05:17 if you have a rich navigation on top; 
 05:21 so over here in the CSS category, we have responsive utilities,
 05:25 now check this out, we can come over here 
-05:29 and we can dynamically show via visible, or hide via hidden various elements on our page.
+05:27 and we can dynamically show via "visible", or hide via "hidden" various elements on our page.
 05:35 And notice, these each apply to one screen size, 
 05:38 so if I want something that's hidden anything below 992 pixels
-05:44 I am going to have to put both of these classes on it, okay? 
+05:44 I am going to have to put both of these classes on it, OK? 
 05:47 So, let's see how we can apply that to fix our navigational problem. 
-05:51 So over here it looks like if I could get this one to go away 
-05:56 and medium size this would be okay,
+05:52 So over here it looks like if I could get this one to go away 
+05:56 and medium size this would be OK,
 05:59 and then if I could get 4 and 3 to go away when it's little smaller, 
-06:02 I could probably fix this, let's try. 
-06:07 In addition to having this nav, we go over here and say you know what, 
+06:04 I could probably fix this, let's try. 
+06:07 In addition to having this nav, we go over here and say "you know what, 
 06:10 I am going to add a class, the class is going to be 
-06:13 hidden on medium and hidden on small. 
-06:19 Let's go up here, I think this one just needs small.
-06:24 So what you want to d is you want to pick it doesn't have to be the last three, 
+06:13 hidden-md and hidden on small." 
+06:19 Let's go up here, I think this one just needs "small".
+06:24 So what you want to d is you want to pick, it doesn't have to be the last three, 
 06:27 you just want to pick, if you are going to give up a one or two navigational items, 
 06:31 which ones will that be, right, if you don't want this behavior 
 06:36 which I contend you strongly do not want this behavior, 
 06:39 we are going to have to give up something on smaller screens, 
 06:41 so let's say 3, 4 and 5 happen to be the things that are nice to have, 
-06:46 maybe they also appear on the footer or there is other ways, to get there. 
-06:50 So notice now I refreshed it, we're on a medium size screen, 
+06:46 maybe they also appear on the footer or there is other ways to get there. 
+06:50 So notice now I refreshed it, we're on a medium-size screen, 
 06:54 this link 3, 4 and 5 are hidden, if I pull it out just a little bit, 
 06:58 3 and 4 should reappear in just a moment, there they are, 
 07:03 3 and 4 reappear, and on a bigger screen realize I have a pretty small resolution 
@@ -117,14 +117,14 @@
 07:12 so on full resolution, it wouldn't feel so cramped, 
 07:16 but let's make it a little bigger and then after we get pass medium 
 07:19 you will see 5 should reappear, there we go. There is 5. 
-07:25 Okay, so we can make it go in, and probably we're a little aggressive on number 5 
+07:25 OK, so we can make it go in, and probably we're a little aggressive on number 5 
 07:31 but you can see that the navigation collapses just in a perfectly smooth way 
 07:37 and over here, everything is working great. 
-07:40 Recall earlier, by the way, it's worth pointing out 
-07:43 that they have the same thing uphere in Bootstrap 
-07:45 and I said they need to do something to fix their navigation. 
-07:48 Maybe we could teach this Bootstrap guys something huh? How about that. 
-07:51 Alright, so over here we have this perfect 'hamburger menu' 
-07:54 and then on larger screens it grows dynamically. 
-07:57 This is a very nice way to use this responsive utilities 
-08:01 to easily opt in to showing more or less content based on the screen size.  
+07:39 Recall earlier, by the way, it's worth pointing out 
+07:42 that they have the same thing uphere in Bootstrap 
+07:44 and I said they need to do something to fix their navigation. 
+07:47 Maybe we could teach this Bootstrap guys something huh? How about that. 
+07:50 Alright, so over here we have this perfect "hamburger menu" 
+07:53 and then on larger screens it grows dynamically. 
+07:56 This is a very nice way to use this responsive utilities 
+08:00 to easily opt in to showing more or less content, based on the screen size. 

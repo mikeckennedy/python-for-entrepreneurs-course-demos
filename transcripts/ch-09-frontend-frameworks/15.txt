@@ -3,18 +3,18 @@
 00:11 So we've seen that those forms on the left can easily be transformed 
 00:15 to the forms on the right, using just a couple of CSS statements 
 00:20 and some Bootstrap CSS classes. 
-00:23 Remember, we've added form control to the inputs and text areas, 
+00:23 Remember, we've added form-control to the inputs and text areas, 
 00:27 button to the button, 
 00:30 and we added a little margin to input some text areas. 
-00:33 Let's look at the code. Here you can see we have out inputs, 
-00:37 we've added the place holders so we don't have to deal with 
-00:41 having a title or a label and the important thing is we've added form control. 
-00:44 This makes the input display or layout in what's called block style 
+00:33 Let's look at the code. Here you can see we have our inputs, 
+00:37 we've added the placeholders so we don't have to deal with 
+00:40 having a title or a label and the important thing is we've added form-control. 
+00:44 This makes the input display or layout in what's called block style, 
 00:48 that means each input is on its own new line, 
-00:51 that's why we don't need a br or some sort of line break,
+00:51 that's why we don't need a "br" or some sort of line break,
 00:54 but it also makes them wide and sort of full screen 
 00:57 as we talked about to look best on mobile devices and small screens. 
 01:01 So we threw this input and text areas style to say let's set the max width to 350 
-01:05 and we also thought they were a little cramped so let's put a margin on it. 
-01:09 And that's how we got that really nice looking form 
+01:05 and we also thought they were a little cramped, so let's put a margin on it. 
+01:09 And that's how we got that really nice-looking form 
 01:12 out of basically raw HTML with Bootstrap.

@@ -11,7 +11,7 @@
 00:47 Remember, here we are setting it to trace that's one of the most verbose things 
 00:51 you can do and because we said push to application 
 00:54 that means this stream handler is available from anywhere in the entire process. 
-01:00 Okay, next, we said if we do have a filename, instead of creating a stream handler, 
+01:00 OK, next, we said if we do have a filename, instead of creating a stream handler, 
 01:06 we are going to go to timed rotating file handler. 
 01:11 So every day we get a new file, and after a few month 
 01:14 you can clean out the really old files, keep the last month, two months, 

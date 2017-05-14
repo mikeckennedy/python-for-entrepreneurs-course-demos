@@ -11,7 +11,7 @@
 00:35 don't set up your own email server, here is the third time, 
 00:38 don't set up your own email server, 
 00:41 I'll show you a service that is amazing for this kind of stuff. 
-00:44 Okay, so I own the domain talkpython.fm and I want to add email to it. 
+00:44 OK, so I own the domain talkpython.fm and I want to add email to it. 
 00:49 There is a great service called po box, pobox.com 
 00:53 and you can come over to po box and you can for 35 dollars a year 
 00:58 set up custom email routing, rules, spam filters, 

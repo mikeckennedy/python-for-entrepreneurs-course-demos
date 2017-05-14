@@ -5,7 +5,7 @@
 00:11 just to show that sending emails is working and then we want to come back 
 00:14 and we want to look it away to send very nice beautiful emails
 00:17 like I showed you in the beginning of this chapter. 
-00:20 Okay, so we are going to come here, we want to go email service,
+00:20 OK, so we are going to come here, we want to go email service,
 00:23 and let PyCharm import that, thank you PyCharm 
 00:27 and we want to call send welcome email, 
 00:31 and we are going to need to say who we are sending it to, 
@@ -17,13 +17,13 @@
 00:50 so what we are going to do is we are going to come up with the HTML body, 
 00:54 and it's just going to be standard HTML. 
 00:57 So let's do something like this. 
-01:06 Okay so here is a pretty cheesy HTML email that we are going to use, 
+01:06 OK so here is a pretty cheesy HTML email that we are going to use, 
 01:13 and let's just make this one, let's make this one strong 
 01:16 so you can see some of the markdown stuff happening. 
 01:19 We are going to send this email and the way we are going to do it
 01:22 is we are just now going to call emails service right, any email service, 
 01:26 we want to call that basic send mail and we have to give the to address, 
-01:31 which is email, subject is going to be welcome to blue yellow rockets, 
+01:31 which is email, subject is going to be welcome to Blue / Yellow rockets, 
 01:37 and the body is just going to be this HTML body here. 
 01:41 Right, that's all we got to do. 
 01:43 Now we are going to get much more advanced about constructing interesting stuff, 
@@ -43,11 +43,11 @@
 02:43 Store the cookie auth, so here we are going to sign in, 
 02:46 and we are going to send our welcome email, 
 02:48 and let's just go over here and put this not in dev mode. 
-02:52 Okay, I've actually set it to be not in dev mode,
+02:52 OK, I've actually set it to be not in dev mode,
 02:55 what I have in my real apps over here is, I'll print this out, 
 02:59 so let's go and do it here we'll say print 
 03:04 running in such and such mode we'll say dev, 
-03:10 dev mode, else try again, okay so now you can see 
+03:10 dev mode, else try again, OK so now you can see 
 03:18 we are running a producted mode, because I changed that, 
 03:22 let's register one more time, 
 03:26 plus blue yellow to and back here for the sending,

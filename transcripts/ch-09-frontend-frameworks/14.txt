@@ -1,58 +1,56 @@
 00:01 Here we have a standard input form and the goal of this is 
 00:04 going to be able to create a blog post. 
-00:07 We are not going to write the server side stuff,
-00:09 we are just going to talk about the Bootstrap components for now. 
-00:12 So, here we have a form, we have the method that we can post it back, 
+00:06 We are not going to write the server-side stuff,
+00:08 we are just going to talk about the Bootstrap components for now. 
+00:11 So, here we have a form, we have the method that we can post it back, 
 00:14 we've already talked about this in the second web development section. 
-00:18 But, over here we've got this input and it just, we are using place holders,
+00:18 But, over here we've got this input and it just, we are using placeholders,
 00:23 this is kind of a nice touch and we've got this text area 
-00:26 where you type out the content of your post, and then a nice button. 
+00:25 where you type out the content of your post, and then a nice button. 
 00:29 So let's see how this looks. 
-00:31 Well, that's probably even worse than you would expect it, 
+00:31 Well, that's probably even worse than you would expected, 
 00:34 there is various pieces there like all flowing together,
-00:37 I guess we could throw in some brs onto them, right, some new lines, 
+00:37 I guess we could throw in some "brs" onto them, right, some new lines, 
 00:41 so let me just make a quick copy we'll kind of have a before and after; 
 00:46 we could put some line breaks here. 
 00:49 So now we've got it looking like this. 
-00:52 So what we are going to do is let me put a few line breaks in here
-00:57 and give it some room, 
-00:59 we are going to make this top one look nice. 
-01:02 So it turns out brs are not the answer even though they do slightly improve the situation. 
+00:52 So what we are going to do is, let me put a few line breaks in here
+00:58 and give it some room, we are going to make this top one look nice. 
+01:00 So it turns out "brs" are not the answer, even though they do slightly improve the situation. 
 01:05 We are going to go and use the Bootstrap forms,
-01:08 so to do that, we are going to set the class here 
-01:11 and the class is going to be form- control, like so,
+01:07 so to do that, we are going to set the class here 
+01:10 and the class is going to be form-control, like so,
 01:14 now if we just set this and this on each one of them, 
 01:18 and the button is not going to be a form control, but remember from he button section, 
 01:22 it's going to be a btn and we could decide what style we want, 
-01:26 we'll say primary for now.
-01:29 Now if we just refresh this, it's not perfect but it is much better looking 
-01:36 and see the little nice glow that comes on, 
-01:39 you can see that there is some padding 
-01:42 this stuff is not stuck right up against the edges there, 
+01:26 we'll say "primary" for now.
+01:29 Now if we just refresh this, it's not perfect but it is much better-looking 
+01:36 and see the little nice glow that comes on, you can see that there is some padding 
+01:40 this stuff is not stuck right up against the edges there, 
 01:45 I think some of the styling is coming from Bootstrap already 
 01:48 so having it I guess we can look really quick, so if I put like- there you go, 
 01:54 this is how it looks with no Bootstrap at all, right?
-01:58 Okay. But there are a few things that we need to work on first of all, 
+01:58 OK. But there are a few things that we need to work on. First of all, 
 02:02 that these things are touching each other, that is not super good 
 02:06 so let's go fix that and normally, this would be in the CSS file
 02:09 but just because these are standalone HTML pieces, 
 02:12 let me just stick it in here so let's say any time we have a form, 
 02:15 and the form has an input, or the form has a text area
-02:20 or it has a button, any of those things. 
-02:24 What we want to do is we want to say margin is 5 pixels. 
+02:21 or it has a button, any of those things. 
+02:24 What we want to do is we want to say "margin is 5 pixels". 
 02:29 All the way around, so let's see how that looks. 
-02:32 Here we go, that looks pretty good, you know what, 
+02:31 There you go, that looks pretty good, you know what, 
 02:33 we've got a lot of room on this screen, let's go for 10, go for broke, 
 02:36 there that looks like a decent amount of space around each one of these, 
 02:39 and notice we are styling the bottom as well, 
 02:42 let's actually make it only a target this one, 
-02:45 we'll say the id here is new, so we can come up and say form#new 
-02:50 to apply only to the form with the new id. 
-02:53 Here we go, I can see the bottom one is still like it was, 
-02:56 perfect so we've got these three things here, 
+02:44 we'll say the id here is "new", so we can come up and say form#new 
+02:50 to apply only to the form with the "new" id. 
+02:53 There you go, I can see the bottom one is still like it was. 
+02:56 Perfect! So we've got these three things here, 
 02:58 and this is looking pretty good but notice, 
 03:00 it's fully across the screen, now, it depends on the container it's in 
-03:04 or whether or not this is okay, if you look at Bootstrap, 
+03:04 or whether or not this is OK, if you look at Bootstrap, 
 03:07 if you go over here on Bootstrap and you check out the CSS thing, 
 03:11 it says look, they have decided to be mobile first, 
 03:15 and so, and you can kind of tell like this is more or less built to look good 
@@ -60,17 +58,17 @@
 03:23 so let's apply a little bit of a style here 
 03:26 to make this a little more manageable for desktop apps. 
 03:30 So again, we'll come down here and we want to style 
-03:33 let's say those two things but separately, we don't want to include the button, 
+03:33 let's say those two things, but separately. We don't want to include the button, 
 03:37 we could say width, and just fix it but let's be a little more careful 
-03:41 and say max width 350 px, it's probably good, let's see how that looks, 
+03:41 and say max-width: 350px, it's probably good, let's see how that looks, 
 03:47 here we go, so now regardless of the size, 
-03:49 except for the reason I use max is if it gets to small 
+03:49 except for the reason I use "max" is if it gets too small 
 03:53 we still want it to not start to scroll, right, 
 03:56 so we just want to limit how much it grows. 
-03:59 So, to me, this is a pretty good looking form already, 
+03:58 So, to me, this is a pretty good-looking form already, 
 04:01 and all we've done is use the inputs 
 04:05 and stuff in the text area is form-control plus a little CSS 
 04:11 to set the padding and to set the max width 
-04:14 and for the buttons we've just used btn, btn- primary 
-04:18 or you could use danger, you could use whatever, success, 
-04:21 whatever color you want down there you can go with that. 
+04:14 and for the buttons we've just used "btn", "btn-primary" 
+04:18 or you could use "danger", you could use whatever, "success", 
+04:21 whatever color you want down there, you can go with that. 

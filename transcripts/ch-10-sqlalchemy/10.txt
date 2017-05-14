@@ -1,31 +1,31 @@
 00:02 Now that we have our schema created, let's actually query some data. 
-00:05 Now, in order to either insert update, delete, or query data, we're going to 
-00:11 need to talk about this db session factory and the unit of work pattern. 
-00:15 The way SQLAlchemy works we've already said is 
+00:05 Now, in order to either insert, update, delete, or query data, we're going to 
+00:11 need to talk about this DbSessionFactory and the unit of work pattern. 
+00:15 The way SQLAlchemy works, we've already said, is 
 00:18 to use the unit of work design pattern 
 00:21 and what that means is you begin a unit of work, you make a bunch of 
 00:23 changes, inserts, updates and deletes and then when you are finally done 
 00:28 you can either abandon the unit of work or you can commit it. 
 00:32 The final step here is to actually create the thing that manages this unit of work for us.
-00:37 Okay, so if we look up here, we are going to need to import SQLAlchemy.orm 
-00:44 and down here we're going to create I am going to say
-00:47 sqlalchmey.orm.session maker kind of like declarative base
-00:51 this factory method here is going to create this thing that will itself be 
+00:37 OK, so if we look up here, we are going to need to import sqlalchemy.orm 
+00:44 and down here we're going to create, I am going to say
+00:47 sqlalchmey.orm.sessionmaker, kind of like declarative base.
+00:51 This factory method here is going to create this thing that will itself be 
 00:56 a callable function that can make these unit of works. 
-01:00 So we are going to need to store it somewhere I'll call it a session factory 
-01:05 and so we are just going to do store it here, we'll say db session factory 
-01:11 the name maybe gives away, let's just call it factor, right, 
+01:00 So we are going to need to store it somewhere, I'll call it a session_factory 
+01:05 and so we are just going to do store it here, we'll say DbSessionFactory.session_factory 
+01:15 the name maybe gives away, let's just call it factory, right, 
 01:18 because there is too many sessions in here.
-01:21 And let's go ahead and set that to be none initially, 
+01:21 And let's go ahead and set that to be None initially, 
 01:24 and then we'll do a test, remember, I said we want one and only one engine 
 01:27 so we are going to bind the engine here, 
-01:30 so this tells the factory basically how to tie itself back to the  database 
-01:36 and the base classes and all this things. 
+01:30 so this tells the factory basically how to tie itself back to the database 
+01:36 and the base classes and all these things. 
 01:39 And again, we don't want to actually run this method over and over, 
 01:43 we run it two times, we get two engines, that would be bad, 
 01:46 so let's do a little test here, so we'll say if this is already created, 
-01:50 we're just going to return there is nothing to do, okay and in this sense, 
-01:53 we're only going to be able to ever create one of these engines per connection,
-01:58 in this case we're just doing one so here we go, this is going to be great. 
+01:50 we're just going to return, there is nothing to do, OK? And in this sense, 
+01:55 we're only going to be able to ever create one of these engines per connection,
+01:58 in this case we're just doing one, so here we go, this is going to be great. 
 02:02 Now we're ready to basically call this like this, so we want a session, 
 02:07 we'll not do this here really but this is what we're going to do.
