@@ -3,37 +3,37 @@
 00:09 At the very foundation we have the plain Python DBAPI. 
 00:14 This is the way you access databases built into Python itself,
 00:17 and if you work in this level, you are not using SQLAlchemy 
-00:20 and you are doing dialect specific queries against a particular database type, 
-00:26 so if you are talking to Oracle 
-00:28 you are using Oracle flavored SQL to talk directly to it 
+00:20 and you are doing dialect-specific queries against a particular database type, 
+00:26 so if you are talking to Oracle, 
+00:28 you are using Oracle-flavored SQL to talk directly to it 
 00:32 and you are getting back just rows of columns that you are working with. 
 00:35 But if we bring SQLAlchemy into the picture, we can look at the core layer, 
 00:39 and that's the lowest level that we can work at in SQLAlchemy. 
 00:42 In here we have this really important concept called the engine.
 00:46 It's the engine's job to abstract the way of the database 
-00:50 and take care of many things for us. 
-00:52 The engine handles connection pulling and so you'll see that it's super important 
-00:56 that there is one and only one instance of an engine per connection string. 
+00:49 and take care of many things for us. 
+00:51 The engine handles connection pulling and so you'll see that it's super important 
+00:55 that there is one and only one instance of an engine per connection string. 
 01:00 if you are talking to multiple databases, you might have multiple engines for that purpose,
 01:05 but for any given database you want to access withing your process, 
 01:08 you are going to have a singleton instance of this engine. 
 01:11 In its job it's to manage connection pulling and speak
-01:14 the dialect of the underlying database. 
+01:13 the dialect of the underlying database. 
 01:16 So you give it a connection string and part of that connection string 
-01:20 is the type of database it's going to be talking to, is this SQL server, 
-01:23 is this Oracle, is this MySQL, and that will adjust the dialect correctly, 
+01:19 is the type of database it's going to be talking to, is this SQL server, 
+01:23 is this Oracle, is this MySQL? And that will adjust the dialect correctly, 
 01:28 and use underlying drivers to talk to that particular database. 
-01:32 We also have a SQL expression language which is a little specific to the core, 
+01:32 We also have a SQL expression language, which is a little specific to the core, 
 01:36 and we can define schemas and types here. 
 01:39 Where we probably want to spend most of our time is at the ORM. 
 01:43 This is where you map classes, and objects into databases.
-01:47 I think the best way most efficient way as programmers for us to work, 
-01:51 not necessarily performance efficient but mentally cognitively load efficient is 
-01:56 to work in objects and hierarchies not in normalized database schemas, right. 
+01:47 I think the best way, most efficient way as programmers for us to work, 
+01:51 not necessarily performance-efficient but mentally-cognitively-load-efficient is 
+01:56 to work in objects and hierarchies, not in normalized database schemas, right. 
 02:03 So this lets us come up with classes, decorate them or define them 
 02:06 in a way that SQLAlchemy knows how to translate them to and from the database, 
 02:10 and then we just work in these classes, we create the classes 
 02:13 and we can insert them into the database. 
 02:16 When we do queries, it's with regards to the fields or attributes of these classes and so on.
 02:21 This gives you just a sense of the various pieces 
-02:25 that play when we are working with SQLAlchemy. 
+02:24 at play when we are working with SQLAlchemy. 

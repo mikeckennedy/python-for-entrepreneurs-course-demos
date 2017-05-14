@@ -1,16 +1,16 @@
 00:02 Are you ready to write some code? Start talking to the database? 
 00:05 I am. This is going to be awesome. 
-00:07 Over the next couple of videos we are going to build up 
-00:10 everything that we need to talk to a real proper database. 
+00:07 Over the next couple of videos, we are going to build up 
+00:09 everything that we need to talk to a real proper database. 
 00:14 So I've created this folder called data, and you can see it's empty, 
-00:17 it just has this placeholder text in it right now.
+00:16 it just has this placeholder.txt in it right now.
 00:20 We are going to put all of our files and classes here to work with SQLAlchemy, 
 00:24 so just like controllers are where we do all of our processing of our request, 
 00:29 data is going to be our database stuff, and templates of course are view. 
 00:34 So just one more component or thing here on the left. 
 00:38 We are going to start with a few core pieces of SQLAlchemy 
-00:41 and then we are going to model the albums, and the tracks, in our website. 
-00:44 We'll begin with this thing I am going to call model base. 
+00:41 and then we are going to model the albums and the tracks in our website. 
+00:44 We'll begin with this thing I am going to call modelbase. 
 00:47 Now, a lot of times people put everything all into one file here 
 00:50 and there are some advantages to that, 
 00:53 but I personally find it much easier as your application grows larger and larger 
@@ -20,11 +20,11 @@
 01:08 you don't want those all in one huge file, 
 01:10 you want those broken into little pieces, so you can do a quick little find 
 01:13 in PyCharm or wherever, and just jump into just the right file. 
-01:16 So we are going to start with this thing called a model base, 
+01:16 So we are going to start with this thing called a modelbase, 
 01:19 we are going to come over here now, and as you can imagine,
-01:22 we are going to start by importing SQLAlchemy. 
-01:25 This thing that we are going to work with, 
-01:27 this thing called the declarative base is actually a base class that is shared 
+01:20 we are going to start by importing SQLAlchemy. 
+01:24 This thing that we are going to work with, 
+01:26 this thing called the declarative base, is actually a base class that is shared 
 01:30 across all of the classes we want to map into our database, 
 01:34 so basically by virtue of our classes we create deriving from this class
 01:38 we are about to state here, this will teach SQLAlchemy
@@ -33,9 +33,9 @@
 01:47 and then there is a declarative section. 
 01:50 And I'll just shorten it like that so you don't have to type the whole thing out, 
 01:53 Now, what we are going to do is we are going to create this class 
-01:55 and I am going to call it SQLAlchemy base, you can name it whatever you want, 
+01:55 and I am going to call it SqlAlchemyBase, you can name it whatever you want, 
 01:59 you probably should uppercase the first name because it is technically a class, 
-02:03 we are going to go here to this and we are going to say declarative base; 
+02:03 we are going to go here to this and we are going to say declarative_base; 
 02:07 now declarative base will actually create a type here like so, 
 02:12 this is all we have to do in order to create this base class. 
 02:15 And, like I said, you can mix it together with other files, 
@@ -45,7 +45,7 @@
 02:25 Now, PyCharm is warning us that if we look over here, in our requirements, 
 02:31 we are not listing SQLAlchemy as a requirement, 
 02:35 so that means when we move to a new server, 
-02:37 when we say Python setup py develop or install, 
+02:37 when we say "python setup.py develop or install", 
 02:40 it's not going to include SQLAlchemy and that is going to be bad, 
 02:43 so we can let PyCharm just add this requirement for us. 
 02:47 The only thing that is mildly unfortunate, 
@@ -59,65 +59,64 @@
 03:16 The core data is much smaller and I kind of want to keep those things separate.
 03:20 So you would have two separate bases, one for the core of a database 
 03:24 and one for the classes that map into the analytics database. 
-03:28 But our world here we are  just going to have one for the app we're building. 
+03:28 But our world here, we are just going to have one for the app we're building. 
 03:32 Now the next thing we are going to need to work with is this class 
 03:35 whose job is to basically manage the connection, create the classes, 
 03:40 and the database if we need to, as well as process the unit of work stuff 
 03:45 that we are going to get to later, we are not going to talk about it yet 
 03:47 but let me go ahead and get the foundations of that class ready, 
-03:51 so we are going to add another type here, called db session factor 
-03:55 and this is going to be a class and actually let me rename that to like so, 
+03:51 so we are going to add another type here, called DbSessionFactory 
+03:55 and this is going to be a class and actually let me rename that to... like so, 
 04:00 OK, so we've got our class here, and for a moment, 
 04:05 we are just going to do a pass, now this class is going to need 
 04:08 to work with that model base that we are using above, 
-04:11 so let's do this, let's say from, remember, we can't just say model base,
-04:15 this is the package so we've got to say the full package name, 
+04:11 so let's do this, let's say "from", remember, we can't just say "modelbase",
+04:15 this is the package, so we've got to say the full package name, 
 04:18 we will do a relative import, 
 04:23 so we are going to use our SQLAlchemy base here in just a moment. 
 04:27 We are going to need to pass data over to this class at startup, 
 04:31 so for example, if we put into our configuration file, 
-04:33 the name and the location or even type of database we want to talk to 
-04:37 we want to pass that information on 
+04:33 the name and the location or even type of database we want to talk to, 
+04:37 we want to pass that information on, 
 04:39 so I am going to create a function that can be called during app startup. 
-04:44 We'll just call this global init or something like that 
-04:48 and it's going to take a single parameter which is going to be the db file. 
-04:52 Now we are going to use SQL lite for this web application, 
-04:56 that is just an embedded database that is file based, 
-05:00 it's not a proper server like My SQL or SQL Server, something like this, 
+04:44 We'll just call this "global init" or something like that 
+04:48 and it's going to take a single parameter, which is going to be the db_file. 
+04:52 Now we are going to use SQLite for this web application, 
+04:56 that is just an embedded database that is file-based, 
+05:00 it's not a proper server, like MySql or SQL Server, something like this, 
 05:04 all we have to provide to create the database, 
-05:08 the connection if you will is the db file,
+05:08 the connection if you will, is the db file.
 05:10 OK, so maybe we want to throw in some error handling 
-05:14 and we could say something like this if not db file raise exception 
-05:18 you must specify database. 
+05:13 and we could say something like this: "if not db_file: raise Exception ('you must specify database')". 
 05:22 OK, so after we get started we got some validated data here,
 05:27 the first thing we need to do to talk to the database is to create a connection string.
 05:32 SQLAlchemy connection strings are like regular connection strings 
 05:36 but they have a little extra scheme in the front and that scheme tells SQLAlchemy 
 05:41 what dialect, what database it's going to be talking to, 
-05:44 instead of just having the file like you would in SQLlite 
-05:49 we'll say sqlite : /// and then the database file. 
-05:53 So this bit right here, tells SQLAlchemy, we are using SQL lite 
-05:57 and then the remaining part is actually passed along directly to SQL lite itself, 
+05:43 instead of just having the file like you would in SQLite 
+05:47 we'll say "sqlite:///" and then the database file. 
+05:53 So this bit right here tells SQLAlchemy we are using SQLite 
+05:57 and then the remaining part is actually passed along directly to SQLite itself, 
 06:03 so this is the connection string. 
-06:06 And you saw int he architecture section that the thing that manages
+06:05 And you saw in the architecture section that the thing that manages
 06:09 connections and dialects is the thing called an engine. 
 06:12 So we are going to create an engine here 
-06:15 and for that we are going to need to get a hold of SQLAlchemy. 
+06:14 and for that we are going to need to get a hold of SQLAlchemy. 
 06:17 So again, we'll import SQLAlchemy and down here we'll just say 
-06:21 SQLAlchemy create engine.
+06:21 sqlalchemy.create_engine().
 06:24 One of the things that bugs me a little bit about SQLAlchmey is 
 06:27 so many of the functions and methods take *args,  **kwargs 
-06:33 and it's like what the heck is suppose to go in here, right. 
-06:36 well, there are many things we can put in here 
-06:38 one of them is the connection string like so. 
-06:41 remember this is one and only one instance of this engine 
+06:33 and it's like what the heck is supposed to go in here?
+06:36 Right. Well, there are many things we can put in here, 
+06:38 one of them is the connection string, like so. 
+06:41 Remember this is one and only one instance of this engine 
 06:44 we are supposed to create per database connection string. 
-06:48 you might think that we would need to store it or something, 
+06:48 You might think that we would need to store it or something, 
 06:50 but actually the things we are going to store have implicit references to the engine, 
 06:54 so we are not going to have to do something special to hang on to it 
-06:58 but realize this is the one and only time we are creating this engine here. 
-07:01 Alright so the engine is ready to roll, the next thing we need to work with 
-07:04 is the SQLAlchemy base connected to the engine, 
+06:57 but realize this is the one and only time we are creating this engine here. 
+07:01 Alright, so the engine is ready to roll, the next thing we need to work with 
+07:04 is the SQLAlchemy base connect it to the engine, 
 07:09 so that it knows how to create the tables and things like that, 
 07:12 But let's put this part on pause for a moment and let's go create some classes 
 07:16 so we actually have something to put or model in our database. 

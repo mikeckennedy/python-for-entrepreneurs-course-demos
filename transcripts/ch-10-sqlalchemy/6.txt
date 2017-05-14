@@ -1,10 +1,10 @@
-00:01 OK so how do we create the schema in the database from this. 
+00:01 OK, so how do we create the schema in the database from this? 
 00:04 Well, what we are going to do is we are going to back to this session factory 
 00:07 and pick up with this engine here, 
-00:09 so it turns out that our SQLAlchemy base class here has a metadata, property.
-00:15 Now, metadata does not appear in PyCharm's intellisense or autocomplete 
+00:09 so it turns out that our SqlAlchemyBase class here has a metadata property.
+00:15 Now, metadata does not appear in PyCharm's IntelliSense or autocomplete, 
 00:20 which is kind of annoying but just run with it. 
-00:23 Now on here we have a method called create all.
+00:22 Now on here we have a method called create_all.
 00:25 and this will go to the database and actually inspect it and if it sees that
 00:30 there is a type it's supposed to manage
 00:32  that's not in there or there is no database at all, 
@@ -12,111 +12,111 @@
 00:38 be careful, once this is done, it will not update existing tables 
 00:43 it only creates new ones if they are missing. 
 00:46 So, there are limitations here but it is quite cool how this gets you started. 
-00:49 if I run it like this it's going to crash. 
-00:52 And the reason it is going to crash is it says OK I know enough 
+00:49 If I run it like this, it's going to crash. 
+00:52 And the reason it is going to crash is it says "OK I know enough 
 00:57 about the models to create the database, 
 00:59 but I don't even know what database you want me to create 
-01:02 so how am I supposed to do that; the way we do that is we pass the engine. 
+01:02 so how am I supposed to do that?". The way we do that is we pass the engine. 
 01:05 And this is one of the places where this implicit relationship gets wired together, 
 01:11 so we don't actually have to track the engine, 
 01:13 there is one other pace that we are going to get to later. 
 01:16 Let's go ahead and call this, we can come down here 
 01:19 and we'll do it in our init, we have init routing, 
-01:22 let's go and add one more init db let's say, we're going to give it the config. 
+01:21 let's go and add one more init_db let's say, we're going to give it the config. 
 01:27 So for now we are just going to put it like this,
 01:31 so we are going to come over here and we want to call this
-01:34 global init with the db file, well, what is the db file? 
+01:34 global_init with the db_file, well, what is the db_file? 
 01:37 Let's make a place where this data is going to go, 
 01:40 OK, so we'll make another folder, remember, 
-01:43 maybe a full featured server this would just, 
+01:43 maybe a full-featured server this would just... 
 01:46 you wouldn't have to have a file location, you would just say go to that server, 
-01:50 that server is configured to store data, but in sqlite there is, 
+01:50 that server is configured to store data, but in SQLite there is, 
 01:53 it's only file base, right, so we have to put it somewhere,
 01:56 so I am going to say right here in this db folder we want to put it there, 
-02:00 so how do we get that, well, a few simple tricks. 
-02:03 We can come over here and we can import OS 
+02:00 so how do we get that? Well, a few simple tricks. 
+02:03 We can come over here and we can "import OS", 
 02:06 which gives us access to the path functionality. 
-02:09 So we can go and say I would like to know where this folder is, right,
-02:12 that's out package, so we can say top folder let's say 
+02:09 So we can go and say "I would like to know where this folder is", right,
+02:12 that's out package, so we can say top_folder let's say, 
 02:16 use OS.path.dirname, so dirname is just the directory stripping the filename, 
 02:24 and what we can give it here is 
-02:27 let's do a quick import up here import blue yellow app, right,
-02:31 so it seems like why would you do that but there is a dunder file right here 
+02:27 let's do a quick import up here... "import blue_yellow_app", right,
+02:31 so it seems like why would you do that but there is a __file__ right here 
 02:36 and this is going to be the top level, this is going to basically be this folder, 
 02:40 technically it should be like this, right, but when we grab the dirname 
-02:44 it's going to be this folder, and then, we can have rel folder 
-02:49 so if we know that we're in here, it's going to be db so it's going to be db 
+02:44 it's going to be this folder, and then, we can have rel_folder, 
+02:49 so if we know that we're in here, it's going to be db, so it's going to be db 
 02:54 and then what do we want to call it, well, we just make up a name, 
 02:57 let's call it blue_yellow.sqlite, extension doesn't matter, 
 03:03 it could be called anything but it will help us understand oh that's our sqlite file 
-03:06 and then finally we'll say dbfile is os.path.join, top folder, relative folder. 
-03:16 so this should be pass along here now, 
-03:18 this information here that's coming along here, 
+03:06 and then finally we'll say db_file is os.path.join(top_folder, rel_folder). 
+03:16 so this should be passed along here now, 
+03:18 this information here, that's coming along here, 
 03:22 we probably want to pass that in the configuration file, 
 03:26 maybe we want something different for production, 
 03:28 so from the production.ini to development.ini. 
 03:32 So we'll come back and deal with that in a little bit, but,
 03:35 let's go and run this and see what happens, we are going to call, 
-03:38 when we say run it's going to fire main, it's going to call init db, 
+03:38 when we say run it's going to fire main, it's going to call init_db, 
 03:41 over here that's going to look through the relative location where our stuff is 
-03:46 and create a path over here at this folder it's going to go call global init, 
-03:50 global init is going to create a connection string based on that file, 
-03:54 let's go and do a little print, connecting to db with con string 
-04:03 and we'll just put it here, like, so, so we should see this come out,
-04:09 and then we are going to call engine.create all 
-04:12 and over here, that should actually because there is no database file, 
+03:46 and create a path over here at this folder it's going to go call global_init, 
+03:50 global_init is going to create a connection string based on that file, 
+03:54 let's go and do a little print, "connecting to db with conn string" 
+04:03 and we'll just put it here, like so. So we should see this come out,
+04:09 and then we are going to call engine.create_all 
+04:12 and over here, that should actually, because there is no database file, 
 04:15 that should actually create the database itself, well, 
-04:18 actually this creates the engine, create all is going to do that. 
+04:18 actually this creates the engine, create_all is going to do that. 
 04:21 Now, this is not going to be as cool as you think,
 04:24 the first thought would be of course if this works, like, as you can dream, 
-04:29 right, this would create a database which has albums and tracks, 
-04:33 don't think that's going to work, if something could have triggered it 
+04:29 right, this would create a database which has albums and tracks. 
+04:33 Don't think that's going to work, if something could have triggered it 
 04:37 in a way that will make this work, 
 04:39 but let's try I am pretty sure it's going to be an empty database 
 04:41 and then I'll explain why. 
-04:43 So it runs, it didn't crash, that's cool, here is the sqlite path it looks like, 
-04:47 I have a pretty long path here don't I, but blue_yellow db, blue_yellow sqlite, 
-04:52 that's cool and if we go over here and refresh it, we have a blue_yellow sqlite.
-04:59 Now this database is empty, how do I know, 
-05:02 because that right there is a white file not a database looking thing. 
+04:43 So it runs, it didn't crash, that's cool, here is the SQLite path it looks like, 
+04:47 I have a pretty long path here don't I, but blue_yellow/db, blue_yellow.sqlite, 
+04:52 that's cool and if we go over here and refresh it, we have a blue_yellow.sqlite.
+04:59 Now this database is empty. How do I know?
+05:02 Because that right there is a white file, not a database-looking thing. 
 05:07 Why is this empty? Let me prove to you it's empty, 
 05:09 you can actually look at this databases in PyCharm, 
-05:12 so we come over here, you may need to download the drivers for the serial sqlite, 
+05:12 so we come over here, you may need to download the drivers for the serial SQLite, 
 05:19 since I think I've already done it, let's see we'll find out. 
 05:22 Put it over here, no, it doesn't take because it doesn't know what it is, 
-05:27 come over here, notice, nod river files found, so let me install that really quick. 
-05:31 OK, browse to the blue yellow sqlite and it figured it all out, 
+05:27 come over here, notice, "no driver files found", so let me install that really quick. 
+05:31 OK, browse to the blue_yellow.sqlite and it figured it all out, 
 05:36 so if I hit OK, you should see it will pull it up, however, it's empty, nothing happens. 
-05:41 Like I said, there is no data in this database, so what's going on here, 
-05:45 let's put this away, we'll come back to it when it's got something to look at. 
+05:41 Like I said, there is no data in this database, so what's going on here? 
+05:45 Let's put this away, we'll come back to it when it's got something to look at. 
 05:49 This is a little bit tricky, it's easy to solve 
-05:51 but you just got to get used to it when we run this line here, 
-05:54 the SQLAlchemy base basically says I would like to, 
+05:51 but you just got to get used to it. When we run this line here, 
+05:54 the SqlAlchemyBase basically says "I would like to...
 05:57 I will look to all the classes that derive from me, 
-06:01 and then I will map them to the database, 
-06:04 but in Python, the way that a class gets defined or created it's not a compiled time, 
+06:01 and then I will map them to the database" 
+06:04 But in Python, the way that a class gets defined or created it's not a compiled time, 
 06:09 it's when the module gets loaded. 
 06:12 Well nowhere in the application, prior to this code being run, 
 06:16 were tracks or albums loaded into memory. 
 06:21 A lot of times what I find I have to do in order to get this to work just right, 
-06:25 if I am not cramming it all into one file which I do not recommend 
+06:25 if I am not cramming it all into one file, which I do not recommend, 
 06:28 is to just do an empty sort of import up here, 
-06:31 so blue yellow data album and then do one for track.
-06:35 Now PyCharm is going to whine because we are not doing anything with these 
-06:38 and you can just tell it you can say disable this for this particular statement, 
+06:31 so blue_yellow.data.album and then do one for track.
+06:35 Now PyCharm is going to whine, because we are not doing anything with these 
+06:38 and you can just tell it you can say "disable this for this particular statement, 
 06:43 like, don't complain to me about this, I know what I am doing, 
-06:46 I have to do this or it's not working, so look at the color, of this icon here. 
+06:46 I have to do this or it's not working", so look at the color of this icon here. 
 06:50 Now if I run it again, because those tables don't exist, 
 06:53 it should discover these and create them. 
 06:56 Let's find out. OK, so it didn't work, why didn't it work, it says you know,
 07:00 there is no way we are going to be able to do queries against this album, 
 07:03 let's go and fix that first. 
 07:05 So over here, we've got our id, and it's easy to make it a primary key, 
-07:08 you just say primary key is true, that's not enough really for it 
+07:08 you just say primary_key=True, that's not enough really for it 
 07:12 to be like auto-generating or have a default value, or anything like that, 
-07:15 so we can also say auto-increment is also true. 
+07:15 so we can also say autoincrement=True. 
 07:18 And so this creates the simplest possible primary key for a database 
-07:22 and auto-incrementing integer, that work great, 
+07:22 and auto-incrementing integer, that works great, 
 07:26 similarly this one is going to fail, if we don't give it the same features. 
 07:30 Let's try again. 
 07:32 Ooo, now it's running, let's go over here and do a synchronize again, 
@@ -125,12 +125,12 @@
 07:43 and there is a little chevron that opens up and look at that, 
 07:46 we have data or not really data, we have schema in our database, right, 
 07:51 we have albums and we have tracks, how cool is that? 
-07:55 so what do we do- we came over here, I'll put this away for a moment, 
+07:55 so what did we do? We came over here, I'll put this away for a moment, 
 07:59 we come over here and we after creating our classes 
 08:03 and as you saw required to give them a primary key,
-08:05 we basically just called SQLAlchemy base.metadata.createall 
+08:05 we basically just called SqlAlchemyBase.metadata.create_all 
 08:12 and because these had been imported, 
-08:15 the sqlaclhemy base now knows about our album, 
+08:15 the SqlAlchemyBase now knows about our album, 
 08:18 now knows about track and it was able to create
 08:20 the schema because it didn't exist, 
 08:22 it knew it needed it and we asked it to do so. 

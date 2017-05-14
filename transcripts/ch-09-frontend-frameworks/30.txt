@@ -1,24 +1,24 @@
 00:01 Now before we call it quits with our design, there is one thing I'd like to talk about 
 00:04 and it will give you some really powerful techniques 
-00:07 for working with these page templates these Chameleon templates in general, 
+00:07 for working with these page templates, these Chameleon templates in general, 
 00:10 and it also will make maintaining these pages that are like this, easier. 
 00:15 So, there is a few things that are a little bit weird here, 
 00:19 let's suppose I want to add a new element, like a new horizontal slice 
 00:22 which I opened up the right page to do that 
 00:25 so let's suppose after the news we'll just have another one. 
 00:33 and I just have this say like right here, another row, 
-00:38 something like that, another slice. 
+00:39 something like that, another slice. 
 00:42 Now, watch what is going to happen, when I hit refresh, 
-00:45 notice, oh this one is next to what kind is it, this is an a, well, 
-00:52 it's next to an a above it so it needs to be a b. 
-00:55 OK, but now below it, below it there is a b, darn it, 
-01:00 and now I need to switch that to an a. 
+00:45 notice, oh this one is next to what kind is it, this is an "a", well, 
+00:52 it's next to an a above it, so it needs to be a "b". 
+00:55 OK, but now below it, below it there is a "b", darn it, 
+01:00 and now I need to switch that to an "a". 
 01:03 Now if I run it again, you can see when I scroll down, 
-01:06 it's like whac-a- mole like as you reorder these things, 
+01:06 it's like Whac-A-Mole, like as you reorder these things, 
 01:09 as you interact with them, this is super annoying, like why should I have to do this, 
 01:12 and you don't have to do this, this is like the work a computer can do. 
-01:16 What we can do is we can actually tell our view hey, 
-01:19 I would like you to just manage this for me, so how do we do that? 
+01:16 What we can do is we can actually tell our view:
+01:19 Hey, I would like you to just manage this for me, so how do we do that?" 
 01:23 Probably, you could also do some kind of cool alternating CSS jQuery thing, 
 01:27 but we are just going to do it straight up in Python. 
 01:30 So remember our view, or our controller is over here. 
@@ -28,35 +28,35 @@
 01:48 and it's a persistent object that is stuck for the entire rendering of that page. 
 01:53 So let's go over here and say that this is going to have some kind of field. 
 01:58 So we can come down here and say this has some kind of field, 
-02:01 alternate mode or something like that, equals false, or some to that effect. 
-02:08 we are going to write a function, get alternate row style, 
-02:18 I'll just call it alternate row style, OK, what we are going to do is 
-02:22 we want to say self.alternate_mode= not self. alternate_mode
-02:29 when it has cycled those, it will say if self. alternate_mode 
+02:01 alternate_mode or something like that, equals False, or some to that effect. 
+02:09 we are going to write a function, get_alternate_row_style, 
+02:18 I'll just call it alternate_row_style, OK, what we are going to do is 
+02:22 we want to say self.alternate_mode = not self.alternate_mode
+02:29 when it has cycled those, it will say if self.alternate_mode 
 02:35 oh my gosh, sorry my C was coming through there for a second, 
-02:38 not alternate, so we want to toggle these and now we are going to say 
-02:43 if it's true we are going to return alternate, like this 
-02:47 and else we are going to return empty. 
+02:38 "not" alternate, so we want to toggle these and now we are going to say 
+02:43 if it's True, we are going to return alternate, like this 
+02:47 and else: we are going to return empty. 
 02:50 So this is going to be like the modifier type of thing going on here. 
 02:54 So remember we need view, view this home controller and we want to take this, 
 02:58 so let's go over here, and let's just change this 
-03:01 like forget all this content section a b stuff. 
-03:07 now, just so I don't completely wrack the style, 
-03:09 the style is based on this content section a, content section b, from the theme, 
-03:15 so just for expediency sake I would probably do clean up on this later, 
+03:01 like forget all this content section a / b stuff. 
+03:07 now, just so I don't completely wreck the style, 
+03:09 the style is based on this content section "a", content section "b" from the theme, 
+03:15 so just for expediency sake, I would probably do clean up on this later, 
 03:19 let's just add an additional class that we'll use to alternate the color. 
 03:23 And like anything, we want to generate text in our view, would you like this, 
-03:28 say view.alternate row style like that. 
+03:28 say view.alternate_row_style like that. 
 03:32 Or, maybe the terminology is weird, but it's going to return 
-03:37 what it's going to do is toggle its mode from true to false, true to false, true to false, 
-03:42 and let's actually-
-03:49 let's do it like this so it starts with whatever its real value is not the opposite. 
-03:53 And it's going to return this which we can sue as CSS, class. 
-03:56 OK, so up here, we are going to say get me the alternate style 
+03:37 what it's going to do is toggle its mode from True to False, True to False, True to False, 
+03:42 and let's actually...
+03:49 let's do it like this, so it starts with whatever its real value is, not the opposite. 
+03:53 And it's going to return this, which we can use as CSS class. 
+03:56 OK, so up here, we are going to say "get me the alternate style" 
 04:01 and we are just going to put this on every slice, 
 04:03 and when we duplicate one of these slices, like who cares, 
-04:05 I am going to say a, and it looks like this. 
-04:08 I want to say a and it looks like this, like I said, we do some cleanup, 
+04:05 I am going to say "a", and it looks like this. 
+04:08 I want to say "a" and it looks like this, like I said, we do some cleanup, 
 04:11 we'll probably just have content section, and content section plus the style alternate. 
 04:17 That was the one that was messed up, we had two of them, 
 04:20 and now it's going to get a in this again, 
@@ -65,16 +65,16 @@
 04:30 It's not going to look so good, because we are not styling it, 
 04:33 based on this but if we were to go look at the page source, 
 04:37 I think it would be good, now let's just go back and style that here, 
-04:41 so we had something about b, right, where did it go, 
-04:44 I'll put it over here, great this could actually go into home
+04:41 so we had something about "b", right, where did it go? 
+04:44 I'll put it over here, great. This could actually go into home,
 04:47 which we're going to do in a second, but we want to just look at alternate, OK.
-04:52 So what we have for b, this is what we are going to have now, 
+04:52 So what we have for "b", this is what we are going to have now, 
 04:55 and we probably want to make this a little bit stronger, we'll do like this, 
 05:01 if we have the content section a that also has an alternate, 
 05:05 we are going to do this thing to it, and this only applies to the home page, 
 05:10 so let's put it over in the home page section. 
 05:13 OK, let's see where we are, we are not there yet, alright, 
-05:18 and of course, this style that I was looking for, is down here, here we go, 
+05:18 and of course, this style that I was looking for is down here, here we go, 
 05:25 I think actually that's all I need, let's find out. 
 05:29 No, almost, this one is 222. 
 05:34 Here we go, look at this, so now we've got 
@@ -85,20 +85,20 @@
 05:55 It's really cool. So over here, like you know what, we don't want this anymore,
 05:58 forget this section. It's out, now if I run it, look the site works 
 06:02 from the design perspective perfectly. 
-06:05 And so we can do just little bits of I don't know what you think of them, 
+06:05 And so we can do just little bits of... I don't know what you think of them, 
 06:10 as like HTML helpers, that our templates can use, 
-06:13 Chameleon templates can reach back and go hey,
-06:16 I know you can keep track of state because you are an object, 
-06:19 you are an instance of an object, and you can run Python code, 
+06:13 Chameleon templates can reach back and go "hey,
+06:16 I know you can keep track of state, because you are an object, 
+06:19 you are an instance of an object, and you can run Python code", 
 06:21 so just do a little bit of like more advanced computing 
 06:24 then it's easy to do in a set of Chameleon templates. 
 06:28 So this technique is usable for alternating rows like I said, 
 06:31 there is like some CSS and other things you can do, 
 06:34 some JavaScript to pull that off, that's not a huge deal, 
-06:37 but this technique is much more broadly applicable than just for alternating rows 
+06:37 but this technique is much more broadly applicable than just for alternating rows, 
 06:43 so I wanted to make sure to show it to you, and of course, 
 06:46 this is how it works on my website. 
 06:48 That's it for Bootstrap, go out there and build something awesome. 
-06:52 With Bootstrap plus Bootstrap themes you are basically a good designer. 
+06:52 With Bootstrap plus Bootstrap themes, you are basically a good designer. 
 06:58 So go out there and brace your creative side 
 07:01 and make something that will impress you and all your customers. 

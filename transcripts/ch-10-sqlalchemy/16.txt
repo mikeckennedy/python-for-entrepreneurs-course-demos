@@ -1,28 +1,78 @@
-00:01 Finally let's talk about inserting data.
-00:03 We've seen the unit of work in action with this session 
-00:07 and inserting objects are no different. 
-00:09 So again, we are going to use a session factory to create a session 
-00:11 and then to insert new objects, we just create new instances 
-00:14 at the types that map to those particular tables. 
-00:17 So if we want to create a new album, we just create a new album, 
-00:20 and we are going to set some properties. 
-00:22 In the example you saw me write the code, 
-00:24 I actually use name value keyword arguments to set the name 
-00:28 and the year in the album initializer. 
-00:31 But, you could just as well create them and sat them like this in an operative way 
-00:35 and that would be totally fine. 
-00:37 This is not yet putting the database, we are still going to have to add it to the session, 
-00:40 we also want to associate some tracks with this album, 
-00:42 so we are going to create a new track. 
-00:45 And we can actually go bidirectionally with these relationships, 
-00:48 so we could either set the album on the track that maps 
-00:52 from track to album to the one here, or like you saw in the other example, 
-00:56 we could go to album.tracks and add this track.
-00:59 Either direction has the same effect. 
-01:02 We can set the details of the track and name, title, whatever. 
-01:05 Create another track again, set it up with this album
-01:09 so now this album has two tracks, 
-01:11 if we tell the session I'd like to add this album to the database, 
-01:14 we are almost ready there, so everything is queued up, the unit of work is queued up 
-01:19 and then we have to commit it and now all those three items 
-01:22 and their relationships will be created in the database. 
+00:02 Let's take this unit of work concept and apply it to querying data.
+00:06 Now, here we have a function that give it an email and a password
+00:10 we would like to finally account for the user.
+00:13 We never ever want to store the straight plain text password,
+00:16 we always want to hash this in some interesting way
+00:19 so we are going to go and do that and then we want to do a query
+00:21 to find the account where the email is what they specified in the hashed password
+00:25 is the result of hashing what they typed in.
+00:28 So the way this works is we are going to do the unit of work
+00:31 when I create the session and then we are going to do a query
+00:33 so on a session, you say .query and you give it a base type to start from,
+00:38 in this case we want to start form account
+00:41 and then we can do filtering and ordering and so on
+00:44 so we are going to say session.query of account
+00:47 and then we want to filter account.email is email.
+00:49 Here you can see we use the column names of the type
+00:52 in the boolean expression for the filtering.
+00:56 So we are going to account.email==email
+00:59 and you can use and and all the standard Python boolean operators.
+01:04 And we are going to say account.password_hash==hash
+01:07 and the fact that we have two filters means an and,
+01:10 there also is an and function you can use
+01:12 but just piling on multiple filters will result in an and query.
+01:16 This we know should only return one item, one or zero,
+01:19 depending on whether they got the password right, instead of getting a set back,
+01:24 we can get just one of them and immediately pull that back from database
+01:27 and execute it by saying one.
+01:29 So this will give us an account, if we see what goes to the database,
+01:32 like if we have echo=true turned on we would see something like this,
+01:35 select * from account, where email = ?
+01:38 and account.password_hash = ?
+01:41 and then it passes those as parameters,
+01:44 the email address is whatever is typed there, that's mine
+01:46 and the password is ABC, it's unlikely that's a hash but whatever, you get the idea.
+01:53 Not only does this map to sql in a really nice way it uses parameters
+01:57 so you can avoid sql injection attacks entirely.
+02:00 Now if we want a setback, we want more than one thing,
+02:03 we can call all, so here we're doing another filter
+02:07 and this is not an exact match but this is like some albums,
+02:10 these are all the albums published or created since year 2001
+02:15 and if we do the .all to it, this is actually going to snapshot it into a list,
+02:20 so we don't have to worry about staying connected to the database.
+02:24 When we run this, you can see we will get this select * from album
+02:29 where album.year is greater than again parameters.
+02:31 Exactly the sql you would expect.
+02:34 Now, you saw it technically lays out the names,
+02:37 of the columns that are specified in the album class, but the effect is the same.
+02:44 So those are all pretty straightforward, greater than, equal to and so on,
+02:48 here is a few more that are not obvious but are really cool,
+02:50 so 'equals', fine, 'not equals', we do this not equal like this,
+02:55 if we want to say it's 'like', so like substring search,
+02:59 you can say 'in' sql something is like a sting say percent, that's like a wildcard,
+03:04 you can do the same thing on the colons, remember the colons have extra function
+03:09 so we can say .like on the name, if you want to do a subset match,
+03:13 so I'd like to find it all the elements or all the rows
+03:17 where the name is either Ed Wendy or Jack,
+03:20 you can do this in similarly with a tilde you can do 'not in',
+03:23 'null' is none, 'and' is either multiple filters or there is an and operator
+03:28 and there is no way to combine those for 'or', so you've got to us the 'or' function.
+03:32 They use or_ because or itself is a keyword.
+03:36 These are the common ones I think there is more,
+03:38 still you can see in the link below you can get the full exhaustive list
+03:42 but this will take you very far.
+03:45 We also saw that we can order our results,
+03:47 so for getting back a set non an individual item it might make sense to order them,
+03:51 so what we did is we said order by album.year that's an integer,
+03:55 but we said descending because these columns can like I said, fill multiple roles
+04:00 they can both be the value when you have the instance,
+04:04 but on this type, they enhance these queries.
+04:06 so here we can do an order by descending,
+04:08 and we run that you get select * from album order by album.year descending.
+04:13 Finally, if we want to update the data, we are going to do the queries
+04:18 just like you've seen we're going to pull them back from the database,
+04:21 like again, here is our one album, get the album by id,
+04:24 but what we are going to do is we are just going to take the object in memory
+04:28 and make some changes, like here if we want to change the price
+04:30 we'll just say album.price=new_price and as long as we commit the unit of work,
+04:37 this is going to do an update back to the database.

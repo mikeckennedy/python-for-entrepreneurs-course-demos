@@ -1,26 +1,26 @@
 00:02 The final thing that I want to talk about are indexes and uniqueness. 
-00:06 so uniqueness constraints are super important, 
+00:06 So uniqueness constraints are super important, 
 00:09 for example, when we get to modelling users in the database, 
 00:12 we want to make sure that their username and their email are unique, 
 00:15 so that people don't create two accounts with the same name or same email, 
-00:21 that would be bad.
-00:23 We are not going to worry about uniqueness, just this moment,
-00:24 although I guess we could with like track names and so on, 
+00:20 that would be bad.
+00:22 We are not going to worry about uniqueness just this moment,
+00:24 although I guess we could, with like track names and so on, 
 00:27 but let's look at this one. 
-00:30 Display order is very likely something we want to query by in fact, 
-00:33 in this relationship we said we even want to do an order by here, 
+00:29 Display order is very likely something we want to query by, in fact, 
+00:33 in this relationship we said we even want to do an order_by here, 
 00:37 the best way to make databases fly, to make your site super fast 
 00:41 is to make sure you have indexes on anything that you are going to do a query by. 
 00:47 If you want to find all the albums, for a given year, 
 00:50 you are going to want an index on this. 
 00:53 If you want to order by price, you are going to want an index on this. 
 00:56 Now, there is a trade off, the more indexes you add the slower inserts become
-00:59 but how often do you insert an album versus how often do you query it-
-01:03 thousands of times more reads than writes, 
+00:59 but how often do you insert an album versus how often do you query it?
+01:03 Thousands of times more reads than writes, 
 01:06 hopefully if you have a lot of traffic, right. 
 01:08 What we can do is let's suppose we want to query by year 
-01:11 so we can come over here and we can say index, and this is all it takes, 
-01:14 index= true boom, we're done. 
+01:11 so we can come over here and we can say "index", and this is all it takes, 
+01:14 index=True, boom, we're done. 
 01:17 So now we'll be able to query and order by index, 
 01:21 maybe we want to do that by price as well, order by, 
 01:25 let's go over here and display order we definitely want this to be like that, 
@@ -31,21 +31,21 @@
 01:43 that is going to enforce things like uniqueness here. 
 01:47 maybe we also want to make sure that our albums have a name 
 01:50 and so the name is required, it's not nullable,
-01:53 so you can say nullable=false and that will tell SQLAlchemy 
+01:53 so you can say nullable=False and that will tell SQLAlchemy 
 01:56 to put a basically to construct the tables to say guess what, 
-02:00 nullable=false, alright, again, just like we did last time,
-02:04 there is no data in here so let's just blow it away 
+02:00 nullable=False, alright, again, just like we did last time,
+02:04 there is no data in here, so let's just blow it away 
 02:07 and rerun this and we'll just recreate the data. 
 02:09 So we can look over here one final time, 
 02:12 and now you can see there is this vertical bars here
 02:15 that represent their indexes on these things, 
-02:17 there is the . to represent that it's non nullable,
+02:17 there is the dot (.) to represent that it's non-nullable,
 02:21 in fact you can even come over here and look at the table
 02:25 and you can see what does it look like, we could add new things here, 
-02:29 we could look at the primary keys the indexes, the foreign keys and so on. 
-02:33 If we open up name, you can see that not null is checked here. 
+02:29 we could look at the primary keys, the indexes, the foreign keys and so on. 
+02:33 If we open up name, you can see that "not null" is checked here. 
 02:38 Whereas by default, these things are nullable, 
-02:41 so if you don't say nullable=false they're nullable 
+02:41 so if you don't say "nullable=False", they're nullable 
 02:44 you might want to have that, keep that in mind. 
 02:47 So there you have it, we have albums, 
 02:49 we have tracks and I think they are modeled in a really decent real world way, 

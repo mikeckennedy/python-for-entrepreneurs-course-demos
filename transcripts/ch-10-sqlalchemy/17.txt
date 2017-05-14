@@ -1,10 +1,28 @@
-00:01 So those are the core elements of SQLAlchemy. 
-00:04 You'll see it in action as we go through the rest of the course,
-00:07 so you'll probably learn a few more things, but I think you know 
-00:10 the majority of the key elements that you need to build your application. 
-00:14 Now if you want to get the full story, the history how it's built, 
-00:17 why it was built and so on, from the creator of SQLAlchemy himself, 
-00:21 listen to this Talk Python episode number 5 with Mike Bayer 
-00:25 who created SQLAlchemy back in 2005 
-00:28 and he talks about how it's evolved over time, 
-00:31 from 2005 to I think this was recorded in 2015. 
+00:01 Finally let's talk about inserting data.
+00:03 We've seen the unit of work in action with this session
+00:07 and inserting objects are no different.
+00:09 So again, we are going to use a session factory to create a session
+00:11 and then to insert new objects, we just create new instances
+00:14 at the types that map to those particular tables.
+00:17 So if we want to create a new album, we just create a new album,
+00:20 and we are going to set some properties.
+00:22 In the example you saw me write the code,
+00:24 I actually use name value keyword arguments to set the name
+00:28 and the year in the album initializer.
+00:31 But, you could just as well create them and sat them like this in an operative way
+00:35 and that would be totally fine.
+00:37 This is not yet putting the database, we are still going to have to add it to the session,
+00:40 we also want to associate some tracks with this album,
+00:42 so we are going to create a new track.
+00:45 And we can actually go bidirectionally with these relationships,
+00:48 so we could either set the album on the track that maps
+00:52 from track to album to the one here, or like you saw in the other example,
+00:56 we could go to album.tracks and add this track.
+00:59 Either direction has the same effect.
+01:02 We can set the details of the track and name, title, whatever.
+01:05 Create another track again, set it up with this album
+01:09 so now this album has two tracks,
+01:11 if we tell the session I'd like to add this album to the database,
+01:14 we are almost ready there, so everything is queued up, the unit of work is queued up
+01:19 and then we have to commit it and now all those three items
+01:22 and their relationships will be created in the database.

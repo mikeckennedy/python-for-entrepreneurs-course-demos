@@ -1,26 +1,26 @@
-00:01 We finished the band members, and we hadn't added book us 
-00:04 because it's literally, basically just the same, 
-00:07 the final thing to do of course we want to delete all of those pieces, right, 
-00:10 this is all left over like that dog, that's not our dog, 
+00:01 We finished the band members, and we hadn't added "book us" 
+00:03 because it's literally, basically just the same, 
+00:07 the final thing to do, of course we want to delete all of those pieces, right? 
+00:10 This is all leftover, like that dog, that's not our dog, 
 00:14 so let's start deleting those, 
 00:19 and we'll go all the way down to here, 
 00:23 so let's make sure this is still hanging together, yeah, there is our parts, 
 00:26 everything is looking great, but notice this footer, this footer is kind of a funky, 
-00:30 I don't really love the footer so what I'd like to do is replace it with the different one, 
+00:30 I don't really love the footer, so what I'd like to do is replace it with the different one, 
 00:35 and we have an example of where we are going, we have like, 
-00:39 we're going towards this dark theme so I like this kind of dark part 
-00:42 and I plan on putting this site on the internet so if somebody actually comes across 
+00:39 we're going towards this dark theme, so I like this kind of dark part 
+00:42 and I plan on putting this site on the internet, so if somebody actually comes across 
 00:45 and he thinks that Blue / Yellow Rockets are a real band 
-00:48 and they want to like buy something obviously they can't 
-00:51 and so this is just going to basically say
-00:53 look, this site is actually a demo site for this course, 
-00:56 which you all are taking, so I want to put that as the footer. 
+00:48 and they want to like buy something, obviously they can't 
+00:50 and so this is just going to basically say
+00:52 look, this site is actually a demo site for this course, 
+00:55 which you all are taking, so I want to put that as the footer. 
 00:58 I'm going to go over here, and the footer is shared across all the pages 
 01:02 so it's in the layout, here is the footer that is already there, 
-01:05 this came from the theme let's drop it, it's using the HTML 5 footer tag which is great, 
-01:09 I use a new copy that I wrote, and we'll just talk about it real quick, 
-01:13 here, again using HTML 5, you can see it's using the grid layout, 
-01:17 and it has a few bits of padding and then here is our story Blue / Yellow Rockets, etc
+01:05 this came from the theme, let's drop it, it's using the HTML 5 footer tag, which is great, 
+01:09 I use a new copy that I wrote, and we'll just talk about it real quick. 
+01:13 Here again using HTML 5, you can see it's using the grid layout, 
+01:17 and it has a few bits of padding and then here is our story - Blue / Yellow Rockets, etc
 01:24 now, there is one thing that's really notable here, 
 01:27 and let's just see how this looks and then we'll talk about it. 
 01:30 Alright, so watch the footer, at the bottom, there we go,
@@ -29,26 +29,26 @@
 01:42 you can grab little bits if you need them. 
 01:45 So down here, let's just do it at the bottom, 
 01:47 here is a bunch of settings to set the width and the padding, 
-01:51 the line wrapping and the colors and all of that for all our footer elements, 
+01:50 the line wrapping and the colors and all of that for all our footer elements, 
 01:54 so let's just see what effect that has, hopefully a good effect, there we go, 
 01:58 that's at least what we're aiming for, you can decide whether you like it or not,
-02:02 I like these sort of fade to the background footers 
+02:02 I like these sort of fade to the background footers, 
 02:04 this doesn't really do that too much 
-02:07 with the white but when we switch the main content colors from black to white I think it will.
-02:11 Notice, these things right here, notice how these images they light up, 
+02:07 with the white but when we switch the main content colors from black to white, I think it will.
+02:11 Notice these things right here, notice how these images... they light up, 
 02:15 maybe you noticed before they were blue, now they are not blue, 
 02:20 so these are not actually images at all, like see this email, let's go find that email.
-02:25 Alright, so up here a little bit there is an email, 
+02:25 Alright, so up here a little bit there is an "email", 
 02:28 there is mail to contact to talkpython.fm and this is what appears to be the image, 
 02:34 in fact, this is awesome, this is Font Awesome, so Font Awesome,
-02:39 remember, we installed that up here in the bower components, 
+02:39 remember, we installed that up here in the bower_components, 
 02:43 it has fonts that act as images, and why is that important or cool? 
 02:50 Well, if you've got a normal image, the image has a color 
-02:54 and if you make the image a different size than it's meant to be, 
-02:57 it gets real grainy or fuzzy or weird patterns up here and things like that. 
+02:52 and if you make the image a different size than it's meant to be, 
+02:56 it gets real grainy or fuzzy or weird patterns up here and things like that. 
 03:01 With fonts, you can infinitely scale them and you can color them with CSS. 
 03:06 If you go over here and just search for Font Awesome, 
-03:10 you can see first thing that comes up fontawesome.io 
+03:10 you can see first thing that comes up: fontawesome.io 
 03:14 and they are actually running a kickstarter that is insanely successful, 
 03:17 like insanely successful, they are almost to a million dollars, unbelievable. 
 03:21 But, that’s not what we're here for, yeah, here you can see 924 thousand dollars,
@@ -56,15 +56,15 @@
 03:28 So we can come down here and I could say well, 
 03:32 I am looking for stuff to do with Facebook, and then there is all the icons, 
 03:36 like I could get any one of these, let's suppose Facebook square is what I want, 
-03:40 then, it says alright, this is cool all you've got to do is include that 
+03:40 then, it says "alright, this is cool all you've got to do is include that 
 03:44 plus the Font Awesome CSS and then you style it to be whatever color you want, 
-03:48 you want the Facebook blue, just set a CSS style for this thing, and it will be that color. 
+03:48 you want the Facebook blue, just set a CSS style for this thing, and it will be that color." 
 03:53 So I did that for all of the little social bits like for the email, here is one for GitHub,
 03:58 here is one for some video file, here is one for YouTube and so on, 
 04:03 so if you look at the bottom of our file here, you can see all of those little things, 
-04:07 the YouTube looks a little funky because it's so squished. 
+04:07 the YouTube looks a little funky, because it's so squished. 
 04:10 I really like this, I find this Font Awesome, little fonts or icons to be really helpful 
 04:14 because you can continue to style them, 
 04:17 you don't have to keep building new images,
-04:20 so make sure you look there first, 
-04:22 if you are looking for little icon like things for your site. 
+04:19 so make sure you look there first, 
+04:21 if you are looking for little icon-like things for your site. 
