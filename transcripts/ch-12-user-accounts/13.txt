@@ -1,30 +1,30 @@
 00:01 Let's come back and look at this cookie values
 00:04 that were working with this hash, and the hash is already better 
-00:07 than just having the user id but we can do a lot better, 
-00:09 so let me write a function to say given a user id I am going to get the hash 
+00:06 than just having the user id but we can do a lot better, 
+00:09 so let me write a function to say given a user id, I am going to get the hash 
 00:13 because I we've got to do it there, and down here we've got to do it again, 
-00:16 and we don't want to do this more than once, so I can hit control T to refactor, 
+00:16 and we don't want to do this more than once, so I can hit Ctrl+T to refactor, 
 00:20 extract the method, hide it from the importers, so I'll say double underscore, 
 00:24 so this will be hash hash text or something like that. 
-00:29 OK, and so this will be we'll just call this text as the input value here, 
+00:29 OK, and so this will be, we'll just call this text as the input value here, 
 00:33 so of course, we want to add some salt to this 
 00:38 so that you can't just take the user name or the user id rather 
 00:42 and then hash it and see what comes out. 
-00:46 So this salt we're not going to share with anybody we'll just say 
-00:49 we want this to be something simple for now, saltiness for the text, 
-00:55 OK so what we are going to hash is actually that string which is going to generate 
+00:44 So, this salt, we're not going to share with anybody, we'll just say 
+00:47 "we want this to be something simple for now", saltiness for the text, 
+00:55 OK, so what we are going to hash is actually that string which is going to generate 
 01:01 an absolutely different hash than just the user id 
 01:04 which we're putting in the front part of this thing, OK. 
 01:07 And so, we are going to change the text and we are going to send it back. 
-01:10 Now this is actually going to be a nice little test because we already have a cookie 
+01:09 Now this is actually going to be a nice little test, because we already have a cookie 
 01:13 with this incorrect value here, so it should let us sort of do this detect, 
-01:17 we should print a warning hash mismatch and it will treat us as if we're not logged in. 
+01:17 we should print a "Warning: Hash mismatch" and it will treat us as if we're not logged in. 
 01:21 OK, we also need to in order for that to work, call the right function here, 
 01:26 so here is where we do the check, 
 01:30 here is where we do the original generation, let's see what we get. 
 01:36 Now if I come over here, the only page right now checking is account 
-01:39 so hit this and it says you must sign in even though it's authenticated, 
-01:43 why, because the hash did not match it was invalid, 
+01:39 so hit this and it says you must sign in even though it's authenticated. 
+01:43 Why? Because the hash did not match, it was invalid, 
 01:46 but of course, if I do sign in, now we should have this new one,
 01:51 we've signed in, now that's replace that cookie, everything is good. 
 01:54 So the last thing we need to do is allow a user to sign out,

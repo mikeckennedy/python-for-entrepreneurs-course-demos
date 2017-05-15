@@ -1,43 +1,43 @@
 00:02 Now throughput this class I've tried to give you a look inside the real businesses 
 00:05 the real code that runs in production, 
-00:08 for Talk Python the podcast or the training website, and things like that. 
+00:08 for Talk Python the podcast or the Training website, and things like that. 
 00:12 So, let's take a quick look at how account management works in Talk Python training. 
 00:17 And I come over and I say I would like to register, 
 00:20 I am going to fill out the username and email, like I showed you in the example, 
 00:23 I prefer to just drop this username and just have email but whatever. 
-00:27 Username, email,, password and confirm password we'll hit go 
+00:27 Username, email, password and confirm password, we'll hit go 
 00:30 and then of course password is required 
-00:33 but it would take us through the registration process, 
-00:35 you've all been through this process, so let's go over here and notice, 
-00:38 we have a get post redirect pattern again. 
+00:32 but it would take us through the registration process, 
+00:34 you've all been through this process, so let's go over here and notice, 
+00:38 we have a GET / POST / Redirect pattern again. 
 00:41 We are doing basic stuff, we are actually checking to see 
-00:44 if the user is logged in we'll get to this part later, 
+00:44 if the user is logged in, we'll get to this part later, 
 00:47 when we talk about how to manage this inner app, 
 00:49 but if they are logged in then don't let them try 
-00:51 to log in again just take them to their account. 
+00:51 to log in again, just take them to their account. 
 00:54 This is unlikely, but maybe they type training.talkpython.fm in their browser 
 00:59 and it remembers the registration page first or whatever. 
 01:03 OK so that is basic and then, here is the thing that actually does the work, 
-01:07 we are going to have our view model just like I showed you,
-01:10 it's going to verify things like hey the password is required, don't mess around, 
+01:07 we have our view model just like I showed you,
+01:10 it's going to verify things like "hey, the password is required, don't mess around", 
 01:13 and we never touch the database for this.
 01:15 Then we are going to come down and we do a few more checks, 
-01:18 because you can log in both by username or email we do checks for each, 
-01:24 if you try to create an account with that username it says 
-01:25 hey this is already taken, do you need the login instead? 
-01:27 Hey that email is taken, do you need to login instead 
-01:30 and then we have an account create username, email, password 
-01:35 and we're explicitly setting whether or not you are an admin to be false, 
-01:38 and then we are going to talk about this later about 
-01:41 storing your authentication your login and a cookie, we send an welcome email, 
+01:18 because you can log in both by username or email, we do checks for each, 
+01:24 if you try to create an account with that username it says: 
+01:25 "Hey this is already taken, do you need the login instead?" 
+01:27 "Hey that email is taken, do you need to login instead?" 
+01:30 And then we have an account_create... username, email, password 
+01:35 and we're explicitly setting whether or not you are an admin to be False, 
+01:38 and then, we are going to talk about this later, about 
+01:41 storing your authentication your, login and a cookie, we send a "welcome" email, 
 01:46 we add you to the MailChimp mailing list that we have talked about; 
-01:51 we have the ability to indicate like hey go log in 
-01:54 and when you're done go back to this other place like if I send an email 
-01:57 to somebody and say hey thanks for buying this course, 
-02:00 go log in and then you'll have access to it, well, that log, 
+01:51 we have the ability to indicate like "hey, go log in 
+01:54 and when you're done go back to this other place", like if I send an email 
+01:56 to somebody and say "hey, thanks for buying this course, 
+02:00 go log in and then you'll have access to it", well, that log, 
 02:03 that final redirect might be where I want to send them is the course 
 02:06 not to their account page but if nothing, no one is there then we get this, 
-02:09 now if we look at the account service here is our create account 
+02:09 now if we look at the AccountService, here is our create_account, 
 02:13 so we have more login and whatnot, we'll talk about that later, 
 02:17 we have a little bit stronger checking here to make sure that the data is valid, 
 02:21 and I have this little context manager that I use for managing database sessions, 

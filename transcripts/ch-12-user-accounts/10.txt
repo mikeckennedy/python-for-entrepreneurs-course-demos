@@ -14,4 +14,4 @@
 00:48 from the database automatically. 
 00:50 So we're going to spend the next couple of videos, 
 00:53 a demo and some concepts talking about how to make this happen
-00:56 in our web app, in Pyramid. You'll see it's quite easy.
+00:55 in our web app, in Pyramid. You'll see it's quite easy.

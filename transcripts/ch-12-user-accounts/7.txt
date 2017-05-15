@@ -1,32 +1,32 @@
-00:02 Let's review creating strong, hashes and following the best practices
+00:02 Let's review creating strong hashes and following the best practices
 00:06 around storing passwords with passlib. 
 00:10 So remember, it starts by importing some kind of handler, 
 00:13 some kind of hash, from passlib, so passlib.handlers 
-00:17 and here we're getting the sha2 like you saw you can use becrypt 
+00:17 and here we're getting the sha2, like you saw you can use becrypt 
 00:20 you can use a number of recommended hashes there. 
 00:24 So we're using sha512 nice and large, hard to guess and so on.
-00:27 To create an encrypted password we are going to just call encrypt, 
-00:32 remember, this is one way encryption, this is hashing,
+00:28 To create an encrypted password, we are going to just call "encrypt", 
+00:32 remember, this is one-way encryption, this is hashing,
 00:35 we can never get this password back but given the plain text again 
 00:39 we can validate if running the same operation on it 
 00:42 actually generates the same hash.
 00:44 This not only applies the hash as you saw 
-00:46 but it uses a 150 thousand password hash folds so the way it works is 
+00:46 but it uses a 150 thousand password hash folds, so the way it works is 
 00:51 we take the password and we want to hand it off to the hashing algorithm, 
 00:55 of course, we are going to mix in some salt, 
-00:57 so that no matter what the word is the actual thing that gets hashed 
-01:00 is not that word it's that word plus some other random characters
+00:57 so that no matter what the word is, the actual thing that gets hashed 
+01:00 is not that word it's that word, plus some other random characters
 01:04 that we again, mix in when we validate it. 
 01:06 So we are going to take this and we are going to do it again, and again, and again,
-01:11 and eventually, what pops out is a much stronger password, 
+01:10 and eventually, what pops out is a much stronger password, 
 01:14 not this long, but in fact this great long thing as we saw right here 
 01:18 and it even has a little bit information about the number of times 
-01:21 so it's folded in the algorithm so that when we later want to validate 
+01:21 so it's folded in the algorithm, so that when we later want to validate 
 01:24 it we know how to do that. This creates the hash. 
 01:27 Now, if we were given this hash, and a plain text password, 
 01:30 we would want to answer the question is well, if I were to hash it again, 
 01:35 is this valid, is this actually generated from the same plain text input 
-01:39 as the original hash was, we can do that with verify
+01:39 as the original hash was? We can do that with "verify",
 01:44 so we say sha512_crypt.verify 
 01:47 and then we give it the secret or plain text password 
 01:50 and then the hash which we stored in the database. 
