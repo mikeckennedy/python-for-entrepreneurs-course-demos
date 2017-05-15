@@ -1,7 +1,7 @@
 00:02 Now what fun would it be to have a mailing list if you never mail it? 
 00:05 So, the way you get started doing an email campaign, 
-00:08 is you go to the create campaign section, 
-00:10 I typically pick the regular campaign which gives you a nice beautiful HTML designer,
+00:08 is you go to the "create campaign" section, 
+00:10 I typically pick the regular campaign, which gives you a nice beautiful HTML designer,
 00:14 you pick the list, if you did the segmentation thing I  talked about,
 00:17 you pick the various segments you want it to apply to, 
 00:20 there is all sorts of rules about dates and groups, 
@@ -20,6 +20,6 @@
 01:03 be sure to proofread it, you can send it to a friend and have them proofread it as well
 01:06 through MailChimp before you actually send it out 
 01:09 you can either send it right away or schedule it.
-01:11 This is your time, you've got these people interested in what you are doing, 
+01:11 This is your time to shine, you've got these people interested in what you are doing, 
 01:14 you set up the infrastructure to communicate with them, 
 01:17 and now it's time to share your message. 

@@ -1,23 +1,23 @@
 00:02 There are a number of companies out there 
-00:05 that will basically be the backend for your mailing list, 
-00:08 but the first thing I want to say is don't build this yourself, 
-00:11 it's easy to think well, I know how to send email out of Python 
-00:16 or out of my web app or somehow, I could setup my own server and I can do this, 
+00:04 that will basically be the backend for your mailing list. 
+00:08 But the first thing I want to say is: Don't build this yourself, 
+00:11 it's easy to think "well, I know how to send email out of Python 
+00:16 or out of my web app or somehow, I could setup my own server and I can do this", 
 00:21 it's not going to turn out as well as you think, 
 00:24 there is way more going on in these email systems than you think. 
-00:28 So first of all, setting up just a valid email server with the right mx records, 
+00:28 So first of all, setting up just a valid email server with the right MX records, 
 00:33 making sure it doesn't get onto a spam list, blacklist, 
 00:38 and it just starts not showing up, these are all really hard, 
 00:41 I've had friends who setup email servers 
-00:44 and their mail just go straight to my gmail spam,
+00:43 and their mail just go straight to my Gmail spam,
 00:46 because there is something wrong with their email setup, 
 00:49 it's just not trusted, right, so that is not super easy, 
 00:52 the spam rules and laws around the world are complex 
 00:56 and you'd rather have somebody help you with that, right, 
-00:59 like for example there is the US can spam act, 
+00:59 like for example there is the US CAN-SPAM Act, 
 01:02 there is a lot of rules around that, but that's just United States, 
 01:06 there is many countries right, maybe they have their own spam rules, 
-01:09 there's subscribe and more importantly unsubscribe 
+01:09 there's subscribe and more importantly unsubscribe, 
 01:12 when people become uninterested,
 01:14 functionality you have to implement this, 
 01:18 segmentation and by segmentation I mean breaking your users into various stages, 
@@ -26,18 +26,18 @@
 01:32 but they haven't actually bought anything, people who are paying customers, 
 01:35 people who are repeat customers, you can use these mail systems 
 01:38 to categorize your contacts, your email list into these different groups 
-01:42 so if you want to have a special followup just for second time buyers, 
+01:42 so if you want to have a special followup just for second-time buyers, 
 01:46 you could do that easily with what I am going to show you, 
 01:49 you would have to build that yourself. 
-01:51 Reporting, analytics, like who has opened the emails, were they delivered, 
-01:56 did they bounce, there is just tons of that so you don't want to get involved in this, 
-02:01 AB testing, trying slight variations over time on your emails 
+01:51 Reporting, analytics, like who has opened the emails? Were they delivered? 
+01:56 Did they bounce? There is just tons of that so you don't want to get involved in this, 
+02:01 A/B testing, trying slight variations over time on your emails 
 02:05 to see what works better and improving over time, 
 02:08 getting help so if you are going to hire somebody to come work with you,
 02:11 right, find the consultant or something to help you work 
-02:14 with your marketing angle if you say oh and I have this totally custom thing I built, 
-02:18 and they are kind of like what, I don't know if that is a good idea, 
-02:21 if you say hey I use MailChimp or I use git response or something like that, 
+02:14 with your marketing angle. If you say "oh and I have this totally custom thing I built", 
+02:18 and they are kind of like: "What? I don't know if that is a good idea", 
+02:21 if you say "hey I use MailChimp" or "I use GetResponse" or something like that, 
 02:24 like OK, great, I know how it works, I can work with that. 
 02:28 There is a lot of automation and workflow as you'll see, we'll talk a bit about that. 
 02:33 But, you can do things like well, 30 minutes after a purchase, send this email, 
@@ -48,7 +48,7 @@
 02:51 for getting the software as a service type thing to plug into our app as an API. 
 02:57 So we are going to be using MailChimp,
 03:01 I've been using MailChimp for a long time, it's a solid, 
-03:05 good, well known, well understood platform. 
+03:04 good, well known, well understood platform. 
 03:08 They have a nice free tier as you'll see, right here it says sign up for free 
 03:12 and it's pretty generous, so we'll be doing that in a little bit. 
 03:16 So as we go through this course, this section we're definitely going to be working 
@@ -59,7 +59,7 @@
 03:34 and kind of those rules that I talked about, right, 
 03:37 if they click this button then do this thing in two hours and so on. 
 03:40 So customer.io is pretty cool. 
-03:43 Get response is another one that works really good 
+03:43 GetResponse is another one that works really good 
 03:45 for email marketing, webinars, landing pages, 
 03:48 this is a little bit more than just pure email, 
 03:51 so it's kind of a bigger platform but you know,
@@ -70,8 +70,7 @@
 04:07 like that one I showed you in a previous video, actually, 
 04:10 or more importantly, create a whole bunch of different landing pages 
 04:14 you can run ads and drive people to do these various pages 
-04:17 and do the AB testing and so on, 
-04:19 so this is a very powerful visual email automation system, 
+04:16 and do the A/B testing and so on, so this is a very powerful visual email automation system, 
 04:22 to go behind those types of things, and I've heard this is really good as well. 
-04:26 But, like I said we are using MailChimp 
+04:26 But, like I said, we are using MailChimp 
 04:29 because that is what I am using and it works really well. 
