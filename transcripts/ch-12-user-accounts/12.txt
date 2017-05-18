@@ -48,7 +48,7 @@
 02:59 We could add a function here to work directly with that cookie auth 
 03:02 but it turns out maybe the albums controller for purchases needs to know 
 03:06 who is logged in, the home controller all sorts of things, 
-03:09 the whole app needs to know. So we can go to our base_controller 
+03:09 the whole app needs to know. So we can go to our base controller 
 03:12 and give it some properties, like we have a property there, 
 03:15 we'll give it another one and this one is going to be logged in user id.
 03:20 And here we are going to use the cookie also, let me import it up here like so.

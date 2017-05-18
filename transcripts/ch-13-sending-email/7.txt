@@ -1,7 +1,7 @@
 00:02 We've seen that sending templated emails that is a plain HTML file 
 00:07 with a few little replacement pieces of text in here is incredibly easy in Python. 
 00:13 So, here is a fragment from the email template I use 
-00:17 when you purchase a course from me at Talk Python training. 
+00:17 when you purchase a course from me at Talk Python Training. 
 00:21 So I need to send you things like how do you get back to the course you just bought, 
 00:25 how much did you pay for it, what date was it purchased on, 
 00:28 what was your email, how did you pay, things like that. 

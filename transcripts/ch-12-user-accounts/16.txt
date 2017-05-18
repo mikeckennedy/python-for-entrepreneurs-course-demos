@@ -1,4 +1,4 @@
-00:03 Let's review how we created a tamper of proof cookie
+00:03 Let's review how we created a tamper-proof cookie
 00:06 to track the logged in user on our web app. 
 00:08 So we created our cookie auth module in the infrastructure folder or submodule,
 00:13 and we are going to pass the request and the user id, 
@@ -6,47 +6,47 @@
 00:21 the user id is the value that we want to set, 
 00:23 now we could just store the user id straight in there and if this was a number, 
 00:27 this would be a super bad idea, because it's really crazily generated, 
-00:30 it's this huge 32 character alphanumeric string, it's still pretty hard to guess, 
+00:30 it's this huge 32-character alphanumeric string, it's still pretty hard to guess, 
 00:38 but we are going to go a little farther when we do this 
 00:41 get salted cookie value thing so that we actually make it even harder to guess, 
-00:44 we basically make it tamper proof.
-00:47 So here we make the cookie tamper proof with a slated hash 
+00:44 we basically make it tamper-proof.
+00:47 So here we make the cookie tamper-proof with a slated hash 
 00:50 that lets us check the value, 
 00:52 now, we also saw that for whatever reason in Pyramid, 
-00:55 we need to use a call back instead of directly setting the cookie on the response, 
-00:59 so we are going to set the response call back here 
+00:55 we need to use a callback instead of directly setting the cookie on the response, 
+00:59 so we are going to set the response callback here 
 01:02 and this function has to take a request and response but then you can see 
 01:07 we are using a closure to actually pass the request and response along 
 01:10 as well as the value. 
-01:13 And this technique works on nay cookie, this is not, 
+01:13 And this technique works on any cookie, this is not, 
 01:16 this really has nothing to do with authentication other than you want to be really careful 
-01:20 that people can't temper with it and guess user id so we did this salt thing, 
-01:24 but if you want to store just random cookies you can have a number of them 
+01:20 that people can't temper with it and guess user id, so we did this salt thing, 
+01:24 but if you want to store just random cookies, you can have a number of them 
 01:27 and this is how you would do it. 
-01:29 There is a few pieces you didn't see in the previous screen so to get slated cookie here 
+01:29 There is a few pieces you didn't see in the previous screen, so to get slated cookie here, 
 01:33 we can just say we want to return some text plus the original string, 
 01:37 maybe plus some more text, this could be huge, it could be one character, 
 01:41 make it up randomly, you could have it based on some other part of the user 
 01:45 like their email address, but then again, if their email address changes- 
 01:48 do whatever you think makes sense but you want to have some sort of verification 
 01:53 that the cookie is not tampered with, and then, 
-01:56 when we call that add auth cookie callback, 
-01:58 you can see we just say response.set cookie, we give it the name, 
+01:56 when we call that __add_auth_cookie_callback, 
+01:58 you can see we just say response.set_cookie, we give it the name, 
 02:01 the value, and the maximum age, so this cookie is going to expire in 30 days, 
-02:07 or if they call log out we are going to delete it immediately. 
+02:07 or if they call "log out" we are going to delete it immediately. 
 02:10 Finally, what fun is it to set a cookie if you don't ever read it back, 
-02:14 so here when we do our request we want to know is somebody logged in, 
+02:14 so here when we do our request, we want to know "is somebody logged in?", 
 02:18 we are going to first see if that cookie exists in the request that is coming from the browser,
 02:24 was that set in a previous request in that particular browser. 
-02:28 So we are going to say is the auth cookie name in request, if it's not, 
-02:32 then we want to return none because there is no id we are ever going to find 
-02:35 if we don't have the cookie, then we are going to get its value super easy 
+02:28 So we are going to say "is the auth cookie name in request?" If it's not, 
+02:32 then we want to return None because there is no id we are ever going to find 
+02:35 if we don't have the cookie, then we are going to get its value super easy, 
 02:39 request.cookies, give it the name of the cookie, this is just a dictionary, 
 02:42 we get the string value back, and the way we constructed it was we put in the value 
-02:45 and then a hash, that would let us know 
+02:47 and then a hash, that would let us know 
 02:49 whether or not that value is even messed with. 
-02:52 So then we just do a little bit of work to split it apart, to recompute the hash 
+02:51 So then we just do a little bit of work to split it apart, to recompute the hash 
 02:55 and make sure that it wasn't tempered with, 
 02:57 if we are happy that nobody messed with it, 
 03:00 that it's the same thing we sent down from the server, 
-03:03 then we will return the actual value we care about, the user id. 
+03:02 then we will return the actual value we care about, the user id. 

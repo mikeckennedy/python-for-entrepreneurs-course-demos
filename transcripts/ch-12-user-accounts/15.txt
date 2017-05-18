@@ -1,30 +1,30 @@
 00:01 OK, the last thing we want to so is now that we've been able to log into our site 
 00:05 is to log out of it; so remember, you can only view this page 
-00:08 if you are logged in and if you log out well, there is no log out. 
+00:08 if you are logged in and if you log out, well, there is no log out. 
 00:12 So let's write lo gout real quick. 
 00:14 We are going to do that in the account controller, 
-00:16 and let's just duplicate that method real quick and we'll change this to log out, 
+00:16 and let's just duplicate that method real quick and we'll change this to "log out", 
 00:20 now we are going to need very little information here, 
-00:23 actually we don't even need a template, because log out is not a view, 
-00:26 it could have it, it could say you are now logged out or you could just log them out 
+00:23 actually we don't even need a template, because "log out" is not a view, 
+00:26 it could have it, it could say "you are now logged out" or you could just log them out 
 00:29 and redirect them to the home page, where they basically just see 
 00:33 the sign in stuff come back, so that is what we're going to do, 
-00:37 we're going to say self. redirect to / and do nothing, 
-00:41 so over here when I go cookie auth and we'll just call it log out 
+00:35 we're going to say self.redirect to '/' and do nothing, 
+00:41 so over here when I go cookie_auth and we'll just call it "logout" 
 00:44 and it's going to need to have access to the request so it can actually do that. 
 00:47 So it turns out that deleting the cookie is a very similar to writing a cookie 
-00:54 where we have this call back, OK, so we are going to come over here 
-00:57 and we are going to say request at response call back 
-01:00 and this we are going to call delete cookie and in order to delete the cookie, 
+00:54 where we have this callback, OK, so we are going to come over here 
+00:57 and we are going to say request.add_response_callback 
+01:00 and this we are going to call delete_cookie and in order to delete the cookie, 
 01:03 you don't have to pass the value, you just have to have the request,
 01:08 the response and the name, actually, you don't even need the response, do you. 
-01:11 So let's write that. We'll just say response.delete cookie 
+01:11 So let's write that. We'll just say response.delete_cookie 
 01:17 and we'll give it the name, and that's it. 
 01:21 There is nothing more to it, let's do little formatting so everybody is happy, 
-01:24 pep 8 and all that, if we rerun this, we should be able to go over here, run our page, 
-01:29 click around you see we're logged in, if I hit log out I should delete the cookie, 
+01:24 PEP 8 and all that, if we rerun this, we should be able to go over here, run our page, 
+01:29 click around you see we're logged in, if I hit log out, it should delete the cookie, 
 01:34 redirect us to the homepage and this navigation part up here should change 
-01:37 because the cookie is not there so we are no longer signed in, ready, set go.
+01:37 because the cookie is not there, so we are no longer signed in, ready, set go.
 01:42 Boom, how about that, so we're logged out, if we try to go to our account again, 
 01:46 it's going to say no, you've got to sign in, see indicate sign up here, 
 01:50 now we're signed in, go to our account all we want, 
@@ -38,28 +38,28 @@
 02:23 so we can shortcut a lot of those steps over here 
 02:26 and we can just change this to be create a logged in user, 
 02:29 and then we'll say something like this, 
-02:31 we'll say id, uid=self.logged_in_user_id, we'll say if not uid return none, 
+02:31 we'll say "id, uid=self.logged_in_user_id", we'll say "if not uid: return None", 
 02:39 so if nobody is logged in, obviously we can't go to the database, 
-02:43 but if they are we can go to the account service and we can say find user, 
+02:43 but if they are, we can go to the AccountService and we can say find user, 
 02:47 or find account by, and we don't have an id yet do we,
-02:50 nowhere along the way have we needed to find the user by is, yet, 
+02:50 nowhere along the way have we needed to find the user by id, yet, 
 02:54 so we'll write that really quickly, so we go over here and by, 
 02:58 id and we'll do uid, so we can add that method to the account service, 
 03:02 and it will add as a class method and down here now call this user, 
 03:06 and this is going to be super similar to this one up here. 
 03:12 Let's just do the query ever so slightly differently. 
-03:15 So, let's go over here, and we'll say if not user id, we'll return none, 
+03:15 So, let's go over here, and we'll say "if not user id", we'll return None, 
 03:19 I don't care about this lower case thing, it's not likely the case is changing, 
 03:24 we want to create the database session and we are going to do a query with SQLAlchemy 
 03:28 to say the id is equal to the user id there is the first. 
-03:31 OK, then anywhere we want for down here maybe we want to go to the albums 
+03:31 OK, then anywhere we want, for down here maybe we want to go to the albums 
 03:37 and we want to do, we somehow want to get access to the user, 
-03:40 we just say self.logged in user that does the query against the database 
+03:40 we just say self.logged_in_user, that does the query against the database 
 03:44 using the cookie information we've already stored, 
 03:47 and then we have access to the user, like so. 
-03:50 Now you only want to call this if you are going to do some sort of test for the logged in, 
-03:54 you would do something like this, right, logged in user id 
-03:57 we could even add another property just is logged in or has user, 
+03:50 Now, you only want to call this if you are going to do some sort of test for the logged in, 
+03:54 you would do something like this, right, logged_in_user_id, 
+03:57 we could even add another property just is_logged_in or has_user, 
 04:01 something to that effect, because you don't want to hit the database 
-04:03 unless you actually need the user, but this is a really handy method to use 
-04:06 to have around because you are going to want to access to that character all the time. 
+04:03 unless you actually need the user, but this is a really handy method to use, 
+04:06 to have around, because you are going to want to access to that character all the time. 

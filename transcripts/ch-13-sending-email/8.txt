@@ -27,7 +27,7 @@
 01:43 So over here, just to show you the pricing for individuals, come down here, 
 01:47 you can get the full mail system for 50 bucks, or this is what I have, po box plus, 
 01:51 all I care about forwarding, forwarding up to five different addresses,
-01:55 use your own domain, and you even get an outbound smtp server 
+01:55 use your own domain, and you even get an outbound SMTP server 
 01:58 so I can send mail through basically outbound email 
 02:03 and as a reply somebody writes me a message 
 02:06 to contact@talkpython.fm, I can reply to them and it looks like 
@@ -54,7 +54,7 @@
 03:36 maybe one bounce there- no, no bounce, it's all good, 
 03:40 and these are the ones I've replied to, 
 03:42 you can see over here it tells you like those are messages sent to other people 
-03:46 through the smtp server here, right,
+03:46 through the SMTP server here, right,
 03:49 that's me replying to people that sent me messages, over there. 
 03:52 Po box, it's beautiful, you don't have to do anything at all in your server, 
 03:55 all you have to do is map your domains, mx records, the mail records, 

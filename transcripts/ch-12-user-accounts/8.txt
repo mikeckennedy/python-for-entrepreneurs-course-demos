@@ -1,7 +1,7 @@
 00:02 Now throughput this class I've tried to give you a look inside the real businesses 
 00:05 the real code that runs in production, 
 00:08 for Talk Python the podcast or the Training website, and things like that. 
-00:12 So, let's take a quick look at how account management works in Talk Python training. 
+00:12 So, let's take a quick look at how account management works in Talk Python Training. 
 00:17 And I come over and I say I would like to register, 
 00:20 I am going to fill out the username and email, like I showed you in the example, 
 00:23 I prefer to just drop this username and just have email but whatever. 
@@ -45,5 +45,5 @@
 02:34 or adding it we are logging in, and then we get it back from the database again
 02:38 there is a couple of reasons I did this but it is not really worth going into, 
 02:42 I just want to make sure I get the actual thing I put in the database back out here. 
-02:46 So that's a peek inside Talk Python training, 
+02:46 So that's a peek inside Talk Python Training, 
 02:49 it should look pretty familiar to what we just saw in our demo. 
