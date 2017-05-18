@@ -1,145 +1,142 @@
 00:03 Well, this technically worked, I probably should have done a little bit of this, 
-00:07 maybe a few more brs here, to put some new lines, things like that, 
+00:07 maybe a few more "brs" here, to put some new lines, things like that, 
 00:11 but this worked, but this is not how you want to write your email, right, 
 00:16 it would be much better if you just had either actually the ability to edit the email, 
 00:20 maybe you write it as markdown and then transform it to HTML as you send it, 
 00:24 or at least have a separate file so it's not in your Python code. 
 00:27 So that's what we are going to look at now, 
-00:30 so let's come over here and I'll make a folder called email, 
+00:29 so let's come over here and I'll make a folder called email, 
 00:34 and what we are going to do is we are going to create some templates, 
 00:38 so let me go ahead and make a folder named templates as well, 
-00:43 in here we are going to put the base HTML 
-00:46 because not only are we going to have stuff like this with all the HTML in it, 
+00:43 in here we are going to put the base HTML,
+00:45 because not only are we going to have stuff like this with all the HTML in it, 
 00:49 you will see that there is going to be styles galore to make this work 
 00:53 in all of various email clients and look pretty and things like that, 
-00:58 so you definitely don't want it in here, so let's go and change this, 
-01:01 we want to create a welcome HTML file, and it's going to look like this, 
+00:56 so you definitely don't want it in here, so let's go and change this, 
+01:00 we want to create a welcome.html file, and it's going to look like this, 
 01:06 now, not all of these pieces really mean anything, 
 01:08 like this title doesn't really mean anything, as far as the email client goes, 
 01:12 because it's just going to use whatever the subject is. 
-01:15 Let me copy the Talk Python training welcome message 
+01:15 Let me copy the Talk Python Training welcome message 
 01:18 and we'll start with that and then we'll build it up. 
-01:21 Alright, so here we have our title, we can go and set it blue yellow rockets 
+01:20 Alright, so here we have our title, we can go and set it to "Blue Yellow Rockets",
 01:25 but I don't think it's going to show up in any client anywhere. 
 01:29 Now notice here, we are setting all sorts of styles on the body, 
-01:33 now, you might be tempted to say well Michael, 
+01:33 now, you might be tempted to say "well Michael, 
 01:37 why don't you do this and put a CSS style here or even better, 
-01:41 why don't you create a CSS style sheet and link to it, 
-01:44 I didn't do that because it doesn't work. 
-01:46 Sometimes under certain circumstances some of it will work 
+01:41 why don't you create a CSS style sheet and link to it?" 
+01:44 I didn't do that, because it doesn't work. 
+01:46 Sometimes, under certain circumstances, some of it will work 
 01:49 but style sheets are not a good idea for these email messages, 
-01:54 you need it to be totally self contained and even then 
+01:54 you need it to be totally self-contained and even then 
 01:57 not every style you set will be respected by the various clients, 
 02:00 some of them just strip pieces out. 
 02:02 But, basically you've got to set the styles right on here, 
 02:05 so I am setting things like line height 1.5, to make it more readable, 
-02:09 I am getting rid of the padding so I can set a background color, 
+02:09 I am getting rid of the padding, so I can set a background color, 
 02:13 make the fonts little bigger, things like that. 
-02:16 Now notice at the top we have this image, 
+02:15 Now notice at the top we have this image, 
 02:19 if I come over here and pull up in a browser 
-02:23 you will see what it looks like, it's basically this image edited down just a little bit, 
+02:22 you will see what it looks like, it's basically this image edited down just a little bit, 
 02:26 so here is this, so that right at the top, I am just leave this here, 
 02:29 I am not going to create a separate image for the email, but obviously, in your app, 
-02:34 you will not create a blue yellow rockets picture, 
+02:34 you will not create a Blue / Yellow Rockets picture, 
 02:37 instead you will create one for whatever your app is. 
 02:41 So notice we are linking back to it, HTTPS is very important, 
-02:44 it's very likely that their client is HTTPS so you are better off with that.
-02:50 We are setting a max width, this margin left, right, and a max width 
-02:56 makes it float in the middle of the page that's cool, 
+02:44 it's very likely that their client is HTTPS, so you are better off with that.
+02:50 We are setting a max-width, this margin-left, right, and a max-width 
+02:56 makes it float in the middle of the page, that's cool, 
 02:59 so let's just change this around a little bit, congratulations, 
 03:02 and let's go and put in their email address, 
 03:06 how do I know I can type {email} 
 03:09 because I just made that up and I'll show you how we replace that in just a minute,
-03:13 congratulations {email} you wouldn't really do this 
+03:13 "congratulations {email}" you wouldn't really do this 
 03:15 but I just wanted to show you we have something to replace. 
-03:18 Thank you for registering with our site. 
+03:18 "Thank you for registering with our site!" 
 03:24 And we got a little bit here, this div we can just drop this, 
-03:27 we don't need that right now, and down here we have this find your course right now, 
-03:31 how about we change this to find your favorite album. 
+03:27 we don't need that right now, and down here we have this "find your course right now", 
+03:31 how about we change this to "find your favorite album". 
 03:36 OK, and notice we've got links back to wherever we want to go,
 03:41 and the style is set straight on it, right, I wish we could do CSS 
-03:44 but it doesn't seem to work reliably so we are not doing it,
+03:44 but it doesn't seem to work reliably, so we are not doing it,
 03:48 and here is a little bit, right, there is a little picture of me, 
 03:50 with some links and stuff at the bottom, 
-03:53 thanks for registering and the band, something like that.
+03:53 "thanks for registering... and the band", something like that.
 03:56 Now, let's just go over here, say reveal this in finder, 
-04:00 alright this is what it looks like in its raw form it has, congratulations {email} 
+04:00 alright this is what it looks like in its raw form it has, congratulations {email}, 
 04:05 obviously this is going to be replaced dynamically, so how does that work,
-04:09 we have our favorite album this all needs to be like a link to back, 
+04:09 we have our favorite album, these all needs to be like a link to back, 
 04:13 the images and stuff, full URL back, whatever your real domain is, 
-04:18 we don't have a domain yet for our blue yellow rockets
+04:18 we don't have a domain yet for our Blue / Yellow Rockets,
 04:21 so I can't really easily do that. 
-04:23 Alright, so here is the template, now how do we load and expand this, 
-04:26 we basically want to take all this content in here, replace things like this, 
+04:22 Alright, so here is the template, now how do we load and expand this? 
+04:26 We basically want to take all this content in here, replace things like this, 
 04:32 and then use this as the HTML body that we are going to send in that basic send the message,
-04:37 So let me add a function, let me add a file here, we'll call this template parser, 
+04:37 So let me add a function, let me add a file here, we'll call this template_parser, 
 04:45 so what we are going to do in this template parser, spelled correctly, 
 04:48 is we are going to have all the templates loaded up and set, so over here, 
-04:53 let's have a welcome and initially it's going to be none, 
-04:58 let's have a reset, password, it's none as well. 
+04:53 let's have a welcome and initially it's going to be None, 
+04:58 let's have a reset_password, it's None as well. 
 05:03 And then, let's add a function that we can call, so that at the start of our app 
 05:09 we can pull this in and it will like load up what goes in there 
 05:13 and then we can use them throughout, OK, so let's do this, 
 05:17 we don't need any arguments here but we are going to need to call this one time 
 05:20 and we are going to need to use the path module, so let's do this, 
-05:24 we'll say templates, now what we need is we need to get this current folder 
+05:24 we'll say "templates...", now what we need is we need to get this current folder 
 05:33 that contains the template folder and then we are going to add on templates, 
 05:36 so that is easy enough, so os.path.dirname from this particular file, 
 05:43 so get just the directory that this file is contained in, 
-05:46 that will be email, the full path to it, and then we are going to say join templates. 
+05:46 that will be email, the full path to it, and then we are going to say "join... 'templates'". 
 05:52 Alright, so that is going to create folder 
-05:55 and then what we want to do is just load up each one of these say welcome 
-06:01 so here we'll get the welcome file, and then we'll say like this, 
-06:04 we'll say welcome file, we are going to open that, 
-06:07 as fin, and then we want to set welcome on a class 
+05:55 and then what we want to do is just load up each one of these. Say "welcome".
+06:01 So here we'll get the welcome file, and then we'll say like this, 
+06:04 we'll say "welcome_file", we are going to open that, 
+06:07 "as fin", and then we want to set welcome on a class 
 06:18 just the content, OK, so we'll do this and we would also do this
-06:22 let's say we'll do one for password reset, there won't be any content for this one, 
+06:24 let's say we'll do one for password reset, there won't be any content for this one, 
 06:31 but just to show that we'll do this for each type of email we want to set, 
 06:37 so welcome email, a reset, a purchase and so on, 
 06:40 you might have like five or ten of these. 
-06:43 OK, so this we need to call somewhere, let's do that in our dunder init, 
-06:48 
-06:54 so we are just going to import this, and we'll call global init, 
-06:58 we just need to call it once, templates, 
-07:05 you might as ell group it down here with the other email stuff, like so, 
+06:43 OK, so this we need to call somewhere, let's do that in our __init__. 
+06:54 So we are just going to import this, and we'll call global_init(), 
+06:58 we just need to call it once, "templates", 
+07:05 you might as well group it down here with the other email stuff, like so, 
 07:12 so that should read our email templates, let's make sure that didn't break anything, 
 07:16 this is still running, it looks like we loaded them up correctly, great.
 07:20 So the next thing we need to do is they've got that raw template in them, 
 07:24 we want to actually expand them, so let's do this, 
-07:29 
-07:34 so here we will write a function called expand welcome 
+07:34 so here we will write a function called expand_welcome 
 07:37 and as you saw in our welcome email over here 
 07:40 we have this little curly such and such called email. 
 07:45 OK, so we can come down here and actually, 
 07:49 let me just show you more general way, 
-07:52 
-07:58 so we can do it like this we can come down here 
+07:58 so we can do it like this, we can come down here 
 08:01 and for a given template we could do something to this effect 
-08:04 so we are going to do something like pass email template parts of that welcome, 
-08:08 email template parts of that reset password and so on. 
+08:04 so we are going to do something like pass EmailTemplateParser.welcome, 
+08:08 EmailTemplateParser.reset_password and so on. 
 08:11 And we'll say grab the final text, 
-08:16 we want to start out and say for k in data, so data is going to be a dictionary,
+08:16 we want to start out and say "for k in data", so data is going to be a dictionary,
 08:21 and then we want to replace the key that's going to be, 
 08:28 so here if we get a dictionary with a key called email, 
 08:32 and a value for what the email should be, 
 08:34 then we will be able to pass that in here, 
 08:37 so that should be perfect, and we won't do anything fancy 
 08:40 we are just going to replace our key with the actual value that we got 
-08:46 and when we are done expanding all that we will return final text, 
-08:49 so this way we can have as many templates as we want, 
+08:46 and when we are done expanding all that we will return final text. 
+08:49 So this way we can have as many templates as we want, 
 08:51 we don't have to keep rewriting this, or whatever, 
-08:54 maybe you want to have like expand welcome and it just takes the email 
+08:54 maybe you want to have like expand(welcome) and it just takes the email 
 08:58 and then it calls this internally, who knows, but this will let us expand that out. 
-09:02 So let's go to our email service, and we are going to change our send welcome email, 
+09:02 So let's go to our email service, and we are going to change our send_welcome_email, 
 09:08 now our body is not this anymore, 
-09:13 so HTML body is going to be our email template parser 
-09:20 and what we are going to so is we are going to say expand 
+09:12 so html_body is going to be our EmailTemplateParser
+09:20 and what we are going to so is we are going to say "expand" 
 09:23 and what do we want to give it, not a huge fan of the way this looks 
 09:27 but we want to give it welcome and we are going to give it a dictionary with email 
 09:31 and the value is going to be just whatever the email is. 
 09:35 And that is all we are going to change, we want to go to that template parser, 
 09:38 we want to say grab that HTML that we stored in the file, 
-09:42 that is easy to edit with smart tools that have intellisense, 
+09:42 that is easy to edit with smart tools that have IntelliSense, 
 09:45 and give that to a designer they can do whatever they want with it. 
 09:48 We are going to load that up and we have already loaded it in memory 
 09:51 we are going to transform it to do the replacements 
@@ -151,32 +148,32 @@
 10:11 It looks like it works because it's already sending the mail, 
 10:14 and it's talking a moment and now it is redirected and done 
 10:17 you might consider kicking this off to a background thread 
-10:20 or some sort of like celery queue or something like this, 
+10:20 or some sort of like Celery queue or something like this, 
 10:23 it didn't make it asynchronous but for our purposes this is good enough. 
 10:27 Let me check my email. 
 10:30 Look at what we got here, how cool is that? 
 10:33 So remember we got this version that we had in memory before, 
 10:36 and I said that is not good, let's do better, so now we got this better one, right, 
 10:42 here is our picture, congratulations, this is the email expansion 
-10:46 that used to be curly email and we passed the value when we registered, 
+10:46 that used to be {email} and we passed the value when we registered, 
 10:50 and it expanded it to this, right, so you can use this as URL fragments 
-10:54 like hey you just bought the album, click here to go download it, 
-10:59 whatever you need to do you can pass in as many of those things in that dictionary 
-11:02 as you need to, and of course, everything else is static HTML 
-11:06 and here is thanks for registering, Michael in the band and so on. 
+10:54 like "hey, you just bought the album, click here to go download it", 
+10:58 whatever you need to do you can pass in as many of those things in that dictionary 
+11:01 as you need to, and of course, everything else is static HTML 
+11:06 and here is thanks for registering, Michael & the band and so on. 
 11:10 So this is, by the way, I recommend you guys send emails, 
 11:13 you come up with these little email templates, and you just write them as pure HTML, 
 11:17 you put little placeholders where the values have to pop in and off it goes, 
 11:22 you already have all the infrastructure you are going to need to do this 
 11:25 with this template parser, all you have to do 
-11:29 to continue to add new email capabilities, is basically the add new templates, 
+11:28 to continue to add new email capabilities, is basically the add new templates, 
 11:33 so you obviously have to write the HTML of the email you are going to send, 
 11:37 and then in the email service, we had to know that this thing required an email 
 11:42 and the template to expand it, so you are going to have to write
-11:46 a send password reset and it is going to take like, you know, 
+11:46 a send_password_reset and it is going to take like, you know, 
 11:49 the reset password URL and things like that. 
-11:52 Alright, this blue yellow rockets web app is totally hooked up with outbound email, 
+11:51 Alright, this Blue / Yellow Rockets web app is totally hooked up with outbound email, 
 11:55 with mailing list, the last thing we need to talk about with regard to email is 
 11:58 how do we let people contact us, how do we put something like 
-12:02 send me a message at michael@blueyellowrockets.com or whatever it is, 
+12:02 "send me a message at michael@blueyellowrockets.com" or whatever it is, 
 12:06 we'll talk about that in just a moment. 

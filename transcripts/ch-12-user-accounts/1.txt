@@ -8,17 +8,17 @@
 00:25 how you create model and store user accounts. 
 00:28 Not just how do you make it happen, but how do you do it securely, 
 00:31 and in a way that is really delightful for the users. 
-00:35 Well the first question you want to ask yourself is 
-00:38 is this is a do it yourself problem or a saas problem. 
+00:35 Well the first question you want to ask yourself is: 
+00:38 is this is a "do it yourself problem" or a SaaS problem? 
 00:41 That is, should you manage these users yourself in your database 
-00:44 or should you subscribe to some saas, software as a service system 
+00:44 or should you subscribe to some SaaS, software as a service system 
 00:49 that can do identity as a service, and we'll talk about both options, 
-00:53 but we're going to start by covering the do it yourself story 
-00:56 and then I'll show you a saas option that is really good. 
+00:53 but we're going to start by covering the "do it yourself" story 
+00:56 and then I'll show you a SaaS option that is really good. 
 00:59 Like everything we put in our database 
 01:01 we're going to need to model users in SQLAlchemy, 
 01:04 we want to create our user or account class that map that to the database, 
-01:07 so we'll see how to do this in a way that is secure as well as high performance, 
+01:07 so we'll see how to do this in a way that is secure as well as high-performance, 
 01:13 so make sure we have the right indexes and uniqueness constraints and things like that.
 01:17 We're going to talk about the importance of strong password hashes, 
 01:21 it's hardly a week that goes by that you don't hear some major web application 
@@ -30,9 +30,9 @@
 01:43 which makes it really easy as you'll see. 
 01:47 The thing that makes is easy is this library called passlib, 
 01:50 so we're going to be using passlib to hash and manage the sort of encrypted 
-01:54 one way hashed elements in our database. 
+01:54 one-way hashed elements in our database. 
 01:57 And primarily that is going to be our passwords. 
-02:01 And finally, we'll talk a little bit about storm path. 
-02:04 So, steps two, three and four, this is the do it yourself style, 
-02:07 step five they have identity as a service 
+02:01 And finally, we'll talk a little bit about Stormpath. 
+02:04 So, steps two, three and four, this is the "do it yourself" style, 
+02:07 step five, they have identity as a service 
 02:10 so we'll talk just a bit about them as well. 

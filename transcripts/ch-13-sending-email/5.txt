@@ -1,31 +1,31 @@
 00:01 Let's review what we had to do to send email out of our web application. 
-00:05 Not mailing list, not newsletters, but one off individual emails 
+00:05 Not mailing list, not newsletters, but one of individual emails, 
 00:09 based on various actions people take in our site, 
 00:12 like for example signing up or asking for a password reset 
-00:17 or purchasing something, getting them receipts, things like that. 
-00:21 So we use the mailer package, and we are going to create a mailer object 
-00:25 which is basically an smtp client. 
+00:16 or purchasing something, getting them receipts, things like that. 
+00:20 So we use the mailer package, and we are going to create a mailer object, 
+00:25 which is basically an SMTP client. 
 00:28 So you can see that we had set up a global initialize function 
-00:31 that pulled things like the server port username and password 
-00:34 out of our configuration files and just stash them in these variables. 
+00:31 that pulled things like the server port, username and password 
+00:34 out of our configuration files and just stashed them in these variables. 
 00:39 Then when we want to get one of these mailers, 
 00:42 we just go and pass all the various credentials across 
-00:45 and we say use tls is true, so use encryption, 
+00:45 and we say use_tls is True, so use encryption, 
 00:48 this is very good, now we are going to get this back. 
-00:51 Once we have one of these smtp clients these mailer objects, 
+00:51 Once we have one of these SMTP clients, these mailer objects, 
 00:54 we can actually use it to send email. 
-00:58 So here is our base send message method. 
+00:58 So here is our base send_message method. 
 01:02 Remember, we are going to create other methods that customize,
 01:05 that basically build up the body, the subject,
-01:08 things like that and then call this function. 
-01:10 So it's the only one that is really creating the smtp sender 
+01:07 things like that and then call this function. 
+01:09 So it's the only one that is really creating the SMTP sender 
 01:13 and actually creating the message itself. 
-01:15 So we call our function you just looked at, create smtp sender, to get  the smtp client; 
+01:15 So we call our function you just looked at, create SMTP sender, to get  the SMTP client; 
 01:20 then we want to create a message object, set the from address, 
 01:23 the to address, the character set, the subject, 
-01:26 at the HTML body and we are also going to set the body 
+01:26 at the html_body and we are also going to set the body 
 01:30 so that there is an alternate view if somebody has 
-01:34 show HTML turned off in their mail client,
+01:34 "show HTML" turned off in their mail client,
 01:36 they will still see something and we use the HTML to text package 
 01:40 to actually turn that into markdown in a real simple way. 
 01:43 So that will give them a decent representation of some kind of body there 
@@ -33,27 +33,27 @@
 01:51 to our initialization and pass that on to the email service
 01:55 so that we don't send email while we are fiddling and developing the app,
 01:59 we only send email in production. 
-02:02 Obviously, when you are testing the email you want to turn that off, 
+02:01 Obviously, when you are testing the email, you want to turn that off, 
 02:04 so that you don't mail your clients or your users 
 02:06 but only mail yourself or people on your team, 
 02:09 in general, you should probably not let it send email in debug mode or in dev mode. 
-02:15 And we did this in a  try except block because sending email 
-02:18 like many network things can go wrong in many ways, 
+02:15 And we did this in a "try..except" block, because sending email, 
+02:18 like many network things, can go wrong in many ways, 
 02:21 so here, in this case we are just printing out a basic message of what went wrong, 
 02:25 it couldn't send an email to this email address because of whatever the exception contains,
-02:30 and then notice we are re-raising the exception 
-02:33 because we don't want to eat it, we just want to log it and then raise the exception again. 
+02:30 and then notice we are re-raising the exception, 
+02:32 because we don't want to eat it, we just want to log it and then raise the exception again. 
 02:37 I didn't do that in my demo, you probably want to add that to your actual code. 
 02:40 In my real websites, of course the exceptions don't get eaten, 
 02:45 they get dealt with appropriately, whatever you are doing up above that. 
 02:50 OK, so let's briefly look at the packages, 
 02:53 here on pypi.org we have the mailer package, 
-02:56 pip install mailer, you saw that we just let PyCharm handle all of that, 
+02:56 "pip install mailer", you saw that we just let PyCharm handle all of that, 
 02:59 this is a really nice package building on top of Python's ability to send mail 
 03:03 and it just makes it a little bit nicer. 
-03:06 We also used HTML to text because we want a text alternate version 
-03:10 if you are not going to be able to see the HTML what does the plain text version look like, 
-03:15 but we can use this HTML to text to get that. 
+03:06 We also used html2text, because we want a text alternate version 
+03:10 if you are not going to be able to see the HTML, what does the plain text version look like, 
+03:15 but we can use this html2text to get that. 
 03:18 You could even let your users decide OK, 
 03:21 I want to receive text messages or I want to receive HTML messages 
 03:24 and then you could just only set one or the other in the body in your mail message. 

@@ -1,58 +1,57 @@
-00:01 Our MailChimp account is created, 
-00:03 we've created a list and we've created an API key 
-00:05 let's start moving this into our web application. 
-00:09 So here you can see I've created blue yellow app 11, 
+00:01 Our MailChimp account is created, we've created a list and we've created an API key. 
+00:05 Let's start moving this into our web application. 
+00:09 So here you can see I've created blue_yellow_app_11, 
 00:12 so this is in a separate section in a GitHub repo 
 00:15 so you can see the snapshots over time, 
 00:17 so make sure that you go to the correct section if you want to check out this code. 
 00:20 One of the things is how do we get this API key into our app, 
 00:25 we probably don't want to just jam it in code and bury it somewhere, 
-00:29 that's not a good idea, we could put it into our configuration any files here 
-00:34 so here is our development and we'll also have a production any
+00:29 that's not a good idea, we could put it into our configuration.ini files here 
+00:34 so here is our development.ini, we'll also have a production.ini,
 00:38 maybe these are actually different between production, 
 00:39 and development, I don't know, we want to put them somewhere, 
 00:42 another option that is pretty common is 
 00:44 to put them into environment variables in the server
 00:47 so they never get checked into source control, that's pretty solid, 
 00:50 what we're going to do is I am just going to leave some empty spots here 
-00:53 when you get this code you can copy it, 
-00:56 you can fork it over and you can put your own API keys here and fiddle with it, if you like. 
+00:53 when you get this code, you can copy it, 
+00:56 you can fork it over and you can put your own API keys here and fiddle with it if you like. 
 01:00 Or just the MailChimp part won't work in the demo if you don't put your own API keys here.
-01:05 Once I fill this out which I'll do off camera,
+01:05 Once I fill this out, which I'll do off-camera,
 01:08 the question is how do we get this data in from our configuration files. 
-01:12 so here is our main startup for our dunder init, 
-01:15 and I've added an init mailing list section, 
+01:12 so here is our "main", startup for our dunder init, 
+01:15 and I've added an init_mailing_list section, 
 01:18 so first of all we're going to read this data in, so we can come over here to config, 
-01:22 I don't know if we've talked about this yet, but the config has a get settings, 
-01:27 which returns a dictionary of all the things that are in that area, 
+01:22 I don't know if we've talked about this yet, but the config has a get_settings, 
+01:27 which returns a dictionary of all the things that are in that area 
 01:31 we were  just looking at. 
 01:33 If we want the MailChimp API key, it's pretty straightforward, 
 01:37 we just say settings.get or however we do dictionary access, right, 
 01:42 do you want to crash or get null if the key is not there; 
 01:45 so we'll do this, and let's just say that's not misspelled, 
-01:49 so we'll grab this value and then we'll also do for the list id, OK, 
-01:52 so it's loaded into our running Python app, now where do we store it, 
-01:56 well, much like we have an album service, let's create an email service. 
+01:49 so we'll grab this value and then we'll also do for the list_id, OK, 
+01:52 so it's loaded into our running Python app, now where do we store it? 
+01:56 Well, much like we have an album service, let's create an email service. 
 02:01 Or a mailing list service. 
-02:06 OK, and down here let's just create a class called mailing list service,
+02:06 OK, and down here let's just create a class called MailingListService,
 02:10 and let's just give it a couple of pieces of information, 
 02:14 first of all, maybe you could hold that, right, 
 02:20 and maybe we could treat these as static 
 02:22 so we'll have a static initialize method here that we can initialize in the beginning 
-02:25 and then those will be set for the rest of the app, so we'll call this global init, 
-02:31 so here we can come down and say I want to set mailing list service.mailchimp_api 
-02:37 is going to be this, and what else do we want, 
-02:40 we want to set the list to be the list, like so. 
+02:25 and then those will be set for the rest of the app, so we'll call this global_init, 
+02:31 so here we can come down and say "I want to set MailingListService.mailchimp_api 
+02:37 is going to be this", and what else do we want? 
+02:40 We want to set the list to be the list, like so. 
 02:46 And that is going to store the data here,
-02:48 and then later we're going to have things like def, add subscriber, email. like that,
-02:55 something like that, and let's just put a pass, 
-02:58 so in this area we are actually going to work with the MailChimp API itself 
+02:48 and then later, we're going to have things like "def add_subscriber... email". Like that,
+02:55 something like that, and let's just put a pass. 
+02:58 So in this area we are actually going to work with the MailChimp API itself 
 03:01 and use this information that got set during startup to initialize the API 
 03:07 and then we'll do the work that we've got to do to actually submit the user to the list, 
 03:12 so last thing to do is import and call this from dunder init, so let PyCharm import it, 
-03:18 thank you PyCharm, and then we'll call global init and what do we want to give it, 
-03:21 the MailChimp API and MailChimp list id. And after that, 
-03:26 we should be able to go and call MailChimp mailing list.add subscriber, 
+03:18 thank you PyCharm, and then we'll call global_init and what do we want to give it, 
+03:21 the mainchimp_api and mailchimp_list_id. And after that, 
+03:26 we should be able to go and call MailChimp mailing list .add_subscriber, 
 03:33 and just know that that information is already right there for that class to use 
 03:38 to get them on the list, but of course, we're not doing this here, 
 03:41 we're going to do this somewhere else. 

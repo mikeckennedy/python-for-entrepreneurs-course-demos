@@ -1,6 +1,6 @@
 00:01 We have an account class but we don't have an account table.
 00:04 Now remember, all we should have to do is run this app, 
-00:08 it will know what derives from this, it's sqlaclhemy based 
+00:08 it will know what derives from this, it's SqlAlchemyBase 
 00:12 and it's going to add the table, remember if the table exists, it won't update it, 
 00:16 but if it doesn't exist it will create it. 
 00:19 But it's not going to work, I want to just remind you why. 
@@ -9,10 +9,10 @@
 00:32 where we had to import these things, 
 00:34 well, we need to do that again, and for account.
 00:38 Now if I run it, what this is doing is making sure we have that 
-00:42 before we call create all on our sqlalchmey base, 
-00:45 the SQLAlchemy base has seen the account, so run that again, 
-00:49 over here, a little refresh, 
-00:52 yeey we have an account class with all the things we'd like. 
+00:42 before we call create_all on our SqlAlchemyBase, 
+00:45 the SqlAlchemyBase has seen the account, so run that again, 
+00:49 over here, a little refresh. 
+00:52 Yay, we have an account class with all the things we'd like. 
 00:56 We have our text id, we have our email with the uniqueness, 
 00:59 with the constraint, and with an index, 
 01:02 and some constraints over here as well. 

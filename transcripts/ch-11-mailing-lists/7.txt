@@ -5,8 +5,8 @@
 00:18 API key is really important to keep secret, list id not so much. 
 00:22 You'll see that you'd have to actually put that in some of the forms 
 00:26 that you put on your page if you take some of the form code I think, 
-00:29 but the API key you want to make this is not shared so be careful with it. 
-00:34 Here you saw we put it into our project any file, 
+00:29 but the API key, you want to make this is not shared, so be careful with it. 
+00:34 Here you saw we put it into our project.ini file, 
 00:37 we have the development.ini and the production.ini 
 00:40 and then we're going to use the config.get_settings to pull that out by key 
 00:44 so here config.get_settings gets that settings dictionary right there 
@@ -17,45 +17,45 @@
 00:59 that we just stored it globally as a static field there.
 01:03 Now we want to add subscribers, of course, we get the email address, 
 01:07 if you can get their first name and last name that's great, 
-01:09 if you don't have it you can just put the email address, 
-01:12 and we're going to use MailChimp's class so mailchimp 
+01:09 if you don't have it, you can just put the email address, 
+01:12 and we're going to use MailChimp's class, so mailchimp 
 01:17 the package.mailchimp the class 
 01:19 and we create that by calling initializer with the API key 
-01:22 and it gets us the API then we just say api.lists.subscibe and it takes the list id, 
-01:27 the email address as a dictionary, funky, double opt in true or false, that's up to you, 
-01:33 you've got to decide for yourself, and so update existing true, replace interest false. 
-01:38 Now, why do you want to do this false?
+01:22 and it gets us the API, then we just say api.lists.subscibe and it takes the list id, 
+01:27 the email address as a dictionary, funky, double_optin True or False, that's up to you, 
+01:33 you've got to decide for yourself, and so update_existing=True, replace_interests=False. 
+01:38 Now, why do you want to do this False?
 01:40 Well, we can look at segmentation, just for a minute.
-01:43 If we want to actually put people into different groups
+01:43 If we want to actually put people into different groups,
 01:47 maybe they are coming in as an unqualified lead, 
 01:49 and then once they have bought an album, 
 01:52 we could both indicate both which album they bought as well as 
 01:56 that they are a purchaser of an album and once they have attended the live event, 
 02:00 we could put them in yet another group and we could go to MailChimp and say 
-02:03 show me all the people who have come to a live event, 
+02:03 "show me all the people who have come to a live event, 
 02:05 show me all the people who have bought one of our albums. 
 02:08 I want to mail everybody who bought this album,
-02:12 and tell them there is now a new bonus track that they could download. 
-02:15 So you would use segmentation and groups for that, 
-02:17 so here is the code you've got to write for that, it's not super obvious but it's not hard either. 
+02:12 and tell them there is now a new bonus track that they could download." 
+02:14 So you would use segmentation and groups for that, 
+02:16 so here is the code you've got to write for that, it's not super obvious but it's not hard either. 
 02:20 So you've got to go to MailChimp, and actually go to the list 
 02:23 and go to the interest groups then create a group and then within there 
 02:28 you have to create little subgroups called interest and groupings 
 02:32 and once you do that, you can take those and subscribe people to it, 
 02:35 so suppose I have a group or an interest named TalkPython groups
-02:41 and one of the subgroups is called training, 
+02:41 and one of the subgroups is called Training, 
 02:45 so there will be all the people who took my classes, right, 
 02:48 as opposed to people who signed up through the podcast 
-02:51 or some other random source that they may be signed up. 
-02:54 So, here would be training and if I want to indicate put on this list 
-02:59 and flag them or segment them to know that they came from the training angle 
+02:50 or some other random source that they may be signed up. 
+02:54 So, here would be Training and if I want to indicate put on this list 
+02:58 and flag them or segment them to know that they came from the training angle, 
 03:02 not the podcast angle, then I would do something like this,
 03:04 I would create this group and this subgroup and then piece in code 
-03:07 and then I would use the merge vars with groupings set to that value 
+03:07 and then I would use the merge_vars with groupings set to that value 
 03:12 and both lower case and uppercase because sometimes it varies, 
 03:16 that's kind of funky but you know, you do what works sometimes
-03:19 when you are working with APIs right, 
-03:22 and it's in this case where replace interests may be important to be false, 
+03:19 when you are working with APIs right? 
+03:22 And it's in this case where replace_interests may be important to be False, 
 03:26 if you want to have them additionally in say like the PyGrass group 
-03:30 and the training group if you knew that they came from both locations, 
-03:33 right, did you say replace interest is false. 
+03:30 and the Training group if you knew that they came from both locations, 
+03:33 right, did you say replace_interest is False. 

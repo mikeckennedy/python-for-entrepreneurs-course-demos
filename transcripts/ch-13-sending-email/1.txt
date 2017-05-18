@@ -1,14 +1,14 @@
-00:02 Remember back in the mailing list section where I talked about sending email 
-00:06 how important email is for your business and, communicating with your users? 
+00:02 Remember back in the mailing list section where I talked about sending email, 
+00:06 how important email is for your business and communicating with your users? 
 00:11 Well, MailChimp is great for things like newsletters 
 00:14 and certain types of bulk emailing. 
 00:17 However, sometimes you want to send one email to one person, 
-00:21 things like hey I forget my password or 
-00:23 thanks for creating an account, or things like that.
+00:21 things like "hey, I forget my password" or 
+00:23 "thanks for creating an account", or things like that.
 00:27 And I am going to show you how to add that capability
 00:29 as well as accepting inbound email to your web application. 
-00:32 You probably have all received at least one or two emails from my system
-00:36 here you see one Talk Python Training, this is the email you get 
+00:32 You probably have all received at least one or two emails from my system,
+00:36 here you see one, Talk Python Training, this is the email you get 
 00:39 when you create an account for the very first time. 
 00:42 You can see it has a nice HTML version with pictures and everything.
 00:45 What you can't see is also there is a text version as well 
@@ -22,21 +22,21 @@
 01:10 You can see if we take a step back one slide, look right at the top, 
 01:13 it says Talk Python Training via Amazon SES, 
 01:16 so you can  tell that was sent through SES on behalf of Talkpython.fm. 
-01:21 So this is a simple email service you just get smtp server address, a port, 
+01:21 So this is a simple email service, you just get SMTP server address, a port, 
 01:25 a username and a password, you set that up in your web app, 
-01:29 you create a standard Python smtp client that can send email, 
+01:29 you create a standard Python SMTP client that can send email, 
 01:34 and then you just start just sending HTML email, 
 01:38 we'll talk about specifically how to do that, 
-01:41 and we'll go into a demo to see how to do that, 
-01:43 you might be wondering what does this AWS thing cost,
-01:46 like could I afford to use this, or would it just make more sense 
-01:48 to actually create mailing server. 
-01:51 Now, realize that SES actually does anti spam things, it tracks bounces for you, 
+01:40 and we'll go into a demo to see how to do that, 
+01:42 you might be wondering what does this AWS thing cost,
+01:45 like "could I afford to use this, or would it just make more sense 
+01:48 to actually create mailing server?" 
+01:51 Now, realize that SES actually does anti-spam things, it tracks bounces for you, 
 01:57 it helps all sorts of behind the thing stuff 
 02:00 to make sure your email domain remains trusted. 
 02:03 So what does this service cost? 
 02:05 Well, as far as I am concerned, it's basically free, 
-02:09 it costs 10 cents per 1000 emails, or 1 cent US dollars per hundred emails.
+02:08 it costs 10 cents per 1000 emails, or 1 cent US dollars per hundred emails.
 02:14 So, you can basically send as many emails as you want, 
 02:18 if you have so many users and so many emails going per day, 
 02:21 to register, you are going to have a thriving business. 
