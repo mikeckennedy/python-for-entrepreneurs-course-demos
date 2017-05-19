@@ -6,26 +6,26 @@
 00:25 how much did you pay for it, what date was it purchased on, 
 00:28 what was your email, how did you pay, things like that. 
 00:31 So, you can imagine the rest of the formatting that you already saw, 
-00:34 stick this right in the middle and that is pretty much what you get, 
-00:38 so I'll use a dictionary with the course URL fragment set, the course price, 
+00:34 stick this right in the middle and that is pretty much what you get. 
+00:38 So I'll use a dictionary with the course URL fragment set, the course price, 
 00:43 already formatted, I typically format that to a string in Python 
-00:47 and send it over like 69.00 or just 69 however you want it to appear, 
+00:47 and send it over like 69.00 or just 69, however you want it to appear, 
 00:52 so you don't rely on the string, 
-00:57 sort of string representation of whatever it is you pass across, 
-01:00 similarly with the purchase date text I'll actually create a string 
+00:57 sort of string representation of whatever it is you pass across. 
+01:00 Similarly with the purchase date text, I'll actually create a string 
 01:03 exactly the way I'd like it to look, in Python and then just pass that, 
-01:08 ultimately, that string in the dictionary and so on.
+01:08 ultimately that string in the dictionary and so on.
 01:11 So this is really easy, how do we load this up and actually send it? 
 01:15 This method sort of combines two of the things we did, 
 01:18 it's a little harder to use but if we want to get a template from a file 
 01:22 so we'd pass in the HTML file name in a replacement dictionary, 
 01:27 and we'll just read the text in, not all emails are going to have a replacement, 
-01:31 like maybe you are going to send hey thanks for signing up 
+01:31 like maybe you are going to send "hey, thanks for signing up" 
 01:34 and that is the same for everybody, you don't have to pass like some dictionary, 
-01:38 you can just send, just return the HTML. 
-01:40 But if we do have a replacement dictionary we are going to use
+01:37 you can just send, just return the HTML. 
+01:40 But if we do have a replacement dictionary, we are going to use
 01:44 my little curly syntax {some text name} 
-01:47 and we'll just do a replace straight up string replace on all the keys in the dictionaries 
+01:47 and we'll just do a replace, straight up string replace on all the keys in the dictionaries 
 01:52 with their various values and return it. 
 01:54 And that is it, you are sending HTML email out of files that you can manage separately 
 02:00 that are not in code, that are not in a database, that are very simple for people 

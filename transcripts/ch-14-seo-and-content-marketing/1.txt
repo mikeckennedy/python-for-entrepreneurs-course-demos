@@ -1,11 +1,11 @@
 00:01 You worked really hard on building your business. 
-00:04 But prospective customers are not just going to show up for no reason, 
-00:07 you will have to take a thoughtful intentional approach towards marketing 
-00:10 particularly with the content that you create and making sure 
+00:03 But prospective customers are not just going to show up for no reason, 
+00:06 you will have to take a thoughtful intentional approach towards marketing 
+00:09 particularly with the content that you create and making sure 
 00:12 that that content appears as high as possible 
 00:15 in Google through search engine optimization. 
 00:17 So that is what this chapter is about, 
-00:20 search engine optimization and a bit of an introduction to content marketing 
+00:19 search engine optimization and a bit of an introduction to content marketing, 
 00:23 which will set the foundation for our growth hacking chapter later on.
 00:26 Search engine optimization or SEO seems like it's a complicated topic, 
 00:31 a dark art, but really, what it comes down to is just making your business 
@@ -25,7 +25,7 @@
 01:19 you're going to get 90 percent of the results. 
 01:22 You can read entire books on SEO but what we're covering in this chapter 
 01:25 is absolutely the most important parts and there are very simple principles. 
-01:29 Ultimately, this will make what you create better and because it's better 
+01:29 Ultimately, this will make what you create better and because it's better, 
 01:33 it's more likely to pop up at the top of search results.
 01:37 And what should you create in order to market your business? 
 01:39 Well, content can fall into many different categories 
@@ -39,13 +39,13 @@
 02:03 for a solution to a problem they have about Vim,
 02:05 they are likely to stumble upon my site 
 02:08 and if they have stumbled upon it several times, 
-02:10 they may say well what else could this provide me 
-02:12 that may make it easier for me to use Python with Vim. 
-02:15 Content marketing provides the first touch point 
-02:18 with prospective customers to your product. 
-02:20 The main thing to remember is that you're helping prospective customers,
-02:23 you are not sales pitching them, you don't lead with here is my product, 
-02:25 use it, buy it, you're assisting them solving the problem that they have 
+02:10 they may say well "what else could this provide me 
+02:12 that may make it easier for me to use Python with Vim?" 
+02:14 Content marketing provides the first touch point 
+02:17 with prospective customers to your product. 
+02:19 The main thing to remember is that you're helping prospective customers,
+02:23 you are not sales-pitching them, you don't lead with "here is my product, 
+02:25 use it, buy it", you're assisting them solving the problem that they have 
 02:29 using information, and once you write this content, 
 02:31 you're going to use search engine optimization in order to make sure 
 02:34 that content is more likely to be found, so these two concepts work together, 
@@ -56,12 +56,12 @@
 02:49 first off, when you break down an HTML page, 
 02:52 there is certain elements that explain to Google what that page is about, 
 02:55 and this has been true of any search engine, 
-02:58 since the start of the world wide web, the title tag, the h1 tags, meta descriptions. 
-03:02 Titles and h1s have been around since the very beginning 
+02:57 since the start of the World Wide Web, the title tag, the H1 tags, meta descriptions. 
+03:02 Titles and H1s have been around since the very beginning 
 03:05 and meta descriptions are more recent, 
 03:07 but each of these is an indicator to Google what your content is about, 
 03:10 search engines also have a preference on content length and the clarity of the text. 
-03:15 There are many complicated algorithms on Google side or on microsoft side 
+03:15 There are many complicated algorithms on Google side or on Microsoft side, 
 03:19 when they search an index or content you don't really have to worry about that, 
 03:22 all you have to do is make sure that the content length is appropriate 
 03:25 and that your writing is clear, it's appropriate for the audience that you're writing for. 
@@ -78,6 +78,6 @@
 04:00 less on the desktop, 
 04:02 your site and the content that you create should support any type of reading habit, 
 04:05 through the next few videos, we'll break down each of these concepts, 
-04:08 using full stack Python as an example and then you can apply that 
+04:08 using Full Stack Python as an example and then you can apply that 
 04:11 to your own projects to make your content more appealing 
 04:14 and more likely to be found by prospective customers. 

@@ -1,49 +1,49 @@
 00:02 Let's return to our account controller. 
 00:05 Now, there is actually a bunch of small fiddly work that you have to do 
-00:10 to get the password reset process in place, there is three different views,
-00:14 let's go in our templates, and I'll show you. 
-00:17 So first of all, you need to update the sign in process so next to the sign in, 
-00:23 you could say something like here is the login information email, password, login, 
-00:28 and then oh did you forget your login, click here to reset it. 
-00:31 So then, that will take us over to this forgot password view, 
-00:34 this will let you enter your email address and say I would like to reset my password 
+00:09 to get the password reset process in place, there is three different views,
+00:14 let's go in our templates and I'll show you. 
+00:17 So first of all, you need to update the sign in process, so next to the sign in, 
+00:23 you could say something like "here is the login information... email, password, login", 
+00:28 and then "Oh, did you forget your login? Click here to reset it." 
+00:31 So then, that will take us over to this forgot_password view, 
+00:34 this will let you enter your email address and say "I would like to reset my password", 
 00:38 which will trigger the creation of a password reset in the database, 
 00:42 and send you an email with that information that you can use. 
-00:45 Then we also want to tell you hey, we sent that to you correctly, 
-00:49 so we have a reset sent view, we could have just added that as a view 
-00:56 to the forgot password form and shown it only after it was submitted, 
+00:45 Then we also want to tell you "hey, we sent that to you correctly", 
+00:49 so we have a reset_sent view, we could have just added that as a view 
+00:56 to the forgot_password form and shown it only after it was submitted, 
 01:00 but it's just about as easy to have to views as it is 
-01:04 to have the conditional logic to make that happen. 
-01:07 So we have this, and then finally there is a link that the person gets 
-01:10 in their email address, when they get in their email address, 
-01:13 they are going to click it and it is going to take them to a form, here, 
+01:03 to have the conditional logic to make that happen. 
+01:06 So we have this, and then finally there is a link that the person gets 
+01:09 in their email address, when they get in their email address, 
+01:12 they are going to click it and it is going to take them to a form, here, 
 01:15 where they can actually enter their new password and it will reset it 
 01:18 and then they can go log in. 
 01:20 So, I went and put those forms together for you, 
 01:23 there is nothing fancy, they are just like the log in forms and so on,
 01:27 but there is no use in you watching me do that, right, 
-01:29 you've done these forms over and over so it's all good, 
+01:29 you've done these forms over and over, so it's all good, 
 01:32 you can review the code if you want and you'll see it in the demo. 
 01:35 Now at the bottom of the account controller I added the corresponding action methods, 
-01:39 and the view models, OK, so here is the forgot password form, right, 
-01:43 this tells you what it does, we've got the get post redirect pattern, 
-01:48 we are not redirecting yet, we will, it's got the forgot password view model
+01:39 and the view models, OK, so here is the forgot_password form, right, 
+01:43 this tells you what it does, we've got the GET / POST /Redirect pattern, 
+01:48 we are not redirecting yet, we will, it's got the ForgotPassWordViewModel
 01:53 that has a few pieces of information like what is your email address and things like that. 
-01:57 Then of course we have the basic reset sent and then we have the form 
+01:57 Then of course we have the basic reset_sent and then we have the form 
 02:01 to do the actual reset itself. 
 02:04 OK. But, notice, these don't really do anything, other than just hold the data. 
 02:08 So our job will be to create the table in the database so it manages the reset password, 
 02:13 set up the code to do the resets and send the emails. 
 02:17 Oh yes, and over in the email section here, 
 02:20 we now have a template for password reset, here, 
-02:23 and let's just view this in the browser, here you can see this is a basic looking one,
+02:23 and let's just view this in the browser, here you can see this is a basic-looking one,
 02:29 this is just one of those template emails we already talked about, 
 02:33 so we heard about your password at Blue / Yellow rockets, remember,
 02:37 this is an image and I haven't changed it, 
 02:40 we are just going to go with that image for now. 
 02:42 If you click this button to reset it, it's going to take you to this URL 
 02:45 which is where things are running. 
-02:48 And then it's going to say account/reset password 
+02:48 And then it's going to say account/reset_password 
 02:51 and then we are going to replace the reset code 
-02:54 with whatever the reset code that we generate for them is. 
+02:53 with whatever the reset code that we generate for them is. 
 02:57 Alright, so that's the plan, let's put it into action. 

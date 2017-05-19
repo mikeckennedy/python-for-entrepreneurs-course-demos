@@ -1,80 +1,80 @@
 00:01 So recall from last time, that we has sent a password reset, 
 00:04 we generated and sent a password reset email to my test account. 
 00:08 And here you can see we have exactly what we are looking for, 
-00:12 an account/ reset password with some giant hard to guess number 
+00:12 an account/reset_password with some giant, hard to guess number 
 00:16 or alphanumeric thing here. So what's left to do?
 00:20 Well, we need to actually perform the password reset and that involves adding validation,
 00:26 make sure that this is real, active, not used with the right account sort of code here 
 00:32 and we are going to actually set the password and use up 
 00:36 and record that effect that password reset was used, let's start here.
 00:42 So this is the reset password piece, now actually, 
-00:45 this even the get requires a little bit of validation. 
+00:45 this even the GET requires a little bit of validation. 
 00:51 When we see this page, we would like to see a message that says 
-00:54 something to the effect of sorry, this password reset code is invalid or expired 
+00:54 something to the effect of "sorry, this password reset code is invalid or expired" 
 01:00 or something like that, so let's go here and do vm.validate, 
 01:04 now we haven't done much of that method yet but we are about to, 
 01:08 and then we'll show this back, 
-01:11 now, in the get, we are not going to redirect somewhere, 
+01:11 now, in the GET, we are not going to redirect somewhere, 
 01:15 we are just going to show them a message,
 01:17 this validate will generate a message which will get shown saying 
-01:20 hey this was already used, something like that. 
-01:23 So what is happening, well, we are going to need to restore this from the dictionary, 
+01:19 "hey, this was already used", something like that. 
+01:22 So what is happening? Well, we are going to need to restore this from the dictionary, 
 01:27 so if we run it the way it is now, it's going to give us this message saying 
-01:31 reset code not found and it is going to hide the form to submit the password, 
+01:31 "reset code not found" and it is going to hide the form to submit the password, 
 01:38 because we haven't called from dictionary, 
 01:41 now you might wonder where is the dictionary coming from, 
 01:44 it's coming from the route, not a form, so we'll come over here 
-01:47 and say vm not from dict, remember, 
+01:47 and say vm.from_dict, remember, 
 01:50 we have this merge dictionary, it has the routes, 
 01:53 it has the query string, it has the forms, all that, 
 01:55 so if we rerun this, it should revalidate, OK, now it's found the code, that's good, 
-02:04 so next, now we have a code, let's try to get it from the database, 
+02:03 so next, now we have a code, let's try to get it from the database, 
 02:07 and that's going to come out of the account service, 
-02:09 I think it's probably the best place, so we'll say account service.find reset code 
+02:09 I think it's probably the best place, so we'll say AccountService.find_reset_code 
 02:13 and we're just going to give it the code. 
-02:18 And let's store this, we'll say self. reset, I think it's what I called it up here, 
-02:22 let's look, yes, self. reset right there.
+02:18 And let's store this, we'll say self.reset, I think it's what I called it up here, 
+02:22 let's look, yes, self.reset right there.
 02:25 So that is going to set the code, and then validate, 
 02:28 we can come down here and we are already checking that 
-02:31 when they are setting the password, when they are actually doing the post back, 
-02:34 we are checking for the password, we don't want to check for that on the get only on the post, 
+02:31 when they are setting the password, when they are actually doing the POST back, 
+02:34 we are checking for the password, we don't want to check for that on the GET only on the POST, 
 02:37 so we have this mechanism to indicate whether it's get or not, 
-02:41 you can see that happening here on the post version, this is false
-02:51 it defaults to true, OK so the last two things is to add validation around the reset code,
+02:41 you can see that happening here on the POST version, this is False
+02:51 it defaults to True, OK so the last two things is to add validation around the reset code,
 02:56 so we'll say this, actually let's go ahead and use this up here, 
 03:01 we'll just say if this query didn't actually set a reset thing, 
 03:06 we'll say the reset code is not found, OK, so that will do two in one,
-03:10 and then down here we want to say self.reset was used 
-03:15 then we'll do a message like so, this reset code has already been used. 
+03:10 and then down here we want to say "self.reset_was_used", 
+03:15 then we'll do a message like so, "This reset code has already been used." 
 03:24 Alright, that's good, and then if it's expired, 
 03:29 what does expired mean, expired means, 
 03:32 let's say 24 hours, 7 days, let's go 24 hours, huh? 
 03:37 So let's just compute the time from when the reset code was created, 
 03:41 that was automatically set, to now or reverse rather, 
 03:45 so now minus when this thing was created, 
-03:53 create a date we called it, so that is going to be the change, 
+03:53 created_date we called it, so that is going to be the change, 
 03:58 and then let's move this down, right where we are using it, 
-04:03 let's say this, if dt.total day, or total seconds, so we got to turn that into days, 
+04:03 let's say this, if dt.total_days, or total_seconds, so we got to turn that into days, 
 04:08 let's just do it like that, days=dt.total_seconds divided by 60 to get minutes, 
 04:14 divided by 60 to get hours, divided by 24. 
 04:19 we'll say days is greater than 1, then we are just going to say it's expired, 
 04:24 otherwise, if it makes it through all of this, we are going to be golden. 
-04:27 This reset code has expired. generate a new one 
+04:27 "This reset code has expired, generate a new one"
 04:33 Let's try this again, OK, if I rerun this, how is everything looking? 
 04:38 Oh reset code not found. Why was it not found? 
 04:41 Because we have not implemented that query yet, let's go do that. 
 04:46 Which one am I talking about?
-04:48 This one right here, find reset code, so let's go write that, 
+04:48 This one right here, find_reset_code, so let's go write that, 
 04:51 so we are going to do a session, right, this is going to be super easy 
-04:54 so we'll say reset=session remember how this goes, query of password reset, 
-05:05 we'll do a filter, password reset.id= code, and then what do we want next, 
+04:54 so we'll say "reset = session" remember how this goes, query of PasswordReset, 
+05:05 we'll do a filter, password_reset.id == code, and then what do we want next, 
 05:17 first like that, we are just going to return reset, 
 05:21 so either we are going to find one or not, now let's see if this works again. 
 05:25 Oh perfect, so it found it but this one is expired, 
 05:31 apparently it's been more than 24 hours since I've done that last segment, 
 05:37 let's just double check that here. 
-05:40 This was sent, yes, one day ago, beautiful, OK. 
-05:44 So it looks like it's working, I am going to send a new reset code. 
+05:39 This was sent, yes, one day ago, beautiful, OK. 
+05:43 So it looks like it's working, I am going to send a new reset code. 
 05:48 Alright, it was sent, let me check the email, 
 05:53 OK we are in good shape, zero minutes ago, let's see if this one works. 
 05:57 Boom it passes all the validation, it's not been used, it's not expired, things like that, 
