@@ -6,9 +6,9 @@
 00:19 between the base URL fullstackpython.com and this particular page,
 00:23 it's a simple URL as possible with perhaps the .html. 
 00:27 Now, the .html provides no penalty 
-00:31 so whether you have a clean URL with or without that, 
+00:30 so whether you have a clean URL with or without that, 
 00:33 for example, if we just had web frameworks, be the same thing, 
-00:36 and I suggest for each of your pages don't nest more than one folder deep 
+00:36 and I suggest for each of your pages, don't nest more than one folder deep 
 00:40 so what do I mean by folder? 
 00:43 I created a blog last year and this is for specific topics, 
 00:46 the blog top of the page is not in our folder, but when you click on an individual post, 
@@ -25,19 +25,19 @@
 01:26 while still maintaining all of the keywords that you want people 
 01:30 to find your content when they search for those keywords, 
 01:34 now a couple of other simple rules, you'll see 
-01:36 that I have how to make phone calls in Python as the full title but the URL 
-01:40 only has make phone calls Python, and that is because the filler words 
-01:44 like two, in, a, and, don't need to be in your URL, just keep it to the keywords. 
-01:50 I could have just as easily said how to make phone calls Python 
+01:36 that I have "How To Make Phone Calls in Python" as the full title but the URL 
+01:40 only has make-phone-calls-python, and that is because the filler words 
+01:44 like "two, in, a, and" don't need to be in your URL, just keep it to the keywords. 
+01:50 I could have just as easily said "how-to-make-phone-calls-python"
 01:54 but I kept it as short as possible, short URLs are better not only for search rankings, 
-01:59 but also if someone wants to give the URL directly to someone else
-02:03 they don't have to use a URL shortener like bitly 
+01:59 but also if someone wants to give the URL directly to someone else,
+02:03 they don't have to use a URL shortener like Bitly 
 02:06 in order to send over something that is not a gigantic piece of text. 
 02:09 So keep the slug, what is often referred to as the slug, 
 02:13 as short as possible, for the content that you create.
 02:15 This is one that you don't need to overthink, make sure that the fully qualified URL 
 02:19 is only one folder deep in the URL and keep that slug simple with the keywords 
 02:24 that you are targeting and remove any extraneous words 
-02:29 like and, to, the, from the URL. 
+02:29 like "and, to, the" from the URL. 
 02:32 By following those simple rules, very clean URLs, 
 02:35 they are more likely to appear at the top of the search results.  

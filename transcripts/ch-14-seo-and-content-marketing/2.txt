@@ -14,7 +14,7 @@
 00:40 that you believe your customers are going to be searching for. 
 00:43 Let's take a look at a couple of examples, so my book on Python deployments, 
 00:46 typically goes along with web development, 
-00:49 so if someone searches for Python web development, 
+00:49 so if someone searches for "python web development", 
 00:52 I want my website with good quality content
 00:55 that is going to help that user to appear first, organically. 
 00:58 And that is the first thing that we're going to see here, 
@@ -29,7 +29,7 @@
 01:23 A couple of things we can see about this, 
 01:25 number one, we've got the full title for this web page, 
 01:28 we've got the specific URL including bolded parts of the URL 
-01:33 that matches our search terms, Python web development. 
+01:33 that matches our search terms, "python web development". 
 01:36 That is an indicator, not only to Google but for the searcher 
 01:39 that this web page is exactly the content that they are looking for 
 01:43 and then we have a short description down here, web development,
@@ -91,7 +91,7 @@
 04:44 And you can do that by making sure that your CSS, 
 04:47 which you learned about earlier, is following responsive design. 
 04:50 Now let's try this search term again, on the iPhone 6, simulating the iPhone 6. 
-04:53 And we can still search up top here, we can say Python web development, 
+04:53 And we can still search up top here, we can say "python web development", 
 05:03 now it's a little small, so let's bump up the size here. 
 05:06 Now we can see there is two ads, 
 05:10 and then again, Python web development pops up. 
@@ -118,7 +118,7 @@
 06:33 if you want to go to a drill down page such as postgres. 
 06:36 So the general theme is, think about the topics 
 06:39 that your users are going to be searching for, 
-06:42 if you built a business related to selling vacuum cleaners 
+06:42 if you built a business related to selling vacuum cleaners, 
 06:45 you wouldn't create Python content, you would create content about 
 06:48 what the best vacuum cleaners are, 
 06:51 or common solutions to fix an issue with your vacuum cleaner, 
@@ -129,15 +129,15 @@
 07:06 I want to point out some important elements on this page, 
 07:09 that we're going to dive into further in the next few videos. 
 07:12 Now you already know I'll write HTML and there is some important elements here, 
-07:17 one of which the meta description, meta name=description, 
+07:17 one of which the meta description, meta name="description", 
 07:21 is not actually a required element on a web page, 
 07:23 but it's really important because this is what often sets the description 
 07:28 that people see when they search for a specific term, 
-07:32 so again, Python web development and we can see, 
+07:32 so again, "python web development" and we can see, 
 07:36 web development catch all term, if we look at the meta description 
 07:39 this actually matches exactly 
-07:42 what is in this meta description and the search results, 
-07:46 now that is not guaranteed to happen, but if you put the right terms 
+07:42 what is in this meta description and the search results.
+07:46 Now that is not guaranteed to happen, but if you put the right terms 
 07:49 into the meta description it's likely that this is what is going to pop up 
 07:53 as the description on the search results page. 
 07:56 A couple of other things, one is the title, and it's a unique title, 
@@ -149,8 +149,8 @@
 08:20 Let's say we want to write a book or some guide on monitoring 
 08:23 and we want people to be able to find monitoring. 
 08:26 Now, I have a page on that as well, and you will see it follows the same pattern 
-08:33 as the other one, we have a nice, clean H1 tag, good URL structure, 
-08:35 that is not too deeply nested in a bunch of subfolders, 
+08:29 as the other one, we have a nice, clean H1 tag, good URL structure, 
+08:34 that is not too deeply nested in a bunch of subfolders, 
 08:37 and again, we have a bunch of useful information 
 08:40 along with links to other projects and services that are going to be useful 
 08:44 for someone who is searching for monitoring for a Python application. 
@@ -176,8 +176,8 @@
 09:54 there is no other jQuery or React or Angular, nothing like that on this page, 
 09:59 which means that it loads extremely fast and site speed is really important
 10:03 for appearing higher up in the search results. 
-10:06 So that is a quick overview with a couple of example pages, 
-10:09 an example queries where in my case with Full Stack Python 
+10:06 So that is a quick overview with a couple of example pages 
+10:09 and example queries, where in my case with Full Stack Python 
 10:12 it's advantageous to appear at the top of the search results for these search terms. 
 10:16 So, it's going to depend on what your business is, who your audience is, 
 10:19 so you're going to want to write down a bunch of the search terms 

@@ -13,19 +13,19 @@
 00:45 let's just pick the Jumpstart course, and come down here you can see 
 00:49 there is a button here that says buy now, get lifetime access for 69 dollars. 
 00:53 So, if i click this, notice I am not logged in,
-00:59 it says OK we are going to buy this course, here is a little logo, 
-01:02 I can put in my email, if I were logged in that email would already be pre populated 
+00:58 It says OK we are going to buy this course, here is a little logo, 
+01:02 I can put in my email, if I were logged in, that email would already be pre-populated, 
 01:06 so I am going to put in a credit card, expiration date, CVC 
 01:10 and I hit pay and that's the entire funnel, that's the entire process. 
-01:14 This happens on Stripe server, this is actually coming from Stripe, 
-01:19 what I put here never goes to my server, it only goes to Stripe. 
+01:14 This happens on Stripe server, this is actually coming from Stripe. 
+01:19 What I put here never goes to my server, it only goes to Stripe. 
 01:24 Now, once this is submitted, a token, a one-time token will be sent back 
 01:28 to my Pyramid web app and then we'll do the processing to basically enter you 
 01:33 in the course so that I know to give you access to it, things like that. 
 01:36 So over here at stripe.com/checkout,
 01:39 they have many different options for what you can do, 
 01:42 but you can see they have a little example to show you what it looks like, 
-01:46 it looks similar to what I just showed you, right. 
+01:46 it looks similar to what I just showed you, right? 
 01:49 So, to get started, they have some documentation and basically 
 01:52 all you have to do besides having a Stripe account, 
 01:55 which does not require special type of bank account or anything, 
@@ -36,7 +36,7 @@
 02:13 so you can see all of this, these details, this data, 
 02:17 -key, data-amount and so on, this drives the UI that you saw. 
 02:21 Here you can see the script that is running this actually comes from Stripe, 
-02:25 and then you've got a final post back that you are going to go 
+02:25 and then you've got a final POST back that you are going to go 
 02:29 and this is where you receive the token to finalize the payment. 
 02:32 Now you are trading a little bit of flexibility here, 
 02:38 lack of flexibility for both avoiding some of the PCI compliance issues 
@@ -46,6 +46,6 @@
 03:01 no, no, look, those two things are wrong, already, 
 03:05 so if I put- no, no, I meant 21, all this nice validation is already good, 
 03:09 apparently that came back as some kind of credit card 
-03:12 but they don't only have just the UI4 but all the validation 
+03:12 but they don't only have just the UI for it but all the validation 
 03:16 and it's kind of playful as well, so let's go see 
 03:20 how we can take this API and embed it into our web app to buy albums. 

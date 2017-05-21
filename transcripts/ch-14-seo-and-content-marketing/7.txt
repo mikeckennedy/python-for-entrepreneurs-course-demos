@@ -3,8 +3,8 @@
 00:07 Fast can mean a couple of different things, the page load performance is important,
 00:11 both in your server responding to the web browser's requests, 
 00:15 so keeping the number of requests low is important, 
-00:17 but also the rendering time once the HTML, CSS and JavaScript is downloaded, 
-00:21 the browser has to render everything, so keeping the CSS small 
+00:17 but also the rendering time once the HTML, CSS and JavaScript is downloaded. 
+00:21 The browser has to render everything, so keeping the CSS small 
 00:25 and the JavaScript minimal improves the rendering time in the web browser. 
 00:31 Let's see how we can measure the speed off of the 
 00:33 web frameworks page as an example on Full Stack Python. 
@@ -23,7 +23,7 @@
 01:13 like the CSS, or the images that are on the page, 
 01:16 so we can see the page itself is first and then after that,
 01:19 once we have the page in the web browser, 
-01:22 the web browser then sees oh I got to also get the CSS, I got to get these images, 
+01:22 the web browser then sees "oh, I got to also get the CSS, I got to get these images", 
 01:26 and then we'll initiate request after the HTML is downloaded, 
 01:30 so that is why we can see these bars start after the page itself downloads. 
 01:35 Now the size is important, the average web page in 2016 
@@ -34,17 +34,17 @@
 01:53 that we can actually simulate a slow connection, so up here we have a no throttling, 
 01:58 so throttling is disabled, we can change the presets, 
 02:02 we can say well what if they are only on regular 3G connection, 
-02:05 what does that look like and then again,
+02:05 what does that look like? and then again,
 02:08 hit shift and then empty cache and hard reload, 
 02:11 and this is going to simulate a much slower connection. 
 02:14 Now this took three fourths of a second to finish. 
 02:17 On our fast, no throttled connection it finished in a tenth of the time, 
 02:23 so when I am working on improvements to my site, I try to keep throttling on, 
 02:26 keeping in mind that a lot of people 
-02:29 are going to be on cell phones, reading this content. 
-02:31 What is some other handy information that we can get out of here?
-02:34 We can see the number of requests, this page has six requests, 
-02:36 this was very low compared to most pages.
+02:28 are going to be on cell phones, reading this content. 
+02:30 What is some other handy information that we can get out of here?
+02:32 We can see the number of requests, this page has six requests, 
+02:35 this was very low compared to most pages.
 02:38 Let's take a look at New York Times.
 02:41 If we reload this, we can see it's still loading, 
 02:45 on a regular connection still not loaded, 
@@ -56,12 +56,12 @@
 03:26 adding a ton of JavaScript to your pages. Alright, let's go back over here,
 03:29 what else can we clean from the Chrome developer tools? 
 03:34 You can see the total amount transferred, so this page is a little bit less than 35 KB, 
-03:38 this would load really well on an old school modem, 
-03:41 we know that this would work well even for the lowest common denominator connection.
+03:38 this would load really well on an old school modem.
+03:41 We know that this would work well even for the lowest common denominator connection.
 03:46 Even people on the oldest cell phone networks are going to be able
-03:49 to load this page that is what you should target when you're creating content, 
+03:49 to load this page. That is what you should target when you're creating content, 
 03:52 and you're creating your blog, avoid using 
-03:55 JavaScript model view controller frameworks like Angular, 
+03:54 JavaScript model view controller frameworks like Angular 
 03:58 when you are creating content that other people are suppose to read. 
 04:01 The reason why this matters for search results is think about the user experience, 
 04:05 if your search result is the top one, a searcher clicks on it 
@@ -74,26 +74,25 @@
 04:29 don't have a bunch of JavaScript, put them together if possible, 
 04:33 make sure that your images are small 
 04:36 unless they really need to be large and detailed. 
-04:38 Now how do you get a benchmark other than the Chrome developer tools, 
-04:41 for how well you're doing. 
-04:43 Well, there is a couple of tools that I recommend, 
-04:45 one of them is a free tool via Pingdom, so this is tools.pingdom.com 
+04:38 Now how do you get a benchmark other than the Chrome developer tools for how well you're doing?
+04:42 Well, there is a couple of tools that I recommend, 
+04:44 one of them is a free tool via Pingdom, so this is tools.pingdom.com 
 04:48 and you can run a website speed test. 
 04:51 So I am just going to run this on the same page, 
 04:54 the web frameworks page of Full Stack Python, I'll take a few seconds, 
 04:56 and I'll run this test, and now we can see if we scroll down
-04:59 it's going to give us a performance grade sort of an arbitrary number 
+04:59 it's going to give us a performance grade, sort of an arbitrary number 
 05:03 but this one looks pretty good, tell us the load time, 
-05:05 you are typically aiming for something that is less than a second,
+05:05 you are typically aiming for something that is less than a second
 05:09 and I'll give you a relative performance indicator. 
 05:12 So faster than 99 percent of the tested sites that are out there, 
 05:15 six requests and the page size, the same information 
 05:18 we could get out of Chrome developer tools, 
-05:20 and you can test from different locations which could be really important 
+05:20 and you can test from different locations, which could be really important 
 05:23 if for example your audience is only in Asia, or if they are only in South America, 
 05:26 you can do tests from those locations. 
-05:29 And it will give you some insights into what you can do to improve your performance, 
-05:31 some of these you may not necessarily be able to do, for example, 
+05:29 And it will give you some insights into what you can do to improve your performance.
+05:31 Some of these you may not necessarily be able to do, for example, 
 05:34 leverage browser caching, this is just an issue with Google analytics, 
 05:39 nothing I can really do about that to make it better. 
 05:43 But the rest of these, especially for an unoptimized site could be really low score, 
@@ -110,8 +109,8 @@
 06:21 and then provide us with some fixes. 
 06:24 There will typically be other rules when you are working with your unoptimized site 
 06:28 where maybe you don't have minified CSS, 
-06:31 or you have a bunch of redirects that are not necessary 
-06:34 so what is great about this is you are going to be testing for both mobile and desktop 
+06:31 or you have a bunch of redirects that are not necessary. 
+06:34 So what is great about this is you are going to be testing for both mobile and desktop 
 06:38 and it's another free tool that allow you to improve the content 
 06:41 and if you are improving your performance over time, 
 06:44 it will definitely help to improve your search rankings. 
