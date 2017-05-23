@@ -1,4 +1,4 @@
-00:00 We need to talk about a couple of must have for the site that is hosting your content. 
+00:00 We need to talk about a couple of must-haves for the site that is hosting your content. 
 00:04 HTTPS support and readability on mobile. 
 00:07 Let's look at a couple of easy ways to do both. 
 00:10 So Full Stack Python has HTTPS support, it's listed as a secure website, 
@@ -25,14 +25,14 @@
 01:18 is through responsive design, Full Stack Python is based on Bootstrap version 3 
 01:22 which has responsive design built right into it, 
 01:25 and I recommend using a CSS framework 
-01:28 that just has responsive design built into it, 
-01:30 use that as you are building your site up. 
-01:33 So we can see all this looks fine on whatever mobile device you are using, 
-01:36 whether it's an iPhone, or a Galaxy S, any of those. 
+01:27 that just has responsive design built into it, 
+01:29 use that as you are building your site up. 
+01:32 So we can see all this looks fine on whatever mobile device you are using, 
+01:35 whether it's an iPhone, or a Galaxy S, any of those. 
 01:39 One reason why this is so important right now, is that Google changed their index,
 01:43 so instead of it being desktop first, it's now mobile first, 
 01:46 the search engine results on mobile devices are based 
-01:50 on whether your site is mobile friendly, if you are not mobile friendly, 
+01:50 on whether your site is mobile-friendly, if you are not mobile-friendly, 
 01:53 you are going to take a huge penalty in the search rankings. 
 01:56 So make sure whether your readers are on desktop or on mobile, 
 01:59 they will have a great experience. 

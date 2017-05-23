@@ -3,77 +3,77 @@
 00:06 So I'll run the web app here, and let's go to sign in, we'll see sign in now,
 00:13 this is the standard sign in we had before, 
 00:15 we'll have forgot your log in info, just reset it, 
-00:18 we can click that goes to account/forgot password 
-00:20 while I am talking about it I should also add something like 
-00:23 don't have an account? Register here. 
+00:18 we can click that goes to account/forgot_password. 
+00:20 While I am talking about it I should also add something like 
+00:23 "don't have an account? Register here." 
 00:26 And link over to register, but, you guys can set that up, that's easy. 
 00:29 So now what we need to do is we need to put in your email address, 
 00:32 and this is going to submit this back, 
-00:36 so let's write the code that when we submit this form, 
-00:39 notice it's required through HTML 5 and our view model test to see the email is there. 
+00:35 so let's write the code that when we submit this form, 
+00:38 notice it's required through HTML 5 and our view model test to see the email is there. 
 00:43 When we submit this form correctly, we'll then create one of those password resets,
 00:48 assuming that we can find the account. 
-00:51 OK, here we are in the forgotten password get post redirect set of functions, 
+00:51 OK, here we are in the forgotten password GET / POST / Redirect set of functions, 
 00:56 and this one is already done, you saw everything was working, 
 01:00 we can check out this view model, we have an email and an error, 
 01:04 that is really all there is to it, and we have validation that the email exists, 
 01:08 we could do better, right, we could check that it matches the right pattern and so on, 
 01:12 so we are going to come over here and we are going to load that up. 
-01:17 Now, let's do this, so we are going to validate and we'll say if vm.error 
+01:17 Now, let's do this, so we are going to validate and we'll say "if vm.error", 
 01:24 if there is some kind of error, we'll just reshow this to the view, OK, 
 01:31 so any validation will you hear should take care checking things out. 
 01:37 Now, we could actually add a validation to verify that the account exists, 
 01:43 but we are going to need the account over here anyway. 
-01:46 So let's just do this, we'll say reset= we want to use the account service, 
+01:46 So let's just do this, we'll say "reset =" we want to use the AccountService, 
 01:53 and I have already written a function that is empty. 
-01:56 Create reset code for an account and I had written it to take an account here 
+01:56 create_reset_code for an account and I had written it to take an account here 
 02:03 but let's give it an email address. 
-02:06 OK, so we'll pass in the vem email, and then again we'll say if not reset 
-02:13 so for some reason we couldn't generate like the account doesn't exist, 
+02:06 OK, so we'll pass in the vm.email, and then again we'll say "if not reset", 
+02:13 so for some reason we couldn't generate like... the account doesn't exist, 
 02:17 so there is nobody registered with that, or something, 
 02:19 we'll say vm.error, now here is what you think about do you want to tell them 
-02:27 no I can't find that account or hey yes, I did find that account 
+02:27 "no, I can't find that account" or "hey, yes, I did find that account" 
 02:30 or do you want to just say something super vague regardless of the outcome 
-02:34 like hey we sent an email to that account if it was registered, something to this effect, 
+02:34 like "hey, we sent an email to that account if it was registered", something to this effect, 
 02:40 but I am going to assume that this is not super sensitive 
 02:42 so we are going to do it this way. 
 02:46 Alright, we couldn't find it, we couldn't generate it, otherwise, 
 02:49 what we want to do is we just want to do a redirect to account 
-02:55 and what was it called, reset sent. 
+02:54 and what was it called? reset_sent. 
 03:00 Alright, if everything is good, we are going to say 
-03:03 hey just go look in your email, and of course here we want to say to do send. 
-03:09 Alright, that looks like all we got to do here, let's go write this function, 
-03:13 so we are going to need to do a couple of things, 
-03:16 first, we are going to say count= count service find account by email, 
+03:03 "hey, just go look in your email", and of course here we want to say to do send. 
+03:09 Alright, that looks like all we got to do here, let's go write this function. 
+03:13 So we are going to need to do a couple of things, 
+03:16 first, we are going to say "account = AccountService.find_account_by_email, 
 03:22 we already wrote that so this is cool; 
-03:24 let me say if not account, return none. 
+03:24 let me say "if not account: return None". 
 03:27 So we don't need to rewrite that or reimplement it here, duplicate it here, 
 03:32 now if the account exists, so it will be down here, 
-03:37 then let's just create a password reset 
+03:37 then let's just create a PasswordReset
 03:44 now let's think about what do we need to add here,
-03:47 what do we need to set, so this is going to be autogenerated, great.
+03:46 what do we need to set? So, this is going to be autogenerated, great.
 03:50 this is going to be auto generated, thank you for that. 
-03:55 These are going to be set later, so we have created date, 
-03:59 user ip address and user id, we don't need created date, sorry,
-04:02 we just need user ip address and user id. 
+03:55 These are going to be set later, so we have created_date, 
+03:59 user_ip_address and user_id, we don't need created_date, sorry,
+04:02 we just need user_ip_address and user_id. 
 04:11 You want to get that from the request and set that for real, and, 
-04:15 this is the most important one, user id is going to be account.id now this creates it, 
-04:22 of course we got to add it to the session, and commit the session, OK, 
+04:15 this is the most important one, user_id is going to be account.id. Now this creates it, 
+04:22 of course we got to add it to the session, and commit the session.
 04:28 OK, so this should do it, all the default should take care of everything
 04:33 but those two pieces 
 04:36 and of course we want to return reset so that we can actually use the id up here, 
 04:43 OK, so that is going to reset it and then let's just do a print 
-04:52 would email the code to such and such. 
+04:52 "Would email the code {} to {}". 
 04:57 Alright, so we would send the email with this code and we'll talk about that next, 
 05:02 but let's just verify that everything is working so far. 
 05:09 So I come over here, not signed in, so I try to sign in, 
 05:12 oh I forget my password, let's just prove like I had forget my password, 
-05:18 and just this note on updated, now, oh it looks like I can't log in, let's reset it, 
+05:18 and just this, no, don't update it now, oh it looks like I can't log in, let's reset it, 
 05:24 here is my email address, this should do all that work, go to the database, 
 05:28 find my account with this email, verify that everything is OK, 
-05:32 create the password reset use all the defaults,
+05:32 create the password reset, use all the defaults,
 05:35 store it to the database and then fake whether or not it sent the email 
-05:38 and redirect me to the reset sent, go. 
+05:38 and redirect me to the reset_sent, go. 
 05:41 Boom, check your email, your reset link has been sent, 
 05:45 let's check down here this is my fake email, 
 05:47 we would have emailed this code to that person. 

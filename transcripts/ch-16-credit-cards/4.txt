@@ -20,9 +20,9 @@
 01:09 over here you want to put your actually live keys. 
 01:14 It's really nice because they actually have the word "live" or the word "test" in the API keys.
 01:19 Next, we want to read these in, so we're doing that in the dunder init, 
-01:23 down here and I've added an init credit cards, so here I have this unset things, 
-01:28 you can see the warnings or just pointing those two keys 
-01:31 and I created this thing called a credit card processor 
+01:23 down here and I've added an init_credit_cards, so here I have this unset things, 
+01:28 you can see the warnings, we're just pointing those two keys 
+01:31 and I created this thing called a CreditCardProcessor
 01:34 and we're passing that configuration over here. 
 01:37 And this thing is going to have a couple of functions about actually doing the purchase,
 01:41 finalizing the purchase, reporting certain types of errors, things like that. 
@@ -40,7 +40,7 @@
 02:32 it can be autoincremented numerical, nobody is going to see this, 
 02:36 we want to know when the purchase was done and we have a default of when we insert it,
 02:40 which basically is always correct, we're going to give it a description, 
-02:45 so we can say like hey they bought this album or that album, whatever. 
+02:45 so we can say like "hey, they bought this album or that album", whatever. 
 02:50 How much did they pay, maybe they had a discount code, 
 02:53 if we do that kind of thing like coupon codes, 
 02:55 we'd want to store that here on the record as well, 
@@ -55,7 +55,7 @@
 03:26 now we don't have an album details page, 
 03:28 it would probably make much more sense to put the buy button on the details page,
 03:32 but for now we are just going to stick it next to the album.
-03:37 And once we do we are going to need to have that post back go somewhere 
+03:37 And once we do, we are going to need to have that post back go somewhere 
 03:41 so to isolate the credit card processing we have a store controller 
 03:45 so whenever we purchase something, 
 03:48 we'll tell that Stripe form to post back to store/complete, 

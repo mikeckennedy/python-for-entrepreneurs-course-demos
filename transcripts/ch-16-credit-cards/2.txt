@@ -9,26 +9,26 @@
 00:34 Now, the world has gotten easier since then, so for example, 
 00:37 PayPal has great options for integrating payments 
 00:42 and direct credit card processing into your application. 
-00:45 Another one Braintree, is a little more credit card focused 
-00:50 and they actually were purchased or acquired by PayPal, 
-00:53 so these are kind of the same company but two different offerings, 
+00:45 Another one, Braintree, is a little more credit card focused 
+00:50 and they actually were purchased or acquired by PayPal. 
+00:53 So these are kind of the same company but two different offerings, 
 00:57 and I would say the startup darling of credit card processing these days is Stripe.
 01:03 Companies like Uber use Stripe, so you know they are big companies
 01:08 that rely on this and that works really well. 
-01:12 And it turns out that for my business, I also use Stripe, 
-01:15 you may or may not have noticed that when you purchased this course, 
-01:18 but I am using Stripe and I've used it across several web applications,
-01:22 different companies and it has been fabulous, it's super easy to use, 
-01:25 they have great Python support and we are going to see 
-01:28 how to integrate Stripe payments into our web application. 
+01:11 And it turns out that for my business, I also use Stripe, 
+01:14 you may or may not have noticed that when you purchased this course, 
+01:17 but I am using Stripe and I've used it across several web applications,
+01:21 different companies and it has been fabulous, it's super easy to use, 
+01:24 they have great Python support and we are going to see 
+01:26 how to integrate Stripe payments into our web application. 
 01:31 Now Stripe has actually a bunch of different options and ways
 01:34 in which you can work with it. 
-01:37 You can create your own payment checkout thing, 
+01:36 You can create your own payment checkout thing, 
 01:40 create the forms on your web application, manage all the stuff 
 01:45 and just use them to actually charge the card, that's one option. 
 01:48 Or you can use this thing called Stripe checkout. 
 01:51 And Stripe checkout is a really simple one click, 
-01:55 enter the central information buy it and go. 
+01:55 enter the central information, buy it and go. 
 01:59 It works on web apps, it works on mobile apps, it's really cool, 
 02:03 it's super easy to integrate, and it saves us 
 02:06 some of the challenges about PCI compliance, 

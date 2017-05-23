@@ -3,7 +3,7 @@
 00:06 Let's take a look at Full Stack Python as an example 
 00:08 for each of the topics that we're going to cover in this chapter.
 00:11 I am just going to walk through the process that I use 
-00:14 and point out some non intuitive points which we'll dive into throughout the chapter. 
+00:14 and point out some non-intuitive points which we'll dive into throughout the chapter. 
 00:17 You can follow along by just opening up an incognito browser 
 00:21 either in Firefox or Chrome, the reason why we're using incognito is 
 00:24 because Google tailors the search for your search history,
@@ -14,7 +14,7 @@
 00:40 that you believe your customers are going to be searching for. 
 00:43 Let's take a look at a couple of examples, so my book on Python deployments, 
 00:46 typically goes along with web development, 
-00:49 so if someone searches for Python web development, 
+00:49 so if someone searches for "python web development", 
 00:52 I want my website with good quality content
 00:55 that is going to help that user to appear first, organically. 
 00:58 And that is the first thing that we're going to see here, 
@@ -29,15 +29,15 @@
 01:23 A couple of things we can see about this, 
 01:25 number one, we've got the full title for this web page, 
 01:28 we've got the specific URL including bolded parts of the URL 
-01:33 that matches our search terms, Python web development. 
+01:33 that matches our search terms, "python web development". 
 01:36 That is an indicator, not only to Google but for the searcher 
 01:39 that this web page is exactly the content that they are looking for 
 01:43 and then we have a short description down here, web development,
-01:46 they catch all term for activities, and learn more in Full Stack Python, 
-01:49 it has bolded the search terms, now, if we click on this result, 
+01:46 they catch-all term for activities, and learn more in Full Stack Python, 
+01:49 it has bolded the search terms, now if we click on this result, 
 01:52 it's going to bring up obviously the page, and now we're on Full Stack Python, 
 01:56 now on this page in particular, I have an advertisement 
-01:59 for the Full Stack Python guide to deployments, 
+01:59 for the Full Stack Python Guide to Deployments,
 02:02 it's just the first way that someone can see that there is a deployment book 
 02:05 that is related to the search term, but it's not in their face, 
 02:08 there is no pop up, they can pretty much ignore if they want to, and that's fine,
@@ -54,10 +54,10 @@
 02:46 that solve that problem, and fix the stack trace. 
 02:48 In this case, we're really just providing information about web development, 
 02:51 so there is a couple of key pieces here and I am going to pull up a Chrome developer tools. 
-02:54 Let's highlight this header tag, this h1 tag, it's web development,
+02:54 Let's highlight this header tag, this H1 tag, it's web development,
 03:01 and this pulls up the source code down here. 
-03:03 You should only have a single h1 tag on a page, that is one of the first rules.
-03:07 Because the h1 tag is an indicator of what this webpage is about, 
+03:03 You should only have a single H1 tag on a page, that is one of the first rules.
+03:07 Because the H1 tag is an indicator of what this webpage is about, 
 03:11 let's scroll through here, and we can see 
 03:14 that we've got a bunch of description that explains
 03:17 how Python fits into web development and then provides more resources. 
@@ -69,7 +69,7 @@
 03:36 In addition, it has all the terms that people are looking for 
 03:40 related to Python web development and there are many links to other pages 
 03:44 with concepts such as web frameworks and specific web frameworks in Python 
-03:48 that again are an indicator to google or any search engine 
+03:48 that again are an indicator to Google or any search engine 
 03:52 that this is a good page on web development. 
 03:55 Now we've run this search in a desktop web browser, 
 03:58 but not everyone is going to be reading or searching for content on the desktop, 
@@ -83,43 +83,42 @@
 04:21 And we can simulate searches from different phones, 
 04:24 and what typically this is used for is seeing how your website looks in various browsers. 
 04:29 It's really helpful for when you're doing your development work 
-04:32 you can say well, how does this look on an iPad, how does this look an an iPhone. 
-04:35 And the answer should always be it looks awesome! 
+04:32 you can say "well, how does this look on an iPad, how does this look an an iPhone?" 
+04:35 And the answer should always be "it looks awesome!" 
 04:38 It looks just as good as the desktop version, 
 04:40 because people are searching both on mobile and on desktop 
 04:42 and you want to support both. 
-04:44 And you can do that by making sure that your CSS 
+04:44 And you can do that by making sure that your CSS, 
 04:47 which you learned about earlier, is following responsive design. 
 04:50 Now let's try this search term again, on the iPhone 6, simulating the iPhone 6. 
-04:53 And we can still search up top here, we can say Python web development, 
-04:59 
+04:53 And we can still search up top here, we can say "python web development", 
 05:03 now it's a little small, so let's bump up the size here. 
 05:06 Now we can see there is two ads, 
 05:10 and then again, Python web development pops up. 
 05:14 Now the layout is a little bit different here, instead of the full URL 
-05:18 or seeing almost a categorization but this actually still follows the URL, 
-05:22 saying the site is full stack Python and it's one level deep. 
+05:18 we're seeing almost a categorization but this actually still follows the URL, 
+05:22 saying the site is Full Stack Python and it's one level deep. 
 05:26 When we click on it, we'll see that there is, and this is the URL structure, 
 05:31 it's at the base URL, there is no subfolder for example
 05:35 if we were to say blog in here, it's not under the blog subfolder, 
 05:40 it is just one level deep on Full Stack Python. 
-05:44 Now how does this look on mobile, it looks pretty good 
+05:44 Now how does this look on mobile? It looks pretty good 
 05:48 compared to the desktop version, we've taken away the sidebar, or actually 
 05:51 the sidebar is down below, below all the choices so if we scroll all the way down, 
-05:55 then we'll see the advertisement, for the guide to deployments book, 
+05:55 then we'll see the advertisement, for the Guide to Deployments book, 
 06:00 the email updates and then we have chapters, 
 06:03 now the one thing about the chapter is instead of listing everything out, 
 06:06 like we can see over here, we have every single topic, 
-06:10 that is listed out on the desktop version which is fine on the desktop 
+06:10 that is listed out on the desktop version, which is fine on the desktop 
 06:14 in case you want to just quickly bounce over to different topic. 
 06:18 On mobile, that is a real pain in the butt, the way that I've designed this is 
 06:21 just show the high level chapters, so when you click on any of these,
 06:24 you'll see you can get immediately to that chapter 
-06:28 and then you would have to click on all topics 
-06:33 if you want to go to a drill down page such as postgress. 
+06:30 and then you would have to click on all topics 
+06:33 if you want to go to a drill down page such as postgres. 
 06:36 So the general theme is, think about the topics 
 06:39 that your users are going to be searching for, 
-06:42 if you built a business related to selling vacuum cleaners 
+06:42 if you built a business related to selling vacuum cleaners, 
 06:45 you wouldn't create Python content, you would create content about 
 06:48 what the best vacuum cleaners are, 
 06:51 or common solutions to fix an issue with your vacuum cleaner, 
@@ -130,39 +129,39 @@
 07:06 I want to point out some important elements on this page, 
 07:09 that we're going to dive into further in the next few videos. 
 07:12 Now you already know I'll write HTML and there is some important elements here, 
-07:17 one of which the meta description, meta name=description, 
+07:17 one of which the meta description, meta name="description", 
 07:21 is not actually a required element on a web page, 
 07:23 but it's really important because this is what often sets the description 
 07:28 that people see when they search for a specific term, 
-07:32 so again, Python web development and we can see, 
+07:32 so again, "python web development" and we can see, 
 07:36 web development catch all term, if we look at the meta description 
 07:39 this actually matches exactly 
-07:42 what is in this meta description and the search results, 
-07:46 now that is not guaranteed to happen, but if you put the right terms 
+07:42 what is in this meta description and the search results.
+07:46 Now that is not guaranteed to happen, but if you put the right terms 
 07:49 into the meta description it's likely that this is what is going to pop up 
 07:53 as the description on the search results page. 
 07:56 A couple of other things, one is the title, and it's a unique title, 
 07:59 that is specific to this particular page, web development on Full Stack Python, 
 08:05 so it has these search terms that are commonly associated with this, 
-08:09 in the title itself, and then the title is very similar to the h1 tag 
-08:13 but the h1 tag has just the header that has exactly what this page is on, 
+08:09 in the title itself, and then the title is very similar to the H1 tag 
+08:13 but the H1 tag has just the header that has exactly what this page is on, 
 08:17 let's take a look at one more example. 
 08:20 Let's say we want to write a book or some guide on monitoring 
 08:23 and we want people to be able to find monitoring. 
 08:26 Now, I have a page on that as well, and you will see it follows the same pattern 
-08:33 as the other one, we have a nice, clean h1 tag, good URL structure, 
-08:35 that is not too deeply nested in a bunch of subfolders, 
+08:29 as the other one, we have a nice, clean H1 tag, good URL structure, 
+08:34 that is not too deeply nested in a bunch of subfolders, 
 08:37 and again, we have a bunch of useful information 
 08:40 along with links to other projects and services that are going to be useful 
 08:44 for someone who is searching for monitoring for a Python application. 
 08:47 Let's talk about a few things that I have not done on here.
 08:51 First off, if we take a look again at the web development page, 
-08:55 this is not an h1 tag, if we had this top banner as an h1 tag 
-09:01 there would be two h1 tags on the page and that would confuse 
+08:55 this is not an H1 tag, if we had this top banner as an H1 tag 
+09:01 there would be two H1 tags on the page and that would confuse 
 09:05 not only the person who have visited that page 
 09:07 but it would also confuse the search engine as to what exactly is 
 09:11 the content that is on this page, so this is just a link 
-09:14 and it's styled with a larger font, but it is not the h1 tag. 
+09:14 and it's styled with a larger font, but it is not the H1 tag. 
 09:18 Another bit that is important here is that this page when we go to the source 
 09:22 it's very simple lightweight amount of HTML and other related content, 
 09:27 for example, the CSS is minified, which means 
@@ -177,8 +176,8 @@
 09:54 there is no other jQuery or React or Angular, nothing like that on this page, 
 09:59 which means that it loads extremely fast and site speed is really important
 10:03 for appearing higher up in the search results. 
-10:06 So that is a quick overview with a couple of example pages, 
-10:09 an example queries where in my case with Full Stack Python 
+10:06 So that is a quick overview with a couple of example pages 
+10:09 and example queries, where in my case with Full Stack Python 
 10:12 it's advantageous to appear at the top of the search results for these search terms. 
 10:16 So, it's going to depend on what your business is, who your audience is, 
 10:19 so you're going to want to write down a bunch of the search terms 

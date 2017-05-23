@@ -4,8 +4,8 @@
 00:10 So the first thing you'd want to do is come up with the list of keywords 
 00:14 that you believe your customers 
 00:16 or prospective customers are going to be searching for.
-00:19 Let's say I've created a new Python task queue that competes with celery
-00:22 that I think people should use instead of the celery task queue, 
+00:19 Let's say I've created a new Python task queue that competes with Celery
+00:22 that I think people should use instead of the Celery task queue, 
 00:25 I want to write articles around that topic, 
 00:27 but there is a right way and a wrong way to write a title,
 00:30 for example, this one isn't terrible because it has some keywords in it, 
@@ -15,11 +15,11 @@
 00:43 Rather than talk about something like what you did, 
 00:46 how I learned about offloading code execution, 
 00:48 the focus should be on the concept and the implementation itself. 
-00:52 Let's say I've created my own task queue called backer, 
+00:52 Let's say I've created my own task queue called Backr, 
 00:55 and now I want people to discover it. 
 00:58 Well, I could write a title instead of offloading code execution 
 01:02 we'll have this specific terms in it like Python, we'll say task queue, 
-01:05 background Python jobs with the backer task queue, and then the name of the site, 
+01:05 background Python jobs with the Backr task queue, and then the name of the site, 
 01:10 so the focus changes from what you did to what actually the content is on that page, 
 01:14 more likely, that a reader is going to be interested in an article 
 01:18 with this title when they are looking to adopt a new task queue. 
@@ -27,10 +27,10 @@
 01:24 to an example where you've created a business 
 01:26 where you have gym equipment that you're selling. 
 01:28 You've written down a list of keywords you want to target, bench press, 
-01:31 because your machine can substitute for bench pressing, home exercises, 
+01:30 because your machine can substitute for bench pressing, home exercises, 
 01:33 and in general weight lifting; certainly you could have an article, 
 01:36 that would be "Ten Weight Lifting Tips For Beginners", it's not a terrible title, 
-01:39 but it's much better to break that out, into multiple more specific titles. 
+01:39 but it's much better to break that out into multiple, more specific titles. 
 01:44 Now the good part is the "Ten Weight Lifting Tips For Beginners" had weight lifting in it, 
 01:48 but it's unlikely that anyone is searching for ten weight lifting tips, 
 01:52 but it is likely that people are searching for a solution to that problem, 
@@ -58,7 +58,7 @@
 02:57 that you're trying to build, most likely the name of your business, 
 03:00 but you're going to want to have that end of the title, 
 03:02 so in the search results people are going to see the name of your business 
-03:05 at the end of the title, and in the h1 tag, we'll not have the name, 
+03:05 at the end of the title, and in the H1 tag, we'll not have the name, 
 03:09 it will simply be the title of the content that you've created 
 03:12 and there should only be one of each of these elements on every single page. 
 03:16 That way you've kept it clean and clear both for the search engines 

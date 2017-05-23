@@ -9,47 +9,47 @@
 00:31 I was fortunate enough to have put this "reset your password" feature in there 
 00:37 and have analytics that I could watch in real time, what people were up to. 
 00:40 And, within like the first half hour, somebody reset their password, 
-00:44 how could they have forgotten they password in half an hour. 
-00:47 I have no idea, but, they must have had some sort of trouble logging in 
+00:44 how could they have forgotten they password in half an hour? 
+00:47 I have no idea, but, they must have had some sort of trouble logging in, 
 00:50 so they came and they reset their password. 
 00:52 And they logged in and everything was great for them. 
-00:55 So I just want to point out that you are going to need this probably sooner than you think 
+00:54 So I just want to point out that you are going to need this probably sooner than you think 
 00:58 and you are definitely going to need it along the way. 
 01:01 You can't look at somebody's information in the database 
 01:04 and know their passwords, so you can't help them. 
 01:06 If they send you a message and say hey I forgot my password, can you help me out, 
 01:10 like got to the forgot your password, that is how I help you out. 
 01:14 Alright, so we are going to talk about the mechanics 
-01:18 and features of this reset your password flow. 
-01:22 We actually have almost everything we need already in place so it's not too much work,
+01:18 and features of this "reset your password" flow. 
+01:22 We actually have almost everything we need already in place, so it's not too much work,
 01:26 so I'll take you through it. 
 01:28 Now, before we build this in code, let's talk about the keys 
-01:31 to a good password reset process, 
-01:34 there is a couple of things you want to be really careful about, 
+01:31 to a good password reset process. 
+01:34 There is a couple of things you want to be really careful about, 
 01:36 first of all, most importantly, this should not be guessable. 
 01:41 Here is two possible URL schemes, 
 01:44 which of course derive the underlined database schema, 
-01:48 here at the top one, if I want to reset my password at talk python to me, 
-01:53 I could do this, I could say account/reset some big alphanumeric string 
+01:48 here at the top one, if I want to reset my password at Talk Python To Me, 
+01:53 I could do this, I could say account/reset/some big alphanumeric string 
 01:59 that is very hard to guess. 
-02:02 Or, I could use an auto incrementing id type thing, 
+02:01 Or, I could use an auto-incrementing id type thing, 
 02:05 password reset one, password reset two, if you got to reset your password 
-02:11 and you see you are 1214, there is a good chance that you want to see 
+02:09 and you see you are 1214, there is a good chance that you want to see 
 02:15 what is at 1216, or 11 or whatever, right, if this is guessable, it's really a bad idea,
 02:23 you could possibly find somebody else's unused reset, 
 02:26 set their password and log in to their account, that would be super bad. 
 02:31 So, make sure this is not guessable. 
-02:35 We'll see that Python and SQLAlchemy make this super easy to do 
-02:38 but you want to just keep in mind. 
-02:40 These resets shouldn't last forever, they could last for a while, 
-02:43 a day, a week something like that, but you shouldn't have them lying around forever. 
+02:34 We'll see that Python and SQLAlchemy make this super easy to do 
+02:37 but you want to just keep in mind. 
+02:39 These resets shouldn't last forever, they could last for a while, 
+02:42 a day, a week something like that, but you shouldn't have them lying around forever. 
 02:46 Just because they are harder to guess, 
 02:48 you don't want unused reset hanging on your system that people could potentially 
-02:52 come along and discover somehow, find and mess with, right. 
+02:52 come along and discover somehow, find and mess with, right? 
 02:56 So, they shouldn't be around forever, they should expire, 
 02:59 so again, we'll talk about how to do that in the schema. 
 03:03 They also should not be able to be used twice, 
-03:06 once you've used your reset password if you need to reset your password again, 
+03:06 once you've used your reset password, if you need to reset your password again, 
 03:09 just go through the process again. 
 03:11 And finally, this one is a little more nuanced, consider how sensitive it is, 
 03:15 whether somebody could use the password reset, 
@@ -59,7 +59,7 @@
 03:29 understanding whether an account is registered there is probably not a big deal. 
 03:34 On the other hand, if you are somewhere that knowledge of even using the account, 
 03:41 even the existence of an account is super sensitive, 
-03:44 like Ashley Madison which was an adult website for people specifically who are married, 
+03:44 like Ashley Madison, which was an adult website for people specifically who are married, 
 03:50 who have affairs, now, suppose somebody comes along, 
 03:57 they are concerned that maybe their spouse has created an account there, 
 04:02 they could go to the password reset thing and just enter their spouse's email address 

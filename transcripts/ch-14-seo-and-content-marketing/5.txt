@@ -1,5 +1,5 @@
-00:01 So you got a list of keyword that you want to target, 
-00:03 that you believe that prospective customers are going to be searching for in Google. 
+00:00 So you got a list of keyword that you want to target, 
+00:02 that you believe that prospective customers are going to be searching for in Google. 
 00:06 You've set up some example titles, and expanded upon that with meta descriptions, 
 00:09 and what about the content itself, let's think about the length of the content. 
 00:14 How long should what you write be? 
@@ -8,20 +8,20 @@
 00:23 but let's get a little bit more specific than that. Take a look at some examples. 
 00:26 Say I have written a new book on static site generation, 
 00:30 one of my favorite topics, because I use a static site generator 
-00:33 in order to create Full Stack Python I want people 
-00:36 who search for Python static sites to come to my site. 
-00:40 And here is Static Site Generator by Full Stack Python if you click on it, 
+00:33 in order to create Full Stack Python. I want people 
+00:36 who search for "python static sites" to come to my site. 
+00:40 And here is Static Site Generator by Full Stack Python. If you click on it, 
 00:44 it looks very similar to most of the other pages on the site, 
 00:47 what makes the content on this page relevant for the audience? 
 00:50 Well, it's broken down into a chunk of content length
 00:53 there is just enough for someone to read in a few minutes, 
 00:56 we've got our header here and then a short description of just what this is 
 01:00 and then we expand upon some of the topics, in subsections 
-01:05 that are going to be of interest to people that have searched for static sites, 
+01:04 that are going to be of interest to people that have searched for static sites, 
 01:09 like for example why are static site generators useful
 01:11 if you've never used one before and one of your developer friends says 
-01:14 hey you should check out static site generators, you are going to wonder 
-01:17 why would I even want to use one, what is useful about them?
+01:14 "hey, you should check out static site generators", you are going to wonder 
+01:17 "why would I even want to use one, what is useful about them?"
 01:21 So we describe a little bit about that, we have a few paragraphs, 
 01:24 how do they work with an example, and as you can see, we're relevant, 
 01:27 I've added pictures that reinforce some of the concepts 
@@ -30,8 +30,8 @@
 01:39 just two or three paragraphs, maybe a little bit longer if it's a really complicated topic, 
 01:42 but it makes it easy for a reader to consume each subsection 
 01:46 and they can skip over parts for example if they are not interested 
-01:49 in Python implementations because they have already picked one
-01:53 they know they want to use make docs or lector, 
+01:49 in Python implementations because they have already picked one,
+01:53 they know they want to use MkDocs or Lektor, 
 01:56 they can just skip over this one and they can scroll down 
 01:58 to the rest of the information that is contained on the site. 
 02:01 So overall, how long is this content? 
@@ -39,10 +39,10 @@
 02:06 the word count command and when we punch some text in, 
 02:10 it's going to give us the length of that content. 
 02:12 Remember that you can use the man command to get the manual, 
-02:15 now let's use this on the content that makes up the static site generator page. 
+02:16 now let's use this on the content that makes up the static site generator page. 
 02:21 We'll go into Full Stack Python and we'll go under pages, 
 02:24 this one is under the web development chapter, 
-02:27 and we can see 33 static site generator and we'll run that through the word count. 
+02:27 and we can see 33-static-site-generator and we'll run that through the word count. 
 02:31 Word count has 3 lines that are output, 
 02:34 the first one is the number of lines contained in the file. 
 02:37 This file has 217 lines, and this middle one is really what we are looking for, 
@@ -57,16 +57,16 @@
 03:14 I would just take a look at the words, so let's go back to this page 
 03:18 and again just think through the content length. It's a good size page, 
 03:21 again, about 1500 words, but it actually used to be much larger, 
-03:25 and that's because I used to have sections for individual, 
+03:25 and that's because I used to have sections for individual 
 03:29 implementations of static site generators, now this page is
 03:32 for the concept of static site generators, rather than specific implementations. 
-03:37 Pelican is the implementation that I used to create Full Stack Python, 
-03:40 if we search for Pelican I broke that out into its own page, 
+03:37 Pelican is the implementation that I used to create Full Stack Python. 
+03:40 If we search for Pelican I broke that out into its own page, 
 03:44 now this page is fairly small and needs to be expanded upon, 
-03:51 it doesn't have 1500 words, it's pretty much just the description, 
-03:54 little additional information, and some further resources. 
+03:50 it doesn't have 1500 words, it's pretty much just the description, 
+03:53 little additional information, and some further resources. 
 03:57 And I'll expand upon this over time, but this is one way you can think 
-04:01 about how long should my content be, make it about one specific topic, 
+04:01 about "how long should my content be?", make it about one specific topic, 
 04:04 maybe that's a concept, some conceptual idea that you are writing about 
 04:07 and then break out this specific implementations or the tools into their own pages, 
 04:12 but as you are just starting, you may just want to keep all that on a single page 
