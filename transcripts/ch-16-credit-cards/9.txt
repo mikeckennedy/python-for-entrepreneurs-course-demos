@@ -1,6 +1,6 @@
 00:02 We saw that once the Stripe checkout stuff is all done and everything passes
-00:08 and the user says bye, Stripe verifies it,
-00:11 then it does a post back with a token to our own web application. 
+00:08 and the user says "bye", Stripe verifies it,
+00:11 then it does a POST back with a token to our own web application. 
 00:15 And here is the code that ran that basically used the Stripe API
 00:20 to do that final checkout to actually process the purchase, 
 00:24 remember, we get a token but that token is not yet claimed, 
@@ -12,9 +12,9 @@
 00:47 we are going to set the description, this is going to be what shows up on their credit card,
 00:51 what shows up in our records when we download the records from Stripe, things like that, 
 00:55 so we'll set the description, we have to set our API key to our secret key, 
-00:59 our private key not the public one, make sure that use in the live key 
+00:59 our private key not, the public one, make sure that use in the live key 
 01:03 if you want things to be live, you also have to flip a switch on your account 
-01:07 that says going to live mode, don't forget that, 
+01:07 that says "going to live mode", don't forget that, 
 01:09 and then we just say stripe.charge.create 
 01:12 we give it the amount, currency, the token as the source and the description 
 01:16 and you see we got back a tremendous amount of dictionaries or nested dictionaries 
@@ -22,7 +22,7 @@
 01:27 so you can store as much or as little of that as like you can get back 
 01:31 to that information through the Stripe dashboard in your account, 
 01:34 but sometimes, it's good to have it stored right in your database. 
-01:38 Hopefully that was not too intimidating I think adding credit card payments 
+01:38 Hopefully that was not too intimidating, I think adding credit card payments 
 01:42 to your web app especially using Stripe checkout is really quite straightforward, 
 01:47 there is a few steps, but with the code that you've got from these samples, 
 01:51 and the examples, the concepts and so on, 

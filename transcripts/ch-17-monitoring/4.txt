@@ -1,48 +1,48 @@
 00:02 We've set up the structure of where we are going to store our information, 
 00:05 read it in from the config file and whatnot, let's use Logbook now. 
-00:08 So, this is probably no surprise, we'll start by saying import Logbook. 
+00:08 So, this is probably no surprise, we'll start by saying "import logbook". 
 00:13 Now, remember, this needs to be put into our setup requirements, 
 00:18 this needs to be literally installed because we don't have it yet, 
-00:21 so first, let's install the package, thank you PyCharm, ta- da, OK, 
+00:21 so first, let's install the package, thank you PyCharm, ta-da, OK, 
 00:28 I got to move away for a second, and then come up here, 
 00:32 hit it again and I can add it to the setup, and then it's saying we're not using it 
 00:36 but that's cool because we are going to that now. 
 00:39 So the first thing that we want to think about is where do we want the logs to go, 
 00:43 do we want them just to go to the console, 
-00:47 do we want them to be sent to a file, things like that, 
+00:47 do we want them to be sent to a file? Things like that, 
 00:51 and my perspective here is in production, we want them to go to a file 
 00:55 and in development we just want them to go to the console, 
 00:58 so we'll set that up now. 
 01:01 Now this level when it comes in here 
 01:04 is going to be a text string straight out of the config file, 
-01:08 Logbook has its own enumeration which represents this 
-01:12 so I am going to make this very clear and say log level text, 
+01:08 Logbook has its own enumeration, which represents this, 
+01:12 so I am going to make this very clear and say log_level_text, 
 01:15 we are going to need a function to convert that to Logbook levels, 
-01:19 so let me go and just paste that function in because once you see it you'll be like 
-01:23 wow, there is not point watch me write that, 
+01:19 so let me go and just paste that function in because once you see it, you'll be like 
+01:23 "wow", there is not point watch me write that, 
 01:26 so here what we are going to do is we are just going to have a function, 
-01:30 pass it a string, and it's going to come in and it's going to pull out logbook critical, 
-01:33 if it sees the string critical, Logbook error, if it sees the string error and so on. 
-01:38 And we are also stripping it and uppercasing it 
+01:29 pass it a string, and it's going to come in and it's going to pull out logbook.CRITICAL, 
+01:33 if it sees the string CRITICAL, Logbook.ERROR, if it sees the string ERROR and so on. 
+01:38 And we are also stripping it and uppercasing it, 
 01:41 so there is a little bit of non equalization going on. 
-01:45 OK, so the first thing we are going to do is say level, 
+01:45 OK, so the first thing we are going to do is say "level...", 
 01:50 so we want to come here and say get the Logbook level 
 01:56 and we are going to pass in that text and it's going to convert it to that enumeration. 
 01:59 The next thing we got to do is decide where do we go, 
 02:04 where do we pass this information, 
-02:07 we could do a couple of things we could queue this on the filename, 
+02:07 we could do a couple of things, we could queue this on the filename, 
 02:10 or we could also pass the development mode or whatever, 
-02:13 I am going to basically say if you supply filename to go into the file, 
-02:16 if you don't supply filename it's going to go to the console 
+02:13 I am going to basically say if you supply filename, it's going into the file, 
+02:16 if you don't supply filename, it's going to go to the console 
 02:19 so we'll say something like this, 
-02:22 if filename now let's start with no, so standard logging, right, 
+02:21 "if filename", now let's start with "not", so standard logging, right, 
 02:25 so if it doesn't go to the filename, we are going to say Logbook
 02:29 and we are going to setup a stream handler,
 02:32 and the stream we want to go to is standard out, 
-02:35 which we can get from sys we'll say standard out, so that's just console, 
+02:35 which we can get from sys, we'll say standard out, so that's just console, 
 02:39 and we want to set the level to level, 
 02:44 so remember, if I log in informational message, 
-02:47 but I say I only want to see streamed to the standard out stuff that's warnings and errors, 
+02:47 but I say I only want to see streamed to the standard out, stuff that's warnings and errors, 
 02:54 that message will basically silently go away, which is really nice 
 02:57 because that lets us turn up and down the logging just in one place 
 03:00 and the rest of the app doesn't have to worry about it, right, 
@@ -66,7 +66,7 @@
 04:13 Again, we are going to set the level, and then we are going to set a date format, 
 04:21 let me format it like this, 
 04:26 so we are going to print it out, 
-04:29 store the date in year month day format and again, 
+04:29 store the date in year-month-day format and again, 
 04:33 in this case we want to push this to the application, 
 04:36 so nowhere outside of this little block of code, 
 04:40 do we care or even know about how the logs are written; 
@@ -83,12 +83,12 @@
 05:21 and so this is like the area of your application, what part of your app is doing this, 
 05:27 so this remember is going to be used sort of through the startup process 
 05:30 and nowhere else so I am going to call this, 
-05:33 I'm just going to call it app, right, this is the application startup level. 
+05:33 I'm just going to call it "App", right, this is the application startup level. 
 05:37 Let's go back up here one more time, and let's use our little startup log 
-05:40 that we are creating, and just print a message to say hey everything is working, 
-05:46 so we'll say the message is, so we'll say logging initialize with the level 
+05:40 that we are creating, and just print a message to say "hey, everything is working", 
+05:46 so we'll say the message is..., so we'll say logging initialize with the level 
 05:53 and the mode, whether or not it's in file mode or standard out mode. 
-05:59 OK, and then, we're going to say log service, let's make that static,
+05:59 OK, and then, we're going to say LogService, let's make that static,
 06:07 actually let me change that to a static method. 
 06:15 Now, we can do things like we can log, obviously and you can see 
 06:20 that we can specify the level and this is the most generic way to write a log message, 
@@ -96,14 +96,14 @@
 06:28 what instead I would do is I would come down here and I would say either notice,
 06:31 like if I want to set a notice level or maybe there is an error, 
 06:35 or there is an informational thing, or there is something critically bad 
-06:39 things like that, so instead of saying just log, 
+06:39 things like that, so instead of saying just "log", 
 06:43 which seems like a decent choice, I am going to say this is a notice,
 06:47 so I like to have informational levels for stuff that I could really easily turn off and notice,
-06:52 I probably [06:54] around, this is like just below warning because there is nothing wrong, 
+06:52 This is like just below warning because there is nothing wrong, 
 06:57 I just want to brace the startup of my app. 
 07:00 So, we are going to do it like this, alright, now let's go back 
-07:03 and because I changed this part right here this needs to be a get,
-07:09 and instead of doing this print logging setup like that here we can go ahead
+07:03 and because I changed this part right here, this needs to be a GET,
+07:09 and instead of doing this "print 'Logging setup:'" like that here we can go ahead
 07:17 and just let our log service handle that. In fact, 
 07:22 I think we could probably simplify this here as well, 
 07:26 I kind of like to be inexplicit, but let's go over here and in the rest of these places 
@@ -114,27 +114,26 @@
 07:50 OK, that's cool, we are also printing down here, 
 07:54 let's go down and change this to say log.notice, right, there is nothing, 
 08:03 let me go up here yeah, that's a warning up there, great; 
-08:10 this is a notice again, this will be a warning, 
-08:14 take that out, alright, so we are going to warn if MailChimp is not set up 
+08:07 this is a notice again, this will be a warning, 
+08:13 take that out, alright, so we are going to warn if MailChimp is not set up 
 08:17 and finally, same thing for credit cards. 
-08:20 
 08:24 OK, it looks like we have replaced our print messages here, 
 08:28 let's go and run, and actually, let me change this as well, to not have a file name, 
-08:34 so we'll say there is none here which or we could just cut it out, 
+08:34 so we'll say there is None here, which or we could just cut it out, 
 08:40 and then in production, let me put this over in production as well, 
 08:47 in production, we're going to have this setup, 
-08:50 and maybe this is going to be notice level,
-08:55 and we want to go there, but here we are going to do info but have nothing, OK. 
+08:50 and maybe this is going to be NOTICE level,
+08:55 and we want to go there, but here we are going to do INFO but have nothing, OK. 
 09:00 Let's give it a shot. Huh, remember, that other file I had, 
 09:07 I got to change it as well, but that should give us a chance to see the file logging in action, 
-09:12 so here check this out, I accidentally ran with the other not shown any file, 
-09:18 and you can see that we got our logging initialize, level is info, 
+09:12 so here check this out, I accidentally ran with the other not shown .ini file, 
+09:18 and you can see that we got our logging initialize, level is INFO, 
 09:24 so notices will show up, mode is hey, file mode and it went to that file. 
-09:30 Local like in your web app folder probably not the best place to put logs, 
+09:30 Local, like in your web app folder, probably not the best place to put logs, 
 09:34 but I'm sure it's a bad place, but for now, it's working. 
 09:38 So we'll say this is running in production mode, excellent. 
 09:42 Now, I've changed that, let me run it again.
-09:46 Maybe it didn't like my heavy none there, let's just put blank
+09:46 Maybe it didn't like my # None there, let's just put blank.
 09:53 Here we go, so there is no file name, 
 09:56 so now we are in standard out mode, and app is running. 
 10:00 So that's the basic way of using Logbook, we come over here and let's just review, 
@@ -142,7 +141,7 @@
 10:13 or basically the message handler either a stream handler 
 10:16 or a time rotating file handler or other things. 
 10:20 And then you just get a hold of log, by saying logger.logbook.logger 
-10:26 allocate one of these, and notice it says app here and we are doing a notice log there 
+10:26 allocate one of these, and notice it says "App" here and we are doing a notice log there 
 10:31 and if we go back to our console, you can see we have a notice from the app.
 10:37 Alright, so this lets you really easily reference what part of the application is working, 
 10:42 we'll go back and we'll put some of this into our controller structure,

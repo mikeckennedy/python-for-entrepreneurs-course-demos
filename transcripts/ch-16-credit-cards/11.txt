@@ -1,6 +1,6 @@
 00:02 So you are thinking, well that's cool Michael, 
 00:05 LLCs, S corps, US corporations, none of that applies to me 
-00:09 because I live in the country X where X is not in the United States. 
+00:09 because I live in the country X, where X is not in the United States. 
 00:13 Now obviously many countries have similar corporate structures 
 00:18 and similar types of protections. 
 00:21 You might just want to choose whatever is local for you.
@@ -8,11 +8,11 @@
 00:28 and participate in some of the US markets that you might want to have 
 00:32 a company that is set up and registered in the United States, 
 00:35 with a US bank account that can accept credit card payments and things like that. 
-00:40 That can be really challenging, to get done if you live in some country 
+00:40 That can be really challenging to get done if you live in some country, 
 00:44 especially if you don't have good connections to the US, 
 00:48 so Stripe again, Stripe the same people we are using for the credit cards 
 00:51 came up with this thing called Atlas, and the idea is once you get into the Atlas program. 
 00:57 they will help you set up and incorporate a US company set up a US bank account 
 01:01 and accept payments as if you were a US company. 
 01:06 So if you are outside of the US, but you want for whatever reason to be 
-01:10 within the US as a business, check out srtipe.com/atlas. 
+01:10 within the US as a business, check out stripe.com/atlas. 
