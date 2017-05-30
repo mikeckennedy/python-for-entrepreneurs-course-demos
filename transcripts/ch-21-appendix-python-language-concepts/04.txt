@@ -12,4 +12,4 @@
 0:35 and we can assign them to complex values like the hobby, 
 0:39 which is really the list or array of strings, the hobbies that we have. 
 0:42 So we assign these on creation, and we can even take the return values of functions 
-0:47 and assign them to these variables like so. 
+0:47 and assign them to these variables, like so. 

@@ -1,6 +1,6 @@
  0:01 One of the unique concepts in Python is to minimize the number of symbols 
 0:05 and control structures in the language. 
-0:08 For example, in C and C based languages like C# and JavaScript 
+0:08 For example, in C and C-based languages like C# and JavaScript, 
 0:12 you have lots of curly braces, and variable declarations and so on,
 0:16 to define structures and blocks. 
 0:19 In Python, it's all about the white space, and indentation. 
@@ -10,10 +10,10 @@
 0:34 and then you indent four spaces. 
 0:36 So the purple blocks here these are also code blocks 
 0:39 and they are defined because they are indented 
-0:42 four spaces the if and the else statement. 
-0:44 But within that if statement, we have a colon ending it, 
-0:46 and then more indentation, and that defines the part that runs in the if case, 
-0:50 and then we have the else unindented, so that's another piece, 
+0:42 four spaces the "if" and the "else" statement. 
+0:44 But within that "if" statement, we have a colon ending it, 
+0:46 and then more indentation, and that defines the part that runs in the "if" case, 
+0:50 and then we have the "else" unindented, so that's another piece, 
 0:54 another code suite or block, and then we indent again to define 
 0:58 what happens when it's not the case that the argument is batch or whatever that means. 
 1:02 And we saw that these are spaces, the convention is to use four spaces 

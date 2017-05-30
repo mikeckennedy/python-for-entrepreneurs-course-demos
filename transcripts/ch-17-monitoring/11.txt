@@ -1,17 +1,17 @@
 00:01 So it was really cool that we went to Rollbar and we saw the error message 
-00:05 but how do we get notified, I mean, this is better than logging by a long shot 
+00:05 but how do we get notified? I mean, this is better than logging by a long shot 
 00:09 but it's not as good as I said it could be. 
 00:12 Well, you have a little bit more configuration to do for that. 
-00:15 So let's go over here and look at my email, check this out, in my email, 
+00:15 So, let's go over here and look at my email, check this out, in my email, 
 00:20 just five minutes ago I got pretty much what we got in our dashboard, 
-00:25 so bam an error has occurred, Python For Entrepreneurs course in dev mode, 
+00:25 so bam, an error has occurred, Python For Entrepreneurs Course in dev mode, 
 00:30 here is the error, and this just shows you the trace back of all the various things 
 00:35 that I showed you when we looked around, OK. 
 00:38 So that's really great. But, there is more options OK, so let's go over here, 
 00:43 click on settings for the project and go to make sure you have source control integrated, 
 00:48 so you can get extra information, but notifications, that's where we want to go, 
 00:52 so right now we have email, and we could connect this to Bitbucket issues 
-00:58 or if you are using campfire or create GitHub issues automatically from this, 
+00:58 or if you are using Campfire or create GitHub issues automatically from this, 
 01:02 all of those are awesome, I'll just scroll through, we got Jira, we've got Slack, 
 01:07 we've got Trello, you can sort of break out of the box and do web hooks, 
 01:12 all you want, I am going to integrate this with Slack. 
@@ -25,33 +25,33 @@
 01:49 or whatever, we are going to get all of these sent. 
 01:52 But if for some reason I don't want to know when an item is reopened, 
 01:56 I could just delete that, right. 
-02:00 OK, so let's go cause that error, again. 
-02:03 Here it is, and if I hit it again, it's going to happen, again, 
+02:00 OK, so let's go cause that error again. 
+02:03 Here it is, and if I hit it again, it's going to happen again, 
 02:07 actually let me just make a different error 
-02:10 so you can see what it looks like the first time.
-02:12 It's going to be a value error, and this is going to trigger it, here we go, 
-02:19 sign in again and kaboom, value error. 
+02:09 so you can see what it looks like the first time.
+02:12 It's going to be a ValueError, and this is going to trigger it, here we go, 
+02:19 sign in again and "Ka Boom!", ValueError. 
 02:24 OK, now notice, I got a little pop up already right there, now it depends on 
 02:28 how your Slack is set up, if it pops up like an actual notification, 
-02:31 or it just says hey there is something going on, look at this, red thing Rollbar, 
-02:35 nice message, there has been an error in dev, a new value error, kaboom, 
+02:31 or it just says "hey, there is something going on, look at this, red thing Rollbar", 
+02:35 nice message, there has been an error in dev, a new ValueError, kaboom, 
 02:42 there is some of your notifications, right, and if you have the Slack app installed 
 02:46 for your phone and you turn on notifications for this channel, 
 02:49 you can create a special runtime channel or something, right, 
 02:52 and then you will get those notifications popping up on your phone, straight away, 
 02:56 so again, we can just click here and let's use Chrome 
 02:59 because that is where it's authenticated against, and we'll pull it up, and there it is,
-03:03 kaboom, value error in all the stuff that you would expect to see. 
+03:03 "Ka Boom", ValueError in all the stuff that you would expect to see. 
 03:08 So, that is how you set up the notification side, so don't forget to do that 
 03:13 because that is where some of the biggest value for what you have in Rollbar is, 
 03:18 the fact that you get notified straight away. 
 03:22 Final thing to notice is we have a dev section here, if we go over to settings, 
 03:25 you can see here we have environments dev, there could be test, 
 03:28 there could be production, you can hide the notifications and messages 
-03:33 from various things, so you can come over here and say I don't want to see dev errors, 
+03:33 from various things, so you can come over here and say "I don't want to see dev errors", 
 03:37 I only want to see production errors, or production and staging, whatever, right, 
 03:41 but you probably don't want to leave this on, 
-03:44 because you will get freaked out oh my gosh there is something wrong with the website, 
+03:44 because you will get freaked out - "oh my gosh there is something wrong with the website", 
 03:46 no, actually, it's just somebody doing some development and they are not done.
 03:51 Something like that. So that is how you add Rollbar to a Pyramid app. 
 03:57 I have this running in all of my Pyramid apps, and it has saved me more than once. 

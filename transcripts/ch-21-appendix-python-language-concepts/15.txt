@@ -2,7 +2,7 @@
 0:05 The other really has to do with managing deployments and dependencies. 
 0:09 Let's talk about the versioning part first. 
 0:11 Suppose my web application I am working on right now 
-0:15 requires version 2.9 of requests. 
+0:14 requires version 2.9 of requests. 
 0:18 But somebody else's project required an older version with older behavior, 
 0:22 version 2.6 let's say. I don't think those are actually incompatible, 
 0:25 but let's just imagine that they were. 
@@ -15,7 +15,7 @@
 0:48 and the idea is this- we can crate basically a copy, 
 0:52 change our paths and things like that around so that when, 
 0:55 you ask for Python or this looks for Python packages, 
-0:58 it looks in this little local environment we create one of these small environments 
+0:58 it looks in this little local environment, we create one of these small environments 
 1:02 just for a given application, so we would create one for our web app 
 1:06 that uses request 2.9 and another one for the one that uses request 2.6 
 1:10 and we would just activate those two depending on which project we are trying to run, 
@@ -27,15 +27,15 @@
 1:28 if you need to deploy it or you need to give it to someone else, 
 1:31 that could be very challenging. So with virtual environments
 1:34 we can install just the things a given application requires to run 
-1:37 and be deployed so when we do something like pip list, 
+1:37 and be deployed so when we do something like "pip list", 
 1:41 it will actually show us exactly what we need to set up 
 1:44 and use for our app to run in production. 
 1:47 Typically we tie virtual environments one to one to a given application. 
 1:51 So how do we create one?
 1:53 This example uses virtual env which we would have to install via pip, 
-1:57 you could also use venv just change virtual env to venv in Python 3 
+1:57 you could also use venv, just change virtual env to venv in Python 3 
 2:01 and it will have the same effect, but this works, 
-2:04 like I said in Python 2 and 3 so here you go. 
+2:03 like I said in Python 2 and 3, so here you go. 
 2:06 So we are going to run Python 3 and we are going to say run the module, virtual env, 
 2:09 and create a new environment into ./localenv. 
 2:14 Here you can see it creates a copy from Python 3.5. 
@@ -43,7 +43,7 @@
 2:20 and there is an activate program that we can run and notice, 
 2:23 we'll use the . (dot) to apply that to this shell 
 2:26 and not to create a new separate shell environment for that when it runs
-2:30 because we wanted to modify our shell environment not a temporary one. 
+2:30 because we wanted to modify our shell environment, not a temporary one. 
 2:34 So we say . activate and that will actually change our environment, 
 2:38 you can see the prompt change, if we say pip we get the local pip,
 2:41 if we ask which Python you'll see it's this one that is in my user profile 
