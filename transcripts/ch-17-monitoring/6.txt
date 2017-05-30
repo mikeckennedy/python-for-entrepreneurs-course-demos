@@ -1,72 +1,71 @@
 00:02 Now that we have Logbook all set up, and loading at startup, 
 00:05 let's see how we can leverage our controller infrastructure that we've set up, 
-00:10 basically our Pyramid handlers to make it really easy to get specific messages 
+00:10 basically our Pyramid handlers, to make it really easy to get specific messages 
 00:15 for any web action in our entire website without even thinking about it. 
 00:20 So here is some that we might want to log, sign in,
 00:23 that seems like something that you want to know about, people register, 
 00:26 people sign in, these are really good things to log; 
 00:29 similarly when somebody purchases something, we want to log that as well. 
 00:32 So we could go create a Logbook, enter some information, 
-00:36 but you'll see this can actually be done automatically leveraging our base controller, 
-00:39 so down here, let's just say self.log and let me put a little log name here,
-00:49 remember, this is going to basically be the section of our application, 
+00:36 but you'll see this can actually be done automatically leveraging our base controller. 
+00:39 So down here, let's just say self.log and let me put a little log_name here,
+00:48 remember, this is going to basically be the section of our application, 
 00:54 so we could say first it's going to be just controllers in general 
-00:57 and we can start with this, we'll say logbook we got to import that into this module, 
+00:57 and we can start with this, we'll say logbook, we got to import that into this module, 
 01:03 and then we'll create a logger and we give it the log name. Super simple. 
-01:09 So up here, like in sign in, here, let's just do a little message, 
+01:09 So up here, like in "sign in", here, let's just do a little message, 
 01:14 and let's do self.log.notice, failed login, something like that. 
-01:30 And we'll do the message here and then down here after this we'll say 
-01:37 self.log.info and notice as well I guess, user successfully logged in, 
-01:47 and let's go ahead and say vm.email so we know who that was. 
+01:30 And we'll do the message here and then down here after this, we'll say 
+01:37 "self.log.info..." and notice as well I guess, "User successfully logged in", 
+01:47 and let's go ahead and say "vm.email", so we know who that was. 
 01:52 Alright, let's check this out see what's working. 
-01:55 Let me log out, and then sign in, and I think I changed the cat at some point
-02:04 so let's try cat, boom, we are logged in, 
+01:55 Let me log out, and then sign in, and I think I changed to the "cat" at some point,
+02:04 so let's try "cat", boom, we are logged in, 
 02:06 let's check the logs, user successfully logged in. 
-02:09 Let me just try, fail real quick, no that didn't work, 
-02:16 so I must have messed up my cat, there we go.
+02:09 Let me just try a fail real quick, no that didn't work, 
+02:16 so I must have messed up my "cat", there we go.
 02:20 So we have notice, controllers, failed login attempt, and so that's cool, 
 02:24 these notices are coming from app, these notices are coming from controller, 
 02:28 but, one simple step and we can do better, alright. 
-02:31 So that was already cool that now by doing this setup 
+02:31 So that was already cool that now by doing this setup, 
 02:34 every web action has instant access to our logging infrastructure, 
 02:39 but let's do a little bit of work on this name here. 
 02:45 What we can do is actually we can shorten this to say this is going to be a controller, 
-02:48 say just controller and I am going to use a short version
-02:53 just so the log file lines don't get too long / and then we could say
-02:57 account or store or whatever to say which controller, how do we do that? 
+02:48 say just "Ctrl" and I am going to use a short version,
+02:53 just so the log file lines don't get too long "/" and then we could say
+02:57 "Account" or "Store" or whatever to say which controller, how do we do that? 
 03:04 We can actually leverage the type name of the instance, 
-03:09 we are going to say type (self) . _ _name_ _ 
+03:09 we are going to say type (self).__name__ 
 03:14 and this would be something like the full path name or at least account controller 
 03:19 so what we want to do is we are going to 
-03:23 actually just replace controller with nothing. 
-03:28 So instead of saying controller/account controller we'll just take controls 
-03:34 say controllers maybe plural/ account/admin/store you don't have to do this way, 
-03:43 you could just stuff straight name into there but I kind of like the grouping of this 
+03:22 actually just replace "Controller" with nothing. 
+03:28 So instead of saying controller/account controller we'll just take controls, 
+03:34 say controllers maybe plural/account/admin/store, you don't have to do this way, 
+03:42 you could just stuff straight name into there but I kind of like the grouping of this 
 03:46 so if you do some kind of like sorting on the name or the location, 
 03:51 it's all the controllers are grouped together. 
 03:54 Alright, let's try one more time. 
 03:57 Alright, log out, sign in, now we go down here, 
-04:05 we can see oh controllers account, user Michael logged in, 
+04:05 we can see oh Ctrls/Account, user Michael logged in, 
 04:08 so now we know exactly what controller or web action we were in, 
 04:12 more or less, we can do one final step here, 
-04:15 now let's go ahead and log that somebody purchase something here, 
-04:18 so we'll say yeey, we have a purchase, somebody bought something, 
-04:23 so notice that PytCharm is showing us that we are missing some pieces 
+04:15 now let's go ahead and log that somebody purchased something here. 
+04:18 So we'll say "YAY, we have a purchase, somebody bought something", 
+04:23 so notice that PyCharm is showing us that we are missing some pieces 
 04:27 so we say self.logged_in_user.email, what did they buy, 
 04:32 they bought album.name. OK, let's go buy that. 
 04:40 So we'll come over here, let's log out really quick, 
-04:45 log back in take it through the whole process, alright, now we are logged in,
+04:45 log back in, take it through the whole process. Alright, now we are logged in,
 04:51 we can go to albums and hey, we can buy this album, and remember, 
 04:55 our test codes four twos all the way across, alright, let's buy it. 
-05:04 
 05:08 Success, now let's check out logs, OK, so we've come down here,
 05:13 the user has logged in, we have some request going to Stripe etc, etc, etc, 
 05:20 I think I am printing that out somewhere, we could take that away
-05:26 and then we have controller/store, 
+05:26 and then we have Ctrls/Store, 
 05:28 yeey, Michael bought Digital Age Boys And Girls. 
 05:31 OK, so besides that print statement there, which I can get rid of, 
-05:36 you can see we have controller/account, controller/store and so on. 
-05:43 So now, with just this little bit of work, we are going to have a really good login 
+05:36 you can see we have Ctrls/Account, Ctrls/Store and so on. 
+05:43 So now, with just this little bit of work, we are going to have a really good logging
 05:47 for the rest of our application. 
 05:49 Right, that's Logbook, I totally recommend you use it, 
 05:52 I've been using it for long time and it's really stable and easy to use, 

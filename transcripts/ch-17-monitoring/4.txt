@@ -140,7 +140,7 @@
 10:06 we come over here, we set up the global stream handler 
 10:13 or basically the message handler either a stream handler 
 10:16 or a time rotating file handler or other things. 
-10:20 And then you just get a hold of log, by saying logger.logbook.logger 
+10:20 And then you just get a hold of log, by saying logger.... logbook.logger 
 10:26 allocate one of these, and notice it says "App" here and we are doing a notice log there 
 10:31 and if we go back to our console, you can see we have a notice from the app.
 10:37 Alright, so this lets you really easily reference what part of the application is working, 
