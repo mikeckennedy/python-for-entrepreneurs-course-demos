@@ -2,42 +2,42 @@
 00:07 a 500 error or maybe it's even a little more subtle than this falling octacad, 
 00:12 maybe it's some button doesn't work, because behind the scenes, 
 00:17 it's calling some kind of JavaScript thing where that's crashing. 
-00:20 So, how do we know when this has happened, right, 
+00:20 So, how do we know when this has happened? Right, 
 00:24 our server is not going to tell us, it's just going to return 500 to the user and that's it. 
 00:28 Our users will tell us sometimes, if someone comes to buy something from you 
 00:33 and they see this page instead, they are going to lose a lot of faith in your app, 
-00:37 in your product, they are going to wonder did you already charge their credit card, 
-00:41 or did it crash before, should they try to buy it again, 
-00:44 will they be charged but not receive their product, whatever it is. 
+00:37 in your product, they are going to wonder - did you already charge their credit card 
+00:41 or did it crash before? Should they try to buy it again, 
+00:44 will they be charged but not receive their product? Whatever it is. 
 00:49 This is really bad when your app crashes or behaves badly. 
 00:54 So how do we know about it? 
 00:57 Well, users will sometimes tell you, but for every user that tells you 
 01:00 something is wrong, there will be plenty of users that have come to your site 
 01:05 and just got, "this thing is crap" and left. 
 01:07 So, relying on the users is not enough, 
-01:09 and often they will say well it crashed and I tried this and it didn't work, 
+01:09 and often they will say "well, it crashed and I tried this and it didn't work", 
 01:12 how do you know what crashed, how do you track that down? 
 01:15 So, we want to first talk about how we can at least record this information locally, 
 01:19 some of it, so that we have it, and ideally, we would get notified,
 01:24 right away like possibly by the time the user was done typing up an email saying 
 01:29 look I went to this URL it crashed, you've already actually got it fixed, 
 01:33 or you are already working on the fix and you can shoot them a quick note 
-01:37 hey thanks, I already noticed here is the problem, come back in 15 minutes 
-01:41 and everything will be working great, 
-01:44 that actually turns a bad experience into pretty good experience, 
+01:37 "hey thanks, I already noticed here is the problem, come back in 15 minutes 
+01:41 and everything will be working great", 
+01:43 that actually turns a bad experience into pretty good experience, 
 01:46 if you hit a website and the owner already 
-01:51 like maybe proactively emails you saying hey I saw you run into this error,
-01:54 I am working on it, it will be fixed soon, before you even contact them, 
+01:51 like maybe proactively emails you saying "hey, I saw you run into this error,
+01:54 I am working on it, it will be fixed soon", before you even contact them, 
 01:57 that's ridiculously good customer service; so, how are we going to do that? 
 02:00 Well, two main things- we are going to start with logging, 
-02:04 so having login is important not just for the errors the users run into,
+02:04 so having logging is important not just for the errors the users run into,
 02:08 but also for auditing who logged in from where, when, 
 02:11 people trying to hack your website, what other things are going on, 
 02:17 are you running out of memory and so on, how many requests per second, 
 02:21 there is just lots of stuff that you want to do in logging
 02:24 that you are going to come back and look at. 
 02:27 But that's just what I would think of as level one, right, 
-02:30 login puts into a file what has happened, and if you bother to go sift through that file,
+02:30 logging puts into a file what has happened, and if you bother to go sift through that file,
 02:34 you might learn something about what's happening, that's great. 
 02:37 But, like I said, ideally, you'd like to know straight away when that happened, 
 02:42 so we are going to talk about monitoring with the Rollbar, 

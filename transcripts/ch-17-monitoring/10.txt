@@ -2,56 +2,52 @@
 00:04 you probably want to add it to your app and the first thing you need to do is 
 00:07 create an app in Rollbar that represents your app that you are actually building, 
 00:12 so you can create a brand new project or I am going to create one from GitHub repo, 
-00:15 
 00:19 and that's it, I just click that button and boom, it was done, 
 00:22 so you can see I did this from the demos repository, 
 00:26 I'll probably end up changing these codes over time, 
-00:29 but if we were going to do JavaScript like AngularJs, jQuery type stuff, 
+00:29 but if we were going to do JavaScript like AngularJs, jQuery-type stuff, 
 00:34 and catch client side errors you can use this code 
 00:38 and we are going to do mostly server-side error tracking this is going to be 
-00:42 for our Python app so we are going to want to use this code. 
-00:46 Now it says, if you want to set up the client side bit you just drop this in, 
+00:42 for our Python app, so we are going to want to use this code. 
+00:46 Now it says "if you want to set up the client side bit you just drop this in", 
 00:50 boom, you are done, you can drop that in like your layout, 
 00:53 your master layout page there, and then, it also shows you 
 00:57 how to handle error messages and things like that, 
 01:01 we'll go down to the configuration reference, 
 01:08 actually click on code brace integrations, Python and then we have Pyramid. 
-01:12 So it says in your any file production.ini or whatever, 
+01:12 So it says in your ini file, production.ini or whatever, 
 01:17 you are going to add this to the Rollbar includes, you can do it here in the includes, 
 01:22 I actually like to have that in code so let's go over and do that in code here, 
-01:27 so in our dunder init, come up to the top there is an init includes, 
+01:27 so in our dunder init, come up to the top, there is an init_includes 
 01:33 and we just need to add one more of those 
 01:36 so we are going to use rollbar.contrib.pyramid. 
-01:40 Now, this is not the package name, it is package name but this is the PyPi package 
+01:40 Now, this is not the package name, it is package name but this is the PyPi package, 
 01:47 which contains that as  a subpackage. 
 01:50 OK, and then we need to add this into our pieces here 
 01:59 so let's go and do it like this and let me just do a divider 
-02:04 and this actually appears above, this main, 
+02:04 and this actually appears above this main, 
 02:07 so be sure to not put it there twice, it hates that. 
 02:11 So here is our Rollbar setting, and we are going to put our production key here, 
-02:19 
-02:28 so let's go and do that and I'll put maybe a note jskey= whatever it does, like so,
-02:37 so in case we want to put that in later, I guess we could look it up, 
-02:41 anyway, here we have our things, now it says rollbar.acces token, rollbar.environment 
+02:28 so let's go and do that and I'll put maybe a note "js key =" whatever it does, like so,
+02:37 so in case we want to put that in later, I guess we could look it up.
+02:40 Anyway, here we have our things, now it says rollbar.acces_token, rollbar.environment 
 02:45 and we don't actually have to worry about this, we don't have to pull these in, 
 02:50 all we have to do is basically have the configuration there 
-02:54 and we are going to have Rollbar go and when it gets included 
+02:54 and we are going to have Rollbar go and when it gets included, 
 02:57 it's going to go look in that configuration. 
-03:00 That's cool, right, and this is not misspelled, so we'll do that. 
+02:59 That's cool, right, and this is not misspelled, so we'll do that. 
 03:04 Right, a few more steps here, 
-03:08 
 03:13 so next it says, we want to replace our app:main which is right here, 
-03:22 with this bit here, like so, and the name is blue yellow app 
-03:31 so we want to make sure that appears where it says your app name OK, 
-03:38 alright, that's looking solid, anything else we have to do- all we need to do is 
+03:22 with this bit here, like so, and the name is blue_yellow_app. 
+03:31 So we want to make sure that appears where it says YOUR_APP_NAME, OK, 
+03:38 Alright, that's looking solid, anything else we have to do? All we need to do is 
 03:43 filter part here, I'll put that down below as well, 
 03:49 a little bit of copy and paste into various places, I think we are ready to go. 
-03:58 OK, let's just run it and see that it hands together. 
-04:01 It does not hang together and why not, because there is not module name Rollbar, 
+03:58 OK, let's just run it and see that it hangs together. 
+04:01 It does not hang together and why not? Because there is not module name Rollbar, 
 04:06 of course there isn't. 
-04:09 We haven't done anything that has triggered PyCharm to say
-04:12 hey don't forget to include this, but we will make sure we put it in our setup py. 
-04:17 
+04:08 We haven't done anything that has triggered PyCharm to say
+04:11 "hey, don't forget to include this", but we will make sure we put it in our setup.py. 
 04:19 Alright, so let's just put Rollbar in here, I'll come back and organize that, 
 04:23 now it says oh this is not satisfied, let's go and install that for us 
 04:27 into our virtual environment, now we can give it another try. 
@@ -65,8 +61,7 @@
 05:00 before we get going is notice it says environemt=production, 
 05:03 let's change that to dev, first of all,
 05:05 let's take that away from it, let's move this stuff over into the production.ini, 
-05:10 
-05:15 what else do we need to check, check this little top bit here, 
+05:15 what else do we need to check? Check this little top bit here, 
 05:21 and we have the filter I believe at the bottom. Fantastic.
 05:35 OK, so this is all setup and good to go, we got our production, our production, 
 05:39 maybe give a little extra space here, production there and guess what, 
@@ -74,63 +69,62 @@
 05:47 so let's go to the few places where it says production, and put in dev, dev, dev. 
 05:51 Alright, well, it looks like we got it working, 
 05:55 where do you think we should go crash this up, that seems like a good idea, 
-05:59 let's just go and make sure this is empty, 
-06:03 alright, if we go to items we go to our dashboard, 
-06:05 it says it looks like you have no data, no errors, 
-06:08 and it just comes back and tells us our keys, and encourages us to set up, 
-06:12 here you can see all the different languages supported 
-06:14 again if I click on Python I get like the basic usage how to set it up as middleware, 
+05:59 let's just go and make sure this is empty. 
+06:02 Alright, if we go to items we go to our dashboard, 
+06:04 it says "it looks like you have no data, no errors", 
+06:07 and it just comes back and tells us our keys, and encourages us to set up, 
+06:11 here you can see all the different languages supported 
+06:13 again if I click on Python, I get like the basic usage, how to set it up as middleware, 
 06:19 here at Pyramid which is really cool, we've already done that 
 06:22 so let's go and see if we can make this crash, we tried to write good software, 
 06:26 let's try to write some bad stuff, alright. 
 06:28 So let's make the home page, let's make the sign in crash, 
 06:32 and here we'll just say something like this, 
-06:37 raise exception, boom something like that. 
-06:43 Alright, so if I try to sign in and if I submit that form something bad should happen, 
-06:48 so let's just clear out those logs there, 
-06:52 OK, let's do a little log out log in. 
-06:56 Cat, here we come. Bam, exception, 
-07:01 now this is what an exception looks like in your dev mode. 
+06:37 "raise Exception('Boom!')", something like that. 
+06:43 Alright, so if I try to sign in and if I submit that form, something bad should happen, 
+06:48 so let's just clear out those logs there. 
+06:52 OK, let's do a little log out / log in. 
+06:56 "cat", here we come. Bam, exception. 
+07:01 Now this is what an exception looks like in your dev mode. 
 07:05 But in production, you don't see all this, like users just see something like engine x, 
 07:10 bad request or could not process request 500 error. 
 07:13 And that's it, just boom 500, nothing else. 
 07:18 So imagine you don't see this and now, let's go look at our app. 
 07:23 OK that didn't look good, does it, did it submit it, we'll go find out. 
-07:30 Now look at that, I refresh Rollbar and guess what, boom, there is an exception, 
-07:37 now, that's pretty straight forward, because the way we wrote it, 
+07:30 Now look at that, I refresh Rollbar and guess what, boom, there is an exception. 
+07:37 Now, that's pretty straight forward, because the way we wrote it, 
 07:41 but let's just go look around and see what we've got. 
-07:45 OK, so we've had here is how many times it's occurred
-07:48 in the last 60 minutes hours and days, and we can see OK 
-07:53 here apparently is the call stack let's look at arguments, check this out, 
+07:45 OK, so we've had..., here is how many times it's occurred
+07:48 in the last 60 minutes hours and days, and we can see OK, 
+07:53 here apparently is the call stack, let's look at arguments, check this out, 
 08:00 we have sign in email and password and how fantastic is it 
 08:04 that they are staring out the password, like that is just attention to detail
 08:08 like nobody's business. 
-08:11 OK, so that is really cool, the error was this, 
-08:14 it happened on this line because we wrote this but in a real crash 
-08:18 we'd have our inbound data that we could look at, OK so somebody who is signing in, 
+08:10 OK, so that is really cool, the error was this, 
+08:12 it happened on this line, because we wrote this but in a real crash 
+08:17 we'd have our inbound data that we could look at, OK so somebody who is signing in, 
 08:21 this was their user email address and this is their password and it crashed,
 08:25 we also looked if there's locals I don't really think there is much there,
 08:29 OK, occurrences, it occurred once on Firefox on my Mac, surprise surprise,
-08:36 people know there is no person, we didn't integrate the people API 
-08:40 there these are the browsers, it loos like Firefox is causing us, 
+08:36 people - no, there is no person, we didn't integrate the people API 
+08:40 there, these are the browsers, it loos like Firefox is causing us, 
 08:44 Firefox 50 is causing us a lot of problems, 
 08:46 obviously this is both more important in the JavaScript reporting 
 08:51 as well as in real life. 
-08:53 OK, we have IP addresses, this is the one, is there expected deploy, no,
-08:59 see if it click over here what do we get here is exception, you get all the information. 
+08:53 OK, we have IP addresses, this is the one, is there expected deploy? No,
+08:59 see if it click over here what do we get? Here is exception, you get all the information. 
 09:05 Here is some other information I didn't show you, 
 09:08 these are the parameters that are actually running in Pyramid. 
 09:12 So, it contacts the account controller and see it's in dev environment framework, 
 09:17 there's Pyramid, there's the version of Python, 
 09:21 level of error and here is the version of our notifier, 
-09:24 not that that matters so much, here is what our post consisted of, 
-09:28 and our get request consisted of, these are the actual headers, 
+09:24 not that that matters so much, here is what our POST consisted of, 
+09:28 and our GET request consisted of, these are the actual headers, 
 09:32 I mean, just it goes on and on right, 
 09:34 look at all this stuff, there is probably cookies in here somewhere,
 09:36 here is the host name, look at this if we want to replay it, 
 09:41 let's see, I wonder if it still crashes- let's find out. 
-09:45 
-09:51 Yep, it looks like we still got some trouble going on here, boom, not the best, is it. 
+09:51 Yep, it looks like we still got some trouble going on here, boom, not the best, is it? 
 09:57 OK, so this is really cool, you can even see the raw json
 10:02 which is what was submitted by the API. 
 10:05 So that's it, we've integrated this error tracking 

@@ -6,7 +6,7 @@
 00:23 your best customers aren't going to use this. 
 00:26 Why? Not because they don't trust you, 
 00:29 but because your best customers are going to want to come
-00:32 and buy ten, twenty, a hundred, a thousand of your thing, 
+00:31 and buy ten, twenty, a hundred, a thousand of your thing, 
 00:35 and probably they don't want to do that by putting a thousand things
 00:39 into their shopping cart or in my case they would have to actually make 
 00:43 a thousand separate purchases, the way the checkout flow works. 
@@ -30,11 +30,11 @@
 01:49 you can set up Stripe and PayPal as places you can receive money 
 01:52 and then when they fulfill those, when they pay those invoices 
 01:55 which they can do online, the money will automatically go into your account. 
-02:00 Or, you can say send me a cheque here or 
+02:00 Or, you can say "send me a cheque here" or 
 02:03 there is a variety of other ways in which you can pay. 
 02:06 So FreshBooks is really nice, I recommend it, 
 02:09 I've been using it for a few years and it's worked out great for me. 
-02:13 Another one that is a little newer is this thing called Invoiced. 
+02:12 Another one that is a little newer is this thing called Invoiced. 
 02:16 And Invoiced is really nice it seems like a little more polished than FreshBooks, 
 02:20 it seems a little bit newer, I know FreshBooks has been talking about 
 02:23 they just spent ten million dollars on redesign of their web app.
@@ -54,10 +54,10 @@
 03:18 and so then it mixes them with all my other invoices, 
 03:21 things like from the podcast ad revenue which are almost exclusively 
 03:25 done through invoices, as well as a few consulting things independently here, 
-03:31 so it just lets everything go under this one accounting software 
-03:34 which works well because I run my stuff as a sole proprietorship 
+03:30 so it just lets everything go under this one accounting software,
+03:33 which works well because I run my stuff as a sole proprietorship 
 03:37 so all the income I have to deal with personally anyway, 
-03:40 if you are in S Corp you would probably do it differently. 
+03:40 if you are in S Corp, you would probably do it differently. 
 03:43 Nonetheless, make sure you get some software to help out with accounting, 
 03:46 because accounting is not fun but the software makes it well, 
 03:49 almost fun, certainly when you get paid is fun. 

@@ -5,27 +5,27 @@
 00:15 But, we've kind of seen logging a little bit, if I run our app 
 00:18 you can see that some stuff comes out here like running in production mode, 
 00:21 using this database, but this logging is not going 
-00:25 to where we wanted to go, this is just print. 
-00:28 So we are going to convert these to proper log messages
-00:32 that we can direct to different sources to rotating files directly 
+00:24 to where we wanted to go, this is just print. 
+00:27 So we are going to convert these to proper log messages
+00:29 that we can direct to different sources to rotating files directly 
 00:36 from out of the app to the console, maybe even to databases, 
 00:40 we could do all sorts of things with these once we get it to logging framework. 
 00:43 OK, so to get started, let's go to the beginning of our app here, 
-00:50 and we are going to have, we've got this init mode, that's cool, 
+00:50 and we are going to have, we've got this init_mode, that's cool, 
 00:54 let's go ahead and add one thing at the beginning here, 
-00:58 very first thing we're going to say is init logging,
+00:58 very first thing we're going to say is init_logging,
 01:01 and we're going to write this function, and up here,
-01:04 I am going to define a startup log, so the rest of these little configuration methods, 
-01:11 they might use this log so we want to make sure that this runs first 
+01:04 I am going to define a startup_log, so the rest of these little configuration methods, 
+01:11 they might use this log, so we want to make sure that this runs first 
 01:16 so that the log is around for everything, so over here we can create this method, 
 01:21 and I don't like having these detail methods first, 
 01:26 I have like the main flow going and then this, 
-01:30 so what are we going to do in this logging, we are going to set that log file,
-01:33 so we are going to define a global startup log, 
+01:30 so what are we going to do in this logging? We are going to set that log file,
+01:33 so we are going to define a global startup_log, 
 01:37 and that lets us basically initialize it here,
 01:40 rather than working with the local variable and what I'd like to do is 
 01:44 I would like to put into the configuration file a way that we can configure 
-01:49 the level of logging you'll see that there is different levels of logging
+01:49 the level of logging. You'll see that there is different levels of logging
 01:54 we want to come out of the application, 
 01:58 and there is messages that map to different levels,
 02:01 so some things might be informational, some things might be warnings, 
@@ -36,44 +36,43 @@
 02:18 So we can store that into a configuration file 
 02:21 and pull that in and we'll do that in a moment. 
 02:24 But first, let's just assume they are there and get it out. 
-02:28 
-02:32 So remember we are going to get our settings dictionary, say log level 
-02:41 we'll get the log level and we'll say log file name so we get both of those, 
+02:32 So remember we are going to get our settings_dictionary, say log_level,
+02:41 we'll get the log level and we'll say log_filename, so we get both of those, 
 02:52 OK great, then let's create a file that is going to actually manage the logging, 
 02:58 this dunder init is already getting kind of complicated and we are not done yet, 
 03:03 so let me go over here and create one of these services, 
 03:06 we have services for emails, for mailing lists, 
 03:09 for stores, e-commerce whatnot, let's add one for logging. 
 03:14 OK, like before this is going to follow pretty much the same pattern, 
-03:21 we have a few sort of static variables here, so I have a static method, 
-03:26 and this is going to take log level, and file name, alright, 
+03:22 we have a few sort of static variables here, so I have a staticmethod, 
+03:26 and this is going to take log_level, and file name, alright, 
 03:35 so let's just do a quick pass here really quick and we'll just wire these things up, 
 03:39 and then we'll be ready to actually add Logbook. 
-03:45 So we are going to need to import that of course and we'll say global init 
-03:51 and we'll give it the log level and the log file.
+03:45 So we are going to need to import that of course and we'll say global_init 
+03:51 and we'll give it the log_level and the log_filename.
 03:57 Now this is going to return a logger for us, and we'll say something like this, 
 04:04 we'll say startup_log = LogService.startup_log, something like that.
 04:12 And we'll make this a property, and you can see it doesn't exist yet, 
 04:15 but it's going to in a moment. 
 04:19 Now that got added as a field, I don't want it as a field, 
 04:23 I want this as a property, and the name is going to be this.
-04:31 Right now we return none, but in  just a moment once we get Logbook setup 
+04:31 Right now we return None, but in  just a moment once we get Logbook setup 
 04:37 we are going to return the Logbook instance. 
 04:40 So we almost have the skeleton of this logging setup in place, 
 04:44 let's just go ahead and put something in our configuration file here. 
 04:48 So remember we had our log level and our log file name. 
-04:55 Let's set this to be info that's pretty good, and we'll have log file name, 
+04:55 Let's set this to be INFO, that's pretty good, and we'll have log_filename, 
 05:00 and let's just set that to be ./ we'll just do ./app_log.txt, something like that. 
 05:12 OK, final thing to make sure this is all hanging together, 
-05:17 let's just do a little print, logging setup like this, 
-05:27 and we'll just say we are going to print out the log level and the filename.
-05:31 OK, run it, logging setup, none and none. 
+05:17 let's just do a little print, "Logging setup:" like this, 
+05:27 and we'll just say we are going to print out the log_level and the filename.
+05:31 OK, run it, "Logging setup: None and None". 
 05:37 Oh yes, why is that happening, because in a little bit when we get to Rollbar, 
 05:42 I am going to need some more access to private keys 
 05:45 that I can't share with you guys 
 05:47 so I put that into a separate startup file that's just on my desktop, 
-05:52 let me move that settings over and try again. 
-05:55 Running again, what do we get- here we go, 
+05:51 let me move that settings over and try again. 
+05:54 Running again, what do we get? Here we go, 
 05:58 logging setup info is going informational
-06:02 and above notices are going to be sent to ./app_logg.txt, 
-06:07 excellent, so now we are ready to integrate Logbook. 
+06:02 and above notices are going to be sent to ./app_logg.txt.
+06:07 Excellent, so now we are ready to integrate Logbook. 

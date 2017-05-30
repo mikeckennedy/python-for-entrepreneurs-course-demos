@@ -3,7 +3,7 @@
 00:06 help me edit my podcast, help me create transcripts for my online courses, 
 00:10 I have a really great women named Marija who does that for me, 
 00:14 who I also found through Upwork and we've been working together 
-00:17 for almost two years; this experience has been super.  
+00:16 for almost two years; this experience has been super.  
 00:20 I have tried to hire somebody through here for web development 
 00:23 and I tried to hire somebody for a software development job, 
 00:28 and I found those to be much, much more sketchy. I don't know why, 
@@ -14,10 +14,10 @@
 00:48 so for example there is a guy I think he was from the Philippines 
 00:52 who said he was in Chicago, or somewhere like that. 
 00:56 And, I don't remember how I figured that out, 
-01:00 I think it was through like real time Google analytics
-01:04 and I said where are you right now, I am in Chicago, 
+00:59 I think it was through like real time Google analytics
+01:04 and I said "Where are you right now?", "I am in Chicago", 
 01:06 OK, go to these various webpages on my website, 
-01:09 not because I was trying to test him, but I was a little insure, 
+01:09 not because I was trying to test him, but I was a little unsure, 
 01:14 but really wanted to show him those things there and I happen to have my analytics up 
 01:17 and I look over and it says on this page, one visitor from the Philippines. 
 01:22 It's totally fine with me if someone is from the Philippines, I don't care, 

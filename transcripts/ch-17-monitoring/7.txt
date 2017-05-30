@@ -2,32 +2,32 @@
 00:07 First thing we did is we imported Logbook and we actually imported sys as well, 
 00:12 then what we did is we actually got the log file name, and the log level. 
 00:19 Now, here I just typed it in, and we saw that we use the file, 
-00:23 if we were going to trigger file logging and if there was nothing we just logged standard out.
+00:23 if we were going to trigger file logging and if there was nothing, we just logged standard out.
 00:28 Now, in practice this probably as we did goes into your 
 00:32 development.ini and your production.ini, but where you get it from it doesn't matter, 
 00:36 we set the filename and we set the level, and then if we have a filename, 
 00:40 we must want to log to it but if we don't we'll say 
-00:43 stream handler standard out we set the level. 
-00:47 Remember, here we are setting it to trace that's one of the most verbose things 
-00:51 you can do and because we said push to application 
+00:43 stream handler, standard out, we set the level. 
+00:47 Remember, here we are setting it to trace, that's one of the most verbose things 
+00:51 you can do and because we said "push to application", 
 00:54 that means this stream handler is available from anywhere in the entire process. 
 01:00 OK, next, we said if we do have a filename, instead of creating a stream handler, 
 01:06 we are going to go to timed rotating file handler. 
-01:11 So every day we get a new file, and after a few month 
+01:11 So every day we get a new file, and after a few months 
 01:14 you can clean out the really old files, keep the last month, two months, 
 01:17 actually I archive mine, put them into a Dropbox somewhere, things like that, 
 01:20 so we give it the filename and the level and a date format, and again, 
 01:23 we just push this to make it globally available.
-01:26 So it's the levels here that act as a filter, for the rest of the messages 
+01:26 So it's the levels here that act as a filter for the rest of the messages, 
 01:31 where you see things like log.notice, log.trace, log.info, log.error and so on. 
 01:37 Once we have the setup, how do we create 
-01:40 one of these Logbook loggers and actually use it. 
-01:43 Well we say logbook.logger and allocating instance of the logger class 
+01:40 one of these Logbook loggers and actually use it? 
+01:43 Well, we say logbook.logger and allocating instance of the logger class 
 01:48 and here it takes the name of the logger 
 01:51 and you saw that they actually appears in the output. 
 01:54 Then we come up with some message, right, there is just random text,
 01:58 this is the text of the message we want to send in our log, 
-02:01 and then we just say startup log in this case or name of the logger instance . critical error
+02:01 and then we just say startup_log in this case or name of the logger instance . critical error,
 02:07 notice, info, trace, etc and then we get some message that looks like this. 
 02:13 We've got the date and the date format that we put out, 
 02:16 we've got the notice because we did a log.notice, 
@@ -39,15 +39,15 @@
 02:39 customized loggers for every single web request that is instantly and always available. 
 02:44 So in our dunder init for the controller base, we just say logbook.logger 
 02:49 and we came up with the naming scheme, 
-02:52 mine was controllers/ the short name of the type 
+02:52 mine was Ctrls/ the short name of the type 
 02:56 because I always called it account controller, home controller, store controller, 
-02:59 I don't really need that in my log so we just did a little bit of work 
+02:59 I don't really need that in my log, so we just did a little bit of work 
 03:03 with the replace that dropped that name, 
-03:06 and then like in our account controller here we are going to say self.log 
-03:09 and then notice, users are attempting to log in. 
+03:06 and then, like in our account controller here, we are going to say "self.log..." 
+03:09 and then "notice", users are attempting to log in. 
 03:12 And users successfully logged in, and you see messages like this at the bottom, 
-03:16 so notice controller/account user login successful, and I wrote this function, 
-03:22 property really, extra log details, and I put that in the controller base as well 
+03:16 so "NOTICE: Ctrls/account: User login SUCCESSFUL", and I wrote this function, 
+03:22 property really, extra_log_details, and I put that in the controller base as well 
 03:27 and it looks at self.request and it will pull out the ip address, the user agent, the URL etc, 
 03:33 there is a bunch of things on the request object you can log automatically 
 03:38 and that gives you additional information so if some user comes and says 
