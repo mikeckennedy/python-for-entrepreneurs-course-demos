@@ -1,5 +1,5 @@
  0:01 Python has this really interesting concept called slicing. 
-0:04 It lets us work with things like lists, here in interesting ways. 
+0:03 It lets us work with things like lists, here in interesting ways. 
 0:07 It lets us pull out subsets and subsequences if you will, 
 0:10 but it doesn't just apply to lists, 
 0:13 this is a more general concept that can be applied in really interesting way, 
@@ -11,9 +11,9 @@
 0:34 we just go to nums list and we say bracket and we give the index, 
 0:37 and in Python these are zero based, so the first one is zero, 
 0:40 the second one is one and so on. 
-0:43 This is standard across almost every language.
-0:45 However, in Python, you can also have reverse indexes
-0:48 so if I want the last one I can say minus three. 
+0:42 This is standard across almost every language.
+0:44 However, in Python, you can also have reverse indexes
+0:48 so if I want the last one, I can say minus one. 
 0:50 So this is not slicing, this is just accessing the values. 
 0:53 But we can take this concept and push it a little farther. 
 0:56 So if I want the first four, I could say 0:4 
