@@ -1,0 +1,137 @@
+00:01 We got nginx working, ssl configured, got that https connection 
+00:04 and DNS is pointing to the correct IP address, 
+00:07 but what about our code, we need to run our wsgi server, 
+00:10 to execute our Python code and respond to requests.
+00:13 In this video, we're going to create a deployment read only key,
+00:17 add it to github, then pull down our code onto the server 
+00:21 and make sure that every time we run our deployment playbook
+00:25 Ansible is always pulling down the latest code 
+00:28 so that we can constantly update our application as we continue to build it.
+00:31 And we already have a deployment key for Ansible, 
+00:33 but we're going to create another deployment key 
+00:35 that we're going to use for read only purposes,
+00:37 this will be stored on the server, and it will only be used to pull down code 
+00:41 as opposed to both push and pull from remote git repositories.
+00:46 We're going to pull out our handy ssh keygen command once again
+00:49 248, specified the type of RSA, once again store this somewhere safe 
+00:57 outside your git repository, call this read only key, no pass phrase on this one 
+01:04 because we're going to automate the deployment 
+01:07 and we don't want to have to type in the pass phrase 
+01:10 when our server is trying to pull down our code.
+01:13 Okay, so now we've got both a public and a private key
+01:15 let's take a look at what's inside the public key, 
+01:18 we're going to copy and paste that put it on github.
+01:21 Alright, so copy the contents of this key 
+01:26 and now move over into the github repository that you're deploying,
+01:31 Now if that's the Python for Entrepreneurs course demos 
+01:34 that you're using to follow along, what you're going to need to do 
+01:37 because you don't have the settings where you can add a deploy key 
+01:41 you need to fork the repository, I'm going to fork it to my username,
+01:45 and now with the fork repository, we can go into settings.
+01:50 Within settings, there is a special section for deploy keys,
+01:54 now with deploy keys you're going to click add deploy key 
+01:58 we'll call this read only for prod server, and then paste in the contents of that key
+02:04 and don't allow right access, make sure this is not checked, click add key. 
+02:10 Punching your password, all right, now we're all set up,
+02:17 where we can pull the contents of this repository onto a remote server,
+02:21 but we can't push code back up to the repository,
+02:24 and that's exactly the set up that we want, because we don't ever want 
+02:27 to take code from production and put it back into our development environment,
+02:31 we want it to be a one way pass from development to github, 
+02:36 to the production server, or test server, 
+02:39 or whatever other servers we have that are running our code.
+02:42 With that in place, we're ready to get back to writing our Ansible playbook.
+02:46 Once again, you are going to write a new yaml file, 
+02:49 and this one is going to be under rules/common tasks, 
+02:53 and we're going to write git.yml. 
+03:00 We'll just add a little note, in this playbook we're going to have four tasks
+03:05 the first one is to ensure that git is actually installed on the remote machine 
+03:09 because right now it's not, we'll use the apt module 
+03:13 and the name for this package is git-core
+03:17 we want it to be present of course, and we'll say yes to update cache,
+03:21 we always want to update the cache to make sure
+03:25 we have the latest version and become true Super User. 
+03:29 Alright, the next task that we need to write is to create a directory 
+03:34 to store our deployment key, and this will be created on the remote machine 
+03:37 so we're going to use the file module, even though we're creating a directory
+03:42 this is still going to use the file module, 
+03:45 the path here is going to be the home directory of our deployed_user  
+03:50 and we'll just create a directory called git_deploy_key 
+03:56 and the state is going to be a directory, we're not creating a file
+03:59 we're going to create a directory, 
+04:02 we don't need to use Super User privileges for this one 
+04:05 we want this to be accessible by the deploy_user;
+04:09 the third task is to ensure that the deploy key is on the remote server 
+04:16 so if it's not there, we'll copy it over using the copy module 
+04:19 the source is going to be the local deploy key directory 
+04:25 and then the name of our deploy key, so in our case, that was read only key 
+04:31 and we'll make sure that that's a variable as well.
+04:37 So that's the source file, then the location that we want to store that on 
+04:42 is going to be the remote machine, which will be under the deploy_user 
+04:46 and actually that directory that we just created up above, git_deploy_key directory.
+04:53 And we want to make sure it has the appropriate permissions 
+04:56 and that the owner is not set to root but set to the deploy_user 
+05:00 with deployed group. With that deploy key in place 
+05:03 and we've configured it on github, now we can clone or we can pull any updates 
+05:09 from the remote repository on github onto the server.
+05:13 Now there's a special module for this, and it's just named git,
+05:18 the repository is going to be- we'll use the code repository variable 
+05:22 and the destination will be the app directory
+05:26 that we've already specified in an earlier video;
+05:29 the key file that we're going to use is that key file that we specified above,
+05:34 deploy_user, git_deploy_key, and the read only key name.
+05:40 One more thing, we want to check, or git is going to check 
+05:45 whether we want to accept the prompt that will pop up 
+05:49 when we're trying to access a new remote server 
+05:52 so we want to say yes to that except the host key,
+05:55 we can save this file and then we just need to make sure
+05:59 that this file is in the main.yml, so we'll include git.yml, 
+06:05 save the file, now let's just update our variables here.
+06:09 We got just a couple of new variables, we've already got deploy user 
+06:12 but we do need a local deploy key directory,
+06:16 now this is for our local file system, so this is just going to be for me home/matt
+06:22 for you- whatever directory you decided to store that deploy key in.
+06:27 And then the one other bit is just the code repository,
+06:30 and this code repository is that remote git repository that we're trying to clone.
+06:35 Now, in my case, that's going to be mattmakai,
+06:38 and then Python for Entrepreneurs course demos,
+06:42 but obviously for you, you're going to specify your git user name
+06:45 wherever you fork the repository to, and then .git
+06:50 Now, when it clones that repository, it's going to put it 
+06:53 under the app directory that we've specified up here,
+06:56 which is the home/deploy user, and then it'll put them under 
+07:00 put the code under blue yellow, so that's exactly what we want 
+07:03 let's rerun this playbook- now it's going to go through all the same steps 
+07:07 for configuring ssl, https, but it's going to skip a lot of those steps 
+07:14 because they've already been done in previous deployments,
+07:17 okay, so we got to our git.yml file, but it looks like in one of the tasks
+07:21 we forgot to specify one of the variable names, local deployed directory.
+07:25 So let's just take a look at that file real quick,
+07:32 yeah, right here, local deploy directory
+07:35 and it may just have been a case where we messed up on one of the names .
+07:40 So we said local deploy key directory,
+07:45 so now we have a decision, we can modify that file itself 
+07:49 and that's probably going to be a better name, local deploy key directory,
+07:53 and it looks like we didn't include read only deploy key name 
+07:57 so we're going to need to include that as well.
+08:01 And in this case, it's going to be read only deploy key
+08:05 that's the private key that we are going to need on the remote machine.
+08:10 Now, that's important because we need the private key, 
+08:13 not the public key on that remote machine, 
+08:16 so this private key is going to be stored on that remote machine, 
+08:19 so that it can connect to github to pull down the code,
+08:22 all right, let's give this one more try-
+08:25 now it's important to note that this is the name of the private key, not the public key,
+08:30 because the private key is going to be stored on that production server
+08:33 that will allow it to connect to github, pull down that source code,
+08:38 so don't use the name of the public key, use the name of the private key here.
+08:42 Let's try this one more time, so everything looks good from what we can tell here,
+08:48 but we can double check this if we log into our remote server,
+08:53 we'll do that by specifying our private key, 
+08:56 and we're going to be deployer@
+09:01 and then the IP address of our remote server,
+09:05 let's see if we've got our source code;
+09:08 well that looks good, we've got our git deploy key, 
+09:10 and we've got blue yellow, all right, we've got our source code 
+09:14 and now we can use this source code to install our application dependencies 
+09:17 and get that wsgi server up and running. 

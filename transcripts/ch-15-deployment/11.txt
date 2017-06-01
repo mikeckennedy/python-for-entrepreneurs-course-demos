@@ -1,0 +1,105 @@
+00:01 Our application source code is on the server 
+00:03 so it seems like a good time just to take one more look at our map 
+00:06 and see where we are and where we're going to go in the last few videos.
+00:09 We've already gone through setting up our domain name 
+00:12 getting our ssl certificate and setting up the web server,
+00:14 and now we also have our source code pulled down from github,
+00:17 along with any static files that are in our git repository on our server.
+00:20 The final missing piece of the puzzle is our wsgi server 
+00:23 and that's what we're going to set up now.
+00:26 The wsgi server along with using a virtual environment 
+00:28 to store our application dependencies is what's going to run our Python code 
+00:31 and have our application run from end to end.
+00:34 Of course, this is going to involve a few more changes to our Ansible playbook 
+00:38 but once this is all done, our entire deployment is going to be automated 
+00:41 so we can run it again and again as the code continues to change.
+00:44 We are going to start out by creating a new dependences.yml file
+00:47 that will keep under common tasks, go ahead and open that up 
+00:51 roles/common/tasks/dependencies.yml
+01:00 the first one is going to be Python 3 virtual environments, 
+01:09 and the pip command specifically for Python 3 on our new Ubuntu system 
+01:14 because we're going to run a whole application with Python 3 rather than Python 2.
+01:17 The name here we've seen this before, we're just going to specify item 
+01:21 and then we'll have a longer list of items, with the with items command.
+01:28 Update our cache, use the super user command and our with items list
+01:32 is only going to have two items, Python 3 venv,
+01:37 that will install the appropriate system packages,
+01:41 next up, we want to check if the virtual env should be created, 
+01:45 so if it's already been created, we'll just skip the step of creating a virtual env. 
+01:49 so as we continue to repeat running our deployment 
+01:52 it doesn't matter whether the virtual env exists or not, 
+01:55 we'll create it if it's necessary, and if it's already there, we'll just skip that step.
+01:59 And we've seen this module before stat, and we'll check the venv directory 
+02:07 so this will just be a variable and we'll register venv created.
+02:11 Now we actually want to create the venv directory,
+02:14 we'll just do this from the shell module
+02:17 and we only want to do this when the venv, 
+02:20 which we just checked if it's been created, when it does not exist.
+02:28 Finally, we want to use the pip 3 command to install our project dependencies
+02:32 and again, we'll just use the shell command, 
+02:36 we're going to combine two commands together,
+02:39 we're going to move into the sub app directory, I'll explain that in just a moment 
+02:44 and we'll take a look at our venv directory, use the pip 3 command,
+02:50 install upgrade, so if there's any new dependencies 
+02:56 they get added as we change our code,
+02:59 we'll automatically update to the latest versions,
+03:02 if we take a look at the code, we have many different subdirectories
+03:05 with versions of the application, 
+03:07 and our is the one that we're deploying in this chapter 
+03:10 under chapter 15 deployment, and this is actually where our application lives;
+03:14 in most projects you're just going to use the application directory
+03:17 because that's where your application is going to live,
+03:20 but we're separating out in this deployment, the application directory
+03:23 from a sub application directory, because we have all these sub directories.
+03:26 In your case, you probably don't have to do that in your own project.
+03:29 So, now we need to create these two variables,
+03:32 the first one being venv directory, and the second one being sub app directory.
+03:35 First one, venv directory, this one will be under the deploy users home directory
+03:44 I'll just call it venv, and the sub app directory 
+03:49 will be the app directory plus a sub directory. 
+03:54 Save that, and then the final step, make sure 
+04:01 that we add to our main.yml dependencies.yml, we should be able to run this now, 
+04:07
+04:15 it looks like we had a little typo there, we should be able to run this now,
+04:24 so yours will likely take several minutes because 
+04:27 the pip 3 command is going to PyPi, pulling down all the dependencies 
+04:30 what we are going to do, is we're going to ssh over to our remote server, 
+04:34 
+04:39 and there's nothing running, our wsgi server is not actually running here 
+04:42 but if we activate our virtual environment, we go under the directory 
+04:47 where our application lives, we can now type p serve for the serve command 
+04:53 production.ini, we're running on port 6543,
+05:01 let's go to the pythondeploymentexample.com 
+05:06 nginx serves as a reverse proxy, hits the upstream server 
+05:10 and now the wsgi server is executing our Python code.
+05:13 But, we see that there is an issue here,
+05:16 if we take a look at this network tab, we're getting 404,
+05:19 that's why we don't have any design or css is not there, images are not there, 
+05:23 so we need to slightly change our nginx configuration in order to handle this.
+05:27 The problem here is that when we set up our nginx configuration,
+05:31 we didn't set the right static directory, so I'm going to create a new shell here,
+05:35 we're going to go to our local course demos,
+05:38 we need to modify our template for nginx, 
+05:42 which is under rules/common/templates/nginx
+05:45 and the big issue here is that we didn't specify the appropriate static directory 
+05:51 so our app directory is not actually serving up static files 
+05:55 it's not the correct location, if we take a look under blue yellow app 
+06:01 there we have the static directory,
+06:05 so right now nginx is trying to serve up static assets 
+06:08 from an app directory, when it should serve up from the sub app directory,
+06:13 now what is our sub app directory, that we just defined.
+06:17 That's going to go to blue yellow app deployment,
+06:21 and then I'll go to blue yellow app, so in our case,
+06:23 we're just going to specify blue yellow app, and save that.
+06:28 Rerun or deployment playbook, what this is going to do 
+06:31 is refresh the configuration for nginx, let's see what happens.
+06:39 We hit refresh, and now we get actually back the files that we need 
+06:45 and our application is up and running, 
+06:48 with all the css, the images the JavaScript that we need.
+06:51 We're manually running the wsgi server right now,
+06:55 so if we stop this and we exit out of our connection,
+06:59 then we refresh the page, we get that 502 bad gateway still.
+07:03 So in the next video, we're going to stand up a Deamon process 
+07:06 that will run the wsgi server in the background,
+07:09 automatically restart it if any issues arise,
+07:11 and then our application deployment will finally be complete. 

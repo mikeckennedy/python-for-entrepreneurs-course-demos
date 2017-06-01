@@ -1,0 +1,152 @@
+00:01 We already installed the package for nginx, as a part of the last video
+00:04 when we were configuring the let's encrypt certificate.
+00:07 We need to now configure nginx to serve up traffic via https,
+00:11 and handle any request that come through our domain name.
+00:15 In this chapter we're going to create a new yaml file, just for nginx 
+00:18 and we're going to introduce a new concept which is known as a template file 
+00:22 in the template file will have an nginx configuration 
+00:26 with a few tokens in it that our Ansible variables will replace,
+00:29 and that file will then be copied over to a remote server 
+00:33 where nginx can pick up that configuration and use it when responding to traffic.
+00:38 First, we're going to create a new yaml file that will serve as a handler.
+00:41 Now a handler for Ansible is typically used 
+00:45 to stop, start and restart system services
+00:48 whenever we complete some task in one of our playbooks,
+00:51 so rtaher than rewriting the same task over and over again
+00:54 to for example restart nginx, we just have a handler 
+00:58 with one task in that handler file that will restart nginx for us
+01:02 and then there's a special syntax 
+01:05 we can use at the end of our task to call that handler.
+01:07 Once we write the handler, we'll take a look at that syntax.
+01:10 First, we're going to want to go back into our Ansible roles, common and handlers, 
+01:15 and create a new main.yml file, here we're going to give it a name of restart nginx,
+01:21 we'll use the service module, provide the name of nginx, 
+01:27 and we'll give it the state of restarted,
+01:30 and we are going to need super user privileges to do that;
+01:34 save that file, then go back into tasks and we're going to create an nginx yaml file 
+01:39 this one will only have three tasks in it, because we've already done 
+01:44 a lot of the configuration for nginx, give it a quick comment, close that off, 
+01:48 and then our first task is we're just going to 
+01:51 double check that nginx is installed properly 
+01:54 with the way that we've written this current playbook, 
+01:57 it should always be installed by this point, but I like to have it just in case 
+02:01 we remove the let's crypt and replaced it with another yaml file, for example.
+02:09 We'll use the apt module, and again, we'll need Super User privileges just for this.
+02:16 Our second task is going to be to delete the default nginx file 
+02:20 that is served up as index.html, 
+02:24 we don't want that to appear when users go to our website.
+02:27 We are going to use a different module, this one is the file module,
+02:30 we're going to give it a specific path on our remote server,
+02:33 and we're going to ensure that it's removed.
+02:37 The state should be absent, as opposed to present.
+02:41 Super User privileges because nginx files are protected 
+02:44 and then our third task is going to be to write a configuration file 
+02:49 this is new with a template file, that we're going to write in a moment 
+02:52 what Ansible is going to do is to take this configuration template, 
+02:57 insert variables where there are tokens, 
+03:00 and then ensure that that file is on the remote server 
+03:03 we'll give it the template module and the source for that
+03:07 is going to be nginx sll configuration and the .j2 is for Jinja 2 template.
+03:15 The destination, and this is for the remote server, 
+03:18 will be in the configuration directory for nginx, we're going to have a new variable 
+03:23 that we'll define in a few moments, .configuration.
+03:27 We are going to need Super User privileges for this, 
+03:30 this is where we're going to use our handler, we'll use the notify syntax, 
+03:35 we're going to have restart nginx be the handler that we notify.
+03:41 So what does it mean restart nginx here?
+03:44 How does Ansible know what to do with that?
+03:47 If we go back to our handler, we can see that the name was specified 
+03:53 as a restart nginx, so it's a really expressive way 
+03:56 where you can give a specific name in your Ansible file, 
+03:59 Ansible will fall back to the handler 
+04:02 and look for that appropriate name that you've specified.
+04:05 Alright, now we need to write our temple file 
+04:08 what I've done is rather than having me type a whole thing
+04:11 I've copied in the template file that we need and I am going to explain each piece.
+04:15 What I recommend is to go to the course demos github repository, 
+04:18 and copy this file into your project.
+04:21 At first blush this can look like a really complicated file 
+04:24 but there's really only three parts to it:
+04:27 the first part is where we specify the upstream app server, the wsgi server.
+04:32 This is not running yet, but that's where 
+04:34 our pyramid application is going to be running,
+04:36 it's going to be running on a different port on our local host system,
+04:39 only a service running on our local host 
+04:42 is going to be able to access that wsgi server
+04:45 these first three lines set up nginx as a reverse proxy, 
+04:49 and it knows when certain requests come in, it will forward those requests 
+04:53 over to the wsgi server and then it will return back the response 
+04:57 that is given from the wsgi server, pass that back 
+05:00 to the web browser device that sent the request.
+05:03 The second part here is simply for 
+05:05 web browsers that try to contact our web application
+05:08 not through https, so if they're just using standard http
+05:13 what we want to do here is rewrite the url so that they are contacting us via https.
+05:20 http runs on port 80, and that's why we're listening on port 80,
+05:24 and then we're essentially just redirecting over to port 443 
+05:29 where we have the rest of our web server configuration running via https,
+05:34 that is using the ssl certificate retrieved from let's encrypt.
+05:38 Here's the most complicated part of our nginx configuration 
+05:41 we have a server name, this is just going to be our fully qualified domain name 
+05:45 we're listening on port 443, these two lines specify where our SSL certificate lives, 
+05:50 we specify certain properties about our sessions, time outs and caches,
+05:55 which protocols we support and the ciphers
+05:59 and then were specifying that .pem file that we created.
+06:02 We also have some logging that takes place as nginx is running 
+06:06 and these are the locations for where those log files are stored
+06:09 and then we have two bits down below, 
+06:12 the first one is how we configure nginx to do what web servers 
+06:15 were originally intended to do, which is simply serve up static files.
+06:18 Any url to our web server that has /static as the start of its url 
+06:24 will not be forwarded to our wsgi server.
+06:28 This is really how we define whether we're 
+06:30 in web server mode serving up a static file 
+06:33 or we're in reverse proxy mode, where we just simply pass on the request
+06:37 to the wsgi server and then return the response that the wsgi server gives us.
+06:42 That is only defined by if in the url, the url starts with after the domain name /static 
+06:49 then we're going to go look up and see if we have a file by that name 
+06:52 we're going to have a new variable that defines where our application is stored 
+06:56 and we're going to go look up the static directory 
+06:59 within that application and serve up those files. 
+07:01 Finally, we have the configuration for the reverse proxy 
+07:04 where we forward on certain headers to the wsgi server 
+07:08 and we pass that through and this is what ties together 
+07:11 the proxy passes what ties together this part of the configuration 
+07:14 with what we defined up front, which is the upstream wsgi application server.
+07:19 Ansible is going to take this template, insert the values of variables 
+07:23 where there are tokens, and then make sure that this file is saved on the remote server.
+07:27 There is one more bit we need to do before we run this, 
+07:32 and that's just update our variables file.
+07:39 We used a few new variables in this video, the first one is the wsgi server port 
+07:44 the wsgi server port is specified in our Pyramid configuration,
+07:47 so let's take a look how we can obtain that.
+07:51 Take a look at production.ini
+07:55 we're going to have a port number in here, and that port is 6543.
+08:01 That's the port we want to specify for our wsgi server.
+08:06 Next up, we're going to specify an application name,
+08:10 and this application name will be used as the directory 
+08:15 for where our application is going to be cloned 
+08:18 once we do our git set up, we'll call it blue yellow, 
+08:21 and then the application directory, this is going to be an absolute path 
+08:24 to where our application is stored on the remote server.
+08:27 We'll say home deploy user, and then we'll use the app_name as well
+08:35 for where that source code is stored.
+08:40 Those are the files we need, let's go back into the deploy directory,
+08:44 but there's one more thing that we forgot,
+08:47 we need to specify that we want to include 
+08:51 nginx.yml, as part of our deployment process.
+08:56 Let's go ahead and run the script, run this playbook, 
+09:00 and it looks like everything ran great, let's test our application.
+09:03 Alright, now at first blush that may seem like it's a really bad thing 
+09:07 that we get a 502 bad gateway, but that's actually really great 
+09:10 we've got some great indicators here that everything worked well.
+09:13 The first is that we're using https, 
+09:15 and when we went to python deployment example 
+09:18 we were redirected from http to https, DNS records all worked,
+09:23 we know that this is being served up from our application 
+09:26 and the 502 bad gateway means that 
+09:31 when nginx tried to access our web application
+09:34 it wasn't up and running, so as soon as we put that in place 
+09:37 our application will be served via the reverse proxy.
+09:40 These are all good indicators that everything is up and running to this point,
+09:43 once we get our source code and run our wsgi server, we'll be in business. 

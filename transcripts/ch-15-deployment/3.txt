@@ -1,0 +1,103 @@
+00:01 Now, that we provision our server on Digital Ocean,
+00:03 we can start the process of configuring our server 
+00:05 to get it secured and ready to serve up our web application. 
+00:10 Throughout the major of this chapter, we're going to use 
+00:13 a configuration management tool known as Ansible,
+00:16 in order to automate our deployment.
+00:18 Before configuration management tools became popular 
+00:21 a lot of deployments were done manually, anything in programming 
+00:23 that is done manually is a subject to a lot of errors 
+00:26 and takes more time than it should, compared to when its automated.
+00:30 That's why I love using Ansible for deployments, 
+00:32 and hopefully by the end of the chapter, you will as well.
+00:35 So Ansible is an implementation of the concept 
+00:39 known as configuration management.
+00:41 Configuration management tools are used to programmatically set up 
+00:44 and configure infrastructure, in our case that will be 
+00:47 a single server running on Ubuntu Linux.
+00:50 Ansible was originally created by Michael DeHaan, 
+00:53 and there was a company he founded around it 
+00:55 that company is now owned by Red Hat, 
+00:57 so Red Hat is actively maintaining and evolving Ansible as a tool 
+01:00 but what is especially great for us, is that everything in Ansible 
+01:04 is written or Python, in fact, if you go to github 
+01:07 and look under the Ansible organization and the Ansible project
+01:10 you're going to see a Python project and you can go in 
+01:13 and read all the code behind how Ansible is created.
+01:16 Ansible is made up of many, many modules that are written in Python 
+01:19 and as a shameless plug one of my favorite modules, is the twilio module 
+01:23 which I wrote a few years ago, and still maintain;
+01:26 this module is actually very simple, it's just a bit of Python code 
+01:29 that calls the Twilio API and allows you to send text message notifications 
+01:33 or multimedia message notifications when something happens in your deployment.
+01:38 As long as you have a trial or upgrade a Twilio account
+01:41 you can send text message notifications to yourself, 
+01:44 or anyone that's involved in deployment,
+01:46 but as you can see, this is all just Python code, 
+01:48 so as you get more comfortable with Ansible, 
+01:51 it's worth taking a look at the source code so you can understand 
+01:53 what's happening under the covers. 
+01:55 But for now, we're not going to worry about way the Ansible is written,
+01:57 just know that it is in Python and we're going to use it 
+01:59 to automate our own deployment.
+02:01 Now because it's Python, we can just use pip install Ansible, 
+02:04 and we'll get the tool a part of our project
+02:08 and we're going to use the absolute latest up to date version of Ansible,
+02:10 because Python 3 compatibility came fairly late to this project, 
+02:14 it's really only in version 2 that Python 3 became experimental 
+02:19 and it's still under active development, so in our case throughout this chapter,
+02:22 we're going to use version 2.3 which is still under active development, 
+02:26 and I'll show you how to install that shortly.
+02:29 Ansible uses a module based system to accomplish 
+02:31 all the tasks we want to perform throughout deployment 
+02:34 so for example, if you want to install a package on Ubuntu,
+02:37 we're going to use the apt module 
+02:39 and we'll specify all the packages that we want.
+02:42 Ansible organizes everything, in what is known as a playbook,
+02:45 you'll execute the playbook using the Ansible tool 
+02:47 so the playbook is the high level concept that makes up the entire deployment process 
+02:52 we're going to write two playbooks in this chapter 
+02:55 the first one will be an initial configuration that will run a single time 
+02:59 to lock down the system, make sure everything is secure.
+03:02 And then we'll have a second playbook, we'll run every single time 
+03:05 we want to deploy new code; each of these playbooks 
+03:07 is going to have many tasks within it, a task is a single step
+03:10 that we want to accomplish and you write tasks in yaml
+03:13 which stands for yet another markup language.
+03:16 At first I was skeptical of yaml, I hadn't used it before Ansible, 
+03:19 but it really is a very natural way to write maintainable playbooks
+03:24 that you can come back to 6, 12, 18 months later 
+03:27 and still understand what they're doing.
+03:30 Which is definitely not the case if you're just going to automate things with bash scripts,
+03:33 those are some of the vocabulary words 
+03:36 you're going to hear me use throughout these videos 
+03:38 What I also recommend is to pull up the Ansible documentation 
+03:42 that's at doc.ansible.com/ansible/index.html 
+03:46 their documentation is fantastic, it has coverage over every single module 
+03:51 that is written as part of core Ansible.
+03:53 It will also provide more detail around what each of these concepts means
+03:56 so you can become more comfortable with it, as we do the deployment.
+03:59 I always keep the documentation open as I'm writing my playbooks,
+04:02 because it's so handy to just go over to the module index
+04:05 and take a look at the documentation for every single module that's out there.
+04:10 So for example, when I wrote the Twilio module,
+04:13 I had to write some fairly extensive documentation along with examples
+04:16 that show exactly how to use this module,
+04:19 so the format for every single Ansible module when you're reading the docs
+04:23 gives you a high level overview, and then the options;
+04:27 now the options are references that I am always looking at 
+04:31 because they will tell you what you need to specify in your playbook 
+04:34 in order to get a single task running.
+04:36 After the options list are one or more examples for how to use a specific module 
+04:41 and this case for the Twilio module, you can see that there's a bunch of yaml, 
+04:45 and there are five parameters we need to specify in order to get this working, 
+04:48 and if we take a look at other modules, so for example the utilities modules,
+04:52 will see that every other module follows the same pattern, 
+04:55 brief description, the options that are necessary, some examples,
+04:59 and then other information you may need to know,
+05:02 for example if a module is still in preview mode, and it can change,
+05:06 or whether it's stable and therefore 
+05:09 there will be backwards compatibility going forward.
+05:12 Spend some time taking a look at the Ansible documentation 
+05:14 and in the next video, we're going to write our first Anibal playbook 
+05:17 to configure our server.  

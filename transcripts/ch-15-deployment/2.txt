@@ -1,0 +1,115 @@
+00:01 We'll start a deployment by setting up for an account on Digital Ocean, 
+00:04 and getting it all set up with a droplet, 
+00:07 which is the equivalent of a virtual private server 
+00:10 that we can log into and deploy our application to. 
+00:13 Head over to digitalocean.com in your web browser 
+00:16 and click the sign up button, 
+00:18 and if you already have an account, go ahead and log in, 
+00:20 but I'm going to walk through this with a brand new account. 
+00:23 After you've entered your email and a password 
+00:25 it's going to ask you to confirm, just go to your email inbox 
+00:29 and click on the link that will confirm your account. 
+00:32 Once you've confirmed your account,
+00:34 you're going to have to enter some billing information 
+00:36 to verify that you are a legitimate user. 
+00:38 Now the great part is that there is a promo code 
+00:40 for every single student for 50 dollars to get started with Digital Ocean, 
+00:42 but you will still need to enter your credit card information 
+00:45 or connect your PayPal account to get started. 
+00:48 So, enter your billing information, then scroll down, 
+00:51 select the link that says I have a promo code, 
+00:54 and when this modal box pops up, 
+00:56 go to training.talkpython.fm sign into your account 
+00:59 and then click account at the top navbar, go into student offers 
+01:02 and you'll see Digital Ocean credit which you can claim for free. 
+01:06 Now, this is my code, it won't work anymore I've already used it sorry, 
+01:09 but you'll copy and paste this and then enter that into the promo code field. 
+01:15 Once you've entered your payment information 
+01:17 and applied your promo code, you get to the third screen 
+01:20 in Digital Ocean's onboarding flow, which is to create a new droplet, 
+01:23 click the create a new droplet button, 
+01:25 and this is how we're going to provision our first server. 
+01:28 First we are going to choose an image,
+01:30 this is the distribution that we're going to deploy for our server. 
+01:32 Take the default one of Ubuntu and you're going to want to be 
+01:36 on 16.04 which means April 2016,
+01:39 now this is an LTS release long term support, 
+01:43 so even if it's a year or two out of date, that doesn't matter 
+01:45 because they're still applying updates and security fixes
+01:48 for the next five years from the initial release of this operating system. 
+01:53 So Ubuntu 16.04 should be your choice for distribution. 
+01:56 Scroll down a little bit and you get to choose a size, 
+01:59 now I recommend you go with a ten dollar a month plan, 
+02:01 just for getting started, you can always resize up and down your server, 
+02:06 but this will give you five months of runway 
+02:08 with just the Digital Ocean credit that you got.
+02:11 If you feel like the application that you are building 
+02:14 is more compute intensive or needs more memory, 
+02:16 feel free to choose a different option. I often use ten dollar a month 
+02:18 servers for Python applications and they work great. 
+02:21 Keep scrolling down to the data center region, 
+02:24 and pick the one that's closest to your customers, 
+02:26 in my case I'll just choose San Francisco since I am based in San Francisco 
+02:29 and of course if you're in Europe you're going to want to 
+02:33 choose something in Europe, if you're in Asia Pacific region,
+02:36 probably worth choosing a server there, 
+02:38 that way your server is as close as possible to your customers. 
+02:41 Keep scrolling down and for now, we'll just leave the additional options 
+02:43 unchecked but backups can be extremely useful, 
+02:46 monitoring can be very useful, so these are options 
+02:48 that you want to take a look at later on. 
+02:50 Now we need to add an ssh key. 
+02:52 So click new ssh key, and then there's two ways we can handle this, 
+02:56 one- you can use the ssh key that we created earlier in the git chapter, 
+02:59 or we can create a new ssh key, just in case you've forgotten, 
+03:03 I'm going to create one right now on the command line. 
+03:05 I've shifted over into Ubuntu 16.04, this is the same operating system release 
+03:10 as what we are going to deploy to, 
+03:13 so in this chapter I'm just going to use Ubuntu 16.04, 
+03:15 that way we can mimic the environment that we're working with locally
+03:19 and the environment we're going to deploy to.
+03:22 You've already got your development environment set up, 
+03:24 so don't worry if you're not using Ubuntu for development, 
+03:27 if you're using Mac or Windows that's totally fine, 
+03:29 just know that ultimately your application is going to be running on Linux, 
+03:32 the Ubuntu distribution. Alright, let's create that ssh key.  
+03:35 So we use the ssh keygen command, and we're going to give it 
+03:39 the type of an RSA key with 2048 bits, if any of this is confusing, 
+03:43 feel free to jump back to the git chapter where we go 
+03:47 through creating all the ssh keys for working with our git repositories. 
+03:50 All right in this case I'm just going to save this file under my home directory, 
+03:55 I called it do deploy. I create two files, one is the private key,
+03:59 this one that we've named here, and there will be a public key 
+04:02 that we can share that has the .public extension at the end. 
+04:05 We're not going to want to use a pass phrase 
+04:08 because we're going to use this key in order to automate our deployments. 
+04:10 Alright now this is generated, we're going to take a look
+04:13 at the contents of the public version of this key.
+04:20 Now copy and paste this bit, the entire thing, 
+04:25 and we'll paste it over into here, and then give it a name 
+04:33 that you're going to remember. 
+04:36 So my case blue yellow jackets prod ssh key.  
+04:41 Click add ssh key, now we're going to be able to use our private key 
+04:45 in order to connect as soon as this server starts up, 
+04:48 just create a single droplet and if you want you can choose 
+04:51 a specific host name and then click the create button. 
+04:55 Now you'll have to wait just a few minutes, 
+04:57 server is being provisioned, and then eventually it'll start up. 
+05:00 Sweet, now our server is ready to go and we can copy this IP address,
+05:04 and now let's just make sure that we can connect to the server, 
+05:07 we're going to use the ssh command, and the -i argument,
+05:12 i is used to specify a particular private key 
+05:15 rather than your default private key which is stored in the .ssh directory 
+05:20 for your user account, in this case we're going to point it 
+05:23 to the one that we just created, because it is the private key version 
+05:26 that will allow us to authenticate against the public key 
+05:29 that we used when we created the server. 
+05:32 So this is home matt do deploy, and then we're going to say root, 
+05:38 so the root user is the one that we're going to use to initially connect, 
+05:41 and then we paste the IP address, the Digital Ocean gave to us.
+05:47 We'll get prompted, are you sure you want to connect to the server- say yes, 
+05:51 and now we've connected to a remote server as root.
+05:55 So now we've got our server ready to go, 
+05:58 and now over the next few videos, we'll start configuring the server 
+06:00 so that they can run our application and it will also be locked down
+06:04 and secure against unauthorized access attempts. 

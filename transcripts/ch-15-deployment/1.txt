@@ -1,0 +1,51 @@
+00:01 You've got your application built, and you're ready to go, ready to launch. 
+00:04 But it needs to be hosted somewhere, we can't just run it off your local laptop;
+00:08 that's where deploying web applications comes in. 
+00:12 The deployment is a huge topic, the goal for this chapter 
+00:15 is not to make you an expert in devops and deployments, 
+00:18 but instead to have some practical experience 
+00:21 getting your application shipped and allowing you 
+00:24 to ship constantly, as you make improvements to your code. 
+00:27 We'll keep this as simple as possible, each video 
+00:29 is going to focus on one aspect of the deployment 
+00:32 and just about everything is going to be hands on, 
+00:35 at the command line, rather than a whole bunch of theory. 
+00:37 Here's what we're going to cover: first off, 
+00:39 you need a server somewhere that is going to host your application.
+00:42 And we use a cloud service to do that, 
+00:45 in this case, we're going to use Digital Ocean.
+00:47 I've also used services like Linode in the past, 
+00:50 and the idea here is we're just going to get a single server, 
+00:52 and deploy our application on it, we're not going to use 
+00:55 an infrastructure as a service provider like Amazon web services or Azure, 
+00:58 we'll keep it simple, just have a single server that allows us plenty of scale,
+01:01 and is more secure because it's only a single box 
+01:04 that we're going to lock down against malicious actors. 
+01:07 Once your infrastructure expands to multiple machines, 
+01:10 there's more attack factors, so in this case we'll keep it simple, 
+01:13 we'll keep it straightforward so that your application can be as secure as possible, 
+01:17 without having to learn too much about web server security. 
+01:20 Once we provision our server, we'll install an operating system,
+01:24 we'll start to configure that operating system for a deployment user 
+01:26 and make sure it's locked down and ready for the rest of deployment 
+01:29 which will have a web server, and in the Python world 
+01:32 what's known as a wsgi server, web server gateway interface, 
+01:36 it is a standard interface between an application like the one that you built, 
+01:40 and the server which is actually executing the code, that's a wsgi server,
+01:44 it pretty much runs your web application, if you're in the Python ecosystem. 
+01:48 We will get all that set up, along with the application dependencies, 
+01:51 so whatever specific libraries and frameworks that you're using, 
+01:54 for example Pyramid we'll be able to install those
+01:57 on the server that's running the code, so your application will run
+02:00 just like it does on your local machine. 
+02:03 Throughout the deployment we're going to use Ansible, 
+02:05 a configuration management tool that is built in Python 
+02:08 to automate every step throughout this process. 
+02:10 The first deployment that we do will be automated 
+02:12 so that subsequent deployments can be done
+02:15 with a single command from the command line. 
+02:17 Ansible has some core concepts like playbooks and tasks 
+02:20 that we'll review and then we're going to write all of our tasks 
+02:23 within these Ansible playbooks and you'll be comfortable 
+02:26 adding extra steps as your business grows and expands, 
+02:28 and you want to change your application over time. 02:31 Let's dive into getting your application up and running.

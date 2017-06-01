@@ -1,0 +1,51 @@
+00:01 We've been through a whole lot in this chapter, let's take a look back 
+00:03 on what we have accomplished so that you'll know how to keep evolving 
+00:06 your deployment as you continue to build your business.
+00:08 When we started out, at the beginning of this chapter
+00:11 this was the situation- we had built an application 
+00:13 but it was sitting on your local machine, customers had no way to get to it 
+00:16 because you're not going to run your application off of your local development environment. 
+00:19 By the end of the chapter, we had set everything up on our Digital Ocean server 
+00:23 we put many, many pieces in place and the best part is 
+00:27 we automated it all with Ansible, whenever you want to deploy and update 
+00:30 you can just rerun the Ansible playbook,
+00:33 Ansible playbook follows a principle known as item potency,
+00:37 item potency sounds like a fancy word, but all it means is 
+00:40 that we can run the playbook over and over again,
+00:43 and it will continue to work because the changing state of our deployment
+00:47 will not impact the ability for the playbook to function.
+00:51 For example, if we already have our virtual environment set up 
+00:54 we'll simply skip that step, because we don't need to create a new virtual environment 
+00:58 we've either used the Ansible modules that handle changing state 
+01:02 or we've built checks into our playbook, 
+01:05 to determine if our server is in one state or another and handle that appropriately.
+01:10 Make sure that as you continue to update the Ansible playbook,
+01:12 you keep in mind what happens after the first time you run your playbook,
+01:17 are you depending on your server being in a certain state,
+01:20 what if it is not in that state, what if you don't have a system package installed,
+01:25 what if you've already created a certain directory.
+01:28 Make sure that you can run your Ansible playbook over and over again 
+01:31 and it will continue to be successful in setting up your application.
+01:34 With that, I want to provide a few more resources,
+01:37 a couple of them are of course full stack python,
+01:40 the first one being the deployment page, there is a slew of resources on there 
+01:43 if you want to get into continuous integration,
+01:45 and other more advanced deployment setups,
+01:47 you should also check out the wsgi server's page,
+01:50 to better understand how Python applications are run in our deployment,
+01:53 we use waitress, there are other wsgi server implementations out there,
+01:56 like green unicorn and mod wsgi, so you can learn more about that 
+02:00 both on the deployment and the wsgi server's pages.
+02:02 All of the files that we've used throughout this chapter 
+02:05 are stored within the deployment directory
+02:07 of the Python for Entrepreneurs course demos,
+02:09 you should be able to copy and paste the code examples 
+02:12 from the Ansible code examples rather than having to type everything in manually 
+02:16 and so hopefully that'll help you get up and running even faster.
+02:20 And then, finally Michael and I did an episode on deploying python web applications
+02:24 that talks about other bits that you can deploy, such as nosql databases,
+02:27 task queues, other code libraries that you may want to consider using,
+02:31 as you build out your application, and if you run into any trouble
+02:34 please hit me up at @fullstackpython, on twitter.
+02:37 Now you can stop worrying about getting your application up and running
+02:40 and get back to building your business.

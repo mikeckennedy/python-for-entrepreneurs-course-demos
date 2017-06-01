@@ -1,0 +1,177 @@
+00:01 When our application is deployed and running 
+00:03 we're going to want to make sure it's secure using an https connection;
+00:06 that way our users can pass us information and we know it's going to be encrypted 
+00:10 from the time they entered into the browser, until it reaches our server.
+00:13 This is not only important, but mandatory
+00:15 when you're using services such as Stripe,
+00:18 you don't want your users' credit card information to be leaked 
+00:21 because of the insecure http protocol.
+00:24 Now it used to be much more difficult to deploy secure applications 
+00:27 because ssl certificate is more expensive.
+00:31 If you'd go to a company like Digicert, and oftentimes 
+00:35 pay a few hundred dollars a year to get an ssl certificate 
+00:38 that was certified by a brand name, 
+00:40 that's all changed with a service called Let's Encrypt.
+00:44 As it says right on its home page, at letsencrypt.org, 
+00:47 Let's Encrypt is a free automated and open certificate authority 
+00:50 a certificate authority grants the ssl certificates 
+00:55 that are used to create https connections 
+00:57 if you self sign a certificate, and you don't use a certificate authority, 
+01:01 than a user in a web browser like Chrome is going to get a warning
+01:04 that the certificate was not issued by a certificate authority.
+01:07 The certificate authority provides an additional stamp of approval 
+01:11 that is accepted by all major browsers, as secure and generated via their process.
+01:18 One of the great parts about Let's Encrypt other than the fact that it's free 
+01:21 is the ability to automate obtaining certificates.
+01:25 We're going to add this now to our Ansible playbook,
+01:28 switch back over to the command line where you've got your deployment scripts.
+01:32 We're going to need a few new variables added to our group vars file. 
+01:35 Go into group vars and edit the all file, the first thing we're going to need 
+01:40 is to specify or fully qualified domain name,
+01:45 now in my case, this is going to be www.pythondeploymentexample.com 
+01:50 but you're going to put in your domain name that you registered 
+01:53 and just set up in the last video, into the fully qualified domain name.
+01:57 Second, we're going to need to specify the directory 
+02:00 in which our web server is going to serve up static files
+02:03 like html and JavaScript, css;
+02:06 we're going to use the default one 
+02:09 that nginx is going to serve files from on Ubuntu "var/www/html" 
+02:14 and then one more bit we're going to use our email address
+02:17 that will be added to the certificate, so when we request the certificate 
+02:21 we're going to pass Let's Encrypt our email 
+02:24 first off so that they have a contact, but second of all,
+02:28 that is going to be added to a part of the certificate 
+02:31 and we're going to call this ssl_cert_email 
+02:35 in my case that'll be matthew.makai@gamil.com.
+02:38 Those are the three new variables we need for this chapter.
+02:41 Save the file, and then we're going to go back up 
+02:45 into our roles directory common, go under tasks 
+02:49 and now we're going to write a new file, 
+02:53 this one is going to be letsencrypt.yml
+02:58 As always, we'll just add a simple comment up top,
+03:02 now we've got a few new tasks here. 
+03:05 The first one is going to be familiar to us, and that's going to be the apt module 
+03:09 so use apt and the name here is going to be item,
+03:14 because we're going to install more than one
+03:17 yes we want to update to the latest cache,
+03:20 we're going to become Super User when we do this 
+03:23 and we're going to install two packages, 
+03:26 the first one will be letsencrypt, and the second one will be nginx.
+03:30 The letsencrypt package has some command line utilities 
+03:33 to make it really easy for us to in an automated way go and grab that certificate
+03:39 and nginx is going to be the web server, which will serve up all of our static files 
+03:43 and serve as what is known as a reverse proxy, 
+03:46 it's going to be a pass through where any requests 
+03:49 that are supposed to go to your application nginx is going to pass them on 
+03:53 so pyramid can respond to those requests.
+03:56 Alright, the next module we're going to have is a new one 
+04:01 and that's going to be the stat module,
+04:03 think about the stat module as a check on something,
+04:06 as storing the state that we can use in conditional statements
+04:10 throughout our Ansible playbook, and execute tasks or not execute tasks 
+04:14 based on the results that come back from the state.
+04:17 So we only want to grab the certificate, the first time that we need it 
+04:23 we don't want to get a new certificate every single time that we do our deployment 
+04:27 we're only going to do it if the certificate does not exist.
+04:30 The way we're going to check for that is 
+04:33 we're going to check the letsencrypt directory when it's created 
+04:36 and it's going to put it under our fully qualified domain name 
+04:39 and if that path exists, and we'll check for it later in the next few tasks 
+04:43 then we're not going to go ahead and get a new certificate, 
+04:47 we're going to skip those steps.
+04:49 Again, we're going to use become true,
+04:51 so this check as soon as we have finished installing,
+04:54 the first task with the letsencrypt and nginx packages,
+04:58 we're then going to check if we already have the certificates
+05:01 based on the directory that was already set up for this application.
+05:05 Alright, next up, were going to stop nginx because
+05:08 we can't use letsencrypt unless nginx has stopped.
+05:15 And we'll give this the name of nginix for the service 
+05:20 and the state should be stopped.
+05:23 We are going to need sudo privileges for this one, 
+05:27 and we're only going to stop nginx if the directory is not defined 
+05:34 and it is not a directory, so the when condition here says 
+05:41 if the certificate directory that letsencrypt creates when it runs 
+05:45 is not a directory, it's just not defined, and it's not a directory,
+05:48 then we'll go ahead and run this step; 
+05:51 otherwise, skip it, we've already got our certificate.
+05:54 Next up, we're going to create the certificate with the Let's Encrypt command 
+05:58 if we're going to use the shell module,
+06:05 the shell module allows us to execute commands on the command line 
+06:08 now we're going to pass a bunch of parameters in here 
+06:11 we're going to pass in our fully qualified domain name 
+06:15 we're going to pass in the directory in which we want to serve files from 
+06:21 we're going to pass in our e mail address 
+06:25 so these are all the variables that we just define in our group vars all file,
+06:29 agree to the terms of service for Let's Encrypt 
+06:33 and we'll renew the certificate by default when it expires.
+06:37 We will need to have sudo privileges here,
+06:41 and we only want to do this again same thing as above 
+06:48 we can actually just copy this and paste it if we don't already have the certificate.
+06:53 Okay, so we use the shell command, so we drop down into bash 
+06:58 and we just executed this command straightup on the shell 
+07:01 and the one thing to note is that there is actually 
+07:04 a Let's Encrypt module as part of Ansible,
+07:07 but it's in a very early state, and it's in a preview mode 
+07:11 so it's likely that that module is going to change significantly over time 
+07:15 I just thought it was much easier to use the shell command 
+07:18 and execute a single command rather than trying to use the Let's Encrypt module.
+07:22 This is a trade-off  you're sometimes going to make in your Ansible playbooks,
+07:25 sometimes it's just easier to do things with a shell command
+07:27 now that's not going to necessarily be as maintainable 
+07:29 as if you have a really clean module that's already been written 
+07:32 but occasionally this stuff can come up when there's a new module 
+07:35 that's been added and it can change over time.
+07:37 We just need to do two more things here,
+07:39 the first is, so now when we get our certificate 
+07:41 we're going to generate a strong parameter for our ssl file
+07:46 that is going to be used during the key exchange 
+07:49 when a web browser contacts our web server,
+07:52 this is something we're only going to want to perform once 
+07:54 and it will actually take several minutes, even on the latest hardware 
+07:56 in order to generate a file that will be used in the key exchange.
+07:59 But this makes our handshake in https protocol more secure. 
+08:04 Again I am going to drop down into the shell, use the open ssl command 
+08:08 and again we're only going to perform this when it's not already been done.
+08:15 One last command we need to boot nginx back up,
+08:18 we can use the service module, save the file,
+08:25 now one more step, we need to go into main yml, 
+08:31 do the comment that is prepended to the line to include letsencrypt.yml,
+08:38 now we'll try to run this;
+08:47 we've hit a snag as we wrote our files, so let's go back in and see 
+08:52 unsupported parameters for the stat module-
+08:56 go back in and check out what we just wrote.
+09:00 Now the issue here is that the indentation that I used is incorrect 
+09:05 this springs up a really good point about Ansible which is very sensitive 
+09:08 to indentation, because the playbooks are based on yaml,
+09:12 what we've said here incorrectly and the reason why Ansible ceased to run
+09:17 is because register and become are not arguments 
+09:21 that are passed to the stat module
+09:24 they need to be one level up, the first thing is we're registering 
+09:27 a state known as certs, and we need sudo privileges, 
+09:32 because only sudo can access the directory that we're looking for,
+09:36 so these are two arguments that are run with the stat module 
+09:40 not arguments that are passed into the stat module,
+09:44 we'll save that, and then move up a few directories,
+09:48 and we'll kick it off again. 
+09:51 Once again, we ran into an issue, but we got past the previous one 
+09:56 that was causing us some trouble.
+09:59 We'll go back in, modify letsencrypt, so what we actually want to do here is,
+10:04 we want to make sure we only run this when a directory does not exist 
+10:07 so the way we can do that is with not certs.stat.exists 
+10:12 so sometimes we need to fiddle around a little bit 
+10:15 with some of these conditions, just as we are more doing our programming 
+10:18 and make sure that it maps up to exactly what we would expect.
+10:21 So we can delete the rest of these, 
+10:26 and just replace them with not certs.stat.exists.
+10:31 Let's give this a try one more time.
+10:48 This time it looks like everything ran fine, but the real test comes in 
+10:51 when we take a look at our url.
+10:57 Now the thing is that this is not actually configured for the url to work just yet,
+11:01 nginx is going to answer when something 
+11:05 contacts on port 80 directly through its IP address 
+11:09 we have not set up nginx to handle our domain name just yet,
+11:13 we'll do that in the next video, for now we can see that we can contact nginx
+11:17 through the IP address, so it is up and running 
+11:20 just by installing a package, but we need to tweak the configuration files now 
+11:23 so that it will serve up via the domain name. 

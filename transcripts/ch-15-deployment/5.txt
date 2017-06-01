@@ -1,0 +1,144 @@
+00:01 We just wrote a whole bunch of code in the last video
+00:04 to create our initial configuration for Digital Ocean droplet. 
+00:07 You may want to take a little break, but as soon as you ready,
+00:10 we're going to dive right back into creating our second playbook,
+00:13 we are just going to form the foundation 
+00:16 for us to deploy our application to our server,
+00:19 not only once, but every single time we make changes.
+00:21 Let's switch back over to the command line.
+00:23 We've already got some of our files set up, from writing the initial configuration.
+00:26 Modify the hosts file, and we're going to create a new configuration.
+00:30 I'll just call this one common, and again,
+00:34 specify the IP address to your Digital Ocean droplet.
+00:37 We're also going to specify the Ansible Python interpreter as Python 3, save that.
+00:43 Next up, create a file named deploy.yml, write out a quick comment here,
+00:49 now just like we had our init_config.yml, we are just going to write a few lines here,
+00:52 we'll apply this to a common host and this time
+00:56 and this is the really important part, that the user is going to be deployer.
+01:00 Now, this user should be whatever name that you've named in your group vars file
+01:04 for your non-root user, and the roles we're going to apply
+01:06 just common, so common will be the name 
+01:10 that we use under roles for this playbook.
+01:14 Save that file and quit out, now head under roles,
+01:17 and instead of init_config, we're going to create a new folder named common,
+01:23 move under common, and we're going create 
+01:26 three directories here: templates, handlers and tasks.
+01:31 Now templates are going to be files like our configuration files for supervisor;
+01:35 handlers are used for services, for example if we need to restart nginx
+01:39 after many different tasks that we do, we can just call 
+01:43 a handler to do a common operation over and over again.
+01:46 And then task, we've already been introduced to, that will form the backbone
+01:48 of all the instructions we want for applying our configuration to the server.
+01:52 Head into tasks, and this is where we'll start things off 
+01:55 create a file, name main.yml, start out with little comment
+01:58 and now we're going to take advantage of the include statement,
+02:01 so rather than just writing every single task in here, 
+02:03 like we did in the previous playbook, for initial configuration 
+02:06 we're going to essentially import other yaml files that Ansible will use 
+02:11 as instructions for setting up our server.
+02:13 First one we'll call Ubuntu, 
+02:16 now throughout the remainder of the videos in this chapter,
+02:19 we're going t be creating several other yaml files,
+02:21 in this video we're just going to flesh out a Ubuntu,
+02:24 but let's go ahead and add the other includes just as comments,
+02:27 so that we can see how this entire deployment will come together.
+02:30 The next one we'll call letsencrypt, and this is going to be 
+02:33 setting up our SSL certificates for our web server 
+02:36 after that, we'll set up the web server itself, which will be nginx,
+02:40 we'll be configuring that with https; 
+02:43 the next one will be our source code, which will happen and git
+02:45 and these should all be yaml, not html.
+02:48 Next up, we'll handle application dependencies,
+02:50 then we'll handle running as a wsgi application 
+02:53 and finally, we'll just create a notification process,
+02:57 because as you build out your deployments, sometimes these deployments
+03:00 can take up to 5, 10, 15 minutes to complete 
+03:04 so it's nice when you can walk away from your computer 
+03:06 and get a text message when it's finished or something like that,
+03:10 or get an email or post to a Slack channel.
+03:12 Notifications are really simple modules, 
+03:14 but they let you take your attention away 
+03:17 from what's happening with the playbook and go work on other things.
+03:20 Alright, save this file, and now we'll create ubuntu.yml.
+03:23 In this playbook, we're really just going to do a couple things, 
+03:26 we're going to install some basic Python packages, 
+03:29 system packages through Ubuntu, and we're going to set up the firewall, 
+03:33 we really only want to have two ports open in our case 
+03:36 the first one is just going to be port 22 for ssh,
+03:39 and the second one is going to be 443 for https connections.
+03:42 And then, port 80 it for http connections, even though we're not going to 
+03:45 respond over http, we will redirect to the https version of our application. 
+03:49 Alright, the first task we're going to write,  
+03:52 ensure Python packages are installed, again use that apt module,
+03:56 and we're going to use a slightly different syntax here, 
+03:59 we're going to use a variable, but we're not going to declare this variable 
+04:02 in or group vars file, we will say update_cache before we install each of these items 
+04:05 and here we're going to specify become is true 
+04:10 what this does is use a sudo in order to escalate privileges 
+04:14 so we can install the system packages, without using sudo 
+04:17 deployer is not going to have the appropriate permissions 
+04:20 in order to install these packages and our deployment would fail;
+04:23 when we write become true, we can become any user, 
+04:26 we can use this to become a postgress user for using a postgress database
+04:31 but if we don't specify who else to become, it'll just use the sudo mode.
+04:35 Alright, now we're going to use with_items
+04:38 and this is how we can avoid creating multiple tasks 
+04:41 when we need to install multiple packages,
+04:44 in our case, we only need to install a couple of packages
+04:47 the first one will be python-virtualenv, the second one will be python3-dev.
+04:52 What happens here is that with_items 
+04:55 think about it like it's plugged into the variable item
+04:58 for the apt module, pretty much just a for loop 
+05:01 and this is the list of items that we're going to use 
+05:04 and it's going to run this task with each of these items.
+05:07 Put that out of the way, let's enable our firewall, we can use the ufw module
+05:13 we'll say allow port 22, and again we need to use become true 
+05:17 and now we can copy this a few times, this time http port 80
+05:21 copy it again, https 443, and one more bit we need to write 
+05:27 is to actually enable the firewall, ufw module
+05:34 and we're going to specify state enabled and become true.
+05:37 There is something slightly different about the way that I wrote these tasks 
+05:40 compared to the ones we've seen so far. 
+05:43 What you'll see here is in this module this ufw, 
+05:45 the only thing we needed to specify here 
+05:47 is that our state should be enabled, here we only had a couple things 
+05:50 we need to specify, so instead of writing them on their own lines,
+05:54 what we could do is we could say rule out and port 443,
+05:59 this would work just fine, but if you're writing a bunch of tasks at once,
+06:02 it's often easier just specify it all on a single line 
+06:05 and this is the format we would use, we would use 
+06:08 a key and equal sign and then the value,
+06:10 rather than a key and then s colon and then the value.
+06:14 So it's just another way that you can specify with Ansible in a more compact fashion 
+06:19 and we'll use them interchangeably throughout, 
+06:22 we don't need to edit the group vars all file, we probably should create a shell strip 
+06:26 just to make it easier for us to kick off this file, just like we did with init.sh.
+06:30 So copy init.sh, or create a new file, and I just typically call it prod_deploy
+06:36 so a production deployment, we'll modify prod_deploy, 
+06:40 and instead of initial_config, this will be deploy.yml, 
+06:43 we will use the same private key, 
+06:46 but the root will be deployer, as opposed to root.
+06:49 Save that, let's give it a try, see if it works.
+06:53 So we kick this off, looking good so far,
+07:03 ok so we did run into an error here, so what seems to be the issue?
+07:07 Well, the connection timed out, couldn't connect, that's kind of odd.
+07:10 But if we go into hosts, one of the things is that I mistyped an IP address
+07:16 and this happens frequently, take care if you are modifying files by hand 
+07:21 especially when you're typing out certain digits, this was 234 and it should be 243
+07:27 little things like this can trip you up, so if it doesn't seem 
+07:30 like you're able to connect at all with Ansible, 
+07:33 double check the IP address or the host name, 
+07:36 make sure that your private key exists and that you are pointing to the correct one 
+07:40 and make sure that you're specifying the appropriate user name like deployer 
+07:43 if you have already locked down root.
+07:45 Those are things that have often tripped me up as I am using Ansible.
+07:48 Let's try this again. 
+07:50 Alright, now this time it looks like it was able to connect successfully. 
+07:53 Alright, looking good, now let's just make sure that we can connect to our server 
+07:56 because we did change the firewall rules, so again we'll just manually connect 
+08:00 to make sure everything looks good-
+08:09 and it looks like we're still able to connect 
+08:12 even though we've got the firewall rules in place, awesome.
+08:15 So now we have the start of our new deployment playbook, 
+08:18 and we can add new tasks, new files to it, build it up over the next few videos,
+08:22 until we've got our completed deployment and our application is up and running.  

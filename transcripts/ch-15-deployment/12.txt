@@ -1,0 +1,102 @@
+00:01 We got our whole application up and running in the last video 
+00:04 but the wsgi server was only running when we were logged in 
+00:06 under the deploy a user and running it manually.
+00:09 That's not going to suffice for a regular application,
+00:11 what we really need is some way to keep our pyramid application up and running
+00:15 in the background, all the time, and have it automatically restart 
+00:18 if for some reason the application shuts down.
+00:20 That's where the tool supervisor comes in;
+00:23 supervisor is a commonly used tool in Python application deployments 
+00:27 to start, stop and restart services that you need to run your application.
+00:31 We're going to install supervisor, we are going to have it run the p.serve command
+00:35 which is using the waitress whiskey server to run our application, 
+00:39 then when we go back to our application's url everything will be set up 
+00:43 nginx will serve as a reverse proxy, 
+00:45 and forward requests on to our Python application
+00:48 our Python application will run its code
+00:50 supervisor will ensure that the application stays up and running 
+00:53 and our application will respond back through nginx server 
+00:56 and we can keep on serving users,
+00:58 let's set up the last few bits of our Ansible playbook now.
+01:01 We again need to write a couple of new files, one is a yaml file for a supervisor 
+01:05 that will run the wsgi server, and the second is a template for the supervisor configuration 
+01:10 we'll start out by writing the yaml file for Ansible.
+01:13 Open up roles/common/tasks and start one up that is called wsgi.yml.
+01:18 Our first task is to make sure that supervisor is installed via the system package
+01:23 this should look familiar at this point, we're going to use the apt module 
+01:26 search for the package named supervisor, make sure it's installed 
+01:30 and just in case update that system cache
+01:34 and we need to be a Super User to do it.
+01:36 Alright Ansible install supervisor, then what-
+01:39 well, we need a configuration for supervisor.
+01:42 So we use the template module, and we'll specify a supervisor app jinja template
+01:50 and it will be put under the supervisor configuration directory on our server.
+02:00 And we'll just give it the name of the app name,
+02:04 just in case we want to have multiple supervisor configurations out there.
+02:07 Often this will come in if you're running a task queue like celery,
+02:11 you'll have multiple supervisor configurations 
+02:14 for every single process that you want to manage.
+02:16 So by giving it the app name we should know which application this one is running.
+02:19 We load up our configuration, and then what we want to do 
+02:22 is we actually want to stop the supervisor process,
+02:24 we need to be Super User for this, 
+02:27 and we actually also need to be Super User for the previous command,
+02:31 all these should be run with Super User privileges.
+02:34 Now there's one quirk that I often run into with supervisor 
+02:37 which is that if you just restarted quickly,
+02:39 it often won't take the configuration files and reload them on Ubuntu,
+02:44 it's a bug that's been out there for a while,
+02:46 and so the way that I typically get around it is 
+02:49 I pause during the restart process, I stop supervisor I pause 
+02:52 and then I restart it, and that gets around the issue.
+02:55 You may be able to find a better way to handle this,
+02:57 but for now, we want to make sure that we know that this works,
+03:00 when we restart supervisor that our configuration takes effect,
+03:03 so this will ensure that you won't have any problems with it.
+03:06 There is certainly room to optimize this part of the deployment.
+03:09 And then finally, we need to restart supervisor
+03:12 and then I also restart nginx when this happens,
+03:15 that way nginx is not caching any of the results
+03:18 everything is restarted from a clean slate.
+03:21 Next, we need to write our template file for supervisor,
+03:23 it's under roles/common/templates/supervisor_app.conf.j2
+03:31 and this is what this supervisor configuration looks like 
+03:34 the program will be called app name
+03:37 or we'll punch in the application name that we've given it 
+03:41 which is blue yellow in our case, we'll give it the commands to run 
+03:44 so under our virtual env directory, so we're reusing 
+03:47 a lot of these variables that we've already created 
+03:50 we use the pserve command, and we'll give it a production.ini,
+03:54 we need to run this from a specific directory, 
+03:57 and so we can specify the exact directory in which we want to run this command 
+04:00 that will give it the sub app directory, but of course, 
+04:06 in your case, if you don't have sub applications folders within folders 
+04:09 multiple versions of applications, just give it the app directory.
+04:13 The user we're running this as is the deploy a user
+04:16 so we're not running it as root, we're running it as our deploy user,
+04:19 we do want to auto start this application up,
+04:22 we don't want to manually start the application, and we also want to auto restart it 
+04:25 in case supervisor has to restart the application,
+04:28 if the app shuts down we want to restart it,
+04:30 and we'll redirect any errors to log files, and this should be standard error.
+04:38 We've only reused variables that we already defined, 
+04:41 so we don't need to define any new variables for our deployment.
+04:44 The one last step is just to make sure that this new yaml file 
+04:47 is a part of our playbook, so under rules/common/tasks/main.yml
+04:52 make sure wsgi.yml is in there, save that,
+04:57 let's try to kick it off-
+05:03 it looks like everything ran without a problem,
+05:05 but the ultimate test is to check our url, see if our application is live 
+05:09 we'll restart- boom, blue yellow rockets,
+05:13 we got our whole application up and running,
+05:17 being served by a waitress on the back end as our wsgi server 
+05:21 and we're in business.
+05:23 So now we have our complete Ansible playbook 
+05:26 that also can form the foundation in case you want to change any of these pieces
+05:29 if you want to swap out the wsgi server, use a different wsgi server
+05:32 add new features and functionality to your application,
+05:35 if you need to do additional configuration,
+05:38 you can do all that by modifying this Ansible playbook.
+05:41 We can rerun this over and over again, 
+05:43 as our code changes, keep our application updated.
+05:45 And finally have a repeatable automated way to do our deployment. 

@@ -1,0 +1,377 @@
+00:01 Hopefully you took a look through the Ansible documentation, 
+00:03 but I found that the best way to learn Ansible 
+00:06 and how to do automated deployments 
+00:08 is just to dig in and start writing your first playbook.
+00:11 The first playbook is going to be one that we only run when we spin up a new server, 
+00:15 the base Ubuntu image that we selected on Digital Ocean 
+00:18 is not harded against attackers who might want to try to lock into your box. 
+00:22 The main security mechanism that's in place from the start 
+00:25 is just that you can only log in with an ssh key, but there are many more steps 
+00:28 that we need to take in order to protect this box, 
+00:31 because it is live with a public IP address on the internet.
+00:35 Shift back over into your development environment, 
+00:38 and either go into the course demos or move into your own project 
+00:41 you can start writing the deployment playbooks for your project 
+00:44 as we go along through this chapter.
+00:47 Or if you don't have your project set up just yet, 
+00:50 you can follow along through the course demo. 
+00:52 Within the course demo's git repository, switch into chapter 15, deployment, 
+00:55 there will be another folder within it, blue yellow app deployment.
+01:00 This is the same project that Michael was working on the previous chapter,
+01:04 where he set up email, we're now going to take this application
+01:07 and deploy it on our Digital Ocean server.
+01:11 The first step is to create a deployment directory,
+01:14  that will store all the files Ansible needs to execute, 
+01:17 create that directory, and then switch into it.
+01:19 If you haven't already activated your virtual environment, go ahead and do that now.
+01:22 You can see mine is activated here, 
+01:24 I just have one called entre, and it's also using Python 3. 
+01:27 The first thing we want to do, is install Ansible. 
+01:30 Now typically we would just say pip install Ansible, but since Python 3 support 
+01:34 is being actively worked on, in the development branch,
+01:37 I recommend installing the development branch rather than the current stable release.
+01:42 As soon as Ansible cuts the 2.3 version 
+01:45 you can then install Ansible via Ansible 2.3.
+01:48 The way that we install from git, is we instead use the git protocol 
+01:53 pointed to the repository that we want to install,
+01:57 in our case that's going to be github.com/ansible/ansible.
+02:01 Now this is going to clone the git repository,
+02:09 and install it into our virtual environment, in my case, I've already installed Ansible, 
+02:13 wait for it to finish in your own environment, and then we can proceed.
+02:17 Now that Ansible is installed, when you do pip freeze
+02:20 it'll show us that Ansible 2.3.0 is installed, 
+02:23 that's the minimum version that we're going to want.
+02:26 With Ansible installed, we can now start to write our files.
+02:28 The first file that we need is a hosts file, 
+02:32 this is where we tell Ansible where our servers are located;
+02:35 open up hosts, file name hosts, under the deploy a directory in your editor.
+02:40 In my case, I'm going to use Vim, and we're going to start this file off 
+02:45 by naming init config, which is going to correspond
+02:51 to the playbook that we're running.
+02:54 Next, we need to specify the IP address of our server.
+02:57 Now, if you don't remember what that is, you can shift over 
+03:00 into our droplet, click copy and just paste it in. 
+03:03 If we had many servers we wanted to deploy too, they would all be listed here 
+03:09 but in our case we're only going to deploy to a single server.
+03:12 Next up, we need to do one more thing, which is we need to specify 
+03:15 the Ansible Python interpreter that we want to use
+03:18 when we connect to a remote machine. 
+03:20 Ansible is actually going to be interacting with the Python environment 
+03:23 on each remote machine, so our Digital Ocean droplet 
+03:26 already has Python installed by default, 
+03:29 but it's Python 3 in Ubuntu 16.04, that's the default installation 
+03:34 and we want to explicitly specify that, 
+03:37 otherwise we'll encounter some errors down the road 
+03:40 when Ansible is trying to work without remote environment.
+ 03:43 So type in ansible_python_interpreter 
+03:46 and specify under user bin python 3, save that.
+03:51 Alright, that's all we need to do right now for a host file we'll add to it later, 
+03:54 when we write our second playbook, this is all we need at the moment.
+03:58 Quit out of your editor, and that's our first file, hosts. 
+04:01 We're going to write a second file, and that file is init_config.yml.
+04:06 Open that up, and I typically start my files with a comment 
+04:10 very high level of what this playbook intends to accomplish. 
+04:15 So in our case this is just going to lock down the server, 
+04:19 and set up a non-root user. So what's this non-root user?
+04:24 We're going to create a separate user named deployer 
+04:28 and we are only going to log into the server with deployer 
+04:30 we're actually going to disable the root user as a log in account 
+04:33 the reason behind this is because many malicious actors will just try to connect to 04:36 servers as root, they won't try any other accounts, and even if they do
+04:40 they need to know the username 
+04:42 which really could be anything that we want it to be; 
+04:45 it's just one of the security precautions that we're taking as we set up our server.
+04:48 Now we're going to specify which hosts we want to apply this configuration to,
+04:52 and we're just going to give this a name, here we'll just say
+04:55 apply initial configuration to server,
+04:58 next up, we're going to specify the hosts, 
+05:01 now the hosts is going to apply based on what we've set up in our hosts file.
+05:04 And we can't say all here, and that will apply this configuration 
+05:08 to every single server that we've listed, 
+05:10 but in our case, we're going to say init config. 
+05:13 For this playbook our user is going to be root, 
+05:16 because we're going to log in as root as we lock down our server 
+05:20 and later on we'll log in as a deployer user, 
+05:24 and the roles that we'll apply are just going to be init config.
+05:28 Now, the role is a directory that we're going to create 
+05:32 and that will contain other yaml files with tasks within them
+05:37 that are going to run when we execute this with the Ansible playbook command,
+05:40 that's all we need for now in the initial config yaml file.
+05:43 We'll save, quit that, now we're going to create two subdirectories; 
+05:47 the first one is going to be group vars, this is the variables that we'll use,
+05:53 that are customized for our deployment,
+05:55 and the second one is roles, so create those two directories,
+05:58 move into roles, and create a subdirectory init_config, 
+06:02 move into init_config, and then create a directory named tasks.
+06:08 This is the directory structure than Ansible is going to use 
+06:12 in order to kick off and execute the playbook.
+06:16 Within tasks, create a new file, main.yml
+06:19 this is where we're going to write the playbook with specific tasks 
+06:22 each step that we need to lock it on our server, 
+06:25 again, I always start with a brief comment, now let's write our first task. 
+06:29 Again name is just a description of what we're going to do,
+06:32 this first one is going to update and upgrade packages,
+06:37 and install a package named fail2ban.
+06:40 Sometimes when I'm writing playbooks, I will actually just write out all the tasks
+06:43 just to start, so I know what steps I need to take to flesh out the whole playbook,
+06:47 and that's what we'll do here; 
+06:49 so the first step is, we're going to install fail2ban,
+06:52 which is going to prevent anyone from continually trying to access the server 
+06:56 it will create a delay between when they try to log into the server 
+07:00 and when they are allowed for their next attempt.
+07:03 We can also use it to blacklist certain IP addresses,
+07:06 if they're constantly trying to attack our server.
+07:08 Now the second step, we're going to create a non-root group 
+07:12 so any user in this group is going to get what is called super user privileges 
+07:15 which allows them to make a system wide changes 
+07:18 that are called privileged changes, which is escalated privilege required,
+07:25 execute certain applications or access certain resources on a Linux system.
+07:30 After we create our non-root group, were going to create a non-root user,
+07:34 this user will be added to that non-root group,
+07:37 we need to add an authorized key, which is the equivalent of what we did
+07:40 when we specified our ssh key on Digital Ocean,
+07:43 after we have an authorized key, 
+07:45 we will add the non-root group to super user privileges. 
+07:51 That will give our non-root user the ability to make all the changes 
+07:55 that we need on the system, like restarting services, 
+07:58 installing new packages, those sorts of things.
+08:01 Next, we're going to disable the root ssh logins.
+08:04 
+08:10 That way, no one will be able to ssh in 
+08:13 by connecting to the root user, once we start ssh.
+08:16 One more step, we're going to make sure 
+08:18 that no one can log in via password on ssh,
+08:22 we only want to be able to log in via our private key,
+08:25 once we've made those two changes, the last step is to restart the ssh server.
+08:30 So that's the high level of what our initial configuration is going to do on our server; 
+08:36 now we need to fill in each one of these tasks.
+08:39 For this task, we're going to use the apt module,
+08:42 the apt module takes a few parameters,
+08:45 first is the name and this is going to be what package we want to install;
+08:49 in our case, fail2ban, we want it to be present, 
+08:53 so we want it to be installed on the system,
+08:57 and we want to make sure we update the system cash 
+09:00 so we don't get an old version of fail2ban installed on our system.
+09:04 And we'll specify yes to upgrade packages that are out of date.
+09:10 Ok, so how do we know what the apt module does?
+09:13 This is a good time to go take a look at the modules index for Ansible.
+09:16 Typically, if you just do a search, the first result that's going to pop up 
+09:19 is the Ansible documentation, Ansible and then the package name,
+09:22 and then the module name, so this documentation tells us 
+09:25 how this module works, as well as any requirements, 
+09:28 so we're going to be running this with Python 3,
+09:31 and aptitude is installed by default on Ubuntu, 
+09:34 that's the package manager for Ubuntu.
+09:37 And these are the parameters that can be specified
+09:40 and in some cases we don't need to specify them,
+09:42 so for example if we see that something is not required,
+09:45 it will either have a default, or it just won't apply when we run this task.
+09:50 So there are a lot more advanced options that we can set here 
+09:53 we've only used the basic ones because we're just installing a simple package;
+09:56 this is why I keep the Ansible module documentation open 
+10:00 because every single time I write a task I want to see 
+10:03 if there's some sort of additional option 
+10:05 that I should be using as a part of writing that task.
+10:08 Switch back over to our playbook, let's write our next task.
+10:11 We're going to use the group module in order to create a group 
+10:13 and the name of the group is going to be the value set by a variable.
+10:17 We haven't set any variables yet,
+10:20 but this is what our group vars directory is going to contain,
+10:23 we're going to write a variable separate from our playbook 
+10:25 within the group vars directory, and one of those variables is going to be 
+10:29 a deploy group, the name of the deploy group.
+10:31 Now, this should look familiar, state present, 
+10:34 because we did the same thing with the apt module
+10:36 so what we're saying with this module is create a group 
+10:38 named whatever our deployed group variable value is.
+10:41 Now, if that variable is not set, Ansible will throw an error.
+10:43 In most cases, I do not set default values, because I actually want 
+10:47 Ansible to tell me when it's encountered an error.
+10:50 If you're writing a playbook in the future, what you can also do is 
+10:52 you can specify a default value with default, 
+10:55 so in this case, we could say deployers,
+11:00 and we need to make sure that we have single quote within the double quotes,
+11:03 and that we use deployers as the value, if deploy group is not set.
+11:11 So it's just a handy tip for when you're working with Ansible, 
+11:14 if you do want to set default values. In our case, we don't.
+11:17 Next what we want to write is the user module,
+11:20 the name of the user is going to be set as deploy user, 
+11:24 the group will be the deploy group, we'll use the value of that variable 
+11:29 we'll set a default shell, I always like it to be bash rather than the default just ssh shell, 
+11:35 we'll say we want this user to exist.
+11:38 For some reason, we were writing a playbook where we wanted a user to be deleted 
+11:41 or definitely not exist, we could say absent, 
+11:44 we need this user, so that's why we would say present.
+11:47 Next up, we use the authorized key module 
+11:50 and now we're going to set an authorized key for a user,
+11:53 the user is going to be the one that we have specified 
+11:55 as a value to our deploy user variable, state present again 
+11:59 and note that in the previous task, particular present within quotes 
+12:03 now that shouldn't matter, but let's remove them here
+12:08 Ansible can get a little tricky with the quotes 
+12:10 but a general rule of thumb is that if you're using a variable 
+12:13 you're going to want to surround that with quotes 
+12:15 because your variable may have spaces or special characters in the value, 
+12:18 if we know because we're hardcoding something like present or absent 
+12:21 that it won't have special characters or spaces 
+12:24 we don't need the quotes, so I'll typically leave them out.
+12:27 However, spaces and special characters can mess up Ansible's parser 
+12:31 which is parsing the yaml, so if you want to be on the safe side 
+12:34 you can use quotes around everything in your playbook 
+12:37 and the only one I don't seem to have trouble with with spaces is the name task.
+12:41 So again, typically I won't use quotes around the value to a name.
+12:45 Alright, let's finish up the authorized key, we need one more bit here,
+12:49 we need to specify where the key is located on our local system,
+12:52 so that it can be uploaded to the remote machine,
+12:55 so we'll use the key argument and then we're going to look for a file 
+12:58 we're going to do a lookup for a file, we're going to use another variable 
+13:02 we'll set ssh dir and we'll add the name of our key 
+13:05 which in our case was  do deploy, and we particularly want the public key.
+13:10 Now real quick, we could leave this and it's probably better 
+13:14 to leave this as a variable, 
+13:16 so there's multiple ways that we can write our Ansible tasks 
+13:19 so maybe the whole idea is we want these to be maintainable over time 
+13:23 and variables help us to keep our playbooks maintainable.
+13:26 So instead of hardcoding do deploy as our name, let's call it ssh key
+13:30 and we'll add the .pub at the end; we'll say ssh key name 
+13:34 and then we'll make sure that we create a variable for that later.
+13:37 Alright, we're getting pretty close to being able to run this,
+13:40 let's fill out the remaining four tasks.
+13:43 The next two tasks we're going to modify the ssh daemon configuration,
+13:47 we're going to use another module named lineinfile
+13:50 which allows us to replace certain lines in files 
+13:54 the destination of this is going to be on our remote machine,
+13:57 and actually, in this case we're going to be modifying 
+14:00 the Super User, the sudoers file, we need to modify it 
+14:03 so that anyone in our deploy group gets Super User privileges
+14:07 when they use the sudo command.
+14:10 The state should be present, we use a regular expression 
+14:15 to define that we want the deploy group in this file 
+14:19 so what we're saying here is, if the value of our deploy group is in the file 
+14:24 you can skip this step or Ansible can skip this step 
+14:28 but if it's not located in the file, we want to add a line, and that line is 
+14:33 the value of the deploy group, and then some text that specifies 
+14:37 that the deploy group is getting all privileges.
+14:40 Finally, we'll validate the file,
+14:43 to make sure we didn't mess anything up.
+14:48 
+14:53 Next, we're going to use the replace module 
+14:56 the file here, it's going to be our ssh server configuration,
+15:04 we'll again use the regular expression
+15:07 and if the file says permit root login, then we want to change that 
+15:11 and replace it with permit root login, no back up- we don't need to back up the file.
+15:19 Let's copy this, next disable ssh logins by password,
+15:22 password authentication- yes, 
+15:27 it should be replaced with password authentication- no.
+15:34 Last task, we just want to restart the ssh service, so we'll use the service module 
+15:40 the name of the service is ssh, and state should be restarted.
+15:46 Cool, that's our playbook, save it and now we just need one more file 
+15:50 to declare our variables, and we'll be able to start executing this.
+15:54 So go into the group vars file, and we'll just create a file named all.
+16:02 So this is just going to contain all of our variables for our deployment.
+16:06 And if your deployment gets really complicated, you can create many variable files
+16:09 I typically don't have so many variables for single applications 
+16:12 that I just store them all in one file for convenience.
+16:15 Alright, so there are four variables that we defined in that init_config playbook.
+16:19 The first one was deploy group, I'll just say deployers,
+16:24 the second one is deploy user, let's call this deployer;
+16:28 The third one is the directory that stores our ssh keys,
+16:34 I just stored the do deploy under my home directory,
+16:38 and then the ssh keyname do deploy.
+16:45 That should do it, save the file, and let's see if we can execute this.
+16:51 In order to execute our playbook, 
+16:54 we're going to use the Ansible playbook command 
+16:58 we have to specify a few arguments here, 
+17:01 and rather than just typing this over and over again 
+17:04 what I typically do is I just store them in a shell file, 
+17:07 so this is going to be a bash shell script, 
+17:10 and we are going to use the Ansible playbook command
+17:13 now -vvvv says give me very verbose output 
+17:17 sometimes you're going to want that, sometimes not, 
+17:20 especially when I'm writing a playbook, executing for the first few times
+17:23 I want to see all of the output, just in case I run into any errors 
+17:26 I want to know immediately what those errors are, so I can fix them.
+17:29 We're going to use the init_config yaml file that we created,
+17:33 we're going to specify a private key that is stored 
+17:35 under our home directory, do deploy 
+17:39 these will all be root, they were connecting their own machine with 
+17:42 and we're going to use our hosts file,
+17:45 save that, let me try that, in order to execute the shell script 
+17:47 you need to change its permissions
+17:50 so 0700, on init.sh, now if we look at this init.sh file,
+17:57 it has the x for executable, let's kick it off,
+18:01 oh no, of course, the first thing we run into is one error
+18:09 so let's modify this and what actually the problem is 
+18:13 is that it's a private -key, alright, one more time 
+18:18 okay so this is typically what you're going to find 
+18:24 when you work with Ansible and you are just running it for the very first time 
+18:28 so let's work through a few of the issues that I ran into.
+18:31 This is the verbose output, and this is a good opportunity to just kind of understand 
+18:35 the errors we may run into, so what's the problem here?
+18:38 What it's telling us is that it couldn't find this public key,
+18:41 now at first this is a little bit confusing, this is definitely our public key,
+18:46 but what I realize just by looking at it is this appears incorrect,
+18:51 so we don't want to specify the relative path,
+18:54 which we did with a period before the forward slash 
+18:57 we just want to specify the absolute path, 
+19:00 so let's go ahead and modify this init.sh again 
+19:03 and in our case it's going to be just home/matt/do_deploy and we'll save this,
+19:13 all right, one more time- 
+19:17 awesome, so now it was able to find the file 
+19:20 but again, we ran into an error, 
+19:23 so let's take a look at what this error message is telling us.
+19:25 Well, it looks like there's a problem with one of our tasks,
+19:28 now when you're working with Ansible, and you're writing a new playbook 
+19:31 you can't expect everything to go right, just from the beginning;
+19:33 that's why I think it's really important just to dig into 
+19:36 what are the errors that are occurring, and not be afraid of them, 
+19:39 because the great part is is that we're actually getting some midi information here,
+19:42 that we may have used two arguments based on what we're seeing here 
+19:47 and they're mutually exclusive, you can't put both of them in there at once 
+19:51 in our case we use both package and upgrade at the same time,
+19:54 now that may not be necessary, so let's go into our roles,
+19:58 init_config, tasks, modify_main.yml.
+20:02 So the issue here is we are not actually going to use this upgrade 
+20:06 we just want to make sure that the fail2ban package is present 
+20:09 upgrade is used when we actually want to upgrade existing packages that are there.
+20:13 So we'll remove that, save it and now try to run it again.
+20:17 A whole bunch of blue output, that's good so far, 
+20:26 it looks like we may have gotten past the point that we had earlier 
+20:29 and let's let Ansible do its thing.
+20:32 
+20:36 Alright, so we got even further, it doesn't quite look like everything worked out 
+20:40 all right, one more error that we ran into,
+20:43 this one looks fairly easy and straightforward,
+20:45 it looks like the period is missing from deploy.pub
+20:49 so it wasn't able to use, to play pub as an authorized key,
+20:53 so this typically happens when you're working with variables 
+20:57 so if we take a look at what's under our variables file, 
+21:00 we're going to see that the ssh key name is do deploy
+21:04 but there's no period after it, so if we go under our tasks,
+21:08 and take a look at what we have here, it looks like we use the name 
+21:14 and then we appended pub but no period after that, 
+21:17 so we can save that, and once again, we'll kick it off.
+21:20 And this is a fairly standard workflow for how you're going to work with Ansible, 
+21:24 and once you got the scripts written, you can run them over and over again,
+21:28 it's going to automate your whole deployment 
+21:30 but there is a little bit of work and just getting it automated to begin with.
+21:33 Let's kick this off again, okay, amazing, so it looks like everything worked just fine.
+21:38 Now, if it actually did work we should be able to connect to the remote machine
+21:42 as a check with this new deployer user, let's try that right now.
+21:47 So we're going to ssh in, and we're going to specify the do deploy key 
+21:51 and this time, we're going to use deployer user name as opposed to root,
+21:57 and we'll copy and paste our IP address, and let's give this a try-
+22:05 yes, we are online and now our server is more locked down 
+22:11 because no one can log in with the root user name, 
+22:14 and let's just test that out real quick;
+22:16 we know we could do it earlier, because we were able to log in 
+22:19 but now let's try to log in with the root user.
+22:21 No, unable to do so, and it's just going to give a blanked denial 
+22:25 which is permission denied due to a public key.
+22:29 Really that's our ssh configuration, that is preventing us from logging in via root.
+22:34 With that, we've written our first Ansible playbook,
+22:38 this is a playbook that you're going to want to run 
+22:40 whenever you spin up a new Digital Ocean instance, 
+22:43 it's going to lock down create a new user for you,
+22:46 that can handle the rest of the deployment,
+22:49 and now are ready to install our web application 
+22:51 and make sure everything is up and running. 

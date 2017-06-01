@@ -1,0 +1,68 @@
+00:01 So far we've been working with the IP address of our Digital Ocean droplet, 
+00:05 but we're not going to have people connect 
+00:07 directly to the IP address, we want a domain name.
+00:10 If you've ready got a domain name for your business, that's awesome;
+00:13 if not, we'll use name cheap to get the domain name
+00:16 and then configure its records under the domain name service, the DNS,
+00:20 to point to your Digital Ocean server.
+00:23 DNS provides the bridge between a nice name like fullstackpython.com
+00:27 or talkpython.fm and the server or a group of servers 
+00:31 that are running serving up your application.
+00:34 Bring up in a web browser and go to the domain name register of your choice.
+00:37 I use Namecheap for just about everything,
+00:40 and I've been using them for several years, so haven't had any issues with them.
+00:43 Sign up for an account, or sign into your existing account, 
+00:46 and you can register for a domain name. 
+00:48 I'm not going to walk through the whole domain name registration process, 
+00:51 but it essentially you search for a domain name, buy it, 
+00:54 and then it will be added to your domain list.
+00:56 So today, I've registered for pythondeploymentexample.com 
+00:58 and now it appears on my domain list.
+01:01 First thing you want to do is go click the manage button,
+01:03 which will bring out more configuration options for your domain name.
+01:06 The only thing we really need to configure here
+01:09 is under advanced DNS, this is where you set the host records 
+01:12 that will connect from the domain name to your server.
+01:16 Now as you can see, there is a couple of default host names that are set here 
+01:20 and this brings up a parking page for a Namecheap, just a default parking page 
+01:24 that says like this domain name has been registered at Namecheap 
+01:28 We don't really want that, we want to point this to our Digital Ocean server.
+01:32 So change the type to an a record, that's an address record,
+01:35 leave the host www, and then change the value to your IP address.
+01:40 Now again, you should know your IP address, but if you don't
+01:43 switch back over into your Digital Ocean droplet list, 
+01:47 click on your IP address to copy it, go back into advance DNS, and paste it in.
+01:53 We can save that by adding a little check mark, 
+01:57 and then the one other change we want to make, 
+02:01 we're going to have a URL redirect record, the @ symbol is for a naked domain
+02:08 so in our case, that is going to be python, 
+02:12 if you were to type in pythondeploymentexample.com, without the www, 
+02:17 it's going to redirect to the www version; 
+02:21 typically, you are not going to want to use the naked domain, 
+02:24 you're just going to want to use the www version.
+02:27 There's some esoteric rules why that's the case, 
+02:30 but that's simply how I set mine up, we won't get into those rules, 
+02:33 but that's the recommended practice I'd say you should follow.
+02:37 Now, instead of just http, what we're going to have instead
+02:41 we're going to point it to the https version, we'll leave it as unmasked,
+02:44 and save the changes, that's really all we need to do to set up or host records.
+02:48 What we'll find is now if we go to pythondeploymentexample.com
+02:52 it is going to try to contact our server.
+02:56 We can tell because if we go to the network tab, and then we click on this,
+03:00 and it actually redirected us to exactly what we specified, 
+03:03 https://www.pythondeploymentexample.com
+03:07 but our server is not serving anything up yet, 
+03:10 we haven't configured our web server nginx to respond to requests
+03:15 in fact, we haven't even installed it yet.
+03:17 So that's what we were going to do in the next couple of videos, 
+03:19 but the reason why we had to set our domain name up first, there was two reasons:
+03:22 number one, when you change these records, it can often take 
+03:26 15, 20, 30 minutes to propagate to all of the DNS servers around the world.
+03:31 These changes often don't take effect immediately,
+03:34 so sometimes you have to give them a little bit of time if you make changes. 
+03:37 The second reason is, we're going to use a service called Let's Encrypt
+03:41 to create an SSL certificate, and it has to be pointing to the specific server
+03:44 or IP address in order to use their service.
+03:48 So now that we've got that set up, 
+03:51 we are ready to continue configuring our server
+03:53 and getting ready to load our source code for our application.  

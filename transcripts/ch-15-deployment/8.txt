@@ -1,0 +1,109 @@
+00:01 We've gone through a lot of hands on work with Ansible
+00:04 and we're getting a lot closer to finishing our deployment 
+00:06 and getting or application up and running.
+00:08 This is a good time to take a break from writing the code and think about the bigger picture, 
+00:11 what we're actually accomplishing when we do a deployment.
+00:14 After you've done a bunch of deployments you can start to visualize a map in your head 
+00:17 of how all the different pieces fit together, and that's what I want to present here 
+00:21 with some visuals to help you tie together all these disparate Ansible tasks 
+00:26 and the yaml files, and all the commands that we are running 
+00:29 through Ansible to get all the pieces up and running.
+00:32 It all starts with you working on your application, on your local development environment 
+00:35 in most cases, that is going to be on your desktop or on your laptop 
+00:38 and chances are it's going to be self contained on your own system;
+00:41 and then you have prospective customers that are out there 
+00:44 with their web browsers, their iPhones, their Android tablets, 
+00:47 they would love to use your application, 
+00:50 become customers of your business but there is no way for them to access 
+00:53 what you're running locally on your development environment.
+00:56 First off, it's not secure in order to run a business like that,
+00:59 and second, your business would shut down 
+01:01 every time you shut down your laptop or your computer, that doesn't really make any sense.
+01:04 We need to deploy it on a remote server, and that's what we've be doing so far 
+01:07 one of the first steps in this chapter was to go to the digital ocean website, 
+01:10 sign up for an account, and then provision a server.
+01:13 The server provides the foundation for the rest of what we are doing in the deployment.
+01:18 When we provision the server, we didn't just get a bare bones box 
+01:21 we also installed an operating system on it, 
+01:23 that operating system Ubuntu Linux allowed us to connect 
+01:27 from our local development environment to that remote machine over ssh;
+01:31 then when we ran any of our Ansible commands, 
+01:34 they went through an ssh connection.
+01:37 That connection from our local development environment 
+01:40 to the remote machine allowed us to then install the web server,
+01:44 which is nginx in our case, and we also went to the Namecheap website 
+01:48 to configure a domain name; the domain name was then configured through DNS
+01:53 which are the domain name servers, that pretty much keep a look up table 
+01:57 between the easy to type in and remember urls 
+02:00 like pythondeploymentexample.com and the IP address of our server.
+02:05 We also had our server contact the Let's Encrypt service to grab a free SSL certificate 
+02:10 this SSL certificate allows us to serve each https connections 
+02:14 so that we're having a secure conversation between any of the customers 
+02:17 that are going to eventually come to our web service, 
+02:20 and the server that is providing that service.
+02:23 That's pretty much where we are right now, we've done a lot of work so far,
+02:26 and we've got the baseline for what we need to finish this deployment.
+02:30 And we also have our Ansible playbooks that are the foundation for the next few steps
+02:34 that were going to take, in the remainder of this chapter.
+02:37 So what are those next few steps?
+02:39 We need to get our source code from github onto our server 
+02:42 and our source code includes not only the python application 
+02:46 but also the css, the JavaScript, images, the static assets that our application needs 
+02:51 in order to properly serve our customers, it's stored on github, 
+02:54 and we're going to pull that down from the server.
+02:56 Our local environment is going to keep that connection with the server 
+02:59 but the server itself is going to contact github and use git 
+03:04 to pull down the source code and the static assets that we have.
+03:08 Once we have the source code, we can stand up our Python environment 
+03:11 using a virtual env, just like we do on our local development environment,
+03:14 install our dependencies that are stored in our requirements.txt file or a setup.py file 
+03:19 and use pip to go out to PyPi to pull down our dependencies, like Pyramid;
+03:24 and then we have a web server gateway interface server,
+03:27 this is the Python web application server that runs our Python code 
+03:30 and the virtual env isolates those application dependencies
+03:34 just like it does on our local development environment.
+03:36 And again, our server is going to go and contact PyPi, download those dependencies,
+03:40 they don't come from our local development environment 
+03:43 they come from the central hosted service PyPi. 
+03:47 Now once a deployment is finished, we can get some notifications 
+03:50 oftentimes, when you have a sufficiently large application 
+03:52 a deployment can take 5, 10, 15 minutes to complete 
+03:55 so it's nice to walk away from your deployment, go grab a cup of coffee
+03:58 and just get a text message when the whole thing is completed.
+04:01 So we'll see an example of that, where I will show how to use Twilio 
+04:04 just to send yourself some notifications right from your Ansible playbook.
+04:07 You can also have other notifications such as email or a Slack message 
+04:10 you can take the same exact principle and put notifications wherever you need to 
+04:14 this is particularly handy if you have other people working on the application 
+04:17 and doing the deployments and you just want to be notified
+04:20 every time the application is updated, 
+04:22 when we get that notification that the deployment is done, 
+04:25 that's where the real work that our application is doing comes in.
+04:28 Customers on their web browsers, their iPhones, tablets,
+04:32 they can go type in your domain name, the domain name servers will give them
+04:35 the IP address that they should look up 
+04:38 and then all of the communication happens between their devices 
+04:41 and the web server that you have running on your server, hosted on Digital Ocean.
+04:45 The web server passes some requests on to our Python code 
+04:48 so it functions as a reverse proxy and other requests it's simply serving up files 
+04:52 so it's doing what web servers are traditionally doing 
+04:55 which is serving up static assets such as the css and the JavaScript.
+04:59 All of the communication that happens 
+05:01 between a customer's device and your application, 
+05:04 happens through the web server.
+05:06 And that's how your application will be up and running, finish with the deployment 
+05:09 when you want to update your application,
+05:12 you simply run through this process again,
+05:14 and the steps that have already been completed, for example,
+05:17 system packages that need to be installed, Ansible will check 
+05:20 to make sure that those system packages are still installed 
+05:23 but skip over those steps, and simply pull down the latest version of the code 
+05:26 and restart the web server, the wsgi server, 
+05:29 and the latest version of your application will be running and continue to serve customers.
+05:32 So, that's the big picture of how our deployment works 
+05:35 we're getting really close to being finished with your application's deployment.
+05:38 So next up, we're going to finish setting up the web server, 
+05:41 and we'll grab our source code, set up all our application dependencies,
+05:44 get the wsgi server up and running, add the few final touches to our Ansible playbook 
+05:48 such as getting notifications when the deployment is done,
+05:51 and then your app will be up and running ready to serve customers. 
