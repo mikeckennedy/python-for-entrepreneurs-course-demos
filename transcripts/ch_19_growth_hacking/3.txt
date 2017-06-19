@@ -1,0 +1,52 @@
+00:01 Let's talk about a pro tip that Michael taught me 
+00:03 which fits into the funnel around the evaluation and sign up process. 
+00:06 It can also be used for existing customers 
+00:09 if you're emailing certain things out to them, like a new feature. 
+00:12 Once you have perspective or current customers' email addresses, 
+00:15 they've opted in to your email list you, can not only send them emails 
+00:18 you can send follow up emails if they never even open 
+00:21 the original email that you sent to them. 
+00:24 A couple of cases where this is really good- if you've got an email newsletter 
+00:27 and you're excited to announce the big launch of your application, 
+00:30 and only 50 percent of people even opened that email, 
+00:34 you can follow up a week later with another email slightly different subject line 
+00:37 and hopefully get some percentage of that 50 percent 
+00:40 which didn't open your original email to open up, and then read the new email. 
+00:45 Likewise, if you have an existing customer base, 
+00:48 you've got some great new features and 20 percent of the people 
+00:51 just never even opened the email, you can do the same thing with them. 
+00:54 Let's take a look in an example. 
+00:56 Back in August, I sent out an email to my Full Stack Python newsletter list, 
+00:59 an email list of any sufficient size is going to have a significant chunk of people 
+01:04 who never even open an email that you send, 
+01:07 regardless of how the subject line is worded. In this case, the subject line was 
+01:11 "less than 24 hours to back the Python for Entrepreneurs video course", 
+01:14 this was on when the course was originally on Kickstarter. 
+01:17 Now I'm in MailChimp, and we can see the results 
+01:20 of this campaign, if we just scroll down a little bit. 
+01:22 A little over 50 percent of people opened up this email, 
+01:26 10.5 percent of people clicked through one of the links in the email; 
+01:30 that is fairly common, and we can see over time, 
+01:33 once we sent the email out, people tend to open it up in spurts 
+01:37 and then there's a long tale of traffic over the next 24 hours. 
+01:41 But what about after a week? Chances are most people 
+01:44 are not going to be opening up their email, I know that I open up 
+01:47 a lot of my email newsletters on the weekend, 
+01:50 oftentimes I just miss things or I am bulk deleting a bunch of emails 
+01:53 and getting a follow up email would be just fine by me. 
+01:57 So what we can do in MailChip or most likely whatever email software you're using,
+02:00 is you can resend in an open campaign. 
+02:03 I'll give the link out to this at the end. 
+02:06 Essentially, once you have a campaign and you can replicate that campaign, 
+02:10 you can change the title of it, and then you can send it out to a certain group, 
+02:15 and if you follow these steps you get to the point where you can 
+02:19 send it out to everyone who has not opened up this newsletter. 
+02:23 So that's super helpful for bumping up the effective rate 
+02:26 at which people open up your email newsletters. 
+02:30 You want to be selective when using this, you don't want to spam people, 
+02:33 but if you got a really important announcement 
+02:35 and you want to make sure to maximize the number of people that open up the email 
+02:38 that announces something that you've worked really hard on, 
+02:41 this can be a great way to do that. 
+02:43 You can go to this link here, and this shows you how exactly 
+02:46 to do it with your own campaign. 

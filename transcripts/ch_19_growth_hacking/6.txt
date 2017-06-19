@@ -1,0 +1,107 @@
+00:02 When you've got a bunch of prospective customers using your product and engaging with it, 
+00:05 you'd like to see them move from prospective into actually paying customers. 
+00:08 So I wanted to go over some non-intuitive parts of pricing pages 
+00:12 that will help you to think past just the basic design of the page. 
+00:16 Once again, we'll take a look at a few examples.
+00:20 I've used MailChimp as an example throughout many of these videos, 
+00:23 and their pricing page is also a really great example as well. 
+00:26 They only have three options here. Now technically MailChimp 
+00:30 has more of a spectrum from free to really expensive paid accounts, 
+00:36 but they've made the smart decision 
+00:39 to keep things really simple on their pricing page. 
+00:41 On the left, you've got free, which hopefully by the point 
+00:44 that people are actually looking at the pricing page, 
+00:47 they are already on the free account, so they know where they sit 
+00:50 and they are probably considering going up to a paid account. 
+00:52 And one of the non-intuitive things about the psychology of pricing pages 
+00:56 is that you want the gaps between pricing plans to be meaningful, 
+01:01 it does very little if growing business and pro marketer 
+01:05 were only separated by five dollars per month, 
+01:07 well that will introduce his hesitation- should they go for the less expensive plan 
+01:12 or should they go for the more expensive one, 
+01:14 it's only hypothetically a five dollar a month difference in that example, 
+01:18 so they may just say I don't know what to pick, 
+01:20 and they'll close the browser and say I'll decide on it later, and maybe later is never. 
+01:25 So what you actually see here, is a huge gulf between growing business and pro marketer, 
+01:30 it makes it really easy to make the decision. 
+01:34 If you're in a large company, chances are you are just gonna pick the pro marketer, 
+01:37 you know that it's easier to get that larger plan through your procurement and legal team,
+01:41 rather than some tiny little amount that could be put on a credit card each month. 
+01:45 But if you're running your own business, or just getting started with your startup, 
+01:48 the growing business plan is probably going to be the one for you. 
+01:51 So that's the first thing to learn from these pricing pages. 
+01:55 Make sure that the difference between the pricing plans is distinct enough 
+02:00 that people don't have to hesitate when trying to decide; 
+02:03 it should be very clear to them which category do they fall into. 
+02:07 We've also used Zendesk as an example and there is a slightly different model, 
+02:10 this one might also fit in yours if you're considering a per seat licensing agreement, 
+02:15 so for example you multiply each of these plans by a hundred, 
+02:19 if you had in their terms a hundred agents, while each of these columns 
+02:23 doesn't look like it's that big of a difference from one to the other, 
+02:26 when you're considering per seat, it's going to add up very quickly. 
+02:29 One thing that's great about this page is that it shows you 
+02:32 when you move from left to right, you get every single thing plus new features on top of it. 
+02:38 So if you're considering team vs professional, 
+02:43 you can very quickly see the biggest features that may impact your decision 
+02:47 whether you should choose one or the other. 
+02:49 In the worst case scenario a pricing page would make you decide 
+02:52 which features that you want to mix and match make it too complicated to see, 
+02:57 well if I upgrade from the 19 dollar a month plan to the 49 dollar a month plan, 
+03:04 do I actually lose some features? 
+03:06 This is very clean for deciding what do you need based on the state of your business. 
+03:09 One thing I don't like about this, but I understand why Zendesk did it, 
+03:13 because they have many customers across a wide spectrum, 
+03:18 but in some businesses you really want people to make a decision 
+03:21 that you are in heavily influencing, 
+03:24 so for example you want to highlight one of these plans 
+03:27 the one that is actually most applicable to the vast majority of your audience. 
+03:32 Dropbox does this with its pricing plan page, 
+03:35 where it talks about the most popular plan. 
+03:38 It just highlights this one on the left is the most popular, 
+03:41 so if you're undecided or you're not deciding for a business, 
+03:44 you'll just know ok that's the plan that I need to choose. 
+03:47 Let's take a look at one more example. 
+03:50 On Swiftype's pricing their amounts ratchet up quickly, 
+03:53 and they're really pushing people towards the business class. 
+03:56 Chances are most of their prospective customers 
+03:58 are going to choose business anyway, and they're trying to catch
+04:01 some of the lower and startups with a basic plan, 
+04:03 and that's why they have it, just in case. 
+04:06 But really they're trying to push most businesses to choose that 
+04:09 pretty much 1,000 dollar a month plan.
+04:11 When you're designing your own pricing page, you know your own business, 
+04:14 what is the plan that you would prefer your users to choose? 
+04:18 If it's a 100 dollars a month, then one way to subtly influence people 
+04:23 choosing that 100 dollars a month would be to create a 500 dollar a month plan 
+04:27 with all the same features plus maybe one or two features 
+04:31 that aren't that useful for the majority of your prospective customers. 
+04:34 That way they feel like they're getting a really great deal 
+04:38 with a 100 dollar a month plan, because they're only paying a 100 dollars a month 
+04:41 versus 500 dollars a month, and they don't need those couple extra features 
+04:45 that aren't that big of a deal. 
+04:47 So that's one way you can subtly influence and guide customers
+04:50 towards a certain pricing plan that's not only going to be something 
+04:52 that they can't make an easy decision on, they can just immediately 
+04:56 put in their credit card or they can decide right there on the spot, 
+04:58 but also it fits the pricing model that works best for your application and your business. 
+05:04 If you're just getting started, you may not really be sure about the really large accounts, 
+05:08 and so that's why a lot of these pricing pages include a custom plan 
+05:12 with a contact sales button just in case a really large customer is interested 
+05:17 in some enterprise features that maybe aren't even built out yet, 
+05:21 but they want to explore that through a direct conversation. 
+05:25 As we are deciding how to put together your pricing plan, 
+05:28 and move customers down the funnel from sign up to usage 
+05:32 to actually paying for your product or service, 
+05:35 we should take a look at a lot of different pricing plans that are out there, 
+05:39 see which ones are closest to your business, 
+05:42 which ones are similar to the business model that you've created. 
+05:45 One way to see them quickly at a glance is to go to pricingpages.xyz,
+05:51 there is a really great list of curated pricing plans, 
+05:55 that you can scroll through and see 
+05:58 how many companies out there are positioning their own pricing. 
+06:02 Those are some examples of growth hacking and ways to market your business, 
+06:07 so you can start to move customers from awareness 
+06:10 which is hopefully generated by your content marketing, 
+06:12 through the evaluation, sign up process, 
+06:16 getting them using your product and ultimately paying for it. 
+06:19 So you can start generating some revenue and keep your business self-sustaining.

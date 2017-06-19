@@ -1,0 +1,87 @@
+00:01 Once you're doing well the content marketing, rolling out a ton of great content, 
+00:04 turkey carving, sending out your email campaigns,
+00:07 maximizing the number of people who ultimately open up your emails and click through, 
+00:11 and you get some tricks like open sourcing some code 
+00:14 in order to generate awareness and usage of you product, 
+00:17 and you've got prospective customers looking at your site. 
+00:20 What if they're just not signing up? If we take a look at the funnel, 
+00:23 after a prospective customer has decided to evaluate your product and sign up, 
+00:26 you've got to make it easy for them to actually go and do that. 
+00:29 Let's take a look at a few examples that do it well. 
+00:32 I already showed MailChimp as an example for email marketing, 
+00:37 but now I just want to show their home page. 
+00:40 Let's say you discovered MailChimp either by a recommendation of a colleague 
+00:44 or you read one of their blog posts, and you go to the home page, 
+00:47 you're immediately greeted with their value proposition 
+00:51 and a button to sign up, not only sign up but sign up free. 
+00:54 I'm sure MailChimp has done a whole lot of ab testing on this 
+00:58 to figure out how to maximize the number of people who actually go through and sign up. 
+01:03 And perhaps a lot of folks want to get started with an email list, 
+01:07 who would eventually be great customers but they're concerned 
+01:10 about paying money up front. And I know I was in this boat, 
+01:13 I wanted to start an email list for Full Stack Python 
+01:16 but I didn't want to pay 50 bucks a month in order to do that, 
+01:18 when I only had like five or ten people on a list. 
+01:21 So I used MailChimp, and I signed up for free, 
+01:23 I went through this process and it only asked me three questions, 
+01:27 an email, username and password, and I got started for free 
+01:31 and I was able to use that up to two thousand email users a month. 
+01:34 So what's great about this call to action on their home page 
+01:37 it just makes it as easy as possible for you to sign up. 
+01:40 Now that may or may not be applicable to your business, 
+01:42 if you're only serving enterprise customers you're not just looking 
+01:45 for just any person to sign up, your call to action maybe something like talk to sales, 
+01:49 and while at first blush that may seem not great, 
+01:52 because they're not actually going to be able to do anything 
+01:55 immediately with the product, that may be just fine for your own business. 
+01:58 So don't just blindly follow a call to action based on what other companies are doing, 
+02:03 but take a look at a lot of these onboarding flows 
+02:06 and see which one will most likely match up to the business that you are building. 
+02:09 Let's take a look at a couple of more examples. 
+02:12 So Trulia is a website for real estate and what they are trying to do here 
+02:15 is rather than get you to sign up for an account, 
+02:17 they really want to collect email addresses, 
+02:20 so this is a landing page that they created rather than their home page, 
+02:22 and you may get to this via some sort of google or facebook ad, 
+02:26 and what they want you to do is enter your email address 
+02:29 and then you can get a personalized estimate once you fill in some more details. 
+02:32 So this is super effective because there's not a lot of effort that goes into this, 
+02:35 you already know what your email address is, 
+02:38 you punch it in and you click the 'get my personalized estimate' button. 
+02:41 So something like this especially, if you have a much more expensive product, 
+02:44 can be more appropriate because what you want to do 
+02:47 is you want to get prospective customers' email addresses 
+02:50 so that you could follow up with them later.
+02:52 Another example would be Zendesk, which is a software as a service help desk 
+02:55 and they're dealing with customers of many different sizes, 
+02:57 if you're building a one person business you could still use Zendesk 
+03:00 in order to handle your help desk tickets.
+03:02 But they also have customers that are Fortune 500 companies 
+03:05 with thousands of call center employees, 
+03:08 so what they've done is they've recognized that they have two different customer bases, 
+03:12 and if you're a self starter you can just click start a trial, 
+03:15 or if you prefer talking to a salesperson, you can click up on 'sign up for a demo' 
+03:19 if you're not actually the one who is going to be setting up the software yourself. 
+03:23 So what can we learn from the three of these and many other call to actions 
+03:26 or on a customized landing page for various businesses? 
+03:30 It's no accident that the value proposition is very clear and in big bold letters. 
+03:35 There is either one or two buttons, preferably less is better, 
+03:39 and we see this in all three examples- value proposition, single button, 
+03:43 value proposition in the form of a question of how much your home is worth. 
+03:48 For your own business, if people are going to your home page 
+03:51 or going to a landing page that you've created, 
+03:53 but then they're just dropping off the bounce rate is too high, 
+03:56 simplify and make sure that the value proposition is very clear 
+03:59 and this can take a lot of iteration. 
+04:02 I'll guarantee that there was at least hundreds if not thousands of hours 
+04:06 that went into creating each one of these, what looks like really simple web pages, 
+04:10 it takes a lot of work to make something simple, 
+04:14 but simple is what converts the best, for most businesses. 
+04:17 So I recommend when you're thinking about your own call to action, 
+04:20 take a look at a lot of these onboarding flows, mix and match different pieces, 
+04:24 think about how that works for your own customers, 
+04:26 get your first version out there and then iterate on it like crazy
+04:30 to determine what ultimately produces the most results 
+04:34 when measured in the percentage of prospective customers 
+04:37 that land either on your home page, on your landing page, 
+04:39 and get through the sign up part of your funnel. 

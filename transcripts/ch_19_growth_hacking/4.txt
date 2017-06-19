@@ -1,0 +1,68 @@
+00:01 If you've got some awareness and interest in your product,
+00:04 but people just don't seem to be taking that next step towards using it,
+00:07 what approach you can think about depending on of course your own business
+00:11 is whether you could open source some code that you've created 
+00:14 and essentially fit that into the funnel, if developers happen to be 
+00:17 part of your prospective customers, open sourcing some bit of code can generate 
+00:21 not only some awareness, but also speed the adoption and the usage 
+00:25 by letting people try out in their own systems the code that you've created.
+00:29 This one a little bit hard to describe, just theoretically,
+00:32 so we'll take a look at two specific examples.
+00:35 The first one is a project called Sidekiq which has background processing for Ruby
+00:39 think about task queues which offload some of the code execution
+00:43 outside of the usual http request response cycle in a web application,
+00:48 it allows you to do batch jobs and that sort of thing on the side.
+00:51 Sidekiq is released as open source for the Ruby community,
+00:53 you can go and check out the github repository;
+00:56 but there's also a business behind it as well, the developer who created this 
+01:00 also decided that there should be a pro version and an enterprise version,
+01:03 so that he could work on this open source project full time.
+01:07 The idea here is Sidekiq is really useful to a lot of Ruby developers, 
+01:12 particularly ones that use rails, so why shouldn't he spend more time 
+01:16 improving the quality of this software, so that other developers who are relying on it 
+01:20 don't have to worry that much about this part of the system,
+01:22 and then companies pay him for that support.
+01:25 So this model is almost a support or a licensing agreement 
+01:28 that everything gets fed back into that open source project. 
+01:32 Developers are likely to use Sidekiq because it's already open source 
+01:36 and they know they can fork the repository and modify the code if they need to,
+01:40 but companies that are relying on it know 
+01:42 that development is not going to suddenly go inactive,
+01:45 it's a good hybrid model that allows this developer to keep building with it.
+01:48 If you want to learn more about Sidekiq, there is a really great site 
+01:51 that has many examples of developers who have gone 
+01:54 and built their own businesses on indiehackers.com.
+01:56 Indie Hackers did an interview with the creator of Sidekiq, 
+02:00 and explained how we got started and that sort of thing 
+02:02 and just in general how open source allows Sidekiq 
+02:05 to continually get adopted by Ruby developers, 
+02:07 and then also companies that are relying on Sidekiq can pay him for support 
+02:12 so that he can continue to pour his own time back into the project.
+02:16 Other than the website, Sidekiq is not being hosted by this developer 
+02:20 so let's take a look at one more example, which is Sentry. 
+02:23 Sentry originally started out as a way to collect and view errors 
+02:27 that were occurring in Django applications.
+02:30 It was open source because this was a common problem 
+02:32 error reporting and logging as happens in every single Django application,
+02:36 and over time Sentry became so popular that the developers realized 
+02:40 this would be really useful as a product,
+02:43 so they created a hosted version of Sentry,
+02:46 which takes the pain out of hosting it yourself,
+02:48 rather than a developer having to stand up their own server,
+02:51 secure that server and then have their own version of Sentry
+02:54 which of course they need to patch and maintain over time.
+02:58 They can just pay Sentry and the developers 
+03:01 who are creating the open source version of Sentry to host it for them. 
+03:04 So if the prospective customers for your web application are developers 
+03:07 having some open source component 
+03:10 whether that's something they can host themselves 
+03:12 or something that helps them in their own application,
+03:14 or provides a critical piece of the application that they're building 
+03:17 can be a way to speed adoption and usage for your business. 
+03:20 Now I don't want to make it sound like this was all conceived 
+03:23 in a grand plan by these developers, a lot of the stuff evolves over time, 
+03:27 but with hindsight, we can see that whether your project starts as open source 
+03:30 or if you open source something later on, 
+03:34 that could potentially help in the funnel.
+03:36 If you're solving some hard problem with your application 
+03:39 consider this as a possible strategy, if you're running into roadblocks to usage.

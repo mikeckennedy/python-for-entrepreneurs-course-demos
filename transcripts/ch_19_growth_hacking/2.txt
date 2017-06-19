@@ -1,0 +1,63 @@
+00:01 When you're trying to generate traffic for your application, 
+00:04 specifically at the top of the funnel where you want awareness and interest in your product, 
+00:07 it can be really time consuming to create all the content. 
+00:10 And that's why growth hackers and marketers use a term called turkey carving 
+00:15 when they think about how to package up that content in different ways. 
+00:19 Think about when you're creating an application, 
+00:22 the hard part is coming up with an idea, and then coding the whole thing, 
+00:25 what if you could take bits and pieces of that code 
+00:28 and then repurpose them to create traffic. 
+00:32 You minimize the really hard part that's most time consuming 
+00:35 and you generate more traffic because you make the content or useful to more audiences 
+00:39 based on the way that they want to consume it. Let's take a look at an example. 
+00:43 One of my colleagues at Twilio was building a Python application with Flask, 
+00:47 and decided to use google spreadsheets essentially as the back end database. 
+00:51 There were already a bunch of spreadsheets that he was working with, 
+00:54 and so he started using this Python library known as g spread, 
+00:58 google spreadsheets Python API 
+01:00 in order to programatically interact with google spreadsheets. 
+01:03 He found that he spent a lot of time writing the code, making sure that everything worked,
+01:06 and he realized this could be really useful information for other people 
+01:09 because there weren't enough great tutorials out there for using google spreadsheets. 
+01:13 So we wrote this blog post, Google Spreadsheets In Python, 
+01:16 he told a little story about what led him to create this application, 
+01:19 and then he gave all the code that someone would need 
+01:23 in order to use the g spread Python code library. 
+01:27 And that's where most people would stop, they would say
+01:30 cool, I wrote a blog post, this blog post did really well, I got a lot of traffic from it. 
+01:34 But how can we take this content and repurpose it 
+01:37 for either slightly different audiences or ways 
+01:39 that other people would want to consume it? 
+01:42 Well, you could take the exact same code and repurpose it as part of a tutorial. 
+01:48 So one of my other colleagues created this video tutorial on YouTube. 
+01:53 
+02:05 So the hard part of coding and coming up with the idea of what should be written about, 
+02:09 was already done, but its repurposed because some people 
+02:12 prefer to watch videos rather than just reading a blog post, 
+02:14 and we can take this idea one step further- 
+02:17 how about another slice that helps an audience that's not Python developers- 
+02:20 PHP developers, this is a blog post that essentially does the same thing, 
+02:25 where a PHP developer said hey I use google sheets all the time, 
+02:28 how can I interact with google spreadsheets programmatically just using PHP code? 
+02:32 Or how about the Ruby developers? 
+02:34 So instead of just getting a single blog post, Google Spreadsheets In Python, 
+02:38 which to be fair did really well as far as the traffic, 
+02:41 you can generate far more traffic in much less time
+02:44 simply by repackaging a lot of the content in slightly different ways. 
+02:48 Now of course, you're not going to copy the exact same text into a new blog post, 
+02:53 but there should be less concerns about the creativity 
+02:57 and more just sitting down getting the work done, 
+03:00 doing it, rewriting the same code on a different programming language 
+03:02 or generating a video that uses that same code, 
+03:05 there's three different blog posts, consider those three different slices of a turkey; 
+03:09 you've got a whole turkey and it's just a matter of how you slice that up 
+03:11 into different blog posts, videos, 
+03:13 you can even use this with technical talks, workshops.
+03:16 Turkey carving is really useful for saying what's the hard part 
+03:19 and how do I do the hard part and then repackage it 
+03:22 in many different ways for many different audiences, 
+03:25 which should be easier than coming up with a brand new idea 
+03:28 and writing an entirely new code base, 
+03:30 every single time you want to write another blog post. 
+03:33 So that is turkey carving, and you may want to try that for your own application 
+03:36 when you're thinking about how to market it.

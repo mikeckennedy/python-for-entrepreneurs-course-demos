@@ -1,0 +1,98 @@
+00:01 You built your business, you've deployed your application, 
+00:04 you're up and running, but how do people discover you?
+00:07 What if no one shows up? Unless you already have a customer list 
+00:10 of people who are waiting to get their other hands on your application
+00:13 you're going to have to do some legwork to go out and get customers.
+00:16 Previous chapter we talked about search engine optimization, content marketing, 
+00:20 and that can form the foundation for drawing customers.
+00:22 But I'd like to go over some examples 
+00:25 of how to think about acquiring customers for your business.
+00:27 I've titled this chapter growth hacking, 
+00:29 but really, growth hacking is software developers rediscovering marketing 
+00:33 and then rebranding it, because they didn't want to call themselves marketers. 
+00:37 Although when you think about it, it's kind of ingenious for developers 
+00:40 to rebrand marketing and do something may consider to be a hotter topic.
+00:44 That's kind of what marketing is anyway.
+00:46 Growth hacking can seem like one of those arcane arts 
+00:49 just like search engine optimization, 
+00:51 so I want to provide a simple framework to think about 
+00:53 how you can get started acquiring more customers.
+00:56 And it all comes down to understanding your costumer funnel- what's the funnel?
+01:00 The reason we call it a funnel is because 
+01:02 you can actually visualize it as a funnel;
+01:04 the first step is getting awareness for your product.
+01:07 Most people when they hear about what you've built 
+01:10 aren't going to be ready to buy, but if you can at least get them on your site 
+01:13 get them reading your content, get them to understand who you are, 
+01:16 that's the first step towards them potentially becoming a customer,
+01:21 if they need what you're selling. There are many ways to visualize a funnel 
+01:24 and a lot of it's going to depend on what type of business you're building. 
+01:27 When you search for a customer funnel in google 
+01:29 you'll see a lot of different variations on the customer funnel.
+01:32 I've just picked some steps that I think are likely to be the most appropriate 
+01:35 for the types of businesses that are enabled by building a web application.
+01:39 Think about each of these customer steps throughout the funnel 
+01:42 and then figure out how they apply to your specific business.
+01:47 Once a customer has awareness of your business, 
+01:49 only a certain percentage of them are actually going to be interested in what you're selling, 
+01:53 and that's fine, not everybody is going to be a customer of yours.
+01:56 In fact, being specific about who you're selling to 
+01:58 is really important for making sure that you are actually 
+02:01 delivering something of value to your customers.
+02:03 If they've got interest, they're likely going to evaluate what you have 
+02:07 even if you have a free product or a freemium product that you upsell parts of it later,
+02:12 they're still going to evaluate whether they even want to take the time to use your product.
+02:16 There are so many web sites out there, 
+02:18 so time is a valuable resource the prospective customers would need to spend 
+02:22 in order to determine and evaluate what you offer.
+02:26 For those that evaluate and decide they want to take the time to try it out, 
+02:29 then you get to the sign up phase.
+02:32 This is really where you can figure out if they've get through the sign up process 
+02:35 whether your application and your business 
+02:38 is going to suit the needs of prospective customers. 
+02:40 After they've signed up, they'll start using it,
+02:42 and you can start getting feedback and engaging with prospective customers.
+02:45 If you have A freemium based business,
+02:48 the sign up and the payment could be two separate steps;
+02:50 if you have a customer that using a free version of your product,
+02:53 getting them to pay up whether for advanced features 
+02:55 or just to continue after a free trial period 
+02:58 is the ultimate goal for making sure that your business is generating revenue.
+03:01 The customer journey doesn't end here-
+03:04 you need to make sure that what you're delivering is a value to the customer 
+03:07 and that they want to continue paying for what you are offering 
+03:09 but typically, going from awareness to paying customers
+03:12 is a hard enough problem on its own 
+03:14 and so that's what we're going to focus on with some specific examples 
+03:17 throughout this funnel, I have some good ideas 
+03:19 that you may want to try for your own business.
+03:21 Again, I want to emphasize you can't just blindly take other ideas 
+03:24 and think that they'll work perfectly in your business;
+03:26 every business is different, so the way that you're going to market yours 
+03:28 you really need to think through the implications of how you want to do that.
+03:32 But, seeing some other examples of how other businesses do it 
+03:35 can be really helpful, rather than you having to start from scratch 
+03:38 with a blank sheet of paper to do your own marketing efforts. 
+03:41 Rather than just roll through a bunch of slides in the rest of this chapter,
+03:43 we're just going to work in the web browser 
+03:45 and take a look at some examples of growth hacking- marketing.
+03:49 The first step for any business is to generate awareness 
+03:51 and that's why I want to introduce a concept known as turkey carving 
+03:54 as you're spending so much time creating content, trying to draw in perspective customers.
+03:58 As they're evaluating what you're building 
+04:01 there is some tactical advice around email campaigns 
+04:03 that's proven really successful for Michael, I'll show you what that details.
+04:08 Now you may have people that are aware of what you do 
+04:11 and they're interested, but maybe getting them to use it is the really hard part,
+04:15 and that's where putting out either a freemium product or in some cases 
+04:18 just open sourcing some code can be really powerful 
+04:21 for getting people to take that next step, from being interested 
+04:24 to actually using what you've got. 
+04:26 If one of the problems is just getting people to sign up,
+04:29 take a look at some calls to action, how you can structure your landing pages 
+04:33 to increase the chances of someone signing up for your application. 
+04:37 Finally, we'll take a look at some pricing tables, 
+04:40 break down some of the psychology behind the way 
+04:43 that you may want to structure the pricing for your products and services. 
+04:46 Let's take a look at some of the examples so you can figure out the best way 
+to market your own business.
