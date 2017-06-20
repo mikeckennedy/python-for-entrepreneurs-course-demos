@@ -1,73 +1,33 @@
-00:01 Now that we've seen we can successfully set the auth cookie, 
-00:04 we can read it back and use that to check whether or not 
-00:07 we should consider the person logged in. 
-00:09 So let's run another function down here in our cookie_auth module, 
-00:13 called get_user_id_via_auth_cookie. 
-00:16 And we're only going to need the request for this, 
-00:22 so what we're going to do is, we're going to read this back in,
-00:24 now, we are not quite there, we don't quite want to leave this one alone here, 
-00:29 we are going to make some changes but let's go ahead 
-00:32 and keep working with this for just a minute. 
-00:34 What we want to do is we want to read in this cookie here 
-00:37 so we are going to startup by just checking to see whether or not there is a cookie. 
-00:43 So we are going to see, we'll ask the question, 
-00:45 is the auth cookie in the dictionary of this thing called cookies, 
-00:49 if it's not, which is what we are going to check for, 
-00:53 we are going to return None, so nope, there is nobody logged in here, no cookie. 
-00:58 Great. But if it is here, then we can get its value. 
-01:04 So remember that string we generated up here, we got it back, 
-01:08 but want we want to do is we want to verify this thing and sort of use 
-01:13 this check and again, I am going to change what we are hashing up here 
-01:16 before we're done, so we are able to basically treat this as a string now 
-01:20 and do whatever it is we want to verify, so let's say we have parts 
-01:25 is going to be val.split and we want to split on that colon we added, 
-01:29 and if we'll say the parts. the length of the parts 
-01:33 is not equal to two, something went wrong. 
-01:37 So we are going to return None, right, so there is something wrong with this login cookie here. 
-01:42 So then we have the user_id is going to be parts[0]
-01:48 and the hash value it's going to be parts[1].
-01:51 So we just want to check that if we rerun this procedure, 
-01:55 everything is going to come out the same as we expected 
-01:58 so let's go over here, and the procedure was 
-02:01 that we would come over and hash the user id, which look, 
-02:05 they called that the same, 
-02:07 and then we want to give this hash value check and then we want to say "if not...",
-02:11 "if hash value is not equal to hash value check" then we're going to return None
-02:16 but we're also going to do a little message here, so we can keep track 
-02:20 of what is going on, we'll say "Warning: Hash mismatch, invalid cookie value", 
-02:27 something like this, OK. 
-02:30 Alright, but if they do check, there was no sort of sticking user ids
-02:34 in the cookies and hoping that we can just log in with them, 
-02:36 instead we are going to get this back and we can just return user id, OK, 
-02:42 so this is pretty solid, we should be able to use this, 
-02:45 let's go over to our account controller, when we set this, 
-02:49 this is going to set it but other requests 
-02:51 like maybe this one for the account page, 
-02:54 we don't want unauthenticated people go to an account, 
-02:57 we want to make sure they are logged in. 
-02:59 We could add a function here to work directly with that cookie auth 
-03:02 but it turns out maybe the albums controller for purchases needs to know 
-03:06 who is logged in, the home controller all sorts of things, 
-03:09 the whole app needs to know. So we can go to our base controller 
-03:12 and give it some properties, like we have a property there, 
-03:15 we'll give it another one and this one is going to be logged in user id.
-03:20 And here we are going to use the cookie also, let me import it up here like so.
-03:29 So down here, we'll just return cookie_auth.get_user_via_auth_cookie(self.request). 
-03:39 Alright, so that will let us ask questions like this, if we go over here, 
-03:44 we'll say "if not self.logged_in_user_id, that's a property so if we don't have one, 
-03:50 we'll print "Cannot view account page, must log in", 
-03:55 and then we'll do a self.redirect to /account/signin, right, 
-04:05 so we'll have them sign in and if there is no problem, if they are authenticated,
-04:08 then we just display this basically empty page for now. 
-04:12 Alright, so let's try this. 
-04:15 So if we go over here, and we go to this page, 
-04:18 let's get rid of this thing, you can see we have the cookie right now, 
-04:21 so if I hit this it should stay, great, everything worked, 
-04:24 now, if I take the same thing, the same page and try to view it 
-04:28 in a private browsing session, let's go here, not signed in, 
-04:33 notice that we were not signed in, and it redirect us over here. 
-04:38 Right, this one it says refresh it all we want, we are staying signed in, 
-04:42 go over to this one and obviously if we try to go to account, 
-04:46 we are signing in, we could sign in, and now it will let us in. 
-04:50 Alright, so you can see that we're signing in we're still not managing this 
-04:53 but let's come back and do that in a separate little section here. 
+00:01 Let's come back and look at this cookie values
+00:04 that were working with this hash, and the hash is already better 
+00:06 than just having the user id but we can do a lot better, 
+00:09 so let me write a function to say given a user id, I am going to get the hash 
+00:13 because I we've got to do it there, and down here we've got to do it again, 
+00:16 and we don't want to do this more than once, so I can hit Ctrl+T to refactor, 
+00:20 extract the method, hide it from the importers, so I'll say double underscore, 
+00:24 so this will be hash hash text or something like that. 
+00:29 OK, and so this will be, we'll just call this text as the input value here, 
+00:33 so of course, we want to add some salt to this 
+00:38 so that you can't just take the user name or the user id rather 
+00:42 and then hash it and see what comes out. 
+00:44 So, this salt, we're not going to share with anybody, we'll just say 
+00:47 "we want this to be something simple for now", saltiness for the text, 
+00:55 OK, so what we are going to hash is actually that string which is going to generate 
+01:01 an absolutely different hash than just the user id 
+01:04 which we're putting in the front part of this thing, OK. 
+01:07 And so, we are going to change the text and we are going to send it back. 
+01:09 Now this is actually going to be a nice little test, because we already have a cookie 
+01:13 with this incorrect value here, so it should let us sort of do this detect, 
+01:17 we should print a "Warning: Hash mismatch" and it will treat us as if we're not logged in. 
+01:21 OK, we also need to in order for that to work, call the right function here, 
+01:26 so here is where we do the check, 
+01:30 here is where we do the original generation, let's see what we get. 
+01:36 Now if I come over here, the only page right now checking is account 
+01:39 so hit this and it says you must sign in even though it's authenticated. 
+01:43 Why? Because the hash did not match, it was invalid, 
+01:46 but of course, if I do sign in, now we should have this new one,
+01:51 we've signed in, now that's replace that cookie, everything is good. 
+01:54 So the last thing we need to do is allow a user to sign out,
+01:59 as well as maybe we want to indicate up here 
+02:02 instead sign in flip that to log out, instead of register, maybe a link to view our page. 
+02:06 So we are going to come back and look at that next. 

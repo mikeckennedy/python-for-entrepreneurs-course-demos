@@ -1,132 +1,73 @@
-00:04 Back in PyCharm, let's add this ability to track logins 
-00:07 and know what the logged in user is to our web application. 
-00:12 The part where we actually do the log in 
-00:16 is in the account controller on these two methods,
-00:18 the signin_get and in particular the signin_post. 
-00:21 Now, we are going to do a lot of code, juggling some cookies and things like that, 
-00:25 so let's take that code and put it somewhere else, over in this infrastructure bit, 
-00:29 I am going to create a file, Python file called cookie_auth, 
-00:35 and here we are going to use a couple of methods, right, 
-00:38 so we are going to define a method called set_auth and for set_auth 
-00:42 we are going to need two things, we are going to need the request 
-00:45 this is the request that comes into the web action method 
-00:50 and we are going to want to store the user id, OK, now remember, 
-00:53 if we look really quickly at our data, where is our user, our account, 
-00:57 our id is actually a sting which is a fairly large
-01:01 I think 32 character alphanumeric string. 
-01:05 So that is what is coming in here for our user id here. 
-01:09 now what we ultimately want to do is we want to go to the requests, 
-01:14 and say set_cookie, now it's going to turn out this is not going to work
-01:17 as well as we're hoping but this is the plan, we're going to do it the wrong way 
-01:21 and then I'll show you a way that works a little better. 
-01:24 So, next, the question is what do we put into the cookie? 
-01:27 We could put anything we want in terms of a string, 
-01:30 I think there is limits but reasonably storing the user id is no problem, 
-01:34 however, one thing that is a little concerning is if I just put the user id in there, 
-01:38 what if someone forges a cookie and then just starts guessing user ids, 
-01:42 because our user id is a 32 character alphanumeric string that alone
-01:48 is going to be a super super hard, what we can also put a little verification on here 
-01:52 to make sure that you can't just stuff user ids in here but to verify that the user id 
-01:56 comes from our web app, we'll add an additional secret that we can test 
-02:00 when we get the cookie back. 
-02:02 So what are we going to have, it's going to look something like this, 
-02:04 we are going to have the user id, let's just say, I said alphanumeric, didn't I,
-02:08 let's say it looks like this and then we are going to in here have 
-02:11 some kind of hash of the user id, so then when we get it back 
-02:16 we can look at this number and then we can look at this, 
-02:19 and make sure "hey, this was the hash we expected to generate 
-02:23 given that user id" and that will make it much harder for people to guess.
-02:27 So let's begin by coming over here and get the hash, hash_val, 
-02:31 now in order to do this, we are going to use a simple library called the hashlib, 
-02:35 OK, so up here, we are going to import hashlib, we want to take our hashlib,
-02:40 and we are going to sha512 algorithm and we are going to hash this user id 
-02:46 but you can't give it a string, you have to give it bytes, 
-02:49 so we can say go over here and code that string, in the bytes, using utf8. 
-02:53 And what we get back is a hash object, and we don't want a hash object, 
-02:57 we want a string, so we can say give me the hexdigest of that, 
-03:01 and let's just print out the hash value here just so you can see 
-03:07 what is coming on, and comment this out. 
-03:09 So let's just run this to make sure everything is coming out good, 
-03:12 it turns out we are going to hash something else in just a moment. 
-03:15 So let's come over here and we'll say first we import a cookie_auth alright, 
-03:23 so I want to come down here we are just going to call cookie_auth.set_auth on account.id,
-03:29 OK, so here we sign in, we get the authenticated account,
-03:33 either we get nothing and we tell them an error 
-03:35 or we get the actual account back then we'll have access to its id 
-03:37 and we should see what is going to happen here. 
-03:42 So, let's go sign in, I'll just use my saved credentials, this is from the last video, 
-03:46 I just remembered them, we are not passing the user id apparently. 
-03:50 Oh, we are but we are not passing, what we really need to pass is the request, 
-03:55 we didn't technically use that so I forgot about it, 
-03:58 but we are going to use it in just a minute, let's try again. 
-04:03 Alright, so here you can see this is this huge hexdigest, 
-04:08 alright, but this should be fine for what we're doing, 
-04:11 it's huge but a 120 characters, not that huge. 
-04:15 Alright so what we want to do is we want to create the value 
-04:17 and we'll say the value is going to be the user_id: the hash. 
-04:22 Here we'll just say user_id, hash_value. 
-04:26 alright, so our goal is going to be to take this and actually set the cookie. 
-04:31 So setting the cookie is really easy but it turns out there is going to be 
-04:35 a little catch that we need to be aware of, 
-04:37 so I want to make sure you run into it so you understand this 
-04:40 sort of slightly more complicated version that we're going to have to go through. 
-04:43 So I'll call this auth_cookie_name, and let's just call this blue_yellow_auth, 
-04:52 or user something like that. 
-04:55 So we're going to have to ask the browser for this cookie, 
-05:00 and then we're going to tell it to save it, so what we do is here we say the cookie name, 
-05:03 we say the value and then we say the timeout. 
-05:13 So let's say we'd like to save this log in cookie, 
-05:15 for either 30 days in which it will expire or until they log out 
-05:19 and we'll talk about logging the out in just a minute. 
-05:23 Now you would think, you would think that this is going to work. 
-05:27 However, let's find out. So I rerun this, I go over here and refresh 
-05:32 and if we go and actually look in the network tools, 
-05:36 let's do one more request there we go, and only see HTML, OK, great. 
-05:44 So if we look at this and we look at the cookies, 
-05:46 you can see that PyCharm has inserted some kind of cookie for us 
-05:50 because it wants to be able to debug this request, right, 
-05:54 this is basically running in the PyCharm web server right now, 
-05:57 but the cookie that we added, it's not there. 
-06:00 So that's weird, and it turns out this is just some bizzare thing, with Pyramid, 
-06:06 somehow the combination of all the pieces 
-06:09 we're using kind of dropped the cookie along the way. 
-06:13 Oh, actually one mistake I did make, this is supposed to be response cookie, 
-06:18 obviously, so let me just verify one more time that it's still not setting the cookies. 
-06:23 so we click on it, still not setting the cookies, so request we get the response, 
-06:27 we tell the browser "set this cookie", it didn't set it so this turns out to not work, 
-06:32 as well as we're hoping and the way to make it work is we have to 
-06:36 hook into a different point in the life cycle of Pyramid. 
-06:39 I feel like this is a bug, at least in extreme shortcoming, 
-06:42 I don't really know why this is happening but it's easy enough to solve 
-06:46 so let me show you how we are going to do this,
-06:49 we are going to have a function here,
-06:52 and I am going to hide it from people importing this module that we created here
-06:55 so use a double underscore, 
-07:00 so we are going to have add cookie callback and in here, 
-07:03 I can do this code basically, adjusted for what I changed names here 
-07:08 so this is going to be value, this is going to be plain name
-07:11 and this will be the request and let's go ahead 
-07:14 and also do this way I think we can just do it response.set cookie. 
-07:18 So how does this get called, right, if we don't do it up there? 
-07:22 Well, what we're going to do is we are going to tell the request: 
-07:24 "hey, when you are just about done, call this function for us." 
-07:28 Let's put nothing there. 
-07:30 So we are going to say add response callback 
-07:34 and this thing takes two values, directly, so it takes the request and the response 
-07:40 but I also want to pass the name of the value 
-07:42 so I can create a function that is a closure 
-07:45 that we could pass those along, so I'll create a lambda, 
-07:48 of request response and in here I am just going to call this function, 
-07:52 and I am going to call it with of course the request, the response, that's passed through 
-07:58 in the lower levels of Pyramid and then I am just going to give the cookie name 
-08:02 which will be the auth_cookie_name and I am going to give it the val. 
-08:06 OK, so instead of trying to set it directly, 
-08:08 we are just going to say "hey, do a callback, set it here", let's try again. 
-08:12 Reload the page, and now we're going to need to set the cookies, 
-08:17 so let's go to our sign in, now if we look at our GET, check it out,
-08:23 our blue_yellow_user is here and then there is the log in. 
-08:26 So you can see setting cookies is super easy, there is this weird catch 
-08:31 where you've got to do it through a callback but really it's not hard at all to set.
-08:35 So this cookie will be around for 30 days and then we can ask for it, 
-08:38 so the next thing we're going to do is we are going to go and actually 
-08:41 read this cookie and make it accessible to the rest of our web application. 
+00:01 Now that we've seen we can successfully set the auth cookie, 
+00:04 we can read it back and use that to check whether or not 
+00:07 we should consider the person logged in. 
+00:09 So let's run another function down here in our cookie_auth module, 
+00:13 called get_user_id_via_auth_cookie. 
+00:16 And we're only going to need the request for this, 
+00:22 so what we're going to do is, we're going to read this back in,
+00:24 now, we are not quite there, we don't quite want to leave this one alone here, 
+00:29 we are going to make some changes but let's go ahead 
+00:32 and keep working with this for just a minute. 
+00:34 What we want to do is we want to read in this cookie here 
+00:37 so we are going to startup by just checking to see whether or not there is a cookie. 
+00:43 So we are going to see, we'll ask the question, 
+00:45 is the auth cookie in the dictionary of this thing called cookies, 
+00:49 if it's not, which is what we are going to check for, 
+00:53 we are going to return None, so nope, there is nobody logged in here, no cookie. 
+00:58 Great. But if it is here, then we can get its value. 
+01:04 So remember that string we generated up here, we got it back, 
+01:08 but want we want to do is we want to verify this thing and sort of use 
+01:13 this check and again, I am going to change what we are hashing up here 
+01:16 before we're done, so we are able to basically treat this as a string now 
+01:20 and do whatever it is we want to verify, so let's say we have parts 
+01:25 is going to be val.split and we want to split on that colon we added, 
+01:29 and if we'll say the parts. the length of the parts 
+01:33 is not equal to two, something went wrong. 
+01:37 So we are going to return None, right, so there is something wrong with this login cookie here. 
+01:42 So then we have the user_id is going to be parts[0]
+01:48 and the hash value it's going to be parts[1].
+01:51 So we just want to check that if we rerun this procedure, 
+01:55 everything is going to come out the same as we expected 
+01:58 so let's go over here, and the procedure was 
+02:01 that we would come over and hash the user id, which look, 
+02:05 they called that the same, 
+02:07 and then we want to give this hash value check and then we want to say "if not...",
+02:11 "if hash value is not equal to hash value check" then we're going to return None
+02:16 but we're also going to do a little message here, so we can keep track 
+02:20 of what is going on, we'll say "Warning: Hash mismatch, invalid cookie value", 
+02:27 something like this, OK. 
+02:30 Alright, but if they do check, there was no sort of sticking user ids
+02:34 in the cookies and hoping that we can just log in with them, 
+02:36 instead we are going to get this back and we can just return user id, OK, 
+02:42 so this is pretty solid, we should be able to use this, 
+02:45 let's go over to our account controller, when we set this, 
+02:49 this is going to set it but other requests 
+02:51 like maybe this one for the account page, 
+02:54 we don't want unauthenticated people go to an account, 
+02:57 we want to make sure they are logged in. 
+02:59 We could add a function here to work directly with that cookie auth 
+03:02 but it turns out maybe the albums controller for purchases needs to know 
+03:06 who is logged in, the home controller all sorts of things, 
+03:09 the whole app needs to know. So we can go to our base controller 
+03:12 and give it some properties, like we have a property there, 
+03:15 we'll give it another one and this one is going to be logged in user id.
+03:20 And here we are going to use the cookie also, let me import it up here like so.
+03:29 So down here, we'll just return cookie_auth.get_user_via_auth_cookie(self.request). 
+03:39 Alright, so that will let us ask questions like this, if we go over here, 
+03:44 we'll say "if not self.logged_in_user_id, that's a property so if we don't have one, 
+03:50 we'll print "Cannot view account page, must log in", 
+03:55 and then we'll do a self.redirect to /account/signin, right, 
+04:05 so we'll have them sign in and if there is no problem, if they are authenticated,
+04:08 then we just display this basically empty page for now. 
+04:12 Alright, so let's try this. 
+04:15 So if we go over here, and we go to this page, 
+04:18 let's get rid of this thing, you can see we have the cookie right now, 
+04:21 so if I hit this it should stay, great, everything worked, 
+04:24 now, if I take the same thing, the same page and try to view it 
+04:28 in a private browsing session, let's go here, not signed in, 
+04:33 notice that we were not signed in, and it redirect us over here. 
+04:38 Right, this one it says refresh it all we want, we are staying signed in, 
+04:42 go over to this one and obviously if we try to go to account, 
+04:46 we are signing in, we could sign in, and now it will let us in. 
+04:50 Alright, so you can see that we're signing in we're still not managing this 
+04:53 but let's come back and do that in a separate little section here. 

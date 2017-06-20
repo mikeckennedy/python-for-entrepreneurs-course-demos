@@ -1,33 +1,31 @@
-00:01 Let's come back and look at this cookie values
-00:04 that were working with this hash, and the hash is already better 
-00:06 than just having the user id but we can do a lot better, 
-00:09 so let me write a function to say given a user id, I am going to get the hash 
-00:13 because I we've got to do it there, and down here we've got to do it again, 
-00:16 and we don't want to do this more than once, so I can hit Ctrl+T to refactor, 
-00:20 extract the method, hide it from the importers, so I'll say double underscore, 
-00:24 so this will be hash hash text or something like that. 
-00:29 OK, and so this will be, we'll just call this text as the input value here, 
-00:33 so of course, we want to add some salt to this 
-00:38 so that you can't just take the user name or the user id rather 
-00:42 and then hash it and see what comes out. 
-00:44 So, this salt, we're not going to share with anybody, we'll just say 
-00:47 "we want this to be something simple for now", saltiness for the text, 
-00:55 OK, so what we are going to hash is actually that string which is going to generate 
-01:01 an absolutely different hash than just the user id 
-01:04 which we're putting in the front part of this thing, OK. 
-01:07 And so, we are going to change the text and we are going to send it back. 
-01:09 Now this is actually going to be a nice little test, because we already have a cookie 
-01:13 with this incorrect value here, so it should let us sort of do this detect, 
-01:17 we should print a "Warning: Hash mismatch" and it will treat us as if we're not logged in. 
-01:21 OK, we also need to in order for that to work, call the right function here, 
-01:26 so here is where we do the check, 
-01:30 here is where we do the original generation, let's see what we get. 
-01:36 Now if I come over here, the only page right now checking is account 
-01:39 so hit this and it says you must sign in even though it's authenticated. 
-01:43 Why? Because the hash did not match, it was invalid, 
-01:46 but of course, if I do sign in, now we should have this new one,
-01:51 we've signed in, now that's replace that cookie, everything is good. 
-01:54 So the last thing we need to do is allow a user to sign out,
-01:59 as well as maybe we want to indicate up here 
-02:02 instead sign in flip that to log out, instead of register, maybe a link to view our page. 
-02:06 So we are going to come back and look at that next. 
+00:02 So you can see, here I am on my account page 
+00:04 and we can only access that if you are logged in, 
+00:08 However, the main navigation does not indicate whether or not I am logged in
+00:12 and of course we want that to change, so let's take the information that our controllers know, 
+00:17 about the user, whether or not they are logged in 
+00:19 and let's push that on to the master view here. 
+00:22 So we come down to, let's get this out of our way, don't need that, 
+00:26 come down here to our shared layout, and not far down, 
+00:30 we have our navigation bit, about sign in and register. 
+00:33 And let's go over here and do a conditional so we'll say tal:condition, 
+00:37 now we actually already have access to the controller, 
+00:42 now the reason that we have access to it is we have this base controller 
+00:47 and we are guaranteed every single request that runs through Python
+00:50 is running through that base controller in some way or another. 
+00:54 So it's doing good stuff for us here, so what we are going to do is 
+00:57 we say if it's not the case that the view remember that's Pyramid's terminology 
+01:01 for the view...the controller, is the way we structured it and what did we call this, 
+01:06 we called this like logged_in_user or something like that, 
+01:09 logged_in_user_id, as a property. 
+01:11 So if it's not the case that there is a valid logged in user, 
+01:15 then we want to show a sign in and we also want to show register. 
+01:19 but we're going to have an alternate version for when you are signed in. 
+01:22 This is going to be log out, let's do account here, and maybe just like this, 
+01:29 and this will be log out, I don't think we've written log out yet but we're going to. 
+01:38 OK, so if the user is signed in, you should see this,
+01:42 if the user is not signed in, you should see the sign in features.
+01:45 So, let's go over here and refresh this, remember, we're signed in right now 
+01:49 boom, sign in, log out, but if we open it in a private browsing session, 
+01:53 sign in / register, if we do sign in / register, then we are signed in. 
+01:57 Beautiful, right. 
+01:59 Check that the account works, log out, it's not found yet, let's go write that. 

@@ -1,65 +1,52 @@
-00:01 OK, the last thing we want to so is now that we've been able to log into our site 
-00:05 is to log out of it; so remember, you can only view this page 
-00:08 if you are logged in and if you log out, well, there is no log out. 
-00:12 So let's write lo gout real quick. 
-00:14 We are going to do that in the account controller, 
-00:16 and let's just duplicate that method real quick and we'll change this to "log out", 
-00:20 now we are going to need very little information here, 
-00:23 actually we don't even need a template, because "log out" is not a view, 
-00:26 it could have it, it could say "you are now logged out" or you could just log them out 
-00:29 and redirect them to the home page, where they basically just see 
-00:33 the sign in stuff come back, so that is what we're going to do, 
-00:35 we're going to say self.redirect to '/' and do nothing, 
-00:41 so over here when I go cookie_auth and we'll just call it "logout" 
-00:44 and it's going to need to have access to the request so it can actually do that. 
-00:47 So it turns out that deleting the cookie is a very similar to writing a cookie 
-00:54 where we have this callback, OK, so we are going to come over here 
-00:57 and we are going to say request.add_response_callback 
-01:00 and this we are going to call delete_cookie and in order to delete the cookie, 
-01:03 you don't have to pass the value, you just have to have the request,
-01:08 the response and the name, actually, you don't even need the response, do you. 
-01:11 So let's write that. We'll just say response.delete_cookie 
-01:17 and we'll give it the name, and that's it. 
-01:21 There is nothing more to it, let's do little formatting so everybody is happy, 
-01:24 PEP 8 and all that, if we rerun this, we should be able to go over here, run our page, 
-01:29 click around you see we're logged in, if I hit log out, it should delete the cookie, 
-01:34 redirect us to the homepage and this navigation part up here should change 
-01:37 because the cookie is not there, so we are no longer signed in, ready, set go.
-01:42 Boom, how about that, so we're logged out, if we try to go to our account again, 
-01:46 it's going to say no, you've got to sign in, see indicate sign up here, 
-01:50 now we're signed in, go to our account all we want, 
-01:53 and if we ever decide to log out then boom, we're logged out. 
-01:57 So I think that wraps it up for our little demo, and adding user tracking to our web app. 
-02:04 Let's add one final handy little utility to the base class here.
-02:09 So if I go to the base controller, it's nice to know that we have a logged in user id, 
-02:13 but every time we want to work with the user, which is often extremely common, 
-02:17 you are going to want to go, you are going to need to go 
-02:20 and do a query against the database, for that user id and get them back, 
-02:23 so we can shortcut a lot of those steps over here 
-02:26 and we can just change this to be create a logged in user, 
-02:29 and then we'll say something like this, 
-02:31 we'll say "id, uid=self.logged_in_user_id", we'll say "if not uid: return None", 
-02:39 so if nobody is logged in, obviously we can't go to the database, 
-02:43 but if they are, we can go to the AccountService and we can say find user, 
-02:47 or find account by, and we don't have an id yet do we,
-02:50 nowhere along the way have we needed to find the user by id, yet, 
-02:54 so we'll write that really quickly, so we go over here and by, 
-02:58 id and we'll do uid, so we can add that method to the account service, 
-03:02 and it will add as a class method and down here now call this user, 
-03:06 and this is going to be super similar to this one up here. 
-03:12 Let's just do the query ever so slightly differently. 
-03:15 So, let's go over here, and we'll say "if not user id", we'll return None, 
-03:19 I don't care about this lower case thing, it's not likely the case is changing, 
-03:24 we want to create the database session and we are going to do a query with SQLAlchemy 
-03:28 to say the id is equal to the user id there is the first. 
-03:31 OK, then anywhere we want, for down here maybe we want to go to the albums 
-03:37 and we want to do, we somehow want to get access to the user, 
-03:40 we just say self.logged_in_user, that does the query against the database 
-03:44 using the cookie information we've already stored, 
-03:47 and then we have access to the user, like so. 
-03:50 Now, you only want to call this if you are going to do some sort of test for the logged in, 
-03:54 you would do something like this, right, logged_in_user_id, 
-03:57 we could even add another property just is_logged_in or has_user, 
-04:01 something to that effect, because you don't want to hit the database 
-04:03 unless you actually need the user, but this is a really handy method to use, 
-04:06 to have around, because you are going to want to access to that character all the time. 
+00:03 Let's review how we created a tamper-proof cookie
+00:06 to track the logged in user on our web app. 
+00:08 So we created our cookie auth module in the infrastructure folder or submodule,
+00:13 and we are going to pass the request and the user id, 
+00:17 so the request lets us get access back to the browser to set the cookie, 
+00:21 the user id is the value that we want to set, 
+00:23 now we could just store the user id straight in there and if this was a number, 
+00:27 this would be a super bad idea, because it's really crazily generated, 
+00:30 it's this huge 32-character alphanumeric string, it's still pretty hard to guess, 
+00:38 but we are going to go a little farther when we do this 
+00:41 get salted cookie value thing so that we actually make it even harder to guess, 
+00:44 we basically make it tamper-proof.
+00:47 So here we make the cookie tamper-proof with a slated hash 
+00:50 that lets us check the value, 
+00:52 now, we also saw that for whatever reason in Pyramid, 
+00:55 we need to use a callback instead of directly setting the cookie on the response, 
+00:59 so we are going to set the response callback here 
+01:02 and this function has to take a request and response but then you can see 
+01:07 we are using a closure to actually pass the request and response along 
+01:10 as well as the value. 
+01:13 And this technique works on any cookie, this is not, 
+01:16 this really has nothing to do with authentication other than you want to be really careful 
+01:20 that people can't temper with it and guess user id, so we did this salt thing, 
+01:24 but if you want to store just random cookies, you can have a number of them 
+01:27 and this is how you would do it. 
+01:29 There is a few pieces you didn't see in the previous screen, so to get slated cookie here, 
+01:33 we can just say we want to return some text plus the original string, 
+01:37 maybe plus some more text, this could be huge, it could be one character, 
+01:41 make it up randomly, you could have it based on some other part of the user 
+01:45 like their email address, but then again, if their email address changes- 
+01:48 do whatever you think makes sense but you want to have some sort of verification 
+01:53 that the cookie is not tampered with, and then, 
+01:56 when we call that __add_auth_cookie_callback, 
+01:58 you can see we just say response.set_cookie, we give it the name, 
+02:01 the value, and the maximum age, so this cookie is going to expire in 30 days, 
+02:07 or if they call "log out" we are going to delete it immediately. 
+02:10 Finally, what fun is it to set a cookie if you don't ever read it back, 
+02:14 so here when we do our request, we want to know "is somebody logged in?", 
+02:18 we are going to first see if that cookie exists in the request that is coming from the browser,
+02:24 was that set in a previous request in that particular browser. 
+02:28 So we are going to say "is the auth cookie name in request?" If it's not, 
+02:32 then we want to return None because there is no id we are ever going to find 
+02:35 if we don't have the cookie, then we are going to get its value super easy, 
+02:39 request.cookies, give it the name of the cookie, this is just a dictionary, 
+02:42 we get the string value back, and the way we constructed it was we put in the value 
+02:47 and then a hash, that would let us know 
+02:49 whether or not that value is even messed with. 
+02:51 So then we just do a little bit of work to split it apart, to recompute the hash 
+02:55 and make sure that it wasn't tempered with, 
+02:57 if we are happy that nobody messed with it, 
+03:00 that it's the same thing we sent down from the server, 
+03:02 then we will return the actual value we care about, the user id. 
