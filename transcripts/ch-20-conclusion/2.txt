@@ -1,0 +1,13 @@
+00:01 Now that you are thinking about what you're going to build 
+00:04 and hopefully getting started on it, I want to draw your attention 
+00:08 to the student showcase, so just at training.talkpython.fm/showcase 
+00:13 we've got this place where we're collecting 
+00:16 the cool things that our students have built.
+00:19 So as you're working on this project, and especially when you launch 
+00:22 whatever it is you're going to create from this course,
+00:24 please send us a note, let us know you launched it, we'll list it here 
+00:27 maybe we'll give you some kind of shot out
+00:29 either on the podcast or on twitter or both;
+00:31 but we'd really love to hear what successes you are having after this course 
+00:35 and we'd love to share it with everyone.
+00:38 So please submit it here. 

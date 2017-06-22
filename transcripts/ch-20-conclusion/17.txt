@@ -1,0 +1,60 @@
+00:01 We covered growth hacking which is essentially
+00:03 just software developers rediscovering marketing and branding it in their own terms.
+00:07 Ultimately for any web based business, you're going to have a funnel 
+00:11 where the goal is to move people from unaware that you even exist
+00:15 through awareness, interest in your business, evaluating what you're offering 
+00:22 signing up to try out your product, using it and paying for it as well.
+00:29 So to move them from not even knowing about you,
+00:32 all the way through happy paying customer.
+00:35 With any growth hacking tactic that you hear about
+00:38 and that you want to try, ask yourself where in the funnel does it fit,
+00:41 measure that part of the funnel with analytics 
+00:44 so if that's awareness and interest you're measuring with google analytics 
+00:48 in order to determine how many people are actually coming and visiting your site.
+00:52 And then, determine whether that strategy is working for you or not. 
+00:56 You can read things like a thousand tips for growth hacking 
+01:00 but ultimately you are going to only be able to chose a few of them at a time 
+01:03 that you're going to test out, so that you can see which ones are actually working 
+01:07 and which ones aren't worth the time that you're investing in trying them out.
+01:10 Now what works for one business may not work for another 
+01:13 but you can take inspiration from examples 
+01:16 and try to incorporate tests into your business 
+01:19 to determine whether they work for you.
+01:21 We covered five examples, the first one was awareness on turkey carving 
+01:25 taking one piece of code and writing several blog posts about it,
+01:28 maybe adding a video into the mix, 
+01:31 maybe even taking that same code and rewriting it in different programming language 
+01:34 and then also writing several more blog posts on it.
+01:37 The gist here is take what's hard about what you're doing,
+01:40 the content that you're trying to create, and then create multiple variations off of it,
+01:44 with less work than if you had to come up with a new original idea 
+01:47 every single time you want to produce a piece of content.
+01:51 Michael uses a great strategy for resending e mail campaigns 
+01:55 to people that have not opened the previous campaign;
+01:58 if someone receives an email but perhaps it goes with their spam folder 
+02:02 or they delete it by accident, they may never see your message 
+02:05 and through tools like MailChimp, you can resend to people 
+02:09 that are on your mailing list, but have not opened your email 
+02:12 so that you can ensure that there is a higher deliverability 
+02:15 and that more people see what you're trying to say to them.
+02:18 One way to drive usage and adoption of your product 
+02:21 could be through open sourcing part or all of your code,
+02:24 we saw a really great example with Sidekiq 
+02:27 where the developer is creating a tool and the tool was more rapidly adopted 
+02:32 because it was open source and developers could just pick it up and try it out,
+02:35 and then when companies needed to have support on that product 
+02:38 they were able to just pay him directly and he was able to create new features on it.
+02:42 So consider this strategy depending on your business 
+02:45 if you're doing anything around coding or you need more developer adoption.
+02:49 The right call to action is really crucial, and making sure that people move 
+02:53 from the evaluating stage to the sign up stage.
+02:57 You want to make it as easy as possible, for people to say 
+03:00 all right sure, I'll give it a try, this looks like it might solve my problem.
+03:03 So we took a look at several examples of calls to action,
+03:07 to see what you might be able to use as design for your own landing pages.
+03:10 Finally, we took a look at a bunch of examples of pricing tables 
+03:14 to determine how you might be able to best position your product 
+03:18 for prospective customers, and certain psychological tricks 
+03:22 that you can use with the pricing tables 
+03:24 so that people can pick the right plan that is most appropriate for you
+03:28 running your business that also solves their problems. 

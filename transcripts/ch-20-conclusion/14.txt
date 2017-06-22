@@ -1,0 +1,28 @@
+00:01 Once we had our site up and running on the internet, in production,
+00:05 we said well, let's make sure that we can actually charge some money for this thing.
+00:09 So we said there's a lot of credit card options out there, 
+00:12 Stripe is one of the easiest, most widely accepted 
+00:16 and really respected ones out there. 
+00:19 And if you want to get started quick and in a really smooth, short, checkout flow 
+00:24 this checkout is actually really amazing.
+00:27 So we said look, all we have to do to use checkout is to come over here 
+00:31 and basically add this form, this script to our page.
+00:34 So we're going to include the checkout javascript and then this little bit of html.
+00:39 Notice we're passing our key, things like how much we want to charge them,
+00:43 the name of the thing that we're charging them,
+00:45 and then when they click on the button that appears here,
+00:48 it's just going to pop up this single dialogue
+00:51 you enter four pieces of information, hit the button and boom, it's done,
+00:56 that's the entire check out flow; but the card is not charged yet.
+01:00 Stripe comes back to you and it posts to one of your methods
+01:04 the user doesn't really see this, but after Stripe has already verified 
+01:09 that it would be ok to do this, you get this Stripe token passed to you. 
+01:13 So when the Stripe token comes in then you have to take this 
+01:17 and actually go to the Stripe API in Python, go to this charge class and create one.
+01:22 If that works okay, then you record it, you give them aces 
+01:26 to whatever they were going to buy;
+01:28 if it doesn't, you record the error and you send them some kind of message.
+01:31 By this point, it's mostly gone through the verification process
+01:34 once that little Stripe check out dialogue goes away 
+01:37 you're like 90 percent there, but there is a possibility of some kind of error,
+01:41 so be sure to work with this carefully.

@@ -1,0 +1,13 @@
+00:00 We've both been looking forward to this chance to share all of these ideas with you 
+00:04 and we hope you take them and build something amazing.
+00:08 If you're looking for more inspiration, you can stop by the podcast,
+00:11 and sign up and listen to shows on all sorts of topics,
+00:14 and hopefully they give you ideas and directions to go in;
+00:18 or, drop over at Matt's site.
+00:20 All of the topics that I covered such as git and deployments 
+00:23 I cover on Full Stack Python as well, you'll be able to read 
+00:27 not only about those topics, but related ones,
+00:29 and if you have questions
+00:31 please drop me an email or send me a message on twitter.
+00:34 Thank you so much for taking our course, 
+00:37 it's really been great to have as student and we'll see you online.

@@ -1,0 +1,92 @@
+00:01 Now you've learned so many things, 
+00:03 and one of the things we spent a lot of time with was 
+00:06 let's start from a beginning pyramid web application,
+00:09 and let's add a bunch of things to it, let's add handlers, let's add form handling 
+00:14 let's ad data access, let's add Rollbar, let's add logging and on and on and on.
+00:19 We added all of these things, and if you want to start over for your own project,
+00:25 one possibility would be to take the source code like near the end of the project 
+00:30 and adapt that to your business, but this might be a better option here-
+00:34 so what I've done is I've taken all of the ideas and the learning from the course 
+00:39 that we're working on, and I've bundled them up into a cookiecutter template 
+00:43 so that means you just need to run a single CLI command 
+00:46 and you'll be in a much more customized place 
+00:51 with your own settings and everything 
+00:53 to get started with something that's more or less 
+00:56 the final app that we are working with.
+00:58 Here's the cookiecutter template, if you browse through here 
+01:00 you can see things, it's like better factored to organized 
+01:03 it has a master layout, chameleon language, it has handlers, 
+01:06 user management with passlib, bootstrap already integrated,
+01:09 error monitoring, logbook, all of these different things,
+01:14 it even has a cms which we haven't even talked about in the course.
+01:18 All of these things have been added here for.
+01:21 Now let me just show you how to use this.
+01:24 So let's start out entirely from scratch, let's go to the desktop here 
+01:27 and let's mkdir testing or experimenting or whatever,
+01:31 you can put this where you really put your code 
+01:34 now I want to start as if this is a brand new machine 
+01:36 maybe you don't have everything set up on this particular machine 
+01:40 so let's start by having a virtual environment; 
+01:43 so here we'll create virtual environment .env in Python 3
+01:47 and then we'll activate it, all right so use the dot to apply that to the shell 
+01:51 you can see our prompt has changed to .env, 
+01:54 that means this is activated so if I do like a pip list you'll see there's only two things, 
+01:59 let's go ahead and notice set of tools that's pretty old, 
+02:02 so let's just do this. So we'll run this command,
+02:06 pip install-u for upgrade set of tools, because there's actually
+02:10 that is something like eight versions higher 
+02:15 so the things we're going to do later probably are better off having that;
+02:18 so now we just have these two things, what we're going to do is 
+02:21 we are going to need these cookiecutter, we're going to install cookiecutter 
+02:28 I've already downloaded it, but you just might come of the internet 
+02:31 that's all set up well and god, so all we have to do is say cookiecutter 
+02:34 and that url that we got from github, right there, 
+02:37 mikeckennedy/cookiecutter-pyramid-talk-python-starter 
+02:42 first time you run this it will ask no questions and it won't ask this question anyway 
+02:45 but because I've already got it it'll ask me to verify to get a new version.
+02:49 Now it's going to ask for a project name, be a little careful here 
+02:52 if you name things like test or something,
+02:54 if you name it a thing that is already a Python package, in Python, 
+02:57 that's a bad name, I'll call this the web app, like this.
+03:02 Notice it's going to guess the_underscore_web_app, try to take a shot at that 
+03:06 this would be talk python, and let say this is talkpython.fm 
+03:10 it says suggest contact@talkpython, we can give a description for all the metatags 
+03:15 and then if we have our API key for MailChimp and our smtp server set up 
+03:21 and our Rollbar account set up, all of those things we could just type them here 
+03:25 and it would automatically set it all up, but that's not what happened here 
+03:29 it's not really worth doing, right, you just have those keys working basically.
+03:34 So now if we look here, we have the web app, let's go into the web app 
+03:39 and notice a couple of things, we have a requirements,
+03:41 this is the thing you should install 
+03:44 or the set of things you should install for production 
+03:47 and then this here, actually pulls those in, and adds a bunch of other stuff 
+03:56 that we're going to need for development.
+03:59 So what we need to do is a couple of things,
+04:01 we could say Python setup.py develop that's one of the things we have to do 
+04:06 it will install a bunch of stuff, and give us little message to carry on at the end.
+04:09 Okay, that all ran well, and it says look, you should make sure you install 
+04:15 if you're doing dev work you should also do this 
+04:18 pip 3 because we have a virtual environment, it doesn't matter pip, pip3 
+04:21 install -r requirements-dev, so this is all the stuff like testing 
+04:26 and the debug toolbar stuff like that that we'll need to run locally.
+04:33 Now the last thing to do is just p serve, 
+04:36 the either development.any or production.any 
+04:41 we'll pick the development, because hey, this is develop machine
+04:44 and look at that, all of our logging, all the stuff that we've added here 
+04:47 initializing logging, level info, the Python version is 3.6.1 at the time of this recording,
+04:52 here is all of the versions that we depend upon, including our Python version up there 
+04:57 and it looks like we're running in dev mode with this being our database,
+05:01 all of this should look entirely familiar, right,
+05:04 this all comes from the various stages of this course.
+05:07 So let's pull this up and see what we get here, and look at that, 
+05:10 the web app, right here, this is the web app app 
+05:13 and you can go and cruise around, you could even sign in and register
+05:17 to actually use the database that's there, you can play around to cms page 
+05:20 here's a dynamic cms page, you can use for your site,
+05:24 the mailing list would work if you had put your id in there 
+05:27 and even you get a little copyright, all that kind of stuff down there. 
+05:31 If you want to get started on a project, after you've taken this course,
+05:35 and you want to kind of use the same ideas, 
+05:38 probably the easiest way to do that would be to use cookiecutter 
+05:40 and this cookiecutter template to start from more or less the end state 
+05:45 but entirely customize it with your web site name and your keys and all that stuff. 

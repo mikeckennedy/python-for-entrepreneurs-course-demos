@@ -1,0 +1,29 @@
+00:01 Next up, we said alright, we know enough css 
+00:04 we got our code in github and source control, and we know the basics of Pyramid,
+00:07 let's actually build some really interesting things.
+00:10 So we said here is our goal, how do we build this thing?
+00:14 We built our blue yellow rockets, not quite this far, but we came close 
+00:19 so we said what are the elements of these real apps?
+00:23 Sure we have the building blocks, but let's do some more.
+00:26 First, we said let's switch from standard method based views 
+00:29 to class based views with something called Pyramid handlers,
+00:32 which means it's much more convention driven,
+00:35 basically you set up the routing for the classes 
+00:38 and you could have ten or fifteen methods on that class 
+00:40 that all automatically pick up this url convention.
+00:44 We said with our templates, we want to have a shared layout
+00:47 so the standard navigation and standard css and javascript is included 
+00:52 on all the pages and we just basically write what is different.
+00:56 We said we want to have form that excepts user input
+00:59 for things like log in, registration, a newsletter sign ups, all that kind of stuff.
+01:04 So we spent a lot of time talking about that,
+01:07 and that generated let's say much more complex or full featured view methods 
+01:11 in our classes, so we said alright, let's take some of that functionality
+01:14 mostly the data exchange and validation,
+01:18 and move it to these things called view models which are easy to test,
+01:21 which are separate from the actual logic of the application.
+01:24 So that was a real big addition that we made. 
+01:27 And finally, the validation on the client side was done 
+01:31 by adding some html 5 validation through 
+01:35 basically the required attribute or setting the type of the fields,
+01:38 and then the server side validation was done with the view models.

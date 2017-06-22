@@ -1,0 +1,23 @@
+00:01 I hope you're convinced that mailing lists are very valuable.
+00:04 Having a mailing list while not as sexy or publicly visible 
+00:08 as like twenty thousand followers on facebook or on twitter,
+00:11 is actually much more valuable.
+00:14 We talked about how to set up MailChimp, 
+00:17 we also talked about some of the other options, such as Drip and customer.io 
+00:21 whatever you choose, definitely focus on having a mailing list;
+00:25 it's one of the really hidden secrets of a successful business.
+00:29 Here you can see many of these new businesses 
+00:33 before they even launch, they'll have this page they are like hey, we're coming soon
+00:36 definitely definitely sign up for a mailing list, 
+00:39 so we can tell you when it's ready to launch.
+00:42 And we want to talk about like how do you add a subscriber, right,
+00:45 we talked about forms and having people submit forms and validation,
+00:48 but inside your form, like how do you actually do this.
+00:51 You could have your own database, and your own mail system,
+00:55 but don't do that, use MailChimp or something equivalent.
+00:58 For using MailChimp, you just go and create their API,
+01:01 you give him the key and you just call list.subscribe 
+01:03 give it the mailing list id that you are using, and a few options 
+01:06 and boom- they're all automatically set up.
+01:09 Then whenever you're ready to announce your big thing 
+01:12 you go to MailChimp and you send an email to everyone who's signed up.

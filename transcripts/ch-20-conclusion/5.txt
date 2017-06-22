@@ -1,0 +1,36 @@
+00:02 Next, we took a break from Python to talk about web design. 
+00:05 And we started by looking at the power of css at CSS Zen Garden. 
+00:10 Remember, this is a single static html page, 
+00:16 and yet the only thing changing here is the css 
+00:19 and the images that it pulls in through css. 
+00:23 So you can really do amazing things with css,
+00:25 often web developers try to kind of ignore css as long as they can, 
+00:29 if they're kind of new to doing web development, 
+00:31 they've come from somewhere else, 
+00:34 but taking a moment and really learning 
+00:36 a few fundamentals of css makes all the difference.
+00:38 One of the most important parts the css is the selector.
+00:41 So here we have a blank css page,  
+00:45 and we're going to start out and say how do we select maybe by html node 
+00:51 so you can say I want to work with the body or every div on this page, 
+00:54 you could just say body or div; if you want to select by class 
+00:57 so like here we have a paragraph a p with class equals lead 
+01:00 we could say .lead, and if you want to specialize this 
+01:03 if this was like I want to find all the divs that have the class main,
+01:07 you would say div.main, right, so . means class in css basically.
+01:12 Final one is by id, so here we have an image that has an id profile_image 
+01:18 so we would say #, so #profile_image.
+01:21 Now usually, that's good enough for one page 
+01:24 because we only have one id basically unique per page, 
+01:27 but we also might want to say across the site every time you see a div#profile 
+01:31 that part of the site we specifically want to style it differently 
+01:35 so you can combine the html node or things like this 
+01:38 you could combine classes and ids, all sorts of things 
+01:41 you put them together sort of by just using no white space if you will.
+01:45 So selectors are super important and recall that we had this demo app 
+01:48 that basically lets you type in css selectors and it turns them yellow,
+01:53 so here we're looking at the table that has table rows that are in this month, 
+01:57 so like only the first four here in this particular month.
+02:01 And you can go here and play around 
+02:03 and so if you want to explore this some more don't forget that little demo app 
+02:05 that you get to play with.

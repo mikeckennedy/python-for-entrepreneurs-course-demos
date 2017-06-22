@@ -1,0 +1,35 @@
+00:01 So we had a functional website but it wasn't beautiful yet,
+00:04 that's where we brought in bootstrap 
+00:07 and the first major element of bootstrap that we talked about was the grid,
+00:10 so here's the Talk Python site, at least at the time of this recording 
+00:14 and we said well, what if we resize this, right, 
+00:18 say if we view it on a phone, we would like it to reflow 
+00:21 like for example those three images at the bottom, 
+00:24 we'd like those to not sort of get smaller and smaller and smaller 
+00:27 but in fact turn into just three subsequent images.
+00:30 And we did that with bootstrap, and the grid,
+00:33 so over here, we've got sort of visual representation of how this grid might look 
+00:39 so what we do is we say we've got these columns, and we express their sizes.
+00:43 On a medium size or larger I want them to be table like,
+00:46 anything smaller than md for medium, I want it to become one after another.
+00:51 You could do that for small, you could do that for large. 
+00:55 So over here we do this in css, we'd say container 
+00:58 within the container we'll have a row and within the row we have the columns.
+01:01 The important thing to keep in mind is the columns should always add to twelve.
+01:05 So here we've got one is eight and over here we have one that is four.
+01:10 Here's the sizes, right xs for extra small, sm for small and so on 
+01:17 so when the size is smaller than this, 
+01:20 it's going to turn into something like a one after the other 
+01:23 larger than this it's going to be like a table style.
+01:27 So we found the grid to be super helpful, and the general layout 
+01:31 we also said look, we are probably not web designers 
+01:34 but we still need to design our web page, and if we start out the blank page 
+01:39 we say this is how we start, and I don't know about you 
+01:42 but that's a very high hill to climb, to go from here to a good looking site 
+01:46 so we said well let's throw in bootstrap, and if we throw in bootstrap 
+01:49 the topography and stuff gets a whole lot nicer,
+01:52 I mean, already this just looks better, but it's still just white and black text, right. 
+01:56 So then we said let's go find some themes, some bootstrap themes 
+02:00 and make this look super good.
+02:03 So don't forget to go and check out all the theme places 
+02:06 and consider those for your projects. 

@@ -1,0 +1,47 @@
+00:01 One of the best ways to drive long term sustainable growth to your business 
+00:04 is through content marketing, and using search engine optimization or SEO,
+00:10 in order to increase the traffic that goes to the content you've created. 
+00:14 Remember that content marketing is about giving useful, accurate information 
+00:19 that is of interest to your prospective customers. 
+00:22 The content that you write or that you create 
+00:25 whether that's text or video or sound clips 
+00:28 is going to be specific to your business, 
+00:30 you have to understand your own customers 
+00:33 and create content that is going to be relevant to them. 
+00:36 Always think about it as helping them solve a problem that they have,
+00:41 don't sales pitch them on your own product.
+00:44 Your product should be part of their solution, but it is not the only thing 
+00:47 that will take away all of their problems.
+00:50 Really the content works hand in hand with what you're creating 
+00:53 in order to solve their problems, so you don't need to hard sales pitch them 
+00:57 in order for them to be interested in what you've created.
+01:00 SEO is a set of tactics that allow you to increase your rankings in goggle over time 
+01:06 it won't happen overnight, but when you follow certain practices 
+01:10 SEO is guaranteed to help your rankings.
+01:14 Now what are those things that are involved with SEO?
+01:17 Well, first you want to make sure that your title tag, your header tags 
+01:22 and the meta description tag in your html 
+01:26 all map to what your content is actually about.
+01:29 And there are certain limitations that we covered, 
+01:32 such as having a short title that is give take set less than seventy characters 
+01:37 and other guidelines like that, that are going to help you to improve 
+01:40 your SEO rank over time, that are openly promoted by google and other search engines 
+01:46 that are actually informing you how you should handle these elements.
+01:49 Keep the content length to at minimum 750 characters to 2,000 characters on a 01:56 page, anything that's larger than that should be broken up 
+01:59 and anything less than about 750 characters on content you've created 
+02:02 is typically not dense enough for it to rank highly in search engine results.
+02:08 Use a flat url structure, don't nest your urls to deeply,
+02:13 so for example, if you have a .com and you have then /blog 
+02:17 and /the year, the month, the day, all in different folders, 
+02:21 that will actually hurt your SEO results, 
+02:24 because your content is to far nested down a folder path. 
+02:28 Always keep an eye on your site low time and the page speed 
+02:32 and support all mobile devices by having a responsive design 
+02:36 which recovered earlier in the course.
+02:39 Make sure that the site low time stays low 
+02:41 because fast performing sites are ranked higher in search engine results.
+02:45 Also make sure to not bog down your site with additional Javascript 
+02:50 that is unnecessary or social widgets and tracking snippets 
+02:54 that don't provide you with actual value on your site 
+02:57 and take away from the experience that your users have 
+03:01 when they're trying to read your content. 

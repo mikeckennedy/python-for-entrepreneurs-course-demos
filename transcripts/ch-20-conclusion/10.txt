@@ -1,0 +1,37 @@
+00:01 People create accounts at our site
+00:04 so we're going to model this as an account class in sqlalchemy,
+00:08 and I think most of this is pretty straightforward, what's your id 
+00:11 what's your email address, do they have a name are they a super user,
+00:14 but the most important takeaway from this section was 
+00:17 you must not store your passwords as plain text, you must hash them.
+00:22 Very bad things like being featured on the front page of CNN saying 
+00:27 you know, a hundred million accounts were leaked type of stuff happened,
+00:31 if you don't pay attention here. So be very careful about this.
+00:35 How do you go about this hashing? 
+00:38 We could create an md5 hash and hash it ourselves, 
+00:42 that's not a good choice, not really at all for md5,
+00:46 you could pick a better hashing algorithm, but what we saw was 
+00:49 actually passlib really takes all those best practices and bundles it up 
+00:53 into like a single function call.
+00:56 So install the library passlib and we're going to use sha512 cryptographic hash 
+01:01 there's other ones you can pick from, but everyone that they make available to you 
+01:05 is one of the recommended ones,
+01:09 then all we have to do is say sha512 encrypt 
+01:12 and give it the plain text and how many times you want it to iterate it,
+01:16 so what does that mean?
+01:18 Well it means it's going to go around and around not hashing it once, 
+01:21 but taking the result hashing that, taking the result hashing that 
+01:24 and mixing all along the way.
+01:26 So we start with our password, and we say hash it, hash it, hash it, 
+01:30 until after a hundred and fifty thousand times of doing that,
+01:34 we get something that is not just a little bit hard to guess 
+01:36 but extremely hard and computationally difficult to guess.
+01:40 Passlib makes all of this best practice one function call 
+01:44 that is super easy to understand so you should definitely do this.
+01:48 Alright, then all we have to do to verify this is get that back 
+01:51 and say verify here's the plain text password the user typed in 
+01:55 and this thing we stored in the database, that's here In the comments 
+01:58 and it will verify that everything works.
+02:01 Notice that even stores the number of rounds 
+02:03 so you can increase this over time for your new users 
+02:05 and your old users will still use the hundred fifty thousand.

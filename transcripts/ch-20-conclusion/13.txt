@@ -1,0 +1,18 @@
+00:02 We started out with a Pyramid application 
+00:04 that we had built sitting on our local machine.
+00:06 But there was no way for perspective customers to access it.
+00:09 Throughout the videos in the course, we built up our application 
+00:13 and deployed it to a server on Digital Ocean.
+00:16 What at first looked like a really complicated deployment diagram 
+00:19 we broke down into individual steps.
+00:22 So we provisioned a server through Digital Ocean with an operating system on it 
+00:27 we added a web server, our Python code 
+00:30 using source control to grab our code off of github,
+00:34 we created public and private keys in order to securely access our code, 
+00:38 and then we used a few external services 
+00:40 like github, PyPi, Let's encrypt, Namechep,
+00:44 in order to register domain names and provide notifications through Twilio,
+00:49 so a combination of what we deployed on our own server, 
+00:52 and external services that we were accessing
+00:56 allowed us to deploy our application and make it publicly addressable 
+01:00 to any perspective customers through the internet. 

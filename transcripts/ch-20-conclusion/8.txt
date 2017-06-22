@@ -1,0 +1,43 @@
+00:01 We have a beautiful website but it does nothing 
+00:04 because it has no database, there's nowhere to save our data 
+00:07 so we said next up, sqlalchemy.
+00:09 And the primary thing we do in sqlalchemy is map classes to tables 
+00:13 and relationships between them.
+00:16 So here's our album table, we have created this sqlalchemy base 
+00:19 which all of our models derive from,
+00:22 we set the table name, the __tablename__ to album 
+00:25 to control what is in the database, and then we give it just columns.
+00:29 So, for each column we want the database, we create a field and we say
+00:33 sqlalchemy.column, and we give it a type here the first one is an integer,
+00:37 the second one is a string, the third and fourth integers and floats respectively.
+00:41 We also saw that we can do things like add a primary key 
+00:44 and make that auto incrementing or make something required 
+00:47 and we even have a relationship here between the track table 
+00:51 of one to many relationship, and the albums.
+00:54 These models can have default values, which means when we insert them 
+00:58 they automatically get these fields initialized 
+01:01 and these can be built in things, like here we have the now method,
+01:04 you want to be very careful to not pass now () as the default 
+01:10 because that will call now, and every model will basically have the time of app start 
+01:16 you want to pass the function, not the result of the function.
+01:19 So now without parentheses.
+01:21 We can also come up with more interesting ones,
+01:23 where we write a lambda expression and do whatever it is that we like 
+01:27 and really you could write any function 
+01:29 outside of this class and then pass it here as well.
+01:32 Without primary keys, databases basically don't work.
+01:36 Primary keys are very important for uniqueness,
+01:39 they're important for relationships and things like that.
+01:41 So we've seen in sqlalchemy that when we can say primary key = true 
+01:44 magic happens, it just creates the index and registers the primary key,
+01:48 all those kinds of things.
+01:51 If we're doing any sort of queries, it's very important to have an index.
+01:55 Indexes can make the query results a hundred, maybe a thousand times faster 
+01:59 and it's as simple as saying index = true on the field 
+02:03 so you certainly want to think about 
+02:05 how you are going to query this data as you define the classes, 
+02:08 and maybe you need some sort of uniqueness constraint 
+02:11 here's an account and we should not have 
+02:13 two different accounts with the same email 
+02:16 so we're going to be able to both index this email, search by this email 
+02:20 but also enforce in a uniqueness by just saying unique = true.

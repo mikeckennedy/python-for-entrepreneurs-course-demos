@@ -1,0 +1,50 @@
+00:01 We don't really want to run our code without knowing what's going on 
+00:04 it's super hard to just look at a server on the internet 
+00:07 that you have control over and know what's happening 
+00:09 without some kind of instrumentation. So we started by setting up a Logbook. 
+00:13 Logbook is a really nice clean way to work with logging in Python.
+00:17 From the same guy who created Flask. 
+00:19 So we just import Logbook, and then we're going to set the level 
+00:24 possibly set the file name that we're going to go to 
+00:26 and we said look, if we're in development mode, 
+00:29 we want to just output our log messages to standard out 
+00:32 so we say logbook, stream handler, give it the standard out stream,
+00:35 the level we want and push that to the application so it's available everywhere.
+00:38 In production, we want to use a time rotating file handler 
+00:41 so basically a new log file day by day.
+00:45 So we are going to do this kind instead and push that globally to the application.
+00:48 After we ran this once at start up, we just create a logger 
+00:52 by saying the logbook logger give it a name, 
+00:54 that will appear as part of the hierarchy of the log,
+00:57 and then you maybe come up with a message 
+00:59 and say like notice, info, error, warning, those kinds of things.
+01:03 So the various options are log, notice, info, trace, warn, error or critical,
+01:07 and depending on the level that you pass when you set up
+01:11 only messages of higher priority 
+01:13 than the level you've sort of set as the base will come out.
+01:17 So, for example, if you say I only want to work with info and above 
+01:20 things like trace won't appear, right, if I only want to work with notice and above,
+01:25 info and trace won't appear in my log, so you can dial that in a little bit there.
+01:28 Here's what you get when you do one of these log messages, 
+01:32 date, time, the level, here we have notice again, 
+01:36 the app which is the name that we put at the top 
+01:38 and then the message we actually wanted to give them.
+01:41 So that's great for the logs, but how often do you go back and read those, right, 
+01:46 especially if you have a super busy site, it could be millions of lines of 
+01:49 the users viewed this page, the users viewed that page, 
+01:52 somebody is trying to hack your WP admin page, 
+01:55 which you don't have, things like this.
+01:57 But you want to get notifications if something goes wrong,
+02:00 if your database goes down or there's some primary key violation that you never expected,
+02:04 you would like to not know eventually when your user complaints to you,
+02:07 you would like a notification immediately.
+02:10 So we also installed Rollbar, you can get a free account there,
+02:14 there's also a paid account, but the free account is pretty decent here 
+02:17 and all you have to do is add a little bit of configuration 
+02:19 to your either development or production.any file 
+02:23 and then just a tiny bit of code to include it, 
+02:27 and use it in your __init__for your entry point
+02:30 and that's it, everything's up and running, it just basically intercept all the requests 
+02:35 to your site, and if there's anything that goes wrong, it'll capture all that information, 
+02:41 store it for you and send you some kind of notification. 
+02:43 So, you can check out how to set that up here. 

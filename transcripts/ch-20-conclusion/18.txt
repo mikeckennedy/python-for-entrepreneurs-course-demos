@@ -1,0 +1,25 @@
+00:01 Before you go, I want to remind you to don't forget the source code-
+00:06 we wrote a lot of code during this course,
+00:09 and there are many things I want to share with you 
+00:12 and I want to make sure you have for your reference.
+00:14 So if you haven't already done it, go to github.com/miikeckennedy,
+00:17 url is here for the demo repository and star and/or fork this repository.
+00:23 That way, especially if you fork it you'll have it on your account forever.
+00:27 Have you already forked this, were you one of the early students 
+00:31 who forked the course before you've seen this video,
+00:34 which is sort of the final version,
+00:36 I suppose this could even change afterwards,
+00:38 you probably have your fork out of date with what is in the actual course repository,
+00:43 but don't worry, you don't have to delete it or anything,
+00:46 you can just resync it, sync it as many times as you want 
+00:49 so on github, at help.github.com/articles/syncing-a-fork with dashes 
+00:54 they show you how to do that, 
+00:56 first you have to do what's called a remote upstream link here
+00:59 they have that in the first or second paragraph, second sentence there,
+01:03 and then there's just like a couple of commands that you have to run 
+01:05 so it's really easy to make sure that you are in sync 
+01:07 with whatever the latest version is.
+01:09 So if you forked it long ago, be sure to run through this little process here 
+01:13 so you have the latest greatest of everything,
+01:14 especially some of the reorganizations 
+01:17 to make following along through the course easier.

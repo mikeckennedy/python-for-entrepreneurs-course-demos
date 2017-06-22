@@ -1,0 +1,28 @@
+00:01 Now you've made it through this whole course, it's almost 20 hours of content.
+00:04 So we wanted to take this opportunity to go through every single chapter 
+00:08 and go at a very high level through everything that we learned.00:12 So before we put the wraps on this course, 
+00:15 let's touch, do a little quick lightning review.
+00:18 First thing that we talked about was the 
+00:21 Pyramid web framework and the web building blocks. 
+00:24 So when we think about the building blocks, these are the major moving pieces of Pyramid. 
+00:29 So the first one that we touched on was routes. 
+00:32 We're going to take some url and we're going to map it 
+00:35 to some functionality in our web application. 
+00:37 So we have this rich routing framework to map, not just urls to functions 
+00:42 but partition and past data as part of those function calls. 
+00:46 We have views and the Pyramid nomenclature, 
+00:50 and these are the functions or methods that actually process the request. 
+00:54 If you're coming from the nvc pattern way of thinking 
+00:58 these would be considered controllers in nvc.
+01:01 We have templates, these are the Chameleon dynamic html pages,
+01:05 again views in the nvc world, and we have our models. 
+01:09 Now these are basically dictionaries that we return from our view methods, 
+01:13 and they can be passed over to the Chmeleon templates 
+01:16 or they could be passed like a Javascript's utilizer for services. 
+01:20 And of course, we saw that the framework has rich support for static assets 
+01:26 things like css and Javascript and images and so on.
+01:29 And we also have a multiple configurations that we could use 
+01:32 this is the development.any and production.any files. 
+01:36 We might put our Stripe API key or test Stripe keys into the development one 
+01:42 but of course, we want to make real money 
+01:45 so we'll put our actual real Stripe keys in the production one. 

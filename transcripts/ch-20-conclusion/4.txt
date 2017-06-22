@@ -1,0 +1,19 @@
+00:01 We learned how to use source control, including git and the cloud service github,
+00:05 in order to track our changes to our files and our projects, as we went along.
+00:09 This is not only useful for going back in case you mess something up,
+00:13 but it really allows you to move faster without having to worry 
+00:16 about all the things that are changing in your project,
+00:19 you just add them to git and it will keep track of everything over time.
+00:22 We learned how to use git's building block commands,
+00:25 including git add, commit, status, log, push and pull as the main ones 
+00:30 in order to work with our files, add them to the repository and manipulate them.
+00:36 These commands are the building blocks that we use in git.
+00:40 Github is the cloud service that stores backups of our git repositories 
+00:45 and makes it easier for us to collaborate through github issues and pull requests 
+00:49 with other contractors that we're working with or employees in our business.
+00:54 Again, think about using git and source control 
+00:58 as something that allows you to move faster,
+01:00 because you are able to collaborate with other people 
+01:03 not stepping over each other's changes,
+01:05 and you're able to sync up these files on a backup service 
+01:07 just in case anything happens to your local machine.

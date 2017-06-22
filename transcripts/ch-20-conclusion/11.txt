@@ -1,0 +1,17 @@
+00:01 We have our mailing list, but there's other times, 
+00:04 there's, let's call them user actions or user events
+00:07 where we might want to directly send mail out of our application.
+00:10 So we leverage the mailer package for this 
+00:14 to set up a really simple way to send email 
+00:18 and then we just create an instance of this mailer here, right,
+00:21 set the host, port, username, password, things like this.
+00:24 So these events might be the user forgot their password and they're asking for a reset,
+00:29 or they've created a new account, or they purchased something, things like that.
+00:33 And then, once we have this smtp sender thing,
+00:36 we can go and create a message, you just set the standard things you would
+00:40 if you were to type that out yourself, the from, to, and so on, you set the subject;
+00:43 the thing where it got interesting was we set the html body
+00:46 and then we use html to text also set the plain text body 
+00:50 in case for some reason they set their email client to only read plan text.
+00:55 So this is kind of a really nice automatic way to do it 
+00:58 and then we just cal smtp.send, and off it goes.
