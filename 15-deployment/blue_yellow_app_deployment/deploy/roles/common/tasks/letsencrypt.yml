@@ -27,7 +27,7 @@
 
 
 - name: create certificate with letsencrypt command
-  shell: "letsencrypt certonly --standalone -d {{ fqdn }} -w {{ web_serve_dir }} -m {{ ssl_cert_email }} --agree-tos --renew-by-default"
+  shell: "letsencrypt certonly --standalone -d {{ fqdn }} -d {{ qdn}} -w {{ web_serve_dir }} -m {{ ssl_cert_email }} --agree-tos --renew-by-default"
   become: true
   when: not certs.stat.exists
 

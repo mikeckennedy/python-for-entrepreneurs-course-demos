@@ -4,12 +4,12 @@ upstream app_server_wsgiapp {
 
 server {
   listen 80;
-  server_name {{ fqdn }};
+  server_name {{ fqdn }} {{ qdn }};
   rewrite ^(.*) https://$server_name$1 permanent;
 }
 
 server {
-  server_name           {{ fqdn }};
+  server_name           {{ fqdn }} {{ qdn }};
   listen                443 ssl;
   ssl_certificate /etc/letsencrypt/live/{{ fqdn }}/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/{{ fqdn }}/privkey.pem;
