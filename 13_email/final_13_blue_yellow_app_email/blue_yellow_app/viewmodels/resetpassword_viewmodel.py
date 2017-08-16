@@ -41,10 +41,6 @@ class ResetPasswordViewModel(ViewModelBase):
             self.error_msg = 'This reset code has already been used.'
             return
 
-        if self.reset.was_used:
-            self.error_msg = 'This reset code has already been used.'
-            return
-
         dt = datetime.datetime.now() - self.reset.created_date
         days = dt.total_seconds() / 60 / 60 / 24
         if days > 1:
