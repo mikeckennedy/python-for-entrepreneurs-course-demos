@@ -8,7 +8,7 @@
 
 
 - name: delete symbolic linked website if necessary
-  file: path=/etc/nginx/site-enabled/default state=absent
+  file: path=/etc/nginx/sites-enabled/default state=absent
   become: true
 
 
