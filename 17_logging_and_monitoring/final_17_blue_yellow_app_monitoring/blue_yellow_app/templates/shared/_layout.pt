@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<!--suppress ALL -->
-<html lang="en-us" metal:define-macro="layout">
+<div metal:define-macro="layout" tal:omit-tag><!DOCTYPE html>
+<html lang="en-us" >
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -161,3 +160,4 @@
 
 </body>
 </html>
+</div>
