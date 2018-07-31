@@ -58,7 +58,7 @@ We will start from absolute scratch: a new, blank web app. From there we will bu
 
 Here's a picture of the web application we'll build during the course.
 
-IMAGE HERE
+![](https://raw.githubusercontent.com/mikeckennedy/python-for-entrepreneurs-course-demos/master/readme_resources/blue-yellow-screenshot.png)
 
 What we will build: Blue Yellow Rockets webapp
 
