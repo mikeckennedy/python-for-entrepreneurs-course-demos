@@ -5,7 +5,16 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <h1>Contact page</h1>
-                    <div>The value from the controller is ${value}.</div>
+
+                    <div style="padding-top: 50px;padding-bottom: 100px">
+		    <div>The value from the controller is ${value}.</div>
+		    
+                        Interested in the band? All you need to know is it's fictional!<br>
+                        <br>
+                        But if you want to contact us about the site or course, shoot us an email
+                        over at <a href="mailto:contact@talkpython.fm">contact@talkpython.fm</a>.
+                    </div>
+
                 </div>
                 <div class="col-md-3"></div>
             </div>

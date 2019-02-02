@@ -13,9 +13,9 @@
                         <br>
                         If you haven't already, also follow us on twitter:<br>
                         <br>
-                        <a href="https://twitter.com/talkpython" target="_blank"
-                           class="twitter"
-                        ><i class="fa fa-twitter"></i> @talkpython</a><br>
+                        <a href="https://twitter.com/talkpython" target="_blank" 
+                           style="font-size: 28px;">
+                            <i class="fa fa-twitter"></i> @talkpython</a>
                     </div>
                 </div>
                 <div class="col-md-3"></div>

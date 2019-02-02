@@ -9,7 +9,7 @@
                 <h1>Blue/Yellow Rockets</h1>
                 <p>
                     <a class="btn btn-primary btn-lg" href="/albums" role="button">Albums</a>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Upcoming Events</a>
+                    <a class="btn btn-primary btn-lg" href="#upcoming" role="button">Upcoming Events</a>
                 </p>
                 <p class="subtitle">For those about to rock, we invoke you</p>
             </div>
@@ -122,7 +122,7 @@
                                 We've done huge concerts down to the most
                                 intimate events.<br>
                                 <br>
-                                Just <a href="/home/book_us">get in touch</a> and start the conversation.
+                                Just <a href="/home/bookus">get in touch</a> and start the conversation.
                             </p>
 
                         </div>
