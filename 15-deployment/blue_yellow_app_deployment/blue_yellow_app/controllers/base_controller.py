@@ -8,6 +8,10 @@ from blue_yellow_app.services.account_service import AccountService
 
 
 class BaseController:
+    # This is better than @suppress,
+    # see https://github.com/mikeckennedy/python-for-entrepreneurs-course-demos/issues/24
+    __autoexpose__ = False
+
     def __init__(self, request):
         self.request = request
         self.build_cache_id = static_cache.build_cache_id
