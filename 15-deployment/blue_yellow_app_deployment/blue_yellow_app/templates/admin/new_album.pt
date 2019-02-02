@@ -29,7 +29,7 @@
                                   class="form-control"
                         >${tracks_text}</textarea>
 
-                        <button type="submit" class="btn btn-success">Create Album</button>
+                        <button class="btn btn-danger">Create Album [disabled in deployed demo]</button>
                     </form>
                 </div>
                 <div class="col-md-3"></div>

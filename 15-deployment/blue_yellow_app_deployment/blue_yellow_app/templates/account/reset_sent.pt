@@ -11,7 +11,15 @@
                 <div>
                     Just click the link in your email to reset
                     your password and log in.
+
                 </div>
+
+                <br>
+                <br>
+                <div style="color: gray;">
+                    Actually, we're running in demo mode. We didn't really email you. But you get the idea, right? :)
+                </div>
+
                 <br>
                 <br>
             </div>
