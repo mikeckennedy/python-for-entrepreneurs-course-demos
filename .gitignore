@@ -73,3 +73,4 @@ misc.xml
 # Ansible temp files
 15-deployment/blue_yellow_app_deployment/deploy/deploy.retry
 .env
+venv
